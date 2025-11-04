@@ -1,0 +1,30 @@
+# Jekyll generated files
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+
+# Bundler
+vendor
+.bundle/
+
+# Operating system files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Environment variables
+.env
+.env.local
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
