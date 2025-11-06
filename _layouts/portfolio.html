@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/portfolio.css' | relative_url }}">
+  <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="{{ '/bio/' | relative_url }}">BIO</a></li>
+        <li><a href="{{ '/works/' | relative_url }}">WORKS</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="site-content">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="social-links">
+      {% if site.soundcloud_username %}
+      <a href="https://soundcloud.com/{{ site.soundcloud_username }}" target="_blank" rel="noopener">SoundCloud</a>
+      {% endif %}
+      {% if site.vimeo_username %}
+      <a href="https://vimeo.com/{{ site.vimeo_username }}" target="_blank" rel="noopener">Vimeo</a>
+      {% endif %}
+      {% if site.facebook_username %}
+      <a href="https://facebook.com/{{ site.facebook_username }}" target="_blank" rel="noopener">Facebook</a>
+      {% endif %}
+      {% if site.twitter_username %}
+      <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener">Twitter</a>
+      {% endif %}
+      {% if site.github_username %}
+      <a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener">GitHub</a>
+      {% endif %}
+    </div>
+    <div class="copyright">
+      <p>&copy; Copyright 2006-2025. All Rights Reserved {{ site.title }}</p>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/portfolio.js' | relative_url }}"></script>
+</body>
+</html>
