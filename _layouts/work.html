@@ -35,7 +35,31 @@
       </div>
 
       <div class="work-nav">
-        <a href="{{ '/works/' | relative_url }}" class="back-to-works">&larr; Back to Works</a>
+        <div class="work-nav-left">
+          {% if page.previous %}
+            <a href="{{ page.previous.url | relative_url }}" class="work-nav-link">
+              <span class="nav-arrow">&larr;</span>
+              <span class="nav-label">Previous<br><span class="nav-title">{{ page.previous.title }}</span></span>
+            </a>
+          {% else %}
+            <span class="work-nav-disabled"></span>
+          {% endif %}
+        </div>
+
+        <div class="work-nav-center">
+          <a href="{{ '/works/' | relative_url }}" class="back-to-works">Back to Works</a>
+        </div>
+
+        <div class="work-nav-right">
+          {% if page.next %}
+            <a href="{{ page.next.url | relative_url }}" class="work-nav-link">
+              <span class="nav-label">Next<br><span class="nav-title">{{ page.next.title }}</span></span>
+              <span class="nav-arrow">&rarr;</span>
+            </a>
+          {% else %}
+            <span class="work-nav-disabled"></span>
+          {% endif %}
+        </div>
       </div>
     </article>
   </main>
