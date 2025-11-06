@@ -19,6 +19,26 @@ body {
   border-bottom: 1px solid #e0e0e0;
 }
 
+.site-logo {
+  margin-bottom: 30px;
+}
+
+.site-logo a {
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.site-logo a:hover {
+  opacity: 0.7;
+}
+
+.site-logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
 .main-nav ul {
   list-style: none;
   display: flex;
