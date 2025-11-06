@@ -10,6 +10,11 @@
 </head>
 <body>
   <header class="site-header">
+    <div class="site-logo">
+      <a href="{{ '/' | relative_url }}">
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+      </a>
+    </div>
     <nav class="main-nav">
       <ul>
         <li><a href="{{ '/bio/' | relative_url }}" {% if page.url contains '/bio' %}class="active"{% endif %}>BIO</a></li>
