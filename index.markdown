@@ -11,7 +11,8 @@ layout: portfolio
   </div>
 
   <div class="portfolio-grid">
-    {% for item in site.portfolio %}
+    {% assign sorted_portfolio = site.portfolio | sort: 'order' | reverse %}
+    {% for item in sorted_portfolio %}
     <div class="portfolio-item" data-category="{{ item.category }}">
       <a href="{{ item.url | relative_url }}" class="portfolio-link">
         <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
