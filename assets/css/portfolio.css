@@ -34,10 +34,16 @@ body {
   letter-spacing: 1px;
   text-transform: uppercase;
   transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
 }
 
 .main-nav a:hover {
   color: #666;
+}
+
+.main-nav a.active {
+  border-bottom-color: #333;
 }
 
 /* Main Content */
@@ -65,11 +71,17 @@ body {
   margin: 0 5px;
   cursor: pointer;
   transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
 }
 
-.filter-btn:hover,
+.filter-btn:hover {
+  color: #666;
+}
+
 .filter-btn.active {
   color: #333;
+  border-bottom-color: #333;
 }
 
 /* Portfolio Grid */
