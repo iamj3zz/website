@@ -127,6 +127,19 @@ body {
   opacity: 1;
 }
 
+/* Category-specific overlay colors */
+.portfolio-item[data-category="installations"] .portfolio-overlay {
+  background: rgba(66, 135, 245, 0.68); /* Blue */
+}
+
+.portfolio-item[data-category="live-acts"] .portfolio-overlay {
+  background: rgba(245, 66, 66, 0.68); /* Red */
+}
+
+.portfolio-item[data-category="releases"] .portfolio-overlay {
+  background: rgba(66, 245, 135, 0.68); /* Green */
+}
+
 .portfolio-item:hover img {
   transform: scale(1.02);
 }
