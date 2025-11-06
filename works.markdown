@@ -1,5 +1,7 @@
 ---
 layout: portfolio
+title: Works
+permalink: /works/
 ---
 
 <section id="works">
