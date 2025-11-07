@@ -38,6 +38,9 @@ collections:
     output: true
     permalink: /works/:name/
     sort_by: order
+  events:
+    output: false
+    sort_by: date
 
 # Build settings
 theme: minima
