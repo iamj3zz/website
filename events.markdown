@@ -5,7 +5,6 @@ permalink: /events/
 ---
 
 <section class="events-section">
-  <h1>Events</h1>
 
   {% assign sorted_events = site.events | sort: 'date' | reverse %}
 
