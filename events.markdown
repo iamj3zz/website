@@ -5,14 +5,23 @@ permalink: /events/
 ---
 
 <section class="events-section">
+  <h1>Events</h1>
 
   {% assign sorted_events = site.events | sort: 'date' | reverse %}
 
+  {% comment %} Filter out unpublished events {% endcomment %}
+  {% assign published_events = "" | split: "" %}
+  {% for event in sorted_events %}
+    {% if event.published == false %}
+      {% continue %}
+    {% endif %}
+    {% assign published_events = published_events | push: event %}
+  {% endfor %}
+
   {% comment %} Group events by year {% endcomment %}
-  {% assign events_by_year = "" | split: "" %}
   {% assign years = "" | split: "" %}
 
-  {% for event in sorted_events %}
+  {% for event in published_events %}
     {% assign event_year = event.date | date: "%Y" %}
     {% unless years contains event_year %}
       {% assign years = years | push: event_year %}
@@ -34,7 +43,7 @@ permalink: /events/
         <div class="event-col-description">DESCRIPTION</div>
       </div>
 
-      {% for event in sorted_events %}
+      {% for event in published_events %}
         {% assign event_year = event.date | date: "%Y" %}
         {% if event_year == year %}
         <div class="events-table-row">
