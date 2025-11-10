@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: work-collabs
 title: Ambient Collective
 category: collabs
 image: /assets/img/dumbpic.jpg

@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: work-releases
 title: Deserunt Mollit
 category: releases
 image: /assets/img/dumbpic.jpg

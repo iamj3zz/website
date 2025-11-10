@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: work-collabs
 title: Visual Sound Fusion
 category: collabs
 image: /assets/img/dumbpic.jpg
