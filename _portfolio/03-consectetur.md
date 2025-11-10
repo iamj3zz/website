@@ -1,5 +1,5 @@
 ---
-layout: work-releases
+layout: work
 title: Consectetur
 category: releases
 image: /assets/img/dumbpic.jpg

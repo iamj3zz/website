@@ -1,5 +1,5 @@
 ---
-layout: work-installations
+layout: work
 title: Visual Sound Fusion
 categories: [collabs, installations, live-acts]
 primary_category: installations

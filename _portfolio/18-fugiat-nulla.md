@@ -1,5 +1,5 @@
 ---
-layout: work-live-acts
+layout: work
 title: Fugiat Nulla
 category: live-acts
 image: /assets/img/dumbpic.jpg
