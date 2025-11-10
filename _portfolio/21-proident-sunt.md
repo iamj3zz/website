@@ -1,5 +1,5 @@
 ---
-layout: work-live-acts
+layout: work
 title: Proident Sunt
 category: live-acts
 image: /assets/img/dumbpic.jpg

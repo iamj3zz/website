@@ -1,5 +1,5 @@
 ---
-layout: work-collabs
+layout: work
 title: Synth Waves Collab
 categories: [collabs, releases]
 primary_category: collabs

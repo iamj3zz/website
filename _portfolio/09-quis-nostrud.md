@@ -1,5 +1,5 @@
 ---
-layout: work-live-acts
+layout: work
 title: Quis Nostrud
 category: live-acts
 image: /assets/img/dumbpic.jpg

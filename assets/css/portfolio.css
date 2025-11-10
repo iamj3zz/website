@@ -500,60 +500,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* Category-Specific Work Detail Styles */
-
-/* Collabs Category */
-.work-detail-collabs .work-category-collabs {
-  color: rgba(245, 176, 66, 1);
-  font-weight: bold;
-  border-bottom: 3px solid rgba(245, 176, 66, 0.5);
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.work-detail-collabs .work-image-collabs {
-  border: 5px solid rgba(245, 176, 66, 0.3);
-}
-
-/* Releases Category */
-.work-detail-releases .work-category-releases {
-  color: rgba(66, 245, 135, 1);
-  font-weight: bold;
-  border-bottom: 3px solid rgba(66, 245, 135, 0.5);
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.work-detail-releases .work-image-releases {
-  border: 5px solid rgba(66, 245, 135, 0.3);
-}
-
-/* Installations Category */
-.work-detail-installations .work-category-installations {
-  color: rgba(66, 135, 245, 1);
-  font-weight: bold;
-  border-bottom: 3px solid rgba(66, 135, 245, 0.5);
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.work-detail-installations .work-image-installations {
-  border: 5px solid rgba(66, 135, 245, 0.3);
-}
-
-/* Live Acts Category */
-.work-detail-live-acts .work-category-live-acts {
-  color: rgba(245, 66, 66, 1);
-  font-weight: bold;
-  border-bottom: 3px solid rgba(245, 66, 66, 0.5);
-  display: inline-block;
-  padding-bottom: 5px;
-}
-
-.work-detail-live-acts .work-image-live-acts {
-  border: 5px solid rgba(245, 66, 66, 0.3);
-}
-
 .work-image {
   margin-bottom: 40px;
   text-align: center;

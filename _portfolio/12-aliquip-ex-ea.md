@@ -1,5 +1,5 @@
 ---
-layout: work-live-acts
+layout: work
 title: Aliquip Ex Ea
 category: live-acts
 image: /assets/img/dumbpic.jpg

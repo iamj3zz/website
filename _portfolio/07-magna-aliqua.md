@@ -1,5 +1,5 @@
 ---
-layout: work-installations
+layout: work
 title: Magna Aliqua
 category: installations
 image: /assets/img/dumbpic.jpg

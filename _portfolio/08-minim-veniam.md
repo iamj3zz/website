@@ -1,5 +1,5 @@
 ---
-layout: work-releases
+layout: work
 title: Minim Veniam
 category: releases
 image: /assets/img/dumbpic.jpg

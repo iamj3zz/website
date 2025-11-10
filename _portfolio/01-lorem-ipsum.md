@@ -1,5 +1,5 @@
 ---
-layout: work-installations
+layout: work
 title: Lorem Ipsum
 category: installations
 image: /assets/img/dumbpic.jpg

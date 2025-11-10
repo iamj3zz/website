@@ -1,5 +1,5 @@
 ---
-layout: work-live-acts
+layout: work
 title: Labore Et Dolore
 category: live-acts
 image: /assets/img/dumbpic.jpg

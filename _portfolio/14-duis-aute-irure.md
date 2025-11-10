@@ -1,5 +1,5 @@
 ---
-layout: work-releases
+layout: work
 title: Duis Aute Irure
 category: releases
 image: /assets/img/dumbpic.jpg
