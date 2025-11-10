@@ -19,9 +19,21 @@ sections:
   - type: text
     title: "About the Project"
     content: |
-      This is an example of the modular layout system. You can mix and match different section types to create unique layouts for each work.
+      This is an example of the **modular layout system**. You can mix and match different section types to create *unique layouts* for each work.
 
-      The system is flexible and allows you to control the order and presentation of content through simple YAML configuration in the front matter.
+      The system is flexible and allows you to control the order and presentation of content through simple YAML configuration in the front matter. You can use:
+
+      - **Bold text** for emphasis
+      - *Italic text* for subtle emphasis
+      - External links like <a href="https://example.com" target="_blank" rel="noopener">this example site</a>
+      - Numbered and bulleted lists
+
+      Key features:
+
+      1. Fully customizable module order
+      2. Support for multiple image grid layouts (1-6 columns)
+      3. Square thumbnail cropping with lightbox full-size viewing
+      4. ***Rich text formatting*** with Markdown support
 
   - type: spacer
     height: "60px"
