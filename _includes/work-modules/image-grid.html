@@ -1,0 +1,9 @@
+<div class="module module-image-grid" data-columns="{{ include.columns | default: 2 }}">
+  <div class="image-grid grid-{{ include.columns | default: 2 }}">
+    {% for image in include.images %}
+      <div class="grid-item">
+        <img src="{{ image | relative_url }}" alt="{{ include.alt | default: page.title }}">
+      </div>
+    {% endfor %}
+  </div>
+</div>
