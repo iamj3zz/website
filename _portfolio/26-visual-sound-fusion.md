@@ -1,7 +1,8 @@
 ---
-layout: work-collabs
+layout: work-installations
 title: Visual Sound Fusion
-category: collabs
+categories: [collabs, installations, live-acts]
+primary_category: installations
 image: /assets/img/dumbpic.jpg
 order: 26
 ---

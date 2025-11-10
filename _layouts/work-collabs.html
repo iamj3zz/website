@@ -28,7 +28,16 @@
   <main class="site-content">
     <article class="work-detail work-detail-collabs">
       <div class="work-header work-header-collabs">
-        <p class="work-category work-category-collabs">{{ page.category | replace: '-', ' ' | upcase }}</p>
+        {% comment %} Display all categories if multiple, otherwise single category {% endcomment %}
+        {% if page.categories %}
+          <p class="work-category work-category-collabs">
+            {% for cat in page.categories %}
+              {{ cat | replace: '-', ' ' | upcase }}{% unless forloop.last %} + {% endunless %}
+            {% endfor %}
+          </p>
+        {% elsif page.category %}
+          <p class="work-category work-category-collabs">{{ page.category | replace: '-', ' ' | upcase }}</p>
+        {% endif %}
         <h1>{{ page.title }}</h1>
       </div>
 

@@ -1,7 +1,8 @@
 ---
 layout: work-collabs
 title: Synth Waves Collab
-category: collabs
+categories: [collabs, releases]
+primary_category: collabs
 image: /assets/img/dumbpic.jpg
 order: 25
 ---
