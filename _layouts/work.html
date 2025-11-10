@@ -41,13 +41,42 @@
         <h1>{{ page.title }}</h1>
       </div>
 
-      <div class="work-image">
-        <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
-      </div>
+      {% comment %} Modular sections system {% endcomment %}
+      {% if page.sections %}
+        <div class="work-modules">
+          {% for section in page.sections %}
+            {% include work-modules/{{ section.type }}.html
+               image=section.image
+               alt=section.alt
+               caption=section.caption
+               title=section.title
+               content=section.content
+               images=section.images
+               columns=section.columns
+               platform=section.platform
+               video_id=section.video_id
+               url=section.url
+               height=section.height
+               year=section.year
+               client=section.client
+               location=section.location
+               credits=section.credits
+               custom=section.custom
+               text=section.text
+               author=section.author
+            %}
+          {% endfor %}
+        </div>
+      {% else %}
+        {% comment %} Fallback to old structure for backward compatibility {% endcomment %}
+        <div class="work-image">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        </div>
 
-      <div class="work-content">
-        {{ content }}
-      </div>
+        <div class="work-content">
+          {{ content }}
+        </div>
+      {% endif %}
 
       <div class="work-nav">
         <div class="work-nav-left">

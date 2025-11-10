@@ -1,0 +1,16 @@
+<div class="module module-video">
+  <div class="video-wrapper">
+    {% if include.platform == 'youtube' %}
+      <iframe src="https://www.youtube.com/embed/{{ include.video_id }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    {% elsif include.platform == 'vimeo' %}
+      <iframe src="https://player.vimeo.com/video/{{ include.video_id }}" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    {% elsif include.url %}
+      <video controls>
+        <source src="{{ include.url | relative_url }}" type="video/mp4">
+      </video>
+    {% endif %}
+  </div>
+  {% if include.caption %}
+    <p class="video-caption">{{ include.caption }}</p>
+  {% endif %}
+</div>

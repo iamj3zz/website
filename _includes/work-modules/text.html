@@ -1,0 +1,8 @@
+<div class="module module-text">
+  {% if include.title %}
+    <h2>{{ include.title }}</h2>
+  {% endif %}
+  <div class="text-content">
+    {{ include.content | markdownify }}
+  </div>
+</div>

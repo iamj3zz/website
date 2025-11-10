@@ -1,0 +1,36 @@
+<div class="module module-metadata">
+  <div class="metadata-grid">
+    {% if include.year %}
+      <div class="metadata-item">
+        <span class="metadata-label">Year</span>
+        <span class="metadata-value">{{ include.year }}</span>
+      </div>
+    {% endif %}
+    {% if include.client %}
+      <div class="metadata-item">
+        <span class="metadata-label">Client</span>
+        <span class="metadata-value">{{ include.client }}</span>
+      </div>
+    {% endif %}
+    {% if include.location %}
+      <div class="metadata-item">
+        <span class="metadata-label">Location</span>
+        <span class="metadata-value">{{ include.location }}</span>
+      </div>
+    {% endif %}
+    {% if include.credits %}
+      <div class="metadata-item">
+        <span class="metadata-label">Credits</span>
+        <span class="metadata-value">{{ include.credits }}</span>
+      </div>
+    {% endif %}
+    {% if include.custom %}
+      {% for item in include.custom %}
+        <div class="metadata-item">
+          <span class="metadata-label">{{ item.label }}</span>
+          <span class="metadata-value">{{ item.value }}</span>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
