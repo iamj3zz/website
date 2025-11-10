@@ -61,6 +61,11 @@ Updates GitHub Pages and all associated Jekyll dependencies.
   - Categories: `installations`, `live-acts`, `releases`, `collabs`
   - Items generate individual pages at `/works/:name/`
   - Supports both single category and multi-category assignments
+- `_events/` - Events collection
+  - Each event has: `title`, `date`, `time`, `country`, `city`, `venue_name`, `venue_link`, `ticket_link`, `description`
+  - Optional `work_id` field to link event to a specific work
+  - Events do not generate individual pages (`output: false`)
+  - Displayed on main Events page and can be linked to works via linked-events module
 
 **Assets:**
 - `assets/css/portfolio.css` - Custom CSS for entire site
@@ -77,6 +82,7 @@ Updates GitHub Pages and all associated Jekyll dependencies.
   - `metadata.html` - Key-value metadata display
   - `quote.html` - Blockquote with attribution
   - `spacer.html` - Vertical spacing control
+  - `linked-events.html` - Display events linked to the work
 
 ### Navigation
 
@@ -363,6 +369,34 @@ Add vertical spacing between sections.
 ```yaml
 - type: spacer
   height: "60px"  # Any CSS height value
+```
+
+#### 8. Linked Events Module
+
+Display events linked to this work, using the same design as the main Events page.
+
+```yaml
+- type: linked-events
+  title: "Upcoming Events & Performances"  # Optional, defaults to no title
+```
+
+**Features:**
+- Automatically displays events linked to this work via `work_id` field in event files
+- Groups events by year (most recent first)
+- Same table design as main Events page
+- Includes date, time, location, venue links, ticket links, and description
+- Responsive layout (collapses to mobile-friendly view)
+
+**Linking Events to Works:**
+Add `work_id` field to event files in `_events/`:
+
+```yaml
+---
+title: Event Name
+date: 2025-03-15
+# ... other event fields ...
+work_id: Work Title  # Must match the work's title exactly
+---
 ```
 
 ### Module Order and Layout
