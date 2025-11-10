@@ -10,6 +10,7 @@ permalink: /works/
     <button class="filter-btn" data-filter="installations">Installations</button>
     <button class="filter-btn" data-filter="live-acts">Live Acts</button>
     <button class="filter-btn" data-filter="releases">Releases</button>
+    <button class="filter-btn" data-filter="collabs">Collabs</button>
   </div>
 
   <div class="portfolio-grid">
