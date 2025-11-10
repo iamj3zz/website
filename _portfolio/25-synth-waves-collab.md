@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: work-collabs
 title: Synth Waves Collab
 category: collabs
 image: /assets/img/dumbpic.jpg

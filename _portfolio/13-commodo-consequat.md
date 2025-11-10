@@ -1,5 +1,5 @@
 ---
-layout: work
+layout: work-installations
 title: Commodo Consequat
 category: installations
 image: /assets/img/dumbpic.jpg
