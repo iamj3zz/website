@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Modular Layout Example
+work_id: modular-layout-example
 categories: [installations, collabs]
 primary_category: installations
 image: /assets/img/dumbpic.jpg

@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Lorem Ipsum
+work_id: lorem-ipsum
 category: installations
 image: /assets/img/dumbpic.jpg
 order: 1

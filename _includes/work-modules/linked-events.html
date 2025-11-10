@@ -1,0 +1,64 @@
+<div class="module module-linked-events">
+  {% if include.title %}
+    <h2>{{ include.title }}</h2>
+  {% endif %}
+
+  {% comment %} Filter events linked to this work {% endcomment %}
+  {% assign linked_events = "" | split: "" %}
+  {% for event in site.events %}
+    {% if event.work_id == page.work_id %}
+      {% if event.published != false %}
+        {% assign linked_events = linked_events | push: event %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+
+  {% comment %} Sort by date descending {% endcomment %}
+  {% assign sorted_events = linked_events | sort: 'date' | reverse %}
+
+  {% if sorted_events.size > 0 %}
+    {% comment %} Group by year {% endcomment %}
+    {% assign years = "" | split: "" %}
+    {% for event in sorted_events %}
+      {% assign event_year = event.date | date: "%Y" %}
+      {% unless years contains event_year %}
+        {% assign years = years | push: event_year %}
+      {% endunless %}
+    {% endfor %}
+
+    {% for year in years %}
+    <div class="events-year-section">
+      <h3 class="events-year-title">{{ year }}</h3>
+
+      <div class="events-table">
+        <div class="events-table-header">
+          <div class="event-col-date">DATE</div>
+          <div class="event-col-time">TIME</div>
+          <div class="event-col-country">COUNTRY</div>
+          <div class="event-col-city">CITY</div>
+          <div class="event-col-venue">VENUE</div>
+          <div class="event-col-tickets">TICKETS</div>
+          <div class="event-col-description">DESCRIPTION</div>
+        </div>
+
+        {% for event in sorted_events %}
+          {% assign event_year = event.date | date: "%Y" %}
+          {% if event_year == year %}
+          <div class="events-table-row">
+            <div class="event-col-date">{{ event.date | date: "%b %d" }}</div>
+            <div class="event-col-time">{{ event.time }}</div>
+            <div class="event-col-country">{{ event.country }}</div>
+            <div class="event-col-city">{{ event.city }}</div>
+            <div class="event-col-venue">{% if event.venue_link %}<a href="{{ event.venue_link }}" target="_blank" rel="noopener noreferrer">{{ event.venue_name }}</a>{% else %}{{ event.venue_name }}{% endif %}</div>
+            <div class="event-col-tickets">{% if event.ticket_link %}<a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer">Tickets</a>{% endif %}</div>
+            <div class="event-col-description">{{ event.description }}</div>
+          </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  {% else %}
+    <p class="no-events-message">No events linked to this work.</p>
+  {% endif %}
+</div>
