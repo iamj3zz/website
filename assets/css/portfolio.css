@@ -172,6 +172,10 @@ body {
   background: rgba(66, 245, 135, 0.68); /* Green */
 }
 
+.portfolio-item[data-category="collabs"] .portfolio-overlay {
+  background: rgba(245, 176, 66, 0.68); /* Orange */
+}
+
 .portfolio-item:hover img {
   transform: scale(1.02);
 }
