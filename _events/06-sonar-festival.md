@@ -8,4 +8,5 @@ venue_name: Fira de Barcelona
 venue_link: https://www.sonar.es
 ticket_link: https://www.sonar.es/tickets
 description: Main stage performance at one of Europe's most prestigious electronic music festivals.
+work_id: modular-layout-example
 ---

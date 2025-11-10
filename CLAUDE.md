@@ -57,13 +57,14 @@ Updates GitHub Pages and all associated Jekyll dependencies.
 
 **Collections:**
 - `_portfolio/` - Portfolio items collection (28 items numbered 01-28)
-  - Each item has: `title`, `category`/`categories`, `image`, `order`, and optional content
+  - Each item has: `title`, `work_id`, `category`/`categories`, `image`, `order`, and optional content
+  - Required `work_id` field (alphanumeric with hyphens/underscores only) for linking to events and internal references
   - Categories: `installations`, `live-acts`, `releases`, `collabs`
   - Items generate individual pages at `/works/:name/`
   - Supports both single category and multi-category assignments
 - `_events/` - Events collection
   - Each event has: `title`, `date`, `time`, `country`, `city`, `venue_name`, `venue_link`, `ticket_link`, `description`
-  - Optional `work_id` field to link event to a specific work
+  - Optional `work_id` field to link event to a specific work (must match work's `work_id`)
   - Events do not generate individual pages (`output: false`)
   - Displayed on main Events page and can be linked to works via linked-events module
 
@@ -183,6 +184,133 @@ Site deploys to GitHub Pages automatically when pushed to the `main` branch. The
 
 ## Content Management
 
+### Front Matter Standards
+
+All collection items must follow these front matter standards to ensure consistency across the site.
+
+#### Portfolio Items (_portfolio/)
+
+**Required Fields:**
+- `layout: work` - Must be "work" for all portfolio items
+- `title` - The display title of the work (string)
+- `work_id` - Unique identifier (alphanumeric, hyphens, underscores only: A-Z, a-z, 0-9, -, _). Used for linking to events and internal references. Should be lowercase and based on title (e.g., "My Project" → "my-project")
+- `image` - Path to preview image (e.g., `/assets/img/filename.jpg`)
+- `order` - Numeric order for sorting (higher numbers appear first)
+
+**Category Fields (Required - choose one format):**
+- **Single category:** `category: value` (where value is: installations, live-acts, releases, or collabs)
+- **Multiple categories:**
+  ```yaml
+  categories: [category1, category2]
+  primary_category: category1
+  ```
+
+**Optional Fields:**
+- `published` - Set to `false` to hide from site (defaults to true if omitted)
+- `sections` - Array of modular layout sections (for modular layout mode)
+- Content below front matter (for simple layout mode)
+
+**Example - Simple Single Category:**
+```yaml
+---
+layout: work
+title: Project Title
+category: installations
+image: /assets/img/project.jpg
+order: 15
+---
+Optional content here.
+```
+
+**Example - Multiple Categories:**
+```yaml
+---
+layout: work
+title: Project Title
+work_id: project-title
+categories: [installations, collabs]
+primary_category: installations
+image: /assets/img/project.jpg
+order: 15
+published: true
+---
+```
+
+**Example - Modular Layout:**
+```yaml
+---
+layout: work
+title: Project Title
+work_id: project-title
+categories: [installations, collabs]
+primary_category: installations
+image: /assets/img/project.jpg
+order: 15
+sections:
+  - type: hero-image
+    image: /assets/img/main.jpg
+  - type: text
+    content: |
+      Project description here.
+---
+```
+
+#### Events (_events/)
+
+**Required Fields:**
+- `title` - Event name (string)
+- `date` - Event date in YYYY-MM-DD format (e.g., 2025-03-15)
+- `time` - Event start time in 24-hour format with quotes (e.g., "20:00")
+- `country` - Country name (string)
+- `city` - City name (string)
+- `venue_name` - Venue name (string)
+- `venue_link` - Full URL to venue website (must be valid URL)
+- `ticket_link` - Full URL to ticket purchase page (must be valid URL)
+- `description` - Event description (string, can be multiple sentences)
+
+**Optional Fields:**
+- `work_id` - Links event to a specific work (must match a work's `work_id` exactly)
+- `published` - Set to `false` to hide from site (defaults to true if omitted)
+
+**Example - Basic Event:**
+```yaml
+---
+title: Festival Performance
+date: 2025-06-15
+time: "20:30"
+country: Spain
+city: Barcelona
+venue_name: Festival Venue
+venue_link: https://www.venue.com
+ticket_link: https://www.tickets.com/event
+description: Live performance at the festival main stage.
+---
+```
+
+**Example - Event Linked to Work:**
+```yaml
+---
+title: Festival Performance
+date: 2025-06-15
+time: "20:30"
+country: Spain
+city: Barcelona
+venue_name: Festival Venue
+venue_link: https://www.venue.com
+ticket_link: https://www.tickets.com/event
+description: Live performance at the festival main stage.
+work_id: my-project-title
+---
+```
+
+**Important Notes:**
+- No blank lines within YAML front matter (between the `---` markers)
+- All URLs must be complete with protocol (https://)
+- Time values must be quoted strings ("HH:MM")
+- Date format must be YYYY-MM-DD
+- Boolean values (published) should be lowercase: `true` or `false`
+- Arrays use bracket notation: `[item1, item2, item3]`
+
 ### Multi-Category Support
 
 Works can belong to multiple categories. Use either format:
@@ -208,6 +336,7 @@ primary_category: installations  # Used for primary overlay color
 ---
 layout: work
 title: New Work Title
+work_id: new-work-title  # Optional: unique ID for linking events (A-Z, a-z, 0-9, -, _)
 category: installations  # or live-acts, releases, collabs
 # Or use multi-category:
 # categories: [installations, collabs]
@@ -236,6 +365,7 @@ Add a `sections` array to your front matter instead of content below it:
 ---
 layout: work
 title: Project Title
+work_id: project-title
 categories: [installations, collabs]
 primary_category: installations
 image: /assets/img/preview.jpg
@@ -388,14 +518,24 @@ Display events linked to this work, using the same design as the main Events pag
 - Responsive layout (collapses to mobile-friendly view)
 
 **Linking Events to Works:**
-Add `work_id` field to event files in `_events/`:
 
+1. Add `work_id` to the work's front matter (alphanumeric, hyphens, underscores only):
+```yaml
+---
+layout: work
+title: My Project Title
+work_id: my-project-title  # Unique identifier (A-Z, a-z, 0-9, -, _)
+# ... other fields ...
+---
+```
+
+2. Add matching `work_id` to event files in `_events/`:
 ```yaml
 ---
 title: Event Name
 date: 2025-03-15
 # ... other event fields ...
-work_id: Work Title  # Must match the work's title exactly
+work_id: my-project-title  # Must match the work's work_id exactly
 ---
 ```
 

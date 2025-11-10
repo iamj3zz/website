@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Synth Waves Collab
+work_id: synth-waves-collab
 categories: [collabs, releases]
 primary_category: collabs
 image: /assets/img/dumbpic.jpg

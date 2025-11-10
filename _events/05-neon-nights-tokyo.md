@@ -8,4 +8,5 @@ venue_name: Contact Tokyo
 venue_link: https://www.contacttokyo.com
 ticket_link: https://www.ra.co/events/neon-nights-tokyo
 description: A high-energy night of experimental electronic music in the heart of Tokyo's underground scene.
+work_id: modular-layout-example
 ---

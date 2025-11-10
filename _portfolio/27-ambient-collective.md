@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Ambient Collective
+work_id: ambient-collective
 category: collabs
 image: /assets/img/dumbpic.jpg
 order: 27

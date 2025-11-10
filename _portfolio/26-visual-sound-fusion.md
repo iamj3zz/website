@@ -1,6 +1,7 @@
 ---
 layout: work
 title: Visual Sound Fusion
+work_id: visual-sound-fusion
 categories: [collabs, installations, live-acts]
 primary_category: installations
 image: /assets/img/dumbpic.jpg
