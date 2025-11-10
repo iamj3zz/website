@@ -2,7 +2,12 @@
   <div class="image-grid grid-{{ include.columns | default: 2 }}">
     {% for image in include.images %}
       <div class="grid-item">
-        <img src="{{ image | relative_url }}" alt="{{ include.alt | default: page.title }}">
+        {% if include.captions %}
+          {% assign caption = include.captions[forloop.index0] %}
+        {% else %}
+          {% assign caption = "" %}
+        {% endif %}
+        <img src="{{ image | relative_url }}" alt="{{ include.alt | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}">
       </div>
     {% endfor %}
   </div>

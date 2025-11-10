@@ -52,6 +52,7 @@
                title=section.title
                content=section.content
                images=section.images
+               captions=section.captions
                columns=section.columns
                platform=section.platform
                video_id=section.video_id
@@ -158,5 +159,18 @@
       <p>&copy; Copyright 2006-2025. All Rights Reserved {{ site.title }}</p>
     </div>
   </footer>
+
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <div class="lightbox-nav">
+      <button class="lightbox-prev">&#10094;</button>
+      <button class="lightbox-next">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
 </body>
 </html>

@@ -44,11 +44,21 @@ sections:
 
 
   - type: image-grid
-    columns: 3
+    columns: 5
     images:
       - /assets/img/dumbpic.jpg
       - /assets/img/dumbpic.jpg
       - /assets/img/dumbpic.jpg
+      - /assets/img/J3ZZ-logo-black-300px.png
+      - /assets/img/dumbpic.jpg
+      - /assets/img/dumbpic.jpg
+    captions:
+      - "Installation detail from the main exhibition space"
+      - "Close-up view of the interactive sound module"
+      - "Audience experiencing the immersive environment"
+      - "Installation detail from the main exhibition space"
+      - "Close-up view of the interactive sound module"
+      - "Audience experiencing the immersive environment"
 
   - type: quote
     text: "This modular system gives me complete control over how my work is presented."
