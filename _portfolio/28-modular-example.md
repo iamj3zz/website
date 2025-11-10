@@ -80,4 +80,7 @@ sections:
     platform: "youtube"
     video_id: "dQw4w9WgXcQ"
     caption: "Project video documentation"
+
+  - type: linked-events
+    title: "Upcoming Events & Performances"
 ---
