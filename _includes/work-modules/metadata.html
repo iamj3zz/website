@@ -1,34 +1,231 @@
 <div class="module module-metadata">
   <div class="metadata-grid">
+    {% comment %} Temporal Information {% endcomment %}
     {% if include.year %}
       <div class="metadata-item">
         <span class="metadata-label">Year</span>
-        <span class="metadata-value">{{ include.year }}</span>
+        <span class="metadata-value">
+          {% if include.year_link %}<a href="{{ include.year_link }}" target="_blank" rel="noopener">{{ include.year }}</a>{% else %}{{ include.year }}{% endif %}
+        </span>
       </div>
     {% endif %}
-    {% if include.client %}
+    {% if include.date %}
       <div class="metadata-item">
-        <span class="metadata-label">Client</span>
-        <span class="metadata-value">{{ include.client }}</span>
+        <span class="metadata-label">Date</span>
+        <span class="metadata-value">
+          {% if include.date_link %}<a href="{{ include.date_link }}" target="_blank" rel="noopener">{{ include.date }}</a>{% else %}{{ include.date }}{% endif %}
+        </span>
       </div>
     {% endif %}
+
+    {% comment %} Industry Identifiers {% endcomment %}
+    {% if include.isrc %}
+      <div class="metadata-item">
+        <span class="metadata-label">ISRC</span>
+        <span class="metadata-value">
+          {% if include.isrc_link %}<a href="{{ include.isrc_link }}" target="_blank" rel="noopener">{{ include.isrc }}</a>{% else %}{{ include.isrc }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.upc %}
+      <div class="metadata-item">
+        <span class="metadata-label">UPC</span>
+        <span class="metadata-value">
+          {% if include.upc_link %}<a href="{{ include.upc_link }}" target="_blank" rel="noopener">{{ include.upc }}</a>{% else %}{{ include.upc }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.iswc %}
+      <div class="metadata-item">
+        <span class="metadata-label">ISWC</span>
+        <span class="metadata-value">
+          {% if include.iswc_link %}<a href="{{ include.iswc_link }}" target="_blank" rel="noopener">{{ include.iswc }}</a>{% else %}{{ include.iswc }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+
+    {% comment %} Location Information {% endcomment %}
     {% if include.location %}
       <div class="metadata-item">
         <span class="metadata-label">Location</span>
-        <span class="metadata-value">{{ include.location }}</span>
+        <span class="metadata-value">
+          {% if include.location_link %}<a href="{{ include.location_link }}" target="_blank" rel="noopener">{{ include.location }}</a>{% else %}{{ include.location }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.performed_in %}
+      <div class="metadata-item">
+        <span class="metadata-label">Performed in</span>
+        <span class="metadata-value">
+          {% if include.performed_in_link %}<a href="{{ include.performed_in_link }}" target="_blank" rel="noopener">{{ include.performed_in }}</a>{% else %}{{ include.performed_in }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.places %}
+      <div class="metadata-item">
+        <span class="metadata-label">Places</span>
+        <span class="metadata-value">
+          {% if include.places_link %}<a href="{{ include.places_link }}" target="_blank" rel="noopener">{{ include.places }}</a>{% else %}{{ include.places }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+
+    {% comment %} Production Information {% endcomment %}
+    {% if include.produced_by %}
+      <div class="metadata-item">
+        <span class="metadata-label">Produced by</span>
+        <span class="metadata-value">
+          {% if include.produced_by_link %}<a href="{{ include.produced_by_link }}" target="_blank" rel="noopener">{{ include.produced_by }}</a>{% else %}{{ include.produced_by }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.commissioned_by %}
+      <div class="metadata-item">
+        <span class="metadata-label">Commissioned by</span>
+        <span class="metadata-value">
+          {% if include.commissioned_by_link %}<a href="{{ include.commissioned_by_link }}" target="_blank" rel="noopener">{{ include.commissioned_by }}</a>{% else %}{{ include.commissioned_by }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.curated_by %}
+      <div class="metadata-item">
+        <span class="metadata-label">Curated by</span>
+        <span class="metadata-value">
+          {% if include.curated_by_link %}<a href="{{ include.curated_by_link }}" target="_blank" rel="noopener">{{ include.curated_by }}</a>{% else %}{{ include.curated_by }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+
+    {% comment %} Role and Technology {% endcomment %}
+    {% if include.role %}
+      <div class="metadata-item">
+        <span class="metadata-label">Role</span>
+        <span class="metadata-value">
+          {% if include.role_link %}<a href="{{ include.role_link }}" target="_blank" rel="noopener">{{ include.role }}</a>{% else %}{{ include.role }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.technology %}
+      <div class="metadata-item">
+        <span class="metadata-label">Technology</span>
+        <span class="metadata-value">
+          {% if include.technology_link %}<a href="{{ include.technology_link }}" target="_blank" rel="noopener">{{ include.technology }}</a>{% else %}{{ include.technology }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+
+    {% comment %} Collaborators and Credits {% endcomment %}
+    {% if include.collaborators %}
+      <div class="metadata-item">
+        <span class="metadata-label">Collaborators</span>
+        <span class="metadata-value">
+          {% if include.collaborators_link %}<a href="{{ include.collaborators_link }}" target="_blank" rel="noopener">{{ include.collaborators }}</a>{% else %}{{ include.collaborators }}{% endif %}
+        </span>
       </div>
     {% endif %}
     {% if include.credits %}
       <div class="metadata-item">
         <span class="metadata-label">Credits</span>
-        <span class="metadata-value">{{ include.credits }}</span>
+        <span class="metadata-value">
+          {% if include.credits_link %}<a href="{{ include.credits_link }}" target="_blank" rel="noopener">{{ include.credits }}</a>{% else %}{{ include.credits }}{% endif %}
+        </span>
       </div>
     {% endif %}
+    {% if include.partners %}
+      <div class="metadata-item">
+        <span class="metadata-label">Partners</span>
+        <span class="metadata-value">
+          {% if include.partners_link %}<a href="{{ include.partners_link }}" target="_blank" rel="noopener">{{ include.partners }}</a>{% else %}{{ include.partners }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.supporters %}
+      <div class="metadata-item">
+        <span class="metadata-label">Supporters</span>
+        <span class="metadata-value">
+          {% if include.supporters_link %}<a href="{{ include.supporters_link }}" target="_blank" rel="noopener">{{ include.supporters }}</a>{% else %}{{ include.supporters }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+
+    {% comment %} Specific Roles {% endcomment %}
+    {% if include.composer_performer_producer %}
+      <div class="metadata-item">
+        <span class="metadata-label">Composer, performer, producer</span>
+        <span class="metadata-value">
+          {% if include.composer_performer_producer_link %}<a href="{{ include.composer_performer_producer_link }}" target="_blank" rel="noopener">{{ include.composer_performer_producer }}</a>{% else %}{{ include.composer_performer_producer }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.mastering_by %}
+      <div class="metadata-item">
+        <span class="metadata-label">Mastering by</span>
+        <span class="metadata-value">
+          {% if include.mastering_by_link %}<a href="{{ include.mastering_by_link }}" target="_blank" rel="noopener">{{ include.mastering_by }}</a>{% else %}{{ include.mastering_by }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.artwork_by %}
+      <div class="metadata-item">
+        <span class="metadata-label">Artwork by</span>
+        <span class="metadata-value">
+          {% if include.artwork_by_link %}<a href="{{ include.artwork_by_link }}" target="_blank" rel="noopener">{{ include.artwork_by }}</a>{% else %}{{ include.artwork_by }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+
+    {% comment %} Additional Resources {% endcomment %}
+    {% if include.interview %}
+      <div class="metadata-item">
+        <span class="metadata-label">Interview</span>
+        <span class="metadata-value">
+          {% if include.interview_link %}<a href="{{ include.interview_link }}" target="_blank" rel="noopener">{{ include.interview }}</a>{% else %}{{ include.interview }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.press_kit %}
+      <div class="metadata-item">
+        <span class="metadata-label">Press kit</span>
+        <span class="metadata-value">
+          {% if include.press_kit_link %}<a href="{{ include.press_kit_link }}" target="_blank" rel="noopener">{{ include.press_kit }}</a>{% else %}{{ include.press_kit }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.socials %}
+      <div class="metadata-item">
+        <span class="metadata-label">Socials</span>
+        <span class="metadata-value">
+          {% if include.socials_link %}<a href="{{ include.socials_link }}" target="_blank" rel="noopener">{{ include.socials }}</a>{% else %}{{ include.socials }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+
+    {% comment %} Acknowledgements {% endcomment %}
+    {% if include.special_thanks %}
+      <div class="metadata-item">
+        <span class="metadata-label">Special thanks</span>
+        <span class="metadata-value">
+          {% if include.special_thanks_link %}<a href="{{ include.special_thanks_link }}" target="_blank" rel="noopener">{{ include.special_thanks }}</a>{% else %}{{ include.special_thanks }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if include.client %}
+      <div class="metadata-item">
+        <span class="metadata-label">Client</span>
+        <span class="metadata-value">
+          {% if include.client_link %}<a href="{{ include.client_link }}" target="_blank" rel="noopener">{{ include.client }}</a>{% else %}{{ include.client }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+
+    {% comment %} Custom Fields (for any additional metadata) {% endcomment %}
     {% if include.custom %}
       {% for item in include.custom %}
         <div class="metadata-item">
           <span class="metadata-label">{{ item.label }}</span>
-          <span class="metadata-value">{{ item.value }}</span>
+          <span class="metadata-value">
+            {% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.value }}</a>{% else %}{{ item.value }}{% endif %}
+          </span>
         </div>
       {% endfor %}
     {% endif %}

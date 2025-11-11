@@ -7,15 +7,70 @@ primary_category: installations
 image: /assets/img/dumbpic.jpg
 order: 28
 sections:
-  - type: metadata
-    year: "2025"
-    client: "Example Client"
-    location: "Paris, France"
-    credits: "John Doe, Jane Smith"
-
   - type: hero-image
     image: /assets/img/dumbpic.jpg
     caption: "Main installation view"
+
+
+  - type: iframe
+    embed_code: '<iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=2412288496/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://morzsarecords.bandcamp.com/album/polish-graffiti">polish graffiti by morzsa records</a></iframe>'
+  #  responsive: true
+  #  aspect_ratio: "16:9"
+  #  caption: "Universal iframe module with responsive 16:9 aspect ratio"
+  
+  - type: metadata
+    year: "2025"
+    date: "March 15-20, 2025"
+    date_link: "https://parisdigitalartfestival.com/schedule"
+    isrc: "USRC17607839"
+    isrc_link: "https://isrc.ifpi.org/"
+    upc: "123456789012"
+    iswc: "T-345.246.800-1"
+    location: "Paris, France"
+    location_link: "https://maps.google.com/?q=Paris,France"
+    performed_in: "Europe"
+    places: "Théâtre du Châtelet, La Gaîté Lyrique"
+    places_link: "https://www.chatelet.com/"
+    produced_by: "Studio Productions"
+    produced_by_link: "https://studioproductions.example.com"
+    client: "Example Client"
+    client_link: "/works/lorem-ipsum/"
+    commissioned_by: "Paris Digital Art Festival"
+    commissioned_by_link: "https://parisdigitalartfestival.com"
+    curated_by: "Marie Dubois"
+    curated_by_link: "https://mariedubois.example.com"
+    role: "Sound designer, performer"
+    technology: "Max/MSP, TouchDesigner, Ableton Live"
+    technology_link: "https://cycling74.com/"
+    collaborators: "Visual artist Sarah Chen, Dancer Alex Rivera"
+    collaborators_link: "https://sarahchen.example.com"
+    credits: "John Doe (lighting), Jane Smith (stage design)"
+    partners: "Institut Français, Goethe-Institut"
+    partners_link: "https://www.institutfrancais.com/"
+    supporters: "European Cultural Foundation"
+    supporters_link: "https://culturalfoundation.eu/"
+    composer_performer_producer: "J3ZZ"
+    composer_performer_producer_link: "/bio/"
+    mastering_by: "Abbey Road Studios"
+    mastering_by_link: "https://www.abbeyroad.com/"
+    artwork_by: "Design Studio XYZ"
+    artwork_by_link: "https://designstudioxyz.example.com"
+    interview: "Listen on SoundCloud"
+    interview_link: "https://soundcloud.com/j3zz/interview"
+    press_kit: "Download PDF"
+    press_kit_link: "/assets/press/press-kit.pdf"
+    socials: "@j3zz on Instagram"
+    socials_link: "https://instagram.com/j3zz"
+    special_thanks: "To the amazing team and all supporters"
+    custom:
+      - label: "Duration"
+        value: "45 minutes"
+      - label: "Streaming"
+        value: "Available on Spotify"
+        link: "https://spotify.com/artist/j3zz"
+      - label: "Related Work"
+        value: "See Lorem Ipsum project"
+        link: "/works/lorem-ipsum/"
 
   - type: text
     title: "About the Project"
@@ -77,11 +132,16 @@ sections:
     text: "This modular system gives me complete control over how my work is presented."
     author: "Artist Name"
 
-  - type: video
-    platform: "youtube"
-    video_id: "dQw4w9WgXcQ"
-    caption: "Project video documentation"
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    caption: "Universal iframe module with responsive 16:9 aspect ratio"
+
+
 
   - type: linked-events
     title: "Upcoming Events & Performances"
 ---
+
+

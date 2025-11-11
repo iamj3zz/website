@@ -649,36 +649,122 @@ body {
   text-align: center;
 }
 
+/* Bandcamp Module */
+.module-bandcamp {
+  margin-bottom: 60px;
+}
+
+.bandcamp-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
+  position: relative;
+  clear: both;
+}
+
+.bandcamp-wrapper iframe {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  max-width: none;
+  border: 0;
+  vertical-align: bottom;
+}
+
+.bandcamp-caption {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+}
+
+/* Universal Iframe Module */
+.module-iframe {
+  margin-bottom: 60px;
+}
+
+.iframe-wrapper {
+  max-width: 100%;
+  overflow: visible;
+  position: relative;
+  clear: both;
+}
+
+.iframe-wrapper iframe {
+  display: block;
+  min-height: 42px;
+  max-width: 100%;
+  border: 0;
+  vertical-align: bottom;
+}
+
+/* Responsive iframe wrapper with aspect ratio */
+.iframe-responsive {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+.iframe-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.iframe-caption {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #666;
+  font-style: italic;
+  text-align: center;
+}
+
 /* Metadata Module */
 .module-metadata {
-  padding: 30px;
+  padding: 15px 20px;
   background: #f9f9f9;
   border-left: 3px solid #333;
 }
 
 .metadata-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 12px 15px;
 }
 
 .metadata-item {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 3px;
 }
 
 .metadata-label {
-  font-size: 11px;
+  font-size: 10px;
   color: #999;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 0.8px;
   font-weight: bold;
 }
 
 .metadata-value {
-  font-size: 14px;
+  font-size: 13px;
   color: #333;
+  line-height: 1.4;
+}
+
+.metadata-value a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  transition: border-color 0.3s ease, color 0.3s ease;
+}
+
+.metadata-value a:hover {
+  border-bottom-color: #333;
+  color: #000;
 }
 
 /* Quote Module */

@@ -79,7 +79,7 @@ Updates GitHub Pages and all associated Jekyll dependencies.
   - `hero-image.html` - Large featured image with optional caption
   - `text.html` - Rich text content with Markdown support
   - `image-grid.html` - Grid of images (1-6 columns) with lightbox and captions
-  - `video.html` - Video embed (YouTube, Vimeo, or direct upload)
+  - `iframe.html` - Universal iframe embed for any platform
   - `metadata.html` - Key-value metadata display
   - `quote.html` - Blockquote with attribution
   - `spacer.html` - Vertical spacing control
@@ -336,7 +336,7 @@ primary_category: installations  # Used for primary overlay color
 ---
 layout: work
 title: New Work Title
-work_id: new-work-title  # Optional: unique ID for linking events (A-Z, a-z, 0-9, -, _)
+work_id: new-work-title  # Required: unique ID for linking events (A-Z, a-z, 0-9, -, _)
 category: installations  # or live-acts, releases, collabs
 # Or use multi-category:
 # categories: [installations, collabs]
@@ -348,6 +348,35 @@ order: 25  # Higher numbers appear first
 3. Add description content below front matter (optional)
 4. Place image in `assets/img/`
 5. Restart Jekyll server if needed
+
+**Adding Metadata to Simple Layout Works:**
+
+Metadata fields can be added directly to the front matter and will automatically display above the work image. Any of the metadata fields documented in the Metadata Module section can be used:
+
+```yaml
+---
+layout: work
+title: New Work Title
+work_id: new-work-title
+category: installations
+image: /assets/img/work-image.jpg
+order: 25
+# Metadata fields (all optional)
+year: "2024"
+location: "New York, USA"
+role: "Sound installation"
+technology: "Spatial audio, MaxMSP"
+collaborators: "Visual artist Name"
+credits: "Person 1, Person 2"
+# ... any other metadata fields
+---
+```
+
+**Features:**
+- Metadata automatically displays if any metadata fields are present in front matter
+- Uses the same metadata module design as modular layouts
+- All metadata fields are optional - only add what's relevant
+- See Metadata Module section below for complete list of available fields
 
 #### Modular Layout
 
@@ -452,29 +481,56 @@ Grid of images with 1-6 column layouts, square thumbnail cropping, lightbox view
 - Custom captions displayed in lightbox
 - Responsive: Collapses to 1 column on mobile
 
-#### 4. Video Module
+#### 4. Metadata Module
 
-Embed videos from YouTube, Vimeo, or direct upload.
-
-```yaml
-- type: video
-  platform: "youtube"  # Options: youtube, vimeo, direct
-  video_id: "dQw4w9WgXcQ"  # For YouTube/Vimeo
-  # url: "/assets/video/file.mp4"  # For direct uploads
-  caption: "Optional video caption"  # Optional
-```
-
-#### 5. Metadata Module
-
-Display project metadata in a clean grid layout.
+Display project metadata in a clean grid layout. All fields are optional - include only what's relevant for your project.
 
 ```yaml
 - type: metadata
+  # Temporal Information
   year: "2025"
-  client: "Client Name"
+  date: "March 15-20, 2025"
+
+  # Industry Identifiers
+  isrc: "USRC17607839"
+  upc: "123456789012"
+  iswc: "T-345.246.800-1"
+
+  # Location Information
   location: "Paris, France"
-  credits: "Artist 1, Artist 2"
-  # Add any custom fields:
+  performed_in: "Europe"
+  places: "Venue 1, Venue 2"
+
+  # Production Information
+  produced_by: "Production Company"
+  client: "Client Name"
+  commissioned_by: "Festival Name"
+  curated_by: "Curator Name"
+
+  # Role and Technology
+  role: "Sound designer, performer"
+  technology: "Max/MSP, TouchDesigner, Ableton Live"
+
+  # Collaborators and Credits
+  collaborators: "Visual artist Name, Dancer Name"
+  credits: "Person 1 (role), Person 2 (role)"
+  partners: "Organization 1, Organization 2"
+  supporters: "Foundation Name"
+
+  # Specific Roles
+  composer_performer_producer: "Artist Name"
+  mastering_by: "Studio Name"
+  artwork_by: "Designer Name"
+
+  # Additional Resources
+  interview: "Available on SoundCloud"
+  press_kit: "Download PDF"
+  socials: "@username on Instagram, Twitter"
+
+  # Acknowledgements
+  special_thanks: "To everyone who supported this project"
+
+  # Custom fields for any additional metadata not covered above
   custom:
     - label: "Duration"
       value: "45 minutes"
@@ -482,7 +538,69 @@ Display project metadata in a clean grid layout.
       value: "Mixed media"
 ```
 
-#### 6. Quote Module
+**Available Fields:**
+- **Temporal:** `year`, `date`
+- **Industry Identifiers:** `isrc`, `upc`, `iswc`
+- **Location:** `location`, `performed_in`, `places`
+- **Production:** `produced_by`, `client`, `commissioned_by`, `curated_by`
+- **Role & Tech:** `role`, `technology`
+- **Collaborators:** `collaborators`, `credits`, `partners`, `supporters`
+- **Specific Roles:** `composer_performer_producer`, `mastering_by`, `artwork_by`
+- **Resources:** `interview`, `press_kit`, `socials`
+- **Acknowledgements:** `special_thanks`
+- **Custom:** `custom` array for additional fields
+
+**Industry Identifier Information:**
+- **ISRC** (International Standard Recording Code): Unique identifier for sound recordings
+- **UPC** (Universal Product Code): Barcode number for releases/products
+- **ISWC** (International Standard Musical Work Code): Unique identifier for musical compositions
+
+**Features:**
+- Responsive grid layout (auto-fits to available space)
+- Uppercase labels with lowercase values
+- Light gray background with left border accent
+- All fields are optional - only specified fields will display
+
+**Adding Links to Metadata Fields:**
+
+Any metadata field can be made clickable by adding a `_link` suffix to the field name. Links can point to external URLs or internal pages.
+
+```yaml
+- type: metadata
+  # External links (use full URLs with https://)
+  year: "2025"
+  year_link: "https://festival-website.com/2025"
+
+  location: "Paris, France"
+  location_link: "https://maps.google.com/?q=Paris,France"
+
+  mastering_by: "Abbey Road Studios"
+  mastering_by_link: "https://www.abbeyroad.com/"
+
+  # Internal links (use site-relative paths)
+  client: "Previous Client"
+  client_link: "/works/previous-project/"
+
+  collaborators: "Artist Name"
+  collaborators_link: "/bio/"
+
+  # Custom fields with links
+  custom:
+    - label: "Streaming"
+      value: "Available on Spotify"
+      link: "https://spotify.com/artist/name"
+    - label: "Related Work"
+      value: "See other project"
+      link: "/works/other-project/"
+```
+
+**Link Examples:**
+- External URLs: `https://example.com`, `https://maps.google.com/?q=Location`
+- Internal pages: `/bio/`, `/works/project-name/`, `/contact/`
+- All external links open in new tab automatically
+- Links have subtle underline styling that becomes more prominent on hover
+
+#### 5. Quote Module
 
 Blockquote with optional attribution.
 
@@ -492,7 +610,7 @@ Blockquote with optional attribution.
   author: "Author Name"  # Optional
 ```
 
-#### 7. Spacer Module
+#### 6. Spacer Module
 
 Add vertical spacing between sections.
 
@@ -501,7 +619,7 @@ Add vertical spacing between sections.
   height: "60px"  # Any CSS height value
 ```
 
-#### 8. Linked Events Module
+#### 7. Linked Events Module
 
 Display events linked to this work, using the same design as the main Events page.
 
@@ -538,6 +656,66 @@ date: 2025-03-15
 work_id: my-project-title  # Must match the work's work_id exactly
 ---
 ```
+
+#### 8. Universal Iframe Module
+
+Universal iframe embed module that accepts any embed code from any platform (YouTube, Vimeo, Bandcamp, SoundCloud, etc.). Supports both responsive (aspect ratio-based) and fixed-height modes.
+
+**Fixed-Height Mode (Default):**
+```yaml
+- type: iframe
+  embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>'
+  caption: "Optional caption text"  # Optional
+```
+
+**Responsive Mode (Maintains Aspect Ratio):**
+```yaml
+- type: iframe
+  embed_code: '<iframe src="https://player.vimeo.com/video/VIDEO_ID" frameborder="0" allowfullscreen></iframe>'
+  responsive: true
+  aspect_ratio: "16:9"  # Options: "16:9", "4:3", "1:1", "21:9"
+  caption: "Optional caption text"  # Optional
+```
+
+**Parameters:**
+- `embed_code` (required): The full iframe embed code from any platform
+- `caption` (optional): Caption text displayed below the iframe
+- `responsive` (optional): `true` or `false` - if true, maintains aspect ratio (default: `false`, uses exact height)
+- `aspect_ratio` (optional): `"16:9"`, `"4:3"`, `"1:1"`, or `"21:9"` - only used if `responsive: true` (default: `"16:9"`)
+
+**How It Works:**
+
+*Fixed-Height Mode:*
+- Automatically extracts the height from the embed code
+- Uses 100% width and the extracted height
+- Falls back to 400px if no height is found
+- Best for: Bandcamp players, SoundCloud embeds, or any content with specific height requirements
+
+*Responsive Mode:*
+- Ignores the embed code dimensions
+- Uses CSS padding-bottom technique to maintain aspect ratio
+- Iframe fills the container at 100% width and height
+- Best for: Video embeds (YouTube, Vimeo) that should adapt to screen size
+
+**Supported Height Formats:**
+The module automatically detects height from these formats in embed codes:
+- `height: 315px;` or `height:315px;`
+- `height="315"` or `height="315px"`
+
+**Features:**
+- Works with any iframe embed code from any platform
+- Automatically extracts source URL and dimensions
+- Responsive 100% width on all screen sizes
+- Clean styling with optional captions
+- No manual configuration needed - just paste the embed code!
+- Choose between fixed-height or aspect ratio-based responsive layout
+
+**When to Use:**
+- Use for videos (YouTube, Vimeo, etc.)
+- Use for audio players (Bandcamp, SoundCloud, Spotify, etc.)
+- Use for any iframe-based embed (interactive content, maps, widgets, etc.)
+- Choose responsive mode for video embeds that should adapt to screen size
+- Choose fixed-height mode for audio players and embeds with specific dimensions
 
 ### Module Order and Layout
 
