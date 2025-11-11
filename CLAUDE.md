@@ -56,7 +56,7 @@ Updates GitHub Pages and all associated Jekyll dependencies.
 - `_layouts/work.html` - Layout for individual portfolio work detail pages
 
 **Collections:**
-- `_portfolio/` - Portfolio items collection (28 items numbered 01-28)
+- `_portfolio/` - Portfolio items collection (29 items numbered 01-29)
   - Each item has: `title`, `work_id`, `category`/`categories`, `image`, `order`, and optional content
   - Required `work_id` field (alphanumeric with hyphens/underscores only) for linking to events and internal references
   - Categories: `installations`, `live-acts`, `releases`, `collabs`
@@ -84,6 +84,8 @@ Updates GitHub Pages and all associated Jekyll dependencies.
   - `quote.html` - Blockquote with attribution
   - `spacer.html` - Vertical spacing control
   - `linked-events.html` - Display events linked to the work
+  - `split-hero-metadata.html` - Two-column layout with hero content (2/3) and metadata (1/3)
+  - `split-bandcamp-metadata.html` - Two-column layout with iframe (1/3) and metadata/text (2/3)
 
 ### Navigation
 
@@ -717,6 +719,122 @@ The module automatically detects height from these formats in embed codes:
 - Choose responsive mode for video embeds that should adapt to screen size
 - Choose fixed-height mode for audio players and embeds with specific dimensions
 
+#### 9. Split Hero-Metadata Module
+
+Two-column responsive layout with hero content (image or iframe) on the left (2/3 width) and metadata on the right (1/3 width). Perfect for showcasing visual or video content alongside project details.
+
+**With Image:**
+```yaml
+- type: split-hero-metadata
+  content_type: "image"
+  image: /assets/img/main-image.jpg
+  caption: "Optional image caption"  # Optional
+  # Metadata fields
+  year: "2025"
+  location: "Paris, France"
+  client: "Client Name"
+  role: "Sound designer, performer"
+  technology: "Max/MSP, Ableton Live"
+  # ... any other metadata fields
+```
+
+**With Iframe (Fixed-Height):**
+```yaml
+- type: split-hero-metadata
+  content_type: "iframe"
+  embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>'
+  caption: "Optional video caption"  # Optional
+  # Metadata fields
+  year: "2025"
+  location: "Berlin, Germany"
+  commissioned_by: "Festival Name"
+```
+
+**With Iframe (Responsive):**
+```yaml
+- type: split-hero-metadata
+  content_type: "iframe"
+  embed_code: '<iframe src="https://player.vimeo.com/video/VIDEO_ID" frameborder="0" allowfullscreen></iframe>'
+  responsive: true
+  aspect_ratio: "16:9"  # Options: "16:9", "4:3", "1:1", "21:9"
+  caption: "Optional caption"  # Optional
+  # Metadata fields
+  year: "2025"
+  role: "Artist, composer"
+```
+
+**Parameters:**
+- `content_type` (required): `"image"` or `"iframe"` - determines what appears in the left column
+- `image` (required if content_type is "image"): Path to image file
+- `embed_code` (required if content_type is "iframe"): Full iframe embed code
+- `responsive` (optional): `true` or `false` - only for iframe mode
+- `aspect_ratio` (optional): `"16:9"`, `"4:3"`, `"1:1"`, or `"21:9"` - only for responsive iframe mode
+- `caption` (optional): Caption text for image or iframe
+- All standard metadata fields (see Metadata Module section)
+
+**Layout:**
+- **Desktop (>900px):** Two columns with 2:1 ratio (hero takes 2/3 width, metadata takes 1/3 width)
+- **Mobile (≤900px):** Stacks to single column for optimal viewing
+
+**When to Use:**
+- Showcase installation views with detailed project information
+- Display video documentation alongside production credits
+- Present visual work with technical specifications side-by-side
+- Create a more compact, professional layout for works with substantial metadata
+
+#### 10. Split Bandcamp-Metadata Module
+
+Two-column responsive layout with iframe on the left (1/3 width) and metadata plus optional text on the right (2/3 width). Designed specifically for music releases with Bandcamp players (or similar narrow embeds) alongside comprehensive release information.
+
+```yaml
+- type: split-bandcamp-metadata
+  embed_code: '<iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=123456/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless></iframe>'
+  caption: "Available on Bandcamp"  # Optional
+  # Metadata fields
+  year: "2024"
+  location: "Budapest, Hungary"
+  role: "Producer, composer"
+  isrc: "USRC17607839"
+  mastering_by: "Studio Name"
+  mastering_by_link: "https://studio.com"
+  custom:
+    - label: "Format"
+      value: "Digital, Vinyl"
+    - label: "Tracks"
+      value: "12 tracks, 45 minutes"
+  # Optional text content
+  text_title: "About the Album"  # Optional
+  text_content: |
+    Album description with **markdown** support.
+
+    Multiple paragraphs and formatting work here.
+```
+
+**Parameters:**
+- `embed_code` (required): Full iframe embed code (typically from Bandcamp)
+- `caption` (optional): Caption text displayed below the iframe
+- All standard metadata fields (see Metadata Module section)
+- `text_title` (optional): Heading for text section below metadata
+- `text_content` (optional): Text content in markdown format, appears below metadata
+
+**Layout:**
+- **Desktop (>900px):** Two columns with 1:2 ratio (iframe takes 1/3 width, metadata/text takes 2/3 width)
+- **Mobile (≤900px):** Stacks to single column for optimal viewing
+- Text content (if provided) appears below metadata in the right column
+
+**Features:**
+- Automatically extracts iframe dimensions from embed code
+- Supports all metadata fields with linking capability
+- Optional text section with full Markdown support
+- Perfect for narrow Bandcamp players and similar embeds
+- Responsive design adapts to all screen sizes
+
+**When to Use:**
+- Music releases with Bandcamp or SoundCloud players
+- Albums, EPs, or singles that need detailed release information
+- Projects where you want the player visible but not dominating the layout
+- Any work with a narrow embed that benefits from adjacent metadata
+
 ### Module Order and Layout
 
 - Modules appear in the order defined in the `sections` array
@@ -726,7 +844,9 @@ The module automatically detects height from these formats in embed codes:
 
 ### Example: Complete Modular Work
 
-See `_portfolio/28-modular-example.md` for a complete working example using all module types.
+See `_portfolio/28-modular-example.md` for a complete working example using all standard module types.
+
+See `_portfolio/29-split-layout-example.md` for examples of the split layout modules and how to combine them with other modules.
 
 ### Modifying Page Content
 
