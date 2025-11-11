@@ -17,7 +17,7 @@ sections:
   #  responsive: true
   #  aspect_ratio: "16:9"
   #  caption: "Universal iframe module with responsive 16:9 aspect ratio"
-  
+
   - type: metadata
     year: "2025"
     date: "March 15-20, 2025"
@@ -137,6 +137,20 @@ sections:
     responsive: true
     aspect_ratio: "16:9"
     caption: "Universal iframe module with responsive 16:9 aspect ratio"
+
+  - type: iframe
+    embed_code: '<iframe src="https://player.vimeo.com/video/1133337157?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="MAT Workshop 25-26: Ilze [Kavi] Briede, Kyle Duffield, and Mark-David Hosale | Biophysical Movement and Emotion Computational"></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    caption: "Universal iframe module with responsive 16:9 aspect ratio"
+
+  - type: iframe
+    embed_code: '<div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;"><iframe src="https://geo.dailymotion.com/player.html?video=x9tknai"style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"allowfullscreentitle="Dailymotion Video Player"allow="web-share"></iframe></div>'
+    responsive: true
+    aspect_ratio: "16:9"
+    caption: "Universal iframe module with responsive 16:9 aspect ratio"
+
+
 
 
 
