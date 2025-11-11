@@ -868,6 +868,68 @@ body {
   }
 }
 
+/* Split Bandcamp-Metadata Module */
+.module-split-bandcamp-metadata {
+  margin-bottom: 60px;
+}
+
+.split-bandcamp-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.split-bandcamp-left {
+  width: 100%;
+}
+
+.split-bandcamp-right {
+  width: 100%;
+}
+
+.split-bandcamp-iframe {
+  width: 100%;
+}
+
+/* Nested metadata in split bandcamp layout has no extra margin */
+.split-bandcamp-right .module-metadata {
+  margin-bottom: 0;
+}
+
+/* Text content in split bandcamp layout */
+.split-bandcamp-text {
+  margin-top: 30px;
+}
+
+.split-bandcamp-text h2 {
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 15px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.split-bandcamp-text .text-content {
+  font-size: 15px;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
+}
+
+.split-bandcamp-text .text-content p {
+  margin-bottom: 15px;
+}
+
+/* Responsive split bandcamp layout */
+@media (max-width: 900px) {
+  .split-bandcamp-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
 /* Quote Module */
 .module-quote {
   padding: 40px 20px;
