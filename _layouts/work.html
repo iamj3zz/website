@@ -51,6 +51,7 @@
         <div class="work-modules">
           {% for section in page.sections %}
             {% include work-modules/{{ section.type }}.html
+               content_type=section.content_type
                image=section.image
                alt=section.alt
                caption=section.caption
