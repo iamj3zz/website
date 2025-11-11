@@ -59,17 +59,127 @@
                url=section.url
                height=section.height
                year=section.year
-               client=section.client
+               year_link=section.year_link
+               date=section.date
+               date_link=section.date_link
+               isrc=section.isrc
+               isrc_link=section.isrc_link
+               upc=section.upc
+               upc_link=section.upc_link
+               iswc=section.iswc
+               iswc_link=section.iswc_link
                location=section.location
+               location_link=section.location_link
+               performed_in=section.performed_in
+               performed_in_link=section.performed_in_link
+               places=section.places
+               places_link=section.places_link
+               produced_by=section.produced_by
+               produced_by_link=section.produced_by_link
+               client=section.client
+               client_link=section.client_link
+               commissioned_by=section.commissioned_by
+               commissioned_by_link=section.commissioned_by_link
+               curated_by=section.curated_by
+               curated_by_link=section.curated_by_link
+               role=section.role
+               role_link=section.role_link
+               technology=section.technology
+               technology_link=section.technology_link
+               collaborators=section.collaborators
+               collaborators_link=section.collaborators_link
                credits=section.credits
+               credits_link=section.credits_link
+               partners=section.partners
+               partners_link=section.partners_link
+               supporters=section.supporters
+               supporters_link=section.supporters_link
+               composer_performer_producer=section.composer_performer_producer
+               composer_performer_producer_link=section.composer_performer_producer_link
+               mastering_by=section.mastering_by
+               mastering_by_link=section.mastering_by_link
+               artwork_by=section.artwork_by
+               artwork_by_link=section.artwork_by_link
+               interview=section.interview
+               interview_link=section.interview_link
+               press_kit=section.press_kit
+               press_kit_link=section.press_kit_link
+               socials=section.socials
+               socials_link=section.socials_link
+               special_thanks=section.special_thanks
+               special_thanks_link=section.special_thanks_link
                custom=section.custom
                text=section.text
                author=section.author
+               embed_code=section.embed_code
+               caption=section.caption
+               responsive=section.responsive
+               aspect_ratio=section.aspect_ratio
             %}
           {% endfor %}
         </div>
       {% else %}
         {% comment %} Fallback to old structure for backward compatibility {% endcomment %}
+
+        {% comment %} Auto-display metadata from front matter if any metadata fields exist {% endcomment %}
+        {% if page.year or page.date or page.isrc or page.upc or page.iswc or page.location or page.performed_in or page.places or page.produced_by or page.client or page.commissioned_by or page.curated_by or page.role or page.technology or page.collaborators or page.credits or page.partners or page.supporters or page.composer_performer_producer or page.mastering_by or page.artwork_by or page.interview or page.press_kit or page.socials or page.special_thanks %}
+          <div class="work-modules">
+            {% include work-modules/metadata.html
+               year=page.year
+               year_link=page.year_link
+               date=page.date
+               date_link=page.date_link
+               isrc=page.isrc
+               isrc_link=page.isrc_link
+               upc=page.upc
+               upc_link=page.upc_link
+               iswc=page.iswc
+               iswc_link=page.iswc_link
+               location=page.location
+               location_link=page.location_link
+               performed_in=page.performed_in
+               performed_in_link=page.performed_in_link
+               places=page.places
+               places_link=page.places_link
+               produced_by=page.produced_by
+               produced_by_link=page.produced_by_link
+               client=page.client
+               client_link=page.client_link
+               commissioned_by=page.commissioned_by
+               commissioned_by_link=page.commissioned_by_link
+               curated_by=page.curated_by
+               curated_by_link=page.curated_by_link
+               role=page.role
+               role_link=page.role_link
+               technology=page.technology
+               technology_link=page.technology_link
+               collaborators=page.collaborators
+               collaborators_link=page.collaborators_link
+               credits=page.credits
+               credits_link=page.credits_link
+               partners=page.partners
+               partners_link=page.partners_link
+               supporters=page.supporters
+               supporters_link=page.supporters_link
+               composer_performer_producer=page.composer_performer_producer
+               composer_performer_producer_link=page.composer_performer_producer_link
+               mastering_by=page.mastering_by
+               mastering_by_link=page.mastering_by_link
+               artwork_by=page.artwork_by
+               artwork_by_link=page.artwork_by_link
+               interview=page.interview
+               interview_link=page.interview_link
+               press_kit=page.press_kit
+               press_kit_link=page.press_kit_link
+               socials=page.socials
+               socials_link=page.socials_link
+               special_thanks=page.special_thanks
+               special_thanks_link=page.special_thanks_link
+               custom=page.metadata_custom
+            %}
+          </div>
+        {% endif %}
+
         <div class="work-image">
           <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
         </div>

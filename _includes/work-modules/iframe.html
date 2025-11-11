@@ -1,0 +1,98 @@
+{% comment %}
+  Universal Iframe Module
+
+  Parameters:
+  - embed_code: The full iframe embed code from any platform (required)
+  - caption: Optional caption text
+  - responsive: true or false - if true, maintains aspect ratio (default: false, uses exact height)
+  - aspect_ratio: "16:9", "4:3", "1:1", etc. (only used if responsive: true)
+{% endcomment %}
+
+{% assign is_responsive = include.responsive | default: false %}
+
+{% if is_responsive %}
+  {% comment %} Responsive mode with aspect ratio {% endcomment %}
+  {% assign ratio = include.aspect_ratio | default: "16:9" %}
+
+  {% comment %} Calculate padding based on aspect ratio {% endcomment %}
+  {% if ratio == "16:9" %}
+    {% assign padding = "56.25%" %}
+  {% elsif ratio == "4:3" %}
+    {% assign padding = "75%" %}
+  {% elsif ratio == "1:1" %}
+    {% assign padding = "100%" %}
+  {% elsif ratio == "21:9" %}
+    {% assign padding = "42.85%" %}
+  {% else %}
+    {% assign padding = "56.25%" %}
+  {% endif %}
+
+  {% comment %} Extract src URL from embed code {% endcomment %}
+  {% assign src_start = include.embed_code | split: 'src="' | last %}
+  {% assign src_url = src_start | split: '"' | first %}
+
+  <div class="module module-iframe">
+    <div class="iframe-wrapper iframe-responsive" style="padding-bottom: {{ padding }};">
+      <iframe
+        src="{{ src_url }}"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+        allowfullscreen
+        seamless>
+      </iframe>
+    </div>
+    {% if include.caption %}
+      <p class="iframe-caption">{{ include.caption }}</p>
+    {% endif %}
+  </div>
+
+{% else %}
+  {% comment %} Fixed height mode - extract exact dimensions {% endcomment %}
+
+  {% comment %} Extract src URL from embed code {% endcomment %}
+  {% assign src_start = include.embed_code | split: 'src="' | last %}
+  {% assign src_url = src_start | split: '"' | first %}
+
+  {% comment %} Extract width from embed code {% endcomment %}
+  {% assign width_start = include.embed_code | split: 'width: ' | last %}
+  {% if width_start == include.embed_code %}
+    {% assign width_start = include.embed_code | split: 'width:' | last %}
+  {% endif %}
+  {% if width_start == include.embed_code %}
+    {% assign width_start = include.embed_code | split: 'width="' | last %}
+  {% endif %}
+  {% assign player_width = width_start | split: ';' | first | split: '"' | first | strip %}
+
+  {% comment %} If no width found, use 100% {% endcomment %}
+  {% if player_width == "" or player_width == include.embed_code %}
+    {% assign player_width = "100%" %}
+  {% endif %}
+
+  {% comment %} Extract height from embed code {% endcomment %}
+  {% assign height_start = include.embed_code | split: 'height: ' | last %}
+  {% if height_start == include.embed_code %}
+    {% assign height_start = include.embed_code | split: 'height:' | last %}
+  {% endif %}
+  {% if height_start == include.embed_code %}
+    {% assign height_start = include.embed_code | split: 'height="' | last %}
+  {% endif %}
+  {% assign player_height = height_start | split: ';' | first | split: '"' | first | strip %}
+
+  {% comment %} If no height found, use default {% endcomment %}
+  {% if player_height == "" or player_height == include.embed_code %}
+    {% assign player_height = "400px" %}
+  {% endif %}
+
+  <div class="module module-iframe">
+    <div class="iframe-wrapper">
+      <iframe
+        style="border: 0; width: {{ player_width }}; height: {{ player_height }};"
+        src="{{ src_url }}"
+        allowfullscreen
+        seamless>
+      </iframe>
+    </div>
+    {% if include.caption %}
+      <p class="iframe-caption">{{ include.caption }}</p>
+    {% endif %}
+  </div>
+{% endif %}
