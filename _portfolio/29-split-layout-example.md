@@ -76,6 +76,36 @@ sections:
     location: "Studio, Berlin"
     role: "Composer, sound designer"
 
+  # Split Bandcamp-Metadata layout: Iframe (1/3) + Metadata & Text (2/3)
+  # Perfect for releases with Bandcamp players alongside detailed info
+  - type: split-bandcamp-metadata
+    embed_code: '<iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=2412288496/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless><a href="https://morzsarecords.bandcamp.com/album/polish-graffiti">polish graffiti by morzsa records</a></iframe>'
+    caption: "Album available on Bandcamp"
+    # Metadata fields for the release
+    year: "2024"
+    location: "Budapest, Hungary"
+    role: "Producer, composer"
+    isrc: "USRC17607839"
+    mastering_by: "Studio Name"
+    custom:
+      - label: "Format"
+        value: "Digital, Vinyl"
+      - label: "Tracks"
+        value: "12 tracks, 45 minutes"
+    # Text content below metadata
+    text_title: "About the Album"
+    text_content: |
+      This album represents a unique exploration of **electronic soundscapes** and *organic textures*, blending field recordings with synthesized elements.
+
+      The composition process involved extensive experimentation with spatial audio techniques and granular synthesis. Each track was carefully crafted to create an immersive listening experience that evolves over time.
+
+      Stream or purchase this album on Bandcamp to support independent electronic music.
+
+
+
+
+    
+
   # Quote from curator
   - type: quote
     text: "The split layout perfectly balances visual impact with essential project information."
