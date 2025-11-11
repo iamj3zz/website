@@ -1,0 +1,174 @@
+{% comment %}
+  Split Hero-Metadata Module
+  Two-column layout with hero content on left (2/3) and metadata on right (1/3)
+
+  Parameters:
+  - content_type: "image" or "iframe" (required)
+
+  For image:
+  - image: Path to image file (required if content_type is "image")
+  - caption: Optional image caption
+
+  For iframe:
+  - embed_code: Full iframe embed code (required if content_type is "iframe")
+  - responsive: true/false for aspect ratio mode
+  - aspect_ratio: "16:9", "4:3", "1:1", "21:9"
+  - caption: Optional iframe caption
+
+  Metadata fields (all optional):
+  - All standard metadata fields supported
+{% endcomment %}
+
+<div class="module module-split-hero-metadata">
+  <div class="split-container">
+
+    {% comment %} Left column - Hero content (2/3 width) {% endcomment %}
+    <div class="split-left">
+      {% if include.content_type == "image" %}
+        {% comment %} Hero Image {% endcomment %}
+        <div class="split-hero-image">
+          <img src="{{ include.image | relative_url }}" alt="">
+          {% if include.caption %}
+            <p class="image-caption">{{ include.caption }}</p>
+          {% endif %}
+        </div>
+
+      {% elsif include.content_type == "iframe" %}
+        {% comment %} Iframe {% endcomment %}
+        {% assign is_responsive = include.responsive | default: false %}
+
+        {% if is_responsive %}
+          {% assign ratio = include.aspect_ratio | default: "16:9" %}
+          {% if ratio == "16:9" %}
+            {% assign padding = "56.25%" %}
+          {% elsif ratio == "4:3" %}
+            {% assign padding = "75%" %}
+          {% elsif ratio == "1:1" %}
+            {% assign padding = "100%" %}
+          {% elsif ratio == "21:9" %}
+            {% assign padding = "42.85%" %}
+          {% else %}
+            {% assign padding = "56.25%" %}
+          {% endif %}
+
+          {% assign src_start = include.embed_code | split: 'src="' | last %}
+          {% assign src_url = src_start | split: '"' | first %}
+
+          <div class="split-iframe">
+            <div class="iframe-wrapper iframe-responsive" style="padding-bottom: {{ padding }};">
+              <iframe
+                src="{{ src_url }}"
+                style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                allowfullscreen
+                seamless>
+              </iframe>
+            </div>
+            {% if include.caption %}
+              <p class="iframe-caption">{{ include.caption }}</p>
+            {% endif %}
+          </div>
+
+        {% else %}
+          {% assign src_start = include.embed_code | split: 'src="' | last %}
+          {% assign src_url = src_start | split: '"' | first %}
+
+          {% assign width_start = include.embed_code | split: 'width: ' | last %}
+          {% if width_start == include.embed_code %}
+            {% assign width_start = include.embed_code | split: 'width:' | last %}
+          {% endif %}
+          {% if width_start == include.embed_code %}
+            {% assign width_start = include.embed_code | split: 'width="' | last %}
+          {% endif %}
+          {% assign player_width = width_start | split: ';' | first | split: '"' | first | strip %}
+          {% if player_width == "" or player_width == include.embed_code %}
+            {% assign player_width = "100%" %}
+          {% endif %}
+
+          {% assign height_start = include.embed_code | split: 'height: ' | last %}
+          {% if height_start == include.embed_code %}
+            {% assign height_start = include.embed_code | split: 'height:' | last %}
+          {% endif %}
+          {% if height_start == include.embed_code %}
+            {% assign height_start = include.embed_code | split: 'height="' | last %}
+          {% endif %}
+          {% assign player_height = height_start | split: ';' | first | split: '"' | first | strip %}
+          {% if player_height == "" or player_height == include.embed_code %}
+            {% assign player_height = "400px" %}
+          {% endif %}
+
+          <div class="split-iframe">
+            <div class="iframe-wrapper">
+              <iframe
+                style="border: 0; width: {{ player_width }}; height: {{ player_height }};"
+                src="{{ src_url }}"
+                allowfullscreen
+                seamless>
+              </iframe>
+            </div>
+            {% if include.caption %}
+              <p class="iframe-caption">{{ include.caption }}</p>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    {% comment %} Right column - Metadata (1/3 width) {% endcomment %}
+    <div class="split-right">
+      {% include work-modules/metadata.html
+         year=include.year
+         year_link=include.year_link
+         date=include.date
+         date_link=include.date_link
+         isrc=include.isrc
+         isrc_link=include.isrc_link
+         upc=include.upc
+         upc_link=include.upc_link
+         iswc=include.iswc
+         iswc_link=include.iswc_link
+         location=include.location
+         location_link=include.location_link
+         performed_in=include.performed_in
+         performed_in_link=include.performed_in_link
+         places=include.places
+         places_link=include.places_link
+         produced_by=include.produced_by
+         produced_by_link=include.produced_by_link
+         client=include.client
+         client_link=include.client_link
+         commissioned_by=include.commissioned_by
+         commissioned_by_link=include.commissioned_by_link
+         curated_by=include.curated_by
+         curated_by_link=include.curated_by_link
+         role=include.role
+         role_link=include.role_link
+         technology=include.technology
+         technology_link=include.technology_link
+         collaborators=include.collaborators
+         collaborators_link=include.collaborators_link
+         credits=include.credits
+         credits_link=include.credits_link
+         partners=include.partners
+         partners_link=include.partners_link
+         supporters=include.supporters
+         supporters_link=include.supporters_link
+         composer_performer_producer=include.composer_performer_producer
+         composer_performer_producer_link=include.composer_performer_producer_link
+         mastering_by=include.mastering_by
+         mastering_by_link=include.mastering_by_link
+         artwork_by=include.artwork_by
+         artwork_by_link=include.artwork_by_link
+         interview=include.interview
+         interview_link=include.interview_link
+         press_kit=include.press_kit
+         press_kit_link=include.press_kit_link
+         socials=include.socials
+         socials_link=include.socials_link
+         special_thanks=include.special_thanks
+         special_thanks_link=include.special_thanks_link
+         custom=include.custom
+      %}
+    </div>
+
+  </div>
+</div>

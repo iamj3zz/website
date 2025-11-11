@@ -825,6 +825,49 @@ body {
   color: #000;
 }
 
+/* Split Hero-Metadata Module */
+.module-split-hero-metadata {
+  margin-bottom: 60px;
+}
+
+.split-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+.split-left {
+  width: 100%;
+}
+
+.split-right {
+  width: 100%;
+}
+
+.split-hero-image img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.split-iframe {
+  width: 100%;
+}
+
+/* Nested metadata in split layout has no extra margin */
+.split-right .module-metadata {
+  margin-bottom: 0;
+}
+
+/* Responsive split layout */
+@media (max-width: 900px) {
+  .split-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
 /* Quote Module */
 .module-quote {
   padding: 40px 20px;
