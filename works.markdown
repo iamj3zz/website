@@ -59,10 +59,11 @@ permalink: /works/
       {% else %}
         {% assign display_categories = item.category | replace: '-', ' ' %}
       {% endif %}
-      <div class="works-list-row">
+      <div class="works-list-row" data-work-url="{{ site.url }}{{ item.url }}">
         <div class="works-col-no">{{ item.order }}</div>
         <div class="works-col-image">
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+          <div class="works-qr-code" id="qr-{{ item.order }}"></div>
         </div>
         <div class="works-col-content">
           <div class="works-col-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></div>
