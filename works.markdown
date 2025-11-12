@@ -46,4 +46,40 @@ permalink: /works/
       </div>
     {% endfor %}
   </div>
+
+  <div class="works-list-print">
+    <div class="works-list-header">
+      <div>NO.</div>
+      <div></div>
+      <div>TITLE</div>
+      <div>CATEGORY</div>
+      <div>YEAR</div>
+      <div>LOCATION</div>
+    </div>
+    {% assign sorted_portfolio = site.portfolio | sort: 'order' | reverse %}
+    {% for item in sorted_portfolio %}
+      {% if item.published == false %}
+        {% continue %}
+      {% endif %}
+      {% comment %} Support both single category and multiple categories {% endcomment %}
+      {% if item.categories %}
+        {% assign display_categories = item.categories | join: ', ' | replace: '-', ' ' %}
+      {% else %}
+        {% assign display_categories = item.category | replace: '-', ' ' %}
+      {% endif %}
+      <div class="works-list-row">
+        <div class="works-col-no">{{ item.order }}</div>
+        <div class="works-col-image">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+        </div>
+        <div class="works-col-title">{{ item.title }}</div>
+        <div class="works-col-category">{{ display_categories | capitalize }}</div>
+        <div class="works-col-year">{% if item.year %}{{ item.year }}{% else %}—{% endif %}</div>
+        <div class="works-col-location">{% if item.location %}{{ item.location }}{% else %}—{% endif %}</div>
+        {% if item.abstract %}
+        <div class="works-col-abstract">{{ item.abstract }}</div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
 </section>
