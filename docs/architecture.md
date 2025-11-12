@@ -70,18 +70,20 @@
 - Clicking category tags on portfolio items filters the grid
 
 **Printable WORKS Page:**
-- Full printable version accessible via `works.markdown` (lines 50-117)
-- Displays comprehensive work information optimized for print:
-  - Work number (order)
-  - Preview image
-  - **Clickable work title** linking to detail page
-  - Category badge
-  - Year and location
-  - Complete metadata (automatically collected from front matter `metadata` field)
-  - Abstract text (if defined)
-- Print-specific styling in `portfolio.css` (lines 1848-1936)
-- Work titles are clickable both on screen and in print with subtle underline styling
-- Metadata is automatically displayed if `metadata` field exists in work's front matter
+- Full printable version accessible via `works.markdown` (lines 50-127)
+- Clean 3-column layout without headers: `# | Image | Content`
+- Displays comprehensive work information optimized for A4 print (8-10 works per page):
+  - **Work number** (45-50px column, bold, gray)
+  - **Preview image** (110-120px square thumbnail with object-fit cover)
+  - **Content column** with clear hierarchy:
+    - **Title**: 12-14px, bold, clickable link to detail page
+    - **Categories**: 8-9px, UPPERCASE, semi-bold, gray (separate from metadata)
+    - **Abstract**: 10-12px, justified paragraph text
+    - **Metadata**: 9-10px, italic, gray with explicit labels
+- Metadata automatically collected from front matter `metadata` field with labels:
+  - Format: `Year: 2024 • Location: Paris • Role: Composer • Technology: Max/MSP • Collaborators: Artist Name • Client: Company • Commissioned by: Festival • ISRC: XXX • UPC: XXX • ISWC: XXX`
+- Print-specific styling in `portfolio.css` (lines 1637-1947)
+- Categories displayed separately from technical metadata for better visual hierarchy
 - No manual configuration needed - works automatically with centralized metadata system
 
 ## Portfolio System

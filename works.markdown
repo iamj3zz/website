@@ -48,14 +48,6 @@ permalink: /works/
   </div>
 
   <div class="works-list-print">
-    <div class="works-list-header">
-      <div>NO.</div>
-      <div></div>
-      <div>TITLE</div>
-      <div>CATEGORY</div>
-      <div>YEAR</div>
-      <div>LOCATION</div>
-    </div>
     {% assign sorted_portfolio = site.portfolio | sort: 'order' | reverse %}
     {% for item in sorted_portfolio %}
       {% if item.published == false %}
@@ -72,46 +64,64 @@ permalink: /works/
         <div class="works-col-image">
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
         </div>
-        <div class="works-col-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></div>
-        <div class="works-col-category">{{ display_categories | capitalize }}</div>
-        <div class="works-col-year">{% if item.year %}{{ item.year }}{% else %}—{% endif %}</div>
-        <div class="works-col-location">{% if item.location %}{{ item.location }}{% else %}—{% endif %}</div>
-        {% comment %} Build metadata string using simple concatenation {% endcomment %}
-        {% assign metadata_string = "" %}
-        {% if item.role %}
-          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-          {% assign metadata_string = metadata_string | append: item.role %}
-        {% endif %}
-        {% if item.technology %}
-          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-          {% assign metadata_string = metadata_string | append: item.technology %}
-        {% endif %}
-        {% if item.collaborators %}
-          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-          {% assign metadata_string = metadata_string | append: "Collab: " | append: item.collaborators %}
-        {% endif %}
-        {% if item.client %}
-          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-          {% assign metadata_string = metadata_string | append: "Client: " | append: item.client %}
-        {% endif %}
-        {% if item.commissioned_by %}
-          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-          {% assign metadata_string = metadata_string | append: "Commissioned by: " | append: item.commissioned_by %}
-        {% endif %}
-        {% if item.isrc %}
-          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-          {% assign metadata_string = metadata_string | append: "ISRC: " | append: item.isrc %}
-        {% endif %}
-        {% if item.upc %}
-          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-          {% assign metadata_string = metadata_string | append: "UPC: " | append: item.upc %}
-        {% endif %}
-        {% if metadata_string != "" %}
-        <div class="works-col-metadata">{{ metadata_string }}</div>
-        {% endif %}
-        {% if item.abstract %}
-        <div class="works-col-abstract">{{ item.abstract }}</div>
-        {% endif %}
+        <div class="works-col-content">
+          <div class="works-col-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></div>
+          {% comment %} Display categories separately {% endcomment %}
+          {% if item.categories %}
+            {% assign display_categories = item.categories | join: ', ' | replace: '-', ' ' | upcase %}
+          {% else %}
+            {% assign display_categories = item.category | replace: '-', ' ' | upcase %}
+          {% endif %}
+          <div class="works-col-categories">{{ display_categories }}</div>
+          {% if item.abstract %}
+          <div class="works-col-abstract">{{ item.abstract }}</div>
+          {% endif %}
+          {% comment %} Build metadata string WITHOUT categories {% endcomment %}
+          {% assign metadata_string = "" %}
+          {% if item.metadata.year %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "Year: " | append: item.metadata.year %}
+          {% endif %}
+          {% if item.metadata.location %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "Location: " | append: item.metadata.location %}
+          {% endif %}
+          {% if item.metadata.role %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "Role: " | append: item.metadata.role %}
+          {% endif %}
+          {% if item.metadata.technology %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "Technology: " | append: item.metadata.technology %}
+          {% endif %}
+          {% if item.metadata.collaborators %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "Collaborators: " | append: item.metadata.collaborators %}
+          {% endif %}
+          {% if item.metadata.client %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "Client: " | append: item.metadata.client %}
+          {% endif %}
+          {% if item.metadata.commissioned_by %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "Commissioned by: " | append: item.metadata.commissioned_by %}
+          {% endif %}
+          {% if item.metadata.isrc %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "ISRC: " | append: item.metadata.isrc %}
+          {% endif %}
+          {% if item.metadata.upc %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "UPC: " | append: item.metadata.upc %}
+          {% endif %}
+          {% if item.metadata.iswc %}
+            {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+            {% assign metadata_string = metadata_string | append: "ISWC: " | append: item.metadata.iswc %}
+          {% endif %}
+          {% if metadata_string != "" %}
+          <div class="works-col-metadata">{{ metadata_string }}</div>
+          {% endif %}
+        </div>
       </div>
     {% endfor %}
   </div>
