@@ -7,27 +7,19 @@ category: installations
 image: /assets/img/dumbpic.jpg
 order: 29
 sections:
+
+  # Standalone metadata module - also uses front matter metadata
+  - type: metadata
+    # No fields specified - automatically uses front matter metadata
+
+
   # Two-column split layout: Hero image (2/3 left) + Metadata (1/3 right)
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/img/dumbpic.jpg
     caption: "Main installation view with dramatic lighting"
-    # Metadata fields
-    year: "2025"
-    date: "April 10-15, 2025"
-    location: "Berlin, Germany"
-    location_link: "https://maps.google.com/?q=Berlin,Germany"
-    client: "Museum of Contemporary Art"
-    commissioned_by: "Berlin Art Week"
-    role: "Sound artist, installation designer"
-    technology: "Spatial audio system, custom sensors"
-    collaborators: "Visual artist Maria Schmidt"
-    credits: "Technical support: TechLab Berlin"
-    custom:
-      - label: "Duration"
-        value: "Continuous installation"
-      - label: "Capacity"
-        value: "15 visitors per session"
+  
+  
 
   # Full-width text module
   - type: text

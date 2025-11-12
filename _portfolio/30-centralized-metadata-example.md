@@ -30,6 +30,12 @@ metadata:
       value: "Experimental Electronic, Ambient"
 
 sections:
+
+  # Standalone metadata module - also uses front matter metadata
+  - type: metadata
+    # No fields specified - automatically uses front matter metadata
+
+
   # Text explaining the new system
   - type: text
     title: "New: Centralized Metadata System"
@@ -84,9 +90,6 @@ sections:
   - type: spacer
     height: "40px"
 
-  # Standalone metadata module - also uses front matter metadata
-  - type: metadata
-    # No fields specified - automatically uses front matter metadata
 
   # Text section
   - type: text

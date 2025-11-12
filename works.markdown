@@ -72,7 +72,7 @@ permalink: /works/
         <div class="works-col-image">
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
         </div>
-        <div class="works-col-title">{{ item.title }}</div>
+        <div class="works-col-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></div>
         <div class="works-col-category">{{ display_categories | capitalize }}</div>
         <div class="works-col-year">{% if item.year %}{{ item.year }}{% else %}—{% endif %}</div>
         <div class="works-col-location">{% if item.location %}{{ item.location }}{% else %}—{% endif %}</div>

@@ -1609,6 +1609,17 @@ body {
   line-height: 1.4;
 }
 
+.works-col-title a {
+  color: #333;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.works-col-title a:hover {
+  border-bottom-color: #333;
+}
+
 .works-col-category {
   grid-area: category;
   font-size: 11px;
@@ -1916,6 +1927,12 @@ body {
   .works-col-title {
     font-size: 10px;
     font-weight: bold;
+  }
+
+  .works-col-title a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
   }
 
   .works-col-category,
