@@ -1530,3 +1530,190 @@ body {
     font-size: 13px;
   }
 }
+
+/* Print Styles for A4 */
+@media print {
+  /* A4 Page Setup */
+  @page {
+    size: A4;
+    margin: 15mm 15mm 15mm 15mm;
+  }
+
+  /* Hide navigation and footer */
+  .main-nav,
+  .mobile-menu-toggle,
+  .site-footer {
+    display: none !important;
+  }
+
+  /* Keep and optimize header/logo */
+  .site-header {
+    padding: 20px 0 15px;
+    border-bottom: 1px solid #333;
+    margin-bottom: 20px;
+  }
+
+  .site-logo {
+    margin-bottom: 0;
+  }
+
+  .site-logo img {
+    height: 50px;
+  }
+
+  /* Add page info for print */
+  .site-header::after {
+    content: "www.j3zz.com" attr(data-page-title);
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    color: #666;
+    margin-top: 10px;
+    letter-spacing: 0.5px;
+  }
+
+  /* Page-specific print info */
+  .events-section::before {
+    content: "EVENTS";
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+  }
+
+  /* Optimize content area */
+  .site-content {
+    max-width: 100%;
+    padding: 0;
+    min-height: auto;
+  }
+
+  /* Events Section Optimization */
+  .events-section {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .events-section h1 {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+
+  /* Year sections with page break control */
+  .events-year-section {
+    margin-bottom: 40px;
+    page-break-inside: avoid;
+  }
+
+  .events-year-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .events-year-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+    page-break-after: avoid;
+  }
+
+  /* Preserve table grid layout */
+  .events-table {
+    width: 100%;
+  }
+
+  .events-table-header {
+    display: grid !important;
+    grid-template-columns: 60px 50px 85px 85px 1fr 70px 2fr !important;
+    gap: 12px;
+    padding: 10px 0;
+    border-bottom: 2px solid #333;
+    margin-bottom: 8px;
+    page-break-after: avoid;
+  }
+
+  .events-table-header > div {
+    font-size: 10px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+  }
+
+  /* Event rows with page break control */
+  .events-table-row {
+    display: grid !important;
+    grid-template-columns: 60px 50px 85px 85px 1fr 70px 2fr !important;
+    gap: 12px !important;
+    padding: 15px 0;
+    border-bottom: 1px solid #e0e0e0;
+    page-break-inside: avoid;
+    align-items: start;
+  }
+
+  .events-table-row:last-child {
+    border-bottom: none;
+  }
+
+  .events-table-row > div {
+    font-size: 11px;
+  }
+
+  /* Hide mobile labels in print - applies to ALL event columns */
+  .event-col-date::before,
+  .event-col-time::before,
+  .event-col-country::before,
+  .event-col-city::before,
+  .event-col-venue::before,
+  .event-col-tickets::before,
+  .event-col-description::before {
+    display: none !important;
+    content: none !important;
+  }
+
+  /* Maintain all text styling */
+  .event-col-date {
+    font-size: 10px;
+  }
+
+  .event-col-time,
+  .event-col-country,
+  .event-col-city {
+    font-size: 10px;
+  }
+
+  .event-col-description {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+
+  /* Maintain link styling for print */
+  .event-col-venue a,
+  .event-col-tickets a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Ensure colors print correctly */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Remove box shadows and unnecessary effects */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* Optimize backgrounds for printing */
+  body {
+    background: #fff;
+  }
+}
