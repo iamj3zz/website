@@ -1542,6 +1542,103 @@ body {
   }
 }
 
+/* Works List (Print-only) */
+.works-list-print {
+  display: none; /* Hidden on screen, shown in print */
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.works-list-header {
+  display: grid;
+  grid-template-columns: 40px 70px 180px 110px 55px 1fr;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 2px solid #333;
+  margin-bottom: 10px;
+}
+
+.works-list-header > div {
+  font-size: 11px;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.works-list-row {
+  display: grid;
+  grid-template-columns: 40px 70px 180px 110px 55px 1fr;
+  gap: 12px;
+  padding: 15px 0;
+  border-bottom: 1px solid #e0e0e0;
+  align-items: start;
+  grid-template-areas:
+    "no image title category year location"
+    "abstract abstract abstract abstract abstract abstract";
+}
+
+.works-list-row:last-child {
+  border-bottom: none;
+}
+
+.works-col-no {
+  grid-area: no;
+  font-size: 12px;
+  color: #999;
+  text-align: left;
+}
+
+.works-col-image {
+  grid-area: image;
+}
+
+.works-col-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid #e0e0e0;
+}
+
+.works-col-title {
+  grid-area: title;
+  font-size: 13px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.4;
+}
+
+.works-col-category {
+  grid-area: category;
+  font-size: 11px;
+  color: #666;
+  text-transform: capitalize;
+  line-height: 1.4;
+}
+
+.works-col-year {
+  grid-area: year;
+  font-size: 11px;
+  color: #666;
+}
+
+.works-col-location {
+  grid-area: location;
+  font-size: 11px;
+  color: #666;
+  line-height: 1.4;
+}
+
+.works-col-abstract {
+  grid-area: abstract;
+  font-size: 11px;
+  color: #666;
+  line-height: 1.6;
+  text-align: justify;
+  margin-top: 8px;
+  padding-left: 122px; /* Align with title column (no + image + gaps) */
+}
+
 /* Print Styles for A4 */
 @media print {
   /* A4 Page Setup */
@@ -1726,6 +1823,100 @@ body {
   /* Optimize backgrounds for printing */
   body {
     background: #fff;
+  }
+
+  /* Works Page Print Optimization */
+  #works::before {
+    content: "WORKS";
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+  }
+
+  /* Hide grid and filters in print */
+  .filter-container,
+  .portfolio-grid {
+    display: none !important;
+  }
+
+  /* Show works list in print */
+  .works-list-print {
+    display: block !important;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Works list header */
+  .works-list-header {
+    display: grid !important;
+    grid-template-columns: 35px 60px 165px 100px 50px 1fr !important;
+    gap: 10px;
+    padding: 10px 0;
+    border-bottom: 2px solid #333;
+    margin-bottom: 8px;
+    page-break-after: avoid;
+  }
+
+  .works-list-header > div {
+    font-size: 9px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Works list rows */
+  .works-list-row {
+    display: grid !important;
+    grid-template-columns: 35px 60px 165px 100px 50px 1fr !important;
+    gap: 10px !important;
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+    page-break-inside: avoid;
+    align-items: start;
+    grid-template-areas:
+      "no image title category year location"
+      "abstract abstract abstract abstract abstract abstract" !important;
+  }
+
+  .works-list-row:last-child {
+    border-bottom: none;
+  }
+
+  /* Column styling for print */
+  .works-col-no {
+    font-size: 9px;
+  }
+
+  .works-col-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #e0e0e0;
+  }
+
+  .works-col-title {
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  .works-col-category,
+  .works-col-year,
+  .works-col-location {
+    font-size: 9px;
+  }
+
+  .works-col-abstract {
+    font-size: 9px;
+    line-height: 1.5;
+    margin-top: 5px;
+    padding-left: 105px; /* Align with title: no(35) + image(60) + gaps(10*2) */
   }
 
   /* Bio Section Print Optimization */
