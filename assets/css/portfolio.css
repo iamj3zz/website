@@ -1639,6 +1639,11 @@ body {
   display: none;
 }
 
+/* Page Title QR Code - Hidden on screen, visible in print */
+.page-title-qr-code {
+  display: none;
+}
+
 /* Print Styles for A4 */
 @media print {
   /* A4 Page Setup */
@@ -2080,5 +2085,48 @@ body {
       max-width: 250px;
       margin: 0 auto;
     }
+  }
+
+  /* Page Title QR Code - Show in print at top-left with URL */
+  .page-title-qr-code {
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: auto;
+    z-index: 100;
+  }
+
+  .page-title-qr-code .qr-image {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 5px;
+  }
+
+  .page-title-qr-code .qr-image img,
+  .page-title-qr-code .qr-image canvas {
+    width: 70px !important;
+    height: 70px !important;
+    display: block;
+  }
+
+  .page-title-qr-code .qr-url {
+    font-size: 8px;
+    color: #666;
+    word-break: break-all;
+    max-width: 150px;
+    line-height: 1.3;
+  }
+
+  /* Adjust sections to accommodate QR code */
+  #works,
+  .events-section,
+  .bio-section,
+  .work-detail,
+  .contact-section {
+    position: relative;
+    padding-top: 100px;
   }
 }
