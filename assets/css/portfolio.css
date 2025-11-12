@@ -1575,6 +1575,7 @@ body {
   align-items: start;
   grid-template-areas:
     "no image title category year location"
+    "metadata metadata metadata metadata metadata metadata"
     "abstract abstract abstract abstract abstract abstract";
 }
 
@@ -1629,13 +1630,23 @@ body {
   line-height: 1.4;
 }
 
+.works-col-metadata {
+  grid-area: metadata;
+  font-size: 10px;
+  color: #999;
+  line-height: 1.5;
+  margin-top: 4px;
+  padding-left: 122px; /* Align with title column (no + image + gaps) */
+  font-style: italic;
+}
+
 .works-col-abstract {
   grid-area: abstract;
   font-size: 11px;
   color: #666;
   line-height: 1.6;
   text-align: justify;
-  margin-top: 8px;
+  margin-top: 6px;
   padding-left: 122px; /* Align with title column (no + image + gaps) */
 }
 
@@ -1882,6 +1893,7 @@ body {
     align-items: start;
     grid-template-areas:
       "no image title category year location"
+      "metadata metadata metadata metadata metadata metadata"
       "abstract abstract abstract abstract abstract abstract" !important;
   }
 
@@ -1912,10 +1924,19 @@ body {
     font-size: 9px;
   }
 
+  .works-col-metadata {
+    font-size: 8px;
+    color: #999;
+    line-height: 1.4;
+    margin-top: 3px;
+    padding-left: 105px; /* Align with title: no(35) + image(60) + gaps(10*2) */
+    font-style: italic;
+  }
+
   .works-col-abstract {
     font-size: 9px;
     line-height: 1.5;
-    margin-top: 5px;
+    margin-top: 4px;
     padding-left: 105px; /* Align with title: no(35) + image(60) + gaps(10*2) */
   }
 
