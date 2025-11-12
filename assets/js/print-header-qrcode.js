@@ -1,25 +1,11 @@
-// Generate QR code at top-left with URL for print
+// Generate QR code in header (left side) with URL for print
 document.addEventListener('DOMContentLoaded', function() {
   // Get current page URL
   var currentUrl = window.location.href;
 
-  // Try to find the best location for QR code
-  var targetElement = null;
-
-  // Check for section-level containers first
-  if (document.querySelector('#works')) {
-    targetElement = document.querySelector('#works');
-  } else if (document.querySelector('.events-section')) {
-    targetElement = document.querySelector('.events-section');
-  } else if (document.querySelector('.bio-section')) {
-    targetElement = document.querySelector('.bio-section');
-  } else if (document.querySelector('.work-detail')) {
-    targetElement = document.querySelector('.work-detail');
-  } else if (document.querySelector('.contact-section')) {
-    targetElement = document.querySelector('.contact-section');
-  }
-
-  if (!targetElement) return;
+  // Find the site header
+  var header = document.querySelector('.site-header');
+  if (!header) return;
 
   // Create QR code container
   var qrContainer = document.createElement('div');
@@ -37,14 +23,14 @@ document.addEventListener('DOMContentLoaded', function() {
   urlText.textContent = currentUrl;
   qrContainer.appendChild(urlText);
 
-  // Insert at the beginning of the section
-  targetElement.insertBefore(qrContainer, targetElement.firstChild);
+  // Insert at the beginning of the header (left side)
+  header.insertBefore(qrContainer, header.firstChild);
 
   // Generate QR code in the image wrapper
   new QRCode(qrImageWrapper, {
     text: currentUrl,
-    width: 70,
-    height: 70,
+    width: 50,
+    height: 50,
     colorDark: '#000000',
     colorLight: '#ffffff',
     correctLevel: QRCode.CorrectLevel.M
