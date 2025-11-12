@@ -10,7 +10,7 @@ This is a Jekyll static site deployed to GitHub Pages at www.j3zz.com. The site 
 - Modular layout system with 10 customizable modules
 - Centralized metadata architecture
 - Multi-category portfolio support (installations, live-acts, releases, collabs)
-- Responsive design with printable works page
+- Responsive design with comprehensive print functionality (all pages A4-optimized with QR codes)
 - Event management system with work linking
 
 ## Quick Start
@@ -45,12 +45,13 @@ Updates GitHub Pages and all associated Jekyll dependencies.
 This project's documentation is organized into topic-specific files for better performance and maintainability:
 
 ### 📐 [Architecture](docs/architecture.md)
-Site structure, navigation system, portfolio configuration, styling, and deployment details.
+Site structure, navigation system, portfolio configuration, styling, print functionality, and deployment details.
 
 **Read this for:**
 - Understanding the overall site structure
 - Navigation and routing configuration
 - Portfolio grid and work page layouts
+- Print functionality (A4-optimized layouts with QR codes for all pages)
 - Color scheme and styling conventions
 - Deployment to GitHub Pages
 
