@@ -92,7 +92,7 @@ sections:
 
 The `abstract` field appears in:
 - Portfolio grid hover overlay
-- Printable WORKS page
+- Printable WORKS page (enhanced layout with categories and labeled metadata)
 - Search engine results (if SEO is implemented)
 
 **Best Practices:**
@@ -164,14 +164,15 @@ The portfolio includes template works that demonstrate best practices:
 ## Maintaining Consistency
 
 **Current Portfolio Status:**
-- All 30 works follow centralized metadata structure
+- All 30+ works follow centralized metadata structure
 - All works include comprehensive category-appropriate metadata
 - All works use modular sections array
-- Printable WORKS page displays all metadata automatically
+- Printable WORKS page displays all metadata automatically with labels
 
 **When Adding New Works:**
-1. Follow the structure of works 28-30 as templates
+1. Follow the structure of Work 31 (complete template) or works 28-30 as templates
 2. Use category-specific metadata templates from [Metadata Reference](metadata-reference.md)
 3. Test both web and print display before committing
 4. Ensure `work_id` is unique across all portfolio works
 5. Add `abstract` field for proper grid and print display
+6. Verify metadata displays correctly in printable version with labels (Year:, Location:, etc.)
