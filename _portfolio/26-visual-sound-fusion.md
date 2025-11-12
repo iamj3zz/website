@@ -2,6 +2,7 @@
 layout: work
 title: Visual Sound Fusion
 work_id: visual-sound-fusion
+abstract: "An audiovisual collaboration with Maya Chen, merging live performance with generative visuals to create immersive multisensory experiences."
 categories: [collabs, installations, live-acts]
 primary_category: installations
 image: /assets/img/dumbpic.jpg
