@@ -233,6 +233,17 @@ body {
   opacity: 0.9;
 }
 
+/* Abstract text in overlay */
+.overlay-abstract {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #fff;
+  opacity: 0.95;
+  max-width: 90%;
+  text-align: justify;
+}
+
 /* Category tags in overlay */
 .overlay-categories {
   display: flex;

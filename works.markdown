@@ -38,6 +38,9 @@ permalink: /works/
                 <span class="category-tag" data-category="{{ cat }}">{{ cat | replace: '-', ' ' | capitalize }}</span>
               {% endfor %}
             </div>
+            {% if item.abstract %}
+              <p class="overlay-abstract">{{ item.abstract }}</p>
+            {% endif %}
           </div>
         </a>
       </div>

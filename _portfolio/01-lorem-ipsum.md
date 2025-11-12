@@ -2,6 +2,7 @@
 layout: work
 title: Lorem Ipsum
 work_id: lorem-ipsum
+abstract: "An immersive spatial audio installation exploring the boundaries between physical space and sonic environments through real-time algorithmic processing."
 category: installations
 image: /assets/img/dumbpic.jpg
 order: 1

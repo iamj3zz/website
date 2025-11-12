@@ -2,6 +2,7 @@
 layout: work
 title: Split Layout Example
 work_id: split-layout-example
+abstract: "An example work demonstrating split-column layout patterns, combining hero content with metadata in responsive two-column designs."
 category: installations
 image: /assets/img/dumbpic.jpg
 order: 29
