@@ -1716,4 +1716,118 @@ body {
   body {
     background: #fff;
   }
+
+  /* Bio Section Print Optimization */
+  .bio-section::before {
+    content: "BIO";
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+  }
+
+  .bio-section {
+    max-width: 100%;
+    margin: 0;
+  }
+
+  /* Bio Links - Stack vertically for print */
+  .bio-links {
+    text-align: left;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .bio-link {
+    display: block;
+    margin: 8px 0;
+    font-size: 11px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Bio Intro - Optimize layout for A4 */
+  .bio-intro {
+    display: grid !important;
+    grid-template-columns: 1.5fr 1fr !important;
+    gap: 30px;
+    margin-bottom: 40px;
+    page-break-inside: avoid;
+  }
+
+  .bio-text {
+    text-align: justify;
+  }
+
+  .bio-text p {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .bio-image {
+    position: static;
+  }
+
+  .bio-image img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Bio Lists - Optimize categories for print */
+  .bio-lists {
+    max-width: 100%;
+  }
+
+  .bio-category {
+    margin-bottom: 30px;
+    page-break-inside: avoid;
+  }
+
+  .bio-category:last-child {
+    margin-bottom: 0;
+  }
+
+  .bio-category h2 {
+    font-size: 14px;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #333;
+    page-break-after: avoid;
+  }
+
+  .bio-items {
+    gap: 6px;
+  }
+
+  .bio-item {
+    font-size: 10px;
+    line-height: 1.5;
+    page-break-inside: avoid;
+  }
+
+  .bio-year {
+    font-size: 10px;
+    min-width: 35px;
+  }
+
+  /* Ensure two-column layout fits well */
+  @media print and (max-width: 210mm) {
+    .bio-intro {
+      grid-template-columns: 1fr !important;
+      gap: 20px;
+    }
+
+    .bio-image {
+      max-width: 250px;
+      margin: 0 auto;
+    }
+  }
 }
