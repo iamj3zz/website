@@ -1644,6 +1644,16 @@ body {
   display: none;
 }
 
+/* Bio Link Wrapper - for vertical layout in print */
+.bio-link-wrapper {
+  display: contents; /* On screen, wrapper is transparent */
+}
+
+/* Bio Link QR Code - Hidden on screen, visible in print */
+.bio-link-qr {
+  display: none;
+}
+
 /* Print Styles for A4 */
 @media print {
   /* A4 Page Setup */
@@ -1993,19 +2003,57 @@ body {
     margin: 0;
   }
 
-  /* Bio Links - Stack vertically for print */
+  /* Bio Links - 3-column grid for print with compact spacing */
   .bio-links {
-    text-align: left;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
     padding-bottom: 20px;
     margin-bottom: 20px;
     border-bottom: 1px solid #e0e0e0;
+    align-items: start;
+    justify-items: center;
   }
 
+  /* Bio Link Wrapper - vertical layout for each submenu item */
+  .bio-link-wrapper {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 6px;
+    text-align: center;
+  }
+
+  /* Bio Link - text label on top */
   .bio-link {
+    display: block !important;
+    margin: 0;
+    font-size: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: none;
+    text-decoration: none;
+    color: #333;
+    order: 1;
+  }
+
+  /* Bio Link QR Code - Show in print below text */
+  .bio-link-qr {
+    display: block !important;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    order: 2;
+  }
+
+  .bio-link-qr img,
+  .bio-link-qr canvas {
+    width: 40px !important;
+    height: 40px !important;
     display: block;
-    margin: 8px 0;
-    font-size: 11px;
-    border-bottom: 1px solid #ccc;
+    margin: 0;
   }
 
   /* Bio Intro - Optimize layout for A4 */
