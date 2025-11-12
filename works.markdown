@@ -76,6 +76,39 @@ permalink: /works/
         <div class="works-col-category">{{ display_categories | capitalize }}</div>
         <div class="works-col-year">{% if item.year %}{{ item.year }}{% else %}—{% endif %}</div>
         <div class="works-col-location">{% if item.location %}{{ item.location }}{% else %}—{% endif %}</div>
+        {% comment %} Build metadata string using simple concatenation {% endcomment %}
+        {% assign metadata_string = "" %}
+        {% if item.role %}
+          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+          {% assign metadata_string = metadata_string | append: item.role %}
+        {% endif %}
+        {% if item.technology %}
+          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+          {% assign metadata_string = metadata_string | append: item.technology %}
+        {% endif %}
+        {% if item.collaborators %}
+          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+          {% assign metadata_string = metadata_string | append: "Collab: " | append: item.collaborators %}
+        {% endif %}
+        {% if item.client %}
+          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+          {% assign metadata_string = metadata_string | append: "Client: " | append: item.client %}
+        {% endif %}
+        {% if item.commissioned_by %}
+          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+          {% assign metadata_string = metadata_string | append: "Commissioned by: " | append: item.commissioned_by %}
+        {% endif %}
+        {% if item.isrc %}
+          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+          {% assign metadata_string = metadata_string | append: "ISRC: " | append: item.isrc %}
+        {% endif %}
+        {% if item.upc %}
+          {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
+          {% assign metadata_string = metadata_string | append: "UPC: " | append: item.upc %}
+        {% endif %}
+        {% if metadata_string != "" %}
+        <div class="works-col-metadata">{{ metadata_string }}</div>
+        {% endif %}
         {% if item.abstract %}
         <div class="works-col-abstract">{{ item.abstract }}</div>
         {% endif %}

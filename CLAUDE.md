@@ -418,6 +418,113 @@ sections:
 ---
 ```
 
+### Centralized Metadata System
+
+**NEW**: You can define metadata once in the front matter and have it automatically used across all modules (metadata, split-hero-metadata, split-bandcamp-metadata). This prevents duplication and makes maintenance easier.
+
+#### How It Works
+
+Define a `metadata` field in your front matter with all your project metadata:
+
+```yaml
+---
+layout: work
+title: Album Title
+work_id: album-title
+category: releases
+image: /assets/img/album-preview.jpg
+order: 30
+
+# Define metadata once here
+metadata:
+  year: "2024"
+  location: "Paris, France"
+  role: "Composer, producer"
+  isrc: "USRC17607839"
+  mastering_by: "Abbey Road Studios"
+  mastering_by_link: "https://www.abbeyroad.com/"
+  technology: "Ableton Live, Max/MSP"
+  collaborators: "Visual Artist Name"
+  custom:
+    - label: "Format"
+      value: "Digital, Vinyl"
+
+sections:
+  # This module automatically uses the front matter metadata
+  - type: split-bandcamp-metadata
+    embed_code: '<iframe src="..."></iframe>'
+    caption: "Listen on Bandcamp"
+    text_title: "About the Album"
+    text_content: |
+      Album description here.
+
+  # This also uses the same front matter metadata
+  - type: split-hero-metadata
+    content_type: "image"
+    image: /assets/img/live-photo.jpg
+    caption: "Live performance"
+
+  # Display metadata as a standalone section (optional)
+  - type: metadata
+---
+```
+
+#### Priority System
+
+All metadata-aware modules check for metadata in this order:
+1. **Front matter `metadata` field** (highest priority) - defined once, used everywhere
+2. **Section-level parameters** (fallback) - for one-off overrides
+
+This means:
+- If `page.metadata.year` exists, it's used automatically
+- If not, the module falls back to `section.year` (for per-module overrides)
+- You can still override specific fields in individual sections if needed
+
+#### Benefits
+
+- **No duplication**: Define metadata once, use it in multiple modules
+- **Easy maintenance**: Update metadata in one place
+- **Flexible**: Can still override per-module if needed
+- **Cleaner front matter**: Separate content structure from metadata
+- **Backwards compatible**: Existing works with section-level metadata still work
+
+#### Example: Before vs After
+
+**Before (duplicated metadata):**
+```yaml
+sections:
+  - type: split-hero-metadata
+    content_type: "image"
+    image: /assets/img/photo.jpg
+    year: "2024"
+    location: "Paris"
+    role: "Composer"
+
+  - type: split-bandcamp-metadata
+    embed_code: '<iframe...>'
+    year: "2024"          # ❌ Duplicate!
+    location: "Paris"     # ❌ Duplicate!
+    role: "Composer"      # ❌ Duplicate!
+```
+
+**After (centralized metadata):**
+```yaml
+metadata:
+  year: "2024"
+  location: "Paris"
+  role: "Composer"
+
+sections:
+  - type: split-hero-metadata
+    content_type: "image"
+    image: /assets/img/photo.jpg
+    # ✅ Automatically uses metadata from above
+
+  - type: split-bandcamp-metadata
+    embed_code: '<iframe...>'
+    # ✅ Automatically uses metadata from above
+```
+
 ### Available Module Types
 
 #### 1. Hero Image Module
@@ -486,6 +593,8 @@ Grid of images with 1-6 column layouts, square thumbnail cropping, lightbox view
 #### 4. Metadata Module
 
 Display project metadata in a clean grid layout. All fields are optional - include only what's relevant for your project.
+
+**IMPORTANT**: This module automatically uses metadata from the front matter `metadata` field (see Centralized Metadata System above). You can optionally include metadata fields directly in the module for overrides or if not using centralized metadata. If using centralized metadata, you can simply use `- type: metadata` without any fields.
 
 ```yaml
 - type: metadata
@@ -723,13 +832,15 @@ The module automatically detects height from these formats in embed codes:
 
 Two-column responsive layout with hero content (image or iframe) on the left (2/3 width) and metadata on the right (1/3 width). Perfect for showcasing visual or video content alongside project details.
 
+**IMPORTANT**: This module automatically uses metadata from the front matter `metadata` field (see Centralized Metadata System above). You can optionally include metadata fields directly in the module for overrides or if not using centralized metadata.
+
 **With Image:**
 ```yaml
 - type: split-hero-metadata
   content_type: "image"
   image: /assets/img/main-image.jpg
   caption: "Optional image caption"  # Optional
-  # Metadata fields
+  # Metadata fields (optional if using front matter metadata)
   year: "2025"
   location: "Paris, France"
   client: "Client Name"
@@ -786,11 +897,13 @@ Two-column responsive layout with hero content (image or iframe) on the left (2/
 
 Two-column responsive layout with iframe on the left (1/3 width) and metadata plus optional text on the right (2/3 width). Designed specifically for music releases with Bandcamp players (or similar narrow embeds) alongside comprehensive release information.
 
+**IMPORTANT**: This module automatically uses metadata from the front matter `metadata` field (see Centralized Metadata System above). You can optionally include metadata fields directly in the module for overrides or if not using centralized metadata.
+
 ```yaml
 - type: split-bandcamp-metadata
   embed_code: '<iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=123456/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless></iframe>'
   caption: "Available on Bandcamp"  # Optional
-  # Metadata fields
+  # Metadata fields (optional if using front matter metadata)
   year: "2024"
   location: "Budapest, Hungary"
   role: "Producer, composer"
