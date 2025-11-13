@@ -1,0 +1,56 @@
+<!-- Cookie Consent Banner -->
+<div id="cookie-consent-banner" class="cookie-consent-banner" style="display: none;">
+  <div class="cookie-consent-content">
+    <div class="cookie-consent-text">
+      <h3>Cookie Consent</h3>
+      <p>We use cookies to enhance your experience. Essential cookies are required for the site to function, while analytics and embedded content cookies help us improve our services. You can customize your preferences below.</p>
+      <a href="{{ '/privacy/' | relative_url }}" class="cookie-consent-privacy-link">Read our Privacy Policy</a>
+    </div>
+
+    <div class="cookie-consent-options">
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" id="cookie-essential" checked disabled>
+          <span class="cookie-option-label">
+            <strong>Essential Cookies</strong>
+            <small>Required for basic site functionality</small>
+          </span>
+        </label>
+      </div>
+
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" id="cookie-analytics">
+          <span class="cookie-option-label">
+            <strong>Analytics Cookies</strong>
+            <small>Help us understand how you use our site</small>
+          </span>
+        </label>
+      </div>
+
+      <div class="cookie-option">
+        <label>
+          <input type="checkbox" id="cookie-embedded">
+          <span class="cookie-option-label">
+            <strong>Embedded Content</strong>
+            <small>Videos and audio players from YouTube, Vimeo, Bandcamp, etc.</small>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="cookie-consent-buttons">
+      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary">Accept All</button>
+      <button id="cookie-accept-selected" class="cookie-btn cookie-btn-secondary">Save Preferences</button>
+      <button id="cookie-reject-all" class="cookie-btn cookie-btn-text">Reject Optional</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cookie Settings Button (appears after consent is given) -->
+<button id="cookie-settings-button" class="cookie-settings-button" style="display: none;" aria-label="Cookie Settings">
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="3"></circle>
+    <path d="M12 1v6m0 6v6m8.66-14.66l-4.24 4.24m-4.24 4.24l-4.24 4.24m14.24-4.24l-4.24-4.24m-4.24-4.24l-4.24-4.24"></path>
+  </svg>
+</button>

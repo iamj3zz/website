@@ -129,12 +129,31 @@ For detailed information, see [Architecture > Modifying Page Content](docs/archi
 Edit `_config.yml` for:
 - Site metadata (title, description, URL)
 - Logo path
-- Social media links
+- Email addresses (general and booking)
+- Social media usernames (bandcamp, soundcloud, youtube, vimeo, facebook, instagram, twitter, linkedin, github)
+- Mailchimp newsletter integration (action URL and bot field)
 - Collection settings
 
 **Remember**: Restart Jekyll server after config changes.
 
 See [Architecture > Configuration Variables](docs/architecture.md#configuration-variables-_configyml) for all available settings.
+
+### Configuring Mailchimp Newsletter
+
+The contact page includes a Mailchimp newsletter signup form. To enable it:
+
+1. Log into Mailchimp
+2. Go to **Audience** → **Signup forms** → **Embedded forms**
+3. Copy the form action URL from `<form action="...">`
+4. Copy the bot field name from the hidden field (e.g., `b_XXXXXXXXXX_XXXXXXXXXX`)
+5. Update `_config.yml`:
+   ```yaml
+   mailchimp_action_url: "https://XXXX.usX.list-manage.com/subscribe/post?u=XXXXXX&id=XXXXXX"
+   mailchimp_bot_field: "b_XXXXXXXXXX_XXXXXXXXXX"
+   ```
+6. Restart Jekyll server
+
+If Mailchimp is not configured, the form will show "Newsletter signup coming soon."
 
 ## Template Works
 

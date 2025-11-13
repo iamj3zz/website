@@ -20,6 +20,7 @@
 
 title: J3ZZ
 email: hello@j3zz.com
+booking_email: booking@j3zz.com
 description: >- # this means to ignore newlines until "baseurl:"
   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -27,11 +28,23 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.j3zz.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: iamj3zz/website
 logo: /assets/img/J3ZZ-logo-black-300px.png
-twitter_username: j3zz
-github_username: j3zz
+
+# Social Media
+bandcamp_username: iamj3zz
 soundcloud_username: j3zz
+youtube_username: iamj3zz
 vimeo_username: j3zz
-facebook_username: j3zz
+facebook_username: iamj3zz
+instagram_username: iamj3zz
+twitter_username: j3zz
+linkedin_username: j3zz
+github_username: j3zz
+
+# Mailchimp Newsletter
+# Form action URL from Mailchimp embedded form
+mailchimp_action_url: "https://j3zz.us6.list-manage.com/subscribe/post?u=349b73ae355385780ee4a24db&id=fa86ed72ea&v_id=4617&f_id=003f22e2f0"
+# Bot protection field name (honeypot)
+mailchimp_bot_field: "b_349b73ae355385780ee4a24db_fa86ed72ea"
 
 # Collections
 collections:
