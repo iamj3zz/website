@@ -287,18 +287,37 @@ body {
 
 .social-links {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-.social-links a {
-  color: #666;
-  text-decoration: none;
-  font-size: 13px;
-  margin: 0 12px;
-  transition: color 0.3s ease;
-}
-
-.social-links a:hover {
+.social-links a.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
   color: #333;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-links a.social-icon svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.3s ease;
+}
+
+.social-links a.social-icon:hover {
+  color: #000;
+  transform: scale(1.1);
+}
+
+.social-links a.social-icon:hover svg {
+  transform: scale(1.1);
 }
 
 .copyright {
