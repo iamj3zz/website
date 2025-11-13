@@ -535,6 +535,16 @@ body {
   gap: 25px;
 }
 
+/* Hide print-only newsletter message on screen */
+.print-only-newsletter-message {
+  display: none;
+}
+
+/* Hide print version of social media list on screen */
+.contact-social-print-list {
+  display: none;
+}
+
 .contact-heading {
   font-size: 14px;
   font-weight: normal;
@@ -2375,10 +2385,72 @@ body {
     font-size: 11px;
   }
 
-  /* Hide newsletter form in print */
+  /* Hide newsletter form in print, show print-only message */
   .contact-newsletter-form,
   .contact-newsletter-form + p {
     display: none !important;
+  }
+
+  .print-only-newsletter-message {
+    display: block !important;
+    margin-bottom: 15px;
+  }
+
+  /* Hide screen version of social icons, show print version */
+  .contact-social-icons {
+    display: none !important;
+  }
+
+  .contact-social-print-list {
+    display: flex !important;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .social-print-item {
+    display: grid;
+    grid-template-columns: 40px auto 1fr;
+    gap: 12px;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .social-print-item:last-child {
+    border-bottom: none;
+  }
+
+  .social-print-qr {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .social-print-qr img {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+  }
+
+  .social-print-icon {
+    display: none !important;
+  }
+
+  .social-print-name {
+    font-size: 10px;
+    font-weight: 600;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+  }
+
+  .social-print-url {
+    font-size: 9px;
+    color: #666;
+    word-break: break-all;
   }
 
   /* Ensure two-column layout fits well */

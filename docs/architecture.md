@@ -43,6 +43,8 @@
 - `assets/js/print-header-qrcode.js` - Universal QR code generator for print header (all pages)
 - `assets/js/works-qrcode.js` - QR codes for individual works in printable WORKS page
 - `assets/js/bio-links-qrcode.js` - QR codes for bio page links in print version
+- `assets/js/contact-social-qrcodes.js` - QR codes for social media links in print version of contact page
+- `assets/js/newsletter-form.js` - Newsletter form validation and submission handling
 - `assets/js/qrcode.min.js` - QR code generation library
 - `assets/img/` - Images including logo and portfolio work images
 
@@ -121,9 +123,21 @@ All pages (BIO, WORKS, EVENTS, CONTACT) are optimized for A4 print with professi
 - Print-specific styles in `portfolio.css`
 
 **CONTACT Page Print Layout:**
-- Simple, clean contact information layout
-- Social media links with full URLs visible
-- Email and relevant contact details
+- Professional two-column contact information layout optimized for A4
+- **Social Media Section** with enhanced print version:
+  - Replaces icon grid with structured list layout
+  - Each social platform displays: QR code (40x40px) + platform name + full URL
+  - JavaScript: `contact-social-qrcodes.js` generates individual QR codes for each social link
+  - Clean grid layout: `QR Code | Platform Name | URL`
+  - QR codes enable direct mobile access to social profiles
+- **Newsletter Section** with print-specific content:
+  - Hides interactive signup form in print version
+  - Displays personalized newsletter invitation message explaining:
+    - Newsletter purpose and frequency (rare, meaningful updates only)
+    - Personal data handling approach
+    - How to subscribe (directs to online contact page)
+  - References header QR code for easy access to signup form
+- Email and booking contact details
 - Professional formatting for print distribution
 
 **Print CSS Architecture:**
