@@ -2421,30 +2421,29 @@ body {
   }
 
   .contact-social-print-list {
-    display: flex !important;
-    flex-direction: column;
-    gap: 12px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 20mm;
+    margin-bottom: 15px;
   }
 
   .social-print-item {
     display: grid;
-    grid-template-columns: 40px auto 1fr;
-    gap: 12px;
-    align-items: center;
-    padding: 8px 0;
-    border-bottom: 1px solid #e0e0e0;
-  }
-
-  .social-print-item:last-child {
-    border-bottom: none;
+    grid-template-columns: 35px auto;
+    grid-template-rows: auto auto;
+    gap: 8px;
+    align-items: start;
+    padding: 6px 0;
+    page-break-inside: avoid;
   }
 
   .social-print-qr {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     display: flex;
     align-items: center;
     justify-content: center;
+    grid-row: 1 / 3;
   }
 
   .social-print-qr img {
@@ -2458,18 +2457,21 @@ body {
   }
 
   .social-print-name {
-    font-size: 10px;
+    font-size: 9px;
     font-weight: 600;
     color: #333;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    white-space: nowrap;
+    grid-column: 2;
+    grid-row: 1;
   }
 
   .social-print-url {
-    font-size: 9px;
+    font-size: 8px;
     color: #666;
     word-break: break-all;
+    grid-column: 2;
+    grid-row: 2;
   }
 
   /* Ensure two-column layout fits well */
