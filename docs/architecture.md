@@ -123,12 +123,16 @@ All pages (BIO, WORKS, EVENTS, CONTACT) are optimized for A4 print with professi
 - Print-specific styles in `portfolio.css`
 
 **CONTACT Page Print Layout:**
-- Professional two-column contact information layout optimized for A4
-- **Social Media Section** with enhanced print version:
-  - Replaces icon grid with structured list layout
-  - Each social platform displays: QR code (40x40px) + platform name + full URL
+- Professional contact information layout optimized for A4 single-page printing
+- **Social Media Section** with space-efficient two-column grid:
+  - Replaces icon grid with compact two-column layout (`grid-template-columns: 1fr 1fr`)
+  - Each social platform displays: QR code (35x35px) + platform name + full URL
   - JavaScript: `contact-social-qrcodes.js` generates individual QR codes for each social link
-  - Clean grid layout: `QR Code | Platform Name | URL`
+  - Two-column grid structure saves ~60% vertical space compared to single-column layout
+  - Grid layout per item: QR code (left, spanning 2 rows) | Platform Name + URL (right, stacked)
+  - Column gap: 20mm for optimal A4 spacing; Row gap: 8px for compact layout
+  - Font sizes: Platform name 9px, URL 8px (compact but readable)
+  - `page-break-inside: avoid` ensures items stay together
   - QR codes enable direct mobile access to social profiles
 - **Newsletter Section** with print-specific content:
   - Hides interactive signup form in print version
@@ -138,7 +142,7 @@ All pages (BIO, WORKS, EVENTS, CONTACT) are optimized for A4 print with professi
     - How to subscribe (directs to online contact page)
   - References header QR code for easy access to signup form
 - Email and booking contact details
-- Professional formatting for print distribution
+- Professional formatting ensuring all content fits on one A4 page
 
 **Print CSS Architecture:**
 - Main print media queries: `portfolio.css` lines 1658-2148
