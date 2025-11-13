@@ -45,6 +45,8 @@ github_username: j3zz
 mailchimp_action_url: "https://j3zz.us6.list-manage.com/subscribe/post?u=349b73ae355385780ee4a24db&id=fa86ed72ea&v_id=4617&f_id=003f22e2f0"
 # Bot protection field name (honeypot)
 mailchimp_bot_field: "b_349b73ae355385780ee4a24db_fa86ed72ea"
+# GDPR consent field ID
+mailchimp_gdpr_field: "14182"
 
 # Collections
 collections:

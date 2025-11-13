@@ -116,7 +116,7 @@ permalink: /contact/
         <!-- GDPR Consent Checkbox -->
         <div class="form-row">
           <label class="form-checkbox-label">
-            <input type="checkbox" name="CONSENT" class="form-checkbox" required>
+            <input type="checkbox" name="gdpr[{{ site.mailchimp_gdpr_field }}]" class="form-checkbox" value="Y" required>
             <span>* I consent to receive occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens. Your contact means support, and I handle all data personally with care. You can unsubscribe anytime.</span>
           </label>
         </div>
