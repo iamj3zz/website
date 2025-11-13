@@ -8,84 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     return; // Exit if form not found on page
   }
 
-  // Add custom validation on form submission
-  form.addEventListener('submit', function(event) {
-    // Clear any previous error messages
-    clearAllErrors();
-
-    let isValid = true;
-
-    // Validate Email
-    const emailField = form.querySelector('input[name="EMAIL"]');
-    if (!validateEmail(emailField)) {
-      isValid = false;
-    }
-
-    // Validate Phone
-    const phoneField = form.querySelector('input[name="PHONE"]');
-    if (!validatePhone(phoneField)) {
-      isValid = false;
-    }
-
-    // Validate First Name
-    const fnameField = form.querySelector('input[name="FNAME"]');
-    if (!validateRequired(fnameField, 'First Name')) {
-      isValid = false;
-    }
-
-    // Validate Last Name
-    const lnameField = form.querySelector('input[name="LNAME"]');
-    if (!validateRequired(lnameField, 'Last Name')) {
-      isValid = false;
-    }
-
-    // Validate Country
-    const countryField = form.querySelector('input[name="COUNTRY"]');
-    if (!validateRequired(countryField, 'Country')) {
-      isValid = false;
-    }
-
-    // Validate Postal Code
-    const postcodeField = form.querySelector('input[name="POSTCODE"]');
-    if (!validateRequired(postcodeField, 'Postal Code')) {
-      isValid = false;
-    }
-
-    // Validate City
-    const cityField = form.querySelector('input[name="CITY"]');
-    if (!validateRequired(cityField, 'City')) {
-      isValid = false;
-    }
-
-    // Validate GDPR Consent Checkbox
-    const consentField = form.querySelector('input[name="CONSENT"]');
-    if (!validateConsent(consentField)) {
-      isValid = false;
-    }
-
-    // Prevent form submission if validation fails
-    if (!isValid) {
-      event.preventDefault();
-      // Scroll to first error
-      const firstError = form.querySelector('.form-error');
-      if (firstError) {
-        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }
-    }
-  });
-
   // Validation Functions
-
-  function validateRequired(field, fieldName) {
-    if (!field) return true;
-
-    const value = field.value.trim();
-    if (value === '') {
-      showError(field, `${fieldName} is required.`);
-      return false;
-    }
-    return true;
-  }
 
   function validateEmail(field) {
     if (!field) return true;
@@ -96,10 +19,39 @@ document.addEventListener('DOMContentLoaded', function() {
       return false;
     }
 
-    // Basic email format validation
-    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // Enhanced RFC-compliant email validation
+    const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
     if (!emailPattern.test(value)) {
-      showError(field, 'Please enter a valid email address.');
+      showError(field, 'Please enter a valid email address (e.g., user@example.com).');
+      return false;
+    }
+
+    // Check for consecutive dots
+    if (value.includes('..')) {
+      showError(field, 'Email address cannot contain consecutive dots.');
+      return false;
+    }
+
+    // Check for double @ symbols
+    if ((value.match(/@/g) || []).length !== 1) {
+      showError(field, 'Email address must contain exactly one @ symbol.');
+      return false;
+    }
+
+    // Check for common typos in popular domains
+    const commonTypos = {
+      'gmail.con': 'gmail.com',
+      'gmail.co': 'gmail.com',
+      'hotmial.com': 'hotmail.com',
+      'hotmial.fr': 'hotmail.fr',
+      'yahooo.com': 'yahoo.com',
+      'outlok.com': 'outlook.com'
+    };
+
+    const domain = value.split('@')[1];
+    if (commonTypos[domain]) {
+      showError(field, `Did you mean ${value.split('@')[0]}@${commonTypos[domain]}?`);
       return false;
     }
 
@@ -115,10 +67,67 @@ document.addEventListener('DOMContentLoaded', function() {
       return false;
     }
 
-    // International phone format validation: +[country code][number]
-    const phonePattern = /^\+[1-9]\d{1,14}$/;
-    if (!phonePattern.test(value)) {
-      showError(field, 'Please enter phone in international format (e.g., +33612345678).');
+    // Must start with + (international format required)
+    if (!value.startsWith('+')) {
+      showError(field, 'Phone number must start with + followed by country code (e.g., +33612345678).');
+      return false;
+    }
+
+    // Remove the + for validation
+    const phoneDigits = value.substring(1);
+
+    // Check if all remaining characters are digits
+    if (!/^\d+$/.test(phoneDigits)) {
+      showError(field, 'Phone number can only contain + and digits (no spaces, dashes, or parentheses).');
+      return false;
+    }
+
+    // Validate length: country code (1-3 digits) + number (6-12 digits) = 7-15 total
+    if (phoneDigits.length < 7 || phoneDigits.length > 15) {
+      showError(field, 'Phone number must be between 7 and 15 digits (e.g., +33612345678).');
+      return false;
+    }
+
+    // Country code must not start with 0
+    if (phoneDigits[0] === '0') {
+      showError(field, 'Country code cannot start with 0.');
+      return false;
+    }
+
+    return true;
+  }
+
+  function validateName(field, fieldLabel) {
+    if (!field) return true;
+
+    const value = field.value.trim();
+    if (value === '') {
+      showError(field, `${fieldLabel} is required.`);
+      return false;
+    }
+
+    // Length validation: 2-50 characters
+    if (value.length < 2) {
+      showError(field, `${fieldLabel} must be at least 2 characters.`);
+      return false;
+    }
+
+    if (value.length > 50) {
+      showError(field, `${fieldLabel} must be 50 characters or less.`);
+      return false;
+    }
+
+    // Allow: letters (including international), hyphens, apostrophes, spaces
+    const namePattern = /^[a-zA-ZÀ-ÿ\u00C0-\u017F\s'\-]+$/;
+
+    if (!namePattern.test(value)) {
+      showError(field, `${fieldLabel} can only contain letters, hyphens, apostrophes, and spaces.`);
+      return false;
+    }
+
+    // Check for numbers
+    if (/\d/.test(value)) {
+      showError(field, `${fieldLabel} cannot contain numbers.`);
       return false;
     }
 
@@ -183,7 +192,9 @@ document.addEventListener('DOMContentLoaded', function() {
   // Real-time validation: Clear error when user starts typing/changes field
   const allInputs = form.querySelectorAll('input[required]');
   allInputs.forEach(input => {
-    input.addEventListener('input', function() {
+    const eventType = input.type === 'checkbox' ? 'change' : 'input';
+
+    input.addEventListener(eventType, function() {
       if (this.classList.contains('form-input-error')) {
         this.classList.remove('form-input-error');
         const formRow = this.closest('.form-row');
@@ -195,21 +206,53 @@ document.addEventListener('DOMContentLoaded', function() {
         }
       }
     });
+  });
 
-    // For checkboxes, listen to 'change' event
-    if (input.type === 'checkbox') {
-      input.addEventListener('change', function() {
-        if (this.classList.contains('form-input-error')) {
-          this.classList.remove('form-input-error');
-          const formRow = this.closest('.form-row');
-          if (formRow) {
-            const errorMsg = formRow.querySelector('.form-error');
-            if (errorMsg) {
-              errorMsg.remove();
-            }
-          }
-        }
-      });
+  // Form submission validation
+  form.addEventListener('submit', function(event) {
+    // Clear any previous error messages
+    clearAllErrors();
+
+    let isValid = true;
+
+    // Validate Email
+    const emailField = form.querySelector('input[name="EMAIL"]');
+    if (!validateEmail(emailField)) {
+      isValid = false;
+    }
+
+    // Validate Phone
+    const phoneField = form.querySelector('input[name="PHONE"]');
+    if (!validatePhone(phoneField)) {
+      isValid = false;
+    }
+
+    // Validate First Name
+    const fnameField = form.querySelector('input[name="FNAME"]');
+    if (!validateName(fnameField, 'First name')) {
+      isValid = false;
+    }
+
+    // Validate Last Name
+    const lnameField = form.querySelector('input[name="LNAME"]');
+    if (!validateName(lnameField, 'Last name')) {
+      isValid = false;
+    }
+
+    // Validate GDPR Consent Checkbox
+    const consentField = form.querySelector('input[name="CONSENT"]');
+    if (!validateConsent(consentField)) {
+      isValid = false;
+    }
+
+    // Prevent form submission if validation fails
+    if (!isValid) {
+      event.preventDefault();
+      // Scroll to first error
+      const firstError = form.querySelector('.form-error');
+      if (firstError) {
+        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     }
   });
 });

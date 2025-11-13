@@ -701,6 +701,11 @@ body {
   margin-left: 0;
 }
 
+/* Form row positioning */
+.form-row {
+  position: relative;
+}
+
 /* Responsive Contact */
 @media (max-width: 600px) {
   .contact-section {

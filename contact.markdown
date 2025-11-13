@@ -98,32 +98,26 @@ permalink: /contact/
       <form class="contact-newsletter-form" action="{{ site.mailchimp_action_url }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank" novalidate>
         <div class="form-row">
           <input type="email" name="EMAIL" placeholder="Email Address *" class="form-input" required>
+          <span class="form-help-text">Format: user@domain.com</span>
         </div>
         <div class="form-row">
-          <input type="tel" name="PHONE" placeholder="Mobile Number (e.g., +33612345678) *" class="form-input" pattern="^\+[1-9]\d{1,14}$" title="Enter in international format: +[country code][number]" required>
-          <span class="form-help-text">For mobile updates (WhatsApp, SMS)</span>
+          <input type="tel" name="PHONE" placeholder="Mobile Number *" class="form-input" pattern="^\+[1-9]\d{1,14}$" title="Enter in international format: +[country code][number]" required>
+          <span class="form-help-text">Format: +[country code][number] (e.g., +33612345678) - For WhatsApp, SMS</span>
         </div>
         <div class="form-row">
           <input type="text" name="FNAME" placeholder="First Name *" class="form-input" required>
+          <span class="form-help-text">Letters only (2-50 characters) - Hyphens and apostrophes allowed</span>
         </div>
         <div class="form-row">
           <input type="text" name="LNAME" placeholder="Last Name *" class="form-input" required>
-        </div>
-        <div class="form-row">
-          <input type="text" name="COUNTRY" placeholder="Country *" class="form-input" required>
-        </div>
-        <div class="form-row">
-          <input type="text" name="POSTCODE" placeholder="Postal Code *" class="form-input" required>
-        </div>
-        <div class="form-row">
-          <input type="text" name="CITY" placeholder="City *" class="form-input" required>
+          <span class="form-help-text">Letters only (2-50 characters) - Hyphens and apostrophes allowed</span>
         </div>
 
         <!-- GDPR Consent Checkbox -->
         <div class="form-row">
           <label class="form-checkbox-label">
             <input type="checkbox" name="CONSENT" class="form-checkbox" required>
-            <span>* I consent to receive newsletters and mobile updates via email, WhatsApp, and SMS. I have read and accept the <a href="{{ '/privacy/' | relative_url }}" target="_blank">Privacy Policy</a>.</span>
+            <span>* I consent to receive occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens. Your contact means support, and I handle all data personally with care. You can unsubscribe anytime.</span>
           </label>
         </div>
 
@@ -142,5 +136,5 @@ permalink: /contact/
   </div>
 </section>
 
-<!-- Newsletter Form Validation Script -->
+<!-- Newsletter Form Scripts -->
 <script src="{{ '/assets/js/newsletter-form.js' | relative_url }}"></script>
