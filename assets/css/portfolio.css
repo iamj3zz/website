@@ -571,11 +571,13 @@ body {
 .contact-link {
   color: #333;
   text-decoration: none;
-  font-size: 15px;
-  border-bottom: 1px solid transparent;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #d0d0d0;
   transition: border-color 0.3s ease;
   display: inline-block;
-  width: fit-content;
+  padding-bottom: 2px;
 }
 
 .contact-link:hover {
@@ -583,10 +585,11 @@ body {
 }
 
 .contact-description {
-  font-size: 13px;
+  font-size: 14px;
   color: #666;
-  line-height: 1.7;
-  margin: 0;
+  line-height: 1.8;
+  margin: 0 0 20px 0;
+  text-align: justify;
 }
 
 /* Social Icons in Contact */
@@ -660,6 +663,20 @@ body {
   margin-top: 5px;
   display: block;
   line-height: 1.4;
+}
+
+.form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.form-checkbox-label span {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+  text-align: justify;
 }
 
 .form-submit {
@@ -2313,6 +2330,55 @@ body {
   .bio-year {
     font-size: 10px;
     min-width: 35px;
+  }
+
+  /* Contact Page Print Styles */
+  .contact-section::before {
+    content: "CONTACT";
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+  }
+
+  .contact-section {
+    max-width: 100%;
+    padding: 0;
+  }
+
+  .contact-content {
+    gap: 20px;
+  }
+
+  .contact-description {
+    font-size: 11px;
+    line-height: 1.6;
+    margin-bottom: 12px;
+  }
+
+  .contact-item {
+    font-size: 11px;
+    line-height: 1.6;
+  }
+
+  .contact-label {
+    font-size: 10px;
+  }
+
+  .contact-link {
+    font-size: 11px;
+  }
+
+  /* Hide newsletter form in print */
+  .contact-newsletter-form,
+  .contact-newsletter-form + p {
+    display: none !important;
   }
 
   /* Ensure two-column layout fits well */
