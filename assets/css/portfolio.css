@@ -347,14 +347,37 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Show hamburger menu on mobile */
-  .mobile-menu-toggle {
+  /* Mobile header layout: logo left, hamburger right */
+  .site-header {
     display: flex;
-    margin: 0 auto 20px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: left;
   }
 
-  /* Hide navigation by default on mobile */
+  .site-logo {
+    margin-bottom: 0;
+    order: 1;
+  }
+
+  .site-logo img {
+    height: 50px;
+    margin: 0;
+  }
+
+  /* Show hamburger menu on mobile - positioned to the right */
+  .mobile-menu-toggle {
+    display: flex;
+    margin: 0;
+    order: 2;
+  }
+
+  /* Navigation takes full width below header */
   .main-nav {
+    order: 3;
+    width: 100%;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -371,9 +394,18 @@ body {
     padding: 20px 0;
   }
 
+  /* Allow filter buttons to wrap naturally on mobile */
   .filter-btn {
-    display: block;
-    margin: 5px auto;
+    display: inline-block;
+    font-size: 11px;
+    padding: 6px 10px;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 }
 
