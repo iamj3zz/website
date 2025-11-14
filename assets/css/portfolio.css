@@ -2010,6 +2010,11 @@ body {
   display: none;
 }
 
+/* Event Ticket QR Code - Hidden on screen, visible in print */
+.event-ticket-qr {
+  display: none;
+}
+
 /* Print Styles for A4 */
 @media print {
   /* A4 Page Setup */
@@ -2262,6 +2267,24 @@ body {
     font-size: 11px !important;
     line-height: 1.5 !important;
     margin-top: 0 !important;
+  }
+
+  /* Event Ticket QR Code - Show in print, hide text link */
+  .event-col-tickets .event-ticket-link {
+    display: none !important;
+  }
+
+  .event-ticket-qr {
+    display: block !important;
+    width: 35px;
+    height: 35px;
+  }
+
+  .event-ticket-qr img,
+  .event-ticket-qr canvas {
+    width: 35px !important;
+    height: 35px !important;
+    display: block;
   }
 
   /* Ensure colors print correctly */

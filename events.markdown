@@ -51,7 +51,12 @@ permalink: /events/
           <div class="event-col-country">{{ event.country }}</div>
           <div class="event-col-city">{{ event.city }}</div>
           <div class="event-col-venue"><a href="{{ event.venue_link }}" target="_blank" rel="noopener noreferrer">{{ event.venue_name }}</a></div>
-          <div class="event-col-tickets">{% if event.ticket_link %}<a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer">Tickets</a>{% endif %}</div>
+          <div class="event-col-tickets">
+            {% if event.ticket_link %}
+            <a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer" class="event-ticket-link">Tickets</a>
+            <span class="event-ticket-qr" data-ticket-url="{{ event.ticket_link }}"></span>
+            {% endif %}
+          </div>
           <div class="event-col-description">{{ event.description }}</div>
         </div>
         {% endif %}
