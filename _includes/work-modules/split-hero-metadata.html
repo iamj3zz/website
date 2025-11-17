@@ -59,6 +59,7 @@
               <iframe
                 src="{{ src_url }}"
                 style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0;"
+                title="{% if include.caption %}{{ include.caption }}{% else %}Embedded content{% endif %}"
                 allowfullscreen
                 seamless>
               </iframe>
@@ -101,6 +102,7 @@
               <iframe
                 style="border: 0; width: {{ player_width }}; height: {{ player_height }};"
                 src="{{ src_url }}"
+                title="{% if include.caption %}{{ include.caption }}{% else %}Embedded content{% endif %}"
                 allowfullscreen
                 seamless>
               </iframe>

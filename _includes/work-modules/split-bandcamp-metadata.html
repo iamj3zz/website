@@ -54,6 +54,7 @@
           <iframe
             style="border: 0; width: {{ player_width }}; height: {{ player_height }};"
             src="{{ src_url }}"
+            title="{% if include.caption %}{{ include.caption }}{% else %}Bandcamp player{% endif %}"
             allowfullscreen
             seamless>
           </iframe>

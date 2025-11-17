@@ -4,6 +4,8 @@ title: Works
 permalink: /works/
 ---
 
+<h1 class="visually-hidden">Works</h1>
+
 <section id="works">
   <div class="filter-container">
     <button class="filter-btn active" data-filter="all">All</button>
@@ -32,7 +34,7 @@ permalink: /works/
         <a href="{{ item.url | relative_url }}" class="portfolio-link">
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
           <div class="portfolio-overlay">
-            <h3>{{ item.title }}</h3>
+            <h2>{{ item.title }}</h2>
             <div class="overlay-categories">
               {% for cat in all_categories %}
                 <span class="category-tag" data-category="{{ cat }}">{{ cat | replace: '-', ' ' | capitalize }}</span>
