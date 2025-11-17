@@ -66,6 +66,7 @@ plugins:
 
 # Sass settings
 sass:
+  sass_dir: _sass
   quiet_deps: true
   verbose: false
 

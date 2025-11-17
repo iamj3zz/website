@@ -1,0 +1,195 @@
+/* Filter Buttons */
+.filter-container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  padding: 8px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 4px;
+}
+
+.filter-btn:hover {
+  color: #666;
+}
+
+.filter-btn.active {
+  color: #333;
+  border-bottom-color: #333;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 7.5px;
+  padding: 0;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  background: #f5f5f5;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  height: 100%;
+}
+
+.portfolio-item.hidden {
+  display: none;
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+/* Hover Overlay */
+.portfolio-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(158, 158, 158, 0.68);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.portfolio-item:hover .portfolio-overlay {
+  opacity: 1;
+}
+
+/* Category-specific overlay colors */
+.portfolio-item[data-category="installations"] .portfolio-overlay {
+  background: rgba(66, 135, 245, 0.68); /* Blue */
+}
+
+.portfolio-item[data-category="live-acts"] .portfolio-overlay {
+  background: rgba(245, 66, 66, 0.68); /* Red */
+}
+
+.portfolio-item[data-category="releases"] .portfolio-overlay {
+  background: rgba(66, 245, 135, 0.68); /* Green */
+}
+
+.portfolio-item[data-category="collabs"] .portfolio-overlay {
+  background: rgba(245, 176, 66, 0.68); /* Orange */
+}
+
+.portfolio-item:hover img {
+  transform: scale(1.02);
+}
+
+.portfolio-overlay h3 {
+  color: #fff;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 12px;
+  letter-spacing: 0.5px;
+}
+
+.portfolio-overlay p {
+  color: #fff;
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* Abstract text in overlay */
+.overlay-abstract {
+  margin-top: 12px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: #fff;
+  opacity: 0.95;
+  max-width: 90%;
+  text-align: justify;
+}
+
+/* Category tags in overlay */
+.overlay-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 3px;
+  color: #fff;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.category-tag:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Allow filter buttons to wrap naturally on mobile */
+  .filter-btn {
+    display: inline-block;
+    font-size: 11px;
+    padding: 6px 10px;
+    margin: 3px;
+  }
+}
+
+@media (max-width: 480px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
