@@ -30,6 +30,14 @@ bundle exec jekyll build
 Generates the static site in the `_site/` directory.
 
 ### Run Tests
+
+**Easiest way - Automated script:**
+```bash
+./test-before-push.sh
+```
+Runs all tests automatically (YAML lint, build, HTML validation, print tests). Fix errors, then commit and push.
+
+**Individual test commands:**
 ```bash
 yamllint .
 ```
@@ -45,7 +53,12 @@ npm run lighthouse
 ```
 Runs Lighthouse CI for performance, accessibility, and SEO validation (requires Chrome/Chromium).
 
-**Note**: All tests run automatically in GitHub Actions on every push/PR.
+```bash
+npm run test:print
+```
+Runs print tests to validate QR codes, print layouts, and A4 formatting (requires Chrome/Chromium).
+
+**Note**: All tests run automatically in GitHub Actions on every push/PR. Print tests may skip locally in WSL but will run in CI.
 
 ### Install/Update Dependencies
 ```bash
@@ -131,6 +144,18 @@ Automated testing system to prevent breaking changes during development.
 - Configuring test thresholds
 - Viewing test reports
 
+### 🎓 [Testing & Deployment Tutorial](docs/TUTORIAL-testing-deployment.md)
+**⭐ START HERE** - Step-by-step practical guide for testing and deployment.
+
+**Read this for:**
+- Clear separation of local vs GitHub processes
+- Complete local testing workflow with examples
+- Understanding GitHub Actions automation
+- Deployment process explained
+- Troubleshooting common issues
+- Quick reference commands
+- Pre-commit checklist
+
 ## Common Tasks
 
 ### Adding a New Portfolio Work
@@ -206,10 +231,13 @@ The site includes comprehensive automated testing:
 - ✅ **yamllint** - Validates YAML syntax and formatting
 - ✅ **html-proofer** - Validates HTML, links, images
 - ✅ **Lighthouse CI** - Tests performance, accessibility, SEO
+- ✅ **Print tests** - Validates print layouts, QR codes, A4 formatting
 
 **Deployment is blocked if tests fail**, ensuring only working code goes live.
 
-See [Testing](docs/testing.md) for detailed information on running tests locally and interpreting results.
+**Getting started:**
+- **New to testing?** See [Testing & Deployment Tutorial](docs/TUTORIAL-testing-deployment.md) for step-by-step guidance
+- **Need reference info?** See [Testing](docs/testing.md) for detailed configuration and troubleshooting
 
 ## Deployment
 

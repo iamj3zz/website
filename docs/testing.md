@@ -2,6 +2,8 @@
 
 This document explains the automated testing system for the website to prevent breaking changes.
 
+**Looking for a step-by-step tutorial?** See [Testing & Deployment Tutorial](TUTORIAL-testing-deployment.md) for practical, hands-on guidance with examples that clearly separates local testing from GitHub automation.
+
 ## Overview
 
 The site uses a comprehensive testing suite to ensure quality:
@@ -25,6 +27,14 @@ The site uses a comprehensive testing suite to ensure quality:
 - ✓ SEO (meta tags, structured data)
 - ✓ Best practices (HTTPS, console errors)
 - ✓ Progressive Web App capabilities (optional)
+
+### **Print Tests** validate:
+- ✓ QR codes render correctly in print mode
+- ✓ Print-only elements are visible
+- ✓ No-print elements are hidden
+- ✓ A4 layout optimization
+- ✓ Print media queries applied correctly
+- ✓ Generates PDFs for manual review
 
 ## Running Tests Locally
 
@@ -71,11 +81,33 @@ Tests:
 - SEO (meta descriptions, titles, structured data)
 - Best practices (HTTPS, console errors)
 
+### Print Tests
+```bash
+npm run test:print
+```
+Validates print layouts and generates PDFs for manual review. Tests:
+- QR codes are visible and valid in print mode
+- Print-only elements (.print-only) are displayed
+- No-print elements (.no-print) are hidden
+- Social links, ticket links, contact info display correctly
+- Metadata sections are visible on work pages
+
+**Output**: PDFs saved to `./print-test-results/` directory for manual inspection.
+
+**Note**: Requires Chrome/Chromium with proper dependencies. In WSL or headless environments where Chrome is not available, print tests will automatically skip locally but will still run in GitHub Actions CI/CD where Chrome is pre-installed.
+
+**Pages tested**:
+- Homepage (index.html)
+- Bio page (bio/index.html)
+- Events page (events/index.html)
+- Contact page (contact/index.html)
+- Example work page (works/28-modular-example/index.html)
+
 ### All Tests Together
 ```bash
 npm run test:all
 ```
-Runs both html-proofer and Lighthouse CI sequentially.
+Runs html-proofer, Lighthouse CI, and print tests sequentially.
 
 ### Other Commands
 ```bash
@@ -105,25 +137,35 @@ Both workflows run the complete test suite:
    - Builds Jekyll site
    - Runs html-proofer (links, images, HTML validation)
    - Runs Lighthouse CI (performance, accessibility, SEO)
-   - Uploads Lighthouse reports as artifacts
+   - Runs print tests (QR codes, print layouts, PDF generation)
+   - Uploads Lighthouse reports and print test PDFs as artifacts
 
 2. **`.github/workflows/jekyll.yml`** - Build and deployment workflow
    - Lints all YAML files with yamllint
    - Builds Jekyll site for production
    - Runs html-proofer
    - Runs Lighthouse CI
-   - Uploads Lighthouse reports
+   - Runs print tests
+   - Uploads Lighthouse reports and print test PDFs
    - Deploys to GitHub Pages (only if all tests pass)
 
 **If any test fails, deployment is automatically blocked.**
 
-### Viewing Lighthouse Reports
+### Viewing Test Reports
 
 After each CI run:
+
+**Lighthouse Reports:**
 1. Go to the GitHub Actions run
 2. Scroll to "Artifacts" section
 3. Download `lighthouse-results` or `lighthouse-deployment-results`
 4. Open the HTML reports locally to see detailed scores and recommendations
+
+**Print Test PDFs:**
+1. Go to the GitHub Actions run
+2. Scroll to "Artifacts" section
+3. Download `print-test-results` or `print-test-deployment-results`
+4. Open the PDFs to visually inspect print layouts, QR codes, and A4 formatting
 
 ## Common Issues and Solutions
 
@@ -233,6 +275,36 @@ Background and foreground colors do not have sufficient contrast ratio
 - Minimum ratio: 4.5:1 for normal text, 3:1 for large text
 - Update colors in your SCSS files
 
+### Print Test Issues
+
+#### QR Codes Not Visible
+```
+QR codes found but none are valid/visible in print mode
+```
+**Solution:**
+- Check print-specific CSS is loading (@media print)
+- Verify QR code JavaScript runs before print
+- Ensure .qr-code elements have canvas/SVG content
+- Check print.scss for display rules
+
+#### Print-only Elements Hidden
+```
+Print-only elements not visible
+```
+**Solution:**
+- Verify .print-only class has `display: block !important` in @media print
+- Check for conflicting CSS rules
+- Ensure print.scss is included in main stylesheet
+
+#### No-print Elements Still Visible
+```
+No-print elements still visible
+```
+**Solution:**
+- Add `display: none !important` to .no-print in @media print
+- Check specificity of CSS rules
+- Verify print.scss is properly loaded
+
 ## Configuring Tests
 
 ### yamllint Configuration
@@ -322,6 +394,47 @@ Edit `lighthouserc.json` to customize Lighthouse behavior:
 - `"warn"`: Shows warning but doesn't fail build
 - `"off"`: Disables specific check
 
+### Print Test Configuration
+
+Edit `test-print.js` to customize print testing:
+
+```javascript
+const CONFIG = {
+  siteDir: './_site',           // Built site directory
+  outputDir: './print-test-results',  // PDF output directory
+  pages: [
+    {
+      path: 'index.html',
+      name: 'homepage',
+      checks: ['qr-code', 'print-layout']
+    },
+    // Add more pages to test
+  ],
+  a4: {
+    width: 210,    // mm
+    height: 297,   // mm
+    margin: 15     // mm
+  }
+};
+```
+
+**Available checks:**
+- `qr-code`: Validates QR codes are visible and valid
+- `print-layout`: Checks .print-only and .no-print elements
+- `social-links`: Validates social links (bio page)
+- `ticket-links`: Checks ticket QR codes (events page)
+- `contact-info`: Validates contact information display
+- `metadata`: Checks metadata visibility (work pages)
+
+**Adding new pages:**
+```javascript
+{
+  path: 'works/new-work/index.html',
+  name: 'new-work',
+  checks: ['qr-code', 'print-layout', 'metadata']
+}
+```
+
 ## Best Practices
 
 1. **Run YAML linting before committing**
@@ -344,7 +457,13 @@ Edit `lighthouserc.json` to customize Lighthouse behavior:
 
 5. **Review CI failures** - If GitHub Actions fails, check the logs for details
 
-6. **Template/Example works** - May intentionally have broken links for demonstration purposes. Add them to `ignore_urls` in Rakefile if needed.
+6. **Test print layouts after CSS changes**
+   ```bash
+   npm run test:print
+   ```
+   Review generated PDFs to ensure print styles work correctly.
+
+7. **Template/Example works** - May intentionally have broken links for demonstration purposes. Add them to `ignore_urls` in Rakefile if needed.
 
 ## Ignoring Specific Issues
 
@@ -375,12 +494,14 @@ If you need even more comprehensive testing, consider:
   - Useful when CSS/design is finalized
   - Catches layout bugs automatically
 
-Current testing suite (yamllint + html-proofer + Lighthouse CI) covers:
+Current testing suite (yamllint + html-proofer + Lighthouse CI + print tests) covers:
 - ✅ YAML configuration validation
 - ✅ Links and HTML validation
 - ✅ Performance optimization
 - ✅ Basic accessibility (WCAG subset)
 - ✅ SEO best practices
+- ✅ Print layout validation
+- ✅ QR code rendering
 - ✅ General web quality
 
 This is comprehensive for most portfolio websites!

@@ -9,7 +9,7 @@ links:
   - title: Press Kit
     url: /assets/press-kit.pdf
   - title: Pictures
-    url: /pictures/
+    url: /bio-gallery/
 ---
 
 <section class="bio-section">

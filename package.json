@@ -8,7 +8,8 @@
     "lighthouse:collect": "lhci collect",
     "lighthouse:assert": "lhci assert",
     "test:lighthouse": "npm run lighthouse",
-    "test:all": "bundle exec rake test && npm run lighthouse"
+    "test:print": "node test-print.js",
+    "test:all": "bundle exec rake test && npm run lighthouse && npm run test:print"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
   "author": "J3ZZ",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@lhci/cli": "^0.13.0"
+    "@lhci/cli": "^0.13.0",
+    "puppeteer": "^24.30.0"
   }
 }
