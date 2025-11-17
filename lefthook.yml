@@ -1,0 +1,44 @@
+# Lefthook Configuration
+# Fast and powerful Git hooks manager
+# https://github.com/evilmartians/lefthook
+
+# Pre-commit: Run quick checks before committing
+pre-commit:
+  parallel: true
+  commands:
+    yaml-lint:
+      glob: "*.{yml,yaml}"
+      run: yamllint {staged_files}
+      stage_fixed: true
+
+    # Prevent committing to main branch directly (optional - uncomment if desired)
+    # protect-main:
+    #   run: |
+    #     branch=$(git rev-parse --abbrev-ref HEAD)
+    #     if [ "$branch" = "main" ]; then
+    #       echo "❌ Direct commits to main are not allowed. Use a feature branch."
+    #       exit 1
+    #     fi
+
+# Pre-push: Run full test suite before pushing
+pre-push:
+  commands:
+    full-tests:
+      run: ./test-before-push.sh
+
+# Commit-msg: Validate commit message format (optional)
+# commit-msg:
+#   commands:
+#     format:
+#       run: |
+#         commit_msg=$(cat {1})
+#         if ! echo "$commit_msg" | grep -qE "^(feat|fix|docs|style|refactor|test|chore):"; then
+#           echo "❌ Commit message must start with: feat|fix|docs|style|refactor|test|chore"
+#           echo "Example: feat: add new portfolio work"
+#           exit 1
+#         fi
+
+# Skip hooks when needed:
+# LEFTHOOK=0 git commit -m "skip hooks"
+# or
+# git commit --no-verify -m "skip hooks"
