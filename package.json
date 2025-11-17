@@ -1,0 +1,28 @@
+{
+  "name": "j3zz-website",
+  "version": "1.0.0",
+  "description": "Jekyll static site for www.j3zz.com with automated testing",
+  "private": true,
+  "scripts": {
+    "lighthouse": "lhci autorun",
+    "lighthouse:collect": "lhci collect",
+    "lighthouse:assert": "lhci assert",
+    "test:lighthouse": "npm run lighthouse",
+    "test:all": "bundle exec rake test && npm run lighthouse"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/website.git"
+  },
+  "keywords": [
+    "jekyll",
+    "portfolio",
+    "testing",
+    "lighthouse"
+  ],
+  "author": "J3ZZ",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@lhci/cli": "^0.13.0"
+  }
+}
