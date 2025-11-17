@@ -124,7 +124,7 @@ abstract: "Sound installation."  # Too brief, no descriptive detail
 For works spanning multiple categories (e.g., collaborative installations, release with live performances):
 
 ```yaml
-categories: [installations, collabs, live-acts]
+categories: [installations, commissions, live-acts]
 primary_category: installations  # Determines hover color
 
 metadata:
@@ -150,7 +150,7 @@ The portfolio includes template works that demonstrate best practices:
 - **Work 31** (`_portfolio/31-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - Comprehensive reference demonstrating:
   - ALL possible metadata fields with examples and links
   - ALL 10 module types with multiple configuration examples
-  - Multi-category work setup (installations, releases, live-acts, collabs)
+  - Multi-category work setup (installations, releases, live-acts, commissions)
   - Category-specific metadata guidelines in comments
   - Section module recommendations by category
   - Complete usage guide in HTML comments

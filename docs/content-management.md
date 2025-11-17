@@ -16,7 +16,7 @@ All collection items must follow these front matter standards to ensure consiste
 - `metadata` - Centralized metadata structure with category-specific fields (see [Metadata Reference](metadata-reference.md))
 
 **Category Fields (Required - choose one format):**
-- **Single category:** `category: value` (where value is: installations, live-acts, releases, or collabs)
+- **Single category:** `category: value` (where value is: installations, live-acts, releases, or commissions)
 - **Multiple categories:**
   ```yaml
   categories: [category1, category2]
@@ -70,7 +70,7 @@ layout: work
 title: Project Title
 work_id: project-title
 abstract: "Multi-format work combining installation and performance elements."
-categories: [installations, collabs, live-acts]
+categories: [installations, commissions, live-acts]
 primary_category: installations
 image: /assets/img/project.jpg
 order: 15
@@ -163,7 +163,7 @@ category: installations
 
 **Multiple categories:**
 ```yaml
-categories: [installations, collabs]
+categories: [installations, commissions]
 primary_category: installations  # Used for primary overlay color
 ```
 
@@ -183,7 +183,7 @@ layout: work
 title: New Work Title
 work_id: new-work-title  # Required: unique ID (A-Z, a-z, 0-9, -, _)
 abstract: "Brief description of what this work is, medium, and themes."
-category: installations  # or live-acts, releases, collabs
+category: installations  # or live-acts, releases, commissions
 image: /assets/img/work-preview.jpg
 order: 31  # Higher numbers appear first
 

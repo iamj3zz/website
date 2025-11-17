@@ -11,7 +11,7 @@ Add a `sections` array to your front matter instead of content below it:
 layout: work
 title: Project Title
 work_id: project-title
-categories: [installations, collabs]
+categories: [installations, commissions]
 primary_category: installations
 image: /assets/img/preview.jpg
 order: 28
