@@ -9,7 +9,8 @@
     "lighthouse:assert": "lhci assert",
     "test:lighthouse": "npm run lighthouse",
     "test:print": "node test-print.js",
-    "test:all": "bundle exec rake test && npm run lighthouse && npm run test:print"
+    "test:all": "bundle exec rake test && npm run lighthouse && npm run test:print",
+    "prepare": "lefthook install"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "author": "J3ZZ",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@evilmartians/lefthook": "^2.0.4",
     "@lhci/cli": "^0.13.0",
     "puppeteer": "^24.30.0"
   }

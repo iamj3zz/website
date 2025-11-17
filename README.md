@@ -37,13 +37,15 @@ cd website
 
 # Install dependencies
 bundle install
-npm install
+npm install  # Automatically installs Lefthook git hooks via prepare script
 
 # Start development server
 bundle exec jekyll serve
 ```
 
 Visit http://localhost:4000
+
+**Note:** Git hooks are automatically installed via Lefthook during `npm install`. This ensures code quality by running tests before commits/pushes.
 
 ### Development Workflow
 
@@ -59,6 +61,11 @@ bundle exec rake test
 
 # Run performance tests (requires Chrome)
 npm run lighthouse
+
+# Skip git hooks when needed
+LEFTHOOK=0 git commit -m "message"
+# or
+git commit --no-verify -m "message"
 ```
 
 ---
@@ -199,16 +206,17 @@ website/
 - **Liquid** - Templating language
 - **SASS** - CSS preprocessing
 
-### Testing
+### Testing & Quality
 
 - **html-proofer** - HTML/link validation
 - **Lighthouse CI** - Performance/accessibility/SEO audits
+- **Lefthook** - Git hooks for automated testing
 - **GitHub Actions** - CI/CD automation
 
 ### Dependencies
 
 - **Ruby Gems** - github-pages, jekyll-feed, html-proofer, rake
-- **npm Packages** - @lhci/cli
+- **npm Packages** - @lhci/cli, @evilmartians/lefthook, puppeteer
 
 ---
 

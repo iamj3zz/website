@@ -69,12 +69,41 @@ Run after modifying `Gemfile` or when setting up the project for the first time.
 ```bash
 npm install
 ```
-Installs Node.js dependencies for Lighthouse CI testing.
+Installs Node.js dependencies for Lighthouse CI testing and Lefthook git hooks.
 
 ```bash
 bundle update github-pages
 ```
 Updates GitHub Pages and all associated Jekyll dependencies.
+
+### Git Hooks (Lefthook)
+
+This project uses [Lefthook](https://github.com/evilmartians/lefthook) to automatically run tests before commits and pushes.
+
+**Setup (first time only):**
+```bash
+npm install
+npx lefthook install
+```
+
+**What runs automatically:**
+- **Pre-commit**: YAML linting on staged files (fast)
+- **Pre-push**: Full test suite (`./test-before-push.sh`)
+
+**Skip hooks when needed:**
+```bash
+LEFTHOOK=0 git commit -m "skip hooks"
+# or
+git commit --no-verify -m "skip hooks"
+```
+
+**Manual hook testing:**
+```bash
+npx lefthook run pre-commit
+npx lefthook run pre-push
+```
+
+Configuration is in `lefthook.yml`.
 
 ## Documentation Structure
 
