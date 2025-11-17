@@ -3,7 +3,7 @@ layout: work
 title: Complete Template Reference
 work_id: complete-template-reference
 abstract: "A comprehensive template work demonstrating all possible metadata fields, links, and section modules available in the portfolio system for easy reference and replication."
-categories: [installations, releases, live-acts, collabs]
+categories: [installations, releases, live-acts, commissions]
 primary_category: installations
 image: /assets/img/dumbpic.jpg
 order: 31

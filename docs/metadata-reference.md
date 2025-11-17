@@ -125,9 +125,9 @@ metadata:
 - **UPC** (Universal Product Code): 12-digit barcode number for physical/digital releases
 - **ISWC** (International Standard Musical Work Code): Unique identifier for musical compositions. Format: T-345.246.800-1
 
-## Collaborations
+## Commissions
 
-Collaborations highlight multiple artists, shared creative process, and partnership details.
+Commissions highlight multiple artists, shared creative process, and partnership details.
 
 **Recommended Fields:**
 ```yaml

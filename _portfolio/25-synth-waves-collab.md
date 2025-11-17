@@ -3,8 +3,8 @@ layout: work
 title: Synth Waves Collab
 work_id: synth-waves-collab
 abstract: "A collaborative electronic music project exploring the intersection of analog synthesis and digital processing with sound designer Alex Rivers."
-categories: [collabs, releases]
-primary_category: collabs
+categories: [commissions, releases]
+primary_category: commissions
 image: /assets/img/dumbpic.jpg
 order: 25
 

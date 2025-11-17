@@ -26,7 +26,7 @@
   - Required `work_id` field (alphanumeric with hyphens/underscores only) for linking to events and internal references
   - Required `abstract` field (1-2 sentences) displayed in grid hover and printable page
   - Required `metadata` field (centralized metadata structure) with category-specific fields
-  - Categories: `installations`, `live-acts`, `releases`, `collabs`
+  - Categories: `installations`, `live-acts`, `releases`, `commissions`
   - Items generate individual pages at `/works/:name/`
   - Supports both single category and multi-category assignments
   - All works use centralized metadata + modular sections structure
@@ -70,7 +70,7 @@
 - Navigation state uses `class="active"` based on page URL
 
 **Works Page Sub-Navigation:**
-- Filter buttons: All | Installations | Live Acts | Releases | Collabs
+- Filter buttons: All | Installations | Live Acts | Releases | Commissions
 - Active filter is underlined
 - JavaScript-powered filtering with multi-category support (portfolio.js)
 - Clicking category tags on portfolio items filters the grid
@@ -188,7 +188,7 @@ Optional work description content in markdown.
   - Installations: Blue `rgba(66, 135, 245, 0.68)`
   - Live Acts: Red `rgba(245, 66, 66, 0.68)`
   - Releases: Green `rgba(66, 245, 135, 0.68)`
-  - Collabs: Orange `rgba(245, 176, 66, 0.68)`
+  - Commissions: Orange `rgba(245, 176, 66, 0.68)`
 - Displays work title and all categories as clickable tags on hover
 - Supports multi-category works
 

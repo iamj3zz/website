@@ -3,7 +3,7 @@ layout: work
 title: Modular Layout Example
 work_id: modular-layout-example
 abstract: "A comprehensive demonstration of the modular layout system, showcasing flexible content sections and customizable presentation options."
-categories: [installations, collabs]
+categories: [installations, commissions]
 primary_category: installations
 image: /assets/img/dumbpic.jpg
 order: 28

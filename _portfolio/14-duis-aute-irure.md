@@ -3,8 +3,8 @@ layout: work
 title: Duis Aute Irure
 work_id: duis-aute-irure
 abstract: "A collaborative split release with electronic producer Alex Kim, juxtaposing digital glitch aesthetics with warm analog tape textures."
-categories: [collabs, releases]
-primary_category: collabs
+categories: [commissions, releases]
+primary_category: commissions
 image: /assets/img/dumbpic.jpg
 order: 14
 

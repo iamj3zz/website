@@ -9,7 +9,7 @@ This is a Jekyll static site deployed to GitHub Pages at www.j3zz.com. The site 
 **Key Features:**
 - Modular layout system with 10 customizable modules
 - Centralized metadata architecture
-- Multi-category portfolio support (installations, live-acts, releases, collabs)
+- Multi-category portfolio support (installations, live-acts, releases, commissions)
 - Responsive design with comprehensive print functionality (all pages A4-optimized with QR codes)
 - Event management system with work linking
 
