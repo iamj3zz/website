@@ -1,0 +1,49 @@
+---
+extends: default
+
+ignore: |
+  node_modules/
+  vendor/
+  _site/
+  .bundle/
+
+rules:
+  # Line length - relaxed for URLs and long strings
+  line-length:
+    max: 150
+    level: warning
+
+  # Indentation - 2 spaces standard for YAML
+  indentation:
+    spaces: 2
+    indent-sequences: true
+
+  # Comments - require space after # but allow flexibility
+  comments:
+    min-spaces-from-content: 1
+
+  # Truthy values - allow yes/no/on/off for Jekyll compatibility
+  truthy:
+    allowed-values: ['true', 'false', 'yes', 'no', 'on', 'off']
+
+  # Document start - not required (Jekyll frontmatter uses ---)
+  document-start: disable
+
+  # Trailing spaces
+  trailing-spaces: enable
+
+  # Empty lines
+  empty-lines:
+    max: 2
+
+  # Key duplicates - error level (prevent config issues)
+  key-duplicates: enable
+
+  # Brackets and braces
+  brackets:
+    min-spaces-inside: 0
+    max-spaces-inside: 1
+
+  braces:
+    min-spaces-inside: 0
+    max-spaces-inside: 1

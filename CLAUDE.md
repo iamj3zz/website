@@ -29,11 +29,34 @@ bundle exec jekyll build
 ```
 Generates the static site in the `_site/` directory.
 
+### Run Tests
+```bash
+yamllint .
+```
+Validates YAML syntax and formatting in all configuration files and workflows. Very fast.
+
+```bash
+bundle exec rake test
+```
+Runs automated tests (html-proofer) to validate links, images, and HTML structure.
+
+```bash
+npm run lighthouse
+```
+Runs Lighthouse CI for performance, accessibility, and SEO validation (requires Chrome/Chromium).
+
+**Note**: All tests run automatically in GitHub Actions on every push/PR.
+
 ### Install/Update Dependencies
 ```bash
 bundle install
 ```
 Run after modifying `Gemfile` or when setting up the project for the first time.
+
+```bash
+npm install
+```
+Installs Node.js dependencies for Lighthouse CI testing.
 
 ```bash
 bundle update github-pages
@@ -96,6 +119,17 @@ Workflows, guidelines, and standards for creating and maintaining portfolio work
 - Multi-category work configuration
 - Template works reference
 - Consistency maintenance
+
+### 🧪 [Testing](docs/testing.md)
+Automated testing system to prevent breaking changes during development.
+
+**Read this for:**
+- Running tests locally (html-proofer, Lighthouse CI)
+- Understanding CI/CD workflows
+- Common test failures and solutions
+- Performance, accessibility, and SEO validation
+- Configuring test thresholds
+- Viewing test reports
 
 ## Common Tasks
 
@@ -164,9 +198,31 @@ Reference these portfolio works for implementation examples:
 - **Work 29** (`_portfolio/29-split-layout-example.md`): Split layout modules
 - **Work 30** (`_portfolio/30-centralized-metadata-example.md`): Centralized metadata system
 
+## Testing & Quality Assurance
+
+The site includes comprehensive automated testing:
+
+**Tests run automatically on every push/PR via GitHub Actions:**
+- ✅ **yamllint** - Validates YAML syntax and formatting
+- ✅ **html-proofer** - Validates HTML, links, images
+- ✅ **Lighthouse CI** - Tests performance, accessibility, SEO
+
+**Deployment is blocked if tests fail**, ensuring only working code goes live.
+
+See [Testing](docs/testing.md) for detailed information on running tests locally and interpreting results.
+
 ## Deployment
 
 Site deploys automatically to GitHub Pages when pushed to the `main` branch. Custom domain www.j3zz.com is configured via `CNAME` file.
+
+**Deployment workflow:**
+1. Push to `main` branch
+2. GitHub Actions validates YAML files with yamllint
+3. Builds the site with Jekyll
+4. Runs html-proofer tests
+5. Runs Lighthouse CI audits
+6. If all tests pass → deploys to GitHub Pages
+7. If any test fails → deployment blocked
 
 **Note**: This site uses the `github-pages` gem for compatibility with GitHub Pages infrastructure.
 
@@ -177,3 +233,4 @@ Site deploys automatically to GitHub Pages when pushed to the `main` branch. Cus
 - **Module usage**: See [Modules Reference](docs/modules-reference.md)
 - **Metadata fields**: See [Metadata Reference](docs/metadata-reference.md)
 - **Best practices**: See [Best Practices](docs/best-practices.md)
+- **Testing and CI/CD**: See [Testing](docs/testing.md)
