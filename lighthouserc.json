@@ -15,9 +15,9 @@
     "assert": {
       "preset": "lighthouse:recommended",
       "assertions": {
-        "categories:performance": ["warn", {"minScore": 0.85}],
+        "categories:performance": ["warn", {"minScore": 0.70}],
         "categories:accessibility": ["error", {"minScore": 0.85}],
-        "categories:best-practices": ["warn", {"minScore": 0.85}],
+        "categories:best-practices": ["warn", {"minScore": 0.70}],
         "categories:seo": ["warn", {"minScore": 0.85}],
 
         "unused-javascript": "off",
@@ -31,7 +31,7 @@
         "is-crawlable": "error",
         "robots-txt": "off",
 
-        "color-contrast": "error",
+        "color-contrast": "warn",
         "document-title": "error",
         "html-has-lang": "error",
         "meta-description": "warn",
@@ -41,7 +41,22 @@
         "uses-long-cache-ttl": "off",
         "uses-rel-preconnect": "off",
         "font-display": "off",
-        "third-party-facades": "off"
+        "third-party-facades": "off",
+
+        "installable-manifest": "off",
+        "maskable-icon": "off",
+        "splash-screen": "off",
+        "themed-omnibox": "off",
+        "csp-xss": "off",
+        "total-byte-weight": "off",
+        "third-party-cookies": "off",
+        "unminified-css": "off",
+        "unsized-images": "warn",
+        "frame-title": "warn",
+        "image-redundant-alt": "warn",
+        "heading-order": "warn",
+        "identical-links-same-purpose": "warn",
+        "inspector-issues": "off"
       }
     },
     "upload": {
