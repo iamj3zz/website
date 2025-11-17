@@ -1,0 +1,28 @@
+---
+# Main SCSS file - imports all modular stylesheets
+# Front matter required for Jekyll to process this file
+---
+
+/* ============================================================
+   J3ZZ Portfolio Website - Main Stylesheet
+   Modular SCSS architecture for better maintainability
+   ============================================================ */
+
+/* Base styles - reset, typography, global elements */
+@import 'base';
+
+/* Layout - header, footer, navigation, mobile menu */
+@import 'layout';
+
+/* Page-specific styles */
+@import 'portfolio';     /* Homepage portfolio grid and filters */
+@import 'bio';           /* Bio page */
+@import 'contact';       /* Contact page and newsletter form */
+@import 'work-detail';   /* Work detail page structure */
+@import 'work-modules';  /* All 10 work page module types */
+@import 'lightbox';      /* Image gallery lightbox */
+@import 'events';        /* Events page table */
+@import 'error';         /* 404 error page */
+
+/* Print styles - MUST be last to override everything */
+@import 'print';

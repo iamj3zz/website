@@ -1,0 +1,171 @@
+/* Bio Section */
+.bio-section {
+  max-width: 1200px;
+  margin: 0 auto 60px;
+}
+
+/* Bio Links Section */
+.bio-links {
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.bio-link {
+  color: #333;
+  text-decoration: none;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0 20px;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+  display: inline-block;
+  padding-bottom: 2px;
+}
+
+.bio-link:hover {
+  border-bottom-color: #333;
+}
+
+/* Bio Intro: Text + Image */
+.bio-intro {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+  align-items: start;
+}
+
+.bio-text {
+  text-align: justify;
+}
+
+.bio-text p {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.bio-image {
+  position: sticky;
+  top: 40px;
+}
+
+.bio-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Bio Lists Section */
+.bio-lists {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bio-category {
+  margin-bottom: 60px;
+}
+
+.bio-category:last-child {
+  margin-bottom: 0;
+}
+
+.bio-category h2 {
+  font-size: 16px;
+  font-weight: normal;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #333;
+}
+
+.bio-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bio-item {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.bio-year {
+  color: #333;
+  font-weight: normal;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+.bio-bullet {
+  color: #999;
+  flex-shrink: 0;
+}
+
+/* Responsive Bio */
+@media (max-width: 900px) {
+  .bio-intro {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .bio-image {
+    position: static;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .bio-text {
+    text-align: justify;
+  }
+}
+
+@media (max-width: 600px) {
+  .bio-links {
+    margin-bottom: 40px;
+    padding-bottom: 0px;
+  }
+
+  /* Bio links inline with wrapping - like filter tags */
+  .bio-link {
+    display: inline-block;
+    font-size: 11px;
+    padding: 6px 10px;
+    margin: 3px;
+  }
+
+  .bio-intro {
+    margin-bottom: 60px;
+  }
+
+  .bio-category {
+    margin-bottom: 40px;
+  }
+
+  .bio-category h2 {
+    font-size: 14px;
+  }
+
+  .bio-item {
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+}
+
+/* Bio Link Wrapper - for vertical layout in print */
+.bio-link-wrapper {
+  display: contents; /* On screen, wrapper is transparent */
+}
+
+/* Bio Link QR Code - Hidden on screen, visible in print */
+.bio-link-qr {
+  display: none;
+}

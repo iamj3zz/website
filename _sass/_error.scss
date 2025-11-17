@@ -1,0 +1,74 @@
+/* 404 Error Page */
+.error-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 80px 20px;
+  text-align: center;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error-content {
+  width: 100%;
+}
+
+.error-code {
+  font-size: 120px;
+  font-weight: normal;
+  color: #333;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  line-height: 1;
+}
+
+.error-message {
+  font-size: 24px;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+.error-description {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 40px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.error-link {
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 12px 30px;
+  border: 2px solid #333;
+  transition: all 0.3s ease;
+}
+
+.error-link:hover {
+  background: #333;
+  color: #fff;
+}
+
+@media (max-width: 600px) {
+  .error-code {
+    font-size: 80px;
+  }
+
+  .error-message {
+    font-size: 18px;
+  }
+
+  .error-description {
+    font-size: 13px;
+  }
+}
