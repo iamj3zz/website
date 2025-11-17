@@ -41,7 +41,7 @@ metadata:
   produced_by_link: "https://productioncompany.com"
 
   client: "Client Organization Name"
-  client_link: "/works/previous-client-work/"  # Can link to internal pages
+  # client_link: "/works/previous-client-work/"  # Example: Can link to internal pages (commented out - file doesn't exist)
 
   commissioned_by: "Arts Foundation or Festival Name"
   commissioned_by_link: "https://artsfoundation.org"
@@ -133,7 +133,7 @@ metadata:
 
     - label: "Related Work"
       value: "See companion piece"
-      link: "/works/lorem-ipsum/"
+      link: "/works/01-lorem-ipsum/"  # Example: link to another work
 
 # ====================
 # SECTIONS ARRAY

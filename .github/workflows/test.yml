@@ -55,6 +55,17 @@ jobs:
           path: .lighthouseci/
           retention-days: 30
 
+      - name: Run Print Tests
+        run: npm run test:print
+
+      - name: Upload Print Test PDFs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: print-test-results
+          path: print-test-results/
+          retention-days: 30
+
       - name: Test result
         if: success()
         run: echo "✓ All tests passed!"

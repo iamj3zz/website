@@ -37,3 +37,6 @@ yarn-error.log
 # Lighthouse CI
 .lighthouseci/
 lhci-reports/
+
+# Print test results
+print-test-results/

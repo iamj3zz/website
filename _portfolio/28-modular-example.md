@@ -62,7 +62,7 @@ sections:
     produced_by: "Studio Productions"
     produced_by_link: "https://studioproductions.example.com"
     client: "Example Client"
-    client_link: "/works/lorem-ipsum/"
+    client_link: "/works/01-lorem-ipsum/"  # Example: link to another work
     commissioned_by: "Paris Digital Art Festival"
     commissioned_by_link: "https://parisdigitalartfestival.com"
     curated_by: "Marie Dubois"
@@ -86,7 +86,7 @@ sections:
     interview: "Listen on SoundCloud"
     interview_link: "https://soundcloud.com/j3zz/interview"
     press_kit: "Download PDF"
-    press_kit_link: "/assets/press/press-kit.pdf"
+    # press_kit_link: "/assets/press/press-kit.pdf"  # Example: Commented out - file doesn't exist
     socials: "@j3zz on Instagram"
     socials_link: "https://instagram.com/j3zz"
     special_thanks: "To the amazing team and all supporters"
@@ -98,7 +98,7 @@ sections:
         link: "https://spotify.com/artist/j3zz"
       - label: "Related Work"
         value: "See Lorem Ipsum project"
-        link: "/works/lorem-ipsum/"
+        link: "/works/01-lorem-ipsum/"  # Example: link to another work
 
   - type: text
     title: "About the Project"
