@@ -2,43 +2,69 @@
 
 A practical, step-by-step guide to testing and deploying this Jekyll website.
 
+**⚠️ IMPORTANT: All testing happens LOCALLY. GitHub Actions only builds and deploys!**
+
 ## Table of Contents
-- [Overview: Local vs GitHub](#overview-local-vs-github)
+- [Overview: How Testing Works](#overview-how-testing-works)
 - [Prerequisites & Setup](#prerequisites--setup)
-- [Pre-Push Script (Recommended)](#pre-push-script-recommended)
-- [Local Testing Workflow](#local-testing-workflow)
-- [GitHub Actions Workflow](#github-actions-workflow)
+- [Recommended Workflow (Easiest)](#recommended-workflow-easiest)
+- [Manual Testing (Advanced)](#manual-testing-advanced)
 - [Deployment Process](#deployment-process)
 - [Troubleshooting](#troubleshooting)
 - [Quick Reference](#quick-reference)
 
 ---
 
-## Overview: Local vs GitHub
+## Overview: How Testing Works
 
-### What Runs Locally (On Your Computer)
+### The New Model: Local Testing Only
 
-**Location:** Your development machine
-**Purpose:** Fast feedback while developing
-**Manual control:** You decide when to run tests
+**Your local machine is the ONLY quality gate.**
 
-Tests you can run locally:
-1. **yamllint** - Validates YAML files (very fast, <1 second)
-2. **html-proofer** - Validates links and HTML (fast, ~10-30 seconds)
-3. **Lighthouse CI** - Performance/accessibility testing (requires Chrome, ~1-2 minutes)
+```
+┌─────────────────────────────────────────────────────────┐
+│  LOCAL MACHINE (You)                                    │
+├─────────────────────────────────────────────────────────┤
+│  1. Make changes                                        │
+│  2. Run tests locally (via Lefthook hooks)              │
+│  3. Fix any errors                                      │
+│  4. Tests pass → commit and push                        │
+└────────────────┬────────────────────────────────────────┘
+                 │
+                 ▼
+┌─────────────────────────────────────────────────────────┐
+│  GITHUB ACTIONS (Automated)                             │
+├─────────────────────────────────────────────────────────┤
+│  1. Receives your push                                  │
+│  2. Builds Jekyll site                                  │
+│  3. Deploys to GitHub Pages                             │
+│  NO TESTING - Deploys immediately                       │
+└─────────────────────────────────────────────────────────┘
+```
 
-### What Runs on GitHub (Automatically)
+### Why This Approach?
 
-**Location:** GitHub's cloud servers
-**Purpose:** Automated quality gate before deployment
-**Automatic:** Runs on every push/PR without your intervention
+**Benefits:**
+- ✅ **Faster deployment** - GitHub Actions completes in ~1-2 minutes instead of 5-10 minutes
+- ✅ **Full control** - Test on your machine, see results immediately
+- ✅ **No CI/CD wait time** - Fix issues locally without waiting for GitHub
+- ✅ **No redundancy** - Tests run once, not twice
 
-When GitHub Actions run:
-- **On every push to main** → Full test suite + deployment
-- **On every pull request** → Full test suite (no deployment)
-- **Manual trigger** → Can run workflows manually via GitHub UI
+**Your safety net:**
+- **Lefthook git hooks** automatically enforce all tests before you can push
+- **Can't push broken code** - Hooks block the push if tests fail
+- **Manual override available** - Skip hooks only when absolutely necessary
 
-**Key difference:** Local tests are for rapid development feedback. GitHub tests are the final quality gate that blocks deployment if anything fails.
+### What Gets Tested?
+
+**Automatically enforced by Lefthook:**
+1. ✅ **YAML linting** - Validates syntax (pre-commit hook, blocks commits)
+2. ✅ **Jekyll build** - Ensures site builds (pre-push hook, blocks pushes)
+3. ✅ **html-proofer** - Validates HTML, links, images (pre-push hook, blocks pushes)
+4. ✅ **Print tests** - Validates print layouts, QR codes (pre-push hook, blocks pushes)
+
+**Optional (run manually with --full flag):**
+5. ⚠️ **Lighthouse CI** - Performance, accessibility, SEO (recommended before major releases)
 
 ---
 
@@ -52,8 +78,11 @@ Run these commands once when setting up the project:
 # Install Ruby dependencies (Jekyll, html-proofer)
 bundle install
 
-# Install Node.js dependencies (Lighthouse CI)
+# Install Node.js dependencies (Lighthouse CI, Lefthook)
 npm install
+
+# Install Lefthook git hooks
+npx lefthook install
 
 # Install yamllint (Python tool)
 pip install yamllint
@@ -65,502 +94,238 @@ pip3 install yamllint
 ```bash
 yamllint --version        # Should show version number
 bundle exec jekyll --version
+npx lefthook --version
 npx lhci --version
+```
+
+**Check hooks are installed:**
+```bash
+ls -la .git/hooks/
+# Should see: pre-commit, pre-push (symlinks or files)
 ```
 
 ---
 
-## Pre-Push Script (Recommended)
+## Recommended Workflow (Easiest)
 
-### The Easy Way: Automated Testing Script
+### The Simple Way: Let Lefthook Handle Everything
 
-**⭐ RECOMMENDED:** Use the `test-before-push.sh` script to run all tests automatically before pushing.
+**⭐ RECOMMENDED FOR MOST USERS**
 
-#### Quick Start
+Just work normally - Lefthook will automatically run tests when you commit and push.
 
-```bash
-# Run all tests (fast - no Lighthouse)
-./test-before-push.sh
-
-# Run all tests including Lighthouse (slower)
-./test-before-push.sh --full
-
-# Quick YAML check only (fastest)
-./test-before-push.sh --quick
-```
-
-#### What It Does
-
-The script automatically runs:
-1. **YAML linting** - Validates syntax
-2. **Jekyll build** - Ensures site builds
-3. **HTML validation** - Checks links, images, HTML
-4. **Lighthouse** (optional with `--full`) - Performance, accessibility, SEO
-
-**Stops immediately** if any test fails, so you can fix issues before pushing.
-
-#### Recommended Workflow
+**You do NOT need to run `./test-before-push.sh` manually** - the pre-push hook runs it automatically for you!
 
 ```bash
 # 1. Make your changes
 vim _portfolio/31-new-work.md
 
-# 2. Run tests
-./test-before-push.sh
+# 2. Start local server (optional, to preview)
+bundle exec jekyll serve
+# View at http://localhost:4000
 
-# 3. If tests fail, fix the errors
-# The script will show you exactly what's wrong
-
-# 4. Run tests again
-./test-before-push.sh
-
-# 5. When all tests pass, commit and push
+# 3. Commit your changes
 git add .
 git commit -m "Add new portfolio work"
+# → Lefthook pre-commit hook runs YAML validation
+# → If YAML fails, commit is blocked
+
+# 4. Push to GitHub
 git push origin main
+# → Lefthook pre-push hook runs ALL tests automatically
+# → If tests pass: push succeeds → GitHub deploys
+# → If tests fail: push is blocked → fix errors and try again
 ```
 
-#### Example Output
+**That's it!** No need to remember to run tests manually.
 
-**Success:**
+### What Happens Automatically
+
+**When you run `git commit`:**
 ```
+→ Running pre-commit hook...
+→ Validating YAML in staged files (quick check)...
+✓ YAML validation passed!
+[main abc123] Add new portfolio work
+```
+
+**When you run `git push`:**
+The pre-push hook automatically runs `./test-before-push.sh` - the COMPLETE test suite:
+```
+→ Running pre-push hook...
+→ Running: ./test-before-push.sh
+
+═══════════════════════════════════════════════════════════
+  Pre-Push Testing - Local Validation
+═══════════════════════════════════════════════════════════
+
+⚠️  IMPORTANT: This is your ONLY test gate!
+GitHub Actions does NOT run tests - it only builds and deploys.
+
+→ Step 1/5: YAML Linting
+✓ YAML linting passed!
+
+→ Step 2/5: Building Jekyll Site
+✓ Jekyll build completed successfully!
+
+→ Step 3/5: HTML Validation & Link Checking
+✓ HTML validation passed!
+
+→ Step 4/5: Print Testing
+✓ Print tests passed!
+
+→ Step 5/5: Lighthouse CI (Skipped)
+
 ═══════════════════════════════════════════════════════════
   Test Results Summary
 ═══════════════════════════════════════════════════════════
 
 ✓ All tests passed! ✨
 
-Your changes are ready to push:
-
-  git add .
-  git commit -m "Your commit message"
-  git push origin main
+Counting objects: 5, done.
+[... git push output ...]
 ```
 
-**Failure:**
-```
-═══════════════════════════════════════════════════════════
-  Step 1/4: YAML Linting
-═══════════════════════════════════════════════════════════
+### When Tests Fail
 
-→ Checking YAML syntax in all .yml files and front matter...
+**Example: YAML error on commit**
+```bash
+git commit -m "Add work"
+
+→ Running pre-commit hook...
+→ Validating YAML in staged files...
 
 _portfolio/31-work.md
   42:81     warning  line too long (151 > 150 characters)
 
-✗ YAML linting failed!
+❌ YAML validation failed. Fix the errors above before committing.
 
-Fix the YAML errors listed above, then run this script again.
+# Commit blocked! Fix the error and try again.
 ```
 
-#### Why Use This Script?
+**Example: HTML error on push**
+```bash
+git push origin main
 
-**Benefits:**
-- ✅ Catches errors before GitHub Actions
-- ✅ Saves time (no waiting for GitHub)
-- ✅ Clear, colored output
-- ✅ Stops at first failure
-- ✅ Shows exactly what to fix
-- ✅ One command instead of multiple
+→ Running pre-push hook...
+→ Running: ./test-before-push.sh
 
-**Skip Lighthouse locally:** GitHub Actions will run it automatically. Use `--full` only before major releases.
+[... tests running ...]
+
+→ Step 3/5: HTML Validation & Link Checking
+✗ HTML validation failed!
+
+- _site/works/new-work/index.html
+  *  internally linking to /assets/missing.jpg, which does not exist
+
+❌ Tests failed! Push blocked.
+
+Fix the errors above, then run again:
+  ./test-before-push.sh
+
+# Push blocked! Fix the error and try again.
+```
+
+### Skipping Hooks (Use with EXTREME Caution)
+
+**Only skip hooks if:**
+- You already ran `./test-before-push.sh` manually and all tests passed
+- You're pushing non-code changes (documentation only)
+- You know exactly what you're doing
+
+```bash
+# Skip hooks for this push only
+LEFTHOOK=0 git push
+# or
+git push --no-verify
+
+# Skip hooks for this commit only
+LEFTHOOK=0 git commit -m "message"
+# or
+git commit --no-verify -m "message"
+```
+
+**⚠️ WARNING**: Skipping hooks = deploying untested code = potential site breakage!
 
 ---
 
-## Local Testing Workflow
+## Manual Testing (Advanced)
 
-This section covers everything that happens **on your computer**.
+### The Manual Way: Run Tests Yourself
 
-**Note:** If you use the `test-before-push.sh` script (recommended), you can skip this section. The script runs all these steps automatically.
+If you want to test before committing, or run specific tests, use these commands:
 
-### Step 1: Start Development Server
+### Option 1: Use the Test Script (Recommended)
 
 ```bash
-bundle exec jekyll serve
+# Run all tests (fast - no Lighthouse)
+./test-before-push.sh
+
+# Run all tests including Lighthouse (slower, ~2 minutes)
+./test-before-push.sh --full
+
+# Quick YAML check only (fastest, <1 second)
+./test-before-push.sh --quick
 ```
 
-**What this does:**
-- Builds the site to `_site/` directory
-- Starts web server at http://localhost:4000
-- Watches for file changes and auto-rebuilds
-- Shows build errors immediately in terminal
+**This is the same script that the pre-push hook runs automatically.**
 
-**Output example:**
-```
-Server address: http://127.0.0.1:4000/
-Server running... press ctrl-c to stop.
-```
+### Option 2: Run Individual Tests
 
-**Keep this running in one terminal** while you develop.
-
-### Step 2: Make Changes
-
-Edit files (portfolio works, pages, CSS, etc.) and save. Jekyll will automatically rebuild.
-
-**Watch the terminal** for build errors:
-```
-Regenerating: 1 file(s) changed at 2025-01-17 14:23:45
-              _portfolio/31-complete-template.md
-              ...done in 0.456 seconds.
-```
-
-### Step 3: Test YAML Syntax (Fast Check)
-
-**When to run:** Before committing, after editing any `.yml` files or front matter
-
+**YAML validation (very fast):**
 ```bash
 yamllint .
 ```
 
-**What it checks:**
-- YAML syntax in all `.yml` and `.yaml` files
-- Front matter in all markdown files
-- Configuration files (`_config.yml`)
-- GitHub Actions workflows
-
-**Success output:**
-```
-(no output = all good!)
+**Jekyll build:**
+```bash
+bundle exec jekyll build
 ```
 
-**Error example:**
-```
-_portfolio/31-complete-template.md
-  42:81     warning  line too long (151 > 150 characters)  (line-length)
-
-_config.yml
-  12:1      error    syntax error: expected <block end>, but found '<block mapping start>'
-```
-
-**How to fix:** See line numbers and fix indentation/syntax errors.
-
-### Step 4: Test HTML & Links
-
-**When to run:** Before committing, after adding/changing links or images
-
+**HTML validation:**
 ```bash
 bundle exec rake test
 ```
 
-**What it does:**
-1. Builds the site (`bundle exec jekyll build`)
-2. Scans `_site/` directory
-3. Validates:
-   - All internal links work
-   - All images exist
-   - HTML structure is valid
-   - JavaScript files load
-
-**Success output:**
-```
-Building Jekyll site...
-Testing with html-proofer...
-Running ["Links", "Images", "Scripts"] on ["./_site"]
-
-Ran on 15 files!
-✓ All tests passed!
+**Print tests:**
+```bash
+npm run test:print
+# PDFs saved to ./print-test-results/
 ```
 
-**Error example:**
-```
-- _site/works/foo/index.html
-  *  internally linking to /assets/image.jpg, which does not exist
-     (line 42)
-
-- _site/bio/index.html
-  *  image has no src or srcset attribute
-     (line 18)
+**Lighthouse CI (optional):**
+```bash
+npm run lighthouse
+# Reports saved to .lighthouseci/
 ```
 
-**Note:** This test **ignores external links** for speed. See next section for full testing.
-
-### Step 5: Test External Links (Slower)
-
-**When to run:** Periodically (weekly/monthly), before major releases
-
+**External links check (slow):**
 ```bash
 bundle exec rake test_external
 ```
 
-**What's different:**
-- Also checks external URLs (slower)
-- Caches results for 24 hours
-- Same validation as `rake test` but includes external sites
-
-**Takes longer:** 2-5 minutes depending on number of external links.
-
-**Error example:**
-```
-- _site/works/example/index.html
-  *  External link https://example.com/broken failed: 404 No error
-     (line 89)
-```
-
-### Step 6: Test Performance & Accessibility
-
-**When to run:** Before major releases, after design changes
-
-**Requirements:**
-- Chrome or Chromium installed
-- May not work in WSL (use GitHub Actions instead)
+### Development Workflow with Manual Testing
 
 ```bash
-npm run lighthouse
-```
+# 1. Start development server
+bundle exec jekyll serve
+# Keep this running in one terminal
 
-**What it does:**
-1. Starts local server
-2. Tests multiple pages (home, bio, events, contact, sample works)
-3. Runs 3 times per page (uses median score)
-4. Checks:
-   - Performance (speed, optimization)
-   - Accessibility (WCAG compliance)
-   - SEO (meta tags, structure)
-   - Best practices
+# 2. Make changes and preview at http://localhost:4000
 
-**Success output:**
-```
-✅  .lighthouseci/report-1.html for http://localhost/index.html
-✅  .lighthouseci/report-2.html for http://localhost/bio/index.html
-...
-Assertion results:
-  ✓  categories:performance ≥ 0.85
-  ✓  categories:accessibility ≥ 0.85
-  ✓  categories:seo ≥ 0.85
-```
+# 3. Run quick tests while developing
+yamllint .                    # Fast YAML check
+./test-before-push.sh --quick # Or use the script
 
-**Error example:**
-```
-✖  categories:accessibility
-   Expected: ≥ 0.85
-   Actual:   0.78
+# 4. Before committing, run full tests
+./test-before-push.sh
 
-   Issues found:
-   - Image elements do not have [alt] attributes (3 instances)
-   - Background and foreground colors do not have sufficient contrast ratio
-```
-
-**View detailed reports:**
-```bash
-# Open HTML reports in browser
-open .lighthouseci/report-*.html
-```
-
----
-
-## GitHub Actions Workflow
-
-This section covers everything that happens **automatically on GitHub**.
-
-### What Triggers GitHub Actions?
-
-#### 1. Push to Main Branch
-
-```bash
+# 5. If tests pass, commit and push
 git add .
-git commit -m "Add new portfolio work"
+git commit -m "message"
 git push origin main
+# Hooks will run tests again automatically
 ```
-
-**What happens on GitHub:**
-1. **Test workflow** (`.github/workflows/test.yml`) starts
-2. **Deploy workflow** (`.github/workflows/jekyll.yml`) starts
-3. Both run the full test suite
-4. If all tests pass → Deploy to GitHub Pages
-5. If any test fails → Deployment blocked
-
-#### 2. Create Pull Request
-
-```bash
-git checkout -b new-feature
-# ... make changes ...
-git push origin new-feature
-# Create PR via GitHub UI
-```
-
-**What happens on GitHub:**
-1. **Test workflow** runs automatically
-2. Tests must pass before PR can be merged
-3. **No deployment** (only testing)
-
-#### 3. Manual Trigger
-
-**Via GitHub UI:**
-1. Go to your repository on GitHub
-2. Click "Actions" tab
-3. Select workflow (Test or Deploy)
-4. Click "Run workflow" button
-5. Select branch and click "Run workflow"
-
-### Understanding the Workflows
-
-#### Test Workflow (`.github/workflows/test.yml`)
-
-**Purpose:** Validate code quality on every push/PR
-
-**Steps:**
-```
-1. Checkout code from repository
-2. Install yamllint → Lint YAML files
-3. Install Ruby & dependencies
-4. Build Jekyll site → Run html-proofer tests
-5. Install Node.js dependencies
-6. Run Lighthouse CI tests
-7. Upload Lighthouse reports as artifacts
-```
-
-**Duration:** ~3-5 minutes
-
-**When it runs:**
-- Every push to main
-- Every pull request
-
-**What it does NOT do:** Deploy the site
-
-#### Deploy Workflow (`.github/workflows/jekyll.yml`)
-
-**Purpose:** Build, test, and deploy to production
-
-**Steps:**
-```
-1. Checkout code
-2. Install yamllint → Lint YAML files
-3. Install Ruby & dependencies
-4. Setup GitHub Pages
-5. Build Jekyll site (production mode)
-6. Run html-proofer tests
-7. Install Node.js dependencies
-8. Run Lighthouse CI tests
-9. Upload Lighthouse reports
-10. Upload site artifact
-11. Deploy to GitHub Pages (only if all tests passed)
-```
-
-**Duration:** ~4-6 minutes
-
-**When it runs:**
-- Every push to main
-- Manual trigger
-
-**Critical:** Step 11 (Deploy) only runs if steps 1-10 succeed.
-
-### Viewing Test Results on GitHub
-
-#### 1. Check Workflow Status
-
-**Via GitHub UI:**
-1. Go to your repository
-2. Click "Actions" tab
-3. See list of recent workflow runs
-4. Green checkmark = passed
-5. Red X = failed
-6. Yellow circle = running
-
-**Via commit:**
-1. Go to "Commits" page
-2. Each commit shows status icon
-3. Click icon to see workflow details
-
-#### 2. View Workflow Logs
-
-**Steps:**
-1. Click on a workflow run
-2. Click on job name ("test" or "build")
-3. Expand steps to see detailed logs
-4. Failed steps are highlighted in red
-
-**Example of viewing yamllint errors:**
-```
-Run yamllint .
-_portfolio/31-complete-template.md
-  42:81     warning  line too long (151 > 150 characters)  (line-length)
-Error: Process completed with exit code 1.
-```
-
-#### 3. Download Lighthouse Reports
-
-**Steps:**
-1. Go to failed/completed workflow run
-2. Scroll to bottom "Artifacts" section
-3. Download `lighthouse-results` (test workflow) or `lighthouse-deployment-results` (deploy workflow)
-4. Extract ZIP file
-5. Open `report-*.html` files in browser
-
-**Reports show:**
-- Detailed performance metrics
-- Accessibility violations with screenshots
-- SEO issues with recommendations
-- Best practice violations
-
-### What Happens When Tests Fail?
-
-#### Scenario: yamllint Fails
-
-**Error in workflow:**
-```
-Run yamllint .
-_config.yml
-  12:1      error    syntax error: expected <block end>
-Error: Process completed with exit code 1.
-```
-
-**What happens:**
-- Workflow stops immediately
-- No deployment happens
-- You get email notification (if enabled)
-- PR shows "Some checks were not successful"
-
-**How to fix:**
-1. Fix YAML syntax in `_config.yml` line 12
-2. Test locally: `yamllint .`
-3. Commit and push fix
-4. Workflow runs again automatically
-
-#### Scenario: html-proofer Fails
-
-**Error in workflow:**
-```
-Run bundle exec rake test
-- _site/works/foo/index.html
-  *  internally linking to /assets/missing.jpg, which does not exist
-✗ Tests failed
-Error: Process completed with exit code 1.
-```
-
-**What happens:**
-- Workflow stops at testing step
-- No deployment
-- Site remains at previous version
-
-**How to fix:**
-1. Add missing image or fix link
-2. Test locally: `bundle exec rake test`
-3. Commit and push fix
-4. Workflow runs again
-
-#### Scenario: Lighthouse Fails
-
-**Error in workflow:**
-```
-Run npm run lighthouse
-✖  categories:accessibility
-   Expected: ≥ 0.85
-   Actual:   0.78
-Error: Process completed with exit code 1.
-```
-
-**What happens:**
-- Workflow fails at Lighthouse step
-- No deployment
-- Artifacts still uploaded (can download reports)
-
-**How to fix:**
-1. Download Lighthouse reports from workflow artifacts
-2. Review detailed issues in HTML reports
-3. Fix accessibility issues
-4. Test locally: `npm run lighthouse`
-5. Commit and push fix
-6. Workflow runs again
 
 ---
 
@@ -568,446 +333,291 @@ Error: Process completed with exit code 1.
 
 ### How Deployment Works
 
-**Trigger:** Push to main branch
-
-**Process:**
 ```
-1. Code pushed to main
-   ↓
-2. GitHub Actions starts deploy workflow
-   ↓
-3. Tests run (yamllint → html-proofer → Lighthouse)
-   ↓
-4. IF all tests pass:
-   - Build site artifact uploaded
-   - Deploy job starts
-   - Site deployed to GitHub Pages
-   - Available at www.j3zz.com
-   ↓
-5. IF any test fails:
-   - Workflow stops
-   - No deployment
-   - Site remains at previous version
+┌─────────────────────────────────────────────────────────┐
+│  Step 1: Local Testing (You)                            │
+├─────────────────────────────────────────────────────────┤
+│  • Make changes                                         │
+│  • Lefthook runs tests on git push                      │
+│  • Tests pass → push succeeds                           │
+│  • Tests fail → push blocked                            │
+└────────────────┬────────────────────────────────────────┘
+                 │
+                 │ git push origin main
+                 ▼
+┌─────────────────────────────────────────────────────────┐
+│  Step 2: GitHub Actions Build                           │
+├─────────────────────────────────────────────────────────┤
+│  • Checks out code                                      │
+│  • Sets up Ruby                                         │
+│  • Runs: bundle exec jekyll build                       │
+│  • NO TESTING - Just builds                             │
+└────────────────┬────────────────────────────────────────┘
+                 │
+                 │ Build artifact
+                 ▼
+┌─────────────────────────────────────────────────────────┐
+│  Step 3: GitHub Pages Deployment                        │
+├─────────────────────────────────────────────────────────┤
+│  • Deploys to www.j3zz.com                              │
+│  • Site live in ~30-60 seconds                          │
+└─────────────────────────────────────────────────────────┘
 ```
 
-**Deployment target:** GitHub Pages
-**Live URL:** https://www.j3zz.com
-**DNS:** Configured via `CNAME` file
+### Typical Deployment Timeline
 
-### Deployment Timeline
+**Local testing (Lefthook):** ~30-60 seconds
+- YAML validation: <1 second
+- Jekyll build: ~5-10 seconds
+- HTML proofer: ~20-30 seconds
+- Print tests: ~10-20 seconds
 
-**From push to live:**
-- Tests: ~4-6 minutes
-- Deployment: ~1-2 minutes
-- DNS propagation: ~5-10 minutes (first time only)
+**GitHub Actions:** ~1-2 minutes
+- Checkout & setup: ~20 seconds
+- Bundle install: ~30 seconds
+- Jekyll build: ~10 seconds
+- Upload & deploy: ~30 seconds
 
-**Total time:** Usually 5-8 minutes from push to visible on live site
+**Total time from push to live:** ~2-3 minutes
 
-### Viewing Deployment Status
+**Old system (with CI testing):** ~5-10 minutes
 
-**Via GitHub:**
-1. Go to "Actions" tab
-2. Click on latest workflow run
-3. See "build" and "deploy" jobs
-4. Deploy job shows deployment URL
+### Watching Deployment
 
-**Via GitHub Pages settings:**
-1. Go to repository Settings
-2. Click "Pages" in sidebar
-3. See "Your site is live at https://www.j3zz.com"
-4. Shows last deployment time
-
-### Manual Deployment
-
-**When needed:** Redeploy without code changes
-
-**Steps:**
-1. Go to repository on GitHub
+**View GitHub Actions progress:**
+1. Go to your repository on GitHub
 2. Click "Actions" tab
-3. Select "Deploy Jekyll site to Pages"
-4. Click "Run workflow" button
-5. Select "main" branch
-6. Click "Run workflow"
+3. Click on the latest workflow run
+4. Watch build and deploy steps
 
-**Use cases:**
-- Test deployment process
-- Force rebuild after GitHub Pages incident
-- Redeploy after GitHub settings change
+**Success indicators:**
+- ✅ Green checkmark on workflow
+- ✅ Commit shows green checkmark on main branch
+- ✅ Site updated at www.j3zz.com
+
+### What If Build Fails?
+
+**Rare, but possible if:**
+- Production environment differs from local
+- Dependencies changed
+- GitHub Pages infrastructure issue
+
+**Check the logs:**
+1. Go to Actions tab
+2. Click failed workflow
+3. Click "build" job
+4. Expand "Build with Jekyll" step
+5. Read error messages
+
+**Common fixes:**
+- Update `Gemfile.lock`: `bundle update github-pages`
+- Check Jekyll version compatibility
+- Verify `_config.yml` is valid
 
 ---
 
 ## Troubleshooting
 
-### Local Issues
+### "Hooks didn't run when I pushed"
 
-#### Issue: Jekyll won't start
-
-**Error:**
-```
-Could not find gem 'jekyll' in locally installed gems
-```
-
-**Solution:**
+**Check if hooks are installed:**
 ```bash
-bundle install
-bundle exec jekyll serve
+ls -la .git/hooks/
+# Should see: pre-commit, pre-push
 ```
 
-#### Issue: yamllint not found
-
-**Error:**
-```
-bash: yamllint: command not found
-```
-
-**Solution:**
+**Reinstall hooks:**
 ```bash
-pip install yamllint
-# or
-pip3 install yamllint
-# or on some systems:
-sudo apt install yamllint
+npx lefthook install
 ```
 
-#### Issue: Lighthouse fails locally
-
-**Error:**
+**Check Lefthook config:**
+```bash
+cat lefthook.yml
+# Should have pre-commit and pre-push sections
 ```
-Error: no chrome installations found
+
+### "Tests pass locally but I want to skip hooks"
+
+**You shouldn't need to**, but if you must:
+```bash
+LEFTHOOK=0 git push
 ```
 
-**Solution:**
-- Install Chrome or Chromium
-- On WSL: May not work, use GitHub Actions instead
-- Skip local Lighthouse, rely on GitHub Actions
+**Better approach:**
+```bash
+# Run tests manually first
+./test-before-push.sh
 
-#### Issue: Tests pass locally but fail on GitHub
+# If all pass, push normally (hooks will run again but pass quickly)
+git push origin main
+```
+
+### "YAML validation is too strict"
+
+**Adjust rules in `.yamllint`:**
+```yaml
+rules:
+  line-length:
+    max: 200  # Increase if needed
+    level: warning  # Change to warning instead of error
+```
+
+### "Tests are too slow"
+
+**Default tests (without --full) should be fast:**
+- YAML: <1 second
+- Build: ~5-10 seconds
+- HTML: ~20-30 seconds
+- Print: ~10-20 seconds
+- **Total: ~30-60 seconds**
+
+**If slower:**
+- Check disk space
+- Clear build cache: `bundle exec jekyll clean`
+- Check for large image files
+
+**Lighthouse is intentionally optional** (use --full flag only before releases)
+
+### "Print tests fail in WSL"
+
+**Expected!** Chrome may not be available in WSL.
+
+**The script handles this gracefully:**
+```
+⚠ Print tests skipped - Chrome not available in this environment
+This is expected in WSL/headless environments.
+```
+
+**This is OK** - print tests validate QR codes and layouts, not critical for every push.
+
+**To test print layouts:**
+1. Run on a machine with Chrome installed, or
+2. Test manually by printing pages in your browser
+
+### "GitHub Actions deployment failed"
+
+**Check the logs:**
+1. Actions tab → Failed workflow → build job → logs
 
 **Common causes:**
-- Different file paths (case sensitivity)
-- Missing files not committed to git
-- External links work locally but not from GitHub servers
-- Different Ruby/Node versions
+- GitHub Pages outage (rare)
+- Invalid `CNAME` file
+- `_config.yml` has production-only setting that breaks build
 
-**Solution:**
+**Quick fix:**
 ```bash
-# Check what files are actually committed
-git status
-git ls-files
+# Test production build locally
+JEKYLL_ENV=production bundle exec jekyll build
 
-# Ensure all files are tracked
-git add .
-git status
+# If it fails locally, fix the issue
+# If it builds locally but fails on GitHub, check GitHub status
 ```
 
-### GitHub Actions Issues
+### "Want to test before major release"
 
-#### Issue: Workflow doesn't start
-
-**Possible causes:**
-- Workflow file has syntax errors
-- Workflow disabled in repository settings
-
-**Solution:**
-1. Check `.github/workflows/*.yml` syntax
-2. Go to Settings → Actions → General
-3. Ensure Actions are enabled
-4. Check workflow-specific enable/disable settings
-
-#### Issue: Workflow stuck "Queued"
-
-**Possible causes:**
-- GitHub Actions outage
-- Concurrent workflow limit reached
-
-**Solution:**
-1. Check https://www.githubstatus.com
-2. Wait a few minutes
-3. Cancel and restart workflow
-
-#### Issue: Permission denied on deployment
-
-**Error:**
-```
-Error: Resource not accessible by integration
-```
-
-**Solution:**
-1. Go to Settings → Actions → General
-2. Scroll to "Workflow permissions"
-3. Ensure "Read and write permissions" is selected
-4. Check "Allow GitHub Actions to create and approve pull requests"
-5. Save
-
-#### Issue: Cannot view Lighthouse reports
-
-**Error:**
-```
-No artifacts found
-```
-
-**Cause:** Lighthouse step failed or was skipped
-
-**Solution:**
-1. Check workflow logs for Lighthouse step
-2. Ensure `if: always()` is set on upload step (already configured)
-3. Artifacts only kept for 30 days
-
-### Deployment Issues
-
-#### Issue: Site shows old content
-
-**Possible causes:**
-- Browser cache
-- DNS cache
-- Deployment in progress
-
-**Solution:**
+**Run full test suite including Lighthouse:**
 ```bash
-# Force refresh in browser
-Ctrl + Shift + R (Windows/Linux)
-Cmd + Shift + R (Mac)
-
-# Clear browser cache
-# Or use incognito/private window
-
-# Check deployment status on GitHub Actions
+./test-before-push.sh --full
 ```
 
-#### Issue: 404 errors on live site
+**Review reports:**
+```bash
+# Open Lighthouse reports
+open .lighthouseci/*.html
 
-**Possible causes:**
-- Broken links in site
-- Incorrect permalink configuration
-- Missing files
-
-**Solution:**
-1. Check html-proofer results
-2. Run `bundle exec rake test` locally
-3. Check `_config.yml` baseurl setting
-4. Verify files exist in `_site/` directory locally
-
-#### Issue: Custom domain not working
-
-**Possible causes:**
-- CNAME file missing/incorrect
-- DNS not configured
-- GitHub Pages not enabled
-
-**Solution:**
-1. Verify `CNAME` file contains: `www.j3zz.com`
-2. Check DNS settings at domain registrar
-3. Go to Settings → Pages → Custom domain
-4. Re-enter custom domain and save
+# Check print PDFs
+open print-test-results/*.pdf
+```
 
 ---
 
 ## Quick Reference
 
-### Recommended: Pre-Push Script
+### Common Commands
 
 ```bash
-# ⭐ EASIEST WAY - Run automated test script
-./test-before-push.sh              # All tests (fast - no Lighthouse)
-./test-before-push.sh --full       # All tests including Lighthouse
-./test-before-push.sh --quick      # Only YAML validation
-./test-before-push.sh --help       # Show usage
+# Development
+bundle exec jekyll serve          # Start local server
+bundle exec jekyll build          # Build site
 
-# If tests pass, then push:
-git add .
-git commit -m "Your message"
-git push origin main
-```
+# Testing (automatic via hooks)
+git commit -m "message"           # Triggers YAML validation
+git push origin main              # Triggers full test suite
 
-### Essential Local Commands
+# Testing (manual)
+./test-before-push.sh             # All tests (fast)
+./test-before-push.sh --full      # All tests + Lighthouse
+./test-before-push.sh --quick     # YAML only
 
-```bash
-# Start development server
-bundle exec jekyll serve
+# Individual tests
+yamllint .                        # YAML validation
+bundle exec rake test             # HTML + links
+npm run test:print                # Print layouts
+npm run lighthouse                # Performance/a11y
 
-# Fast YAML check
-yamllint .
-
-# Test HTML & links (fast - internal only)
-bundle exec rake test
-
-# Test including external links (slow)
-bundle exec rake test_external
-
-# Test performance & accessibility
-npm run lighthouse
-
-# Run all tests
-npm run test:all
-
-# Just build (no testing)
-bundle exec jekyll build
-
-# Clean build directory
-bundle exec rake clean
+# Hooks
+npx lefthook install              # Install hooks
+npx lefthook run pre-commit       # Test pre-commit hook
+npx lefthook run pre-push         # Test pre-push hook
+LEFTHOOK=0 git push               # Skip hooks (caution!)
 ```
 
 ### Pre-Commit Checklist
 
-**Option 1: Using Script (Recommended)**
-```bash
-# 1. Run test script
-./test-before-push.sh
+Before pushing changes:
 
-# 2. Fix any errors, run again
+- [ ] Tests ran automatically via pre-push hook (or manually via `./test-before-push.sh`)
+- [ ] All tests passed (YAML, build, HTML, print)
+- [ ] Previewed changes locally at http://localhost:4000
+- [ ] Checked for console errors in browser
+- [ ] (Optional) Ran Lighthouse for major changes (`--full` flag)
+- [ ] Committed with clear, descriptive message
+- [ ] Pushed to main branch
+- [ ] Verified deployment on www.j3zz.com after push
 
-# 3. When all tests pass, commit
-git add .
-git commit -m "Your message"
-git push origin main
-```
+### When to Run Full Tests
 
-**Option 2: Manual Testing**
-```bash
-# 1. Run fast checks
-yamllint .
+**Quick tests (default, via hooks):**
+- Every commit and push (automatic)
+- During development
+- Small changes
 
-# 2. Test site
-bundle exec rake test
+**Full tests (with `--full` flag):**
+- Before major releases
+- After significant design changes
+- After changing CSS/JavaScript
+- Monthly/quarterly quality checks
 
-# 3. If all looks good, commit
-git add .
-git commit -m "Your message"
-git push origin main
-```
-
-### Common Git + Testing Workflow
-
-**With Script (Easiest):**
-```bash
-# 1. Make changes
-vim _portfolio/31-work.md
-
-# 2. Run test script
-./test-before-push.sh
-
-# 3. Fix errors if any, run again
-
-# 4. When tests pass, commit and push
-git add _portfolio/31-work.md
-git commit -m "Add new portfolio work"
-git push origin main
-```
-
-**Manual (Alternative):**
-```bash
-# 1. Make changes
-vim _portfolio/31-work.md
-
-# 2. Quick syntax check
-yamllint _portfolio/31-work.md
-
-# 3. Test locally
-bundle exec jekyll serve
-# View at http://localhost:4000
-
-# 4. Run tests
-bundle exec rake test
-
-# 5. Commit if tests pass
-git add _portfolio/31-work.md
-git commit -m "Add new portfolio work"
-git push origin main
-```
-
-**What happens next:**
-```
-GitHub Actions will now:
-1. Run all tests automatically
-2. Deploy if tests pass
-3. Block deployment if tests fail
-```
-
-### Viewing Test Results
-
-**Local:**
-- Terminal shows all output immediately
-- Lighthouse reports: `.lighthouseci/*.html`
-
-**GitHub:**
-- Actions tab → Click workflow run
-- Expand steps to see logs
-- Download artifacts for Lighthouse reports
-
-### File Locations
+### Test Output Locations
 
 ```
-Configuration files:
-├── .yamllint              # YAML linting rules
-├── Rakefile               # html-proofer configuration
-├── lighthouserc.json      # Lighthouse CI configuration
-├── _config.yml            # Jekyll configuration
-└── .github/workflows/
-    ├── test.yml           # Test workflow (PRs + pushes)
-    └── jekyll.yml         # Build + deploy workflow
-
-Test outputs:
-├── _site/                 # Built site (tested by html-proofer)
-└── .lighthouseci/         # Lighthouse reports (HTML files)
+.lighthouseci/          # Lighthouse HTML reports
+print-test-results/     # Print test PDFs
+_site/                  # Built Jekyll site
+.bundle/                # Ruby gems cache
+node_modules/           # Node.js packages
+vendor/                 # Bundler packages
 ```
 
 ### Getting Help
 
 **Test failures:**
-- Read error messages carefully
-- Check line numbers in files
-- Run tests locally to reproduce
-- View detailed docs: `docs/testing.md`
+1. Read the error message carefully
+2. Check line numbers and file paths
+3. See [Testing](testing.md) for detailed troubleshooting
 
-**Workflow issues:**
-- Check workflow logs on GitHub
-- Look for red X steps
-- Download artifacts for reports
-- Check GitHub Status: https://www.githubstatus.com
+**Deployment issues:**
+1. Check Actions tab on GitHub
+2. Review build logs
+3. Test production build locally: `JEKYLL_ENV=production bundle exec jekyll build`
 
-**Configuration questions:**
-- See `docs/architecture.md` for site structure
-- See `docs/content-management.md` for front matter
-- See `CLAUDE.md` for project overview
+**Hook issues:**
+1. Verify hooks installed: `ls -la .git/hooks/`
+2. Reinstall: `npx lefthook install`
+3. Check config: `cat lefthook.yml`
 
----
-
-## Summary
-
-### Local Development (Your Computer)
-
-**You control:** When tests run
-**Purpose:** Fast feedback while coding
-**Commands:**
-- `yamllint .` - Check YAML syntax
-- `bundle exec rake test` - Test HTML/links
-- `npm run lighthouse` - Test performance
-
-**When to use:**
-- Before every commit
-- While developing
-- For rapid feedback
-
-### GitHub Actions (Cloud)
-
-**Automatic:** Runs on every push/PR
-**Purpose:** Quality gate before deployment
-**Process:**
-- Runs full test suite automatically
-- Blocks deployment if tests fail
-- Deploys only if all tests pass
-
-**When it runs:**
-- Every push to main → Full tests + deploy
-- Every pull request → Full tests only
-- Manual trigger → Full tests + deploy
-
-### Key Principle
-
-**Test locally first** → **Push to GitHub** → **Let automation handle the rest**
-
-If local tests pass, GitHub tests should pass too. If they don't, something is missing from git or there's an environment difference.
-
----
-
-**Happy testing and deploying!**
+**General questions:**
+- See [CLAUDE.md](../CLAUDE.md) for project overview
+- See [Testing](testing.md) for detailed test configuration
+- Check GitHub Actions logs for deployment details

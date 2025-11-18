@@ -31,11 +31,21 @@ Generates the static site in the `_site/` directory.
 
 ### Run Tests
 
-**Easiest way - Automated script:**
+**⚠️ IMPORTANT: All testing happens LOCALLY. GitHub Actions only builds and deploys - it does NOT run tests!**
+
+**Easiest way - Just commit and push (tests run automatically):**
+```bash
+git add .
+git commit -m "Your message"
+git push origin main
+```
+The pre-push hook automatically runs `./test-before-push.sh` for you. No need to run it manually.
+
+**Optional - Manual testing during development:**
 ```bash
 ./test-before-push.sh
 ```
-Runs all tests automatically (YAML lint, build, HTML validation, print tests). Fix errors, then commit and push.
+Run this if you want to catch errors early while developing, before committing. The pre-push hook will run the same tests again automatically when you push.
 
 **Individual test commands:**
 ```bash
@@ -51,14 +61,14 @@ Runs automated tests (html-proofer) to validate links, images, and HTML structur
 ```bash
 npm run lighthouse
 ```
-Runs Lighthouse CI for performance, accessibility, and SEO validation (requires Chrome/Chromium).
+Runs Lighthouse CI for performance, accessibility, and SEO validation (requires Chrome/Chromium). Optional but recommended for major releases.
 
 ```bash
 npm run test:print
 ```
 Runs print tests to validate QR codes, print layouts, and A4 formatting (requires Chrome/Chromium).
 
-**Note**: All tests run automatically in GitHub Actions on every push/PR. Print tests may skip locally in WSL but will run in CI.
+**Note**: Print tests may skip locally in WSL due to Chrome availability, but the pre-push hook handles this gracefully.
 
 ### Install/Update Dependencies
 ```bash
@@ -78,7 +88,9 @@ Updates GitHub Pages and all associated Jekyll dependencies.
 
 ### Git Hooks (Lefthook)
 
-This project uses [Lefthook](https://github.com/evilmartians/lefthook) to automatically run tests before commits and pushes.
+This project uses [Lefthook](https://github.com/evilmartians/lefthook) to **enforce local testing** before commits and pushes.
+
+**⚠️ CRITICAL: These hooks are your ONLY safety net!** GitHub Actions does NOT run tests.
 
 **Setup (first time only):**
 ```bash
@@ -86,16 +98,23 @@ npm install
 npx lefthook install
 ```
 
-**What runs automatically:**
-- **Pre-commit**: YAML linting on staged files (fast)
-- **Pre-push**: Full test suite (`./test-before-push.sh`)
+**What runs automatically and BLOCKS commits/pushes if tests fail:**
+- **Pre-commit**: YAML linting on **staged files only** (fast check, <1 sec, blocks commit if YAML is invalid)
+- **Pre-push**: Full test suite via `./test-before-push.sh` on **ALL files** (complete validation, ~30-60 sec, blocks push if any test fails)
 
-**Skip hooks when needed:**
+**Note:** The pre-push hook runs the SAME tests as `./test-before-push.sh` - you don't need to run the script manually unless you want to catch errors early during development.
+
+**Skipping hooks (use with EXTREME caution):**
 ```bash
-LEFTHOOK=0 git commit -m "skip hooks"
+LEFTHOOK=0 git push
 # or
-git commit --no-verify -m "skip hooks"
+git push --no-verify
 ```
+
+**⚠️ WARNING**: Skipping hooks means deploying untested code. Only skip if:
+- You already ran `./test-before-push.sh` manually and all tests passed
+- You're pushing non-code changes (documentation only)
+- You know exactly what you're doing
 
 **Manual hook testing:**
 ```bash
@@ -105,9 +124,27 @@ npx lefthook run pre-push
 
 Configuration is in `lefthook.yml`.
 
+## Workflow
+
+**New to the project?** See [Development Workflow](docs/WORKFLOW.md) for complete step-by-step instructions from making changes to deployment with all necessary commands.
+
+**Quick workflow:**
+1. Make changes → 2. Preview locally → 3. Commit → 4. Push → 5. Auto-deploy
+
 ## Documentation Structure
 
 This project's documentation is organized into topic-specific files for better performance and maintainability:
+
+### 🚀 [Development Workflow](docs/WORKFLOW.md)
+**⭐ START HERE** - Complete workflow from making changes to deployment.
+
+**Read this for:**
+- Step-by-step workflow with all commands
+- Standard workflow (automatic testing with Lefthook)
+- Manual testing workflow
+- Workflow diagrams and timelines
+- Common scenarios and troubleshooting
+- Quick command reference
 
 ### 📐 [Architecture](docs/architecture.md)
 Site structure, navigation system, portfolio configuration, styling, print functionality, and deployment details.
@@ -254,15 +291,23 @@ Reference these portfolio works for implementation examples:
 
 ## Testing & Quality Assurance
 
-The site includes comprehensive automated testing:
+**⚠️ CRITICAL: All testing happens LOCALLY. GitHub Actions does NOT run tests!**
 
-**Tests run automatically on every push/PR via GitHub Actions:**
-- ✅ **yamllint** - Validates YAML syntax and formatting
-- ✅ **html-proofer** - Validates HTML, links, images
-- ✅ **Lighthouse CI** - Tests performance, accessibility, SEO
-- ✅ **Print tests** - Validates print layouts, QR codes, A4 formatting
+The site includes comprehensive automated testing that runs **on your machine before pushing**:
 
-**Deployment is blocked if tests fail**, ensuring only working code goes live.
+**Tests enforced by Lefthook git hooks:**
+- ✅ **yamllint** - Validates YAML syntax and formatting (blocks commits)
+- ✅ **Jekyll build** - Ensures site builds successfully (blocks pushes)
+- ✅ **html-proofer** - Validates HTML, links, images (blocks pushes)
+- ✅ **Print tests** - Validates print layouts, QR codes, A4 formatting (blocks pushes)
+- ⚠️ **Lighthouse CI** - Tests performance, accessibility, SEO (optional, run with `--full` flag)
+
+**Required workflow:**
+1. Make your changes
+2. Run `./test-before-push.sh` (or let Lefthook run it automatically on `git push`)
+3. Fix any errors
+4. Repeat until all tests pass
+5. Commit and push (hooks will block if tests fail)
 
 **Getting started:**
 - **New to testing?** See [Testing & Deployment Tutorial](docs/TUTORIAL-testing-deployment.md) for step-by-step guidance
@@ -273,13 +318,12 @@ The site includes comprehensive automated testing:
 Site deploys automatically to GitHub Pages when pushed to the `main` branch. Custom domain www.j3zz.com is configured via `CNAME` file.
 
 **Deployment workflow:**
-1. Push to `main` branch
-2. GitHub Actions validates YAML files with yamllint
-3. Builds the site with Jekyll
-4. Runs html-proofer tests
-5. Runs Lighthouse CI audits
-6. If all tests pass → deploys to GitHub Pages
-7. If any test fails → deployment blocked
+1. Run tests locally (`./test-before-push.sh` or automatic via Lefthook)
+2. All tests pass → push to `main` branch
+3. GitHub Actions builds the site with Jekyll
+4. Deploys to GitHub Pages immediately
+
+**⚠️ Important**: GitHub Actions does NOT run tests - it only builds and deploys. Your local Lefthook hooks are the ONLY quality gate.
 
 **Note**: This site uses the `github-pages` gem for compatibility with GitHub Pages infrastructure.
 

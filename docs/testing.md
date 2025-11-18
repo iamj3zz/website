@@ -2,11 +2,13 @@
 
 This document explains the automated testing system for the website to prevent breaking changes.
 
-**Looking for a step-by-step tutorial?** See [Testing & Deployment Tutorial](TUTORIAL-testing-deployment.md) for practical, hands-on guidance with examples that clearly separates local testing from GitHub automation.
+**⚠️ CRITICAL: All testing happens LOCALLY. GitHub Actions does NOT run tests - it only builds and deploys!**
+
+**Looking for a step-by-step tutorial?** See [Testing & Deployment Tutorial](TUTORIAL-testing-deployment.md) for practical, hands-on guidance with examples.
 
 ## Overview
 
-The site uses a comprehensive testing suite to ensure quality:
+The site uses a comprehensive testing suite that runs **on your local machine before pushing**. Your Lefthook git hooks automatically enforce these tests:
 
 ### **yamllint** validates:
 - ✓ YAML syntax and structure
@@ -121,51 +123,57 @@ bundle exec rake clean
 bundle exec rake
 ```
 
-## Continuous Integration (CI)
+## Automated Testing with Lefthook
 
-Tests run automatically on:
-- **Every push to main** - via GitHub Actions
-- **Every pull request** - prevents merging broken code
-- **Before deployment** - ensures only working sites go live
+**⚠️ IMPORTANT**: This project uses Lefthook git hooks to enforce ALL tests locally. GitHub Actions does NOT run tests.
 
-### GitHub Actions Workflows
+### Git Hooks (Automatic Enforcement)
 
-Both workflows run the complete test suite:
+**Pre-commit hook** (runs when you `git commit`):
+- Validates YAML syntax in staged files
+- **Blocks the commit** if YAML validation fails
 
-1. **`.github/workflows/test.yml`** - Test workflow for PRs and pushes
-   - Lints all YAML files with yamllint
-   - Builds Jekyll site
-   - Runs html-proofer (links, images, HTML validation)
-   - Runs Lighthouse CI (performance, accessibility, SEO)
-   - Runs print tests (QR codes, print layouts, PDF generation)
-   - Uploads Lighthouse reports and print test PDFs as artifacts
+**Pre-push hook** (runs when you `git push`):
+- Runs complete test suite via `./test-before-push.sh`
+- **Blocks the push** if any test fails
 
-2. **`.github/workflows/jekyll.yml`** - Build and deployment workflow
-   - Lints all YAML files with yamllint
-   - Builds Jekyll site for production
-   - Runs html-proofer
-   - Runs Lighthouse CI
-   - Runs print tests
-   - Uploads Lighthouse reports and print test PDFs
-   - Deploys to GitHub Pages (only if all tests pass)
+### How It Works
 
-**If any test fails, deployment is automatically blocked.**
+1. Make your changes
+2. Run `git commit` - pre-commit hook validates YAML
+3. Run `git push` - pre-push hook runs ALL tests automatically
+4. If tests pass → push succeeds → GitHub deploys
+5. If tests fail → push is blocked → fix errors and try again
 
-### Viewing Test Reports
+**Skip hooks (use with extreme caution)**:
+```bash
+LEFTHOOK=0 git push
+# or
+git push --no-verify
+```
 
-After each CI run:
+**⚠️ WARNING**: Skipping hooks bypasses ALL testing. Only skip if you've already run `./test-before-push.sh` manually and all tests passed.
 
-**Lighthouse Reports:**
-1. Go to the GitHub Actions run
-2. Scroll to "Artifacts" section
-3. Download `lighthouse-results` or `lighthouse-deployment-results`
-4. Open the HTML reports locally to see detailed scores and recommendations
+## GitHub Actions Workflow
 
-**Print Test PDFs:**
-1. Go to the GitHub Actions run
-2. Scroll to "Artifacts" section
-3. Download `print-test-results` or `print-test-deployment-results`
-4. Open the PDFs to visually inspect print layouts, QR codes, and A4 formatting
+**`.github/workflows/jekyll.yml`** - Build and deployment ONLY:
+- Checks out code
+- Sets up Ruby
+- Installs dependencies
+- Builds Jekyll site with `bundle exec jekyll build`
+- Deploys to GitHub Pages
+
+**That's it!** No tests run in GitHub Actions. All quality gates are enforced locally via Lefthook.
+
+### Viewing Local Test Results
+
+**Lighthouse Reports**:
+- Generated in `.lighthouseci/` directory
+- Open the HTML files to see detailed performance, accessibility, and SEO scores
+
+**Print Test PDFs**:
+- Generated in `./print-test-results/` directory
+- Open the PDFs to visually inspect print layouts and QR codes
 
 ## Common Issues and Solutions
 
@@ -437,33 +445,48 @@ const CONFIG = {
 
 ## Best Practices
 
-1. **Run YAML linting before committing**
+1. **Let Lefthook handle testing automatically (recommended)**
+   - Just commit and push normally
+   - Pre-commit hook: Quick YAML check on staged files
+   - Pre-push hook: Complete test suite via `./test-before-push.sh` (automatic)
+   - No need to run `./test-before-push.sh` manually
+
+2. **Run tests manually during development (optional)**
+   ```bash
+   ./test-before-push.sh
+   ```
+   Run this while developing to catch issues early, before committing. The pre-push hook will run the same tests again automatically when you push (but will pass quickly since you already fixed everything).
+
+3. **Quick YAML check during editing**
    ```bash
    yamllint .
    ```
-   Fast check for YAML syntax errors in config files and workflows.
+   Fast check for YAML syntax errors in config files and front matter.
 
-2. **Run tests before committing**
-   ```bash
-   bundle exec rake test
-   ```
+4. **Fix issues immediately** - Don't accumulate broken links or test failures
 
-3. **Fix issues immediately** - Don't accumulate broken links
-
-4. **Check external links periodically**
+5. **Check external links periodically**
    ```bash
    bundle exec rake test_external
    ```
-
-5. **Review CI failures** - If GitHub Actions fails, check the logs for details
 
 6. **Test print layouts after CSS changes**
    ```bash
    npm run test:print
    ```
-   Review generated PDFs to ensure print styles work correctly.
+   Review generated PDFs in `./print-test-results/` to ensure print styles work correctly.
 
-7. **Template/Example works** - May intentionally have broken links for demonstration purposes. Add them to `ignore_urls` in Rakefile if needed.
+7. **Run full Lighthouse tests before major releases**
+   ```bash
+   ./test-before-push.sh --full
+   ```
+   Includes performance, accessibility, and SEO validation.
+
+8. **Never skip hooks unless absolutely necessary**
+   - Skipping hooks = deploying untested code
+   - Only skip if you've already run `./test-before-push.sh` successfully
+
+9. **Template/Example works** - May intentionally have broken links for demonstration purposes. Add them to `ignore_urls` in Rakefile if needed.
 
 ## Ignoring Specific Issues
 
@@ -494,14 +517,16 @@ If you need even more comprehensive testing, consider:
   - Useful when CSS/design is finalized
   - Catches layout bugs automatically
 
-Current testing suite (yamllint + html-proofer + Lighthouse CI + print tests) covers:
-- ✅ YAML configuration validation
-- ✅ Links and HTML validation
-- ✅ Performance optimization
-- ✅ Basic accessibility (WCAG subset)
-- ✅ SEO best practices
-- ✅ Print layout validation
-- ✅ QR code rendering
-- ✅ General web quality
+Current testing suite (yamllint + html-proofer + Lighthouse CI + print tests) enforced locally covers:
+- ✅ YAML configuration validation (pre-commit hook)
+- ✅ Jekyll build validation (pre-push hook)
+- ✅ Links and HTML validation (pre-push hook)
+- ✅ Print layout validation (pre-push hook)
+- ✅ QR code rendering (pre-push hook)
+- ⚠️ Performance optimization (optional with --full flag)
+- ⚠️ Accessibility validation (optional with --full flag)
+- ⚠️ SEO best practices (optional with --full flag)
+
+**All critical tests run automatically via Lefthook hooks before you can push!**
 
 This is comprehensive for most portfolio websites!
