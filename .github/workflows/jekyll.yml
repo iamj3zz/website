@@ -21,12 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install yamllint
-        run: pip install yamllint
-
-      - name: Lint YAML files
-        run: yamllint .
-
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -45,42 +39,6 @@ jobs:
         run: bundle exec jekyll build --baseurl ""
         env:
           JEKYLL_ENV: production
-
-      - name: Test with html-proofer
-        run: bundle exec rake test
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install Node.js dependencies
-        run: npm ci
-
-      - name: Run Lighthouse CI
-        run: npm run lighthouse
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
-
-      - name: Upload Lighthouse results
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: lighthouse-deployment-results
-          path: .lighthouseci/
-          retention-days: 30
-
-      - name: Run Print Tests
-        run: npm run test:print
-
-      - name: Upload Print Test PDFs
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: print-test-deployment-results
-          path: print-test-results/
-          retention-days: 30
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

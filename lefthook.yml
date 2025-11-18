@@ -1,8 +1,13 @@
 # Lefthook Configuration
 # Fast and powerful Git hooks manager
 # https://github.com/evilmartians/lefthook
+#
+# IMPORTANT: This project relies on LOCAL TESTING ONLY.
+# GitHub Actions only builds and deploys - it does NOT run tests.
+# These hooks are your ONLY safety net to prevent breaking changes.
 
 # Pre-commit: Run quick checks before committing
+# Blocks commits if YAML validation fails
 pre-commit:
   parallel: true
   commands:
@@ -10,35 +15,34 @@ pre-commit:
       glob: "*.{yml,yaml}"
       run: yamllint {staged_files}
       stage_fixed: true
+      fail_text: "❌ YAML validation failed. Fix the errors above before committing."
 
-      # Prevent committing to main branch directly (optional - uncomment if desired)
-      # protect-main:
-      #   run: |
-      #     branch=$(git rev-parse --abbrev-ref HEAD)
-      #     if [ "$branch" = "main" ]; then
-      #       echo "❌ Direct commits to main are not allowed. Use a feature branch."
-      #       exit 1
-      #     fi
-
-# Pre-push: Run full test suite before pushing
+# Pre-push: Run COMPLETE test suite before pushing
+# This is MANDATORY - GitHub Actions will not catch test failures!
+# Blocks push if any test fails (YAML, build, HTML, print tests)
 pre-push:
   commands:
     full-tests:
       run: ./test-before-push.sh
+      fail_text: |
+        ❌ Tests failed! Push blocked.
 
-# Commit-msg: Validate commit message format (optional)
-# commit-msg:
-#   commands:
-#     format:
-#       run: |
-#         commit_msg=$(cat {1})
-#         if ! echo "$commit_msg" | grep -qE "^(feat|fix|docs|style|refactor|test|chore):"; then
-#           echo "❌ Commit message must start with: feat|fix|docs|style|refactor|test|chore"
-#           echo "Example: feat: add new portfolio work"
-#           exit 1
-#         fi
+        Fix the errors above, then run again:
+          ./test-before-push.sh
 
-# Skip hooks when needed:
-# LEFTHOOK=0 git commit -m "skip hooks"
-# or
-# git commit --no-verify -m "skip hooks"
+        Once all tests pass, try pushing again.
+
+# ⚠️  CRITICAL: Do NOT skip hooks unless absolutely necessary!
+#
+# GitHub Actions does NOT run tests - only local hooks do.
+# Skipping these hooks may result in deploying broken code.
+#
+# To skip hooks (use with extreme caution):
+#   LEFTHOOK=0 git push
+#   or
+#   git push --no-verify
+#
+# Only skip if:
+#   - You already ran ./test-before-push.sh manually and all tests passed
+#   - You're pushing non-code changes (docs only, etc.)
+#   - You know exactly what you're doing

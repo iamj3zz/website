@@ -83,7 +83,18 @@ done
 
 print_header "Pre-Push Testing - Local Validation"
 
-echo "This script will test your changes before pushing to GitHub."
+echo "⚠️  IMPORTANT: This is your ONLY test gate!"
+echo ""
+echo "GitHub Actions does NOT run tests - it only builds and deploys."
+echo "All quality checks happen HERE, locally, before you push."
+echo ""
+echo "This script will validate:"
+echo "  • YAML syntax and formatting"
+echo "  • Jekyll build"
+echo "  • HTML structure, links, and images"
+echo "  • Print layouts and QR codes"
+echo "  • Performance, accessibility, and SEO (optional)"
+echo ""
 echo "Fix any errors, then run again until all tests pass."
 echo ""
 
@@ -238,7 +249,7 @@ else
     print_header "Step 5/5: Lighthouse CI (Skipped)"
     echo "Lighthouse tests skipped. Run with --full to include them."
     echo ""
-    echo -e "${YELLOW}Note: GitHub Actions will run Lighthouse automatically.${NC}"
+    echo -e "${YELLOW}Note: Lighthouse tests are optional but recommended before major releases.${NC}"
 fi
 
 # ============================================================================
@@ -257,8 +268,11 @@ if [ "$ALL_PASSED" = true ]; then
     echo "  git commit -m \"Your commit message\""
     echo "  git push origin main"
     echo ""
+    echo -e "${YELLOW}⚠️  Remember: These tests are your ONLY safety net.${NC}"
+    echo -e "${YELLOW}GitHub Actions will deploy immediately without testing.${NC}"
     if [ "$RUN_LIGHTHOUSE" = false ]; then
-        echo -e "${YELLOW}Note: Lighthouse was skipped. GitHub Actions will run it automatically.${NC}"
+        echo ""
+        echo -e "${YELLOW}Tip: Run with --full flag before major releases to include Lighthouse.${NC}"
     fi
     exit 0
 else
