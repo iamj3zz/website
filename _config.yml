@@ -64,6 +64,10 @@ collections:
 plugins:
   - jekyll-feed
 
+# Include _pages directory
+include:
+  - _pages
+
 # Sass settings
 sass:
   sass_dir: _sass
