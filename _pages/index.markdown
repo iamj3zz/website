@@ -11,6 +11,7 @@ permalink: /
     <button class="filter-btn" data-filter="installations">Installations</button>
     <button class="filter-btn" data-filter="live-acts">Live Acts</button>
     <button class="filter-btn" data-filter="releases">Releases</button>
+    <button class="filter-btn" data-filter="commissions">Commissions</button>
   </div>
 
   <div class="portfolio-grid">
