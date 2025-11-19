@@ -1,5 +1,6 @@
 ---
 layout: portfolio
+permalink: /
 ---
 
 <h1 class="visually-hidden">Portfolio Works</h1>
