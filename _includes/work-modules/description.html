@@ -1,0 +1,13 @@
+{% comment %}
+  Description Module
+  Renders the work's description from page.description front matter field
+  The description is always sourced from page.description
+{% endcomment %}
+
+{% if page.description %}
+<div class="module module-description">
+  <div class="description-content">
+    {{ page.description | markdownify }}
+  </div>
+</div>
+{% endif %}

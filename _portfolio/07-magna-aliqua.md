@@ -3,8 +3,10 @@ layout: work
 title: Magna Aliqua
 work_id: magna-aliqua
 abstract: "A site-specific sound installation investigating acoustic properties of architectural spaces through resonant frequencies and feedback systems."
+description: |
+  A site-specific sound installation investigating acoustic properties of architectural spaces through resonant frequencies and feedback systems.
 category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/07-magna-aliqua/thumbnail.jpg
 order: 7
 
 # Define metadata once here - it will be used by all modules below
@@ -33,6 +35,9 @@ metadata:
       value: "Continuous installation, 30-minute cycles"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
@@ -40,7 +45,7 @@ sections:
   # Split layout with hero image and metadata
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/07-magna-aliqua/thumbnail.jpg
     caption: "Installation view at Palais de Tokyo"
 
   # About the installation
@@ -57,10 +62,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/07-magna-aliqua/thumbnail.jpg
+      - /assets/img/07-magna-aliqua/thumbnail.jpg
+      - /assets/img/07-magna-aliqua/thumbnail.jpg
+      - /assets/img/07-magna-aliqua/thumbnail.jpg
     captions:
       - "Speaker array configuration"
       - "Visitors experiencing the installation"

@@ -3,8 +3,10 @@ layout: work
 title: Proident Sunt
 work_id: proident-sunt
 abstract: "A durational performance piece exploring sustained tones and gradual transformations, performed continuously over six hours."
+description: |
+  A durational performance piece exploring sustained tones and gradual transformations, performed continuously over six hours.
 category: live-acts
-image: /assets/img/dumbpic.jpg
+image: /assets/img/21-proident-sunt/thumbnail.jpg
 order: 21
 
 # Define metadata once here
@@ -27,6 +29,9 @@ metadata:
       value: "Durational deep listening experience"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   - type: metadata
 
   - type: text
@@ -41,8 +46,8 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/21-proident-sunt/thumbnail.jpg
+      - /assets/img/21-proident-sunt/thumbnail.jpg
     captions:
       - "Performance at Roulette"
       - "Six-hour durational setup"

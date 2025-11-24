@@ -3,8 +3,10 @@ layout: work
 title: Dolor Sit
 work_id: dolor-sit
 abstract: "A live audiovisual performance merging modular synthesis with generative visuals, creating an evolving soundscape that responds to real-time data."
+description: |
+  A live audiovisual performance merging modular synthesis with generative visuals, creating an evolving soundscape that responds to real-time data.
 category: live-acts
-image: /assets/img/dumbpic.jpg
+image: /assets/img/02-dolor-sit/thumbnail.jpg
 order: 2
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -30,6 +32,9 @@ metadata:
 
 sections:
 
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata

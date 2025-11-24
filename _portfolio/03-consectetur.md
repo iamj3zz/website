@@ -3,8 +3,10 @@ layout: work
 title: Consectetur
 work_id: consectetur
 abstract: "An experimental EP exploring the intersection of ambient textures and rhythmic structures, recorded entirely using field recordings and analog synthesis."
+description: |
+  An experimental EP exploring the intersection of ambient textures and rhythmic structures, recorded entirely using field recordings and analog synthesis.
 category: releases
-image: /assets/img/dumbpic.jpg
+image: /assets/img/03-consectetur/thumbnail.jpg
 order: 3
 
 # Define metadata once here - it will be used by all modules below
@@ -32,6 +34,9 @@ metadata:
       value: "Experimental, Ambient, Field Recordings"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module
   - type: metadata
 
@@ -49,9 +54,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/03-consectetur/thumbnail.jpg
+      - /assets/img/03-consectetur/thumbnail.jpg
+      - /assets/img/03-consectetur/thumbnail.jpg
     captions:
       - "Recording session in Iceland"
       - "Analog synthesis setup"

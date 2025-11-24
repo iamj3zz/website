@@ -3,8 +3,10 @@ layout: work
 title: Laboris Nisi
 work_id: laboris-nisi
 abstract: "A full-length album merging industrial soundscapes with melodic drone, exploring the sonic landscape of abandoned factories and machinery."
+description: |
+  A full-length album merging industrial soundscapes with melodic drone, exploring the sonic landscape of abandoned factories and machinery.
 category: releases
-image: /assets/img/dumbpic.jpg
+image: /assets/img/11-laboris-nisi/thumbnail.jpg
 order: 11
 
 # Define metadata once here
@@ -31,6 +33,9 @@ metadata:
       value: "Industrial, Drone, Experimental"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
@@ -49,9 +54,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/11-laboris-nisi/thumbnail.jpg
+      - /assets/img/11-laboris-nisi/thumbnail.jpg
+      - /assets/img/11-laboris-nisi/thumbnail.jpg
     captions:
       - "Abandoned factory in Detroit"
       - "Field recording session"

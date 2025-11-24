@@ -179,7 +179,52 @@ Rich text content with full Markdown support.
 - Links: `[text](url)` or use HTML for `target="_blank"`
 - All text is automatically justified
 
-### 3. Image Grid Module
+### 3. Description Module
+
+**NEW**: Displays the work's `description` from the front matter. This is a required field that provides a concise overview of the work, distinct from the `abstract` (which appears in the portfolio grid).
+
+```yaml
+# Front matter
+description: |
+  This is a comprehensive description of the work that will be displayed
+  on the work detail page. It supports Markdown formatting including
+  **bold text**, *italic text*, and can span multiple paragraphs.
+
+sections:
+  # Display the description - no parameters needed
+  - type: description
+```
+
+**Key Differences from Text Module:**
+- **Content Source**: Description module pulls from `page.description` in front matter; Text module uses inline `content` parameter
+- **Purpose**: Description is for the main work overview (required); Text modules are for additional sections (optional)
+- **Styling**: Description has slightly larger font (16px vs 15px) for emphasis
+- **Flexibility**: Text modules can have custom titles; Description module does not
+
+**Usage:**
+- Typically placed first (before or after metadata) to introduce the work
+- Can be positioned anywhere in the sections array
+- Automatically rendered with Markdown formatting
+- Does not display if `description` field is missing (though it's required)
+
+**Example:**
+```yaml
+---
+description: |
+  An immersive installation exploring human-plant interaction through
+  bioelectrical sensors. The work transforms **plant bio-signals** into
+  real-time audiovisual responses, creating a unique sensory experience.
+
+sections:
+  - type: description  # Shows the description above
+  - type: metadata
+  - type: text
+    content: |
+      Additional detailed information...
+---
+```
+
+### 4. Image Grid Module
 
 Grid of images with 1-6 column layouts, square thumbnail cropping, lightbox viewing, and custom captions.
 
@@ -204,7 +249,7 @@ Grid of images with 1-6 column layouts, square thumbnail cropping, lightbox view
 - Custom captions displayed in lightbox
 - Responsive: Collapses to 1 column on mobile
 
-### 4. Metadata Module
+### 5. Metadata Module
 
 Display project metadata in a clean grid layout. All fields are optional - include only what's relevant for your project.
 
@@ -325,7 +370,7 @@ Any metadata field can be made clickable by adding a `_link` suffix to the field
 - All external links open in new tab automatically
 - Links have subtle underline styling that becomes more prominent on hover
 
-### 5. Quote Module
+### 6. Quote Module
 
 Blockquote with optional attribution.
 
@@ -335,7 +380,7 @@ Blockquote with optional attribution.
   author: "Author Name"  # Optional
 ```
 
-### 6. Spacer Module
+### 7. Spacer Module
 
 Add vertical spacing between sections.
 
@@ -344,7 +389,7 @@ Add vertical spacing between sections.
   height: "60px"  # Any CSS height value
 ```
 
-### 7. Linked Events Module
+### 8. Linked Events Module
 
 Display events linked to this work, using the same design as the main Events page.
 
@@ -382,7 +427,7 @@ work_id: my-project-title  # Must match the work's work_id exactly
 ---
 ```
 
-### 8. Universal Iframe Module
+### 9. Universal Iframe Module
 
 Universal iframe embed module that accepts any embed code from any platform (YouTube, Vimeo, Bandcamp, SoundCloud, etc.). Supports both responsive (aspect ratio-based) and fixed-height modes.
 
@@ -442,7 +487,7 @@ The module automatically detects height from these formats in embed codes:
 - Choose responsive mode for video embeds that should adapt to screen size
 - Choose fixed-height mode for audio players and embeds with specific dimensions
 
-### 9. Split Hero-Metadata Module
+### 10. Split Hero-Metadata Module
 
 Two-column responsive layout with hero content (image or iframe) on the left (2/3 width) and metadata on the right (1/3 width). Perfect for showcasing visual or video content alongside project details.
 
@@ -507,7 +552,7 @@ Two-column responsive layout with hero content (image or iframe) on the left (2/
 - Present visual work with technical specifications side-by-side
 - Create a more compact, professional layout for works with substantial metadata
 
-### 10. Split Bandcamp-Metadata Module
+### 11. Split Bandcamp-Metadata Module
 
 Two-column responsive layout with iframe on the left (1/3 width) and metadata plus optional text on the right (2/3 width). Designed specifically for music releases with Bandcamp players (or similar narrow embeds) alongside comprehensive release information.
 

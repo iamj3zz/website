@@ -24,9 +24,24 @@ links:
   <!-- Bio Text + Image Section -->
   <div class="bio-intro">
     <div class="bio-text">
-      <p>J3ZZ is an electronic music artist and audiovisual performer based in [City]. Their work explores the intersection of experimental sound design, live coding, and generative visuals, creating immersive performances that challenge conventional boundaries between music and digital art.</p>
-      <p>With a background in both computer science and music composition, J3ZZ has developed a unique approach to live electronic music, incorporating real-time algorithmic processes and modular synthesis into performances that are both technically sophisticated and emotionally resonant.</p>
-      <p>Their work has been featured at prestigious festivals and venues across Europe, North America, and Asia, including performances at Sonar Festival, MUTEK, and Atonal Berlin.</p>
+      <p>
+        J3ZZ is a French artist & musician. He works in the transitional area between sound art, music, light, programming & science. His work unfolds through music releases, live performances & installations, especially. Through a phenomenological approach, his work is based both on experimenting and programming, always guided by concepts of time elasticity and as such located in the time-based media art field.
+      </p>
+      <p>
+        His interests in microsound have pushed him to expand his work by opening up new ways of including field recording-based sounds into his practice. Through a positive-nihilist approach to process and structural deconstruction, he explores the infinitesimal and the imperceptible over time, employing various scientific techniques and methods.
+      </p>
+      <p>
+        This meticulous attention to the barely audible often contrasts with his use of the acoustic violin, an instrument whose character he transforms through synthesizers, effects processing, and sensors. The tension between organic string timbre and electronic manipulation creates a dynamic interplay between the natural and the synthetic.
+      </p>
+      <p>
+        His practice also extends to working with living organisms to generate sounds and visuals in real time, further blurring the boundaries between art, science, and the biological world. These living systems become active collaborators in the creative process, introducing elements of unpredictability and organic evolution into his performances and installations.
+      </p>
+      <p>
+        New media serves as a vital medium of expression throughout his work, incorporating video, laser visuals, and other digital technologies into interactive, sensor-driven immersive environments. These spatial sound installations and performances invite audiences to become active participants, their movements and presence shaping the sonic and visual landscapes in real time. The integration of these technologies creates multisensory experiences where light, sound, and space converge into unified, responsive compositions.
+      </p>
+      <p>
+        The artist's work is characterized by a deep exploration of the infinitesimal—the extremely small—and the imperceptible—that which is not easily seen or noticed—suggesting a focus on experiences that are often overlooked. By employing scientific techniques, he invites the audience to reconsider how we perceive sound, time, and artistic creation. This intermingling of concepts from art and science creates a rich, multi-layered experience that challenges listeners to engage with the complexities of sound in new and thought-provoking ways.
+      </p>
     </div>
     <div class="bio-image">
       <img src="{{ page.bio_image }}" alt="{{ site.title }}">
@@ -109,3 +124,25 @@ links:
   </div>
 
 </section>
+
+
+
+====
+
+
+
+He performed and exhibited his work in museums, festivals and art galleries world-wide such as MIRA Festival, ELEKTRA, Scopitone, Todays Art, ACT in South Korea, Day for Night, the Museum of Modern Art in Buenos Aires, the David Roberts Art Foundation, FRAC Paca, in particular.
+
+He teaches generative art as guest professor in various art schools. He frequently leads specific workshops about creative strategies & techniques for Art & Design schools or Universities on topics like “noise as an input,” “parasites injections,” or “design your own data-based generative system.” He operates Structure Void, his self-funded studio, through which he teaches and provides workshops about Max related to generative art, data visualization & sonification, and spatialization, especially.
+
+He teaches creative technology & new media art as guest professor in various art schools in Europe & outside.
+
+He founded and leaded the now defunct art label Bordille Records with François Larini, and worked closely with & records for Canadian imprint Yatra Arts and was part of the selected artists for SHAPE Network.
+
+2017, he founds and launches vøid label for editing and publishing his new works.
+
+2020, he launches Structure Void intended to cover all his teaching, consulting and programming activities for companies, artists, institutions and individuals. Especially he teaches and leads an acclaimed course merging art + tech for french artists about Ableton Live and Max creative environments. He’s also the single Ableton & Max Certified Trainer in France.
+
+2021, he starts new art projects and explorations involving sound, visuals & new aesthetics.
+
+His sound work is released and distributed through yatra arts, void label, bordille records, elli records, eter lab.

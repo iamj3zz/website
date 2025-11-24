@@ -736,4 +736,27 @@
     position: relative;
     padding-top: 0;
   }
+
+  /* Work Page Metadata Print Styles */
+  .work-page-metadata {
+    font-size: 9px !important;
+    margin-top: 10px;
+    margin-bottom: 15px;
+  }
+
+  /* Work Modules Print Styles */
+  .module-description {
+    page-break-inside: avoid;
+    margin-bottom: 30px;
+  }
+
+  .module-description .description-content {
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: justify;
+  }
+
+  .module-description .description-content p {
+    margin-bottom: 12px;
+  }
 }

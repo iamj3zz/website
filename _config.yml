@@ -63,6 +63,7 @@ collections:
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-last-modified-at
 
 # Include _pages directory
 include:

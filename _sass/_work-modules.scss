@@ -48,6 +48,47 @@
   margin-bottom: 20px;
 }
 
+/* Work Page Metadata */
+.work-page-metadata {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #767676;
+  text-align: center;
+}
+
+.work-page-metadata .metadata-item {
+  display: inline;
+}
+
+.work-page-metadata .metadata-separator {
+  display: inline;
+  margin: 0 8px;
+  color: #767676;
+}
+
+/* Description Module */
+.module-description {
+  margin-bottom: 60px;
+  padding: 15px 20px;
+  background: #f9f9f9;
+  border-left: 3px solid #333;
+}
+
+.module-description .description-content {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #595959;
+  text-align: justify;
+}
+
+.module-description .description-content p {
+  margin-bottom: 20px;
+}
+
+.module-description .description-content p:last-child {
+  margin-bottom: 0;
+}
+
 /* Image Grid Module */
 .module-image-grid {
   margin-bottom: 60px;

@@ -3,8 +3,10 @@ layout: work
 title: Labore Et Dolore
 work_id: labore-et-dolore
 abstract: "An intense live coding performance utilizing algorithmic composition and machine learning to create unpredictable sonic landscapes in real-time."
+description: |
+  An intense live coding performance utilizing algorithmic composition and machine learning to create unpredictable sonic landscapes in real-time.
 category: live-acts
-image: /assets/img/dumbpic.jpg
+image: /assets/img/06-labore-dolore/thumbnail.jpg
 order: 6
 
 # Define metadata once here - it will be used by all modules below
@@ -28,6 +30,9 @@ metadata:
       value: "1,200 attendees at MUTEK"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Metadata module
   - type: metadata
 
@@ -52,10 +57,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/06-labore-dolore/thumbnail.jpg
+      - /assets/img/06-labore-dolore/thumbnail.jpg
+      - /assets/img/06-labore-dolore/thumbnail.jpg
+      - /assets/img/06-labore-dolore/thumbnail.jpg
     captions:
       - "Live coding performance at MUTEK"
       - "Code projection during the show"

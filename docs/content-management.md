@@ -11,6 +11,7 @@ All collection items must follow these front matter standards to ensure consiste
 - `title` - The display title of the work (string)
 - `work_id` - Unique identifier (alphanumeric, hyphens, underscores only: A-Z, a-z, 0-9, -, _). Used for linking to events and internal references. Should be lowercase and based on title (e.g., "My Project" → "my-project")
 - `abstract` - Brief description (1-2 sentences, 150-200 characters) displayed in grid hover and printable page. Should focus on what the work IS with key descriptors.
+- `description` - **NEW**: Comprehensive description of the work (3-5 sentences, 200-400 characters) displayed on the work detail page via the description module. Supports Markdown formatting. Provides context beyond the abstract. Use this for introducing the work's concept, goals, and key features.
 - `image` - Path to preview image (e.g., `/assets/img/filename.jpg`)
 - `order` - Numeric order for sorting (higher numbers appear first)
 - `metadata` - Centralized metadata structure with category-specific fields (see [Metadata Reference](metadata-reference.md))
@@ -35,6 +36,11 @@ layout: work
 title: Project Title
 work_id: project-title
 abstract: "Brief description of what this work is, including medium and key themes."
+description: |
+  A comprehensive introduction to the work that provides context, goals, and key
+  features. This description appears on the work detail page and can include
+  **Markdown formatting** for emphasis. Explain the concept, approach, and impact
+  of the work in 3-5 sentences.
 category: installations
 image: /assets/img/project.jpg
 order: 15
@@ -49,12 +55,14 @@ metadata:
   # ... additional category-specific fields
 
 sections:
+  - type: description  # Displays the description from front matter
+
   - type: metadata
 
   - type: text
     title: "About the Work"
     content: |
-      Project description here.
+      Additional detailed project information here.
 
   - type: image-grid
     columns: 3
@@ -70,6 +78,11 @@ layout: work
 title: Project Title
 work_id: project-title
 abstract: "Multi-format work combining installation and performance elements."
+description: |
+  This collaborative work explores the intersection of installation art and live
+  performance, bringing together multiple artists to create an immersive experience.
+  The project was commissioned for a major festival and combines **visual art**,
+  **sound design**, and **interactive elements**.
 categories: [installations, commissions, live-acts]
 primary_category: installations
 image: /assets/img/project.jpg
@@ -85,6 +98,8 @@ metadata:
   # Include fields from all relevant categories
 
 sections:
+  - type: description  # Displays the description from front matter
+
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/img/hero.jpg
@@ -92,7 +107,7 @@ sections:
   - type: text
     title: "About the Collaboration"
     content: |
-      Description...
+      Additional details about the collaboration process...
 ---
 ```
 

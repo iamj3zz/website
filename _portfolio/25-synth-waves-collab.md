@@ -3,9 +3,11 @@ layout: work
 title: Synth Waves Collab
 work_id: synth-waves-collab
 abstract: "A collaborative electronic music project exploring the intersection of analog synthesis and digital processing with sound designer Alex Rivers."
+description: |
+  A collaborative electronic music project exploring the intersection of analog synthesis and digital processing with sound designer Alex Rivers.
 categories: [commissions, releases]
 primary_category: commissions
-image: /assets/img/dumbpic.jpg
+image: /assets/img/25-synth-waves-collab/thumbnail.jpg
 order: 25
 
 # Define metadata once here - it will be used by all modules below
@@ -34,6 +36,9 @@ metadata:
       value: "Experimental Electronic, Modular Synthesis"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Metadata module
   - type: metadata
 
@@ -51,9 +56,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/25-synth-waves-collab/thumbnail.jpg
+      - /assets/img/25-synth-waves-collab/thumbnail.jpg
+      - /assets/img/25-synth-waves-collab/thumbnail.jpg
     captions:
       - "Studio session in London"
       - "Modular synthesis setup"

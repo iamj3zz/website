@@ -3,8 +3,10 @@ layout: work
 title: Fugiat Nulla
 work_id: fugiat-nulla
 abstract: "A club-oriented live set blending techno rhythms with experimental sound design, featuring custom-built hardware controllers."
+description: |
+  A club-oriented live set blending techno rhythms with experimental sound design, featuring custom-built hardware controllers.
 category: live-acts
-image: /assets/img/dumbpic.jpg
+image: /assets/img/18-fugiat-nulla/thumbnail.jpg
 order: 18
 
 # Define metadata once here
@@ -27,6 +29,9 @@ metadata:
       value: "400 attendees"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   - type: metadata
 
   - type: text
@@ -47,10 +52,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/18-fugiat-nulla/thumbnail.jpg
+      - /assets/img/18-fugiat-nulla/thumbnail.jpg
+      - /assets/img/18-fugiat-nulla/thumbnail.jpg
+      - /assets/img/18-fugiat-nulla/thumbnail.jpg
     captions:
       - "Performance at WORM"
       - "Custom hardware controllers"

@@ -3,9 +3,11 @@ layout: work
 title: Complete Template Reference
 work_id: complete-template-reference
 abstract: "A comprehensive template work demonstrating all possible metadata fields, links, and section modules available in the portfolio system for easy reference and replication."
+description: |
+  This is the ultimate reference template demonstrating every feature of the portfolio system. It showcases all available metadata fields (temporal, industry identifiers, location, production, roles, collaborators, and custom fields), all 10 section module types (hero-image, text, image-grid, metadata, quote, spacer, linked-events, iframe, split layouts, and description), and best practices for organizing complex works. Use this as a reference when creating new portfolio works to understand all available options and their proper formatting.
 categories: [installations, releases, live-acts, commissions]
 primary_category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/31-complete-template/thumbnail.jpg
 order: 31
 
 # CENTRALIZED METADATA - Define once, use everywhere
@@ -41,7 +43,7 @@ metadata:
   produced_by_link: "https://productioncompany.com"
 
   client: "Client Organization Name"
-  # client_link: "/works/previous-client-work/"  # Example: Can link to internal pages (commented out - file doesn't exist)
+  # client_link: "/works/01-vibrotanica/"  # Example: Can link to internal pages
 
   commissioned_by: "Arts Foundation or Festival Name"
   commissioned_by_link: "https://artsfoundation.org"
@@ -133,7 +135,7 @@ metadata:
 
     - label: "Related Work"
       value: "See companion piece"
-      link: "/works/01-lorem-ipsum/"  # Example: link to another work
+      link: "/works/01-vibrotanica/"  # Example: link to another work
 
 # ====================
 # SECTIONS ARRAY
@@ -142,6 +144,9 @@ metadata:
 # ====================
 sections:
 
+
+  # Description module - displays page.description
+  - type: description
   # ==========================================
   # MODULE 1: METADATA
   # Standalone metadata display
@@ -156,7 +161,7 @@ sections:
   # ==========================================
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/31-complete-template/thumbnail.jpg
     caption: "Installation view showing spatial audio setup and visitor interaction"
     # Metadata fields are inherited from front matter - no need to repeat
 
@@ -228,7 +233,7 @@ sections:
   # Large featured image with optional caption
   # ==========================================
   - type: hero-image
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/31-complete-template/thumbnail.jpg
     caption: "Wide view of the installation space showing 32-channel speaker array and interactive zones"
 
   # ==========================================
@@ -238,12 +243,12 @@ sections:
   - type: image-grid
     columns: 3  # Options: 1, 2, 3, 4, 5, or 6
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
     captions:
       - "Speaker array configuration detail"
       - "Visitors experiencing the installation"
@@ -259,10 +264,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
     captions:
       - "Day view of installation"
       - "Night lighting configuration"
@@ -276,8 +281,8 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
     captions:
       - "Before: Empty gallery space"
       - "After: Completed installation"
@@ -367,12 +372,12 @@ sections:
   - type: image-grid
     columns: 6
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
     captions:
       - "Detail 1"
       - "Detail 2"
@@ -388,7 +393,7 @@ sections:
   - type: image-grid
     columns: 1
     images:
-      - /assets/img/dumbpic.jpg
+      - /assets/img/31-complete-template/thumbnail.jpg
     captions:
       - "Panoramic view of the complete installation space"
 

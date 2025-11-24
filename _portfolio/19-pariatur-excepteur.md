@@ -3,8 +3,10 @@ layout: work
 title: Pariatur Excepteur
 work_id: pariatur-excepteur
 abstract: "An outdoor sound sculpture responding to weather conditions, translating wind speed, temperature, and humidity into evolving sonic patterns."
+description: |
+  An outdoor sound sculpture responding to weather conditions, translating wind speed, temperature, and humidity into evolving sonic patterns.
 category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/19-pariatur-excepteur/thumbnail.jpg
 order: 19
 
 # Define metadata once here
@@ -31,13 +33,16 @@ metadata:
       value: "Solar-powered, weatherproof audio system"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
 
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/19-pariatur-excepteur/thumbnail.jpg
     caption: "Outdoor installation in Helsinki Sculpture Park"
 
   - type: text
@@ -52,12 +57,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/19-pariatur-excepteur/thumbnail.jpg
+      - /assets/img/19-pariatur-excepteur/thumbnail.jpg
+      - /assets/img/19-pariatur-excepteur/thumbnail.jpg
+      - /assets/img/19-pariatur-excepteur/thumbnail.jpg
+      - /assets/img/19-pariatur-excepteur/thumbnail.jpg
+      - /assets/img/19-pariatur-excepteur/thumbnail.jpg
     captions:
       - "Sculpture in spring"
       - "Weather sensor array"

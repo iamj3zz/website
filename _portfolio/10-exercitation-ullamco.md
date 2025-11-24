@@ -3,8 +3,10 @@ layout: work
 title: Exercitation Ullamco
 work_id: exercitation-ullamco
 abstract: "A large-scale outdoor sound installation using environmental sensors to transform urban data into constantly evolving musical compositions."
+description: |
+  A large-scale outdoor sound installation using environmental sensors to transform urban data into constantly evolving musical compositions.
 category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/10-exercitation-ullamco/thumbnail.jpg
 order: 10
 
 # Define metadata once here - it will be used by all modules below
@@ -31,6 +33,9 @@ metadata:
       value: "Over 50,000 during the festival period"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Metadata module
   - type: metadata
 
@@ -48,12 +53,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
+      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
+      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
+      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
+      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
+      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
     captions:
       - "Installation at Marineterrein Amsterdam"
       - "Environmental sensor array"
