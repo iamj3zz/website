@@ -44,6 +44,35 @@
           <p class="work-category">{{ page.category | replace: '-', ' ' | upcase }}</p>
         {% endif %}
         <h1>{{ page.title }}</h1>
+
+        {% comment %} Page metadata: reading time + last updated date {% endcomment %}
+        <div class="work-page-metadata">
+          {% comment %} Calculate reading time from description + all text modules {% endcomment %}
+          {% assign total_words = 0 %}
+          {% if page.description %}
+            {% assign total_words = page.description | strip_html | number_of_words %}
+          {% endif %}
+
+          {% comment %} Add words from all text modules in sections {% endcomment %}
+          {% if page.sections %}
+            {% for section in page.sections %}
+              {% if section.type == "text" and section.content %}
+                {% assign text_words = section.content | strip_html | number_of_words %}
+                {% assign total_words = total_words | plus: text_words %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+
+          {% comment %} Calculate reading time at 250 WPM {% endcomment %}
+          {% assign reading_time = total_words | divided_by: 250 %}
+          {% if reading_time < 1 %}
+            {% assign reading_time = 1 %}
+          {% endif %}
+
+          <span class="metadata-item">{{ reading_time }} min read</span>
+          <span class="metadata-separator">•</span>
+          <span class="metadata-item">Updated {{ page.last_modified_at | date: "%b %-d, %Y" }}</span>
+        </div>
       </div>
 
       {% comment %} Modular sections system {% endcomment %}

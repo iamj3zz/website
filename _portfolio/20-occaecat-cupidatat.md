@@ -3,8 +3,10 @@ layout: work
 title: Occaecat Cupidatat
 work_id: occaecat-cupidatat
 abstract: "A genre-defying album combining elements of jazz, breakbeat, and musique concrète, created through extensive tape manipulation and sampling."
+description: |
+  A genre-defying album combining elements of jazz, breakbeat, and musique concrète, created through extensive tape manipulation and sampling.
 category: releases
-image: /assets/img/dumbpic.jpg
+image: /assets/img/20-occaecat-cupidatat/thumbnail.jpg
 order: 20
 
 # Define metadata once here - it will be used by all modules below
@@ -30,6 +32,9 @@ metadata:
       value: "Experimental Jazz, Breakbeat, Musique Concrète"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
@@ -50,10 +55,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/20-occaecat-cupidatat/thumbnail.jpg
+      - /assets/img/20-occaecat-cupidatat/thumbnail.jpg
+      - /assets/img/20-occaecat-cupidatat/thumbnail.jpg
+      - /assets/img/20-occaecat-cupidatat/thumbnail.jpg
     captions:
       - "Recording session with Márton Fenyvesi"
       - "Tape manipulation setup"

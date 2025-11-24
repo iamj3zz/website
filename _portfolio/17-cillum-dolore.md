@@ -3,8 +3,10 @@ layout: work
 title: Cillum Dolore
 work_id: cillum-dolore
 abstract: "A dark ambient release inspired by arctic landscapes, featuring processed hydrophone recordings and subterranean drones."
+description: |
+  A dark ambient release inspired by arctic landscapes, featuring processed hydrophone recordings and subterranean drones.
 category: releases
-image: /assets/img/dumbpic.jpg
+image: /assets/img/17-cillum-dolore/thumbnail.jpg
 order: 17
 
 # Define metadata once here
@@ -31,6 +33,9 @@ metadata:
       value: "Dark Ambient, Drone, Field Recordings"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
@@ -49,10 +54,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/17-cillum-dolore/thumbnail.jpg
+      - /assets/img/17-cillum-dolore/thumbnail.jpg
+      - /assets/img/17-cillum-dolore/thumbnail.jpg
+      - /assets/img/17-cillum-dolore/thumbnail.jpg
     captions:
       - "Arctic landscape near Tromsø"
       - "Hydrophone recording session"

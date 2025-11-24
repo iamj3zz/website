@@ -3,9 +3,11 @@ layout: work
 title: Duis Aute Irure
 work_id: duis-aute-irure
 abstract: "A collaborative split release with electronic producer Alex Kim, juxtaposing digital glitch aesthetics with warm analog tape textures."
+description: |
+  A collaborative split release with electronic producer Alex Kim, juxtaposing digital glitch aesthetics with warm analog tape textures.
 categories: [commissions, releases]
 primary_category: commissions
-image: /assets/img/dumbpic.jpg
+image: /assets/img/14-duis-aute-irure/thumbnail.jpg
 order: 14
 
 # Define metadata once here
@@ -33,6 +35,9 @@ metadata:
       value: "Glitch, Experimental Electronic, Ambient"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   - type: metadata
 
   - type: text
@@ -51,10 +56,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/14-duis-aute-irure/thumbnail.jpg
+      - /assets/img/14-duis-aute-irure/thumbnail.jpg
+      - /assets/img/14-duis-aute-irure/thumbnail.jpg
+      - /assets/img/14-duis-aute-irure/thumbnail.jpg
     captions:
       - "Studio session in Toronto"
       - "Digital processing setup (J3ZZ)"

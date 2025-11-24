@@ -3,8 +3,10 @@ layout: work
 title: Quis Nostrud
 work_id: quis-nostrud
 abstract: "A high-energy performance combining hardware synthesizers and live percussion, featuring improvisational elements and dynamic audio processing."
+description: |
+  A high-energy performance combining hardware synthesizers and live percussion, featuring improvisational elements and dynamic audio processing.
 category: live-acts
-image: /assets/img/dumbpic.jpg
+image: /assets/img/09-quis-nostrud/thumbnail.jpg
 order: 9
 
 # Define metadata once here - it will be used by all modules below
@@ -28,6 +30,9 @@ metadata:
       value: "2,500 attendees"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Metadata display
   - type: metadata
 
@@ -52,10 +57,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/09-quis-nostrud/thumbnail.jpg
+      - /assets/img/09-quis-nostrud/thumbnail.jpg
+      - /assets/img/09-quis-nostrud/thumbnail.jpg
+      - /assets/img/09-quis-nostrud/thumbnail.jpg
     captions:
       - "Live performance at Sónar"
       - "Hardware synthesizer setup"

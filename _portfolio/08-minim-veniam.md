@@ -3,8 +3,10 @@ layout: work
 title: Minim Veniam
 work_id: minim-veniam
 abstract: "A minimalist release focusing on micro-sound and silence, exploring the subtle textures found in barely audible sonic phenomena."
+description: |
+  A minimalist release focusing on micro-sound and silence, exploring the subtle textures found in barely audible sonic phenomena.
 category: releases
-image: /assets/img/dumbpic.jpg
+image: /assets/img/08-minim-veniam/thumbnail.jpg
 order: 8
 
 # Define metadata once here - it will be used by all modules below
@@ -30,6 +32,9 @@ metadata:
       value: "Microsound, Minimalism, Experimental Ambient"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
@@ -50,9 +55,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/08-minim-veniam/thumbnail.jpg
+      - /assets/img/08-minim-veniam/thumbnail.jpg
+      - /assets/img/08-minim-veniam/thumbnail.jpg
     captions:
       - "Field recording in rural Norway"
       - "High-resolution recording equipment"

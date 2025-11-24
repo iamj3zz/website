@@ -3,8 +3,10 @@ layout: work
 title: Reprehenderit
 work_id: reprehenderit
 abstract: "A theatrical live performance integrating spoken word, electroacoustic textures, and spatially-distributed sound sources throughout the venue."
+description: |
+  A theatrical live performance integrating spoken word, electroacoustic textures, and spatially-distributed sound sources throughout the venue.
 category: live-acts
-image: /assets/img/dumbpic.jpg
+image: /assets/img/15-reprehenderit/thumbnail.jpg
 order: 15
 published: false
 
@@ -27,6 +29,9 @@ metadata:
       value: "In development - premiere June 2025"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   - type: metadata
 
   - type: text
@@ -41,8 +46,8 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/15-reprehenderit/thumbnail.jpg
+      - /assets/img/15-reprehenderit/thumbnail.jpg
     captions:
       - "Development workshop"
       - "Spatial audio testing"

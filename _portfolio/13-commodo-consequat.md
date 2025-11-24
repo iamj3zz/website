@@ -3,8 +3,10 @@ layout: work
 title: Commodo Consequat
 work_id: commodo-consequat
 abstract: "A participatory sound installation where audience members collectively shape the sonic output through networked mobile devices and sensors."
+description: |
+  A participatory sound installation where audience members collectively shape the sonic output through networked mobile devices and sensors.
 category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/13-commodo-consequat/thumbnail.jpg
 order: 13
 
 # Define metadata once here
@@ -31,13 +33,16 @@ metadata:
       value: "16-channel audio, networked mobile devices"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
 
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/13-commodo-consequat/thumbnail.jpg
     caption: "Visitors interacting with the installation at Seoul Museum of Art"
 
   - type: text
@@ -52,12 +57,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/13-commodo-consequat/thumbnail.jpg
+      - /assets/img/13-commodo-consequat/thumbnail.jpg
+      - /assets/img/13-commodo-consequat/thumbnail.jpg
+      - /assets/img/13-commodo-consequat/thumbnail.jpg
+      - /assets/img/13-commodo-consequat/thumbnail.jpg
+      - /assets/img/13-commodo-consequat/thumbnail.jpg
     captions:
       - "Installation view"
       - "Visitors using the mobile app"

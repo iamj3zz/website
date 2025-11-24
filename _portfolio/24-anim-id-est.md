@@ -3,8 +3,10 @@ layout: work
 title: Anim Id Est
 work_id: anim-id-est
 abstract: "An immersive live performance in complete darkness, where spatial audio techniques guide the audience through a sonic journey."
+description: |
+  An immersive live performance in complete darkness, where spatial audio techniques guide the audience through a sonic journey.
 category: live-acts
-image: /assets/img/dumbpic.jpg
+image: /assets/img/24-anim-id-est/thumbnail.jpg
 order: 24
 
 # Define metadata once here
@@ -27,6 +29,9 @@ metadata:
       value: "120 attendees (limited capacity)"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   - type: metadata
 
   - type: text
@@ -41,10 +46,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/24-anim-id-est/thumbnail.jpg
+      - /assets/img/24-anim-id-est/thumbnail.jpg
+      - /assets/img/24-anim-id-est/thumbnail.jpg
+      - /assets/img/24-anim-id-est/thumbnail.jpg
     captions:
       - "Audience entering the darkened space"
       - "32-channel speaker configuration"

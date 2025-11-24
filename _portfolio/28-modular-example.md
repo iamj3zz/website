@@ -3,9 +3,11 @@ layout: work
 title: Modular Layout Example
 work_id: modular-layout-example
 abstract: "A comprehensive demonstration of the modular layout system, showcasing flexible content sections and customizable presentation options."
+description: |
+  This template demonstrates the standard modular layout system with all basic module types: hero-image, text, image-grid, metadata, quote, spacer, linked-events, iframe, and description. Each module can be freely positioned in any order to create custom layouts. Use this as a reference for understanding how to combine different modules to tell your work's story effectively.
 categories: [installations, commissions]
 primary_category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/28-modular-example/thumbnail.jpg
 order: 28
 
 # Define metadata once here - it will be used by all modules below
@@ -31,12 +33,15 @@ metadata:
       value: "Experimental Electronic, Ambient"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
 
   - type: hero-image
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/28-modular-example/thumbnail.jpg
     caption: "Main installation view"
 
 
@@ -62,7 +67,7 @@ sections:
     produced_by: "Studio Productions"
     produced_by_link: "https://studioproductions.example.com"
     client: "Example Client"
-    client_link: "/works/01-lorem-ipsum/"  # Example: link to another work
+    client_link: "/works/01-vibrotanica/"  # Example: link to another work
     commissioned_by: "Paris Digital Art Festival"
     commissioned_by_link: "https://parisdigitalartfestival.com"
     curated_by: "Marie Dubois"
@@ -97,8 +102,8 @@ sections:
         value: "Available on Spotify"
         link: "https://spotify.com/artist/j3zz"
       - label: "Related Work"
-        value: "See Lorem Ipsum project"
-        link: "/works/01-lorem-ipsum/"  # Example: link to another work
+        value: "See Vibrotanica project"
+        link: "/works/01-vibrotanica/"  # Example: link to another work
 
   - type: text
     title: "About the Project"
@@ -142,12 +147,12 @@ sections:
   - type: image-grid
     columns: 5
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/28-modular-example/thumbnail.jpg
+      - /assets/img/28-modular-example/thumbnail.jpg
+      - /assets/img/28-modular-example/thumbnail.jpg
       - /assets/img/J3ZZ-logo-black-300px.png
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/28-modular-example/thumbnail.jpg
+      - /assets/img/28-modular-example/thumbnail.jpg
     captions:
       - "Installation detail from the main exhibition space"
       - "Close-up view of the interactive sound module"

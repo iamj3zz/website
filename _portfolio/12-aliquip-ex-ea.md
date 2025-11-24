@@ -3,8 +3,10 @@ layout: work
 title: Aliquip Ex Ea
 work_id: aliquip-ex-ea
 abstract: "An experimental live performance exploring the boundaries of feedback and noise, pushing audio equipment to its physical limits."
+description: |
+  An experimental live performance exploring the boundaries of feedback and noise, pushing audio equipment to its physical limits.
 category: live-acts
-image: /assets/img/dumbpic.jpg
+image: /assets/img/12-aliquip-ex-ea/thumbnail.jpg
 order: 12
 
 # Define metadata once here
@@ -27,6 +29,9 @@ metadata:
       value: "800 attendees"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   - type: metadata
 
   - type: text
@@ -47,8 +52,8 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/12-aliquip-ex-ea/thumbnail.jpg
+      - /assets/img/12-aliquip-ex-ea/thumbnail.jpg
     captions:
       - "Performance at Unsound Festival"
       - "No-input mixing board setup"

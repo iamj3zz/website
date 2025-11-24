@@ -3,8 +3,10 @@ layout: work
 title: Tempor Incididunt
 work_id: tempor-incididunt
 abstract: "A concept album blending electroacoustic composition with techno influences, exploring themes of time dilation and cyclical patterns."
+description: |
+  A concept album blending electroacoustic composition with techno influences, exploring themes of time dilation and cyclical patterns.
 category: releases
-image: /assets/img/dumbpic.jpg
+image: /assets/img/05-tempor-incididunt/thumbnail.jpg
 order: 5
 published: false
 
@@ -31,6 +33,9 @@ metadata:
       value: "Unreleased - in production"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   - type: metadata
 
   - type: text
@@ -45,9 +50,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/05-tempor-incididunt/thumbnail.jpg
+      - /assets/img/05-tempor-incididunt/thumbnail.jpg
+      - /assets/img/05-tempor-incididunt/thumbnail.jpg
     captions:
       - "Studio production session"
       - "Hardware synthesizer setup"

@@ -3,8 +3,10 @@ layout: work
 title: Adipiscing Elit
 work_id: adipiscing-elit
 abstract: "An immersive multichannel sound installation examining the relationship between organic and synthetic sounds through algorithmic composition."
+description: |
+  An immersive multichannel sound installation examining the relationship between organic and synthetic sounds through algorithmic composition.
 category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/04-adipiscing-elit/thumbnail.jpg
 order: 4
 
 # Define metadata once here - it will be used by all modules below
@@ -31,6 +33,9 @@ metadata:
       value: "Over 35,000 during exhibition period"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
@@ -38,7 +43,7 @@ sections:
   # Split hero-metadata layout
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/04-adipiscing-elit/thumbnail.jpg
     caption: "Installation view at Mori Art Museum, Tokyo"
 
   # About the installation
@@ -55,12 +60,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/04-adipiscing-elit/thumbnail.jpg
+      - /assets/img/04-adipiscing-elit/thumbnail.jpg
+      - /assets/img/04-adipiscing-elit/thumbnail.jpg
+      - /assets/img/04-adipiscing-elit/thumbnail.jpg
+      - /assets/img/04-adipiscing-elit/thumbnail.jpg
+      - /assets/img/04-adipiscing-elit/thumbnail.jpg
     captions:
       - "24-channel speaker array"
       - "Visitors experiencing the installation"

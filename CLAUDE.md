@@ -7,8 +7,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 This is a Jekyll static site deployed to GitHub Pages at www.j3zz.com. The site is a portfolio website with a custom design inspired by julienbayle.net, featuring a grid-based portfolio system with filterable works.
 
 **Key Features:**
-- Modular layout system with 10 customizable modules
+- Modular layout system with 11 customizable modules (including new description module)
 - Centralized metadata architecture
+- Dual-description system: `abstract` for grid/print lists, `description` for work detail pages
 - Multi-category portfolio support (installations, live-acts, releases, commissions)
 - Responsive design with comprehensive print functionality (all pages A4-optimized with QR codes)
 - Event management system with work linking

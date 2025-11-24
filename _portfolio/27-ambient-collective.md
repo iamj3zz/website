@@ -3,8 +3,10 @@ layout: work
 title: Ambient Collective
 work_id: ambient-collective
 abstract: "A collaborative album featuring five international artists, blending ambient soundscapes with experimental electronic textures in a cohesive sonic journey."
+description: |
+  A collaborative album featuring five international artists, blending ambient soundscapes with experimental electronic textures in a cohesive sonic journey.
 category: commissions
-image: /assets/img/dumbpic.jpg
+image: /assets/img/27-ambient-collective/thumbnail.jpg
 order: 27
 
 # Define metadata once here
@@ -36,6 +38,9 @@ metadata:
       value: "5 international collaborators"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   - type: metadata
   - type: split-bandcamp-metadata
     embed_code: '<iframe style="border: 0; width: 350px; height: 786px;" src="https://bandcamp.com/EmbeddedPlayer/album=2412288496/size=large/bgcol=ffffff/linkcol=0687f5/transparent=true/" seamless></iframe>'
@@ -51,10 +56,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/27-ambient-collective/thumbnail.jpg
+      - /assets/img/27-ambient-collective/thumbnail.jpg
+      - /assets/img/27-ambient-collective/thumbnail.jpg
+      - /assets/img/27-ambient-collective/thumbnail.jpg
     captions:
       - "Collaborative artwork design"
       - "Remote production process"

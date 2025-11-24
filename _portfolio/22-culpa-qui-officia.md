@@ -3,8 +3,10 @@ layout: work
 title: Culpa Qui Officia
 work_id: culpa-qui-officia
 abstract: "A biofeedback installation using heart rate and breathing patterns to generate unique sonic compositions for each visitor."
+description: |
+  A biofeedback installation using heart rate and breathing patterns to generate unique sonic compositions for each visitor.
 category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/22-culpa-qui-officia/thumbnail.jpg
 order: 22
 
 # Define metadata once here
@@ -31,13 +33,16 @@ metadata:
       value: "Real-time biofeedback synthesis"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
 
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/22-culpa-qui-officia/thumbnail.jpg
     caption: "Visitor experiencing the biofeedback installation"
 
   - type: text
@@ -52,10 +57,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/22-culpa-qui-officia/thumbnail.jpg
+      - /assets/img/22-culpa-qui-officia/thumbnail.jpg
+      - /assets/img/22-culpa-qui-officia/thumbnail.jpg
+      - /assets/img/22-culpa-qui-officia/thumbnail.jpg
     captions:
       - "Biofeedback sensors"
       - "Visitor engagement"

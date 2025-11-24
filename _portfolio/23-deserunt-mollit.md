@@ -3,8 +3,10 @@ layout: work
 title: Deserunt Mollit
 work_id: deserunt-mollit
 abstract: "A double album of piano-driven electronic compositions, blending classical instrumentation with contemporary production techniques."
+description: |
+  A double album of piano-driven electronic compositions, blending classical instrumentation with contemporary production techniques.
 category: releases
-image: /assets/img/dumbpic.jpg
+image: /assets/img/23-deserunt-mollit/thumbnail.jpg
 order: 23
 
 # Define metadata once here
@@ -32,6 +34,9 @@ metadata:
       value: "Neo-classical, Electronica, Ambient"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
@@ -50,10 +55,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/23-deserunt-mollit/thumbnail.jpg
+      - /assets/img/23-deserunt-mollit/thumbnail.jpg
+      - /assets/img/23-deserunt-mollit/thumbnail.jpg
+      - /assets/img/23-deserunt-mollit/thumbnail.jpg
     captions:
       - "Recording at FAMU Studio"
       - "Steinway Model D piano"

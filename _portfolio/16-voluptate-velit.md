@@ -3,8 +3,10 @@ layout: work
 title: Voluptate Velit
 work_id: voluptate-velit
 abstract: "A light and sound installation using laser projections and synthesized tones to create immersive geometric audiovisual patterns."
+description: |
+  A light and sound installation using laser projections and synthesized tones to create immersive geometric audiovisual patterns.
 category: installations
-image: /assets/img/dumbpic.jpg
+image: /assets/img/16-voluptate-velit/thumbnail.jpg
 order: 16
 
 # Define metadata once here
@@ -31,13 +33,16 @@ metadata:
       value: "Over 28,000 during exhibition period"
 
 sections:
+
+  # Description module - displays page.description
+  - type: description
   # Standalone metadata module - also uses front matter metadata
   - type: metadata
     # No fields specified - automatically uses front matter metadata
 
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/dumbpic.jpg
+    image: /assets/img/16-voluptate-velit/thumbnail.jpg
     caption: "Installation view at Kunsthalle Wien"
 
   - type: text
@@ -52,12 +57,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
-      - /assets/img/dumbpic.jpg
+      - /assets/img/16-voluptate-velit/thumbnail.jpg
+      - /assets/img/16-voluptate-velit/thumbnail.jpg
+      - /assets/img/16-voluptate-velit/thumbnail.jpg
+      - /assets/img/16-voluptate-velit/thumbnail.jpg
+      - /assets/img/16-voluptate-velit/thumbnail.jpg
+      - /assets/img/16-voluptate-velit/thumbnail.jpg
     captions:
       - "Laser projection patterns"
       - "Visitors experiencing the installation"
