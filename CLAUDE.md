@@ -243,10 +243,12 @@ Automated testing system to prevent breaking changes during development.
 
 ### Modifying Site Pages
 
-- **Bio**: Edit `bio.markdown`
-- **Events**: Edit `events.markdown`
-- **Contact**: Edit `contact.markdown`
-- **Homepage/Works Grid**: Managed by portfolio collection in `_portfolio/`
+- **Bio**: Edit `_pages/bio.markdown`
+- **Events**: Edit `_pages/events.markdown`
+- **Contact**: Edit `_pages/contact.markdown`
+- **Homepage/Works Grid**: Edit `_pages/index.markdown` or managed by portfolio collection in `_portfolio/`
+
+All page files are located in the `_pages/` directory.
 
 For detailed information, see [Architecture > Modifying Page Content](docs/architecture.md#modifying-page-content)
 

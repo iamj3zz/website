@@ -10,18 +10,23 @@
 - `404.html` - Custom 404 error page
 
 **Pages:**
-- `index.markdown` - Homepage displaying portfolio grid (uses `portfolio` layout)
-- `bio.markdown` - About/bio page at `/bio/`
-- `works.markdown` - Portfolio works page at `/works/` with filterable grid
-- `events.markdown` - Events page at `/events/`
-- `contact.markdown` - Contact page at `/contact/`
+All page files are located in the `_pages/` directory:
+- `_pages/index.markdown` - Homepage displaying portfolio grid (uses `portfolio` layout)
+- `_pages/bio.markdown` - About/bio page at `/bio/`
+- `_pages/bio-gallery.markdown` - Bio gallery page at `/bio-gallery/`
+- `_pages/works.markdown` - Portfolio works page at `/works/` with filterable grid
+- `_pages/events.markdown` - Events page at `/events/`
+- `_pages/contact.markdown` - Contact page at `/contact/`
+- `_pages/privacy.markdown` - Privacy policy page at `/privacy/`
+
+The `_pages/` directory is configured as a Jekyll collection in `_config.yml` to organize all site pages in one location.
 
 **Layouts:**
 - `_layouts/portfolio.html` - Main layout for pages with navigation and logo
 - `_layouts/work.html` - Layout for individual portfolio work detail pages
 
 **Collections:**
-- `_portfolio/` - Portfolio items collection (30 items numbered 01-30)
+- `_portfolio/` - Portfolio items collection (31 items numbered 01-31)
   - Each item has: `title`, `work_id`, `abstract`, `category`/`categories`, `image`, `order`, `metadata`, and `sections` array
   - Required `work_id` field (alphanumeric with hyphens/underscores only) for linking to events and internal references
   - Required `abstract` field (1-2 sentences) displayed in grid hover and printable page
@@ -49,9 +54,10 @@
 - `assets/img/` - Images including logo and portfolio work images
 
 **Includes:**
-- `_includes/work-modules/` - Modular components for work detail pages:
+- `_includes/work-modules/` - Modular components for work detail pages (11 modules total):
   - `hero-image.html` - Large featured image with optional caption
   - `text.html` - Rich text content with Markdown support
+  - `description.html` - Displays page.description field for work overview
   - `image-grid.html` - Grid of images (1-6 columns) with lightbox and captions
   - `iframe.html` - Universal iframe embed for any platform
   - `metadata.html` - Key-value metadata display
@@ -237,10 +243,14 @@ Site deploys to GitHub Pages automatically when pushed to the `main` branch. The
 
 ## Modifying Page Content
 
-- **Bio**: Edit `bio.markdown`
-- **Events**: Edit `events.markdown`
-- **Contact**: Edit `contact.markdown`
-- **Homepage/Works Grid**: Managed by portfolio collection, edit individual items in `_portfolio/`
+All page files are located in the `_pages/` directory:
+
+- **Bio**: Edit `_pages/bio.markdown`
+- **Bio Gallery**: Edit `_pages/bio-gallery.markdown`
+- **Events**: Edit `_pages/events.markdown`
+- **Contact**: Edit `_pages/contact.markdown`
+- **Privacy**: Edit `_pages/privacy.markdown`
+- **Homepage/Works Grid**: Edit `_pages/index.markdown` or managed by portfolio collection in `_portfolio/`
 
 ## Updating Logo
 
