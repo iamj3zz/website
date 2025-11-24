@@ -618,7 +618,7 @@ Two-column responsive layout with iframe on the left (1/3 width) and metadata pl
 
 See these portfolio works for complete working examples:
 
-- **Work 31** (`_portfolio/31-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - ALL metadata fields and ALL 10 module types with multiple configurations
+- **Work 31** (`_portfolio/31-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - ALL metadata fields and ALL 11 module types with multiple configurations
 - **Work 28** (`_portfolio/28-modular-example.md`): Complete example using all standard module types
 - **Work 29** (`_portfolio/29-split-layout-example.md`): Split layout modules demonstration
 - **Work 30** (`_portfolio/30-centralized-metadata-example.md`): Centralized metadata system example

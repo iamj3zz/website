@@ -200,7 +200,7 @@ The portfolio includes template works that demonstrate best practices:
 
 - **Work 31** (`_portfolio/31-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - Comprehensive reference demonstrating:
   - ALL possible metadata fields with examples and links
-  - ALL 10 module types with multiple configuration examples
+  - ALL 11 module types with multiple configuration examples
   - Multi-category work setup (installations, releases, live-acts, commissions)
   - Category-specific metadata guidelines in comments
   - Section module recommendations by category
