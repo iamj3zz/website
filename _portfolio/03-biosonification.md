@@ -1,12 +1,12 @@
 ---
 layout: work
-title: Consectetur
-work_id: consectetur
+title: Biosonification
+work_id: biosonification
 abstract: "An experimental EP exploring the intersection of ambient textures and rhythmic structures, recorded entirely using field recordings and analog synthesis."
 description: |
   An experimental EP exploring the intersection of ambient textures and rhythmic structures, recorded entirely using field recordings and analog synthesis.
 category: releases
-image: /assets/img/03-consectetur/thumbnail.jpg
+image: /assets/img/03-biosonification/thumbnail.jpg
 order: 3
 
 # Define metadata once here - it will be used by all modules below
