@@ -54,9 +54,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/03-consectetur/thumbnail.jpg
-      - /assets/img/03-consectetur/thumbnail.jpg
-      - /assets/img/03-consectetur/thumbnail.jpg
+      - /assets/img/03-biosonification/thumbnail.jpg
+      - /assets/img/03-biosonification/thumbnail.jpg
+      - /assets/img/03-biosonification/thumbnail.jpg
     captions:
       - "Recording session in Iceland"
       - "Analog synthesis setup"
