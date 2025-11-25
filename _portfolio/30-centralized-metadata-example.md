@@ -1,4 +1,5 @@
 ---
+published: true 
 layout: work
 title: Centralized Metadata Example
 work_id: centralized-metadata-example

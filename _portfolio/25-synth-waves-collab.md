@@ -1,4 +1,5 @@
 ---
+published: false 
 layout: work
 title: Synth Waves Collab
 work_id: synth-waves-collab

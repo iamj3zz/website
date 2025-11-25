@@ -1,4 +1,5 @@
 ---
+published: false 
 layout: work
 title: Visual Sound Fusion
 work_id: visual-sound-fusion

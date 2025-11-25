@@ -1,4 +1,5 @@
 ---
+published: true 
 title: MUTEK Montreal
 date: 2024-08-20
 time: "23:00"

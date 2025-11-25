@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Neon Nights Tokyo
 date: 2024-11-12
 time: "22:00"

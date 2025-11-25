@@ -1,4 +1,5 @@
 ---
+published: true 
 layout: work
 title: Complete Template Reference
 work_id: complete-template-reference

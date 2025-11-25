@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Autumn Showcase at Electric Dreams
 date: 2025-09-08
 time: "19:00"

@@ -1,4 +1,5 @@
 ---
+published: true 
 layout: work
 title: Vibrotanica
 work_id: vibrotanica

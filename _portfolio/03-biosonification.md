@@ -1,4 +1,5 @@
 ---
+published: true 
 layout: work
 title: Biosonification
 work_id: biosonification

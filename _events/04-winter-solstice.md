@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Winter Solstice Celebration
 date: 2025-12-21
 time: "18:00"

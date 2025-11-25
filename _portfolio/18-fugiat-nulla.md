@@ -1,4 +1,5 @@
 ---
+published: false 
 layout: work
 title: Fugiat Nulla
 work_id: fugiat-nulla
@@ -11,6 +12,7 @@ order: 18
 
 # Define metadata once here
 metadata:
+
   year: "2022"
   date: "December 31, 2022"
   location: "Rotterdam, Netherlands"

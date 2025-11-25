@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Atonal Festival
 date: 2024-08-23
 time: "21:00"
