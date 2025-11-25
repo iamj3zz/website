@@ -236,7 +236,7 @@ Automated testing system to prevent breaking changes during development.
 
 ### Adding a New Event
 
-1. Create file: `_events/event-name.md`
+1. Create file: `_events/YYYY-MM-DD-event-name.md` (e.g., `2025-06-15-festival-performance.md` using the actual event date)
 2. Follow event front matter standards from [Content Management](docs/content-management.md#events-_events)
 3. Optionally link to a work using `work_id` field
 4. Test locally and verify display on `/events/`
