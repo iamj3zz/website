@@ -319,7 +319,7 @@
   /* Works list rows */
   .works-list-row {
     display: grid !important;
-    grid-template-columns: 45px 110px 1fr !important;
+    grid-template-columns: 110px 1fr !important;
     gap: 15px !important;
     padding: 20px 0;
     border-bottom: 1px solid #e0e0e0;
@@ -337,12 +337,6 @@
   }
 
   /* Column styling for print */
-  .works-col-no {
-    font-size: 11px;
-    font-weight: bold;
-    color: #595959;
-  }
-
   .works-col-image {
     width: 110px !important;
     height: auto !important;

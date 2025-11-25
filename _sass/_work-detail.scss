@@ -164,7 +164,7 @@
 
 .works-list-row {
   display: grid;
-  grid-template-columns: 50px 120px 1fr;
+  grid-template-columns: 120px 1fr;
   gap: 20px;
   padding: 20px 0;
   border-bottom: 1px solid #e0e0e0;
@@ -173,13 +173,6 @@
 
 .works-list-row:last-child {
   border-bottom: none;
-}
-
-.works-col-no {
-  font-size: 12px;
-  color: #767676;
-  text-align: left;
-  font-weight: bold;
 }
 
 .works-col-image {

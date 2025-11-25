@@ -15,7 +15,7 @@ permalink: /
   </div>
 
   <div class="portfolio-grid">
-    {% assign sorted_portfolio = site.portfolio | sort: 'order' | reverse %}
+    {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' | reverse %}
     {% comment %} Filter out unpublished items {% endcomment %}
     {% for item in sorted_portfolio %}
       {% if item.published == false %}
