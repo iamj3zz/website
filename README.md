@@ -247,8 +247,8 @@ git push origin main
 ### Adding a New Event
 
 ```bash
-# 1. Create new file
-touch _events/event-name.md
+# 1. Create new file (using event date YYYY-MM-DD)
+touch _events/2025-06-15-event-name.md
 
 # 2. Add front matter (see docs/content-management.md)
 # 3. Test and deploy

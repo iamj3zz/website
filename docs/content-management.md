@@ -120,6 +120,13 @@ sections:
 
 ### Events (_events/)
 
+**File Naming Convention:**
+Event files should use date-based naming: `YYYY-MM-DD-event-name.md`
+- Use the actual event date from the `date` field
+- Example: `2025-06-15-sonar-festival.md`
+- Provides chronological organization in the file system
+- Matches the pattern used for portfolio works
+
 **Required Fields:**
 - `title` - Event name (string)
 - `date` - Event date in YYYY-MM-DD format (e.g., 2025-03-15)
