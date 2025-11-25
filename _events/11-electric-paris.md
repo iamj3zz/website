@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Electric Paris Showcase
 date: 2023-05-27
 time: "21:00"

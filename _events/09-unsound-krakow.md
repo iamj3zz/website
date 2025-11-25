@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Unsound Festival
 date: 2023-10-14
 time: "20:00"

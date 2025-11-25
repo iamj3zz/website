@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Transmediale Festival
 date: 2026-02-03
 time: "20:00"

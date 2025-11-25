@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Spring Electronic Music Festival
 date: 2025-03-15
 time: "20:00"

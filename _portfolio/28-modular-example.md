@@ -1,4 +1,5 @@
 ---
+published: true 
 layout: work
 title: Modular Layout Example
 work_id: modular-layout-example

@@ -1,4 +1,5 @@
 ---
+published: true 
 title: NODE Forum for Digital Arts
 date: 2026-04-18
 time: "19:00"

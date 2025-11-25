@@ -1,4 +1,5 @@
 ---
+published: true 
 title: Summer Night at Rooftop Sessions
 date: 2025-06-22
 time: "21:30"
