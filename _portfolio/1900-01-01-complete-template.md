@@ -43,7 +43,7 @@ metadata:
   produced_by_link: "https://productioncompany.com"
 
   client: "Client Organization Name"
-  # client_link: "/works/01-vibrotanica/"  # Example: Can link to internal pages
+  # client_link: "/works/2026-01-01-vibrotanica/"  # Example: Can link to internal pages
 
   commissioned_by: "Arts Foundation or Festival Name"
   commissioned_by_link: "https://artsfoundation.org"
@@ -135,7 +135,7 @@ metadata:
 
     - label: "Related Work"
       value: "See companion piece"
-      link: "/works/01-vibrotanica/"  # Example: link to another work
+      link: "/works/2026-01-01-vibrotanica/"  # Example: link to another work
 
 # ====================
 # SECTIONS ARRAY
