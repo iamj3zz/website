@@ -169,11 +169,11 @@ Front matter standards, adding portfolio works and events, multi-category suppor
 - Front matter examples and templates
 
 ### 🧩 [Modules Reference](docs/modules-reference.md)
-Complete reference for all 10 modular layout components with examples.
+Complete reference for all 11 modular layout components with examples.
 
 **Read this for:**
 - Centralized metadata system
-- All 10 module types (hero-image, text, image-grid, metadata, quote, spacer, linked-events, iframe, split-hero-metadata, split-bandcamp-metadata)
+- All 11 module types (hero-image, text, description, image-grid, metadata, quote, spacer, linked-events, iframe, split-hero-metadata, split-bandcamp-metadata)
 - Module configuration and parameters
 - Layout and ordering guidelines
 - Working examples
@@ -227,7 +227,7 @@ Automated testing system to prevent breaking changes during development.
 
 ### Adding a New Portfolio Work
 
-1. Create file: `_portfolio/##-work-slug.md` (e.g., `31-new-work.md`)
+1. Create file: `_portfolio/YYYY-MM-DD-work-slug.md` (e.g., `2026-01-01-new-work.md` using the actual release/creation date)
 2. Follow the standardized structure from [Best Practices](docs/best-practices.md#creating-new-works---step-by-step)
 3. Use category-specific metadata template from [Metadata Reference](docs/metadata-reference.md)
 4. Combine modules from [Modules Reference](docs/modules-reference.md)
@@ -287,10 +287,10 @@ If Mailchimp is not configured, the form will show "Newsletter signup coming soo
 
 Reference these portfolio works for implementation examples:
 
-- **Work 31** (`_portfolio/31-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - Comprehensive reference with ALL metadata fields and module types
-- **Work 28** (`_portfolio/28-modular-example.md`): All standard module types
-- **Work 29** (`_portfolio/29-split-layout-example.md`): Split layout modules
-- **Work 30** (`_portfolio/30-centralized-metadata-example.md`): Centralized metadata system
+- **Work 31** (`_portfolio/1900-01-01-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - Comprehensive reference with ALL metadata fields and module types
+- **Work 28** (`_portfolio/1900-01-01-modular-example.md`): All standard module types
+- **Work 29** (`_portfolio/1900-01-01-split-layout-example.md`): Split layout modules
+- **Work 30** (`_portfolio/1900-01-01-centralized-metadata-example.md`): Centralized metadata system
 
 ## Testing & Quality Assurance
 

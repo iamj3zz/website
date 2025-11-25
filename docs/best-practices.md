@@ -50,7 +50,7 @@ sections:
 
 ## Creating New Works - Step by Step
 
-1. **Create the file**: Use format `##-work-slug.md` in `_portfolio/` directory
+1. **Create the file**: Use format `YYYY-MM-DD-work-slug.md` in `_portfolio/` directory (e.g., `2026-01-01-new-work.md` using the actual release/creation date)
 2. **Define basic front matter**: title, work_id, abstract, **description**, category, image, order
 3. **Add centralized metadata**: Use category-specific template from [Metadata Reference](metadata-reference.md)
 4. **Build sections array**: Start with `description` module, then combine other modules to tell the work's story (see [Modules Reference](modules-reference.md))
@@ -198,7 +198,7 @@ metadata:
 
 The portfolio includes template works that demonstrate best practices:
 
-- **Work 31** (`_portfolio/31-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - Comprehensive reference demonstrating:
+- **Work 31** (`_portfolio/1900-01-01-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - Comprehensive reference demonstrating:
   - ALL possible metadata fields with examples and links
   - ALL 11 module types with multiple configuration examples
   - Multi-category work setup (installations, releases, live-acts, commissions)
@@ -206,9 +206,9 @@ The portfolio includes template works that demonstrate best practices:
   - Section module recommendations by category
   - Complete usage guide in HTML comments
   - **Use this as your primary template for new works**
-- **Work 28** (`_portfolio/28-modular-example.md`): Complete example using all standard module types
-- **Work 29** (`_portfolio/29-split-layout-example.md`): Split layout modules demonstration
-- **Work 30** (`_portfolio/30-centralized-metadata-example.md`): Centralized metadata system example
+- **Work 28** (`_portfolio/1900-01-01-modular-example.md`): Complete example using all standard module types
+- **Work 29** (`_portfolio/1900-01-01-split-layout-example.md`): Split layout modules demonstration
+- **Work 30** (`_portfolio/1900-01-01-centralized-metadata-example.md`): Centralized metadata system example
 
 **Recommended workflow**: Copy Work 31 as starting point for new works, then remove fields/modules that don't apply.
 
