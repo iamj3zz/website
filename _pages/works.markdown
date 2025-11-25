@@ -16,7 +16,7 @@ permalink: /works/
   </div>
 
   <div class="portfolio-grid">
-    {% assign sorted_portfolio = site.portfolio | sort: 'order' | reverse %}
+    {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' | reverse %}
     {% comment %} Filter out unpublished items {% endcomment %}
     {% for item in sorted_portfolio %}
       {% if item.published == false %}
@@ -50,7 +50,7 @@ permalink: /works/
   </div>
 
   <div class="works-list-print">
-    {% assign sorted_portfolio = site.portfolio | sort: 'order' | reverse %}
+    {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' | reverse %}
     {% for item in sorted_portfolio %}
       {% if item.published == false %}
         {% continue %}
@@ -62,10 +62,9 @@ permalink: /works/
         {% assign display_categories = item.category | replace: '-', ' ' %}
       {% endif %}
       <div class="works-list-row" data-work-url="{{ site.url }}{{ item.url }}">
-        <div class="works-col-no">{{ item.order }}</div>
         <div class="works-col-image">
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
-          <div class="works-qr-code" id="qr-{{ item.order }}"></div>
+          <div class="works-qr-code" id="qr-{{ item.work_id }}"></div>
         </div>
         <div class="works-col-content">
           <div class="works-col-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></div>
@@ -81,9 +80,10 @@ permalink: /works/
           {% endif %}
           {% comment %} Build metadata string WITHOUT categories {% endcomment %}
           {% assign metadata_string = "" %}
-          {% if item.metadata.year %}
+          {% if item.metadata.release_date %}
+            {% assign formatted_date = item.metadata.release_date | date: "%B %-d, %Y" %}
             {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-            {% assign metadata_string = metadata_string | append: "Year: " | append: item.metadata.year %}
+            {% assign metadata_string = metadata_string | append: "Released: " | append: formatted_date %}
           {% endif %}
           {% if item.metadata.location %}
             {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}

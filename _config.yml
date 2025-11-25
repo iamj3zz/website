@@ -61,6 +61,7 @@ collections:
     sort_by: date
 
 # Build settings
+future: true  # Allow posts/collections with future dates
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at

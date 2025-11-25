@@ -3,8 +3,8 @@
   This allows metadata to be defined once in front matter and reused across modules
 {% endcomment %}
 
-{% assign year = page.metadata.year | default: include.year %}
-{% assign year_link = page.metadata.year_link | default: include.year_link %}
+{% assign release_date = page.metadata.release_date | default: include.release_date %}
+{% assign release_date_link = page.metadata.release_date_link | default: include.release_date_link %}
 {% assign date = page.metadata.date | default: include.date %}
 {% assign date_link = page.metadata.date_link | default: include.date_link %}
 {% assign isrc = page.metadata.isrc | default: include.isrc %}
@@ -58,11 +58,11 @@
 <div class="module module-metadata">
   <div class="metadata-grid">
     {% comment %} Temporal Information {% endcomment %}
-    {% if year %}
+    {% if release_date %}
       <div class="metadata-item">
-        <span class="metadata-label">Year</span>
+        <span class="metadata-label">Released on</span>
         <span class="metadata-value">
-          {% if year_link %}<a href="{{ year_link }}" target="_blank" rel="noopener">{{ year }}</a>{% else %}{{ year }}{% endif %}
+          {% if release_date_link %}<a href="{{ release_date_link }}" target="_blank" rel="noopener">{{ release_date | date: "%B %-d, %Y" }}</a>{% else %}{{ release_date | date: "%B %-d, %Y" }}{% endif %}
         </span>
       </div>
     {% endif %}

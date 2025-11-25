@@ -231,7 +231,7 @@
           {% comment %} Find next published work {% endcomment %}
           {% assign next_work = nil %}
           {% assign found_current = false %}
-          {% assign sorted_portfolio = site.portfolio | sort: 'order' %}
+          {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' %}
           {% for work in sorted_portfolio %}
             {% if found_current and work.published != false %}
               {% assign next_work = work %}
@@ -259,7 +259,7 @@
         <div class="work-nav-right">
           {% comment %} Find previous published work {% endcomment %}
           {% assign prev_work = nil %}
-          {% assign sorted_portfolio_reverse = site.portfolio | sort: 'order' | reverse %}
+          {% assign sorted_portfolio_reverse = site.portfolio | sort: 'metadata.release_date' | reverse %}
           {% assign found_current_prev = false %}
           {% for work in sorted_portfolio_reverse %}
             {% if found_current_prev and work.published != false %}
