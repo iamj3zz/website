@@ -41,8 +41,38 @@ The `_pages/` directory is configured as a Jekyll collection in `_config.yml` to
   - Events do not generate individual pages (`output: false`)
   - Displayed on main Events page and can be linked to works via linked-events module
 
+**File Naming Conventions:**
+
+Portfolio works use a **dual naming system** for flexible organization:
+
+1. **Filename Date** (`YYYY-MM-DD-work-slug.md`):
+   - Use the actual **release/creation date** of the work
+   - Examples: `2026-01-01-vibrotanica.md`, `2023-09-22-racines-et-resonances.md`
+   - Provides chronological organization in the file system
+   - Template/placeholder works use `1900-01-01-` prefix
+
+2. **Order Field** (in front matter):
+   - Controls the **display position** in the portfolio grid
+   - Higher numbers appear first (e.g., `order: 31` appears before `order: 30`)
+   - Independent of filename date - allows custom sorting
+
+This dual system allows you to:
+- Keep files organized chronologically by actual release date
+- Display works in any order you want on the site (newest first, by importance, etc.)
+- Easily identify when works were released without opening files
+
+**Example:**
+```yaml
+# File: _portfolio/2023-04-20-biosonification.md
+---
+title: "Biosonification"
+order: 29  # Displayed after works with order 30+, before works with order 28-
+# ... rest of front matter
+---
+```
+
 **Assets:**
-- `assets/css/portfolio.css` - Custom CSS for entire site including print media queries
+- `_sass/` - SCSS stylesheets compiled by Jekyll (including `_portfolio.scss`, `_work-detail.scss`, `_print.scss`, etc.)
 - `assets/js/portfolio.js` - JavaScript for portfolio filtering with multi-category support
 - `assets/js/lightbox.js` - Lightbox functionality for image galleries
 - `assets/js/print-header-qrcode.js` - Universal QR code generator for print header (all pages)

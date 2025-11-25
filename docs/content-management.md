@@ -14,7 +14,12 @@ All collection items must follow these front matter standards to ensure consiste
 - `description` - **NEW**: Comprehensive description of the work (3-5 sentences, 200-400 characters) displayed on the work detail page via the description module. Supports Markdown formatting. Provides context beyond the abstract. Use this for introducing the work's concept, goals, and key features.
 - `image` - Path to preview image (e.g., `/assets/img/filename.jpg`)
 - `order` - Numeric order for sorting (higher numbers appear first)
-- `metadata` - Centralized metadata structure with category-specific fields (see [Metadata Reference](metadata-reference.md))
+- `metadata` - Centralized metadata structure with category-specific fields (see [Metadata Reference](metadata-reference.md)). Common metadata fields include:
+  - `release_date` - ISO format date (YYYY-MM-DD) for the work's release/opening/premiere
+  - `year` - Display year (string)
+  - `location` - City, Country
+  - `role` - Your role in the work
+  - Additional category-specific fields (see Metadata Reference)
 
 **Category Fields (Required - choose one format):**
 - **Single category:** `category: value` (where value is: installations, live-acts, releases, or commissions)
@@ -47,6 +52,7 @@ order: 15
 
 # Centralized metadata
 metadata:
+  release_date: "2024-01-01"  # ISO format date (YYYY-MM-DD) for releases, installations, etc.
   year: "2024"
   location: "City, Country"
   role: "Sound artist, composer"
@@ -89,6 +95,7 @@ image: /assets/img/project.jpg
 order: 15
 
 metadata:
+  release_date: "2024-03-15"  # ISO format date (YYYY-MM-DD)
   year: "2024"
   location: "Paris, France"
   places: "Venue Name"
@@ -186,11 +193,11 @@ primary_category: installations  # Used for primary overlay color
 
 **IMPORTANT**: All new works should follow the standardized structure with centralized metadata and modular sections (see [Best Practices](best-practices.md)).
 
-**⭐ RECOMMENDED**: Copy `_portfolio/31-complete-template.md` as your starting point - it includes ALL metadata fields and module types with comprehensive examples and guidance.
+**⭐ RECOMMENDED**: Copy `_portfolio/1900-01-01-complete-template.md` as your starting point - it includes ALL metadata fields and module types with comprehensive examples and guidance.
 
 ### Recommended Approach - Modular Layout with Centralized Metadata
 
-1. **Create the file**: `##-work-name.md` in `_portfolio/` (e.g., `31-new-work.md`)
+1. **Create the file**: `YYYY-MM-DD-work-name.md` in `_portfolio/` (e.g., `2026-01-01-new-work.md` using the actual release/creation date)
 2. **Add front matter** with required fields:
 ```yaml
 ---
@@ -204,6 +211,7 @@ order: 31  # Higher numbers appear first
 
 # Centralized metadata - use category-specific template
 metadata:
+  release_date: "2024-01-01"  # ISO format date (YYYY-MM-DD)
   year: "2024"
   location: "City, Country"
   role: "Your role"
