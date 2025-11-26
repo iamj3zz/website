@@ -1,16 +1,19 @@
 // Generate QR codes for bio sub-menu links in print
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function() {
   // Only run on bio page
   if (!document.querySelector('.bio-links')) {
     return;
   }
 
   // Find all bio links
-  var bioLinks = document.querySelectorAll('.bio-link');
+  const bioLinks = document.querySelectorAll('.bio-link');
 
   bioLinks.forEach(function(link) {
     // Get the full URL (relative or absolute)
-    var linkUrl = link.getAttribute('href');
+    let linkUrl = link.getAttribute('href');
 
     // Convert relative URLs to absolute
     if (linkUrl && !linkUrl.startsWith('http')) {
@@ -20,16 +23,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!linkUrl) return;
 
     // Create wrapper to hold link and QR code vertically
-    var wrapper = document.createElement('div');
+    const wrapper = document.createElement('div');
     wrapper.className = 'bio-link-wrapper';
 
     // Move link into wrapper
-    var parent = link.parentNode;
+    const parent = link.parentNode;
     parent.insertBefore(wrapper, link);
     wrapper.appendChild(link);
 
     // Create QR code container
-    var qrContainer = document.createElement('span');
+    const qrContainer = document.createElement('span');
     qrContainer.className = 'bio-link-qr';
 
     // Add QR container below the link
@@ -45,4 +48,5 @@ document.addEventListener('DOMContentLoaded', function() {
       correctLevel: QRCode.CorrectLevel.M
     });
   });
-});
+  });
+})();

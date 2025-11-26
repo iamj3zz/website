@@ -1,5 +1,8 @@
 // Portfolio filtering functionality
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function() {
   const filterButtons = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
   const categoryTags = document.querySelectorAll('.category-tag');
@@ -54,4 +57,4 @@ document.addEventListener('DOMContentLoaded', function() {
       applyFilter(filterValue);
     });
   });
-});
+})();

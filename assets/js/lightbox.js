@@ -1,5 +1,8 @@
 // Lightbox functionality for image-grid module
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function() {
   const lightbox = document.getElementById('lightbox');
   const lightboxImg = document.getElementById('lightbox-img');
   const lightboxCaption = document.getElementById('lightbox-caption');
@@ -114,4 +117,5 @@ document.addEventListener('DOMContentLoaded', function() {
         break;
     }
   });
-});
+  });
+})();

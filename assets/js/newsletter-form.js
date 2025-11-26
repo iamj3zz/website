@@ -1,7 +1,9 @@
 // Newsletter Form Validation
 // Validates all required fields before submission to Mailchimp
+(function() {
+  'use strict';
 
-document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function() {
   const form = document.getElementById('mc-embedded-subscribe-form');
 
   if (!form) {
@@ -255,4 +257,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   });
-});
+  });
+})();

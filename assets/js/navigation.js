@@ -1,5 +1,8 @@
 // Mobile Navigation Toggle
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function() {
   const menuToggle = document.querySelector('.mobile-menu-toggle');
   const mainNav = document.querySelector('.main-nav');
 
@@ -29,4 +32,5 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   }
-});
+  });
+})();

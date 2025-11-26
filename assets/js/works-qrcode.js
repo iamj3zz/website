@@ -1,5 +1,8 @@
 // Generate QR codes for printable works page
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function() {
   // Only generate QR codes on works page
   if (!document.querySelector('.works-list-print')) {
     return;
@@ -24,4 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
       });
     }
   });
-});
+  });
+})();

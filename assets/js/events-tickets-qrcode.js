@@ -1,16 +1,19 @@
 // Generate QR codes for event ticket links in print
-document.addEventListener('DOMContentLoaded', function() {
+(function() {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function() {
   // Only run on events page
   if (!document.querySelector('.events-section')) {
     return;
   }
 
   // Find all ticket QR code placeholders
-  var ticketQRs = document.querySelectorAll('.event-ticket-qr');
+  const ticketQRs = document.querySelectorAll('.event-ticket-qr');
 
   ticketQRs.forEach(function(qrContainer) {
     // Get the ticket URL from data attribute
-    var ticketUrl = qrContainer.getAttribute('data-ticket-url');
+    const ticketUrl = qrContainer.getAttribute('data-ticket-url');
 
     if (!ticketUrl) return;
 
@@ -24,4 +27,5 @@ document.addEventListener('DOMContentLoaded', function() {
       correctLevel: QRCode.CorrectLevel.M
     });
   });
-});
+  });
+})();
