@@ -255,6 +255,7 @@ Automated testing system to prevent breaking changes during development.
 ### Modifying Site Pages
 
 - **Bio**: Edit `_pages/bio.markdown`
+- **Bio Gallery**: Edit `_pages/bio-gallery.markdown` (press photos with front matter-based image management)
 - **Events**: Edit `_pages/events.markdown`
 - **Contact**: Edit `_pages/contact.markdown`
 - **Homepage/Works Grid**: Edit `_pages/index.markdown` or managed by portfolio collection in `_portfolio/`
