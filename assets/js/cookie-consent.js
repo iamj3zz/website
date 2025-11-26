@@ -17,20 +17,31 @@
 
   // Check if consent has been given
   function hasConsent() {
-    return localStorage.getItem('cookieConsent') !== null;
+    try {
+      return localStorage.getItem('cookieConsent') !== null;
+    } catch (e) {
+      // localStorage not available
+      return false;
+    }
   }
 
   // Get current consent preferences
   function getConsent() {
-    const consent = localStorage.getItem('cookieConsent');
-    if (consent) {
-      try {
-        return JSON.parse(consent);
-      } catch (e) {
-        return null;
+    try {
+      const consent = localStorage.getItem('cookieConsent');
+      if (consent) {
+        try {
+          return JSON.parse(consent);
+        } catch (e) {
+          // Invalid JSON, return null
+          return null;
+        }
       }
+      return null;
+    } catch (e) {
+      // localStorage not available (Safari private browsing, etc.)
+      return null;
     }
-    return null;
   }
 
   // Save consent preferences
@@ -41,7 +52,14 @@
       timestamp: new Date().toISOString()
     };
 
-    localStorage.setItem('cookieConsent', JSON.stringify(consent));
+    try {
+      localStorage.setItem('cookieConsent', JSON.stringify(consent));
+    } catch (e) {
+      // localStorage not available or quota exceeded
+      // Could be Safari private browsing, storage quota, or other issues
+      console.warn('Failed to save cookie preferences:', e.message);
+      // Continue anyway - dispatch event so the session still works
+    }
 
     // Dispatch event for analytics and other scripts
     window.dispatchEvent(new CustomEvent('cookieConsentUpdated', {
