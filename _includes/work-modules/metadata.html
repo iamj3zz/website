@@ -62,7 +62,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Released on</span>
         <span class="metadata-value">
-          {% if release_date_link %}<a href="{{ release_date_link }}" target="_blank" rel="noopener">{{ release_date | date: "%B %-d, %Y" }}</a>{% else %}{{ release_date | date: "%B %-d, %Y" }}{% endif %}
+          {% if release_date_link %}<a href="{{ release_date_link }}" target="_blank" rel="noopener noreferrer">{{ release_date | date: "%B %-d, %Y" }}</a>{% else %}{{ release_date | date: "%B %-d, %Y" }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -70,7 +70,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Date</span>
         <span class="metadata-value">
-          {% if date_link %}<a href="{{ date_link }}" target="_blank" rel="noopener">{{ date }}</a>{% else %}{{ date }}{% endif %}
+          {% if date_link %}<a href="{{ date_link }}" target="_blank" rel="noopener noreferrer">{{ date }}</a>{% else %}{{ date }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -80,7 +80,7 @@
       <div class="metadata-item">
         <span class="metadata-label">ISRC</span>
         <span class="metadata-value">
-          {% if isrc_link %}<a href="{{ isrc_link }}" target="_blank" rel="noopener">{{ isrc }}</a>{% else %}{{ isrc }}{% endif %}
+          {% if isrc_link %}<a href="{{ isrc_link }}" target="_blank" rel="noopener noreferrer">{{ isrc }}</a>{% else %}{{ isrc }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -88,7 +88,7 @@
       <div class="metadata-item">
         <span class="metadata-label">UPC</span>
         <span class="metadata-value">
-          {% if upc_link %}<a href="{{ upc_link }}" target="_blank" rel="noopener">{{ upc }}</a>{% else %}{{ upc }}{% endif %}
+          {% if upc_link %}<a href="{{ upc_link }}" target="_blank" rel="noopener noreferrer">{{ upc }}</a>{% else %}{{ upc }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -96,7 +96,7 @@
       <div class="metadata-item">
         <span class="metadata-label">ISWC</span>
         <span class="metadata-value">
-          {% if iswc_link %}<a href="{{ iswc_link }}" target="_blank" rel="noopener">{{ iswc }}</a>{% else %}{{ iswc }}{% endif %}
+          {% if iswc_link %}<a href="{{ iswc_link }}" target="_blank" rel="noopener noreferrer">{{ iswc }}</a>{% else %}{{ iswc }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -106,7 +106,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Location</span>
         <span class="metadata-value">
-          {% if location_link %}<a href="{{ location_link }}" target="_blank" rel="noopener">{{ location }}</a>{% else %}{{ location }}{% endif %}
+          {% if location_link %}<a href="{{ location_link }}" target="_blank" rel="noopener noreferrer">{{ location }}</a>{% else %}{{ location }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -114,7 +114,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Performed in</span>
         <span class="metadata-value">
-          {% if performed_in_link %}<a href="{{ performed_in_link }}" target="_blank" rel="noopener">{{ performed_in }}</a>{% else %}{{ performed_in }}{% endif %}
+          {% if performed_in_link %}<a href="{{ performed_in_link }}" target="_blank" rel="noopener noreferrer">{{ performed_in }}</a>{% else %}{{ performed_in }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -122,7 +122,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Places</span>
         <span class="metadata-value">
-          {% if places_link %}<a href="{{ places_link }}" target="_blank" rel="noopener">{{ places }}</a>{% else %}{{ places }}{% endif %}
+          {% if places_link %}<a href="{{ places_link }}" target="_blank" rel="noopener noreferrer">{{ places }}</a>{% else %}{{ places }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -132,7 +132,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Produced by</span>
         <span class="metadata-value">
-          {% if produced_by_link %}<a href="{{ produced_by_link }}" target="_blank" rel="noopener">{{ produced_by }}</a>{% else %}{{ produced_by }}{% endif %}
+          {% if produced_by_link %}<a href="{{ produced_by_link }}" target="_blank" rel="noopener noreferrer">{{ produced_by }}</a>{% else %}{{ produced_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -140,7 +140,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Commissioned by</span>
         <span class="metadata-value">
-          {% if commissioned_by_link %}<a href="{{ commissioned_by_link }}" target="_blank" rel="noopener">{{ commissioned_by }}</a>{% else %}{{ commissioned_by }}{% endif %}
+          {% if commissioned_by_link %}<a href="{{ commissioned_by_link }}" target="_blank" rel="noopener noreferrer">{{ commissioned_by }}</a>{% else %}{{ commissioned_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -148,7 +148,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Curated by</span>
         <span class="metadata-value">
-          {% if curated_by_link %}<a href="{{ curated_by_link }}" target="_blank" rel="noopener">{{ curated_by }}</a>{% else %}{{ curated_by }}{% endif %}
+          {% if curated_by_link %}<a href="{{ curated_by_link }}" target="_blank" rel="noopener noreferrer">{{ curated_by }}</a>{% else %}{{ curated_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -158,7 +158,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Role</span>
         <span class="metadata-value">
-          {% if role_link %}<a href="{{ role_link }}" target="_blank" rel="noopener">{{ role }}</a>{% else %}{{ role }}{% endif %}
+          {% if role_link %}<a href="{{ role_link }}" target="_blank" rel="noopener noreferrer">{{ role }}</a>{% else %}{{ role }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -166,7 +166,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Technology</span>
         <span class="metadata-value">
-          {% if technology_link %}<a href="{{ technology_link }}" target="_blank" rel="noopener">{{ technology }}</a>{% else %}{{ technology }}{% endif %}
+          {% if technology_link %}<a href="{{ technology_link }}" target="_blank" rel="noopener noreferrer">{{ technology }}</a>{% else %}{{ technology }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -176,7 +176,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Collaborators</span>
         <span class="metadata-value">
-          {% if collaborators_link %}<a href="{{ collaborators_link }}" target="_blank" rel="noopener">{{ collaborators }}</a>{% else %}{{ collaborators }}{% endif %}
+          {% if collaborators_link %}<a href="{{ collaborators_link }}" target="_blank" rel="noopener noreferrer">{{ collaborators }}</a>{% else %}{{ collaborators }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -184,7 +184,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Credits</span>
         <span class="metadata-value">
-          {% if credits_link %}<a href="{{ credits_link }}" target="_blank" rel="noopener">{{ credits }}</a>{% else %}{{ credits }}{% endif %}
+          {% if credits_link %}<a href="{{ credits_link }}" target="_blank" rel="noopener noreferrer">{{ credits }}</a>{% else %}{{ credits }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -192,7 +192,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Partners</span>
         <span class="metadata-value">
-          {% if partners_link %}<a href="{{ partners_link }}" target="_blank" rel="noopener">{{ partners }}</a>{% else %}{{ partners }}{% endif %}
+          {% if partners_link %}<a href="{{ partners_link }}" target="_blank" rel="noopener noreferrer">{{ partners }}</a>{% else %}{{ partners }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -200,7 +200,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Supporters</span>
         <span class="metadata-value">
-          {% if supporters_link %}<a href="{{ supporters_link }}" target="_blank" rel="noopener">{{ supporters }}</a>{% else %}{{ supporters }}{% endif %}
+          {% if supporters_link %}<a href="{{ supporters_link }}" target="_blank" rel="noopener noreferrer">{{ supporters }}</a>{% else %}{{ supporters }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -210,7 +210,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Composer, performer, producer</span>
         <span class="metadata-value">
-          {% if composer_performer_producer_link %}<a href="{{ composer_performer_producer_link }}" target="_blank" rel="noopener">{{ composer_performer_producer }}</a>{% else %}{{ composer_performer_producer }}{% endif %}
+          {% if composer_performer_producer_link %}<a href="{{ composer_performer_producer_link }}" target="_blank" rel="noopener noreferrer">{{ composer_performer_producer }}</a>{% else %}{{ composer_performer_producer }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -218,7 +218,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Mastering by</span>
         <span class="metadata-value">
-          {% if mastering_by_link %}<a href="{{ mastering_by_link }}" target="_blank" rel="noopener">{{ mastering_by }}</a>{% else %}{{ mastering_by }}{% endif %}
+          {% if mastering_by_link %}<a href="{{ mastering_by_link }}" target="_blank" rel="noopener noreferrer">{{ mastering_by }}</a>{% else %}{{ mastering_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -226,7 +226,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Artwork by</span>
         <span class="metadata-value">
-          {% if artwork_by_link %}<a href="{{ artwork_by_link }}" target="_blank" rel="noopener">{{ artwork_by }}</a>{% else %}{{ artwork_by }}{% endif %}
+          {% if artwork_by_link %}<a href="{{ artwork_by_link }}" target="_blank" rel="noopener noreferrer">{{ artwork_by }}</a>{% else %}{{ artwork_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -236,7 +236,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Interview</span>
         <span class="metadata-value">
-          {% if interview_link %}<a href="{{ interview_link }}" target="_blank" rel="noopener">{{ interview }}</a>{% else %}{{ interview }}{% endif %}
+          {% if interview_link %}<a href="{{ interview_link }}" target="_blank" rel="noopener noreferrer">{{ interview }}</a>{% else %}{{ interview }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -244,7 +244,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Press kit</span>
         <span class="metadata-value">
-          {% if press_kit_link %}<a href="{{ press_kit_link }}" target="_blank" rel="noopener">{{ press_kit }}</a>{% else %}{{ press_kit }}{% endif %}
+          {% if press_kit_link %}<a href="{{ press_kit_link }}" target="_blank" rel="noopener noreferrer">{{ press_kit }}</a>{% else %}{{ press_kit }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -252,7 +252,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Socials</span>
         <span class="metadata-value">
-          {% if socials_link %}<a href="{{ socials_link }}" target="_blank" rel="noopener">{{ socials }}</a>{% else %}{{ socials }}{% endif %}
+          {% if socials_link %}<a href="{{ socials_link }}" target="_blank" rel="noopener noreferrer">{{ socials }}</a>{% else %}{{ socials }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -262,7 +262,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Special thanks</span>
         <span class="metadata-value">
-          {% if special_thanks_link %}<a href="{{ special_thanks_link }}" target="_blank" rel="noopener">{{ special_thanks }}</a>{% else %}{{ special_thanks }}{% endif %}
+          {% if special_thanks_link %}<a href="{{ special_thanks_link }}" target="_blank" rel="noopener noreferrer">{{ special_thanks }}</a>{% else %}{{ special_thanks }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -270,7 +270,7 @@
       <div class="metadata-item">
         <span class="metadata-label">Client</span>
         <span class="metadata-value">
-          {% if client_link %}<a href="{{ client_link }}" target="_blank" rel="noopener">{{ client }}</a>{% else %}{{ client }}{% endif %}
+          {% if client_link %}<a href="{{ client_link }}" target="_blank" rel="noopener noreferrer">{{ client }}</a>{% else %}{{ client }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -281,7 +281,7 @@
         <div class="metadata-item">
           <span class="metadata-label">{{ item.label }}</span>
           <span class="metadata-value">
-            {% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener">{{ item.value }}</a>{% else %}{{ item.value }}{% endif %}
+            {% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.value }}</a>{% else %}{{ item.value }}{% endif %}
           </span>
         </div>
       {% endfor %}

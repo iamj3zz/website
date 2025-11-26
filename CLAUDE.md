@@ -37,19 +37,21 @@ Generates the static site in the `_site/` directory.
 
 **⚠️ IMPORTANT: All testing happens LOCALLY. GitHub Actions only builds and deploys - it does NOT run tests!**
 
-**Easiest way - Just commit and push (tests run automatically):**
+**Tests run automatically before EVERY commit:**
 ```bash
 git add .
-git commit -m "Your message"
-git push origin main
+git commit -m "Your message"  # ← Full tests run here automatically
+git push origin main          # ← Push proceeds immediately (tests already passed)
 ```
-The pre-push hook automatically runs `./test-before-push.sh` for you. No need to run it manually.
+The **pre-commit hook** automatically runs the complete test suite (`./test-before-push.sh`) before EVERY commit. This ensures you never commit broken code.
+
+**Commits will be blocked if tests fail.** Fix the errors, then try committing again.
 
 **Optional - Manual testing during development:**
 ```bash
 ./test-before-push.sh
 ```
-Run this if you want to catch errors early while developing, before committing. The pre-push hook will run the same tests again automatically when you push.
+Run this to test your changes before committing. Useful for catching errors early during development.
 
 **Individual test commands:**
 ```bash
@@ -102,22 +104,22 @@ npm install
 npx lefthook install
 ```
 
-**What runs automatically and BLOCKS commits/pushes if tests fail:**
-- **Pre-commit**: YAML linting on **staged files only** (fast check, <1 sec, blocks commit if YAML is invalid)
-- **Pre-push**: Full test suite via `./test-before-push.sh` on **ALL files** (complete validation, ~30-60 sec, blocks push if any test fails)
+**What runs automatically and BLOCKS commits if tests fail:**
+- **Pre-commit**: Complete test suite via `./test-before-push.sh` on **ALL files** (YAML, build, HTML, print tests - ~30-60 sec)
+- **Pre-push**: Informational message only (tests already passed during commit)
 
-**Note:** The pre-push hook runs the SAME tests as `./test-before-push.sh` - you don't need to run the script manually unless you want to catch errors early during development.
+**Tests run before EVERY commit** to ensure you never commit broken code. All commits are validated and safe.
 
 **Skipping hooks (use with EXTREME caution):**
 ```bash
-LEFTHOOK=0 git push
+LEFTHOOK=0 git commit -m "message"
 # or
-git push --no-verify
+git commit --no-verify -m "message"
 ```
 
-**⚠️ WARNING**: Skipping hooks means deploying untested code. Only skip if:
+**⚠️ WARNING**: Skipping hooks means committing untested code. Only skip if:
 - You already ran `./test-before-push.sh` manually and all tests passed
-- You're pushing non-code changes (documentation only)
+- You're committing non-code changes (documentation only)
 - You know exactly what you're doing
 
 **Manual hook testing:**

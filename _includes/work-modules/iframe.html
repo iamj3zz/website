@@ -31,6 +31,23 @@
   {% assign src_start = include.embed_code | split: 'src="' | last %}
   {% assign src_url = src_start | split: '"' | first %}
 
+  {% comment %} Security: Validate URL is from trusted domain {% endcomment %}
+  {% assign is_trusted = false %}
+  {% if src_url contains "youtube.com" or src_url contains "youtube-nocookie.com" or src_url contains "youtu.be" %}
+    {% assign is_trusted = true %}
+  {% elsif src_url contains "vimeo.com" or src_url contains "player.vimeo.com" %}
+    {% assign is_trusted = true %}
+  {% elsif src_url contains "bandcamp.com" %}
+    {% assign is_trusted = true %}
+  {% elsif src_url contains "soundcloud.com" %}
+    {% assign is_trusted = true %}
+  {% elsif src_url contains "spotify.com" %}
+    {% assign is_trusted = true %}
+  {% elsif src_url contains "mixcloud.com" %}
+    {% assign is_trusted = true %}
+  {% endif %}
+
+  {% if is_trusted %}
   <div class="module module-iframe">
     <div class="iframe-wrapper iframe-responsive" style="padding-bottom: {{ padding }};">
       <iframe
@@ -45,6 +62,13 @@
       <p class="iframe-caption">{{ include.caption }}</p>
     {% endif %}
   </div>
+  {% else %}
+  <div class="module module-iframe">
+    <p class="iframe-error" style="padding: 2rem; background: #f5f5f5; border: 1px solid #ddd; color: #666;">
+      ⚠️ Embedded content blocked: URL must be from a trusted domain (YouTube, Vimeo, Bandcamp, SoundCloud, Spotify, or Mixcloud)
+    </p>
+  </div>
+  {% endif %}
 
 {% else %}
   {% comment %} Fixed height mode - extract exact dimensions {% endcomment %}
@@ -83,6 +107,23 @@
     {% assign player_height = "400px" %}
   {% endif %}
 
+  {% comment %} Security: Validate URL is from trusted domain {% endcomment %}
+  {% assign is_trusted_fixed = false %}
+  {% if src_url contains "youtube.com" or src_url contains "youtube-nocookie.com" or src_url contains "youtu.be" %}
+    {% assign is_trusted_fixed = true %}
+  {% elsif src_url contains "vimeo.com" or src_url contains "player.vimeo.com" %}
+    {% assign is_trusted_fixed = true %}
+  {% elsif src_url contains "bandcamp.com" %}
+    {% assign is_trusted_fixed = true %}
+  {% elsif src_url contains "soundcloud.com" %}
+    {% assign is_trusted_fixed = true %}
+  {% elsif src_url contains "spotify.com" %}
+    {% assign is_trusted_fixed = true %}
+  {% elsif src_url contains "mixcloud.com" %}
+    {% assign is_trusted_fixed = true %}
+  {% endif %}
+
+  {% if is_trusted_fixed %}
   <div class="module module-iframe">
     <div class="iframe-wrapper">
       <iframe
@@ -97,4 +138,11 @@
       <p class="iframe-caption">{{ include.caption }}</p>
     {% endif %}
   </div>
+  {% else %}
+  <div class="module module-iframe">
+    <p class="iframe-error" style="padding: 2rem; background: #f5f5f5; border: 1px solid #ddd; color: #666;">
+      ⚠️ Embedded content blocked: URL must be from a trusted domain (YouTube, Vimeo, Bandcamp, SoundCloud, Spotify, or Mixcloud)
+    </p>
+  </div>
+  {% endif %}
 {% endif %}
