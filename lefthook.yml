@@ -6,31 +6,38 @@
 # GitHub Actions only builds and deploys - it does NOT run tests.
 # These hooks are your ONLY safety net to prevent breaking changes.
 
-# Pre-commit: Run quick checks before committing
-# Blocks commits if YAML validation fails
+# Pre-commit: Run COMPLETE test suite before EVERY commit
+# This is MANDATORY - blocks commits if any test fails
+# Ensures you never commit broken code
 pre-commit:
-  parallel: true
-  commands:
-    yaml-lint:
-      glob: "*.{yml,yaml}"
-      run: yamllint {staged_files}
-      stage_fixed: true
-      fail_text: "❌ YAML validation failed. Fix the errors above before committing."
-
-# Pre-push: Run COMPLETE test suite before pushing
-# This is MANDATORY - GitHub Actions will not catch test failures!
-# Blocks push if any test fails (YAML, build, HTML, print tests)
-pre-push:
   commands:
     full-tests:
       run: ./test-before-push.sh
       fail_text: |
-        ❌ Tests failed! Push blocked.
+        ❌ Tests failed! Commit blocked.
 
-        Fix the errors above, then run again:
+        Your changes contain errors that must be fixed before committing.
+
+        Fix the errors above, then try committing again.
+
+        To run tests manually:
           ./test-before-push.sh
 
-        Once all tests pass, try pushing again.
+# Pre-push: Run optional Lighthouse CI before pushing
+# Lighthouse tests are comprehensive but slow (~1-2 min)
+# Run for major releases or when testing performance changes
+pre-push:
+  commands:
+    lighthouse-optional:
+      run: |
+        echo ""
+        echo "✨ Pre-commit tests already passed. Running optional Lighthouse CI..."
+        echo ""
+        echo "Skipping Lighthouse (too slow for regular pushes)."
+        echo "To run Lighthouse: ./test-before-push.sh --full"
+        echo ""
+      fail_text: |
+        ℹ️  This is informational only. Push will proceed.
 
 # ⚠️  CRITICAL: Do NOT skip hooks unless absolutely necessary!
 #

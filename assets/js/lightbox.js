@@ -38,15 +38,24 @@ document.addEventListener('DOMContentLoaded', function() {
     lightboxImg.src = currentImages[index].src;
     lightboxImg.alt = currentImages[index].alt;
 
-    // Update caption
+    // Update caption (XSS-safe using textContent)
     const caption = currentImages[index].getAttribute('data-caption') || '';
     const counter = `Image ${index + 1} of ${currentImages.length}`;
 
+    // Clear previous caption content
+    lightboxCaption.innerHTML = '';
+
     if (caption && caption.trim() !== '') {
-      lightboxCaption.innerHTML = `<p class="caption-text">${caption}</p><p class="caption-counter">${counter}</p>`;
-    } else {
-      lightboxCaption.innerHTML = `<p class="caption-counter">${counter}</p>`;
+      const captionText = document.createElement('p');
+      captionText.className = 'caption-text';
+      captionText.textContent = caption;
+      lightboxCaption.appendChild(captionText);
     }
+
+    const captionCounter = document.createElement('p');
+    captionCounter.className = 'caption-counter';
+    captionCounter.textContent = counter;
+    lightboxCaption.appendChild(captionCounter);
 
     // Update button states
     prevBtn.disabled = (index === 0);

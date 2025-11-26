@@ -31,21 +31,21 @@ image: /assets/img/J3ZZ-logo-black-300px.png
       <!-- Screen version: icon grid -->
       <div class="contact-social-icons">
         {% if site.bandcamp_username %}
-        <a href="https://{{ site.bandcamp_username }}.bandcamp.com" target="_blank" rel="noopener" class="contact-social-icon" aria-label="Bandcamp - {{ site.bandcamp_username }}" title="Bandcamp - {{ site.bandcamp_username }}">
+        <a href="https://{{ site.bandcamp_username }}.bandcamp.com" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Bandcamp - {{ site.bandcamp_username }}" title="Bandcamp - {{ site.bandcamp_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 8h8.5l4 8H4l-4-8z" fill="currentColor"/>
           </svg>
         </a>
         {% endif %}
         {% if site.soundcloud_username %}
-        <a href="https://soundcloud.com/{{ site.soundcloud_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="SoundCloud - {{ site.soundcloud_username }}" title="SoundCloud - {{ site.soundcloud_username }}">
+        <a href="https://soundcloud.com/{{ site.soundcloud_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="SoundCloud - {{ site.soundcloud_username }}" title="SoundCloud - {{ site.soundcloud_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M3 13v4M6 11v6M9 10v7M12 9v8M15 8v9M18 7v10M21 6v11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </a>
         {% endif %}
         {% if site.youtube_username %}
-        <a href="https://youtube.com/@{{ site.youtube_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="YouTube - {{ site.youtube_username }}" title="YouTube - {{ site.youtube_username }}">
+        <a href="https://youtube.com/@{{ site.youtube_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="YouTube - {{ site.youtube_username }}" title="YouTube - {{ site.youtube_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="6" width="20" height="12" rx="2" stroke="currentColor" stroke-width="1.5"/>
             <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
@@ -53,7 +53,7 @@ image: /assets/img/J3ZZ-logo-black-300px.png
         </a>
         {% endif %}
         {% if site.vimeo_username %}
-        <a href="https://vimeo.com/{{ site.vimeo_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="Vimeo - {{ site.vimeo_username }}" title="Vimeo - {{ site.vimeo_username }}">
+        <a href="https://vimeo.com/{{ site.vimeo_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Vimeo - {{ site.vimeo_username }}" title="Vimeo - {{ site.vimeo_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.5"/>
             <path d="M10 9l5 3-5 3V9z" fill="currentColor"/>
@@ -61,14 +61,14 @@ image: /assets/img/J3ZZ-logo-black-300px.png
         </a>
         {% endif %}
         {% if site.facebook_username %}
-        <a href="https://facebook.com/{{ site.facebook_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="Facebook - {{ site.facebook_username }}" title="Facebook - {{ site.facebook_username }}">
+        <a href="https://facebook.com/{{ site.facebook_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Facebook - {{ site.facebook_username }}" title="Facebook - {{ site.facebook_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 8h3l-1 3h-2v8h-3v-8H9V8h2V6.5C11 4.5 12 3 15 3h2v3h-2c-.5 0-1 .5-1 1V8z" fill="currentColor"/>
           </svg>
         </a>
         {% endif %}
         {% if site.instagram_username %}
-        <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="Instagram - {{ site.instagram_username }}" title="Instagram - {{ site.instagram_username }}">
+        <a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Instagram - {{ site.instagram_username }}" title="Instagram - {{ site.instagram_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.5"/>
             <circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.5"/>
@@ -77,21 +77,21 @@ image: /assets/img/J3ZZ-logo-black-300px.png
         </a>
         {% endif %}
         {% if site.twitter_username %}
-        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="X (Twitter) - {{ site.twitter_username }}" title="X (Twitter) - {{ site.twitter_username }}">
+        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="X (Twitter) - {{ site.twitter_username }}" title="X (Twitter) - {{ site.twitter_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 4l7 9.5M20 4l-7 9.5m0 0L4 20m9-6.5L20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
           </svg>
         </a>
         {% endif %}
         {% if site.linkedin_username %}
-        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="LinkedIn - {{ site.linkedin_username }}" title="LinkedIn - {{ site.linkedin_username }}">
+        <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="LinkedIn - {{ site.linkedin_username }}" title="LinkedIn - {{ site.linkedin_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6 9v10M6 6v.5M10 14v5m0-5c0-2 1-3 3-3s3 1 3 3v5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
         </a>
         {% endif %}
         {% if site.twitch_username %}
-        <a href="https://twitch.tv/{{ site.twitch_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="Twitch - {{ site.twitch_username }}" title="Twitch - {{ site.twitch_username }}">
+        <a href="https://twitch.tv/{{ site.twitch_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Twitch - {{ site.twitch_username }}" title="Twitch - {{ site.twitch_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 3l-1 4v13h5v2h3l2-2h4l5-5V3H4zm14 10l-3 3h-4l-2 2v-2H6V5h12v8z" fill="currentColor"/>
             <rect x="13" y="8" width="1.5" height="4" fill="currentColor"/>
@@ -100,7 +100,7 @@ image: /assets/img/J3ZZ-logo-black-300px.png
         </a>
         {% endif %}
         {% if site.malt_username %}
-        <a href="https://www.malt.fr/profile/{{ site.malt_username }}" target="_blank" rel="noopener" class="contact-social-icon" aria-label="Malt - {{ site.malt_username }}" title="Malt - {{ site.malt_username }}">
+        <a href="https://www.malt.fr/profile/{{ site.malt_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Malt - {{ site.malt_username }}" title="Malt - {{ site.malt_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M12 2L3 7v5c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
