@@ -8,6 +8,9 @@
    Modular SCSS architecture for better maintainability
    ============================================================ */
 
+/* CSS Variables - must be first for use in other files */
+@import 'variables';
+
 /* Base styles - reset, typography, global elements */
 @import 'base';
 
