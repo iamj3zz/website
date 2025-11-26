@@ -107,9 +107,8 @@ async function runPrintTests() {
       console.error('This is common in WSL or headless environments.\n');
       console.error('Solutions:');
       console.error('  1. Install Chrome dependencies: sudo apt install -y chromium-browser');
-      console.error('  2. Or run tests in GitHub Actions where Chrome is pre-installed');
-      console.error('  3. Or install required libraries: sudo apt install -y libnspr4 libnss3');
-      console.error('\nNote: Print tests will run automatically in GitHub Actions CI/CD.');
+      console.error('  2. Or install required libraries: sudo apt install -y libnspr4 libnss3');
+      console.error('  3. Print tests will automatically skip if Chrome is unavailable');
     }
 
     process.exit(1);
