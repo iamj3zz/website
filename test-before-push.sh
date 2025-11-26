@@ -202,7 +202,7 @@ else
             echo ""
             echo -e "${YELLOW}⚠ Print tests skipped - Chrome not available in this environment${NC}"
             echo "This is expected in WSL/headless environments."
-            echo "Print tests will run automatically in GitHub Actions CI/CD."
+            echo "Install Chrome dependencies if you need to run print tests locally."
         else
             print_error "Print tests failed!"
             echo ""

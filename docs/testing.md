@@ -75,7 +75,7 @@ This is **slower** but also checks:
 ```bash
 npm run lighthouse
 ```
-**Note:** Requires Chrome/Chromium to be installed. In WSL environments, this may not work locally. The primary value is in **GitHub Actions** (CI/CD) where Chrome is pre-installed.
+**Note:** Requires Chrome/Chromium to be installed. In WSL environments, this may not work locally. Install Chrome dependencies if you need to run these tests locally.
 
 Tests:
 - Performance metrics (First Contentful Paint, Speed Index, etc.)
@@ -96,7 +96,7 @@ Validates print layouts and generates PDFs for manual review. Tests:
 
 **Output**: PDFs saved to `./print-test-results/` directory for manual inspection.
 
-**Note**: Requires Chrome/Chromium with proper dependencies. In WSL or headless environments where Chrome is not available, print tests will automatically skip locally but will still run in GitHub Actions CI/CD where Chrome is pre-installed.
+**Note**: Requires Chrome/Chromium with proper dependencies. In WSL or headless environments where Chrome is not available, print tests will automatically skip locally. Install Chrome dependencies if you need to run these tests locally.
 
 **Pages tested**:
 - Homepage (index.html)
