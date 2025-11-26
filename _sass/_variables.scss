@@ -1,0 +1,58 @@
+/* CSS Custom Properties (Variables)
+   Better maintainability and easier theming
+   ============================================ */
+
+:root {
+  /* Colors */
+  --color-text: #333;
+  --color-background: #fff;
+  --color-link: #000;
+  --color-link-hover: #666;
+  --color-border: #ddd;
+  --color-muted: #999;
+
+  /* Spacing */
+  --spacing-xs: 0.25rem;   /* 4px */
+  --spacing-sm: 0.5rem;    /* 8px */
+  --spacing-md: 1rem;      /* 16px */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+  --spacing-3xl: 4rem;     /* 64px */
+
+  /* Typography */
+  --font-family-base: Arial, Helvetica, sans-serif;
+  --line-height-base: 1.6;
+  --font-size-base: 16px;
+  --font-size-sm: 14px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+
+  /* Layout */
+  --max-width-content: 1200px;
+  --max-width-text: 800px;
+  --border-radius: 4px;
+
+  /* Transitions */
+  --transition-speed: 0.3s;
+  --transition-easing: ease-in-out;
+
+  /* Z-index layers */
+  --z-index-dropdown: 100;
+  --z-index-sticky: 200;
+  --z-index-modal: 300;
+  --z-index-tooltip: 400;
+}
+
+/* Example: Dark mode support (future implementation)
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-text: #f0f0f0;
+    --color-background: #1a1a1a;
+    --color-link: #fff;
+    --color-link-hover: #ccc;
+    --color-border: #444;
+    --color-muted: #888;
+  }
+}
+*/
