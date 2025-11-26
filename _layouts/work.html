@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }} - {{ site.title }}</title>
-  <meta name="description" content="{{ site.description }}">
+  {% include seo.html %}
+  {% include analytics.html %}
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
 </head>
 <body>
+  {% include cookie-consent.html %}
+
   <header class="site-header">
     <div class="site-logo">
       <a href="{{ '/' | relative_url }}">
@@ -380,6 +382,7 @@
     </div>
   </div>
 
+  <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/lightbox.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/navigation.js' | relative_url }}"></script>
 </body>

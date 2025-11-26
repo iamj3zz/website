@@ -1,0 +1,50 @@
+{% seo %}
+
+<!-- Additional custom meta tags -->
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+
+<!-- Additional Open Graph tags for portfolio works -->
+{% if page.layout == "work" %}
+  <meta property="og:type" content="article">
+  {% if page.metadata.release_date %}
+    <meta property="article:published_time" content="{{ page.metadata.release_date | date_to_xmlschema }}">
+  {% endif %}
+  {% if page.last_modified_at %}
+    <meta property="article:modified_time" content="{{ page.last_modified_at | date_to_xmlschema }}">
+  {% endif %}
+  <meta property="article:author" content="{{ site.author.name }}">
+  {% if page.category %}
+    <meta property="article:section" content="{{ page.category | replace: '-', ' ' | capitalize }}">
+  {% endif %}
+  {% if page.categories %}
+    {% for cat in page.categories %}
+      <meta property="article:tag" content="{{ cat | replace: '-', ' ' | capitalize }}">
+    {% endfor %}
+  {% endif %}
+{% endif %}
+
+<!-- Structured Data for Portfolio Works -->
+{% if page.layout == "work" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "{{ page.title }}",
+  "description": "{{ page.abstract | default: page.description | strip_html | truncatewords: 50 }}",
+  {% if page.image %}
+  "image": "{{ page.image | absolute_url }}",
+  {% endif %}
+  "url": "{{ page.url | absolute_url }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}"
+  }{% if page.metadata.release_date %},
+  "datePublished": "{{ page.metadata.release_date }}"{% endif %}{% if page.last_modified_at %},
+  "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"{% endif %}{% if page.category %},
+  "genre": "{{ page.category | replace: '-', ' ' | capitalize }}"{% endif %}
+}
+</script>
+{% endif %}

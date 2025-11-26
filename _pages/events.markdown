@@ -2,6 +2,8 @@
 layout: portfolio
 title: Events
 permalink: /events/
+description: "Upcoming and past performances, installations, and exhibitions by J3ZZ. Live acts, sound art installations, and audiovisual performances worldwide."
+image: /assets/img/J3ZZ-logo-black-300px.png
 ---
 
 <section class="events-section">
