@@ -25,6 +25,7 @@ The `_pages/` directory is configured as a Jekyll collection in `_config.yml` to
 **Layouts:**
 - `_layouts/portfolio.html` - Main layout for pages with navigation and logo
 - `_layouts/work.html` - Layout for individual portfolio work detail pages
+- `_layouts/bio-gallery.html` - Layout for bio gallery page with lightbox support
 
 **Collections:**
 - `_portfolio/` - Portfolio items collection (31 items numbered 01-31)
@@ -73,17 +74,19 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 ```
 
 **Assets:**
-- `_sass/` - SCSS stylesheets compiled by Jekyll (including `_portfolio.scss`, `_work-detail.scss`, `_print.scss`, etc.)
+- `_sass/` - SCSS stylesheets compiled by Jekyll (including `_portfolio.scss`, `_work-detail.scss`, `_print.scss`, `_bio-gallery.scss`, etc.)
 - `assets/js/portfolio.js` - JavaScript for portfolio filtering with multi-category support
 - `assets/js/lightbox.js` - Lightbox functionality for image galleries
 - `assets/js/cookie-consent.js` - GDPR-compliant cookie consent manager for analytics and embedded content
 - `assets/js/print-header-qrcode.js` - Universal QR code generator for print header (all pages)
 - `assets/js/works-qrcode.js` - QR codes for individual works in printable WORKS page
 - `assets/js/bio-links-qrcode.js` - QR codes for bio page links in print version
+- `assets/js/bio-gallery-qrcode.js` - QR codes for bio gallery images in print version
 - `assets/js/contact-social-qrcodes.js` - QR codes for social media links in print version of contact page
 - `assets/js/newsletter-form.js` - Newsletter form validation and submission handling
 - `assets/js/qrcode.min.js` - QR code generation library
 - `assets/img/` - Images including logo and portfolio work images
+- `assets/img/bio-gallery/` - Press photos and artist images for bio gallery
 
 **Includes:**
 - `_includes/seo.html` - SEO optimization with jekyll-seo-tag, structured data, Open Graph tags, and canonical URLs
@@ -108,6 +111,7 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 - BIO | WORKS | EVENTS | CONTACT
 - Active page is underlined
 - Navigation state uses `class="active"` based on page URL
+- Bio Gallery page (`/bio-gallery/`) accessible via bio page links
 
 **Works Page Sub-Navigation:**
 - Filter buttons: All | Installations | Live Acts | Releases | Commissions
@@ -117,7 +121,7 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 
 ## Print Functionality
 
-All pages (BIO, WORKS, EVENTS, CONTACT) are optimized for A4 print with professional layouts and automatic QR code generation. Print PDFs are maintained in the `docs/` folder.
+All pages (BIO, BIO GALLERY, WORKS, EVENTS, CONTACT) are optimized for A4 print with professional layouts and automatic QR code generation. Print PDFs are maintained in the `docs/` folder.
 
 **Universal Print Features (All Pages):**
 - **Print Header Layout** - Two-column header design:
@@ -154,6 +158,22 @@ All pages (BIO, WORKS, EVENTS, CONTACT) are optimized for A4 print with professi
 - Categorized lists (Live Performances, Installations, Releases, Teaching, Workshops, Lectures, Books)
 - Clean typography with year-based organization
 - Print-specific styles in `portfolio.css` (lines 1762-2148)
+
+**BIO GALLERY Page Print Layout:**
+- Professional press photo gallery optimized for A4 print
+- Single-column vertical layout for optimal print quality:
+  - **QR code** (40x40px) at top of each entry
+  - **Image caption** below QR code (11px, descriptive text)
+  - **Full-width image** at bottom with border
+- Each gallery item is kept together (no page breaks within items)
+- JavaScript: `bio-gallery-qrcode.js` generates QR codes for direct image download URLs
+- Gallery images configured via front matter with `gallery_images` array:
+  - Each entry has `filename` and `caption` fields
+  - Captions provide context about the photo (event, equipment, context)
+- Contact information displayed at bottom for press inquiries
+- Print-specific styles in `_sass/_bio-gallery.scss`
+- Web version shows 4-column grid with lightbox; print shows vertical layout
+- Hidden elements in print: download instructions, web-only intro text
 
 **EVENTS Page Print Layout:**
 - Chronological event listing optimized for print
@@ -437,11 +457,26 @@ Site deploys to GitHub Pages automatically when pushed to the `main` branch. The
 All page files are located in the `_pages/` directory:
 
 - **Bio**: Edit `_pages/bio.markdown`
-- **Bio Gallery**: Edit `_pages/bio-gallery.markdown`
+- **Bio Gallery**: Edit `_pages/bio-gallery.markdown` (press photos with front matter-based image management)
 - **Events**: Edit `_pages/events.markdown`
 - **Contact**: Edit `_pages/contact.markdown`
 - **Privacy**: Edit `_pages/privacy.markdown`
 - **Homepage/Works Grid**: Edit `_pages/index.markdown` or managed by portfolio collection in `_portfolio/`
+
+**Bio Gallery Front Matter Structure:**
+```yaml
+---
+layout: bio-gallery
+title: Bio Gallery
+permalink: /bio-gallery/
+gallery_images:
+  - filename: photo-01.jpg
+    caption: Descriptive caption with event and equipment details
+  - filename: photo-02.jpg
+    caption: Another descriptive caption
+---
+```
+Gallery images should be placed in `assets/img/bio-gallery/` directory.
 
 ## Updating Logo
 

@@ -90,8 +90,118 @@
   border-bottom-color: #333;
 }
 
+/* Hide QR codes and helper text on screen - only show in print */
+.gallery-image-qr,
+.gallery-image-caption,
+.gallery-qr-helper {
+  display: none;
+}
+
 @media print {
+  /* Page Title Header */
+  .bio-gallery-container::before {
+    content: "BIO GALLERY";
+    display: block;
+    text-align: left;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #333;
+  }
+
   .bio-gallery-container {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
+  /* Hide web-only elements */
+  .bio-gallery-header,
+  .download-instructions,
+  .bio-gallery-intro > p {
+    display: none !important;
+  }
+
+  /* Keep contact note visible but optimize */
+  .bio-gallery-note {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 10px;
     page-break-inside: avoid;
+  }
+
+  .bio-gallery-note p {
+    font-size: 10px;
+    line-height: 1.5;
+  }
+
+  .bio-gallery-note a {
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #ccc;
+  }
+
+  /* Optimize image grid for print - 1 column layout */
+  .module-image-grid {
+    margin-bottom: 30px;
+  }
+
+  .image-grid.grid-4 {
+    display: block !important;
+  }
+
+  /* Grid item with vertical layout: QR code → text → image */
+  .grid-item {
+    display: block !important;
+    margin-bottom: 40px;
+    page-break-inside: avoid;
+  }
+
+  .grid-item:last-child {
+    margin-bottom: 0;
+  }
+
+  /* QR code at top - small size */
+  .gallery-image-qr {
+    display: block !important;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 8px;
+  }
+
+  .gallery-image-qr img,
+  .gallery-image-qr canvas {
+    width: 40px !important;
+    height: 40px !important;
+    display: block;
+  }
+
+  /* Image caption below QR code */
+  .gallery-image-caption {
+    display: block !important;
+    font-size: 11px;
+    color: #333;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  /* Image at bottom - full width */
+  .grid-item img.grid-image {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+    border: 1px solid #e0e0e0;
+  }
+
+  /* Hide QR helper text in print */
+  .gallery-qr-helper {
+    display: none !important;
   }
 }

@@ -2,6 +2,19 @@
 layout: bio-gallery
 title: Bio Gallery
 permalink: /bio-gallery/
+gallery_images:
+  - filename: photo-01.jpg
+    caption: J3ZZ performing at MUTEK Festival with modular synthesizers and live coding setup
+  - filename: photo-02.jpg
+    caption: J3ZZ in studio with acoustic violin and electronic processing equipment
+  - filename: photo-03.jpg
+    caption: Portrait of J3ZZ during a sound art installation featuring generative systems
+  - filename: photo-04.jpg
+    caption: J3ZZ at Atonal Festival Berlin with spatial audio and laser visual setup
+  - filename: photo-05.jpg
+    caption: Close-up of J3ZZ with Max/MSP generative art environment in background
+  - filename: photo-06.jpg
+    caption: J3ZZ performing immersive audiovisual set with living organisms as sound sources
 ---
 
 <div class="bio-gallery-intro">
@@ -16,18 +29,16 @@ permalink: /bio-gallery/
   </div>
 </div>
 
-<!-- Use the same image-grid module design from work pages -->
+<!-- Gallery images from front matter -->
 <div class="module module-image-grid" data-columns="4">
   <div class="image-grid grid-4">
-    {% assign gallery_images = "photo-01.jpg,photo-02.jpg,photo-03.jpg,photo-04.jpg,photo-05.jpg,photo-06.jpg" | split: "," %}
-    {% assign gallery_captions = "Press Photo 1,Press Photo 2,Press Photo 3,Press Photo 4,Press Photo 5,Press Photo 6" | split: "," %}
-    {% for image in gallery_images %}
+    {% for image in page.gallery_images %}
     <div class="grid-item">
-      <img src="{{ '/assets/img/bio-gallery/' | append: image | relative_url }}"
-           alt="J3ZZ {{ gallery_captions[forloop.index0] }}"
+      <img src="{{ '/assets/img/bio-gallery/' | append: image.filename | relative_url }}"
+           alt="{{ image.caption }}"
            class="grid-image"
            data-lightbox="true"
-           data-caption="{{ gallery_captions[forloop.index0] }}">
+           data-caption="{{ image.caption }}">
     </div>
     {% endfor %}
   </div>
