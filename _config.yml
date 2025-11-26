@@ -22,12 +22,39 @@ title: J3ZZ
 email: hello@j3zz.com
 booking_email: booking@j3zz.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  French sound artist creating experimental electronic music, immersive installations,
+  and audiovisual performances merging art, science, and technology.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.j3zz.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: iamj3zz/website
 logo: /assets/img/J3ZZ-logo-black-300px.png
+
+# SEO Configuration
+author:
+  name: J3ZZ
+  email: hello@j3zz.com
+  twitter: j3zz
+
+social:
+  name: J3ZZ
+  links:
+    - https://bandcamp.com/iamj3zz
+    - https://soundcloud.com/j3zz
+    - https://youtube.com/@iamj3zz
+    - https://vimeo.com/j3zz
+    - https://facebook.com/iamj3zz
+    - https://instagram.com/iamj3zz
+    - https://twitter.com/j3zz
+    - https://linkedin.com/in/j3zz
+    - https://github.com/j3zz
+
+tagline: "Experimental sound art merging music, generative systems, and immersive installations"
+default_image: /assets/img/J3ZZ-logo-black-300px.png
+lang: en_US
+
+# Google Analytics 4
+# google_analytics: G-09KW8XZSZW  # Replace with your actual GA4 measurement ID
+google_analytics: G-XXXXXXXXXX  # Replace with your actual GA4 measurement ID
 
 # Social Media
 bandcamp_username: iamj3zz
@@ -65,6 +92,8 @@ future: true  # Allow posts/collections with future dates
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Include _pages directory
 include:

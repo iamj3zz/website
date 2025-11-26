@@ -13,6 +13,9 @@ This is a Jekyll static site deployed to GitHub Pages at www.j3zz.com. The site 
 - Multi-category portfolio support (installations, live-acts, releases, commissions)
 - Responsive design with comprehensive print functionality (all pages A4-optimized with QR codes)
 - Event management system with work linking
+- SEO optimization with structured data, Open Graph tags, and automatic sitemap generation
+- Privacy-compliant Google Analytics 4 integration with GDPR cookie consent
+- GDPR-compliant cookie consent system for analytics and embedded content
 
 ## Quick Start
 
@@ -148,13 +151,15 @@ This project's documentation is organized into topic-specific files for better p
 - Quick command reference
 
 ### 📐 [Architecture](docs/architecture.md)
-Site structure, navigation system, portfolio configuration, styling, print functionality, and deployment details.
+Site structure, navigation system, portfolio configuration, styling, print functionality, SEO, analytics, and deployment details.
 
 **Read this for:**
 - Understanding the overall site structure
 - Navigation and routing configuration
 - Portfolio grid and work page layouts
 - Print functionality (A4-optimized layouts with QR codes for all pages)
+- SEO system (structured data, Open Graph, sitemap)
+- Analytics and cookie consent implementation
 - Color scheme and styling conventions
 - Deployment to GitHub Pages
 
@@ -259,6 +264,8 @@ Edit `_config.yml` for:
 - Logo path
 - Email addresses (general and booking)
 - Social media usernames (bandcamp, soundcloud, youtube, vimeo, facebook, instagram, twitter, linkedin, github)
+- SEO configuration (author info, social links, tagline, default image, language)
+- Google Analytics 4 measurement ID
 - Mailchimp newsletter integration (action URL and bot field)
 - Collection settings
 
@@ -282,6 +289,106 @@ The contact page includes a Mailchimp newsletter signup form. To enable it:
 6. Restart Jekyll server
 
 If Mailchimp is not configured, the form will show "Newsletter signup coming soon."
+
+### Configuring SEO
+
+The site includes comprehensive SEO optimization powered by the `jekyll-seo-tag` plugin with custom enhancements.
+
+**SEO Features:**
+- Automatic meta tags (title, description, keywords)
+- Open Graph tags for social media sharing
+- Twitter Card support
+- Structured data (JSON-LD) for portfolio works as Creative Works
+- Canonical URLs
+- Automatic sitemap generation (`jekyll-sitemap` plugin)
+- robots.txt for search engine crawler control
+
+**Configuration in `_config.yml`:**
+```yaml
+# Basic site info
+title: J3ZZ
+description: >-
+  French sound artist creating experimental electronic music...
+
+# Author information
+author:
+  name: J3ZZ
+  email: hello@j3zz.com
+  twitter: j3zz
+
+# Social profiles for SEO
+social:
+  name: J3ZZ
+  links:
+    - https://bandcamp.com/iamj3zz
+    - https://soundcloud.com/j3zz
+    # ... additional social links
+
+# Additional SEO settings
+tagline: "Experimental sound art merging music, generative systems, and immersive installations"
+default_image: /assets/img/J3ZZ-logo-black-300px.png
+lang: en_US
+```
+
+**SEO Implementation:**
+- `_includes/seo.html` - Main SEO include with jekyll-seo-tag and custom enhancements
+- `robots.txt` - Search engine crawler configuration
+- Structured data automatically generated for portfolio works
+- Work-specific Open Graph tags (article type, published/modified dates, categories)
+
+**Note**: The site automatically generates a sitemap at `/sitemap.xml` and declares it in `robots.txt`.
+
+### Configuring Google Analytics 4
+
+The site includes privacy-compliant Google Analytics 4 integration that respects GDPR cookie consent preferences.
+
+**To enable Google Analytics:**
+
+1. Create a GA4 property in Google Analytics
+2. Copy your Measurement ID (format: `G-XXXXXXXXXX`)
+3. Update `_config.yml`:
+   ```yaml
+   google_analytics: G-XXXXXXXXXX  # Replace with your actual GA4 measurement ID
+   ```
+4. Restart Jekyll server
+
+**Privacy Features:**
+- Analytics only loads after user consent via cookie consent banner
+- IP anonymization enabled (`anonymize_ip: true`)
+- Secure cookie flags (`SameSite=None;Secure`)
+- Respects user's cookie preferences stored in localStorage
+- Users can revoke consent at any time via cookie settings button
+
+**Implementation:**
+- `_includes/analytics.html` - Privacy-compliant GA4 integration
+- Automatically included in default layout
+- Listens for `cookieConsentUpdated` events to load/reload analytics
+
+**Note**: If `google_analytics` is not configured in `_config.yml`, no analytics code is loaded.
+
+### Cookie Consent System
+
+The site includes a GDPR-compliant cookie consent system for managing user privacy preferences.
+
+**Cookie Categories:**
+1. **Essential cookies** - Always enabled (site functionality, localStorage for preferences)
+2. **Analytics cookies** - Google Analytics 4 (optional, requires user consent)
+3. **Embedded content cookies** - Third-party embeds like YouTube, Vimeo, Bandcamp (optional, requires user consent)
+
+**User Controls:**
+- Cookie consent banner on first visit
+- Three options: Accept All, Accept Selected (customize), Reject All
+- Cookie settings button (visible after initial consent) to modify preferences anytime
+- Preferences stored in browser localStorage
+
+**Implementation:**
+- `assets/js/cookie-consent.js` - Cookie consent manager
+- UI integrated in default layout (`_layouts/default.html`)
+- Preferences stored as JSON: `{analytics: boolean, embedded: boolean, timestamp: ISO8601}`
+- Dispatches `cookieConsentUpdated` events for analytics and other scripts
+
+**Customization:**
+Cookie banner styling can be customized in `assets/css/style.css` (search for `.cookie-consent-banner`).
 
 ## Template Works
 

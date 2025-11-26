@@ -12,6 +12,12 @@
 - [Manual Testing Workflow](#manual-testing-workflow)
 - [Emergency Workflow (Skip Hooks)](#emergency-workflow-skip-hooks)
 - [First Time Setup](#first-time-setup)
+- [Optional Configuration](#optional-configuration)
+  - [SEO Configuration](#seo-configuration)
+  - [Google Analytics 4 Setup](#google-analytics-4-setup)
+  - [Cookie Consent System](#cookie-consent-system)
+  - [Mailchimp Newsletter Setup](#mailchimp-newsletter-setup)
+  - [Social Media Configuration](#social-media-configuration)
 - [Workflow Diagrams](#workflow-diagrams)
 
 ---
@@ -518,6 +524,149 @@ bundle exec jekyll serve
 
 # Make changes and follow standard workflow
 ```
+
+---
+
+## Optional Configuration
+
+After setting up the project, you can configure optional features like SEO, Google Analytics, and other integrations.
+
+### SEO Configuration
+
+The site includes comprehensive SEO optimization powered by `jekyll-seo-tag` and `jekyll-sitemap` plugins.
+
+**What's already configured:**
+- Automatic sitemap generation at `/sitemap.xml`
+- robots.txt for search engine crawlers
+- Structured data (JSON-LD) for portfolio works
+- Open Graph tags for social media sharing
+
+**To customize SEO settings:**
+
+Edit `_config.yml`:
+
+```yaml
+# Author information for SEO
+author:
+  name: Your Name
+  email: your@email.com
+  twitter: yourusername
+
+# Social profiles for structured data
+social:
+  name: Your Name
+  links:
+    - https://bandcamp.com/yourusername
+    - https://soundcloud.com/yourusername
+    - https://youtube.com/@yourusername
+    # Add all your social profile URLs
+
+# Additional SEO settings
+tagline: "Your site tagline for SEO"
+default_image: /assets/img/your-default-image.png
+lang: en_US  # or your language code
+```
+
+**After editing:**
+```bash
+# Restart Jekyll server to apply config changes
+bundle exec jekyll serve
+```
+
+### Google Analytics 4 Setup
+
+The site includes privacy-compliant Google Analytics 4 integration with GDPR cookie consent.
+
+**To enable analytics:**
+
+1. **Create GA4 property:**
+   - Go to [Google Analytics](https://analytics.google.com/)
+   - Create a new GA4 property
+   - Copy your Measurement ID (format: `G-XXXXXXXXXX`)
+
+2. **Update configuration:**
+
+   Edit `_config.yml`:
+   ```yaml
+   # Replace the placeholder with your actual Measurement ID
+   google_analytics: G-XXXXXXXXXX  # Your actual GA4 measurement ID
+   ```
+
+3. **Restart server:**
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+**Privacy features:**
+- Analytics only loads after user consent via cookie banner
+- IP anonymization enabled
+- Secure cookie flags
+- Users can revoke consent anytime
+
+**To disable analytics:**
+- Remove or comment out the `google_analytics` line in `_config.yml`
+- Or set it to empty: `google_analytics: ""`
+
+### Cookie Consent System
+
+The site includes a GDPR-compliant cookie consent system that's automatically enabled.
+
+**What it does:**
+- Shows cookie consent banner on first visit
+- Manages user preferences for:
+  - Analytics cookies (Google Analytics)
+  - Embedded content cookies (YouTube, Vimeo, Bandcamp)
+- Stores preferences in browser localStorage
+- Provides cookie settings button for users to change preferences
+
+**No configuration needed** - it works automatically with Google Analytics integration.
+
+**Customization:**
+To customize cookie banner styling, edit `assets/css/style.css` and search for `.cookie-consent-banner`.
+
+### Mailchimp Newsletter Setup
+
+To enable the newsletter signup form on the contact page:
+
+1. **Get Mailchimp credentials:**
+   - Log into Mailchimp
+   - Go to **Audience** → **Signup forms** → **Embedded forms**
+   - Copy the form action URL from `<form action="...">`
+   - Copy the bot field name (e.g., `b_XXXXXXXXXX_XXXXXXXXXX`)
+
+2. **Update configuration:**
+
+   Edit `_config.yml`:
+   ```yaml
+   mailchimp_action_url: "https://XXXX.usX.list-manage.com/subscribe/post?u=XXXXXX&id=XXXXXX"
+   mailchimp_bot_field: "b_XXXXXXXXXX_XXXXXXXXXX"
+   ```
+
+3. **Restart server:**
+   ```bash
+   bundle exec jekyll serve
+   ```
+
+**Note:** If not configured, the form shows "Newsletter signup coming soon."
+
+### Social Media Configuration
+
+Update your social media usernames in `_config.yml`:
+
+```yaml
+# Social media usernames (without @ or full URLs)
+bandcamp_username: yourusername
+soundcloud_username: yourusername
+youtube_username: @yourusername
+vimeo_username: yourusername
+facebook_username: yourusername
+instagram_username: yourusername
+twitter_username: yourusername
+linkedin_username: yourusername
+github_username: yourusername
+```
+
+**Remember:** After any `_config.yml` changes, restart the Jekyll server!
 
 ---
 

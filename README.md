@@ -8,11 +8,14 @@ Official portfolio website for J3ZZ, featuring a modular grid-based design syste
 
 ## Features
 
-- **Modular Layout System** - 10 customizable content modules
+- **Modular Layout System** - 11 customizable content modules
 - **Multi-Category Portfolio** - Installations, Live Acts, Releases, Collaborations
 - **Responsive Design** - Mobile-first, tablet, and desktop optimized
 - **Print Functionality** - A4-optimized layouts with QR codes for all pages
 - **Event Management** - Link events to portfolio works
+- **SEO Optimized** - Structured data, Open Graph tags, automatic sitemap generation
+- **Privacy-Compliant Analytics** - Google Analytics 4 with GDPR cookie consent
+- **Cookie Consent System** - GDPR-compliant preference management
 - **Automated Testing** - html-proofer + Lighthouse CI
 - **CI/CD Pipeline** - Automatic deployment via GitHub Actions
 - **Performance Optimized** - Fast load times, accessibility compliant
@@ -167,6 +170,7 @@ git push origin main
 ```
 website/
 ├── _config.yml              # Site configuration
+├── robots.txt               # SEO crawler configuration
 ├── _portfolio/              # Portfolio works (31+ examples)
 │   ├── 01-lorem-ipsum.md
 │   ├── 28-modular-example.md
@@ -176,19 +180,25 @@ website/
 ├── _events/                 # Events collection
 ├── _layouts/                # Page templates
 ├── _includes/               # Reusable components
+│   ├── seo.html            # SEO optimization with structured data
+│   ├── analytics.html      # Privacy-compliant Google Analytics 4
+│   └── work-modules/       # 11 modular layout components
 ├── _sass/                   # SASS stylesheets
 ├── assets/                  # Images, CSS, JavaScript
+│   └── js/
+│       ├── cookie-consent.js      # GDPR cookie consent manager
+│       ├── portfolio.js           # Portfolio filtering
+│       └── ...                    # Other JavaScript files
 ├── docs/                    # Documentation
 │   ├── architecture.md
 │   ├── best-practices.md
 │   ├── content-management.md
-│   ├── development-workflow.md
+│   ├── WORKFLOW.md
 │   ├── metadata-reference.md
 │   ├── modules-reference.md
 │   └── testing.md
 ├── .github/workflows/       # CI/CD pipelines
-│   ├── jekyll.yml          # Build and deploy
-│   └── test.yml            # Testing workflow
+│   └── jekyll.yml          # Build and deploy
 ├── Gemfile                  # Ruby dependencies
 ├── package.json             # Node.js dependencies
 ├── Rakefile                 # Test tasks
@@ -215,7 +225,7 @@ website/
 
 ### Dependencies
 
-- **Ruby Gems** - github-pages, jekyll-feed, html-proofer, rake
+- **Ruby Gems** - github-pages, jekyll-feed, jekyll-seo-tag, jekyll-sitemap, jekyll-last-modified-at, html-proofer, rake
 - **npm Packages** - @lhci/cli, @evilmartians/lefthook, puppeteer
 
 ---
@@ -262,12 +272,37 @@ touch _events/2025-06-15-event-name.md
 
 Edit `_config.yml` for:
 - Site metadata (title, description, URL)
-- Social media links
+- SEO configuration (author info, social links, tagline, default image, language)
+- Google Analytics 4 measurement ID
+- Social media usernames
 - Email addresses
 - Logo path
 - Mailchimp newsletter integration
 
 **Remember:** Restart Jekyll server after changing `_config.yml`
+
+### Optional Features
+
+**SEO Optimization:**
+- Pre-configured with jekyll-seo-tag and jekyll-sitemap plugins
+- Automatic sitemap generation at `/sitemap.xml`
+- Structured data (JSON-LD) for portfolio works
+- Open Graph tags for social media sharing
+- Customize author and social settings in `_config.yml`
+
+**Google Analytics 4:**
+- Privacy-compliant implementation with cookie consent
+- Set `google_analytics: G-XXXXXXXXXX` in `_config.yml`
+- IP anonymization enabled
+- Respects GDPR cookie preferences
+
+**Cookie Consent:**
+- GDPR-compliant cookie consent system
+- Automatic banner on first visit
+- User preference management (analytics & embedded content)
+- No configuration needed - works automatically
+
+See [CLAUDE.md](CLAUDE.md#optional-configuration) for detailed setup instructions.
 
 ### Test Configuration
 

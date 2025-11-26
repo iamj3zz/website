@@ -3,10 +3,11 @@
 ## Site Structure
 
 **Core Files:**
-- `_config.yml` - Main Jekyll configuration file containing site metadata (title, description, URL, social links, logo path) and collection settings
+- `_config.yml` - Main Jekyll configuration file containing site metadata (title, description, URL, social links, logo path, SEO settings, Google Analytics ID) and collection settings
 - `_site/` - Generated static site (git-ignored, auto-generated on build)
 - `.jekyll-cache/` - Build cache (git-ignored)
 - `CNAME` - Contains custom domain for GitHub Pages
+- `robots.txt` - Search engine crawler configuration with sitemap declaration
 - `404.html` - Custom 404 error page
 
 **Pages:**
@@ -75,6 +76,7 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 - `_sass/` - SCSS stylesheets compiled by Jekyll (including `_portfolio.scss`, `_work-detail.scss`, `_print.scss`, etc.)
 - `assets/js/portfolio.js` - JavaScript for portfolio filtering with multi-category support
 - `assets/js/lightbox.js` - Lightbox functionality for image galleries
+- `assets/js/cookie-consent.js` - GDPR-compliant cookie consent manager for analytics and embedded content
 - `assets/js/print-header-qrcode.js` - Universal QR code generator for print header (all pages)
 - `assets/js/works-qrcode.js` - QR codes for individual works in printable WORKS page
 - `assets/js/bio-links-qrcode.js` - QR codes for bio page links in print version
@@ -84,6 +86,8 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 - `assets/img/` - Images including logo and portfolio work images
 
 **Includes:**
+- `_includes/seo.html` - SEO optimization with jekyll-seo-tag, structured data, Open Graph tags, and canonical URLs
+- `_includes/analytics.html` - Privacy-compliant Google Analytics 4 integration with cookie consent
 - `_includes/work-modules/` - Modular components for work detail pages (11 modules total):
   - `hero-image.html` - Large featured image with optional caption
   - `text.html` - Rich text content with Markdown support
@@ -254,16 +258,173 @@ Optional work description content in markdown.
 **Site Settings:**
 - `title` - Site title
 - `email` - Contact email
+- `booking_email` - Booking contact email
 - `description` - Site description
 - `url` - Base URL (https://www.j3zz.com)
+- `repository` - GitHub repository (username/repo)
 - `logo` - Path to logo image
 
+**SEO Configuration:**
+- `author.name` - Author name for SEO
+- `author.email` - Author email for SEO
+- `author.twitter` - Twitter username for SEO
+- `social.name` - Social profile name
+- `social.links[]` - Array of social profile URLs for structured data
+- `tagline` - Site tagline for SEO
+- `default_image` - Default image for social sharing
+- `lang` - Site language (e.g., en_US)
+
+**Analytics:**
+- `google_analytics` - Google Analytics 4 measurement ID (format: G-XXXXXXXXXX)
+
 **Social Media:**
-- `twitter_username`
-- `github_username`
+- `bandcamp_username`
 - `soundcloud_username`
+- `youtube_username`
 - `vimeo_username`
 - `facebook_username`
+- `instagram_username`
+- `twitter_username`
+- `linkedin_username`
+- `github_username`
+
+**Newsletter:**
+- `mailchimp_action_url` - Mailchimp form action URL
+- `mailchimp_bot_field` - Mailchimp bot field name for spam prevention
+
+## SEO Architecture
+
+The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plugin with custom enhancements.
+
+**Jekyll Plugins:**
+- `jekyll-seo-tag` - Automatic generation of SEO meta tags
+- `jekyll-sitemap` - Automatic sitemap generation at `/sitemap.xml`
+
+**SEO Components:**
+
+1. **`_includes/seo.html`** - Main SEO include with:
+   - `{% seo %}` tag from jekyll-seo-tag plugin
+   - Custom meta tags for robots and googlebot
+   - Canonical URL declaration
+   - Enhanced Open Graph tags for portfolio works (article type)
+   - Structured data (JSON-LD) for portfolio works as Creative Works
+
+2. **Structured Data (Schema.org):**
+   - Portfolio works automatically get `CreativeWork` structured data
+   - Includes: name, description, image, URL, author, datePublished, dateModified, genre
+   - Uses `page.metadata.release_date` for publication date
+   - Uses `page.last_modified_at` (from jekyll-last-modified-at plugin) for modification date
+
+3. **Open Graph Tags:**
+   - Standard Open Graph tags for all pages (title, description, image, URL)
+   - Enhanced tags for portfolio works:
+     - `og:type` set to "article"
+     - `article:published_time` from release_date
+     - `article:modified_time` from last_modified_at
+     - `article:author` from site author
+     - `article:section` from work category
+     - `article:tag` for each category in multi-category works
+
+4. **robots.txt:**
+   - Located at site root
+   - Allows all crawlers: `User-agent: * / Allow: /`
+   - Declares sitemap location: `Sitemap: https://www.j3zz.com/sitemap.xml`
+
+**SEO Configuration in _config.yml:**
+```yaml
+author:
+  name: J3ZZ
+  email: hello@j3zz.com
+  twitter: j3zz
+
+social:
+  name: J3ZZ
+  links:
+    - https://bandcamp.com/iamj3zz
+    - https://soundcloud.com/j3zz
+    # ... additional social profile URLs
+
+tagline: "Experimental sound art merging music, generative systems, and immersive installations"
+default_image: /assets/img/J3ZZ-logo-black-300px.png
+lang: en_US
+```
+
+**Benefits:**
+- Improved search engine discoverability
+- Rich social media sharing previews
+- Structured data for enhanced search results
+- Proper indexing with sitemap and robots.txt
+- Work-specific metadata for better content categorization
+
+## Analytics & Cookie Consent
+
+The site implements privacy-compliant analytics with GDPR-compliant cookie consent management.
+
+**Google Analytics 4 Integration:**
+
+1. **`_includes/analytics.html`** - Privacy-compliant GA4 implementation:
+   - Only loads after user consent via cookie consent system
+   - Checks `localStorage.getItem('cookieConsent')` for user preferences
+   - Loads GA4 script dynamically only if `consent.analytics === true`
+   - IP anonymization enabled: `anonymize_ip: true`
+   - Secure cookie flags: `SameSite=None;Secure`
+   - Listens for `cookieConsentUpdated` events to reload analytics when consent changes
+   - Prevents duplicate loading with `window.gaLoaded` flag
+
+2. **Configuration:**
+   - Set `google_analytics` in `_config.yml` with GA4 measurement ID
+   - Format: `G-XXXXXXXXXX`
+   - If not configured, no analytics code is loaded
+
+**Cookie Consent System:**
+
+1. **`assets/js/cookie-consent.js`** - GDPR-compliant cookie consent manager:
+   - **Cookie Categories:**
+     - Essential cookies (always enabled)
+     - Analytics cookies (Google Analytics, requires consent)
+     - Embedded content cookies (YouTube, Vimeo, Bandcamp, requires consent)
+
+   - **User Interface:**
+     - Cookie consent banner shown on first visit
+     - Three options: "Accept All", "Accept Selected" (customize), "Reject All"
+     - Cookie settings button (visible after initial consent) to modify preferences anytime
+
+   - **Preference Storage:**
+     - Stored in browser localStorage as JSON
+     - Format: `{analytics: boolean, embedded: boolean, timestamp: ISO8601}`
+     - Persists across sessions
+
+   - **Event System:**
+     - Dispatches `cookieConsentUpdated` custom event when preferences change
+     - Analytics and other scripts listen for this event to load/reload appropriately
+
+   - **Functions:**
+     - `hasConsent()` - Check if consent has been given
+     - `getConsent()` - Get current consent preferences
+     - `saveConsent(analytics, embedded)` - Save preferences and dispatch event
+     - `showBanner()` / `hideBanner()` - Control banner visibility
+     - `loadPreferences()` - Load saved preferences into UI
+     - `acceptAll()` / `acceptSelected()` / `rejectAll()` - Handle user choices
+
+2. **UI Integration:**
+   - Cookie consent banner integrated in default layout
+   - Banner displays at bottom of viewport on first visit
+   - Settings button (cookie icon) available after initial consent
+   - Styled in `assets/css/style.css` (`.cookie-consent-banner` class)
+
+**Privacy Features:**
+- No tracking without explicit user consent
+- Granular control over cookie categories
+- Easy consent revocation via settings button
+- IP anonymization for analytics
+- Secure cookie handling
+- localStorage-based preference storage (no server-side tracking)
+
+**Compliance:**
+- GDPR-compliant (European Union General Data Protection Regulation)
+- Respects user privacy preferences
+- Transparent cookie usage information
+- Easy opt-out mechanism
 
 ## Deployment
 
