@@ -9,8 +9,11 @@
   if (menuToggle && mainNav) {
     menuToggle.addEventListener('click', function() {
       // Toggle active class on both button and nav
-      menuToggle.classList.toggle('active');
+      const isExpanded = menuToggle.classList.toggle('active');
       mainNav.classList.toggle('active');
+
+      // Update aria-expanded for accessibility
+      menuToggle.setAttribute('aria-expanded', isExpanded);
     });
 
     // Close menu when clicking on a navigation link
@@ -19,6 +22,7 @@
       link.addEventListener('click', function() {
         menuToggle.classList.remove('active');
         mainNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
       });
     });
 
@@ -29,6 +33,7 @@
       if (!isClickInside && mainNav.classList.contains('active')) {
         menuToggle.classList.remove('active');
         mainNav.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
       }
     });
   }
