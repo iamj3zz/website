@@ -1,0 +1,12 @@
+---
+published: true 
+title: Willany Leó - Bankitó Festival 2019
+date: 2019-07-11
+time: "14:30-15:30"
+country: Hungary
+city: Nograd
+venue_name: Tószínpad Bánkitó Fesztivál
+venue_link: https://goo.gl/maps/HKXvjoZKsasJSrSs5
+ticket_link: https://bankitofesztival.hu/
+description: Improvisation exploring community cohesion and division. 4-day festival
+---
