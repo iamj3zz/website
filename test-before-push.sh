@@ -52,11 +52,16 @@ print_error() {
 # Parse arguments
 RUN_LIGHTHOUSE=false
 QUICK_MODE=false
+SKIP_IMAGES=false
 
 for arg in "$@"; do
     case $arg in
         --full)
             RUN_LIGHTHOUSE=true
+            shift
+            ;;
+        --skip-images)
+            SKIP_IMAGES=true
             shift
             ;;
         --quick)
@@ -67,9 +72,10 @@ for arg in "$@"; do
             echo "Pre-Push Testing Script"
             echo ""
             echo "Usage:"
-            echo "  ./test-before-push.sh           Run all tests (fast - no Lighthouse)"
-            echo "  ./test-before-push.sh --full    Run all tests including Lighthouse"
-            echo "  ./test-before-push.sh --quick   Run only YAML lint (fastest)"
+            echo "  ./test-before-push.sh                Run all tests (fast - no Lighthouse)"
+            echo "  ./test-before-push.sh --full         Run all tests including Lighthouse"
+            echo "  ./test-before-push.sh --quick        Run only YAML lint (fastest)"
+            echo "  ./test-before-push.sh --skip-images  Skip image asset validation"
             echo ""
             echo "Recommended workflow:"
             echo "  1. Run this script"
@@ -89,6 +95,7 @@ echo "GitHub Actions does NOT run tests - it only builds and deploys."
 echo "All quality checks happen HERE, locally, before you push."
 echo ""
 echo "This script will validate:"
+echo "  • Image assets (dimensions, naming convention)"
 echo "  • YAML syntax and formatting"
 echo "  • Jekyll build"
 echo "  • HTML structure, links, and images"
@@ -101,6 +108,110 @@ echo ""
 # Check if we're in the right directory
 if [ ! -f "_config.yml" ]; then
     print_error "Not in Jekyll root directory. Please run from website root."
+    exit 1
+fi
+
+# ============================================================================
+# STEP 0: Image Asset Validation
+# ============================================================================
+
+print_header "Step 0/5: Image Asset Validation"
+
+if [ "$SKIP_IMAGES" = true ]; then
+    echo "Image validation skipped (--skip-images flag set)."
+elif ! command -v identify &>/dev/null || ! command -v convert &>/dev/null || ! command -v mogrify &>/dev/null; then
+    echo -e "${YELLOW}⚠ ImageMagick not installed — image validation skipped.${NC}"
+    echo "  Install with: sudo apt-get install imagemagick"
+else
+    print_step "Checking work folder images for naming and dimension conventions..."
+    IMAGE_CHECK_PASSED=true
+
+    for WORK_DIR in assets/works/[0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9]-*/; do
+        [ -d "$WORK_DIR" ] || continue
+
+        FOLDER_BASENAME="$(basename "$WORK_DIR")"
+        DEFAULT_SLUG="$(echo "$FOLDER_BASENAME" | sed 's/^[0-9]\{4\}-[0-9]\{2\}-[0-9]\{2\}-//')"
+
+        # Detect gallery slug from existing conforming gallery files
+        GALLERY_SLUG=""
+        for gf in "$WORK_DIR"*-gallery[0-9][0-9]_1440w.jpg; do
+            [ -f "$gf" ] || continue
+            gf_basename="$(basename "$gf")"
+            detected="$(echo "$gf_basename" | sed 's/-gallery[0-9][0-9]_1440w\.jpg$//')"
+            [ -n "$detected" ] && GALLERY_SLUG="$detected" && break
+        done
+        [ -z "$GALLERY_SLUG" ] && GALLERY_SLUG="$DEFAULT_SLUG"
+
+        FOLDER_NEEDS_PROCESSING=false
+
+        # Check each image in this work folder
+        while IFS= read -r -d '' IMG; do
+            FILENAME="$(basename "$IMG")"
+            EXT_LOWER="${FILENAME##*.}"
+            EXT_LOWER="${EXT_LOWER,,}"
+            case "$EXT_LOWER" in jpg|jpeg|png) ;; *) continue ;; esac
+
+            # thumbnail.jpg — check dimensions, warn only
+            if [ "$FILENAME" = "thumbnail.jpg" ]; then
+                DIMS="$(identify -format "%wx%h" "$IMG" 2>/dev/null || echo "unknown")"
+                if [ "$DIMS" != "700x700" ]; then
+                    echo -e "${YELLOW}⚠ $WORK_DIR$FILENAME is ${DIMS} (expected 700×700 — manual crop required)${NC}"
+                fi
+                continue
+            fi
+
+            # hero.jpg — must be 1440×810
+            if [ "$FILENAME" = "hero.jpg" ]; then
+                DIMS="$(identify -format "%wx%h" "$IMG" 2>/dev/null || echo "unknown")"
+                if [ "$DIMS" != "1440x810" ]; then
+                    echo -e "${YELLOW}→ $WORK_DIR$FILENAME is ${DIMS} (needs resize to 1440×810)${NC}"
+                    FOLDER_NEEDS_PROCESSING=true
+                fi
+                continue
+            fi
+
+            # gallery files — must match slug pattern and be 1440px wide
+            if echo "$FILENAME" | grep -qE "^${GALLERY_SLUG}-gallery[0-9]{2}_1440w\.(jpg|jpeg|png)$"; then
+                WIDTH="$(identify -format "%w" "$IMG" 2>/dev/null || echo "0")"
+                if [ "$WIDTH" != "1440" ]; then
+                    echo -e "${YELLOW}→ $WORK_DIR$FILENAME is ${WIDTH}px wide (needs resize to 1440px)${NC}"
+                    FOLDER_NEEDS_PROCESSING=true
+                fi
+                continue
+            fi
+
+            # unknown filename
+            echo -e "${RED}✗ Unknown image filename: $WORK_DIR$FILENAME${NC}"
+            echo "  Expected: thumbnail.jpg | hero.jpg | ${GALLERY_SLUG}-gallery##_1440w.jpg"
+            FOLDER_NEEDS_PROCESSING=true
+
+        done < <(find "$WORK_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -print0 | sort -z)
+
+        # Auto-process if violations found
+        if [ "$FOLDER_NEEDS_PROCESSING" = true ]; then
+            print_step "Running: ./scripts/process-images.sh $WORK_DIR"
+            if ./scripts/process-images.sh "$WORK_DIR"; then
+                print_success "Images in $WORK_DIR processed successfully."
+            else
+                print_error "Image processing failed for $WORK_DIR"
+                echo "  Rename any unknown files manually, then re-run this script."
+                IMAGE_CHECK_PASSED=false
+            fi
+        fi
+    done
+
+    if [ "$IMAGE_CHECK_PASSED" = true ]; then
+        print_success "Image asset validation passed!"
+    else
+        print_error "Image asset validation failed — fix the errors above and re-run."
+        ALL_PASSED=false
+    fi
+fi
+
+# Exit early if image validation failed
+if [ "$ALL_PASSED" = false ]; then
+    print_header "Tests Failed"
+    print_error "Please fix the errors above before proceeding."
     exit 1
 fi
 

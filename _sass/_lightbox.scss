@@ -1,5 +1,6 @@
-/* Image Grid Cursor */
-.grid-image[data-lightbox="true"] {
+/* Lightbox-enabled images */
+.grid-image[data-lightbox="true"],
+.hero-image[data-lightbox="true"] {
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
@@ -7,6 +8,10 @@
 .grid-image[data-lightbox="true"]:hover {
   transform: scale(1.05);
   opacity: 0.9;
+}
+
+.hero-image[data-lightbox="true"]:hover {
+  opacity: 0.85;
 }
 
 /* Lightbox Modal */

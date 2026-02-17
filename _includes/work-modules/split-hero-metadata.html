@@ -27,7 +27,7 @@
       {% if include.content_type == "image" %}
         {% comment %} Hero Image {% endcomment %}
         <div class="split-hero-image">
-          <img src="{{ include.image | relative_url }}" alt="{{ include.alt | default: include.caption | default: page.title }}">
+          <img src="{{ include.image | relative_url }}" alt="{{ include.alt | default: include.caption | default: page.title }}" class="hero-image" data-lightbox="true" data-caption="{{ include.caption | default: '' }}">
           {% if include.caption %}
             <p class="image-caption">{{ include.caption }}</p>
           {% endif %}

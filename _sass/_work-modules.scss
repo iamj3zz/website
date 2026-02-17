@@ -242,8 +242,14 @@
 
 .metadata-grid {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 30px;
+}
+
+/* Keep single column inside narrow split panels */
+.split-right .metadata-grid,
+.split-bandcamp-right .metadata-grid {
   grid-template-columns: 1fr;
-  gap: 12px 15px;
 }
 
 .metadata-item {
@@ -448,6 +454,10 @@
   .image-grid.grid-4,
   .image-grid.grid-5,
   .image-grid.grid-6 {
+    grid-template-columns: 1fr;
+  }
+
+  .metadata-grid {
     grid-template-columns: 1fr;
   }
 

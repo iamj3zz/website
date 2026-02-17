@@ -1,4 +1,4 @@
-// Lightbox functionality for image-grid module
+// Lightbox functionality for image-grid and hero-image modules
 (function() {
   'use strict';
 
@@ -12,22 +12,38 @@
 
   let currentImages = [];
   let currentIndex = 0;
+  let isSingleImage = false;
 
   // Find all lightbox-enabled images
-  const lightboxImages = document.querySelectorAll('.grid-image[data-lightbox="true"]');
+  const gridImages = document.querySelectorAll('.grid-image[data-lightbox="true"]');
+  const heroImages = document.querySelectorAll('.hero-image[data-lightbox="true"]');
 
-  // Add click event to each image
-  lightboxImages.forEach((img, index) => {
+  // Add click event to grid images (navigable gallery)
+  gridImages.forEach((img, index) => {
     img.addEventListener('click', function() {
-      openLightbox(img, index);
+      openLightbox(img, index, false);
     });
   });
 
-  function openLightbox(img, index) {
-    // Get all images in the same grid
-    const grid = img.closest('.image-grid');
-    currentImages = Array.from(grid.querySelectorAll('.grid-image[data-lightbox="true"]'));
-    currentIndex = currentImages.indexOf(img);
+  // Add click event to hero images (single image, no navigation)
+  heroImages.forEach((img) => {
+    img.addEventListener('click', function() {
+      openLightbox(img, 0, true);
+    });
+  });
+
+  function openLightbox(img, index, single) {
+    isSingleImage = single;
+
+    if (single) {
+      currentImages = [img];
+      currentIndex = 0;
+    } else {
+      // Get all images in the same grid
+      const grid = img.closest('.image-grid');
+      currentImages = Array.from(grid.querySelectorAll('.grid-image[data-lightbox="true"]'));
+      currentIndex = currentImages.indexOf(img);
+    }
 
     showImage(currentIndex);
     lightbox.classList.add('active');
@@ -43,7 +59,6 @@
 
     // Update caption (XSS-safe using textContent)
     const caption = currentImages[index].getAttribute('data-caption') || '';
-    const counter = `Image ${index + 1} of ${currentImages.length}`;
 
     // Clear previous caption content
     lightboxCaption.innerHTML = '';
@@ -55,14 +70,25 @@
       lightboxCaption.appendChild(captionText);
     }
 
-    const captionCounter = document.createElement('p');
-    captionCounter.className = 'caption-counter';
-    captionCounter.textContent = counter;
-    lightboxCaption.appendChild(captionCounter);
+    // Show counter only for multi-image galleries
+    if (!isSingleImage) {
+      const counter = `Image ${index + 1} of ${currentImages.length}`;
+      const captionCounter = document.createElement('p');
+      captionCounter.className = 'caption-counter';
+      captionCounter.textContent = counter;
+      lightboxCaption.appendChild(captionCounter);
+    }
 
-    // Update button states
-    prevBtn.disabled = (index === 0);
-    nextBtn.disabled = (index === currentImages.length - 1);
+    // Show/hide nav buttons
+    if (isSingleImage) {
+      prevBtn.style.display = 'none';
+      nextBtn.style.display = 'none';
+    } else {
+      prevBtn.style.display = '';
+      nextBtn.style.display = '';
+      prevBtn.disabled = (index === 0);
+      nextBtn.disabled = (index === currentImages.length - 1);
+    }
   }
 
   function closeLightbox() {
@@ -70,6 +96,7 @@
     document.body.style.overflow = ''; // Restore scrolling
     currentImages = [];
     currentIndex = 0;
+    isSingleImage = false;
   }
 
   // Close button
@@ -106,12 +133,12 @@
         closeLightbox();
         break;
       case 'ArrowLeft':
-        if (currentIndex > 0) {
+        if (!isSingleImage && currentIndex > 0) {
           showImage(currentIndex - 1);
         }
         break;
       case 'ArrowRight':
-        if (currentIndex < currentImages.length - 1) {
+        if (!isSingleImage && currentIndex < currentImages.length - 1) {
           showImage(currentIndex + 1);
         }
         break;
