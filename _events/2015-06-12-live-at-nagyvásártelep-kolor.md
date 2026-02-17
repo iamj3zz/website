@@ -6,6 +6,7 @@ time: "20:30"
 country: Hungary
 city: Budapest
 venue_name: Nagyvásártelep Csepel
+venue_address: "Soroksári út 48, 1095 Budapest, Hungary"
 venue_link: https://www.google.com/search?q=Nagyv%C3%A1s%C3%A1rtelep+Csepel+Budapest 
 ticket_link: 
 description: Collaborative experimental with Modeo producer. Hypnotic vision abstract space journey

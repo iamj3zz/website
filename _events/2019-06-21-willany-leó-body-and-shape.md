@@ -6,6 +6,7 @@ time: "18:20-18:45"
 country: Hungary
 city: Szentendre
 venue_name: MANK Galéria
+venue_address: "Bogdányi út 51, 2000 Szentendre, Hungary"
 venue_link: https://alkotomuveszet.hu/ 
 ticket_link: 
 description: Improvisational dance engaging with Sculptures in the Garden exhibition

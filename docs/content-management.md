@@ -139,6 +139,7 @@ Event files should use date-based naming: `YYYY-MM-DD-event-name.md`
 - `description` - Event description (string, can be multiple sentences)
 
 **Optional Fields:**
+- `venue_address` - Physical street address of the venue (string, e.g., "Kazinczy u. 14, 1075 Budapest, Hungary"). Displayed only in print layout below the venue name. Omit for online events or when address is unavailable.
 - `work_id` - Links event to a specific work (must match a work's `work_id` exactly)
 - `published` - Set to `false` to hide from site (defaults to true if omitted)
 
@@ -152,6 +153,7 @@ country: Spain
 city: Barcelona
 venue_name: Festival Venue
 venue_link: https://www.venue.com
+venue_address: "Carrer Example 42, 08001 Barcelona, Spain"
 ticket_link: https://www.tickets.com/event
 description: Live performance at the festival main stage.
 ---
@@ -167,6 +169,7 @@ country: Spain
 city: Barcelona
 venue_name: Festival Venue
 venue_link: https://www.venue.com
+venue_address: "Carrer Example 42, 08001 Barcelona, Spain"
 ticket_link: https://www.tickets.com/event
 description: Live performance at the festival main stage.
 work_id: my-project-title

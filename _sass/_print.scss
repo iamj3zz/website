@@ -86,7 +86,6 @@
   /* Year sections with page break control */
   .events-year-section {
     margin-bottom: 40px;
-    page-break-inside: avoid;
   }
 
   .events-year-section:last-child {
@@ -106,7 +105,7 @@
 
   .events-table-header {
     display: grid !important;
-    grid-template-columns: 60px 50px 85px 85px 1fr 70px 2fr !important;
+    grid-template-columns: 60px 50px 85px 85px 1fr 70px !important;
     gap: 12px;
     padding: 10px 0;
     border-bottom: 2px solid #333;
@@ -122,15 +121,28 @@
     letter-spacing: 0.8px;
   }
 
+  /* Hide description column from header */
+  .events-table-header .event-col-description {
+    display: none !important;
+  }
+
   /* Event rows with page break control */
   .events-table-row {
     display: grid !important;
-    grid-template-columns: 60px 50px 85px 85px 1fr 70px 2fr !important;
+    grid-template-columns: 60px 50px 85px 85px 1fr 70px !important;
     gap: 12px !important;
-    padding: 15px 0;
+    padding: 15px 0 0 0;
     border-bottom: 1px solid #e0e0e0;
     page-break-inside: avoid;
     align-items: start;
+    text-align: justify;
+  }
+
+  /* Description spans full width below the row */
+  .events-table-row .event-col-description {
+    grid-column: 1 / -1 !important;
+    padding-top: 6px;
+    padding-bottom: 12px;
   }
 
   .events-table-row:last-child {
@@ -227,6 +239,16 @@
     padding-bottom: 0 !important;
   }
 
+  /* Venue Address - Show in print below venue name */
+  .event-venue-address {
+    display: block !important;
+    font-size: 8px !important;
+    color: #767676 !important;
+    font-weight: normal !important;
+    line-height: 1.3;
+    margin-top: 2px;
+  }
+
   /* Reset tickets link to normal (not button) */
   .event-col-tickets {
     margin-bottom: 0 !important;
@@ -250,6 +272,19 @@
     font-size: 11px !important;
     line-height: 1.5 !important;
     margin-top: 0 !important;
+  }
+
+  /* Always show full description in print, hide toggle button */
+  .event-desc-short {
+    display: none !important;
+  }
+
+  .event-desc-full {
+    display: inline !important;
+  }
+
+  .event-desc-toggle {
+    display: none !important;
   }
 
   /* Event Ticket QR Code - Show in print, hide text link */
@@ -503,7 +538,6 @@
     grid-template-columns: 1.5fr 1fr !important;
     gap: 30px;
     margin-bottom: 40px;
-    page-break-inside: avoid;
   }
 
   .bio-text {
@@ -533,7 +567,6 @@
 
   .bio-category {
     margin-bottom: 30px;
-    page-break-inside: avoid;
   }
 
   .bio-category:last-child {

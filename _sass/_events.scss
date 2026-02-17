@@ -60,6 +60,7 @@
   padding: 20px 0;
   border-bottom: 1px solid #e0e0e0;
   align-items: start;
+  text-align: justify;
 }
 
 .events-table-row:last-child {
@@ -244,4 +245,27 @@
     font-size: 20px;
     margin-bottom: 20px;
   }
+}
+
+/* Venue Address - Hidden on screen, shown in print */
+.event-venue-address {
+  display: none;
+}
+
+/* Description expand/collapse toggle */
+.event-desc-toggle {
+  background: none;
+  border: none;
+  color: #767676;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 0 0 4px;
+  line-height: 1;
+  vertical-align: middle;
+  transition: color 0.2s ease;
+}
+
+.event-desc-toggle:hover {
+  color: #333;
 }

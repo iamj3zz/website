@@ -6,6 +6,7 @@ time: "17:00"
 country: Hungary
 city: Kisharsány
 venue_name: Kisharsány Villany Wine region
+venue_address: "Kisharsány, 7823 Hungary"
 venue_link: https://ordogkatlan.hu/ 
 ticket_link: https://ordogkatlan.hu
 description: Multicultural Pan-Art Festival spanning four villages

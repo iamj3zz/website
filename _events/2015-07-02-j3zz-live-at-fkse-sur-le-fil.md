@@ -6,6 +6,7 @@ time: "20:30"
 country: Hungary
 city: Budapest
 venue_name: FKSE (Studio Gallery)
+venue_address: "Rottenbiller utca 35, 1077 Budapest, Hungary"
 venue_link: https://fkse.net/ 
 ticket_link: 
 description: Solo performance ~15 min improvisation on contemporary acoustic violin

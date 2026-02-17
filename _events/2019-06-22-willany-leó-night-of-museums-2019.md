@@ -6,6 +6,7 @@ time: "20:00-21:00"
 country: Hungary
 city: Székesfehérvár
 venue_name: Szent István Király Múzeum
+venue_address: "Fő utca 6, 8000 Székesfehérvár, Hungary"
 venue_link: https://goo.gl/maps/yMfXEWHGWVVhQF236
 ticket_link: 
 description: Artists respond creatively to 20th-century Hungarian photography exhibition

@@ -77,6 +77,9 @@ mailchimp_bot_field: "b_349b73ae355385780ee4a24db_fa86ed72ea"
 # GDPR consent field ID
 mailchimp_gdpr_field: "14182"
 
+# Events
+event_description_truncate: 300  # Character limit for event descriptions before showing expand toggle (0 = never truncate)
+
 # Collections
 collections:
   portfolio:

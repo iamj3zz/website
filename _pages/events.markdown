@@ -52,14 +52,14 @@ image: /assets/img/J3ZZ-logo-black-300px.png
           <div class="event-col-time">{{ event.time }}</div>
           <div class="event-col-country">{{ event.country }}</div>
           <div class="event-col-city">{{ event.city }}</div>
-          <div class="event-col-venue"><a href="{{ event.venue_link }}" target="_blank" rel="noopener noreferrer">{{ event.venue_name }}</a></div>
+          <div class="event-col-venue"><a href="{{ event.venue_link }}" target="_blank" rel="noopener noreferrer">{{ event.venue_name }}</a>{% if event.venue_address %}<span class="event-venue-address">{{ event.venue_address }}</span>{% endif %}</div>
           <div class="event-col-tickets">
             {% if event.ticket_link %}
             <a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer" class="event-ticket-link">Tickets</a>
             <span class="event-ticket-qr" data-ticket-url="{{ event.ticket_link }}"></span>
             {% endif %}
           </div>
-          <div class="event-col-description">{{ event.description }}</div>
+          <div class="event-col-description">{% assign _trunc = site.event_description_truncate | default: 120 %}{% if _trunc > 0 and event.description.size > _trunc %}<span class="event-desc-short">{{ event.description | truncate: _trunc }}</span><span class="event-desc-full" hidden>{{ event.description }}</span><button class="event-desc-toggle" aria-expanded="false" aria-label="Show full description">+</button>{% else %}{{ event.description }}{% endif %}</div>
         </div>
         {% endif %}
       {% endfor %}

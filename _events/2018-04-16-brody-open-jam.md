@@ -6,6 +6,7 @@ time: "20:30"
 country: Hungary
 city: Budapest
 venue_name: Brody Studios
+venue_address: "Bródy Sándor utca 10, 1088 Budapest, Hungary"
 venue_link: http://www.brody.land/ 
 ticket_link: 
 description: Open jam session with J3ZZ as guest artist
