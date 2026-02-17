@@ -13,6 +13,8 @@ permalink: /works/
     <button class="filter-btn" data-filter="live-acts">Live Acts</button>
     <button class="filter-btn" data-filter="releases">Releases</button>
     <button class="filter-btn" data-filter="commissions">Commissions</button>
+    <button class="filter-btn" data-filter="fine-arts">Fine Arts</button>
+    <button class="filter-btn" data-filter="residencies">Residencies</button>
   </div>
 
   <div class="portfolio-grid">

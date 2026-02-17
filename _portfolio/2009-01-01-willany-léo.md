@@ -1,0 +1,27 @@
+---
+published: true
+layout: work
+title: "Willany léo"
+work_id: willany-léo
+abstract: |
+  The artist has participated since 2009 as an improviser musician with Willany Léo, an "improvisative dance theatre directed by Zoltán Grecsó.
+description: |
+  The artist has participated since 2009 as an improviser musician with Willany Léo, an "improvisative dance theatre directed by Zoltán Grecsó." Regular involvement includes "improvisation-based movement/sound experimentations" performed for audiences across Hungary, particularly in Budapest, spanning galleries, theatres, and festivals.
+category: live-acts
+image: /assets/img/31-complete-template/thumbnail.jpg
+
+# Define metadata once here - it will be used by all modules below
+metadata:
+  release_date: "2009-01-01"
+  location: "Budapest, Hungary"
+  collaborators: "Zoltán Grecsó (choreographer/director), Jérôme Li-Thiao-Té (improviser musician/violinist)"
+  credits: "Choreographer/Director: Zoltán Grecsó. Improviser musician/violinist: Jérôme Li-Thiao-Té"
+  custom:
+    - label: "External Links"
+      value: "project_website: willany.com; facebook_events: facebook.com/willanyleoimproszinhaz/events/"
+    - label: "Tags"
+      value: "live, violinist"
+
+sections:
+  # TODO: Add sections here
+---

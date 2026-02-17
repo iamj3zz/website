@@ -57,4 +57,5 @@
       applyFilter(filterValue);
     });
   });
+  });
 })();

@@ -15,6 +15,8 @@ image: /assets/img/J3ZZ-logo-black-300px.png
     <button class="filter-btn" data-filter="live-acts">Live Acts</button>
     <button class="filter-btn" data-filter="releases">Releases</button>
     <button class="filter-btn" data-filter="commissions">Commissions</button>
+    <button class="filter-btn" data-filter="fine-arts">Fine Arts</button>
+    <button class="filter-btn" data-filter="residencies">Residencies</button>
   </div>
 
   <div class="portfolio-grid">
@@ -24,12 +26,27 @@ image: /assets/img/J3ZZ-logo-black-300px.png
       {% if item.published == false %}
         {% continue %}
       {% endif %}
-      <div class="portfolio-item" data-category="{{ item.category }}">
+      {% comment %} Support both single category and multiple categories {% endcomment %}
+      {% if item.categories %}
+        {% assign item_categories = item.categories | join: ' ' %}
+        {% assign all_categories = item.categories %}
+      {% else %}
+        {% assign item_categories = item.category %}
+        {% assign all_categories = item.category | split: ',' %}
+      {% endif %}
+      <div class="portfolio-item" data-category="{{ item_categories }}">
         <a href="{{ item.url | relative_url }}" class="portfolio-link">
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
           <div class="portfolio-overlay">
             <h2>{{ item.title }}</h2>
-            <p>{{ item.category | replace: '-', ' ' | capitalize }}</p>
+            <div class="overlay-categories">
+              {% for cat in all_categories %}
+                <span class="category-tag" data-category="{{ cat }}">{{ cat | replace: '-', ' ' | capitalize }}</span>
+              {% endfor %}
+            </div>
+            {% if item.abstract %}
+              <p class="overlay-abstract">{{ item.abstract }}</p>
+            {% endif %}
           </div>
         </a>
       </div>

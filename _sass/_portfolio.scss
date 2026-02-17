@@ -87,20 +87,28 @@
 }
 
 /* Category-specific overlay colors */
-.portfolio-item[data-category="installations"] .portfolio-overlay {
+.portfolio-item[data-category~="installations"] .portfolio-overlay {
   background: rgba(66, 135, 245, 0.68); /* Blue */
 }
 
-.portfolio-item[data-category="live-acts"] .portfolio-overlay {
+.portfolio-item[data-category~="live-acts"] .portfolio-overlay {
   background: rgba(245, 66, 66, 0.68); /* Red */
 }
 
-.portfolio-item[data-category="releases"] .portfolio-overlay {
+.portfolio-item[data-category~="releases"] .portfolio-overlay {
   background: rgba(66, 245, 135, 0.68); /* Green */
 }
 
-.portfolio-item[data-category="commissions"] .portfolio-overlay {
+.portfolio-item[data-category~="commissions"] .portfolio-overlay {
   background: rgba(245, 176, 66, 0.68); /* Orange */
+}
+
+.portfolio-item[data-category~="fine-arts"] .portfolio-overlay {
+  background: rgba(176, 66, 245, 0.68); /* Purple */
+}
+
+.portfolio-item[data-category~="residencies"] .portfolio-overlay {
+  background: rgba(245, 66, 176, 0.68); /* Pink */
 }
 
 .portfolio-item:hover img {
