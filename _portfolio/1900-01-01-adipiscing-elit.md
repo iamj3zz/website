@@ -7,7 +7,7 @@ abstract: "An immersive multichannel sound installation examining the relationsh
 description: |
   An immersive multichannel sound installation examining the relationship between organic and synthetic sounds through algorithmic composition.
 category: installations
-image: /assets/img/04-adipiscing-elit/thumbnail.jpg
+image: /assets/works/1900-01-01-adipiscing-elit/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -43,7 +43,7 @@ sections:
   # Split hero-metadata layout
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/04-adipiscing-elit/thumbnail.jpg
+    image: /assets/works/1900-01-01-adipiscing-elit/thumbnail.jpg
     caption: "Installation view at Mori Art Museum, Tokyo"
 
   # About the installation
@@ -60,12 +60,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/04-adipiscing-elit/thumbnail.jpg
-      - /assets/img/04-adipiscing-elit/thumbnail.jpg
-      - /assets/img/04-adipiscing-elit/thumbnail.jpg
-      - /assets/img/04-adipiscing-elit/thumbnail.jpg
-      - /assets/img/04-adipiscing-elit/thumbnail.jpg
-      - /assets/img/04-adipiscing-elit/thumbnail.jpg
+      - /assets/works/1900-01-01-adipiscing-elit/thumbnail.jpg
+      - /assets/works/1900-01-01-adipiscing-elit/thumbnail.jpg
+      - /assets/works/1900-01-01-adipiscing-elit/thumbnail.jpg
+      - /assets/works/1900-01-01-adipiscing-elit/thumbnail.jpg
+      - /assets/works/1900-01-01-adipiscing-elit/thumbnail.jpg
+      - /assets/works/1900-01-01-adipiscing-elit/thumbnail.jpg
     captions:
       - "24-channel speaker array"
       - "Visitors experiencing the installation"

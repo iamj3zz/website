@@ -7,7 +7,7 @@ abstract: "An immersive live performance in complete darkness, where spatial aud
 description: |
   An immersive live performance in complete darkness, where spatial audio techniques guide the audience through a sonic journey.
 category: live-acts
-image: /assets/img/24-anim-id-est/thumbnail.jpg
+image: /assets/works/1900-01-01-anim-id-est/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -46,10 +46,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/24-anim-id-est/thumbnail.jpg
-      - /assets/img/24-anim-id-est/thumbnail.jpg
-      - /assets/img/24-anim-id-est/thumbnail.jpg
-      - /assets/img/24-anim-id-est/thumbnail.jpg
+      - /assets/works/1900-01-01-anim-id-est/thumbnail.jpg
+      - /assets/works/1900-01-01-anim-id-est/thumbnail.jpg
+      - /assets/works/1900-01-01-anim-id-est/thumbnail.jpg
+      - /assets/works/1900-01-01-anim-id-est/thumbnail.jpg
     captions:
       - "Audience entering the darkened space"
       - "32-channel speaker configuration"

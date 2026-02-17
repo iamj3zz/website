@@ -8,7 +8,7 @@ abstract: |
 description: |
   A contemporary dance piece exploring adolescence through the lives of four teenagers. The work presents their daily experiences, aspirations, and desires within a surreal, greenhouse-like setting where themes of fate and life's meaning unfold with "black humour and self-irony." The narrative arc progresses from hopeful youth to the realization of life's complexities.
 category: live-acts
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

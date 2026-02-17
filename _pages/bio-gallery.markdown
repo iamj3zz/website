@@ -34,7 +34,7 @@ gallery_images:
   <div class="image-grid grid-4">
     {% for image in page.gallery_images %}
     <div class="grid-item">
-      <img src="{{ '/assets/img/bio-gallery/' | append: image.filename | relative_url }}"
+      <img src="{{ '/assets/bio/gallery/' | append: image.filename | relative_url }}"
            alt="{{ image.caption }}"
            class="grid-image"
            data-lightbox="true"

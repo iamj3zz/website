@@ -7,7 +7,7 @@ abstract: "A large-scale outdoor sound installation using environmental sensors 
 description: |
   A large-scale outdoor sound installation using environmental sensors to transform urban data into constantly evolving musical compositions.
 category: installations
-image: /assets/img/10-exercitation-ullamco/thumbnail.jpg
+image: /assets/works/1900-01-01-exercitation-ullamco/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -53,12 +53,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
-      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
-      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
-      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
-      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
-      - /assets/img/10-exercitation-ullamco/thumbnail.jpg
+      - /assets/works/1900-01-01-exercitation-ullamco/thumbnail.jpg
+      - /assets/works/1900-01-01-exercitation-ullamco/thumbnail.jpg
+      - /assets/works/1900-01-01-exercitation-ullamco/thumbnail.jpg
+      - /assets/works/1900-01-01-exercitation-ullamco/thumbnail.jpg
+      - /assets/works/1900-01-01-exercitation-ullamco/thumbnail.jpg
+      - /assets/works/1900-01-01-exercitation-ullamco/thumbnail.jpg
     captions:
       - "Installation at Marineterrein Amsterdam"
       - "Environmental sensor array"

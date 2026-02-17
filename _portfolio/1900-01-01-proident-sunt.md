@@ -7,7 +7,7 @@ abstract: "A durational performance piece exploring sustained tones and gradual 
 description: |
   A durational performance piece exploring sustained tones and gradual transformations, performed continuously over six hours.
 category: live-acts
-image: /assets/img/21-proident-sunt/thumbnail.jpg
+image: /assets/works/1900-01-01-proident-sunt/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -46,8 +46,8 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/21-proident-sunt/thumbnail.jpg
-      - /assets/img/21-proident-sunt/thumbnail.jpg
+      - /assets/works/1900-01-01-proident-sunt/thumbnail.jpg
+      - /assets/works/1900-01-01-proident-sunt/thumbnail.jpg
     captions:
       - "Performance at Roulette"
       - "Six-hour durational setup"

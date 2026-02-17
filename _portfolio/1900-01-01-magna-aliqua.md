@@ -7,7 +7,7 @@ abstract: "A site-specific sound installation investigating acoustic properties 
 description: |
   A site-specific sound installation investigating acoustic properties of architectural spaces through resonant frequencies and feedback systems.
 category: installations
-image: /assets/img/07-magna-aliqua/thumbnail.jpg
+image: /assets/works/1900-01-01-magna-aliqua/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -45,7 +45,7 @@ sections:
   # Split layout with hero image and metadata
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/07-magna-aliqua/thumbnail.jpg
+    image: /assets/works/1900-01-01-magna-aliqua/thumbnail.jpg
     caption: "Installation view at Palais de Tokyo"
 
   # About the installation
@@ -62,10 +62,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/07-magna-aliqua/thumbnail.jpg
-      - /assets/img/07-magna-aliqua/thumbnail.jpg
-      - /assets/img/07-magna-aliqua/thumbnail.jpg
-      - /assets/img/07-magna-aliqua/thumbnail.jpg
+      - /assets/works/1900-01-01-magna-aliqua/thumbnail.jpg
+      - /assets/works/1900-01-01-magna-aliqua/thumbnail.jpg
+      - /assets/works/1900-01-01-magna-aliqua/thumbnail.jpg
+      - /assets/works/1900-01-01-magna-aliqua/thumbnail.jpg
     captions:
       - "Speaker array configuration"
       - "Visitors experiencing the installation"

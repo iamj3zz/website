@@ -7,7 +7,7 @@ abstract: "A high-energy performance combining hardware synthesizers and live pe
 description: |
   A high-energy performance combining hardware synthesizers and live percussion, featuring improvisational elements and dynamic audio processing.
 category: live-acts
-image: /assets/img/09-quis-nostrud/thumbnail.jpg
+image: /assets/works/1900-01-01-quis-nostrud/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -57,10 +57,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/09-quis-nostrud/thumbnail.jpg
-      - /assets/img/09-quis-nostrud/thumbnail.jpg
-      - /assets/img/09-quis-nostrud/thumbnail.jpg
-      - /assets/img/09-quis-nostrud/thumbnail.jpg
+      - /assets/works/1900-01-01-quis-nostrud/thumbnail.jpg
+      - /assets/works/1900-01-01-quis-nostrud/thumbnail.jpg
+      - /assets/works/1900-01-01-quis-nostrud/thumbnail.jpg
+      - /assets/works/1900-01-01-quis-nostrud/thumbnail.jpg
     captions:
       - "Live performance at Sónar"
       - "Hardware synthesizer setup"

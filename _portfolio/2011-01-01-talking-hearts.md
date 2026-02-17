@@ -8,7 +8,7 @@ abstract: |
 description: |
   An interdisciplinary performing arts initiative exploring improvisation across multiple artistic disciplines. The project brought together young music, media, and dance artists from four European countries to create collaborative performances. Participants developed interaction methods—including codes, hand signs, sensors, and spatial arrangements—to perform together in improvisation-based shows combining visuals, music, and movement.
 category: live-acts
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

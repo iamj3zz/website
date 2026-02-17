@@ -8,7 +8,7 @@ abstract: |
 description: |
   The artist composed, produced, and created sound design for a promotional spot titled "Highlights of Hungary."
 category: releases
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

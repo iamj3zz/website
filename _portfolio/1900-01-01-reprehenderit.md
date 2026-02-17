@@ -7,7 +7,7 @@ abstract: "A theatrical live performance integrating spoken word, electroacousti
 description: |
   A theatrical live performance integrating spoken word, electroacoustic textures, and spatially-distributed sound sources throughout the venue.
 category: live-acts
-image: /assets/img/15-reprehenderit/thumbnail.jpg
+image: /assets/works/1900-01-01-reprehenderit/thumbnail.jpg
 published: false
 
 # Define metadata once here
@@ -46,8 +46,8 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/15-reprehenderit/thumbnail.jpg
-      - /assets/img/15-reprehenderit/thumbnail.jpg
+      - /assets/works/1900-01-01-reprehenderit/thumbnail.jpg
+      - /assets/works/1900-01-01-reprehenderit/thumbnail.jpg
     captions:
       - "Development workshop"
       - "Spatial audio testing"

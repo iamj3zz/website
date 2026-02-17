@@ -7,7 +7,7 @@ abstract: "A sample fine arts portfolio work demonstrating how to present drawin
 description: |
   This is a sample work for the Fine Arts category. Use this as a reference when adding drawings, sculptures, paintings, mixed media, or other visual art pieces to the portfolio. Fine Arts works are distinct from new media arts — they encompass traditional and contemporary visual art practices rooted in physical craft and material expression.
 category: fine-arts
-image: /assets/img/32-fine-arts-sample/thumbnail.jpg
+image: /assets/works/1900-01-01-fine-arts-sample/thumbnail.jpg
 
 metadata:
   release_date: "1900-01-01"
@@ -32,7 +32,7 @@ sections:
 
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/32-fine-arts-sample/thumbnail.jpg
+    image: /assets/works/1900-01-01-fine-arts-sample/thumbnail.jpg
     caption: "Installation view of the exhibition"
 
   - type: text
@@ -49,9 +49,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/32-fine-arts-sample/thumbnail.jpg
-      - /assets/img/32-fine-arts-sample/thumbnail.jpg
-      - /assets/img/32-fine-arts-sample/thumbnail.jpg
+      - /assets/works/1900-01-01-fine-arts-sample/thumbnail.jpg
+      - /assets/works/1900-01-01-fine-arts-sample/thumbnail.jpg
+      - /assets/works/1900-01-01-fine-arts-sample/thumbnail.jpg
     captions:
       - "Detail view 1"
       - "Detail view 2"

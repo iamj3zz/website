@@ -7,7 +7,7 @@ abstract: "An intense live coding performance utilizing algorithmic composition 
 description: |
   An intense live coding performance utilizing algorithmic composition and machine learning to create unpredictable sonic landscapes in real-time.
 category: live-acts
-image: /assets/img/06-labore-dolore/thumbnail.jpg
+image: /assets/works/1900-01-01-labore-dolore/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -57,10 +57,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/06-labore-dolore/thumbnail.jpg
-      - /assets/img/06-labore-dolore/thumbnail.jpg
-      - /assets/img/06-labore-dolore/thumbnail.jpg
-      - /assets/img/06-labore-dolore/thumbnail.jpg
+      - /assets/works/1900-01-01-labore-dolore/thumbnail.jpg
+      - /assets/works/1900-01-01-labore-dolore/thumbnail.jpg
+      - /assets/works/1900-01-01-labore-dolore/thumbnail.jpg
+      - /assets/works/1900-01-01-labore-dolore/thumbnail.jpg
     captions:
       - "Live coding performance at MUTEK"
       - "Code projection during the show"

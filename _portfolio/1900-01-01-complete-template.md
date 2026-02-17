@@ -8,7 +8,7 @@ description: |
   This is the ultimate reference template demonstrating every feature of the portfolio system. It showcases all available metadata fields (temporal, industry identifiers, location, production, roles, collaborators, and custom fields), all 10 section module types (hero-image, text, image-grid, metadata, quote, spacer, linked-events, iframe, split layouts, and description), and best practices for organizing complex works. Use this as a reference when creating new portfolio works to understand all available options and their proper formatting.
 categories: [installations, releases, live-acts, commissions]
 primary_category: installations
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # CENTRALIZED METADATA - Define once, use everywhere
 # This metadata block demonstrates ALL possible fields
@@ -161,7 +161,7 @@ sections:
   # ==========================================
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/31-complete-template/thumbnail.jpg
+    image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
     caption: "Installation view showing spatial audio setup and visitor interaction"
     # Metadata fields are inherited from front matter - no need to repeat
 
@@ -233,7 +233,7 @@ sections:
   # Large featured image with optional caption
   # ==========================================
   - type: hero-image
-    image: /assets/img/31-complete-template/thumbnail.jpg
+    image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
     caption: "Wide view of the installation space showing 32-channel speaker array and interactive zones"
 
   # ==========================================
@@ -243,12 +243,12 @@ sections:
   - type: image-grid
     columns: 3  # Options: 1, 2, 3, 4, 5, or 6
     images:
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
     captions:
       - "Speaker array configuration detail"
       - "Visitors experiencing the installation"
@@ -264,10 +264,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
     captions:
       - "Day view of installation"
       - "Night lighting configuration"
@@ -281,8 +281,8 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
     captions:
       - "Before: Empty gallery space"
       - "After: Completed installation"
@@ -372,12 +372,12 @@ sections:
   - type: image-grid
     columns: 6
     images:
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
-      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
     captions:
       - "Detail 1"
       - "Detail 2"
@@ -393,7 +393,7 @@ sections:
   - type: image-grid
     columns: 1
     images:
-      - /assets/img/31-complete-template/thumbnail.jpg
+      - /assets/works/1900-01-01-complete-template/thumbnail.jpg
     captions:
       - "Panoramic view of the complete installation space"
 

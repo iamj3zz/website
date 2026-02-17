@@ -7,7 +7,7 @@ abstract: "A collaborative album featuring five international artists, blending 
 description: |
   A collaborative album featuring five international artists, blending ambient soundscapes with experimental electronic textures in a cohesive sonic journey.
 category: commissions
-image: /assets/img/27-ambient-collective/thumbnail.jpg
+image: /assets/works/1900-01-01-ambient-collective/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -56,10 +56,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/27-ambient-collective/thumbnail.jpg
-      - /assets/img/27-ambient-collective/thumbnail.jpg
-      - /assets/img/27-ambient-collective/thumbnail.jpg
-      - /assets/img/27-ambient-collective/thumbnail.jpg
+      - /assets/works/1900-01-01-ambient-collective/thumbnail.jpg
+      - /assets/works/1900-01-01-ambient-collective/thumbnail.jpg
+      - /assets/works/1900-01-01-ambient-collective/thumbnail.jpg
+      - /assets/works/1900-01-01-ambient-collective/thumbnail.jpg
     captions:
       - "Collaborative artwork design"
       - "Remote production process"

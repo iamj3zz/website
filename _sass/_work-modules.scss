@@ -56,6 +56,7 @@
   text-align: center;
 }
 
+
 .work-page-metadata .metadata-item {
   display: inline;
 }
@@ -241,7 +242,7 @@
 
 .metadata-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: 1fr;
   gap: 12px 15px;
 }
 
@@ -454,7 +455,5 @@
     font-size: 18px;
   }
 
-  .metadata-grid {
-    grid-template-columns: 1fr;
-  }
+
 }

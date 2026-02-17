@@ -7,7 +7,7 @@ abstract: "A participatory sound installation where audience members collectivel
 description: |
   A participatory sound installation where audience members collectively shape the sonic output through networked mobile devices and sensors.
 category: installations
-image: /assets/img/13-commodo-consequat/thumbnail.jpg
+image: /assets/works/1900-01-01-commodo-consequat/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -42,7 +42,7 @@ sections:
 
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/13-commodo-consequat/thumbnail.jpg
+    image: /assets/works/1900-01-01-commodo-consequat/thumbnail.jpg
     caption: "Visitors interacting with the installation at Seoul Museum of Art"
 
   - type: text
@@ -57,12 +57,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/13-commodo-consequat/thumbnail.jpg
-      - /assets/img/13-commodo-consequat/thumbnail.jpg
-      - /assets/img/13-commodo-consequat/thumbnail.jpg
-      - /assets/img/13-commodo-consequat/thumbnail.jpg
-      - /assets/img/13-commodo-consequat/thumbnail.jpg
-      - /assets/img/13-commodo-consequat/thumbnail.jpg
+      - /assets/works/1900-01-01-commodo-consequat/thumbnail.jpg
+      - /assets/works/1900-01-01-commodo-consequat/thumbnail.jpg
+      - /assets/works/1900-01-01-commodo-consequat/thumbnail.jpg
+      - /assets/works/1900-01-01-commodo-consequat/thumbnail.jpg
+      - /assets/works/1900-01-01-commodo-consequat/thumbnail.jpg
+      - /assets/works/1900-01-01-commodo-consequat/thumbnail.jpg
     captions:
       - "Installation view"
       - "Visitors using the mobile app"

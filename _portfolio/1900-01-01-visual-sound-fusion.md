@@ -8,7 +8,7 @@ description: |
   An audiovisual collaboration with Maya Chen, merging live performance with generative visuals to create immersive multisensory experiences.
 categories: [commissions, installations, live-acts]
 primary_category: commissions
-image: /assets/img/26-visual-sound-fusion/thumbnail.jpg
+image: /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -45,7 +45,7 @@ sections:
   - type: metadata
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/26-visual-sound-fusion/thumbnail.jpg
+    image: /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
     caption: "Installation view at ArtScience Museum, Singapore"
 
   - type: text
@@ -66,12 +66,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/26-visual-sound-fusion/thumbnail.jpg
-      - /assets/img/26-visual-sound-fusion/thumbnail.jpg
-      - /assets/img/26-visual-sound-fusion/thumbnail.jpg
-      - /assets/img/26-visual-sound-fusion/thumbnail.jpg
-      - /assets/img/26-visual-sound-fusion/thumbnail.jpg
-      - /assets/img/26-visual-sound-fusion/thumbnail.jpg
+      - /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
+      - /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
+      - /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
+      - /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
+      - /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
+      - /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
     captions:
       - "Installation at ArtScience Museum"
       - "Visitors interacting with the work"

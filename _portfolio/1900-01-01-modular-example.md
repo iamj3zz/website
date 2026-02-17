@@ -8,7 +8,7 @@ description: |
   This template demonstrates the standard modular layout system with all basic module types: hero-image, text, image-grid, metadata, quote, spacer, linked-events, iframe, and description. Each module can be freely positioned in any order to create custom layouts. Use this as a reference for understanding how to combine different modules to tell your work's story effectively.
 categories: [installations, commissions]
 primary_category: installations
-image: /assets/img/28-modular-example/thumbnail.jpg
+image: /assets/works/1900-01-01-modular-example/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -41,7 +41,7 @@ sections:
     # No fields specified - automatically uses front matter metadata
 
   - type: hero-image
-    image: /assets/img/28-modular-example/thumbnail.jpg
+    image: /assets/works/1900-01-01-modular-example/thumbnail.jpg
     caption: "Main installation view"
 
 
@@ -147,12 +147,12 @@ sections:
   - type: image-grid
     columns: 5
     images:
-      - /assets/img/28-modular-example/thumbnail.jpg
-      - /assets/img/28-modular-example/thumbnail.jpg
-      - /assets/img/28-modular-example/thumbnail.jpg
+      - /assets/works/1900-01-01-modular-example/thumbnail.jpg
+      - /assets/works/1900-01-01-modular-example/thumbnail.jpg
+      - /assets/works/1900-01-01-modular-example/thumbnail.jpg
       - /assets/img/J3ZZ-logo-black-300px.png
-      - /assets/img/28-modular-example/thumbnail.jpg
-      - /assets/img/28-modular-example/thumbnail.jpg
+      - /assets/works/1900-01-01-modular-example/thumbnail.jpg
+      - /assets/works/1900-01-01-modular-example/thumbnail.jpg
     captions:
       - "Installation detail from the main exhibition space"
       - "Close-up view of the interactive sound module"

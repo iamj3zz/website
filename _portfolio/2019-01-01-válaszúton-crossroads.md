@@ -8,7 +8,7 @@ abstract: |
 description: |
   The artist composed and produced the soundtrack for director Flora Chilton's short film. The project emerged from a "Self-Awareness Film Workshop" involving young people in crisis situations, including those in temporary or foster homes. The film addresses sensitive social issues including "child prostitution and human trafficking drawing the attention of youngsters most vulnerable to these dangers."
 category: releases
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

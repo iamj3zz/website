@@ -7,7 +7,7 @@ abstract: "An example work demonstrating split-column layout patterns, combining
 description: |
   This template showcases split-column layouts using the split-hero-metadata and split-bandcamp-metadata modules. These specialized modules display content and metadata side-by-side in a responsive two-column layout, perfect for releases and installations that need a more compact, magazine-style presentation. The layout automatically adapts to single-column on mobile devices.
 category: installations
-image: /assets/img/29-split-layout-example/thumbnail.jpg
+image: /assets/works/1900-01-01-split-layout-example/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -44,7 +44,7 @@ sections:
   # Two-column split layout: Hero image (2/3 left) + Metadata (1/3 right)
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/29-split-layout-example/thumbnail.jpg
+    image: /assets/works/1900-01-01-split-layout-example/thumbnail.jpg
     caption: "Main installation view with dramatic lighting"
   
   
@@ -65,9 +65,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/29-split-layout-example/thumbnail.jpg
-      - /assets/img/29-split-layout-example/thumbnail.jpg
-      - /assets/img/29-split-layout-example/thumbnail.jpg
+      - /assets/works/1900-01-01-split-layout-example/thumbnail.jpg
+      - /assets/works/1900-01-01-split-layout-example/thumbnail.jpg
+      - /assets/works/1900-01-01-split-layout-example/thumbnail.jpg
     captions:
       - "Detail view of the sound installation"
       - "Interactive elements in close-up"

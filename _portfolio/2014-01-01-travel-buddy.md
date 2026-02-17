@@ -7,7 +7,7 @@ abstract: "In 2014, the composer scored and produced the soundtrack for this sho
 description: |
   In 2014, the composer scored and produced the soundtrack for this short film. The project represents work in film scoring and soundtrack production for fiction cinema.
 category: releases
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

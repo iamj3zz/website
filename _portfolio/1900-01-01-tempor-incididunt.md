@@ -7,7 +7,7 @@ abstract: "A concept album blending electroacoustic composition with techno infl
 description: |
   A concept album blending electroacoustic composition with techno influences, exploring themes of time dilation and cyclical patterns.
 category: releases
-image: /assets/img/05-tempor-incididunt/thumbnail.jpg
+image: /assets/works/1900-01-01-tempor-incididunt/thumbnail.jpg
 published: false
 
 # Define metadata once here
@@ -50,9 +50,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/05-tempor-incididunt/thumbnail.jpg
-      - /assets/img/05-tempor-incididunt/thumbnail.jpg
-      - /assets/img/05-tempor-incididunt/thumbnail.jpg
+      - /assets/works/1900-01-01-tempor-incididunt/thumbnail.jpg
+      - /assets/works/1900-01-01-tempor-incididunt/thumbnail.jpg
+      - /assets/works/1900-01-01-tempor-incididunt/thumbnail.jpg
     captions:
       - "Studio production session"
       - "Hardware synthesizer setup"

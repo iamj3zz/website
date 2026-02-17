@@ -7,7 +7,7 @@ abstract: "A genre-defying album combining elements of jazz, breakbeat, and musi
 description: |
   A genre-defying album combining elements of jazz, breakbeat, and musique concrète, created through extensive tape manipulation and sampling.
 category: releases
-image: /assets/img/20-occaecat-cupidatat/thumbnail.jpg
+image: /assets/works/1900-01-01-occaecat-cupidatat/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -55,10 +55,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/20-occaecat-cupidatat/thumbnail.jpg
-      - /assets/img/20-occaecat-cupidatat/thumbnail.jpg
-      - /assets/img/20-occaecat-cupidatat/thumbnail.jpg
-      - /assets/img/20-occaecat-cupidatat/thumbnail.jpg
+      - /assets/works/1900-01-01-occaecat-cupidatat/thumbnail.jpg
+      - /assets/works/1900-01-01-occaecat-cupidatat/thumbnail.jpg
+      - /assets/works/1900-01-01-occaecat-cupidatat/thumbnail.jpg
+      - /assets/works/1900-01-01-occaecat-cupidatat/thumbnail.jpg
     captions:
       - "Recording session with Márton Fenyvesi"
       - "Tape manipulation setup"

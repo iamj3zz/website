@@ -8,7 +8,7 @@ abstract: |
 description: |
   An interactive audio spatial installation exploring contemporary Hungarian society. The artist describes it as "a performative sound installation, an interactive experiment willing to present the space and the system we are in." Visitors navigate a multichannel soundscape and observe how their sounds and movements affect the living space, raising philosophical questions about individual agency and collective responsibility.
 category: installations
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

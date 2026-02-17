@@ -7,7 +7,7 @@ abstract: "A light and sound installation using laser projections and synthesize
 description: |
   A light and sound installation using laser projections and synthesized tones to create immersive geometric audiovisual patterns.
 category: installations
-image: /assets/img/16-voluptate-velit/thumbnail.jpg
+image: /assets/works/1900-01-01-voluptate-velit/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -42,7 +42,7 @@ sections:
 
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/16-voluptate-velit/thumbnail.jpg
+    image: /assets/works/1900-01-01-voluptate-velit/thumbnail.jpg
     caption: "Installation view at Kunsthalle Wien"
 
   - type: text
@@ -57,12 +57,12 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/16-voluptate-velit/thumbnail.jpg
-      - /assets/img/16-voluptate-velit/thumbnail.jpg
-      - /assets/img/16-voluptate-velit/thumbnail.jpg
-      - /assets/img/16-voluptate-velit/thumbnail.jpg
-      - /assets/img/16-voluptate-velit/thumbnail.jpg
-      - /assets/img/16-voluptate-velit/thumbnail.jpg
+      - /assets/works/1900-01-01-voluptate-velit/thumbnail.jpg
+      - /assets/works/1900-01-01-voluptate-velit/thumbnail.jpg
+      - /assets/works/1900-01-01-voluptate-velit/thumbnail.jpg
+      - /assets/works/1900-01-01-voluptate-velit/thumbnail.jpg
+      - /assets/works/1900-01-01-voluptate-velit/thumbnail.jpg
+      - /assets/works/1900-01-01-voluptate-velit/thumbnail.jpg
     captions:
       - "Laser projection patterns"
       - "Visitors experiencing the installation"

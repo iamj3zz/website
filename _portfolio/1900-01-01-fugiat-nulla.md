@@ -7,7 +7,7 @@ abstract: "A club-oriented live set blending techno rhythms with experimental so
 description: |
   A club-oriented live set blending techno rhythms with experimental sound design, featuring custom-built hardware controllers.
 category: live-acts
-image: /assets/img/18-fugiat-nulla/thumbnail.jpg
+image: /assets/works/1900-01-01-fugiat-nulla/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -53,10 +53,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/18-fugiat-nulla/thumbnail.jpg
-      - /assets/img/18-fugiat-nulla/thumbnail.jpg
-      - /assets/img/18-fugiat-nulla/thumbnail.jpg
-      - /assets/img/18-fugiat-nulla/thumbnail.jpg
+      - /assets/works/1900-01-01-fugiat-nulla/thumbnail.jpg
+      - /assets/works/1900-01-01-fugiat-nulla/thumbnail.jpg
+      - /assets/works/1900-01-01-fugiat-nulla/thumbnail.jpg
+      - /assets/works/1900-01-01-fugiat-nulla/thumbnail.jpg
     captions:
       - "Performance at WORM"
       - "Custom hardware controllers"

@@ -7,7 +7,7 @@ abstract: "Demonstrates the new centralized metadata system where metadata is de
 description: |
   This template demonstrates the centralized metadata architecture where all metadata fields (year, location, role, technology, collaborators, etc.) are defined once in the front matter and automatically available to all modules. This eliminates duplication and ensures consistency across multiple metadata displays. Any module that uses metadata will automatically pull from the centralized definition.
 category: releases
-image: /assets/img/30-centralized-metadata-example/thumbnail.jpg
+image: /assets/works/1900-01-01-centralized-metadata-example/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -75,7 +75,7 @@ sections:
   # Split Hero-Metadata: also uses front matter metadata automatically
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/30-centralized-metadata-example/thumbnail.jpg
+    image: /assets/works/1900-01-01-centralized-metadata-example/thumbnail.jpg
     caption: "Live performance at Paris Electronic Music Festival"
     # No metadata fields needed - automatically uses front matter metadata!
 
@@ -112,9 +112,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/30-centralized-metadata-example/thumbnail.jpg
-      - /assets/img/30-centralized-metadata-example/thumbnail.jpg
-      - /assets/img/30-centralized-metadata-example/thumbnail.jpg
+      - /assets/works/1900-01-01-centralized-metadata-example/thumbnail.jpg
+      - /assets/works/1900-01-01-centralized-metadata-example/thumbnail.jpg
+      - /assets/works/1900-01-01-centralized-metadata-example/thumbnail.jpg
     captions:
       - "Studio session"
       - "Mixing process"

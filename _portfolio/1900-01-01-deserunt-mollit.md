@@ -7,7 +7,7 @@ abstract: "A double album of piano-driven electronic compositions, blending clas
 description: |
   A double album of piano-driven electronic compositions, blending classical instrumentation with contemporary production techniques.
 category: releases
-image: /assets/img/23-deserunt-mollit/thumbnail.jpg
+image: /assets/works/1900-01-01-deserunt-mollit/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -55,10 +55,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/23-deserunt-mollit/thumbnail.jpg
-      - /assets/img/23-deserunt-mollit/thumbnail.jpg
-      - /assets/img/23-deserunt-mollit/thumbnail.jpg
-      - /assets/img/23-deserunt-mollit/thumbnail.jpg
+      - /assets/works/1900-01-01-deserunt-mollit/thumbnail.jpg
+      - /assets/works/1900-01-01-deserunt-mollit/thumbnail.jpg
+      - /assets/works/1900-01-01-deserunt-mollit/thumbnail.jpg
+      - /assets/works/1900-01-01-deserunt-mollit/thumbnail.jpg
     captions:
       - "Recording at FAMU Studio"
       - "Steinway Model D piano"

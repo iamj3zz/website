@@ -8,7 +8,7 @@ abstract: |
 description: |
   The artist served as the first resident live musician at Buddha Bar Budapest, performing as a violinist from 2013 to 2017. The role involved improvising violin melodies over DJ sets by Mada, Tony, and Viktor in the magnificent Klotild Palace venue. The establishment subsequently closed in 2019.
 category: live-acts
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

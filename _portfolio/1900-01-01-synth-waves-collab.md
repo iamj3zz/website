@@ -8,7 +8,7 @@ description: |
   A collaborative electronic music project exploring the intersection of analog synthesis and digital processing with sound designer Alex Rivers.
 categories: [commissions, releases]
 primary_category: commissions
-image: /assets/img/25-synth-waves-collab/thumbnail.jpg
+image: /assets/works/1900-01-01-synth-waves-collab/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -56,9 +56,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/25-synth-waves-collab/thumbnail.jpg
-      - /assets/img/25-synth-waves-collab/thumbnail.jpg
-      - /assets/img/25-synth-waves-collab/thumbnail.jpg
+      - /assets/works/1900-01-01-synth-waves-collab/thumbnail.jpg
+      - /assets/works/1900-01-01-synth-waves-collab/thumbnail.jpg
+      - /assets/works/1900-01-01-synth-waves-collab/thumbnail.jpg
     captions:
       - "Studio session in London"
       - "Modular synthesis setup"

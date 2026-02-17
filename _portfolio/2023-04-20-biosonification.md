@@ -7,7 +7,7 @@ abstract: "An experimental EP exploring the intersection of ambient textures and
 description: |
   An experimental EP exploring the intersection of ambient textures and rhythmic structures, recorded entirely using field recordings and analog synthesis.
 category: releases
-image: /assets/img/03-biosonification/thumbnail.jpg
+image: /assets/works/2023-04-20-biosonification/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -54,9 +54,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/03-biosonification/thumbnail.jpg
-      - /assets/img/03-biosonification/thumbnail.jpg
-      - /assets/img/03-biosonification/thumbnail.jpg
+      - /assets/works/2023-04-20-biosonification/thumbnail.jpg
+      - /assets/works/2023-04-20-biosonification/thumbnail.jpg
+      - /assets/works/2023-04-20-biosonification/thumbnail.jpg
     captions:
       - "Recording session in Iceland"
       - "Analog synthesis setup"

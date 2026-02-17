@@ -8,7 +8,7 @@ abstract: |
 description: |
   For this project, the artist created an outdoor spatial audio installation featuring 16 speakers following a residency period. During the residency, they "established a catalogue of sounds produced by human body, creating a vocabulary of sounds." The installation functioned as "a place where the imaginary vision of the performer meet Nicosia's reality." A circus performer and her dog participated in the opening performance alongside the artist.
 category: installations
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

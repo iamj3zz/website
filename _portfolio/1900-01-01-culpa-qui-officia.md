@@ -7,7 +7,7 @@ abstract: "A biofeedback installation using heart rate and breathing patterns to
 description: |
   A biofeedback installation using heart rate and breathing patterns to generate unique sonic compositions for each visitor.
 category: installations
-image: /assets/img/22-culpa-qui-officia/thumbnail.jpg
+image: /assets/works/1900-01-01-culpa-qui-officia/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -42,7 +42,7 @@ sections:
 
   - type: split-hero-metadata
     content_type: "image"
-    image: /assets/img/22-culpa-qui-officia/thumbnail.jpg
+    image: /assets/works/1900-01-01-culpa-qui-officia/thumbnail.jpg
     caption: "Visitor experiencing the biofeedback installation"
 
   - type: text
@@ -57,10 +57,10 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/22-culpa-qui-officia/thumbnail.jpg
-      - /assets/img/22-culpa-qui-officia/thumbnail.jpg
-      - /assets/img/22-culpa-qui-officia/thumbnail.jpg
-      - /assets/img/22-culpa-qui-officia/thumbnail.jpg
+      - /assets/works/1900-01-01-culpa-qui-officia/thumbnail.jpg
+      - /assets/works/1900-01-01-culpa-qui-officia/thumbnail.jpg
+      - /assets/works/1900-01-01-culpa-qui-officia/thumbnail.jpg
+      - /assets/works/1900-01-01-culpa-qui-officia/thumbnail.jpg
     captions:
       - "Biofeedback sensors"
       - "Visitor engagement"

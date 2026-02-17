@@ -7,7 +7,7 @@ abstract: "A full-length album merging industrial soundscapes with melodic drone
 description: |
   A full-length album merging industrial soundscapes with melodic drone, exploring the sonic landscape of abandoned factories and machinery.
 category: releases
-image: /assets/img/11-laboris-nisi/thumbnail.jpg
+image: /assets/works/1900-01-01-laboris-nisi/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -54,9 +54,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/11-laboris-nisi/thumbnail.jpg
-      - /assets/img/11-laboris-nisi/thumbnail.jpg
-      - /assets/img/11-laboris-nisi/thumbnail.jpg
+      - /assets/works/1900-01-01-laboris-nisi/thumbnail.jpg
+      - /assets/works/1900-01-01-laboris-nisi/thumbnail.jpg
+      - /assets/works/1900-01-01-laboris-nisi/thumbnail.jpg
     captions:
       - "Abandoned factory in Detroit"
       - "Field recording session"

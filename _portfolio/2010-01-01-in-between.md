@@ -8,7 +8,7 @@ abstract: |
 description: |
   Artist Massih Parsaei commissioned composer JÉRÔME LI-THIAO-TÉ to create and produce the soundtrack for this video installation and short film project in 2010.
 category: releases
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

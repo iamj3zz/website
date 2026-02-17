@@ -7,7 +7,7 @@ abstract: "A dark ambient release inspired by arctic landscapes, featuring proce
 description: |
   A dark ambient release inspired by arctic landscapes, featuring processed hydrophone recordings and subterranean drones.
 category: releases
-image: /assets/img/17-cillum-dolore/thumbnail.jpg
+image: /assets/works/1900-01-01-cillum-dolore/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -54,10 +54,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/17-cillum-dolore/thumbnail.jpg
-      - /assets/img/17-cillum-dolore/thumbnail.jpg
-      - /assets/img/17-cillum-dolore/thumbnail.jpg
-      - /assets/img/17-cillum-dolore/thumbnail.jpg
+      - /assets/works/1900-01-01-cillum-dolore/thumbnail.jpg
+      - /assets/works/1900-01-01-cillum-dolore/thumbnail.jpg
+      - /assets/works/1900-01-01-cillum-dolore/thumbnail.jpg
+      - /assets/works/1900-01-01-cillum-dolore/thumbnail.jpg
     captions:
       - "Arctic landscape near Tromsø"
       - "Hydrophone recording session"

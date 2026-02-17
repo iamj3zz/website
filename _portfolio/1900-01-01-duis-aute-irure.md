@@ -8,7 +8,7 @@ description: |
   A collaborative split release with electronic producer Alex Kim, juxtaposing digital glitch aesthetics with warm analog tape textures.
 categories: [commissions, releases]
 primary_category: commissions
-image: /assets/img/14-duis-aute-irure/thumbnail.jpg
+image: /assets/works/1900-01-01-duis-aute-irure/thumbnail.jpg
 
 # Define metadata once here
 metadata:
@@ -56,10 +56,10 @@ sections:
   - type: image-grid
     columns: 2
     images:
-      - /assets/img/14-duis-aute-irure/thumbnail.jpg
-      - /assets/img/14-duis-aute-irure/thumbnail.jpg
-      - /assets/img/14-duis-aute-irure/thumbnail.jpg
-      - /assets/img/14-duis-aute-irure/thumbnail.jpg
+      - /assets/works/1900-01-01-duis-aute-irure/thumbnail.jpg
+      - /assets/works/1900-01-01-duis-aute-irure/thumbnail.jpg
+      - /assets/works/1900-01-01-duis-aute-irure/thumbnail.jpg
+      - /assets/works/1900-01-01-duis-aute-irure/thumbnail.jpg
     captions:
       - "Studio session in Toronto"
       - "Digital processing setup (J3ZZ)"

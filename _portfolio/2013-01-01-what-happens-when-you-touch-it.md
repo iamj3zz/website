@@ -8,7 +8,7 @@ abstract: |
 description: |
   This collaborative project involved composing and producing the complete soundtrack for a dance performance by EnKnapGroup, a Ljubljana-based dance company. The work explores the intersection of physical and mental realms, transitioning from rational, linear thought into imagination. The performance presents "a game of impossibilities and warped reality" featuring themes of personal and collective consciousness.
 category: live-acts
-image: /assets/img/31-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

@@ -7,7 +7,7 @@ abstract: "A minimalist release focusing on micro-sound and silence, exploring t
 description: |
   A minimalist release focusing on micro-sound and silence, exploring the subtle textures found in barely audible sonic phenomena.
 category: releases
-image: /assets/img/08-minim-veniam/thumbnail.jpg
+image: /assets/works/1900-01-01-minim-veniam/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -55,9 +55,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/img/08-minim-veniam/thumbnail.jpg
-      - /assets/img/08-minim-veniam/thumbnail.jpg
-      - /assets/img/08-minim-veniam/thumbnail.jpg
+      - /assets/works/1900-01-01-minim-veniam/thumbnail.jpg
+      - /assets/works/1900-01-01-minim-veniam/thumbnail.jpg
+      - /assets/works/1900-01-01-minim-veniam/thumbnail.jpg
     captions:
       - "Field recording in rural Norway"
       - "High-resolution recording equipment"

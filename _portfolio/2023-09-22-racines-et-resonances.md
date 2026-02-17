@@ -7,7 +7,7 @@ abstract: "A live audiovisual performance merging modular synthesis with generat
 description: |
   A live audiovisual performance merging modular synthesis with generative visuals, creating an evolving soundscape that responds to real-time data.
 category: live-acts
-image: /assets/img/02-racines-et-resonances/racines-resonances-gallery01_1440w.jpg
+image: /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery01_1440w.jpg
 # Define metadata once here - it will be used by all modules below
 metadata:
   release_date: "2023-09-22"
@@ -97,14 +97,14 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/img/02-racines-et-resonances/racines-resonances-gallery01_1440w.jpg
-      - /assets/img/02-racines-et-resonances/racines-resonances-gallery02_1440w.jpg
-      - /assets/img/02-racines-et-resonances/racines-resonances-gallery03_1440w.jpg
-      - /assets/img/02-racines-et-resonances/racines-resonances-gallery04_1440w.jpg
-      - /assets/img/02-racines-et-resonances/racines-resonances-gallery05_1440w.jpg
-      - /assets/img/02-racines-et-resonances/racines-resonances-gallery06_1440w.jpg
-      - /assets/img/02-racines-et-resonances/racines-resonances-gallery07_1440w.jpg
-      - /assets/img/02-racines-et-resonances/racines-resonances-gallery08_1440w.jpg      
+      - /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery01_1440w.jpg
+      - /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery02_1440w.jpg
+      - /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery03_1440w.jpg
+      - /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery04_1440w.jpg
+      - /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery05_1440w.jpg
+      - /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery06_1440w.jpg
+      - /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery07_1440w.jpg
+      - /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery08_1440w.jpg      
     captions:
 
 
