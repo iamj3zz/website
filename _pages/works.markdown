@@ -80,6 +80,9 @@ permalink: /works/
           {% if item.abstract %}
           <div class="works-col-abstract">{{ item.abstract }}</div>
           {% endif %}
+          {% if item.description %}
+          <div class="works-col-description">{{ item.description }}</div>
+          {% endif %}
           {% comment %} Build metadata string WITHOUT categories {% endcomment %}
           {% assign metadata_string = "" %}
           {% if item.metadata.release_date %}
