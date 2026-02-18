@@ -57,25 +57,29 @@ metadata:
       link: "https://www.youtube.com/watch?v=D67JKMnHHyQ"
     - label: ""
       value: "PDF: Calaméo — Park in Progress artist biographies catalogue (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/calameo_document_20260218_151910.pdf"
+      link: "/assets/works/2014-09-29-park-in-progress/calameo-park-in-progress-artist-biographies.pdf"
     - label: ""
       value: "PDF: Open call announcement — Institut Français de Suède (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/screencapture-ifsuede-open-call-park-in-progress-11-nicosie-chypre-2026-02-18-15_22_09.pdf"
+      link: "/assets/works/2014-09-29-park-in-progress/ifsuede-open-call-park-in-progress-11-nicosia-2014.pdf"
     - label: ""
       value: "PDF: Transcultures — Park in Progress 11, Nuit Européenne de la Jeune Création (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/screencapture-transcultures-be-2014-09-27-05-10-2014-park-in-progress11-nuit-europeenne-de-la-jeune-creation-chypre-2026-02-18-15_27_49.pdf"
+      link: "/assets/works/2014-09-29-park-in-progress/transcultures-park-in-progress-11-nicosia-2014.pdf"
     - label: ""
       value: "PDF: Check In Cyprus — Park in Progress 11 (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/screencapture-checkincyprus-article-8967-park-in-progress-11-2026-02-18-15_34_03.pdf"
+      link: "/assets/works/2014-09-29-park-in-progress/checkincyprus-park-in-progress-11-nicosia-2014.pdf"
     - label: ""
       value: "PDF: Nicosia city portal — announcement (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/screencapture-nicosia-org-cy-el-GR-news-announcements-2014-62296-2026-02-18-15_34_26.pdf"
+      link: "/assets/works/2014-09-29-park-in-progress/nicosia-org-announcement-park-in-progress-11-2014.pdf"
 
 sections:
 
-  - type: hero-image
-    image: /assets/works/2020-08-18-iris/hero.jpg
+  - type: iframe
+    embed_code: '<iframe src="https://www.youtube.com/embed/vOR03ChysIs" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"  # Options: "16:9" (default), "4:3", "1:1", "21:9"
     caption: "Park in Progress 11 — Municipal Gardens, Nicosia, Cyprus, September–October 2014"
+
+
 
   - type: description
 
