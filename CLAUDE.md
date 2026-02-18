@@ -390,21 +390,21 @@ The site includes a GDPR-compliant cookie consent system for managing user priva
 
 **Implementation:**
 - `assets/js/cookie-consent.js` - Cookie consent manager
-- UI integrated in default layout (`_layouts/default.html`)
+- UI included via `_includes/cookie-consent.html`, embedded in all three layouts (`_layouts/portfolio.html`, `_layouts/work.html`, `_layouts/bio-gallery.html`)
 - Preferences stored as JSON: `{analytics: boolean, embedded: boolean, timestamp: ISO8601}`
 - Dispatches `cookieConsentUpdated` events for analytics and other scripts
 
 **Customization:**
-Cookie banner styling can be customized in `assets/css/style.css` (search for `.cookie-consent-banner`).
+Cookie banner is styled inline within `_includes/cookie-consent.html`.
 
 ## Template Works
 
 Reference these portfolio works for implementation examples:
 
-- **Work 31** (`_portfolio/1900-01-01-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - Comprehensive reference with ALL metadata fields and module types
-- **Work 28** (`_portfolio/1900-01-01-modular-example.md`): All standard module types
-- **Work 29** (`_portfolio/1900-01-01-split-layout-example.md`): Split layout modules
-- **Work 30** (`_portfolio/1900-01-01-centralized-metadata-example.md`): Centralized metadata system
+- `_portfolio/1900-01-01-complete-template.md`: **⭐ ULTIMATE TEMPLATE** - Comprehensive reference with ALL metadata fields and module types
+- `_portfolio/1900-01-01-modular-example.md`: All standard module types
+- `_portfolio/1900-01-01-split-layout-example.md`: Split layout modules
+- `_portfolio/1900-01-01-centralized-metadata-example.md`: Centralized metadata system
 
 ## Testing & Quality Assurance
 

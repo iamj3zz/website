@@ -174,6 +174,9 @@ links:
     <div class="bio-category">
       <h2>Residencies</h2>
       <div class="bio-items">
+        <div class="bio-item"><span class="bio-year">2025</span> Citta Della Pieve, Italy</div>
+        <div class="bio-item"><span class="bio-year">2023</span> Kerveguen, Saint-Pierre, Réunion</div>
+        <div class="bio-item"><span class="bio-year">2023</span> Cité des arts, Saint-Denis, Réunion</div>                      
         <div class="bio-item"><span class="bio-year">2018</span> Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</div>
         <div class="bio-item"><span class="bio-year">2014</span> Park in Progress — Nicosia, Cyprus</div>
         <div class="bio-item"><span class="bio-year">2012</span> Talking heArts — Barcelona, Budapest, Bucharest, Florence</div>
