@@ -277,7 +277,12 @@
 
     {% comment %} Custom Fields (for any additional metadata) {% endcomment %}
     {% if custom %}
+      {% assign separator_added = false %}
       {% for item in custom %}
+        {% if item.label == "" and separator_added == false %}
+          <hr class="metadata-links-separator">
+          {% assign separator_added = true %}
+        {% endif %}
         <div class="metadata-item">
           <span class="metadata-label">{{ item.label }}</span>
           <span class="metadata-value">
