@@ -18,6 +18,9 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
+# Windows/WSL zone identifier metadata files
+*:Zone.Identifier
+
 # Environment variables
 .env
 .env.local
