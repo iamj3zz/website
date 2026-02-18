@@ -144,18 +144,21 @@ else
 
         FOLDER_NEEDS_PROCESSING=false
 
-        # Check each image in this work folder
+        # Check each image in this work folder (tracked or staged in git only)
         while IFS= read -r -d '' IMG; do
             FILENAME="$(basename "$IMG")"
             EXT_LOWER="${FILENAME##*.}"
             EXT_LOWER="${EXT_LOWER,,}"
             case "$EXT_LOWER" in jpg|jpeg|png) ;; *) continue ;; esac
 
-            # thumbnail.jpg — check dimensions, warn only
+            # thumbnail.jpg — check dimensions and file size, warn only
             if [ "$FILENAME" = "thumbnail.jpg" ]; then
                 DIMS="$(identify -format "%wx%h" "$IMG" 2>/dev/null || echo "unknown")"
+                SIZE_KB="$(du -k "$IMG" | cut -f1)"
                 if [ "$DIMS" != "700x700" ]; then
-                    echo -e "${YELLOW}⚠ $WORK_DIR$FILENAME is ${DIMS} (expected 700×700 — manual crop required)${NC}"
+                    echo -e "${YELLOW}⚠ $WORK_DIR$FILENAME is ${DIMS}, ${SIZE_KB}KB (expected 700×700 — manual crop required)${NC}"
+                else
+                    echo -e "${GREEN}${CHECK} $WORK_DIR$FILENAME is ${DIMS}, ${SIZE_KB}KB${NC}"
                 fi
                 continue
             fi
@@ -185,7 +188,7 @@ else
             echo "  Expected: thumbnail.jpg | hero.jpg | ${GALLERY_SLUG}-gallery##_1440w.jpg"
             FOLDER_NEEDS_PROCESSING=true
 
-        done < <(find "$WORK_DIR" -maxdepth 1 -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -print0 | sort -z)
+        done < <(git ls-files --cached --others --exclude-standard "$WORK_DIR" | grep -iE '\.(jpg|jpeg|png)$' | sort | tr '\n' '\0')
 
         # Auto-process if violations found
         if [ "$FOLDER_NEEDS_PROCESSING" = true ]; then

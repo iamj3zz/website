@@ -128,4 +128,11 @@ sass:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-# Test change
+
+exclude:
+  - docs/
+  - node_modules/
+  - CLAUDE.md
+  - README.md
+  - lefthook.yml
+  - .claude/

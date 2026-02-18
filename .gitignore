@@ -40,3 +40,6 @@ lhci-reports/
 
 # Print test results
 print-test-results/
+
+# Local resource documentation (not tracked)
+docs/

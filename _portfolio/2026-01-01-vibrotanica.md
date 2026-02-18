@@ -24,11 +24,6 @@ metadata:
 
 sections:
 
-  - type: hero-image
-    image: /assets/works/2020-08-18-iris/hero.jpg
-    caption: "IRIS - Csokonai Theatre, Debrecen, August 2020"
-
-
   - type: description
 
   - type: text

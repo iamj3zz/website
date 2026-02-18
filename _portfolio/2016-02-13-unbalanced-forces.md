@@ -54,6 +54,10 @@ metadata:
     - label: ""
       value: "PDF: LABOR gallery event page (archive)"
       link: /assets/works/2016-02-13-unbalanced-forces/labor-connections-fkse-2016.pdf
+    - label: ""
+      value: "interview"
+      link: https://www.youtube.com/watch?v=5IfBEep7vZU
+
 
      
         
@@ -88,10 +92,12 @@ sections:
        
       The premiere of "Unbalanced Forces" at the Labor Gallery marked a significant moment in the artistic exploration of societal engagement and individual responsibility. Through sounds, movements, and interaction, this work offers a unique perspective on the challenges and opportunities of our time, reminding us that action and intervention are not only possible but essential for shaping the future of our society.
 
-  # - type: image-grid
-  #   columns: 3
-  #   images:
-  #     - /assets/works/2016-02-13-unbalanced-forces/photo01.jpg
+  - type: image-grid
+    columns: 3
+    images:
+      - /assets/works/2016-02-13-unbalanced-forces/unbalanced-forces-gallery01_1440w.jpg
+      - /assets/works/2016-02-13-unbalanced-forces/unbalanced-forces-gallery02_1440w.jpg
+      - /assets/works/2016-02-13-unbalanced-forces/unbalanced-forces-gallery03_1440w.jpg
 
 
   - type: metadata

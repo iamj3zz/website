@@ -8,7 +8,7 @@ abstract: |
 description: |
   For this project, the artist created an outdoor spatial audio installation featuring 16 speakers following a residency period. During the residency, J3ZZ "established a catalogue of sounds produced by human body, creating a vocabulary of sounds." The installation functioned as "a place where the imaginary vision of the performer meet Nicosia's reality." A circus performer and her dog participated in the opening performance alongside the artist.
 category: installations
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/2014-09-29-park-in-progress/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -101,10 +101,13 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/works/2020-08-18-iris/iris-gallery01_1440w.jpg
-      - /assets/works/2020-08-18-iris/iris-gallery02_1440w.jpg
-      - /assets/works/2020-08-18-iris/iris-gallery03_1440w.jpg
-      - /assets/works/2020-08-18-iris/iris-gallery04_1440w.jpg
+      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery01_1440w.jpg
+      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery02_1440w.jpg
+      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery03_1440w.jpg
+      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery04_1440w.jpg
+      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery05_1440w.jpg
+      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery06_1440w.jpg
+      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery07_1440w.jpg
 
 
   - type: metadata
