@@ -8,6 +8,7 @@ abstract: |
 description: |
   The artist served as violinist with Iparkutya, "a Balkan free jazz band" where they improvised melodies and harmonies on ethno-Balkan free jazz compositions. The ensemble performed across Europe while based in Hungary.
 category: live-acts
+commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below

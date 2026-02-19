@@ -7,7 +7,8 @@ abstract: |
   An animated short film for which the artist composed and produced the soundtrack and sound design.
 description: |
   An animated short film for which the artist composed and produced the soundtrack and sound design. The composer conducted an experimental approach, utilizing exclusively audio samples recorded from their own residence at that time, supplemented only by guitar and violin contributions.
-category: releases
+category: films
+commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below

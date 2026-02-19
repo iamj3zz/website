@@ -6,7 +6,8 @@ work_id: ouverture
 abstract: "A short film exploring themes of art, colors, sex, love, and communication."
 description: |
   A short film exploring themes of art, colors, sex, love, and communication. The filmmaker drew inspiration from Paul Klee's philosophy: "Art does not reproduce the visible; rather, it makes visible." The composer crafted the score using cello and violin harmonies and dissonances as metaphors for the relationship dynamics between the two main characters.
-category: releases
+category: films
+commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below

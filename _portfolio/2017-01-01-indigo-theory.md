@@ -7,7 +7,8 @@ abstract: |
   The artist collaborated with the band Indigo Theory during summer 2017 as composer and violinist.
 description: |
   The artist collaborated with the band Indigo Theory during summer 2017 as composer and violinist. The collaboration included both studio recording and live performance work, resulting in a single titled "Rainy Day." The page notes this involved "collaboration with house artists from Indigo Theory."
-category: commissions
+category: releases
+commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below

@@ -7,6 +7,7 @@ abstract: "A live audiovisual performance merging modular synthesis with generat
 description: |
   A live audiovisual performance merging modular synthesis with generative visuals, creating an evolving soundscape that responds to real-time data.
 category: live-acts
+commissioned: false
 image: /assets/works/2023-09-22-racines-et-resonances/racines-resonances-gallery01_1440w.jpg
 # Define metadata once here - it will be used by all modules below
 metadata:

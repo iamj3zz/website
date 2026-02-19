@@ -2,21 +2,27 @@
 .filter-container {
   text-align: center;
   margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2px;
 }
 
 .filter-btn {
   background: none;
   border: none;
   color: #767676;
-  font-size: 13px;
+  font-size: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  padding: 8px 15px;
-  margin: 0 5px;
+  padding: 8px 10px;
+  margin: 0 2px;
   cursor: pointer;
   transition: color 0.3s ease;
   border-bottom: 2px solid transparent;
   padding-bottom: 4px;
+  white-space: nowrap;
 }
 
 .filter-btn:hover {
@@ -26,6 +32,39 @@
 .filter-btn.active {
   color: #333;
   border-bottom-color: #333;
+}
+
+/* Commissioned Toggle */
+.commissioned-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #767676;
+  cursor: pointer;
+  user-select: none;
+  transition: color 0.3s ease;
+  white-space: nowrap;
+}
+
+.commissioned-toggle:hover {
+  color: #595959;
+}
+
+.commissioned-toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  margin: 0;
+}
+
+.commissioned-toggle input[type="checkbox"]:checked ~ span {
+  color: #333;
+  font-weight: 500;
 }
 
 /* Portfolio Grid */
@@ -50,6 +89,32 @@
   color: inherit;
   position: relative;
   height: 100%;
+}
+
+/* Commissioned Badge */
+.commissioned-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(51, 51, 51, 0.85);
+  color: #fff;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  z-index: 5;
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .commissioned-badge {
+  background: rgba(255, 255, 255, 0.95);
+  color: #333;
+  transform: scale(1.1);
 }
 
 .portfolio-item.hidden {
@@ -95,20 +160,24 @@
   background: rgba(245, 66, 66, 0.68); /* Red */
 }
 
-.portfolio-item[data-category~="releases"] .portfolio-overlay {
-  background: rgba(66, 245, 135, 0.68); /* Green */
-}
-
-.portfolio-item[data-category~="commissions"] .portfolio-overlay {
+.portfolio-item[data-category~="films"] .portfolio-overlay {
   background: rgba(245, 176, 66, 0.68); /* Orange */
 }
 
-.portfolio-item[data-category~="fine-arts"] .portfolio-overlay {
+.portfolio-item[data-category~="performances"] .portfolio-overlay {
   background: rgba(176, 66, 245, 0.68); /* Purple */
 }
 
 .portfolio-item[data-category~="residencies"] .portfolio-overlay {
   background: rgba(245, 66, 176, 0.68); /* Pink */
+}
+
+.portfolio-item[data-category~="releases"] .portfolio-overlay {
+  background: rgba(66, 245, 135, 0.68); /* Green */
+}
+
+.portfolio-item[data-category~="workshops"] .portfolio-overlay {
+  background: rgba(245, 200, 66, 0.68); /* Yellow/Gold */
 }
 
 .portfolio-item:hover img {
@@ -189,12 +258,23 @@
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Allow filter buttons to wrap naturally on mobile */
+  /* Smaller filter buttons on mobile */
   .filter-btn {
-    display: inline-block;
-    font-size: 11px;
-    padding: 6px 10px;
-    margin: 3px;
+    font-size: 10px;
+    padding: 6px 6px;
+    margin: 2px;
+  }
+
+  .commissioned-toggle {
+    font-size: 10px;
+    padding: 6px 6px;
+    gap: 4px;
+    margin-left: 4px;
+  }
+
+  .commissioned-toggle input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
   }
 }
 

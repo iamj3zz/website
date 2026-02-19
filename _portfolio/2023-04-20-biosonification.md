@@ -1,12 +1,13 @@
 ---
-published: true 
+published: true
 layout: work
 title: Biosonification
 work_id: biosonification
-abstract: "An experimental EP exploring the intersection of ambient textures and rhythmic structures, recorded entirely using field recordings and analog synthesis."
+abstract: "A workshop exploring the transformation of plant bio-signals into sound and music through bioelectrical sensors and real-time synthesis."
 description: |
-  An experimental EP exploring the intersection of ambient textures and rhythmic structures, recorded entirely using field recordings and analog synthesis.
-category: releases
+  A workshop exploring the transformation of plant bio-signals into sound and music through bioelectrical sensors and real-time synthesis. Participants learn to capture plant bio-signals and transform them into audiovisual experiences.
+category: workshops
+commissioned: false
 image: /assets/works/2023-04-20-biosonification/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below

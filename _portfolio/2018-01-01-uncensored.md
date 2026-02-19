@@ -8,6 +8,7 @@ abstract: |
 description: |
   The artist composed and produced custom music for an audiovisual installation at Uncensored restaurant by Caviar & Bull in Budapest. The installation highlighted country-specific gastronomy and featured chefs. One featured segment presented Brazilian culinary traditions through projected visuals as part of a fully immersive audiovisual experience preceding a fine dining Brazilian-inspired course.
 category: installations
+commissioned: true
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below

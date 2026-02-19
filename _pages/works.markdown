@@ -11,10 +11,15 @@ permalink: /works/
     <button class="filter-btn active" data-filter="all">All</button>
     <button class="filter-btn" data-filter="installations">Installations</button>
     <button class="filter-btn" data-filter="live-acts">Live Acts</button>
-    <button class="filter-btn" data-filter="releases">Releases</button>
-    <button class="filter-btn" data-filter="commissions">Commissions</button>
-    <button class="filter-btn" data-filter="fine-arts">Fine Arts</button>
+    <button class="filter-btn" data-filter="films">Films</button>
+    <button class="filter-btn" data-filter="performances">Performances</button>
     <button class="filter-btn" data-filter="residencies">Residencies</button>
+    <button class="filter-btn" data-filter="releases">Releases</button>
+    <button class="filter-btn" data-filter="workshops">Workshops</button>
+    <label class="commissioned-toggle">
+      <input type="checkbox" id="commissioned-filter" aria-label="Show only commissioned works">
+      <span>Commissioned only</span>
+    </label>
   </div>
 
   <div class="portfolio-grid">
@@ -32,8 +37,11 @@ permalink: /works/
         {% assign item_categories = item.category %}
         {% assign all_categories = item.category | split: ',' %}
       {% endif %}
-      <div class="portfolio-item" data-category="{{ item_categories }}">
+      <div class="portfolio-item" data-category="{{ item_categories }}" data-commissioned="{{ item.commissioned }}">
         <a href="{{ item.url | relative_url }}" class="portfolio-link">
+          {% if item.commissioned == true %}
+            <span class="commissioned-badge" aria-label="Commissioned work">C</span>
+          {% endif %}
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
           <div class="portfolio-overlay">
             <h2>{{ item.title }}</h2>

@@ -7,6 +7,7 @@ abstract: "An immersive interactive installation using bioelectrical sensors to 
 description: |
   Vibrotanica is an immersive interactive audiovisual installation exploring the symbiotic relationship between humans and plants. Bioelectrical sensors capture micro-electrical variations in plants and transform them into real-time sounds and visuals — every interaction with a plant triggers a unique audiovisual response. The work raises awareness about biodiversity, fosters empathy towards nature, and invites reflection on our connection to the environment.
 category: installations
+commissioned: false
 image: /assets/works/2026-01-01-vibrotanica/thumbnail.jpg
 
 metadata:

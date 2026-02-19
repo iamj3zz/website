@@ -8,6 +8,7 @@ abstract: |
 description: |
   The artist has participated since 2009 as an improviser musician with Willany Léo, an "improvisative dance theatre directed by Zoltán Grecsó." Regular involvement includes "improvisation-based movement/sound experimentations" performed for audiences across Hungary, particularly in Budapest, spanning galleries, theatres, and festivals.
 category: live-acts
+commissioned: true
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below

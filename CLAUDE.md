@@ -10,7 +10,8 @@ This is a Jekyll static site deployed to GitHub Pages at www.j3zz.com. The site 
 - Modular layout system with 11 customizable modules (including new description module)
 - Centralized metadata architecture
 - Dual-description system: `abstract` for grid/print lists, `description` for work detail pages
-- Multi-category portfolio support (installations, live-acts, releases, commissions)
+- Multi-category portfolio support with commission status indicator (installations, live-acts, films, performances, residencies, releases, workshops)
+- Commissioned works filter toggle (works across all categories)
 - Responsive design with comprehensive print functionality (all pages A4-optimized with QR codes)
 - Event management system with work linking
 - SEO optimization with structured data, Open Graph tags, and automatic sitemap generation
@@ -234,16 +235,145 @@ Automated testing system to prevent breaking changes during development.
 - Quick reference commands
 - Pre-commit checklist
 
+## Portfolio Categories & Classification
+
+### Category System
+
+The portfolio uses **output format-based categories** that describe what the final work is:
+
+| Category | Description | Examples |
+|----------|-------------|----------|
+| `installations` | Physical/spatial works in specific locations (interactive, permanent, temporary, exhibited or not) | IRIS, Unbalanced Forces, Vibrotanica |
+| `live-acts` | Performing arts (concerts, live shows, performances) | Willany léo, Azalai, Buddha Bar Budapest |
+| `films` | Cinema/video works (documentaries, animations, dance films, short films) | In Between (dance film), Best Friend's Wife's Lover |
+| `performances` | Dance/theater performances (live stage works) | Touch me not / Nebáncsvirág |
+| `residencies` | Artistic residency programs | To Be Told, Music Maker #2, Park in Progress |
+| `releases` | Published works (albums, books, self-published content) | Standalone music albums, EPs |
+| `workshops` | Educational workshops and cultural mediation activities | Biosonification |
+
+**Important:** Categories describe the OUTPUT FORMAT, not your role. Use metadata fields to clarify your role (composer, violinist, sound designer, performer, etc.).
+
+### Commission Status
+
+Every work has a `commissioned` field (true/false) that indicates whether you were given specific requirements:
+
+- `commissioned: true` = You were hired/given instructions with specific requirements (client/commissioner relationship)
+- `commissioned: false` = You had full creative freedom (self-initiated, collaborative partnerships, artistic freedom)
+
+**Examples:**
+- Film score with director's requirements → `category: films`, `commissioned: true`
+- Live performance with creative freedom → `category: live-acts`, `commissioned: false`
+- Band membership (collaborative partnership) → `commissioned: false`
+- Installation with museum's specific brief → `category: installations`, `commissioned: true`
+
+**Key distinction for "commissioned":**
+- **TRUE** = Specific requirements, instructions, brief from client
+- **FALSE** = Full creative freedom (even if paid, even if invited)
+
+### Decision Helper Flow
+
+Use this flowchart to categorize any work:
+
+```
+START: What is the final OUTPUT FORMAT of this work?
+
+┌─────────────────────────────────────────────────┐
+│ Is it a physical/spatial work in a location?   │
+│ (interactive, permanent, temporary, exhibited)  │
+└─────────────────┬───────────────────────────────┘
+                  │ YES → Category: installations
+                  │
+                  │ NO ↓
+┌─────────────────────────────────────────────────┐
+│ Is it a performing arts event?                 │
+│ (concert, live show, performance)               │
+└─────────────────┬───────────────────────────────┘
+                  │ YES → Category: live-acts
+                  │
+                  │ NO ↓
+┌─────────────────────────────────────────────────┐
+│ Is it a cinema/video work?                     │
+│ (film, documentary, animation, dance film)      │
+└─────────────────┬───────────────────────────────┘
+                  │ YES → Category: films
+                  │
+                  │ NO ↓
+┌─────────────────────────────────────────────────┐
+│ Is it a dance/theater stage performance?       │
+│ (live theatrical/choreographic work)            │
+└─────────────────┬───────────────────────────────┘
+                  │ YES → Category: performances
+                  │
+                  │ NO ↓
+┌─────────────────────────────────────────────────┐
+│ Is it an artistic residency program?           │
+└─────────────────┬───────────────────────────────┘
+                  │ YES → Category: residencies
+                  │
+                  │ NO ↓
+┌─────────────────────────────────────────────────┐
+│ Is it a published work?                        │
+│ (album, book, self-published content)           │
+└─────────────────┬───────────────────────────────┘
+                  │ YES → Category: releases
+                  │
+                  └─ If none match, reconsider or ask
+
+---
+
+THEN: Determine commission status
+
+┌─────────────────────────────────────────────────┐
+│ Were you given SPECIFIC REQUIREMENTS?          │
+│ (instructions, brief, client needs)             │
+└─────────────────┬───────────────────────────────┘
+                  │ YES → commissioned: true
+                  │
+                  │ NO ↓
+┌─────────────────────────────────────────────────┐
+│ Did you have FULL CREATIVE FREEDOM?            │
+│ (self-initiated, collaborative, artistic)       │
+└─────────────────┬───────────────────────────────┘
+                  │ YES → commissioned: false
+```
+
+### Common Scenarios
+
+**Scenario 1: Film score that was also released as an album**
+- Category: `films` (output format is cinema/video)
+- Mention album release in metadata
+- If the album is a significant standalone work, create a separate entry as `releases`
+
+**Scenario 2: Dance performance with sound design**
+- Category: `performances` (output is live stage work)
+- Your role in metadata: composer, sound designer, etc.
+
+**Scenario 3: Live concert with full creative freedom**
+- Category: `live-acts`
+- Commissioned: `false` (even if paid/invited)
+
+**Scenario 4: Installation created during residency**
+- If the output is a finished installation → `installations`
+- If the residency itself is the work → `residencies`
+
+### Filter System
+
+The portfolio grid has two types of filters:
+1. **Category filters** - Show only works of a specific output format (installations, live-acts, films, performances, residencies, releases)
+2. **Commissioned toggle** - Filter to show only commissioned works across ALL categories
+
 ## Common Tasks
 
 ### Adding a New Portfolio Work
 
 1. Create file: `_portfolio/YYYY-MM-DD-work-slug.md` (e.g., `2026-01-01-new-work.md` using the actual release/creation date)
-2. Follow the standardized structure from [Best Practices](docs/best-practices.md#creating-new-works---step-by-step)
-3. Use category-specific metadata template from [Metadata Reference](docs/metadata-reference.md)
-4. Combine modules from [Modules Reference](docs/modules-reference.md)
-5. Test locally: `bundle exec jekyll serve`
-6. Verify printable page: `/works/`
+2. Choose the correct **category** based on primary format/context (see Portfolio Categories above)
+3. Set **commissioned** field to `true` or `false`
+4. Follow the standardized structure from [Best Practices](docs/best-practices.md#creating-new-works---step-by-step)
+5. Use category-specific metadata template from [Metadata Reference](docs/metadata-reference.md)
+6. Combine modules from [Modules Reference](docs/modules-reference.md)
+7. Test locally: `bundle exec jekyll serve`
+8. Verify printable page: `/works/`
 
 ### Adding a New Event
 

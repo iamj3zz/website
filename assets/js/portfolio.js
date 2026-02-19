@@ -6,9 +6,14 @@
   const filterButtons = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
   const categoryTags = document.querySelectorAll('.category-tag');
+  const commissionedCheckbox = document.getElementById('commissioned-filter');
+
+  let currentCategoryFilter = 'all';
 
   // Function to apply filter
   function applyFilter(filterValue) {
+    currentCategoryFilter = filterValue;
+
     // Update active button
     filterButtons.forEach(btn => btn.classList.remove('active'));
     const activeButton = Array.from(filterButtons).find(btn => btn.getAttribute('data-filter') === filterValue);
@@ -16,16 +21,25 @@
       activeButton.classList.add('active');
     }
 
-    // Filter items
+    applyFilters();
+  }
+
+  // Function to apply both category and commissioned filters
+  function applyFilters() {
+    const commissionedOnly = commissionedCheckbox ? commissionedCheckbox.checked : false;
+
     portfolioItems.forEach(item => {
       const itemCategories = item.getAttribute('data-category');
+      const itemCommissioned = item.getAttribute('data-commissioned') === 'true';
+
       // Split by space to handle multiple categories
       const categoriesArray = itemCategories ? itemCategories.split(' ') : [];
 
       // Check if filter matches any of the item's categories
-      const matchesFilter = filterValue === 'all' || categoriesArray.includes(filterValue);
+      const matchesCategory = currentCategoryFilter === 'all' || categoriesArray.includes(currentCategoryFilter);
+      const matchesCommissioned = !commissionedOnly || itemCommissioned;
 
-      if (matchesFilter) {
+      if (matchesCategory && matchesCommissioned) {
         item.classList.remove('hidden');
         // Trigger reflow for smooth animation
         setTimeout(() => {
@@ -57,5 +71,12 @@
       applyFilter(filterValue);
     });
   });
+
+  // Commissioned checkbox handler
+  if (commissionedCheckbox) {
+    commissionedCheckbox.addEventListener('change', function() {
+      applyFilters();
+    });
+  }
   });
 })();
