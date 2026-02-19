@@ -7,7 +7,7 @@ abstract: |
   A harmony of body and sound in the heart of Nicosia.
 description: |
   For this project, the artist created an outdoor spatial audio installation featuring 16 speakers following a residency period. During the residency, J3ZZ "established a catalogue of sounds produced by human body, creating a vocabulary of sounds." The installation functioned as "a place where the imaginary vision of the performer meet Nicosia's reality." A circus performer and her dog participated in the opening performance alongside the artist.
-category: residencies
+category: installations
 commissioned: false
 image: /assets/works/2014-09-29-park-in-progress/thumbnail.jpg
 

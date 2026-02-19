@@ -174,15 +174,15 @@ links:
     <div class="bio-category">
       <h2>Residencies</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2025</span> Citta Della Pieve, Italy</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Kerveguen, Saint-Pierre, Réunion</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Cité des arts, Saint-Denis, Réunion</div>                      
-        <div class="bio-item"><span class="bio-year">2018</span> Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</div>
-        <div class="bio-item"><span class="bio-year">2014</span> Park in Progress — Nicosia, Cyprus</div>
-        <div class="bio-item"><span class="bio-year">2012</span> Talking heArts — Barcelona, Budapest, Bucharest, Florence</div>
-        <div class="bio-item"><span class="bio-year">2012</span> To be told — Florence, Italy</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Eutropia — Cologne, Germany / Florence, Italy</div>
-        <div class="bio-item"><span class="bio-year">2010</span> Reality in Disguise — Heek, Germany</div>
+        <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2025-01-01-citta-della-pieve-residency/">Citta Della Pieve, Italy</a></div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-02-kerveguen-residency/">Kerveguen, Saint-Pierre, Réunion</a></div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-cite-des-arts-residency/">Cité des arts, Saint-Denis, Réunion</a></div>
+        <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-music-maker-2/">Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</a></div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-park-in-progress/">Park in Progress — Nicosia, Cyprus</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-talking-hearts/">Talking heArts — Barcelona, Budapest, Bucharest, Florence</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-to-be-told/">To be told — Florence, Italy</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-eutropia/">Eutropia — Cologne, Germany / Florence, Italy</a></div>
+        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-reality-in-disguise/">Reality in Disguise — Heek, Germany</a></div>
       </div>
     </div>
 

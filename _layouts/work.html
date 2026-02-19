@@ -230,36 +230,7 @@
 
       <div class="work-nav">
         <div class="work-nav-left">
-          {% comment %} Find next published work {% endcomment %}
-          {% assign next_work = nil %}
-          {% assign found_current = false %}
-          {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' %}
-          {% for work in sorted_portfolio %}
-            {% if found_current and work.published != false %}
-              {% assign next_work = work %}
-              {% break %}
-            {% endif %}
-            {% if work.url == page.url %}
-              {% assign found_current = true %}
-            {% endif %}
-          {% endfor %}
-
-          {% if next_work %}
-            <a href="{{ next_work.url | relative_url }}" class="work-nav-link">
-              <span class="nav-arrow">&larr;</span>
-              <span class="nav-label">{{ next_work.title }}</span>
-            </a>
-          {% else %}
-            <span class="work-nav-disabled"></span>
-          {% endif %}
-        </div>
-
-        <div class="work-nav-center">
-          <a href="{{ '/works/' | relative_url }}" class="back-to-works">Back to Works</a>
-        </div>
-
-        <div class="work-nav-right">
-          {% comment %} Find previous published work {% endcomment %}
+          {% comment %} Find previous published work (older) {% endcomment %}
           {% assign prev_work = nil %}
           {% assign sorted_portfolio_reverse = site.portfolio | sort: 'metadata.release_date' | reverse %}
           {% assign found_current_prev = false %}
@@ -275,7 +246,36 @@
 
           {% if prev_work %}
             <a href="{{ prev_work.url | relative_url }}" class="work-nav-link">
+              <span class="nav-arrow">&larr;</span>
               <span class="nav-label">{{ prev_work.title }}</span>
+            </a>
+          {% else %}
+            <span class="work-nav-disabled"></span>
+          {% endif %}
+        </div>
+
+        <div class="work-nav-center">
+          <a href="{{ '/works/' | relative_url }}" class="back-to-works">Back to Works</a>
+        </div>
+
+        <div class="work-nav-right">
+          {% comment %} Find next published work (newer) {% endcomment %}
+          {% assign next_work = nil %}
+          {% assign found_current = false %}
+          {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' %}
+          {% for work in sorted_portfolio %}
+            {% if found_current and work.published != false %}
+              {% assign next_work = work %}
+              {% break %}
+            {% endif %}
+            {% if work.url == page.url %}
+              {% assign found_current = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% if next_work %}
+            <a href="{{ next_work.url | relative_url }}" class="work-nav-link">
+              <span class="nav-label">{{ next_work.title }}</span>
               <span class="nav-arrow">&rarr;</span>
             </a>
           {% else %}

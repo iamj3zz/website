@@ -247,11 +247,73 @@ The portfolio uses **output format-based categories** that describe what the fin
 | `live-acts` | Performing arts (concerts, live shows, performances) | Willany léo, Azalai, Buddha Bar Budapest |
 | `films` | Cinema/video works (documentaries, animations, dance films, short films) | In Between (dance film), Best Friend's Wife's Lover |
 | `performances` | Dance/theater performances (live stage works) | Touch me not / Nebáncsvirág |
-| `residencies` | Artistic residency programs | To Be Told, Music Maker #2, Park in Progress |
 | `releases` | Published works (albums, books, self-published content) | Standalone music albums, EPs |
 | `workshops` | Educational workshops and cultural mediation activities | Biosonification |
 
 **Important:** Categories describe the OUTPUT FORMAT, not your role. Use metadata fields to clarify your role (composer, violinist, sound designer, performer, etc.).
+
+### Residency System
+
+**Residencies are NOT a portfolio category.** Instead, they are treated as process documentation that connects to output works.
+
+**Key Principles:**
+
+1. **Residencies are hidden from the portfolio grid** - They don't appear in category filters or the main portfolio display
+2. **Residencies are accessible via bio page** - Each residency in the bio page links to its dedicated work page
+3. **Every residency connects to an output work** - Each residency page documents what was created and links to the final work
+4. **Works display their output category** - A work created during a residency appears in its OUTPUT category (installations, live-acts, films, etc.)
+
+**Implementation Details:**
+
+- **Pure residency pages** use `show_in_grid: false` to hide them from portfolio filters
+- **Residency-output works** use their output category (e.g., `category: installations`) and mention the residency in their description
+- **Bio page residencies** are clickable and link to dedicated residency pages at `/works/YYYY-MM-DD-residency-name/`
+
+**Current Residency → Output Connections:**
+
+| Residency | Year | Output Work | Output Category |
+|-----------|------|-------------|-----------------|
+| Cité des arts (Saint-Denis, Réunion) | 2023 | Racines & Résonances | live-acts |
+| Kerveguen (Saint-Pierre, Réunion) | 2023 | Racines & Résonances | live-acts |
+| Citta Della Pieve (Italy) | 2025 | Vibrotanica | installations |
+| Music Maker #2 (Château Éphémère) | 2018 | Music Maker #2 | performances |
+| Park in Progress (Nicosia, Cyprus) | 2014 | Park in Progress | installations |
+| Talking heArts (European tour) | 2012 | Talking heArts | live-acts |
+| To be told (Florence, Italy) | 2012 | To be told (documentary soundtrack) | films |
+| Eutropia (Cologne/Florence) | 2011 | Eutropia | live-acts |
+| Reality in Disguise (Heek, Germany) | 2010 | Reality in Disguise | live-acts |
+
+**Example Structure for Pure Residency Pages:**
+
+```yaml
+---
+published: true
+show_in_grid: false  # CRITICAL: Hides from portfolio grid
+layout: work
+title: "Residency Name"
+work_id: residency-slug
+category: residencies
+commissioned: false
+
+metadata:
+  release_date: "YYYY-MM-DD"
+  location: "City, Country"
+  role: "sound artist, composer"
+  custom:
+    - label: "Output Work"
+      value: "Work Name (output type)"
+      link: "/works/YYYY-MM-DD-output-work/"
+
+sections:
+  - type: description
+  - type: text
+    content: |
+      Detailed explanation of the residency and its connection to the output work.
+
+      → [View the Output Work Name](/works/YYYY-MM-DD-output-work/)
+  - type: metadata
+---
+```
 
 ### Commission Status
 

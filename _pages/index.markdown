@@ -15,7 +15,6 @@ image: /assets/img/J3ZZ-logo-black-300px.png
     <button class="filter-btn" data-filter="live-acts">Live Acts</button>
     <button class="filter-btn" data-filter="films">Films</button>
     <button class="filter-btn" data-filter="performances">Performances</button>
-    <button class="filter-btn" data-filter="residencies">Residencies</button>
     <button class="filter-btn" data-filter="releases">Releases</button>
     <button class="filter-btn" data-filter="workshops">Workshops</button>
     <label class="commissioned-toggle">
@@ -26,9 +25,9 @@ image: /assets/img/J3ZZ-logo-black-300px.png
 
   <div class="portfolio-grid">
     {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' | reverse %}
-    {% comment %} Filter out unpublished items {% endcomment %}
+    {% comment %} Filter out unpublished items and items not shown in grid {% endcomment %}
     {% for item in sorted_portfolio %}
-      {% if item.published == false %}
+      {% if item.published == false or item.show_in_grid == false %}
         {% continue %}
       {% endif %}
       {% comment %} Support both single category and multiple categories {% endcomment %}
@@ -64,7 +63,7 @@ image: /assets/img/J3ZZ-logo-black-300px.png
   <div class="works-list-print">
     {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' | reverse %}
     {% for item in sorted_portfolio %}
-      {% if item.published == false %}
+      {% if item.published == false or item.show_in_grid == false %}
         {% continue %}
       {% endif %}
       {% comment %} Support both single category and multiple categories {% endcomment %}

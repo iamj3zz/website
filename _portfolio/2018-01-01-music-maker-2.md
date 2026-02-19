@@ -6,8 +6,8 @@ work_id: music-maker-2
 abstract: |
   This was a short artist residency at Château Éphémère in fall 2018 enabling collaboration between various artists and creative coders.
 description: |
-  This was a short artist residency at Château Éphémère in fall 2018 enabling collaboration between various artists and creative coders. Organized with Adami as part of Culture Experience Days, the initiative brought together "30 creators with complementary profiles to prototype the sound and scenic devices of tomorrow."
-category: residencies
+  This was a short artist residency at Château Éphémère in fall 2018 enabling collaboration between various artists and creative coders. Organized with Adami as part of Culture Experience Days, the initiative brought together "30 creators with complementary profiles to prototype the sound and scenic devices of tomorrow." The residency resulted in a performance showcasing the prototyped sound and scenic devices.
+category: performances
 commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 

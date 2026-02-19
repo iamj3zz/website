@@ -6,7 +6,7 @@ work_id: talking-hearts
 abstract: |
   An interdisciplinary performing arts initiative exploring improvisation across multiple artistic disciplines.
 description: |
-  An interdisciplinary performing arts initiative exploring improvisation across multiple artistic disciplines. The project brought together young music, media, and dance artists from four European countries to create collaborative performances. Participants developed interaction methods—including codes, hand signs, sensors, and spatial arrangements—to perform together in improvisation-based shows combining visuals, music, and movement.
+  An interdisciplinary performing arts initiative exploring improvisation across multiple artistic disciplines. The project brought together young music, media, and dance artists from four European countries to create collaborative performances. Participants developed interaction methods—including codes, hand signs, sensors, and spatial arrangements—to perform together in improvisation-based shows combining visuals, music, and movement. The project consisted of a series of residencies where the live show was created.
 category: live-acts
 commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
