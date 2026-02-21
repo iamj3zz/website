@@ -101,7 +101,7 @@
 .bio-year {
   color: #333;
   font-weight: normal;
-  min-width: 40px;
+  width: 100px;  // Fixed width for alignment
   flex-shrink: 0;
 }
 
