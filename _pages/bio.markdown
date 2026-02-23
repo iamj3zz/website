@@ -162,9 +162,6 @@ links:
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-suprema-original-soundtrack/">SUPREMA (Original Soundtrack) — album</a></div>
         <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-indigo-theory/">Rainy Day — Indigo Theory — single (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-all-the-promises/">All the Promises — Michael Kentish — album (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-massolit-series-live/">MASSOLIT SERIES (Live) — album (violinist, founder, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor) — single (violinist, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-sur-le-fil-live-at-fkse/">SUR LE FIL (Live at FKSE) — single (violinist, producer)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-new-beginnings/">New Beginnings — Michael Kentish — album (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-02-so-proud-of-you/">So Proud of You — Jordi Abel — single (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-promised-myself-acoustic/">Promised myself (Acoustic) — MC KiKo — single (violin)</a></div>

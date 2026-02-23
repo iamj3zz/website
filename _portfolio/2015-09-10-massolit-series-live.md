@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: work
 title: "MASSOLIT SERIES (Live)"
 work_id: massolit-series-live
