@@ -59,7 +59,22 @@ image: /assets/img/J3ZZ-logo-black-300px.png
             <span class="event-ticket-qr" data-ticket-url="{{ event.ticket_link }}"></span>
             {% endif %}
           </div>
-          <div class="event-col-description">{% assign _trunc = site.event_description_truncate | default: 120 %}{% if _trunc > 0 and event.description.size > _trunc %}<span class="event-desc-short">{{ event.description | truncate: _trunc }}</span><span class="event-desc-full" hidden>{{ event.description }}</span><button class="event-desc-toggle" aria-expanded="false" aria-label="Show full description">+</button>{% else %}{{ event.description }}{% endif %}</div>
+          <div class="event-col-description">
+            {% if event.work_id %}
+              {% assign linked_work = site.portfolio | where: "work_id", event.work_id | first %}
+              {% if linked_work %}
+                <a href="{{ linked_work.url }}" class="event-work-link">{{ linked_work.title }}</a> —
+              {% endif %}
+            {% endif %}
+            {% assign _trunc = site.event_description_truncate | default: 120 %}
+            {% if _trunc > 0 and event.description.size > _trunc %}
+              <span class="event-desc-short">{{ event.description | truncate: _trunc }}</span>
+              <span class="event-desc-full" hidden>{{ event.description }}</span>
+              <button class="event-desc-toggle" aria-expanded="false" aria-label="Show full description">+</button>
+            {% else %}
+              {{ event.description }}
+            {% endif %}
+          </div>
         </div>
         {% endif %}
       {% endfor %}
