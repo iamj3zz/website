@@ -90,6 +90,10 @@ links:
         <div class="bio-item"><span class="bio-year">2011</span> Fabbrica Europa — Florence, Italy</div>
         <div class="bio-item"><span class="bio-year">2011</span> Hanna Hanna — Komárom, Hungary</div>
         <div class="bio-item"><span class="bio-year">2011</span> Sofa — Berlin, Germany</div>
+        <div class="bio-item"><span class="bio-year">2013–2017</span> <a href="/works/2013-09-12-sur-le-fil/">Sur le fil — solo violin improvisation show (5 performances: Florence, Budapest, Singapore)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-10-15-miss-god/">Miss God &amp; J3ZZ — Szimpla Kert, Budapest (violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-modeo/">Modeo — Trafó ELECTRIFY Vol. 7 &amp; Nagyvásártelep, Budapest (violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-massolit-series/">Massolit Series — Massolit Books &amp; Café, Budapest — 7-concert improvisation series (violinist, founder)</a></div>
         <div class="bio-item"><span class="bio-year">2013–2017</span> Buddha Bar Budapest — Resident live musician (violinist), Budapest, Hungary</div>
         <div class="bio-item"><span class="bio-year">2011–2020</span> J3ZZ — Pluridisciplinary performances (musician, composer)</div>
         <div class="bio-item"><span class="bio-year">2011–2020</span> Hybris — Pluridisciplinary performances (musician, composer)</div>
@@ -102,8 +106,8 @@ links:
         <div class="bio-item"><span class="bio-year">2008–2010</span> The Last Drops — electronic musician</div>    
         <div class="bio-item"><span class="bio-year">2011</span> Eutropia — ROOTS &amp; ROUTES — 9-country European tour (violinist, composer, coach)</div>
         <div class="bio-item"><span class="bio-year">2011</span> Summer Suite (performer)</div>
-        <div class="bio-item"><span class="bio-year">2010</span> Reality in Disguise — ROOTS &amp; ROUTES — Heek, Germany (musician)</div>   
-        <div class="bio-item"><span class="bio-year">2012–2013</span> Talking heArts — ROOTS &amp; ROUTES — European tour (composer, coach)</div> 
+        <div class="bio-item"><span class="bio-year">2009–2011</span> Reality in Disguise — ROOTS &amp; ROUTES Art'n'Go — Remscheid &amp; Heek, Germany; Florence, Italy; Budapest, Hungary (violinist, composer, co-creator)</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-talking-hearts/">Talking heArts — ROOTS &amp; ROUTES — Florence, Budapest, Bucharest (artistic director, violinist, improvisation coach)</a></div>
         <div class="bio-item"><span class="bio-year">2019</span> Mellettük — Grecsó Krisztián &amp; Grecsó Zoltán (performer)</div>
         <div class="bio-item"><span class="bio-year">2019</span> ART-RAVALÓ — Szubjektív Értékek Alapítvány — social art project (musician, coach)</div>                
       </div>
@@ -138,7 +142,7 @@ links:
         <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-01-1000-and-1-realities/">1000 and 1 Realities — Olga Pavlenko, jingle (sound designer)</a></div>
         <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-best-friends-wifes-lover/">Best Friend's Wife's Lover — Declan Hannigan, short film (composer)</a></div>
         <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-far-point/">Far Point — Lorenzo Ciacciavicca, short film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-to-be-told/">To be told — Lorenzo Ciacciavicca, documentary (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-to-be-told/">To be told — Lorenzo Ciacciavicca, documentary (composer, performer, producer, sound designer, sound editor)</a></div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-02-urban-media-festival-trailers/">Urban Media Festival — opening and closing trailers (composer, producer)</a></div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-ouverture/">Ouverture — Lorenzo Ciacciavicca, short film (composer, performer)</a></div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-fission/">Fission — Ana Maria Staicu &amp; Paris Tume, dance video (composer, producer)</a></div>
@@ -157,6 +161,9 @@ links:
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-suprema-original-soundtrack/">SUPREMA (Original Soundtrack) — album</a></div>
         <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-indigo-theory/">Rainy Day — Indigo Theory — single (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-all-the-promises/">All the Promises — Michael Kentish — album (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-massolit-series-live/">MASSOLIT SERIES (Live) — album (violinist, founder, producer)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor) — single (violinist, producer)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-sur-le-fil-live-at-fkse/">SUR LE FIL (Live at FKSE) — single (violinist, producer)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-new-beginnings/">New Beginnings — Michael Kentish — album (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-02-so-proud-of-you/">So Proud of You — Jordi Abel — single (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-promised-myself-acoustic/">Promised myself (Acoustic) — MC KiKo — single (violin)</a></div>
@@ -172,10 +179,10 @@ links:
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-cite-des-arts-residency/">Cité des arts, Saint-Denis, Réunion</a></div>
         <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-music-maker-2/">Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</a></div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-park-in-progress/">Park in Progress — Nicosia, Cyprus</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-talking-hearts/">Talking heArts — Barcelona, Budapest, Bucharest, Florence</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-to-be-told/">To be told — Florence, Italy</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-talking-hearts/">Talking heArts — Florence, Budapest, Bucharest (artistic director, violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-to-be-told/">To be told — Grundtvig Workshop, Florence (residency participant + documentary sound)</a></div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-eutropia/">Eutropia — Cologne, Germany / Florence, Italy</a></div>
-        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-reality-in-disguise/">Reality in Disguise — Heek, Germany</a></div>
+        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-01-01-reality-in-disguise/">Reality in Disguise — Remscheid Academy &amp; Heek, Germany</a></div>
       </div>
     </div>
 
@@ -222,7 +229,7 @@ links:
         <div class="bio-item"><span class="bio-year">2021</span> Permis d'exploitation (débit de boissons) — SEF Marseille (Sep)</div>
         <div class="bio-item"><span class="bio-year">2021</span> Licence d'entrepreneur de spectacles — PLATESV-R-2021-009234 (Jul)</div>
         <div class="bio-item"><span class="bio-year">2015</span> Certificate — Managing the Arts: Marketing for Cultural Organizations — Leuphana University / Goethe-Institut — 92/100, 5 ECTS (Feb–May)</div>
-        <div class="bio-item"><span class="bio-year">2010</span> Peer Coaching Certificate — jfc Medienzentrum, Cologne, Germany — ROOTS &amp; ROUTES international programme (Aug)</div>
+        <div class="bio-item"><span class="bio-year">2008–2010</span> Peer Coaching Certificate (Aug 2010) — L'Académie Transnationale ROOTS &amp; ROUTES — jfc Medienzentrum, Cologne, Germany — 2-year EU Lifelong Learning Programme (Leonardo da Vinci) for coaches and talents, France, Germany, Hungary, Netherlands, United Kingdom</div>
         <div class="bio-item"><span class="bio-year">2000–2006</span> Engineering Degree (Information Systems &amp; Software Engineering) — EPITA, Le Kremlin-Bicêtre, France</div>
         <div class="bio-item"><span class="bio-year">1994–1999</span> Diploma with honors (violin) — Conservatoire National de Région de La Réunion (music theory &amp; violin)</div>
         <div class="bio-item"><span class="bio-year">1996</span> Summer academy — Académie Nationale d'été "Musique au Grand Jardin", Joinville-en-Champagne, France</div>

@@ -10,4 +10,5 @@ venue_address: "Nagy Diófa utca 30, 1072 Budapest, Hungary"
 venue_link: http://massolitbudapest.com/ 
 ticket_link: 
 description: Improvisation with Áron Porteleki. Budapest traditional dance-house movement
+work_id: massolit-series
 ---

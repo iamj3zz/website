@@ -1,13 +1,14 @@
 ---
-published: true 
-title: RESoNANCE
+published: true
+title: Sur le fil — RESoNANCE, Refuge, Budapest
 date: 2017-10-26
 time: "20:00"
 country: Hungary
 city: Budapest
 venue_name: Refuge
-venue_address: ""
-venue_link: https://www.google.com/search?q=Refuge+Budapest+venue 
-ticket_link: 
-description: Improvisation event with three collaborating artists
+venue_address: "Budapest, Hungary"
+venue_link:
+ticket_link:
+description: Sur le fil solo acoustic violin improvisation at RESoNANCE event.
+work_id: sur-le-fil
 ---
