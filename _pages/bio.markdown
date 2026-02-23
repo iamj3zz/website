@@ -91,6 +91,7 @@ links:
         <div class="bio-item"><span class="bio-year">2011</span> Hanna Hanna — Komárom, Hungary</div>
         <div class="bio-item"><span class="bio-year">2011</span> Sofa — Berlin, Germany</div>
         <div class="bio-item"><span class="bio-year">2013–2017</span> <a href="/works/2013-09-12-sur-le-fil/">Sur le fil — solo violin improvisation show (5 performances: Florence, Budapest, Singapore)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-12-11-ebb-flow-debris/">ebb flow + debris (6 humans) — Monofog + group, Müszi Budapest (violinist)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-10-15-miss-god/">Miss God &amp; J3ZZ — Szimpla Kert, Budapest (violinist)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-modeo/">Modeo — Trafó ELECTRIFY Vol. 7 &amp; Nagyvásártelep, Budapest (violinist)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-massolit-series/">Massolit Series — Massolit Books &amp; Café, Budapest — 7-concert improvisation series (violinist, founder)</a></div>
