@@ -1,5 +1,6 @@
 ---
 published: true 
+work_id: willany-léo
 title: "Willany Leó: Body and shape"
 date: 2019-06-21
 time: "18:20-18:45"
@@ -9,5 +10,5 @@ venue_name: MANK Galéria
 venue_address: "Bogdányi út 51, 2000 Szentendre, Hungary"
 venue_link: https://alkotomuveszet.hu/ 
 ticket_link: 
-description: Improvisational dance engaging with Sculptures in the Garden exhibition
+description: WILLANY LÉO — Improvisational dance engaging with Sculptures in the Garden exhibition
 ---

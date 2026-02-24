@@ -15,8 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2017-01-01"
   location: "London, UK / Budapest, Hungary"
-  collaborators: "Judit Pétervári (researcher/creator), JLTT - Jérôme Li Thiao-Té (composer/producer), Queen Mary University of London"
-  credits: "Researcher/creator: Judit Pétervári. Composer/producer: JLTT (Jérôme Li Thiao-Té). PhD supervisors: Magda Osman, Joydeep Bhattacharya. Institution: School of Biological and Chemical Sciences, Queen Mary University of London. Additional credits: Artus Stúdió, Magdolna Fodor, Péter Goretić, Natália Kovács, Erik Lakatos, Péter Novák, Gábor Szűcs, Márton Túry, Dániel Vaszari, Gabriella Zettwitz, Tamás Zöldy"
+  collaborators: "Judit Pétervári (researcher/creator), JLTT - J3ZZ (composer/producer), Queen Mary University of London"
+  credits: "Researcher/creator: Judit Pétervári. Composer/producer: JLTT (J3ZZ). PhD supervisors: Magda Osman, Joydeep Bhattacharya. Institution: School of Biological and Chemical Sciences, Queen Mary University of London. Additional credits: Artus Stúdió, Magdolna Fodor, Péter Goretić, Natália Kovács, Erik Lakatos, Péter Novák, Gábor Szűcs, Márton Túry, Dániel Vaszari, Gabriella Zettwitz, Tamás Zöldy"
   custom:
     - label: "YouTube"
       value: "https://www.youtube.com/watch?v=wXzPH3iQV8E"

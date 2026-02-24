@@ -15,8 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2009-01-01"
   location: "Budapest, Hungary"
-  collaborators: "Zoltán Grecsó (choreographer/director), Jérôme Li-Thiao-Té (improviser musician/violinist)"
-  credits: "Choreographer/Director: Zoltán Grecsó. Improviser musician/violinist: Jérôme Li-Thiao-Té"
+  collaborators: "Zoltán Grecsó (choreographer/director), J3ZZ (improviser musician/violinist)"
+  credits: "Choreographer/Director: Zoltán Grecsó. Improviser musician/violinist: J3ZZ"
   custom:
     - label: "External Links"
       value: "project_website: willany.com; facebook_events: facebook.com/willanyleoimproszinhaz/events/"
@@ -24,5 +24,9 @@ metadata:
       value: "live, violinist"
 
 sections:
-  # TODO: Add sections here
+  - type: description
+
+  - type: linked-events
+
+  - type: metadata
 ---

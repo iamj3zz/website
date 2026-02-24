@@ -15,8 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2013-01-01"
   location: "Buddha-Bar Hotel Budapest Klotild Palace, Budapest, Hungary"
-  collaborators: "Jérôme Li-Thiao-Té (resident violinist), DJ Mada, DJ Tony, DJ Viktor"
-  credits: "Resident violinist: Jérôme Li-Thiao-Té. DJs: DJ Mada, DJ Tony, DJ Viktor"
+  collaborators: "J3ZZ (resident violinist), DJ Mada, DJ Tony, DJ Viktor"
+  credits: "Resident violinist: J3ZZ. DJs: DJ Mada, DJ Tony, DJ Viktor"
   custom:
     - label: "External Links"
       value: "we_love_budapest: https://welovebudapest.com/en/article/2018/12/7/buddha-bar-hotel-budapest-klotild-palace-to-close-down; mellow_mood_hotels: https://www.mellowmoodhotels.com/buddha-bar-hotel-info/"
@@ -26,5 +26,9 @@ metadata:
       value: "5 years (2013-2017)"
 
 sections:
-  # TODO: Add sections here
+  - type: description
+
+  - type: linked-events
+
+  - type: metadata
 ---

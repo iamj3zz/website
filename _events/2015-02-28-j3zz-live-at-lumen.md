@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+work_id: massolit-series
 title: J3ZZ Live at Lumen
 date: 2015-02-28
 time: "20:30"
@@ -9,5 +10,5 @@ venue_name: Lumen Kávézó
 venue_address: "Mikszáth tér 2, 1088 Budapest, Hungary"
 venue_link: https://www.lumen.hu 
 ticket_link: 
-description: Inaugural collaboration between J3ZZ and Áron Porteleki. Exploring Hungarian culture
+description: MASSOLIT SERIES — Inaugural collaboration between J3ZZ and Áron Porteleki. Exploring Hungarian culture
 ---

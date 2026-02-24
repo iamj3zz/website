@@ -15,8 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2010-01-01"
   location: "Hungary / Europe"
-  collaborators: "Iparkutya band members, Jérôme Li-Thiao-Té (violinist)"
-  credits: "Violinist: Jérôme Li-Thiao-Té"
+  collaborators: "Iparkutya band members, J3ZZ (violinist)"
+  credits: "Violinist: J3ZZ"
   custom:
     - label: "Facebook"
       value: "https://www.facebook.com/iparkutya"

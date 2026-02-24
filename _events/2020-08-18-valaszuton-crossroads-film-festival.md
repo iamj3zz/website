@@ -1,6 +1,7 @@
 ---
 published: true 
 title: Válaszúton / Crossroads - Film Festival
+work_id: válaszúton-crossroads
 date: 2020-08-18
 time: "11:00"
 country: Hungary

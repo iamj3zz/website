@@ -9,6 +9,6 @@ venue_name: Fabbrica Europa Festival
 venue_address: "Florence, Italy"
 venue_link:
 ticket_link:
-description: Live performance of Reality in Disguise (Art'n'Go / ROOTS & ROUTES) at Fabbrica Europa Festival, Florence. J3ZZ as violinist and co-creator/composer.
+description: REALITY IN DISGUISE — Live performance of Reality in Disguise (Art'n'Go / ROOTS & ROUTES) at Fabbrica Europa Festival, Florence. J3ZZ as violinist and co-creator/composer.
 work_id: reality-in-disguise
 ---

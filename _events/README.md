@@ -1,4 +1,4 @@
-# Jerome Li-Thiao-Te Event Files
+# J3ZZ Event Files
 
 ## Summary
 

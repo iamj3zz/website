@@ -1,6 +1,7 @@
 ---
-published: true 
-title: DJ Mada feat. Jérôme Li-Thiao-Té
+published: true
+work_id: buddha-bar-budapest
+title: DJ Mada feat. J3ZZ
 date: 2016-07-02
 time: "22:00"
 country: Hungary
@@ -9,5 +10,5 @@ venue_name: Buddha-Bar Hotel Budapest
 venue_address: "Váci utca 34, 1052 Budapest, Hungary"
 venue_link: https://www.buddhabar.com/ 
 ticket_link: 
-description: Chill-out electronic world music with ethnic vibes
+description: BUDDHA BAR BUDAPEST — Chill-out electronic world music with ethnic vibes
 ---

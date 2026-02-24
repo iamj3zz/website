@@ -15,8 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2011-01-01"
   location: "Budapest, Hungary / Zagreb, Croatia"
-  collaborators: "Zoltán Grecsó (choreographer/creator), JLTT - Jérôme Li Thiao-Té (composer/producer)"
-  credits: "Choreographer/creator: Zoltán Grecsó. Composer/producer: JLTT (Jérôme Li Thiao-Té)"
+  collaborators: "Zoltán Grecsó (choreographer/creator), JLTT - J3ZZ (composer/producer)"
+  credits: "Choreographer/creator: Zoltán Grecsó. Composer/producer: JLTT (J3ZZ)"
   custom:
     - label: "External Links"
       value: "production_database: https://port.hu/adatlap/szindarab/szinhaz/touch-me-not-nebancsvirag/directing-18428; photography: https://kni7.wordpress.com/2012/08/15/12-08-14-touch-me-not-nebancsvirag/"

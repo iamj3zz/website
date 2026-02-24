@@ -15,8 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2013-01-01"
   location: "Ljubljana, Slovenia"
-  collaborators: "Ida Hellsten, Luke Thomas Dunne, Bence Mezei (EnKnapGroup - concept/choreography/dance), Jérôme Li-Thiao-Té (music composition), Luka Curk (sound design), Leon Curk (light design), Zala Kobe (set design), Živa Petrič (set design), Tanja Skok (executive producer), AVA – Akademija za vizualne umetnosti"
-  credits: "Concept/choreography/dance: Ida Hellsten, Luke Thomas Dunne, Bence Mezei. Original score/music composition: Jérôme Li-Thiao-Té. Sound design: Luka Curk. Light design: Leon Curk. Set design: Zala Kobe, Živa Petrič (AVA). Executive producer: Tanja Skok. Collaborating institution: AVA – Akademija za vizualne umetnosti"
+  collaborators: "Ida Hellsten, Luke Thomas Dunne, Bence Mezei (EnKnapGroup - concept/choreography/dance), J3ZZ (music composition), Luka Curk (sound design), Leon Curk (light design), Zala Kobe (set design), Živa Petrič (set design), Tanja Skok (executive producer), AVA – Akademija za vizualne umetnosti"
+  credits: "Concept/choreography/dance: Ida Hellsten, Luke Thomas Dunne, Bence Mezei. Original score/music composition: J3ZZ. Sound design: Luka Curk. Light design: Leon Curk. Set design: Zala Kobe, Živa Petrič (AVA). Executive producer: Tanja Skok. Collaborating institution: AVA – Akademija za vizualne umetnosti"
   custom:
     - label: "External Links"
       value: "project_website: http://en-knap.com/14/663/double_bill_by_members_of_enknapgroup.html"

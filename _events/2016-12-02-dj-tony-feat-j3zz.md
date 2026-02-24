@@ -1,6 +1,7 @@
 ---
-published: true 
-title: dj Tony feat. Jérôme Li-Thiao-Té
+published: true
+work_id: buddha-bar-budapest
+title: dj Tony feat. J3ZZ
 date: 2016-12-02
 time: "22:00"
 country: Hungary
@@ -9,5 +10,5 @@ venue_name: Buddha-Bar Hotel Budapest
 venue_address: "Váci utca 34, 1052 Budapest, Hungary"
 venue_link: https://www.buddhabar.com/ 
 ticket_link: 
-description: Buddha-Bar performance. J3ZZ founding member producer composer
+description: BUDDHA BAR BUDAPEST — Buddha-Bar performance. J3ZZ founding member producer composer
 ---

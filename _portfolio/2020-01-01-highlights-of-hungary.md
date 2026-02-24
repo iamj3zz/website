@@ -14,7 +14,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 # Define metadata once here - it will be used by all modules below
 metadata:
   release_date: "2020-01-01"
-  role: "composer_producer_sound_designer: JLTT (Jérôme Li Thiao-Té)"
+  role: "composer_producer_sound_designer: JLTT (J3ZZ)"
   custom:
     - label: "Tags"
       value: "Film, Corporate"

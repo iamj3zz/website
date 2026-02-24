@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: work
 title: "MASSOLIT SERIES (Live)"
 work_id: massolit-series-live
@@ -20,7 +20,7 @@ metadata:
   location: "Massolit Books & Café, Budapest, Hungary"
   role: "violinist, founder, performer, producer"
   credits: |
-    J3ZZ (Jérôme Li-Thiao-Té) — violin, electronics, concept
+    J3ZZ (J3ZZ) — violin, electronics, concept
     Ernő Zoltán Rubik — piano (Series 02)
     Áron Porteleki — instrument (Series 01, 03)
     Endre Kertész — cello (Series 04)

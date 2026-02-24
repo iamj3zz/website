@@ -9,6 +9,6 @@ venue_name: Massolit Books & Café
 venue_address: "Nagy Diófa utca 30, 1072 Budapest, Hungary"
 venue_link: http://massolitbudapest.com/
 ticket_link:
-description: Solo improvisation performance. Final session of the Massolit Series. J3ZZ as violinist and series founder.
+description: MASSOLIT SERIES — Solo improvisation performance. Final session of the Massolit Series. J3ZZ as violinist and series founder.
 work_id: massolit-series
 ---

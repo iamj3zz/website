@@ -9,6 +9,6 @@ venue_name: Massolit Café
 venue_address: "Nagy Diófa utca 30, 1072 Budapest, Hungary"
 venue_link: http://massolitbudapest.com/ 
 ticket_link: 
-description: Improvisational performance with Zsolt Sőrés (Ahad) Hungarian experimental musician
+description: MASSOLIT SERIES — Improvisational performance with Zsolt Sőrés (Ahad) Hungarian experimental musician
 work_id: massolit-series
 ---

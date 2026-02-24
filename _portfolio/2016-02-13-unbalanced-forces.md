@@ -100,6 +100,7 @@ sections:
       - /assets/works/2016-02-13-unbalanced-forces/unbalanced-forces-gallery02_1440w.jpg
       - /assets/works/2016-02-13-unbalanced-forces/unbalanced-forces-gallery03_1440w.jpg
 
+  - type: linked-events
 
   - type: metadata
 ---

@@ -14,7 +14,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 # Define metadata once here - it will be used by all modules below
 metadata:
   release_date: "2019-01-01"
-  role: "film_director: Flora Chilton; composer_producer: JLTT (Jérôme Li Thiao-Té)"
+  role: "film_director: Flora Chilton; composer_producer: JLTT (J3ZZ)"
   collaborators: "Flora Chilton"
   custom:
     - label: "Facebook"

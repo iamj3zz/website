@@ -14,8 +14,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 # Define metadata once here - it will be used by all modules below
 metadata:
   release_date: "2017-01-01"
-  collaborators: "Amalie Halsey (director), Jérôme Li-Thiao-Té (music composer)"
-  credits: "Director: Amalie Halsey. Music composer: Jérôme Li-Thiao-Té"
+  collaborators: "Amalie Halsey (director), J3ZZ (music composer)"
+  credits: "Director: Amalie Halsey. Music composer: J3ZZ"
   custom:
     - label: "External Links"
       value: "director_linkedin: linkedin.com/in/amaliehalsey/; source_material: en.wikipedia.org/wiki/The_Fir-Tree"

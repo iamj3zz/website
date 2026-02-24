@@ -15,8 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2010-01-01"
   location: "Florence, Italy / Scandicci, Italy"
-  collaborators: "Olga Pavlenko (animation direction), Jérôme Li-Thiao-Té (music composition/performance)"
-  credits: "Animation direction: Olga Pavlenko. Music composition/performance: Jérôme Li-Thiao-Té"
+  collaborators: "Olga Pavlenko (animation direction), J3ZZ (music composition/performance)"
+  credits: "Animation direction: Olga Pavlenko. Music composition/performance: J3ZZ"
   custom:
     - label: "External Links"
       value: "artist_website: http://www.olgapavlenko.info/; zoom_festival: https://www.teatroecritica.net/2011/11/programma-zoom-festival-2011-scandicci/"

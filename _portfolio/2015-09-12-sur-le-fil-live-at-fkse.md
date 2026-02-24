@@ -16,7 +16,7 @@ metadata:
   location: "FKSE Studio Gallery, Budapest, Hungary"
   role: "violinist, performer, producer, mixer"
   credits: |
-    Violin & mix: Jérôme Li-Thiao-Té (J3ZZ)
+    Violin & mix: J3ZZ (J3ZZ)
     Audio recording: Zsolt László Kiss
     Video recording: Erlich Gábor
     Curation: Erlich Gábor & Tábori András

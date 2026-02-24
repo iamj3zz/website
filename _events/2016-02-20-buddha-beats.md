@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+work_id: buddha-bar-budapest
 title: Buddha-Beats
 date: 2016-02-20
 time: "22:00"
@@ -9,5 +10,5 @@ venue_name: Buddha-Bar Hotel Budapest
 venue_address: "Váci utca 34, 1052 Budapest, Hungary"
 venue_link: https://www.buddhabar.com/ 
 ticket_link: 
-description: Chill-out electronic world music
+description: BUDDHA BAR BUDAPEST — Chill-out electronic world music
 ---

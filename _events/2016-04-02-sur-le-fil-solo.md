@@ -9,6 +9,6 @@ venue_name: Living Gallery
 venue_address: "Budapest, Hungary"
 venue_link:
 ticket_link:
-description: Solo acoustic violin improvisation in intimate gallery setting.
+description: SUR LE FIL — Solo acoustic violin improvisation in intimate gallery setting.
 work_id: sur-le-fil
 ---

@@ -14,8 +14,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2014-01-01"
   location: "Budapest, Hungary"
-  collaborators: "Declan Hannigan (director/screenplay), Nóti-Nagy Attila (producer), Kissimon Erika (producer), Lukács Dávid (cinematographer), Jérôme Li-Thiao-Té (music composer)"
-  credits: "Director: Declan Hannigan. Producers: Nóti-Nagy Attila, Kissimon Erika. Screenplay: Declan Hannigan. Cinematographer: Lukács Dávid. Music composer: Jérôme Li-Thiao-Té. Cast: Balázs Czukor, Stuart Graham, Soma Gerö, Sara Luca, Boncser, Kata Sárbo, Roland Tzafetaas, Nora Suranyi, Declan Hannigan"
+  collaborators: "Declan Hannigan (director/screenplay), Nóti-Nagy Attila (producer), Kissimon Erika (producer), Lukács Dávid (cinematographer), J3ZZ (music composer)"
+  credits: "Director: Declan Hannigan. Producers: Nóti-Nagy Attila, Kissimon Erika. Screenplay: Declan Hannigan. Cinematographer: Lukács Dávid. Music composer: J3ZZ. Cast: Balázs Czukor, Stuart Graham, Soma Gerö, Sara Luca, Boncser, Kata Sárbo, Roland Tzafetaas, Nora Suranyi, Declan Hannigan"
   custom:
     - label: "Facebook"
       value: "facebook.com/travelbuddyfilm"

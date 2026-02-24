@@ -1,30 +1,38 @@
 ---
 published: true
 layout: work
-title: "Indigo Theory"
+title: "Rainy Day"
 work_id: indigo-theory
 abstract: |
-  The artist collaborated with the band Indigo Theory during summer 2017 as composer and violinist.
+  Single by Indigo Theory featuring J3ZZ as composer and violinist.
 description: |
-  The artist collaborated with the band Indigo Theory during summer 2017 as composer and violinist. The collaboration included both studio recording and live performance work, resulting in a single titled "Rainy Day." The page notes this involved "collaboration with house artists from Indigo Theory."
+  "Rainy Day" is a single by the electronic band Indigo Theory, featuring J3ZZ as composer and violinist. Created during summer 2017, this collaboration blends the band's deep house aesthetic with classical string arrangements, combining violin performance with electronic production.
 category: releases
 commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
-# Define metadata once here - it will be used by all modules below
 metadata:
   release_date: "2017-01-01"
   location: "Budapest, Hungary"
-  role: "composer_violinist: Jérôme Li-Thiao-Té"
+  role: "composer, violinist"
   collaborators: "Indigo Theory"
   custom:
+    - label: "Format"
+      value: "Single"
+    - label: "Band"
+      value: "Indigo Theory"
+    - label: "Genre"
+      value: "Electronic / Deep House"
+    - label: "Recording Type"
+      value: "Studio recording and live performances"
     - label: "Facebook"
-      value: "https://www.facebook.com/indigotheorybudapest"
-    - label: "External Links"
-      value: "facebook: https://www.facebook.com/indigotheorybudapest"
-    - label: "Tags"
-      value: "live, violinist"
+      value: "Indigo Theory Budapest"
+      link: "https://www.facebook.com/indigotheorybudapest"
 
 sections:
-  # TODO: Add sections here
+  - type: description
+
+  - type: linked-events
+
+  - type: metadata
 ---

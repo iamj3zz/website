@@ -6,7 +6,7 @@ work_id: talking-hearts
 abstract: |
   EU-funded interdisciplinary performing arts project bringing together young music, media and dance artists from four European countries for improvisation-based performances combining visuals, music and movement.
 description: |
-  Talking heArts was an EU-funded (Youth in Action) interdisciplinary performing arts initiative running from February to November 2012. As artistic director and violinist, Jérôme Li-Thiao-Té led a pan-European ensemble of 17+ young music, media, and dance artists from Hungary, Italy, Romania, and Spain.
+  Talking heArts was an EU-funded (Youth in Action) interdisciplinary performing arts initiative running from February to November 2012. As artistic director and violinist, J3ZZ led a pan-European ensemble of 17+ young music, media, and dance artists from Hungary, Italy, Romania, and Spain.
 
   The project's core challenge was to strongly interconnect visuals with performing activities — bringing together dancers, musicians, and media artists into a shared improvisation language. Each participant or small group developed ways to interact with others: codes and hand signs, sensors with programming, defined spatial zones on stage. The resulting shows combined visuals, music, and movement into one-hour improvisation-based performances.
 
@@ -23,7 +23,7 @@ metadata:
   role: "artistic director, violinist, improvisation coach"
   partners: "Subjective Values Foundation (Budapest, Hungary) · Associazione culturale Fabbrica Europa (Florence, Italy) · EuroEst Foundation (Bucharest, Romania) · University of Barcelona–LMI (Spain)"
   credits: |
-    Artistic Direction: Jérôme Li-Thiao-Té (J3ZZ)
+    Artistic Direction: J3ZZ (J3ZZ)
     Light/Stage Management: Lorenzo Ciacciavicca
     Coaching: Ruben Vandendriessche
     Management: Anna Kudron

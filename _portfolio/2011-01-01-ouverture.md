@@ -14,8 +14,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2011-01-01"
   location: "Cologne, Germany"
-  collaborators: "Lorenzo Ciacciavicca (writer/director), Olga Pavlenko (director of photography), Laura Rade (cast), Daniel Rodic (cast), Jérôme Li-Thiao-Té (music composer/performer), Endre Kertesz (music performer)"
-  credits: "Written/directed by: Lorenzo Ciacciavicca. Director of photography: Olga Pavlenko. Cast: Laura Rade, Daniel Rodic. Music composed/performed by: Jérôme Li-Thiao-Té with Endre Kertesz. Produced by: Holger Kunze, Moritz A. Sachs (shnit Cologne e.V.). Co-produced by: ROOTS & ROUTES International Association"
+  collaborators: "Lorenzo Ciacciavicca (writer/director), Olga Pavlenko (director of photography), Laura Rade (cast), Daniel Rodic (cast), J3ZZ (music composer/performer), Endre Kertesz (music performer)"
+  credits: "Written/directed by: Lorenzo Ciacciavicca. Director of photography: Olga Pavlenko. Cast: Laura Rade, Daniel Rodic. Music composed/performed by: J3ZZ with Endre Kertesz. Produced by: Holger Kunze, Moritz A. Sachs (shnit Cologne e.V.). Co-produced by: ROOTS & ROUTES International Association"
   produced_by: "Holger Kunze, Moritz A. Sachs (shnit Cologne e.V.)"
   custom:
     - label: "External Links"
