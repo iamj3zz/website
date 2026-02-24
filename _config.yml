@@ -132,6 +132,7 @@ sass:
 exclude:
   - docs/
   - node_modules/
+  - vendor/
   - CLAUDE.md
   - README.md
   - lefthook.yml
