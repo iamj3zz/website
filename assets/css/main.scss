@@ -28,5 +28,7 @@
 @import 'events';        /* Events page table */
 @import 'error';         /* 404 error page */
 
+@import 'back-to-top';
+
 /* Print styles - MUST be last to override everything */
 @import 'print';

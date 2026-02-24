@@ -1,0 +1,30 @@
+.back-to-top {
+  position: fixed;
+  bottom: var(--spacing-xl);
+  right: var(--spacing-xl);
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  background: var(--color-background);
+  color: var(--color-text);
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  cursor: pointer;
+  z-index: var(--z-index-sticky);
+  opacity: 0;
+  transition: opacity var(--transition-speed) var(--transition-easing);
+
+  &.is-visible {
+    opacity: 1;
+  }
+
+  &:hover {
+    color: var(--color-link-hover);
+    border-color: var(--color-text);
+  }
+
+  @media print {
+    display: none;
+  }
+}

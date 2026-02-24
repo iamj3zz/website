@@ -96,6 +96,7 @@ echo "All quality checks happen HERE, locally, before you push."
 echo ""
 echo "This script will validate:"
 echo "  • Image assets (dimensions, naming convention)"
+echo "  • File sizes (blocks files >100MB, warns >50MB)"
 echo "  • YAML syntax and formatting"
 echo "  • Jekyll build"
 echo "  • HTML structure, links, and images"
@@ -212,6 +213,52 @@ else
 fi
 
 # Exit early if image validation failed
+if [ "$ALL_PASSED" = false ]; then
+    print_header "Tests Failed"
+    print_error "Please fix the errors above before proceeding."
+    exit 1
+fi
+
+# ============================================================================
+# STEP 0.5: Large File Check (GitHub enforces 100MB hard limit)
+# ============================================================================
+
+print_header "Step 0.5/5: Large File Check"
+print_step "Scanning staged/tracked files for GitHub size limits..."
+
+LARGE_FILE_FOUND=false
+WARN_FILE_FOUND=false
+LIMIT_HARD=104857600   # 100MB — GitHub rejects push
+LIMIT_WARN=52428800    # 50MB  — GitHub warns on push
+
+while IFS= read -r -d '' FILE; do
+    [ -f "$FILE" ] || continue
+    SIZE=$(stat -c%s "$FILE" 2>/dev/null || stat -f%z "$FILE" 2>/dev/null || echo 0)
+    if [ "$SIZE" -ge "$LIMIT_HARD" ]; then
+        SIZE_MB=$(( SIZE / 1048576 ))
+        print_error "BLOCKED (${SIZE_MB}MB > 100MB): $FILE"
+        echo "  → GitHub will REJECT this push. Remove with: git rm --cached \"$FILE\""
+        echo "    Then purge from history: git filter-repo --invert-paths --path \"$FILE\" --force"
+        LARGE_FILE_FOUND=true
+    elif [ "$SIZE" -ge "$LIMIT_WARN" ]; then
+        SIZE_MB=$(( SIZE / 1048576 ))
+        echo -e "${YELLOW}⚠ WARNING (${SIZE_MB}MB > 50MB): $FILE${NC}"
+        echo "  → GitHub will warn on every push. Consider removing from git."
+        WARN_FILE_FOUND=true
+    fi
+done < <(git ls-files --cached -z)
+
+if [ "$LARGE_FILE_FOUND" = true ]; then
+    print_error "Large file check FAILED — remove files over 100MB before pushing!"
+    ALL_PASSED=false
+elif [ "$WARN_FILE_FOUND" = true ]; then
+    echo -e "${YELLOW}⚠ Large file warnings found (see above). Push will work but GitHub will warn.${NC}"
+    print_success "Large file check passed (no files over 100MB)."
+else
+    print_success "Large file check passed! No oversized files found."
+fi
+
+# Exit early if large files found
 if [ "$ALL_PASSED" = false ]; then
     print_header "Tests Failed"
     print_error "Please fix the errors above before proceeding."
