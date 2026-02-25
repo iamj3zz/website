@@ -1,6 +1,7 @@
 ---
-published: true 
-title: Creative Jam w/ Grécso Zoltán
+published: true
+title: "Creative Jam w/ Grécso Zoltán"
+work_id: creative-jam-grecso
 date: 2019-11-08
 time: "18:00-21:30"
 country: Hungary

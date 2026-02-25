@@ -469,6 +469,36 @@
     margin: 0 auto;
   }
 
+  /* Category section headers and commissioned marker */
+  .works-print-category-section {
+    margin-top: 20px;
+  }
+
+  .works-print-category-section:first-child {
+    margin-top: 0;
+  }
+
+  .works-print-category-header {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #000;
+    border-bottom: 1.5px solid #333;
+    padding-bottom: 6px;
+    margin: 0 0 12px 0;
+    page-break-after: avoid;
+  }
+
+  .works-col-commissioned {
+    font-size: 9px;
+    color: #333;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+  }
+
   /* Bio Section Print Optimization */
   .bio-section::before {
     content: "BIO";

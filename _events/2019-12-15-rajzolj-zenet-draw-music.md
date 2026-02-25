@@ -1,8 +1,9 @@
 ---
-published: true 
+published: true
 title: Rajzolj zenét! (Draw Music!)
 date: 2019-12-15
 time: "10:00-12:00"
+work_id: rajzolj-zenet
 country: Hungary
 city: Budapest
 venue_name: Lóvasút Kulturális és Rendezvényközpont

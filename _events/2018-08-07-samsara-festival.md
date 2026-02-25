@@ -1,13 +1,14 @@
 ---
-published: true 
-title: Samsara Festival
+published: true
+title: "Samsara Festival"
+work_id: sur-le-fil
 date: 2018-08-07
 time: "20:00-23:00"
 country: Hungary
 city: Siófok
 venue_name: Samsara Festival
 venue_address: "Siófok, 8600 Hungary"
-venue_link: https://www.samsarafestival.eu/ 
+venue_link: https://www.samsarafestival.eu/
 ticket_link: https://samsarafestival.eu
-description: Music festival event
+description: "live violin solo performance with dancers as part of the Sur le fil project. The artist improvised live on acoustic violin alongside choreographed dancers, exploring the relationship between sound and movement."
 ---

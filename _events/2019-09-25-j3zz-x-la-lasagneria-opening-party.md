@@ -1,6 +1,7 @@
 ---
-published: true 
-title: J3ZZ x La Lasagneria - Opening Party
+published: true
+title: "J3ZZ x La Lasagneria - Opening Party"
+work_id: j3zz-av-performance
 date: 2019-09-25
 time: "18:30-23:30"
 country: Hungary

@@ -1,6 +1,7 @@
 ---
-published: true 
-title: Mellettünk x J3ZZ
+published: true
+title: "Mellettünk x J3ZZ"
+work_id: mellettunk
 date: 2019-11-06
 time: "19:00-20:30"
 country: Hungary
