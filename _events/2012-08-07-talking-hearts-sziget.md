@@ -6,9 +6,9 @@ time: "23:15"
 country: Hungary
 city: Budapest
 venue_name: Sziget Festival — A38 Stage
-venue_address: "Óbudai-sziget, Budapest, Hungary"
-venue_link: "https://szigetfestival.com"
-ticket_link:
+venue_address: "Budapest, Hajógyári sziget, 1034 Hungary"
+venue_link: https://maps.app.goo.gl/Nu1saVMRExWaS5ieA
+ticket_link: "https://szigetfestival.com"
 description: TALKING HEARTS —
   
   40-minute performance at the A38 stage of Sziget Festival (20th edition), directed by J3ZZ.

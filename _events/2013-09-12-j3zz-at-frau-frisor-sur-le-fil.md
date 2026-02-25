@@ -5,10 +5,10 @@ date: 2013-09-12
 time: "20:30"
 country: Italy
 city: Florence
-venue_name: Frau Frisor
-venue_address: "Florence, Italy"
-venue_link:
+venue_name: "Frau Frisor FOSCA"
+venue_address: "piazza Giovambattista Giorgini, Firenze, Italia"
+venue_link: https://maps.app.goo.gl/5mXrrcv8r9uqDbK19
 ticket_link:
-description: SUR LE FIL — "Premiere of Sur le fil. Solo acoustic violin improvisation, 25 minutes. Recorded live and released on Bandcamp."
+description: "http://www.fosca.net - FOSCA Associazione Culturale, Firenze"
 work_id: sur-le-fil
 ---

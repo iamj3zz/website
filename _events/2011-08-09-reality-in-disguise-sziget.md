@@ -6,8 +6,8 @@ time:
 country: Hungary
 city: Budapest
 venue_name: Sziget Festival (A38 stage)
-venue_address: "Budapest, Hungary"
-venue_link:
+venue_address: "Budapest, Hajógyári sziget, 1034 Hungary"
+venue_link: https://maps.app.goo.gl/Nu1saVMRExWaS5ieA
 ticket_link:
 description: REALITY IN DISGUISE — Live performance of Reality in Disguise (Art'n'Go / ROOTS & ROUTES) at Sziget Festival, A38 stage, Budapest. J3ZZ as violinist and co-creator/composer. <a href="/works/2010-01-01-reality-in-disguise/">→ View work</a>
 work_id: reality-in-disguise

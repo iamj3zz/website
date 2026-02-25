@@ -269,3 +269,108 @@
 .event-desc-toggle:hover {
   color: #333;
 }
+
+/* Year Navigation Widget */
+.year-nav-toggle {
+  position: fixed;
+  bottom: var(--spacing-xl, 20px);
+  left: var(--spacing-xl, 20px);
+  z-index: var(--z-index-sticky, 50);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius, 20px);
+  background: var(--color-background, #fff);
+  color: var(--color-text, #333);
+  border: 1px solid var(--color-border, #e0e0e0);
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-speed, 0.3s) ease, background var(--transition-speed, 0.3s) ease, color var(--transition-speed, 0.3s) ease;
+}
+
+.year-nav-toggle.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.year-nav-toggle[aria-expanded="true"] {
+  background: var(--color-text, #333);
+  color: var(--color-background, #fff);
+}
+
+.year-nav-toggle:hover {
+  background: var(--color-text, #333);
+  color: var(--color-background, #fff);
+}
+
+.year-nav-panel {
+  position: fixed;
+  bottom: calc(var(--spacing-xl, 20px) + 50px);
+  left: var(--spacing-xl, 20px);
+  z-index: var(--z-index-sticky, 50);
+  background: var(--color-background, #fff);
+  border: 1px solid var(--color-border, #e0e0e0);
+  border-radius: var(--border-radius, 8px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  max-width: 180px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: max-height var(--transition-speed, 0.3s) ease, opacity var(--transition-speed, 0.3s) ease;
+}
+
+.year-nav-panel.is-open {
+  max-height: min(480px, 70vh);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.year-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.year-nav-link {
+  display: block;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-weight: normal;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--color-text, #333);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-border, #e0e0e0);
+  transition: background-color var(--transition-speed, 0.3s) ease, font-weight var(--transition-speed, 0.3s) ease;
+}
+
+.year-nav-link:last-child {
+  border-bottom: none;
+}
+
+.year-nav-link:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.year-nav-link.is-active {
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Hide year navigation in print */
+@media print {
+  .year-nav-toggle,
+  .year-nav-panel {
+    display: none;
+  }
+}

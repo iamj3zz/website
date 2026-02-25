@@ -20,6 +20,7 @@ This is a Jekyll static site deployed to GitHub Pages at www.j3zz.com. The site 
 - Commissioned works filter toggle (works across all categories)
 - Responsive design with comprehensive print functionality (all pages A4-optimized with QR codes)
 - Event management system with work linking
+- Events page year navigation widget for quick year jumping with smooth scrolling
 - SEO optimization with structured data, Open Graph tags, and automatic sitemap generation
 - Privacy-compliant Google Analytics 4 integration with GDPR cookie consent
 - GDPR-compliant cookie consent system for analytics and embedded content
@@ -454,11 +455,13 @@ The portfolio grid has two types of filters:
 
 - **Bio**: Edit `_pages/bio.markdown`
 - **Bio Gallery**: Edit `_pages/bio-gallery.markdown` (press photos with front matter-based image management)
-- **Events**: Edit `_pages/events.markdown`
+- **Events**: Edit `_pages/events.markdown` (includes year navigation widget that appears on page)
 - **Contact**: Edit `_pages/contact.markdown`
 - **Homepage/Works Grid**: Edit `_pages/index.markdown` or managed by portfolio collection in `_portfolio/`
 
 All page files are located in the `_pages/` directory.
+
+**Events Page Note:** The events page includes a floating year navigation widget (bottom-left corner) that automatically appears after scrolling 300px. This widget allows users to quickly jump to any year with a single click. The widget is controlled by `assets/js/events-year-nav.js` and styled in `_sass/_events.scss`. Year anchors are automatically generated from the Liquid template.
 
 For detailed information, see [Architecture > Modifying Page Content](docs/architecture.md#modifying-page-content)
 
@@ -753,9 +756,10 @@ Consider these advanced improvements if needed:
 
 ## Need Help?
 
-- **Architecture questions**: See [Architecture](docs/architecture.md)
+- **Architecture questions**: See [Architecture](docs/architecture.md) (includes Events page year navigation widget)
 - **Adding content**: See [Content Management](docs/content-management.md)
 - **Module usage**: See [Modules Reference](docs/modules-reference.md)
 - **Metadata fields**: See [Metadata Reference](docs/metadata-reference.md)
 - **Best practices**: See [Best Practices](docs/best-practices.md)
 - **Testing and CI/CD**: See [Testing](docs/testing.md)
+- **Events page year navigation**: Automatically included widget in `assets/js/events-year-nav.js` — no configuration needed

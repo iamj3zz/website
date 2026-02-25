@@ -6,7 +6,7 @@ time: ""
 country: Hungary
 city: Budapest
 venue_name: Toldi Klub
-venue_address: "Bajcsy-Zsilinszky út 36-38, 1054 Budapest, Hungary"
+venue_address: "Budapest, Bajcsy-Zsilinszky út 36-38, 1054 Hungary"
 venue_link: https://toldiklub.hu/
 ticket_link:
 description: TALKING HEARTS —

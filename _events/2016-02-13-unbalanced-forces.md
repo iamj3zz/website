@@ -6,7 +6,7 @@ time: "19:00-20:00"
 country: Hungary
 city: Budapest
 venue_name: Labor Galéria
-venue_address: "Képíró utca 6, 1053 Budapest, Hungary"
+venue_address: "Budapest, Képíró u 6, 1053 Hungary"
 venue_link: http://labor.c3.hu/en/
 ticket_link:
 work_id: unbalanced-forces

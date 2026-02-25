@@ -30,7 +30,7 @@ image: /assets/img/J3ZZ-logo-black-300px.png
   {% endfor %}
 
   {% for year in years %}
-  <div class="events-year-section">
+  <div class="events-year-section" id="year-{{ year }}">
     <h2 class="events-year-title">{{ year }}</h2>
 
     <div class="events-table">
