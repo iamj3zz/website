@@ -7,8 +7,8 @@ time:
 country: Italy
 city: Florence
 venue_name: Stazione Leopolda
-venue_address: "Viale Fratelli Rosselli 5, 50123 Florence, Italy"
-venue_link:
+venue_address: "Viale Fratelli Rosselli 5, 50144 Florence, Italy"
+venue_link: "https://www.stazione-leopolda.com/en"
 ticket_link:
 description: EUTROPIA — Performance at Stazione Leopolda during Fabbrica Europa Festival, Florence.
 ---

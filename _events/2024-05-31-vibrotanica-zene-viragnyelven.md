@@ -7,8 +7,8 @@ time:
 country: Hungary
 city: Budapest
 venue_name: Institut Français de Hongrie
-venue_address: "Budapest, Hungary"
-venue_link:
+venue_address: "Fő utca 17, 1011 Budapest, Hungary"
+venue_link: https://franciaintezet.hu/
 ticket_link:
 description: RACINES & RÉSONANCES — Vibrotanica installation and performance at Institut Français de Hongrie, Budapest.
 ---

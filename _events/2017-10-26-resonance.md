@@ -5,7 +5,7 @@ date: 2017-10-26
 time: "20:00"
 country: Hungary
 city: Budapest
-venue_name: Refuge
+venue_name: Refuge Budapest
 venue_address: "Budapest, Hungary"
 venue_link:
 ticket_link:

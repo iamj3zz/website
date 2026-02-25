@@ -7,8 +7,8 @@ time:
 country: Mauritius
 city: Rose-Hill
 venue_name: Institut Français de Maurice
-venue_address: "Rose-Hill, Mauritius"
-venue_link:
+venue_address: "30 avenue Julius Nyerere, Beau-Bassin Rose Hill, Mauritius"
+venue_link: https://www.institutfrancais.mu/fr
 ticket_link:
 description: RACINES & RÉSONANCES — Vibrotanica installation and Racines et Résonances performance at Institut Français de Maurice, Rose-Hill, Mauritius.
 ---

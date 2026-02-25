@@ -6,8 +6,8 @@ time: "19:00"
 country: Hungary
 city: Budapest
 venue_name: Living Gallery
-venue_address: "Budapest, Hungary"
-venue_link:
+venue_address: "Nagy Diófa utca 34, 1072 Budapest, Hungary"
+venue_link: https://www.facebook.com/livinggallerybudapest
 ticket_link:
 description: SUR LE FIL — Solo acoustic violin improvisation in intimate gallery setting.
 work_id: sur-le-fil
