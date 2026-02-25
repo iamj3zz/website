@@ -1,4 +1,10 @@
 # CLAUDE.md
+MY INSTRUCTIONS :
+- never alter the git yourself.
+- never rm any file yourself.
+- never build nor serve jekyll yourself.
+- never execute the test script yourself.
+
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
