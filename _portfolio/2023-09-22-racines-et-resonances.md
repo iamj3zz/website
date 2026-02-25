@@ -83,11 +83,11 @@ sections:
 
       **Racines & Résonances** has already been presented at several notable events since 2023:
       * **August 22 2025 : Villa de la Région in Saint-Denis (Réunion Island)** - In front of an audience of approximately 150 people. During the opening of the first ever sound art exhibition on Reunion Island entitled "Résonance d'une île". 
-      * **May 31, 2024 : Institut Français de Hongrie in Budapest (Hungary)** - In front of an audience of approximately 150 people. [Biosonification workshop](/works/2023-04-20-biosonification/) with 30 participants.
+      * **May 31, 2024 : Institut Français de Hongrie in Budapest (Hungary)** - In front of an audience of approximately 150 people. [Biosonification workshop](/works/2023-06-04-biosonification-workshops/) with 30 participants.
       * **May 14, 2024 : École de management et de l'impact de Sciences Po, Paris (France)** - Part of Impact Day, in front of an audience of approximately 100 people.
-      * **May 4, 2024 : Institut Français de Maurice in Rose-Hill (Mauritius)** - In front of an audience of approximately 300 people. [Biosonification workshop](/works/2023-04-20-biosonification/) with 30 participants.
+      * **May 4, 2024 : Institut Français de Maurice in Rose-Hill (Mauritius)** - In front of an audience of approximately 300 people. [Biosonification workshop](/works/2023-06-04-biosonification-workshops/) with 30 participants.
       * **October 28, 2023: Lespas in Saint-Paul (Réunion Island)** - Part of La Nuit des Musiques Expérimentales in front of approximately 140 people.
-      * **September 23, 2023: Institut Français de Hongrie in Budapest (Hungary)**. In front of approximately 150 people. [Biosonification workshop](/works/2023-04-20-biosonification/) with 40 participants.
+      * **September 23, 2023: Institut Français de Hongrie in Budapest (Hungary)**. In front of approximately 150 people. [Biosonification workshop](/works/2023-06-04-biosonification-workshops/) with 40 participants.
       * **September 22, 2023: Brain Bar Festival in Budapest (Hungary)** - In front of approximately 500 people.
 
       At these events, the **intergenerational audience** showed great interest in both the theme and the artistic work presented. Feedback from professionals and the public highlighted the **uniqueness and originality** of the concept, as well as the poetic nature of the performance, even though **it defies conventional live performance norms**. Many spectators expressed a desire to speak with the artist after the show, asking questions and demonstrating that **Racines & Résonances** had **effectively captivated their consciousness and sparked deep reflection on the relationship with the living world**.
