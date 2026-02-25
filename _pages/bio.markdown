@@ -175,6 +175,7 @@ links:
         <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2025-01-01-citta-della-pieve-residency/">Citta Della Pieve, Italy</a></div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-02-kerveguen-residency/">Kerveguen, Saint-Pierre, Réunion</a></div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-cite-des-arts-residency/">Cité des arts, Saint-Denis, Réunion</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-23-outbreakers-lab-residency/">Outbreakers' Lab — Zsennye, Hungary (Aug 23–25)</a></div>
         <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-music-maker-2/">Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</a></div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-park-in-progress/">Park in Progress — Nicosia, Cyprus</a></div>
         <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-talking-hearts/">Talking heArts — Florence, Budapest, Bucharest (artistic director, violinist)</a></div>
