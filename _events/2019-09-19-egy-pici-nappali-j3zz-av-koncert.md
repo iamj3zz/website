@@ -10,5 +10,5 @@ venue_name: "Association of Hungarian Art Photographers (MFSZ - A Magyar Fotóm�
 venue_address: "Belgrád rkp. 17 Budapest 1056"
 venue_link: https://maps.app.goo.gl/kJzz9ATDvLhyfkAz8
 ticket_link:
-description: An audiovisual performance featuring new creative work. The artist describes this as a házi buli feeling (house party atmosphere) and requests attendees bring reusable cups and their own beverages to minimize waste. Registration via jeromelithiaote.com email; secret location details announced only to registered participants.
+description: "Intimate invitation-only audiovisual performance premiere at Association of Hungarian Art Photographers, Budapest."
 ---

@@ -14,11 +14,11 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 # Define metadata once here - it will be used by all modules below
 metadata:
   release_date: "2010-01-01"
+  role: "composer, producer"
+  commissioned_by: "Massih Parsaei"
   collaborators: "Massih Parsaei (director), JÉRÔME LI-THIAO-TÉ (music composer/producer)"
   credits: "Director: Massih Parsaei. Music composer/producer: JÉRÔME LI-THIAO-TÉ"
-  custom:
-    - label: "Tags"
-      value: "film, short, animation, fiction"
+  custom: []
 
 sections:
   # TODO: Add sections here

@@ -15,6 +15,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2012-01-01"
   location: "London"
+  role: "composer, performer, producer"
   collaborators: "Lorenzo Ciacciavicca (director/filmmaker), J3ZZ (composer/performer/producer)"
   credits: "Director/filmmaker: Lorenzo Ciacciavicca. Composer/performer/producer: J3ZZ"
   custom:

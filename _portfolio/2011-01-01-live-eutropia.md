@@ -13,8 +13,9 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
-  date: "2011"
+  date: "2011–2013"
   based_in: "Multiple European locations"
+  role: "violinist, composer, producer, performer"
   collaborators: "Costas Lamproulis (artistic direction), Lisa Brasile (choreographic advice), Olga Pavlenko (visuals coordination), Gabriele Termine (light design), Fathir Ismail (filming coordination), Stephane 'Stuggi' Ragnit (filming coordination), Marina Bistolfi (organisation), Lisette Reuter (organisation)"
   credits: "Artistic direction: Costas Lamproulis. Choreographic advice: Lisa Brasile. Visuals coordination: Olga Pavlenko. Light design: Luce Attiva di Gabriele Termine. Filming coordination: Fathir Ismail, Stephane 'Stuggi' Ragnit. Organisation: Marina Bistolfi, Lisette Reuter. J3ZZ: Violinist, composer, and producer who performed during shows and contributed to the documentary soundtrack. Served as coach to young artists during the Lille residency"
   custom:
@@ -23,13 +24,35 @@ metadata:
     - label: "Documentary Soundtrack"
       value: "Featured in EUtropia documentary — composition and sound design"
     - label: "Residencies"
-      value: "Silkeborg (Denmark), Cologne (Germany), Florence (Italy)"
+      value: "Silkeborg (Denmark), Cologne (Germany), Florence (Italy), Lille (France)"
     - label: "Project Website"
       value: "http://rootsnroutes.eu/projects-id59"
       link: "http://rootsnroutes.eu/projects-id59"
-    - label: "Tags"
-      value: "Live, Dance, Violin, Experimental, European tour"
+    - label: "Photo Documentation"
+      value: "smouth.com — EUtropia photo gallery"
+      link: "https://smouth.com/pf/eutropia/"
+    - label: "Fabbrica Europa Festival"
+      value: "May 2012 — Stazione Leopolda, Florence"
 
 sections:
-  # TODO: Add sections here
+
+  - type: description
+
+  - type: text
+    title: "About the Project"
+    content: |
+      EUtropia was a large-scale EU CULTURE 2007–2013 funded initiative bringing together approximately 250 young artists from nine European countries — Belgium, Denmark, France, Germany, Greece, Hungary, Italy, the Netherlands, and Serbia — to co-create a shared multidisciplinary artistic language.
+
+      The concept was built on the Tower of Babel legend, exploring coexistence, communication, and shared expression. Rather than a fixed work, EUtropia was designed to evolve continuously: each national residency reimagined the performance through local artistic traditions and contemporary influences, blending rock, pop, classical, traditional, hip-hop, and ethnic aesthetics with visual and dramatic arts.
+
+      J3ZZ served as violinist, composer, producer, and performer throughout the project, contributed to the documentary soundtrack, and coached young artists during the Lille residency.
+
+  - type: text
+    title: "Development & Tour"
+    content: |
+      The live show was developed through residencies in Silkeborg (Denmark), Cologne (Germany), and Florence (Italy), then toured to all nine partner countries.
+
+  - type: linked-events
+
+  - type: metadata
 ---

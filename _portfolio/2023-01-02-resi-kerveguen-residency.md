@@ -23,8 +23,6 @@ metadata:
     - label: "Output Work"
       value: "Racines & Résonances (live audiovisual performance)"
       link: "/works/2019-09-01-live-racines-et-resonances/"
-    - label: "Tags"
-      value: "residency, creative development, Réunion Island, biosonification, plant bio-signals"
 
 sections:
   - type: description

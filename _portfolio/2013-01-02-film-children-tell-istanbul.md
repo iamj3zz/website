@@ -14,10 +14,9 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2013-01-01"
   role: "composer"
+  commissioned_by: "Olga Pavlenko"
   collaborators: "Olga Pavlenko (director)"
-  custom:
-    - label: "Tags"
-      value: "Film, Documentary"
+  custom: []
 
 sections:
   # TODO: Add sections here

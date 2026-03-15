@@ -15,6 +15,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2018-01-01"
   location: "Château Éphémère"
+  role: "violinist, artist"
   collaborators: "Adami"
   custom:
     - label: "YouTube"
@@ -23,8 +24,6 @@ metadata:
       value: "https://www.facebook.com/chateaufmr"
     - label: "External Links"
       value: "chateau_ephemere: https://chateauephemere.org/; culture_experience_days: https://cultureexperiencedays.adami.fr/evenements/music-maker-2-au-chateau-ephemere/; facebook: https://www.facebook.com/chateaufmr"
-    - label: "Tags"
-      value: "residency, installation, violinist"
 
 sections:
   # TODO: Add sections here

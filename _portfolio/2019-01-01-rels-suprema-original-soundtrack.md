@@ -25,8 +25,6 @@ metadata:
       link: "/works/2019-01-01-perf-suprema/"
     - label: "Venue"
       value: "MU Theatre, Budapest, Hungary"
-    - label: "Tags"
-      value: "release, album, soundtrack, dance, experimental electronic, violin"
 
 sections:
   - type: description

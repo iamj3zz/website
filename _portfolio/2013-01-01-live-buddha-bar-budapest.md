@@ -15,13 +15,13 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   date: "2013–2017"
   based_in: "Buddha-Bar Hotel Budapest Klotild Palace, Budapest, Hungary"
+  role: "resident violinist"
+  commissioned_by: "Buddha-Bar Hotel Budapest Klotild Palace"
   collaborators: "J3ZZ (resident violinist), DJ Mada, DJ Tony, DJ Viktor"
   credits: "Resident violinist: J3ZZ. DJs: DJ Mada, DJ Tony, DJ Viktor"
   custom:
     - label: "External Links"
       value: "we_love_budapest: https://welovebudapest.com/en/article/2018/12/7/buddha-bar-hotel-budapest-klotild-palace-to-close-down; mellow_mood_hotels: https://www.mellowmoodhotels.com/buddha-bar-hotel-info/"
-    - label: "Tags"
-      value: "Live, Violinist"
     - label: "Duration"
       value: "5 years (2013-2017)"
 

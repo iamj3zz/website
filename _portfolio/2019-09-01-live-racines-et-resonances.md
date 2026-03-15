@@ -27,8 +27,6 @@ metadata:
       value: "Musique végétale / Plant Language / Zene virágnyelven"
     - label: "Geographic Range"
       value: "Hungary, Réunion (Indian Ocean), Mauritius"
-    - label: "Tags"
-      value: "live, biosonification, ecology, improvisation, sound art, violin, experimental"
 
 sections:
   - type: description

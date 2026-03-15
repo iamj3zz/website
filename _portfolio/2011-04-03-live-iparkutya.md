@@ -23,8 +23,6 @@ metadata:
       value: "Hölgyválasz"
     - label: "Festival"
       value: "Budapest Fringe Festival"
-    - label: "Tags"
-      value: "Live, Violinist, Band"
 
 sections:
   - type: description

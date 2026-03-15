@@ -15,10 +15,9 @@ metadata:
   release_date: "2016-01-01"
   location: "Budapest, Hungary"
   role: "composer"
+  commissioned_by: "Noémi Kulcsár"
   collaborators: "Noémi Kulcsár (choreographer/director)"
-  custom:
-    - label: "Tags"
-      value: "Film, Dance, Trailer"
+  custom: []
 
 sections:
   # TODO: Add sections here

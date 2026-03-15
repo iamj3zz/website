@@ -20,8 +20,6 @@ metadata:
       value: "Single"
     - label: "Release Type"
       value: "Collaboration - Jordi Abel"
-    - label: "Tags"
-      value: "release, single, collaboration, violin"
 
 sections:
   - type: description

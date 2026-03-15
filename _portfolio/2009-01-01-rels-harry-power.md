@@ -21,8 +21,6 @@ metadata:
       link: "/works/2008-11-27-live-the-last-drops/"
     - label: "Format"
       value: "Single"
-    - label: "Tags"
-      value: "release, single, band, violin, americana"
 
 sections:
   - type: description

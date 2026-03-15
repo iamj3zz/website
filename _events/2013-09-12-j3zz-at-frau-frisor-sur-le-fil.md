@@ -9,6 +9,6 @@ venue_name: "Frau Frisor FOSCA"
 venue_address: "piazza Giovambattista Giorgini, Firenze, Italia"
 venue_link: https://maps.app.goo.gl/5mXrrcv8r9uqDbK19
 ticket_link:
-description: "http://www.fosca.net - FOSCA Associazione Culturale, Firenze"
+description: "Sur le fil solo performance at Frau Frisor, a cultural venue by FOSCA Associazione Culturale, Florence."
 work_id: sur-le-fil
 ---

@@ -19,8 +19,6 @@ metadata:
       value: "Single"
     - label: "Release Type"
       value: "Solo release"
-    - label: "Tags"
-      value: "release, single, field recording, environmental sound, soundscape"
 
 sections:
   - type: description

@@ -14,9 +14,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2011-01-01"
   role: "composer, producer"
-  custom:
-    - label: "Tags"
-      value: "Film, Festival, Trailer"
+  commissioned_by: "Urban Media Festival"
+  custom: []
 
 sections:
   # TODO: Add sections here

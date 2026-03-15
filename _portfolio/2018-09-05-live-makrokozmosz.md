@@ -15,17 +15,13 @@ metadata:
   date: "2018"
   based_in: "Budapest, Hungary"
   role: "musician, performer"
-  collaborators: "DJ Panda, Makrokozmosz"
+  collaborators: "J3ZZ (violin), DJ Panda, Makrokozmosz"
   custom:
     - label: "Format"
       value: "Live audiovisual performance"
     - label: "Venue"
       value: "Valyo Kikötő"
       link: "https://valyo.hu/"
-    - label: "Collaborators"
-      value: "J3ZZ (violin), DJ Panda, Makrokozmosz"
-    - label: "Tags"
-      value: "Live, Audiovisual, Collaboration, Violin, Electronic Music"
 
 sections:
   - type: description

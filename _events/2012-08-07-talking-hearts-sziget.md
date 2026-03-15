@@ -9,11 +9,6 @@ venue_name: Sziget Festival — A38 Stage
 venue_address: "Budapest, Hajógyári sziget, 1034 Hungary"
 venue_link: https://maps.app.goo.gl/Nu1saVMRExWaS5ieA
 ticket_link: "https://szigetfestival.com"
-description: TALKING HEARTS —
-  
-  40-minute performance at the A38 stage of Sziget Festival (20th edition), directed by J3ZZ.
-  Guest performers included Bari Kim (contemporary dance, Germany), Gregory Zeigler (percussion, USA),
-  Zoltán Grecsó (dance, Budapest), and Krisztina Bogó (visual art, Budapest).
-  Main residency phase ran August 5–7, 2012.
+description: "40-minute performance at Sziget Festival (20th edition), A38 stage, directed by J3ZZ."
 work_id: talking-hearts
 ---

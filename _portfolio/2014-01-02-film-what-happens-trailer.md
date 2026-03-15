@@ -15,10 +15,9 @@ metadata:
   release_date: "2014-01-01"
   location: "Ljubljana, Slovenia"
   role: "composer"
+  commissioned_by: "EnKnapGroup"
   collaborators: "EnKnapGroup"
-  custom:
-    - label: "Tags"
-      value: "Film, Performance, Trailer"
+  custom: []
 
 sections:
   # TODO: Add sections here

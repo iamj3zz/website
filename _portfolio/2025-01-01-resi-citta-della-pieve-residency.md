@@ -21,8 +21,6 @@ metadata:
     - label: "Output Work"
       value: "Vibrotanica (immersive interactive installation)"
       link: "/works/2026-01-01-inst-vibrotanica/"
-    - label: "Tags"
-      value: "residency, creative development, Italy, bioelectrical sensors, plant bio-signals, interactive installation"
 
 sections:
   - type: description

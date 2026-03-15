@@ -28,8 +28,6 @@ metadata:
     - label: "Bandcamp"
       value: "SUR LE FIL (Live at FKSE 02/07/2015) — stream & download"
       link: "https://music.jeromelithiaote.com/track/sur-le-fil-live-at-fkse-02-07-2015"
-    - label: "Tags"
-      value: "Free improvisation, Live, Violin, Experimental, Ambient Electronic, Contemporary"
 
 sections:
   - type: description

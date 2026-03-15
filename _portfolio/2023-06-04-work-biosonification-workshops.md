@@ -8,7 +8,9 @@ abstract: |
 description: |
   Biosonification Workshops are educational ateliers facilitated by J3ZZ and the collective "Nout plant i chant" that teach participants how plants can "sing" by using sensors to capture their vibrations and convert them into melodies. These immersive, participatory experiences aim to reconnect people with the plant world while raising awareness about botanical diversity, particularly Réunion's endemic flora.
 
-  The workshops combine science, art, and ecology through hands-on experimentation with the vibrotanica device technology. Held across multiple locations in Réunion and other regions, these ateliers serve students, educators, and general audiences in natural and cultural settings.
+  The workshops combine science, art, and ecology through hands-on experimentation with the vibrotanica device technology. The three-atelier format (Zilien, Robinson, J3ZZ) explores different connections between botany and sound: theatre/music/herbalism, graphic transcription and botanical illustration, and plant-listening instrument design. Held across multiple locations in Réunion and other regions, these ateliers serve students, educators, and general audiences in natural and cultural settings.
+
+  The vibrotanica box device, developed since 2019, converts plant biodata into sound through sensors and specialized software. The school-based program "Vibrotanica dann lékol" brings this technology into educational curricula, combining electronic music, ecology, and music informatics for student-centered learning and musical creation.
 category: workshops
 commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
@@ -17,20 +19,17 @@ metadata:
   release_date: "2023-06-04"
   location: "Réunion · Hungary · Mauritius"
   role: "workshop facilitator, sound artist, educator"
-  collaborators: "Nout plant i chant collective"
+  technology: "Vibrotanica device with plant sensors"
+  collaborators: "Nout plant i chant collective (with Zilien, Robinson, J3ZZ ateliers)"
   custom:
     - label: "Format"
       value: "Educational workshops, ateliers, participatory experiences"
     - label: "Key Concept"
       value: "Biosonification — transforming plant vibrations into sound"
-    - label: "Technology"
-      value: "Vibrotanica device with plant sensors"
     - label: "Collective"
       value: "Nout plant i chant"
     - label: "Focus"
       value: "Plant awareness, ecology, sound art, sensor technology"
-    - label: "Tags"
-      value: "Workshop, Biosonification, Education, Ecology, Interactivity, Science & Art"
 
 sections:
   - type: description

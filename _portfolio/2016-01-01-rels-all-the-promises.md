@@ -20,8 +20,6 @@ metadata:
       value: "Album"
     - label: "Release Type"
       value: "Collaboration - Michael Kentish"
-    - label: "Tags"
-      value: "release, album, collaboration, violin, singer-songwriter"
 
 sections:
   - type: description

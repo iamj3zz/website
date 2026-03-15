@@ -15,7 +15,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   date: "2011–2020"
   based_in: "Budapest, Hungary"
-  role: "artist_composer_performer: J3ZZ"
+  role: "artist, composer, performer"
   custom:
     - label: "Format"
       value: "Live performances with video documentation"
@@ -24,8 +24,6 @@ metadata:
       link: "https://music.jeromelithiaote.com/album/hybris-ex-nihilo-live"
     - label: "YouTube"
       value: "YouTube playlist featuring experimental footage"
-    - label: "Tags"
-      value: "Live, Improvisation, Violin"
 
 sections:
   - type: description

@@ -22,8 +22,6 @@ metadata:
       value: "Collaboration - MC KiKo"
     - label: "Version"
       value: "Acoustic"
-    - label: "Tags"
-      value: "release, single, collaboration, violin, acoustic"
 
 sections:
   - type: description

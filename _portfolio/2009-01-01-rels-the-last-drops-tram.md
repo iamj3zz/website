@@ -24,8 +24,6 @@ metadata:
       value: "Tram Jam"
     - label: "Format"
       value: "Video clip"
-    - label: "Tags"
-      value: "live-performance, band, violin, americana"
 
 sections:
   - type: description

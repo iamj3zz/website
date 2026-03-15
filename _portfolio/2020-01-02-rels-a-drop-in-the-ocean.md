@@ -19,8 +19,6 @@ metadata:
       value: "Album"
     - label: "Release Type"
       value: "Solo release"
-    - label: "Tags"
-      value: "release, album, experimental electronic, ambient, field recording"
 
 sections:
   - type: description

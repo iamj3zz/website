@@ -15,12 +15,10 @@ image: /assets/works/2016-02-13-unbalanced-forces/thumbnail.jpg
 metadata:
   release_date: "2016-02-13"
   location: "Budapest, Hungary - Lábor gallery (Képíró u. 6, 1053)"
+  role: "author, programmer, composer"
+  technology: "Ambisonic spatialization for 4 speakers, Ableton Live, Max for Live"
   credits: "Author, Programmer, Composer: J3ZZ"
   custom:
-    - label: "Technology"
-      value: "Ambisonic spatialization for 4 speakers, Ableton Live, Max for Live"
-    - label: "Commissioned by"
-      value: "Fiatal Képzőművészek Stúdiója Egyesület (FKSE) - Studio of Young Artists' Association"
     - label: "Exhibition"
       value: "Kapcsolatok 3. (Connections 3.) — FKSE new members' introductory exhibition"
     - label: "Co-artists"

@@ -15,6 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2013-01-01"
   location: "Najaf (Iraq), Istanbul (Turkey), Nicosia (Cyprus)"
+  role: "composer, sound designer"
+  commissioned_by: "1000 and 1 Realities"
   collaborators: "Ayse Taspinar (Turkey), Laia Farrera (Spain), Laith Mutawaq (Iraq), Lorenzo Ciacciavicca (Italy), Maria Papadopoulou (Cyprus), Olga Pavlenko (Italy), Ruben Vandendriessche (Spain)"
   credits: "Music/sound design: J3ZZ. Team members: Ayse Taspinar (Turkey), Laia Farrera (Spain), Laith Mutawaq (Iraq), Lorenzo Ciacciavicca (Italy), Maria Papadopoulou (Cyprus), Olga Pavlenko (Italy), Ruben Vandendriessche (Spain)"
   custom:
@@ -22,8 +24,6 @@ metadata:
       value: "Children tell Istanbul (August 2013); Flying Istanbul trailer (October 2016); Working bites (August 2013)"
     - label: "External Links"
       value: "project_website: http://www.1000and1realities.org"
-    - label: "Tags"
-      value: "Film, trailer-spot, documentary, animation, fiction"
 
 sections:
   # TODO: Add sections here

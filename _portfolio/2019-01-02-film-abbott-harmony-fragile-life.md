@@ -14,11 +14,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2019-01-01"
   role: "performer"
-  custom:
-    - label: "Client"
-      value: "Abbott"
-    - label: "Tags"
-      value: "Film, Corporate, Campaign"
+  commissioned_by: "Abbott"
+  custom: []
 
 sections:
   # TODO: Add sections here

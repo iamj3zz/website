@@ -35,8 +35,6 @@ metadata:
       link: "https://music.jeromelithiaote.com/album/massolit-series-live"
     - label: "Format"
       value: "Digital album — 12 tracks, 3h09min total"
-    - label: "Tags"
-      value: "Improvisation, Live, Experimental, Contemporary Jazz, Noise, Ambient Electronic"
 
 sections:
   - type: description

@@ -10,5 +10,5 @@ venue_name: Trafó House
 venue_address: "Liliom utca 41, 1094 Budapest, Hungary"
 venue_link: https://g.page/trafohouse?share
 ticket_link: 
-description: WILLANY LÉO — The event announces the return of Willany Leó improvisation dance theater to a new venue at Trafó House's rehearsal space, supported by Műhely Foundation. The ensemble, founded in 2008 by choreographer Zoltán Grecsó, combines dance, music, and improvisation. The group participated in an EU-funded international project (2012–2014) that received Success Story recognition and won the Lábán Rudolf Special Award in 2019.
+description: "WILLANY LÉO — Improvisation dance performance at Trafó House rehearsal space (Műhely Foundation), marking the ensemble's return to a new venue."
 ---

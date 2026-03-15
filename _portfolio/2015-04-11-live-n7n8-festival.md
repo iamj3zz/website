@@ -24,8 +24,6 @@ metadata:
       link: "http://massolitbudapest.com/"
     - label: "Festival"
       value: "N7N8 Festival"
-    - label: "Tags"
-      value: "Live, Improvisation, Violin, Duet"
 
 sections:
   - type: description

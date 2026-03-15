@@ -28,8 +28,6 @@ metadata:
       value: "Kisharsány-Villany Wine region, Hungary"
     - label: "Festival Type"
       value: "Multicultural Pan-Art Festival"
-    - label: "Tags"
-      value: "Live, Collaboration, Performance, Violin"
 
 sections:
   - type: description

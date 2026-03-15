@@ -14,10 +14,9 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2016-01-01"
   role: "sound designer"
+  commissioned_by: "Olga Pavlenko"
   collaborators: "Olga Pavlenko (director/animator)"
-  custom:
-    - label: "Tags"
-      value: "Film, Animation, Trailer"
+  custom: []
 
 sections:
   # TODO: Add sections here

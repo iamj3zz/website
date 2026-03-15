@@ -21,8 +21,6 @@ metadata:
       value: "Solo release"
     - label: "Series"
       value: "Ex Nihilo (Part 1 of 3)"
-    - label: "Tags"
-      value: "release, single, experimental electronic, ambient, sound design"
 
 sections:
   - type: description

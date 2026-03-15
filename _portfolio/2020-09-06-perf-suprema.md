@@ -15,6 +15,7 @@ metadata:
   release_date: "2020-09-06"
   location: "Veszprém, Hungary"
   role: "composer, music producer"
+  commissioned_by: "Imre Zoltán Program"
   collaborators: "Imre Zoltán Program"
   custom:
     - label: "Format"

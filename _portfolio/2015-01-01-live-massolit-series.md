@@ -26,8 +26,6 @@ metadata:
       link: "https://music.jeromelithiaote.com/album/massolit-series-live"
     - label: "Sessions"
       value: "7 concerts, February–August 2015"
-    - label: "Tags"
-      value: "Improvisation, Live, Experimental, Contemporary Jazz, Violin"
 
 sections:
   - type: description

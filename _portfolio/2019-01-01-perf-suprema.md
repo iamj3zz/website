@@ -15,6 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2019-01-01"
   location: "Budapest, Hungary"
+  role: "composer"
+  commissioned_by: "Tímea Sebestyén"
   collaborators: "Tímea Sebestyén (choreography), J3ZZ (music composer), Mészáros Csaba (photography)"
   credits: "Choreography: Tímea Sebestyén. Music composer: J3ZZ. Photography: Mészáros Csaba"
   custom:
@@ -32,5 +34,6 @@ metadata:
       link: "http://www.zadam.hu/project/suprema/"
 
 sections:
-  # TODO: Add sections here
+  - type: description
+  - type: metadata
 ---

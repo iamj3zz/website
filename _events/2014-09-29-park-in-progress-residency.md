@@ -8,6 +8,6 @@ city: Nicosia
 venue_name: Municipal Gardens of Nicosia
 venue_address: "Municipal Gardens, Nicosia, Cyprus (near UN buffer zone)"
 venue_link: https://www.artoshouse.org
-description: PARK IN PROGRESS — Opening performance and spatial audio installation. J3ZZ as sound artist — 16-speaker multichannel installation using a catalogue of human body sounds, performed with trapeze artist Audrey Louwet (Compagnie Azeïn). Part of Park in Progress 11th edition, Pépinières Européennes pour Jeunes Artistes, hosted by ARTos Foundation. Installation ran September 29 – October 5, 2014. Artistic residency hosted by ARTos Foundation, Nicosia, as part of the 11th edition of Park in Progress (Pépinières Européennes pour Jeunes Artistes). J3ZZ established a catalogue of sounds produced by the human body, building a sound vocabulary for the spatial audio installation and performance that followed.
+description: "Opening performance and 16-speaker multichannel spatial audio installation at Park in Progress 11th edition (Pépinières Européennes), Nicosia — installation ran September 29 – October 5, 2014."
 work_id: park-in-progress
 ---

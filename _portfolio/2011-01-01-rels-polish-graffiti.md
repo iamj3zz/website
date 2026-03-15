@@ -20,8 +20,6 @@ metadata:
       value: "Album"
     - label: "Release Type"
       value: "Collaboration - Morzsa Records"
-    - label: "Tags"
-      value: "release, album, collaboration, violin, world music, jazz"
 
 sections:
   - type: description

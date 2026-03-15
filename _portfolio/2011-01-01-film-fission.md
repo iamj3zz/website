@@ -15,13 +15,12 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2011-01-01"
   location: "Cologne, Germany"
+  role: "composer, producer"
   collaborators: "Ana Maria Staicu (film director), Paris Tume (film director), J3ZZ (music composer/producer), Deborah Sophia Leist (dance), Myriam Meret (title design)"
   credits: "Film directors: Ana Maria Staicu and Paris Tume. Music composer/producer: J3ZZ. Dance: Deborah Sophia Leist. Title design: Myriam Meret"
   custom:
     - label: "External Links"
       value: "project_website: http://rootsnroutes.eu/video-id1410"
-    - label: "Tags"
-      value: "Film, Dance-video, Short"
 
 sections:
   # TODO: Add sections here

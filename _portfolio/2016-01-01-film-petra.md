@@ -15,6 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2016-01-01"
   location: "Budapest, Hungary / USA"
+  role: "composer"
+  commissioned_by: "Professor Philip Lewis"
   collaborators: "Professor Philip Lewis (director), J3ZZ (composer - partial participation), Georgia State University"
   credits: "Director: Professor Philip Lewis. Institution: Georgia State University. Composer: J3ZZ (budget constraints prevented full participation; previous music was ultimately used)"
   custom:

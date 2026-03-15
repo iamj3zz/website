@@ -15,6 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2016-01-01"
   location: "Budapest, Hungary"
+  role: "composer, sound designer"
+  commissioned_by: "Kulcsár Noémi"
   collaborators: "Kulcsár Noémi (choreographer/director), Rubi Anna (concept/co-director), J3ZZ (music/sound design), Cseh Dávid (dramaturge), Csere Zoltán (lights/assistant)"
   credits: "Choreographer/director: Kulcsár Noémi. Concept/co-director: Rubi Anna. Music/sound design: J3ZZ. Dramaturge: Cseh Dávid. Lights: Csere Zoltán. Assistant: Csere Zoltán"
   custom:

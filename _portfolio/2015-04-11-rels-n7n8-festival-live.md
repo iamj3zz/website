@@ -26,8 +26,6 @@ metadata:
       value: "N7N8 Festival"
     - label: "Type"
       value: "Improvisation duet"
-    - label: "Tags"
-      value: "Live, Improvisation, Violin, Recording"
 
 sections:
   - type: description

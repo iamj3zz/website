@@ -10,5 +10,5 @@ venue_name: Lumen Kávézó
 venue_address: "Mikszáth tér 2, 1088 Budapest, Hungary"
 venue_link: https://www.lumen.hu 
 ticket_link: 
-description: MASSOLIT SERIES — Inaugural collaboration between J3ZZ and Áron Porteleki. Exploring Hungarian culture
+description: "MASSOLIT SERIES — Inaugural collaboration between J3ZZ and Áron Porteleki, exploring Hungarian culture through electronic violin improvisation."
 ---

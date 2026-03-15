@@ -14,9 +14,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2020-01-01"
   role: "composer, producer, sound designer"
-  custom:
-    - label: "Tags"
-      value: "Film, Educational, Medical"
+  commissioned_by: "Medicontur"
+  custom: []
 
 sections:
   # TODO: Add sections here

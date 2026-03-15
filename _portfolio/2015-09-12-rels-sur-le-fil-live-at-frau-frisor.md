@@ -23,8 +23,6 @@ metadata:
     - label: "Bandcamp"
       value: "SUR LE FIL (Live at Frau Frisor 12/09/2013) — stream & download"
       link: "https://music.jeromelithiaote.com/album/sur-le-fil-live-at-frau-frisor-12-09-2013"
-    - label: "Tags"
-      value: "Free improvisation, Live, Violin, Experimental, Ambient Electronic, Contemporary"
 
 sections:
   - type: description

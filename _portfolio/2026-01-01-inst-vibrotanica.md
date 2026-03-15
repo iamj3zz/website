@@ -13,10 +13,10 @@ image: /assets/works/2026-01-01-vibrotanica/thumbnail.jpg
 metadata:
   release_date: "2024-08-27"
   location: "TBD (work in progress)"
+  role: "concept, sound artist, programmer"
+  technology: "Bioelectrical sensors, ambisonic audio, HD projection, generative visuals, fog machines, Max for Live / Ableton Live"
   credits: "Concept, sound, programming: J3ZZ. Hardware (Vibrotanica Box): J3ZZ"
   custom:
-    - label: "Technology"
-      value: "Bioelectrical sensors, ambisonic audio, HD projection, generative visuals, fog machines, Max for Live / Ableton Live"
     - label: "Status"
       value: "Work in progress"
     - label: "Website"

@@ -47,8 +47,6 @@ metadata:
     - label: "Lead Organisation"
       value: "Subjective Values Foundation (SVF)"
       link: "http://www.szubjektiv.org/"
-    - label: "Tags"
-      value: "Live, Residency, EU Project, Violinist, Artistic Director"
 
 sections:
   - type: description

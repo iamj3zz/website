@@ -14,12 +14,11 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2013-01-01"
   role: "composer, sound designer"
+  commissioned_by: "Olga Pavlenko"
   collaborators: "Olga Pavlenko (director/animator)"
   custom:
     - label: "Production Period"
       value: "2013–2020"
-    - label: "Tags"
-      value: "Film, Animation"
 
 sections:
   # TODO: Add sections here

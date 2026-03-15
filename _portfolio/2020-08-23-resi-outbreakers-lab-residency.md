@@ -29,8 +29,6 @@ metadata:
       value: "Mentoring camp — individual sessions, workshops, group discussions"
     - label: "Focus"
       value: "Artistic development, music industry, marketing, career strategy, mental health"
-    - label: "Tags"
-      value: "residency, mentoring, music industry, professional development, Hungary"
 
 sections:
   - type: description

@@ -15,6 +15,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2011-01-01"
   location: "Budapest, Hungary / Zagreb, Croatia"
+  role: "composer, producer"
   collaborators: "Zoltán Grecsó (choreographer/creator), JLTT - J3ZZ (composer/producer)"
   credits: "Choreographer/creator: Zoltán Grecsó. Composer/producer: JLTT (J3ZZ)"
   custom:

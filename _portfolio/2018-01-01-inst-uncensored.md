@@ -15,11 +15,10 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2018-01-01"
   location: "Budapest, Hungary"
-  role: "composer_producer_sound_artist: J3ZZ"
+  role: "composer, producer, sound artist"
+  commissioned_by: "Caviar & Bull"
   collaborators: "Caviar & Bull; Uncensored restaurant"
-  custom:
-    - label: "Tags"
-      value: "Film, Installation, Corporate"
+  custom: []
 
 sections:
   # TODO: Add sections here

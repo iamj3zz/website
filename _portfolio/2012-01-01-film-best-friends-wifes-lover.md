@@ -15,6 +15,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 metadata:
   release_date: "2012-01-01"
   location: "Budapest, Hungary"
+  role: "composer"
+  commissioned_by: "Declan Hannigan"
   collaborators: "Declan Hannigan (director/screenplay), J3ZZ (composer), Brian Faiola (producer), Révész Balázs (cinematographer)"
   credits: "Director: Declan Hannigan. Composer/music: J3ZZ. Producer: Brian Faiola. Screenplay: Declan Hannigan. Cinematographer: Révész Balázs. Cast: Andy Hefler, Tunder Juhász, Ferenczy Istvan, Vlasits Barbara. Distributor: Declan Hannigan"
   custom:
