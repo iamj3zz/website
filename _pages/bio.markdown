@@ -50,7 +50,7 @@ links:
   <!-- Categorized Lists Section -->
   <div class="bio-lists">
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-installations">
       <h2>Installations &amp; Exhibitions</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2024</span> Vibrotanica (work in progress) — TBD</div>
@@ -61,7 +61,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-live-performances">
       <h2>Live Performances &amp; Festivals</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2025</span> Racines &amp; Résonances — Villa de la Région, La Réunion</div>
@@ -116,7 +116,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-dance-theatre">
       <h2>Dance &amp; Theatre</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2019</span> SUPREMA — Tímea Sebestyén — MU Theatre, Budapest, Hungary (composer, performer) (May 3)</div>
@@ -126,7 +126,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-film">
       <h2>Film &amp; Audiovisual</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-03-film-medicontur-educational-film/">Medicontur educational film (composer, producer, sound designer)</a></div>
@@ -153,7 +153,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-releases">
       <h2>Releases</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-01-rels-ex-nihilo-3/">Ex Nihilo 3 — single</a></div>
@@ -178,7 +178,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-residencies">
       <h2>Residencies</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2025-01-01-resi-citta-della-pieve-residency/">Citta Della Pieve, Italy</a></div>
@@ -194,7 +194,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-workshops">
       <h2>Workshops</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2024</span> Biosonification — Institut Français de Budapest, Hungary</div>
@@ -209,7 +209,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-teaching">
       <h2>Teaching &amp; Coaching</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2013–2015</span> Interdisciplinary improvisation coaching — ROOTS &amp; ROUTES projects across Europe</div>
@@ -217,7 +217,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-management">
       <h2>Cultural Management &amp; Governance</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2023–present</span> Board Member — KOLET (www.kolet.re), La Réunion</div>
@@ -228,7 +228,7 @@ links:
       </div>
     </div>
 
-    <div class="bio-category">
+    <div class="bio-category" id="bio-education">
       <h2>Education &amp; Certificates</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2024</span> Training — Pratiquer la Transe Cognitive Auto-Induite dans la perspective d'un usage professionnel dans le secteur artistique — TranceLab Training Institute, La Plaine St. Denis, France (Nov 4–5 &amp; 18–19, 26h, Qualiopi)</div>

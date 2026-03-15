@@ -11,6 +11,22 @@
 # Ensures you never commit broken code
 pre-commit:
   commands:
+    check-claude-coauthor:
+      run: |
+        coauthor_pattern="Co-Authored-By"": Claude"
+        if git diff --cached -U0 | grep -q "$coauthor_pattern"; then
+          echo "❌ Claude cannot be added as a co-author in this repository."
+          echo ""
+          echo "Per project guidelines, Claude must not be credited in git commits."
+          echo "Please remove the Claude co-author line from your commit message."
+          exit 1
+        fi
+      fail_text: |
+        ❌ Claude co-author check failed!
+
+        Claude cannot be added as a co-author in this repository.
+        Please update your commit message to remove the Claude co-author line.
+
     full-tests:
       run: ./test-before-push.sh
       fail_text: |
