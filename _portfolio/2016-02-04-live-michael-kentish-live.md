@@ -22,7 +22,7 @@ metadata:
       value: "Live violin performance"
     - label: "Related Work"
       value: "Michael Kentish (studio recordings)"
-      link: "/works/2016-02-04-michael-kentish-recordings/"
+      link: "/works/2016-02-04-rels-michael-kentish-recordings/"
 
 sections:
   - type: description

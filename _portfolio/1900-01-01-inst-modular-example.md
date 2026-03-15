@@ -1,5 +1,5 @@
 ---
-published: true 
+published: false 
 layout: work
 title: Modular Layout Example
 work_id: modular-layout-example
@@ -67,7 +67,7 @@ sections:
     produced_by: "Studio Productions"
     produced_by_link: "https://studioproductions.example.com"
     client: "Example Client"
-    client_link: "/works/2026-01-01-vibrotanica/"  # Example: link to another work
+    client_link: "/works/2026-01-01-inst-vibrotanica/"  # Example: link to another work
     commissioned_by: "Paris Digital Art Festival"
     commissioned_by_link: "https://parisdigitalartfestival.com"
     curated_by: "Marie Dubois"
@@ -103,7 +103,7 @@ sections:
         link: "https://spotify.com/artist/j3zz"
       - label: "Related Work"
         value: "See Vibrotanica project"
-        link: "/works/2026-01-01-vibrotanica/"  # Example: link to another work
+        link: "/works/2026-01-01-inst-vibrotanica/"  # Example: link to another work
 
   - type: text
     title: "About the Project"
@@ -190,5 +190,3 @@ sections:
   - type: linked-events
     title: "Upcoming Events & Performances"
 ---
-
-

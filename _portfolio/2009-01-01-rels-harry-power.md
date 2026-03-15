@@ -18,7 +18,7 @@ metadata:
   custom:
     - label: "Band"
       value: "The Last Drops"
-      link: "/works/2008-11-27-the-last-drops/"
+      link: "/works/2008-11-27-live-the-last-drops/"
     - label: "Format"
       value: "Single"
     - label: "Tags"

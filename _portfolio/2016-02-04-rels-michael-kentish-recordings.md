@@ -21,7 +21,7 @@ metadata:
       value: "Studio recordings - violin compositions"
     - label: "Related Work"
       value: "Michael Kentish feat. J3ZZ (live performance)"
-      link: "/works/2016-02-04-michael-kentish-live/"
+      link: "/works/2016-02-04-live-michael-kentish-live/"
 
 sections:
   - type: description

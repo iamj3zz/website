@@ -1,9 +1,11 @@
 # CLAUDE.md
 MY INSTRUCTIONS :
+- never alter the git commit nor push nor any kind of git command.
 - never alter the git yourself.
 - never rm any file yourself.
 - never build nor serve jekyll yourself.
 - never execute the test script yourself.
+- never mention claude in git comments nor files.
 
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.

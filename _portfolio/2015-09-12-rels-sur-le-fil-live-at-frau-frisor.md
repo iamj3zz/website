@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 layout: work
 title: "SUR LE FIL (Live at Frau Frisor)"
 work_id: sur-le-fil-live-frau-frisor

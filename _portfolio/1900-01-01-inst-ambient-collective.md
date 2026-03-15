@@ -6,7 +6,7 @@ work_id: ambient-collective
 abstract: "A collaborative album featuring five international artists, blending ambient soundscapes with experimental electronic textures in a cohesive sonic journey."
 description: |
   A collaborative album featuring five international artists, blending ambient soundscapes with experimental electronic textures in a cohesive sonic journey.
-category: commissions
+category: installations
 image: /assets/works/1900-01-01-ambient-collective/thumbnail.jpg
 
 # Define metadata once here

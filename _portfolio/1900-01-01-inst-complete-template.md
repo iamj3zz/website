@@ -1,13 +1,12 @@
 ---
-published: true 
+published: false 
 layout: work
 title: Complete Template Reference
 work_id: complete-template-reference
 abstract: "A comprehensive template work demonstrating all possible metadata fields, links, and section modules available in the portfolio system for easy reference and replication."
 description: |
   This is the ultimate reference template demonstrating every feature of the portfolio system. It showcases all available metadata fields (temporal, industry identifiers, location, production, roles, collaborators, and custom fields), all 10 section module types (hero-image, text, image-grid, metadata, quote, spacer, linked-events, iframe, split layouts, and description), and best practices for organizing complex works. Use this as a reference when creating new portfolio works to understand all available options and their proper formatting.
-categories: [installations, releases, live-acts, commissions]
-primary_category: installations
+category: installations
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # CENTRALIZED METADATA - Define once, use everywhere

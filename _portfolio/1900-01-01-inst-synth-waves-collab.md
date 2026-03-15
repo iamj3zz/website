@@ -6,8 +6,7 @@ work_id: synth-waves-collab
 abstract: "A collaborative electronic music project exploring the intersection of analog synthesis and digital processing with sound designer Alex Rivers."
 description: |
   A collaborative electronic music project exploring the intersection of analog synthesis and digital processing with sound designer Alex Rivers.
-categories: [commissions, releases]
-primary_category: commissions
+category: installations
 image: /assets/works/1900-01-01-synth-waves-collab/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below

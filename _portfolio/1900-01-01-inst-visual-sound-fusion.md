@@ -6,8 +6,7 @@ work_id: visual-sound-fusion
 abstract: "An audiovisual collaboration with Maya Chen, merging live performance with generative visuals to create immersive multisensory experiences."
 description: |
   An audiovisual collaboration with Maya Chen, merging live performance with generative visuals to create immersive multisensory experiences.
-categories: [commissions, installations, live-acts]
-primary_category: commissions
+category: installations
 image: /assets/works/1900-01-01-visual-sound-fusion/thumbnail.jpg
 
 # Define metadata once here

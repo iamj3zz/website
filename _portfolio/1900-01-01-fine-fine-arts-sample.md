@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: work
 title: Fine Arts Sample
 work_id: fine-arts-sample

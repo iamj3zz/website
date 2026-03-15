@@ -6,8 +6,7 @@ work_id: duis-aute-irure
 abstract: "A collaborative split release with electronic producer Alex Kim, juxtaposing digital glitch aesthetics with warm analog tape textures."
 description: |
   A collaborative split release with electronic producer Alex Kim, juxtaposing digital glitch aesthetics with warm analog tape textures.
-categories: [commissions, releases]
-primary_category: commissions
+category: installations
 image: /assets/works/1900-01-01-duis-aute-irure/thumbnail.jpg
 
 # Define metadata once here

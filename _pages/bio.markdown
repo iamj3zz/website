@@ -90,11 +90,11 @@ links:
         <div class="bio-item"><span class="bio-year">2011</span> Fabbrica Europa — Florence, Italy</div>
         <div class="bio-item"><span class="bio-year">2011</span> Hanna Hanna — Komárom, Hungary</div>
         <div class="bio-item"><span class="bio-year">2011</span> Sofa — Berlin, Germany</div>
-        <div class="bio-item"><span class="bio-year">2013–2017</span> <a href="/works/2013-09-12-sur-le-fil/">Sur le fil — solo violin improvisation show (5 performances: Florence, Budapest, Singapore)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-12-11-ebb-flow-debris/">ebb flow + debris (6 humans) — Monofog + group, Müszi Budapest (violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-10-15-miss-god/">Miss God &amp; J3ZZ — Szimpla Kert, Budapest (violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-modeo/">Modeo — Trafó ELECTRIFY Vol. 7 &amp; Nagyvásártelep, Budapest (violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-massolit-series/">Massolit Series — Massolit Books &amp; Café, Budapest — 7-concert improvisation series (violinist, founder)</a></div>
+        <div class="bio-item"><span class="bio-year">2013–2017</span> <a href="/works/2013-09-12-live-sur-le-fil/">Sur le fil — solo violin improvisation show (5 performances: Florence, Budapest, Singapore)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-12-11-live-ebb-flow-debris/">ebb flow + debris (6 humans) — Monofog + group, Müszi Budapest (violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-10-15-live-miss-god/">Miss God &amp; J3ZZ — Szimpla Kert, Budapest (violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">Modeo — Trafó ELECTRIFY Vol. 7 &amp; Nagyvásártelep, Budapest (violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">Massolit Series — Massolit Books &amp; Café, Budapest — 7-concert improvisation series (violinist, founder)</a></div>
         <div class="bio-item"><span class="bio-year">2013–2017</span> Buddha Bar Budapest — Resident live musician (violinist), Budapest, Hungary</div>
         <div class="bio-item"><span class="bio-year">2011–2020</span> J3ZZ — Pluridisciplinary performances (musician, composer)</div>
         <div class="bio-item"><span class="bio-year">2011–2020</span> Hybris — Pluridisciplinary performances (musician, composer)</div>
@@ -108,7 +108,7 @@ links:
         <div class="bio-item"><span class="bio-year">2011</span> Eutropia — ROOTS &amp; ROUTES — 9-country European tour (violinist, composer, coach)</div>
         <div class="bio-item"><span class="bio-year">2011</span> Summer Suite (performer)</div>
         <div class="bio-item"><span class="bio-year">2009–2011</span> Reality in Disguise — ROOTS &amp; ROUTES Art'n'Go — Remscheid &amp; Heek, Germany; Florence, Italy; Budapest, Hungary (violinist, composer, co-creator)</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-talking-hearts/">Talking heArts — ROOTS &amp; ROUTES — Florence, Budapest, Bucharest (artistic director, violinist, improvisation coach)</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">Talking heArts — ROOTS &amp; ROUTES — Florence, Budapest, Bucharest (artistic director, violinist, improvisation coach)</a></div>
         <div class="bio-item"><span class="bio-year">2019</span> Mellettük — Grecsó Krisztián &amp; Grecsó Zoltán (performer)</div>
         <div class="bio-item"><span class="bio-year">2019</span> ART-RAVALÓ — Szubjektív Értékek Alapítvány — social art project (musician, coach)</div>                
       </div>
@@ -127,61 +127,61 @@ links:
     <div class="bio-category">
       <h2>Film &amp; Audiovisual</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-03-medicontur-educational-film/">Medicontur educational film (composer, producer, sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-highlights-of-hungary/">Highlights of Hungary (composer, producer, sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2019–2020</span> <a href="/works/2018-01-01-uncensored/">Uncensored — Caviar &amp; Bull (composer, sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-02-abbott-harmony-fragile-life/">Abbott "Harmony" &amp; "a Fragile Life" — Business Influencer Campaign (performer)</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2016-01-01-petra/">Petra — Dr. Philip Lewis, feature film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-grantraeet/">Grantræet — Amalie Halsey, short film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-building-up-creativity/">Building up Creativity — Judit Pétervári, dance short (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-02-home-base-trailers/">Home Base 01 / 02 / 03 trailers — Noémi Kulcsár (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-03-flying-istanbul-trailer/">Flying Istanbul trailer — Olga Pavlenko (sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-travel-buddy/">Travel Buddy — Declan Hannigan, short film (composer, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-02-what-happens-trailer/">What happens when you touch it trailer — EnKnapGroup (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2013–2020</span> <a href="/works/2013-01-01-flying-istanbul/">Flying Istanbul — Olga Pavlenko, animation short (composer, sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-02-children-tell-istanbul/">Children tell Istanbul — Olga Pavlenko, documentary (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-01-1000-and-1-realities/">1000 and 1 Realities — Olga Pavlenko, jingle (sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-best-friends-wifes-lover/">Best Friend's Wife's Lover — Declan Hannigan, short film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-far-point/">Far Point — Lorenzo Ciacciavicca, short film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-to-be-told/">To be told — Lorenzo Ciacciavicca, documentary (composer, performer, producer, sound designer, sound editor)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-02-urban-media-festival-trailers/">Urban Media Festival — opening and closing trailers (composer, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-ouverture/">Ouverture — Lorenzo Ciacciavicca, short film (composer, performer)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-fission/">Fission — Ana Maria Staicu &amp; Paris Tume, dance video (composer, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-ricordi-di-cosa-profuma-la-terra/">Ricordi di cosa profuma la terra — Olga Pavlenko, animation short (composer, performer)</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-03-film-medicontur-educational-film/">Medicontur educational film (composer, producer, sound designer)</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-film-highlights-of-hungary/">Highlights of Hungary (composer, producer, sound designer)</a></div>
+        <div class="bio-item"><span class="bio-year">2019–2020</span> <a href="/works/2018-01-01-inst-uncensored/">Uncensored — Caviar &amp; Bull (composer, sound designer)</a></div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-02-film-abbott-harmony-fragile-life/">Abbott "Harmony" &amp; "a Fragile Life" — Business Influencer Campaign (performer)</a></div>
+        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2016-01-01-film-petra/">Petra — Dr. Philip Lewis, feature film (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-grantraeet/">Grantræet — Amalie Halsey, short film (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-building-up-creativity/">Building up Creativity — Judit Pétervári, dance short (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-02-film-home-base-trailers/">Home Base 01 / 02 / 03 trailers — Noémi Kulcsár (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-03-film-flying-istanbul-trailer/">Flying Istanbul trailer — Olga Pavlenko (sound designer)</a></div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-film-travel-buddy/">Travel Buddy — Declan Hannigan, short film (composer, producer)</a></div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-02-film-what-happens-trailer/">What happens when you touch it trailer — EnKnapGroup (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2013–2020</span> <a href="/works/2013-01-01-film-flying-istanbul/">Flying Istanbul — Olga Pavlenko, animation short (composer, sound designer)</a></div>
+        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-02-film-children-tell-istanbul/">Children tell Istanbul — Olga Pavlenko, documentary (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-01-film-1000-and-1-realities/">1000 and 1 Realities — Olga Pavlenko, jingle (sound designer)</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-best-friends-wifes-lover/">Best Friend's Wife's Lover — Declan Hannigan, short film (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-far-point/">Far Point — Lorenzo Ciacciavicca, short film (composer)</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">To be told — Lorenzo Ciacciavicca, documentary (composer, performer, producer, sound designer, sound editor)</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-02-film-urban-media-festival-trailers/">Urban Media Festival — opening and closing trailers (composer, producer)</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-film-ouverture/">Ouverture — Lorenzo Ciacciavicca, short film (composer, performer)</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-film-fission/">Fission — Ana Maria Staicu &amp; Paris Tume, dance video (composer, producer)</a></div>
+        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-film-ricordi-di-cosa-profuma-la-terra/">Ricordi di cosa profuma la terra — Olga Pavlenko, animation short (composer, performer)</a></div>
       </div>
     </div>
 
     <div class="bio-category">
       <h2>Releases</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-01-ex-nihilo-3/">Ex Nihilo 3 — single</a></div>
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-02-ex-nihilo-2/">Ex Nihilo 2 — single</a></div>
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-03-ex-nihilo-1/">Ex Nihilo 1 — single</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-stereo-woods/">Stereo Woods — single</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-02-a-drop-in-the-ocean/">A Drop in the Ocean — album</a></div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-suprema-original-soundtrack/">SUPREMA (Original Soundtrack) — album</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-indigo-theory/">Rainy Day — Indigo Theory — single (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-all-the-promises/">All the Promises — Michael Kentish — album (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-new-beginnings/">New Beginnings — Michael Kentish — album (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-02-so-proud-of-you/">So Proud of You — Jordi Abel — single (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-promised-myself-acoustic/">Promised myself (Acoustic) — MC KiKo — single (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-polish-graffiti/">Polish Graffiti — Morzsa Records — album (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-01-rels-ex-nihilo-3/">Ex Nihilo 3 — single</a></div>
+        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-02-rels-ex-nihilo-2/">Ex Nihilo 2 — single</a></div>
+        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-03-rels-ex-nihilo-1/">Ex Nihilo 1 — single</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-rels-stereo-woods/">Stereo Woods — single</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-02-rels-a-drop-in-the-ocean/">A Drop in the Ocean — album</a></div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-rels-suprema-original-soundtrack/">SUPREMA (Original Soundtrack) — album</a></div>
+        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-rels-indigo-theory/">Rainy Day — Indigo Theory — single (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-rels-all-the-promises/">All the Promises — Michael Kentish — album (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-rels-new-beginnings/">New Beginnings — Michael Kentish — album (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-02-rels-so-proud-of-you/">So Proud of You — Jordi Abel — single (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-rels-promised-myself-acoustic/">Promised myself (Acoustic) — MC KiKo — single (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-rels-polish-graffiti/">Polish Graffiti — Morzsa Records — album (violin)</a></div>
       </div>
     </div>
 
     <div class="bio-category">
       <h2>Residencies</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2025-01-01-citta-della-pieve-residency/">Citta Della Pieve, Italy</a></div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-02-kerveguen-residency/">Kerveguen, Saint-Pierre, Réunion</a></div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-cite-des-arts-residency/">Cité des arts, Saint-Denis, Réunion</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-23-outbreakers-lab-residency/">Outbreakers' Lab — Zsennye, Hungary (Aug 23–25)</a></div>
-        <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-music-maker-2/">Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-park-in-progress/">Park in Progress — Nicosia, Cyprus</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-talking-hearts/">Talking heArts — Florence, Budapest, Bucharest (artistic director, violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-to-be-told/">To be told — Grundtvig Workshop, Florence (residency participant + documentary sound)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-eutropia/">Eutropia — Cologne, Germany / Florence, Italy</a></div>
-        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-01-01-reality-in-disguise/">Reality in Disguise — Remscheid Academy &amp; Heek, Germany</a></div>
+        <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2025-01-01-resi-citta-della-pieve-residency/">Citta Della Pieve, Italy</a></div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-02-resi-kerveguen-residency/">Kerveguen, Saint-Pierre, Réunion</a></div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-resi-cite-des-arts-residency/">Cité des arts, Saint-Denis, Réunion</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-23-resi-outbreakers-lab-residency/">Outbreakers' Lab — Zsennye, Hungary (Aug 23–25)</a></div>
+        <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-resi-music-maker-2/">Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</a></div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">Park in Progress — Nicosia, Cyprus</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">Talking heArts — Florence, Budapest, Bucharest (artistic director, violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">To be told — Grundtvig Workshop, Florence (residency participant + documentary sound)</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-live-eutropia/">Eutropia — Cologne, Germany / Florence, Italy</a></div>
+        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">Reality in Disguise — Remscheid Academy &amp; Heek, Germany</a></div>
       </div>
     </div>
 

@@ -22,7 +22,7 @@ metadata:
       value: "Original Soundtrack"
     - label: "Performance"
       value: "SUPREMA — Tímea Sebestyén"
-      link: "/works/2019-01-01-suprema/"
+      link: "/works/2019-01-01-perf-suprema/"
     - label: "Venue"
       value: "MU Theatre, Budapest, Hungary"
     - label: "Tags"
