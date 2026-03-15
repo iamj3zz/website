@@ -92,89 +92,87 @@ links:
         <div class="bio-item"><span class="bio-year">2011</span> Fabbrica Europa — Florence, Italy</div>
         <div class="bio-item"><span class="bio-year">2011</span> Hanna Hanna — Komárom, Hungary</div>
         <div class="bio-item"><span class="bio-year">2011</span> Sofa — Berlin, Germany</div>
-        <div class="bio-item"><span class="bio-year">2013–2017</span> <a href="/works/2013-09-12-live-sur-le-fil/">Sur le fil — solo violin improvisation show (5 performances: Florence, Budapest, Singapore)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-12-11-live-ebb-flow-debris/">ebb flow + debris (6 humans) — Monofog + group, Müszi Budapest (violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-10-15-live-miss-god/">Miss God &amp; J3ZZ — Szimpla Kert, Budapest (violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">Modeo — Trafó ELECTRIFY Vol. 7 &amp; Nagyvásártelep, Budapest (violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">Massolit Series — Massolit Books &amp; Café, Budapest — 7-concert improvisation series (violinist, founder)</a></div>
-        <div class="bio-item"><span class="bio-year">2013–2017</span> Buddha Bar Budapest — Resident live musician (violinist), Budapest, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2011–2020</span> J3ZZ — Pluridisciplinary performances (musician, composer)</div>
-        <div class="bio-item"><span class="bio-year">2011–2020</span> Hybris — Pluridisciplinary performances (musician, composer)</div>
-        <div class="bio-item"><span class="bio-year">2010–2011</span> Morzsa Records — Live performer</div>
-        <div class="bio-item"><span class="bio-year">2012–2013</span> Azalai — Itinerant cultural laboratory; violinist and core ensemble member — with Aly Keita (Mali), Kandia Kora (Guinea), Moh! Kouyaté (Guinea), Minyeshu (Ethiopia), Hilaire Penda (Cameroon), Dimitri Grechi Espinoza (Italy), Ebou Gaye Mada (Gambia), Istvan Cik (Serbia), Károly Féher (Hungary)</div>
-        <div class="bio-item"><span class="bio-year">2010–2012</span> Iparkutya — Balkan free jazz ensemble — violinist</div>
-        <div class="bio-item"><span class="bio-year">2009–2020</span> Willany Léo — Improvisative Dance Theatre (dir. Zoltán Grecsó) — improvisation musician</div>
-        <div class="bio-item"><span class="bio-year">2008+</span> Tartit, Tadalat — Tuareg/Tamachek music — collaborative musician</div>
-        <div class="bio-item"><span class="bio-year">2008+</span> Samba Touré — Songhai blues (Mali) — collaborative musician</div>
-        <div class="bio-item"><span class="bio-year">2008–2010</span> The Last Drops — violinist, mandolinist</div>    
-        <div class="bio-item"><span class="bio-year">2011</span> Eutropia — ROOTS &amp; ROUTES — 9-country European tour (violinist, composer, coach)</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Summer Suite (performer)</div>
-        <div class="bio-item"><span class="bio-year">2009–2011</span> Reality in Disguise — ROOTS &amp; ROUTES Art'n'Go — Remscheid &amp; Heek, Germany; Florence, Italy; Budapest, Hungary (violinist, composer, co-creator)</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">Talking heArts — ROOTS &amp; ROUTES — Florence, Budapest, Bucharest (artistic director, violinist, improvisation coach)</a></div>
-        <div class="bio-item"><span class="bio-year">2019</span> Mellettük — Grecsó Krisztián &amp; Grecsó Zoltán (performer)</div>
-        <div class="bio-item"><span class="bio-year">2019</span> ART-RAVALÓ — Szubjektív Értékek Alapítvány — social art project (musician, coach)</div>                
+        <div class="bio-item"><span class="bio-year">2013–2017</span> <a href="/works/2013-09-12-live-sur-le-fil/">Sur le fil — solo violin improvisation (Florence, Budapest, Singapore)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-12-11-live-ebb-flow-debris/">ebb flow + debris — Monofog + group, Müszi Budapest</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-10-15-live-miss-god/">Miss God &amp; J3ZZ — Szimpla Kert, Budapest</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">Modeo — Trafó ELECTRIFY &amp; Nagyvásártelep, Budapest</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">Massolit Series — 7-concert series, Budapest</a></div>
+        <div class="bio-item"><span class="bio-year">2013–2017</span> Buddha Bar Budapest — resident musician</div>
+        <div class="bio-item"><span class="bio-year">2011–2020</span> J3ZZ — pluridisciplinary performances</div>
+        <div class="bio-item"><span class="bio-year">2011–2020</span> Hybris — pluridisciplinary performances</div>
+        <div class="bio-item"><span class="bio-year">2010–2011</span> Morzsa Records — live performer</div>
+        <div class="bio-item"><span class="bio-year">2012–2013</span> Azalai — itinerant cultural laboratory, core ensemble member</div>
+        <div class="bio-item"><span class="bio-year">2010–2012</span> Iparkutya — Balkan free jazz ensemble</div>
+        <div class="bio-item"><span class="bio-year">2009–2020</span> Willany Léo — Improvisative Dance Theatre</div>
+        <div class="bio-item"><span class="bio-year">2008+</span> Tartit, Tadalat — Tuareg/Tamachek music</div>
+        <div class="bio-item"><span class="bio-year">2008+</span> Samba Touré — Songhai blues, Mali</div>
+        <div class="bio-item"><span class="bio-year">2008–2010</span> The Last Drops</div>
+        <div class="bio-item"><span class="bio-year">2011</span> Eutropia — ROOTS &amp; ROUTES — 9-country European tour</div>
+        <div class="bio-item"><span class="bio-year">2011</span> Summer Suite</div>
+        <div class="bio-item"><span class="bio-year">2009–2011</span> Reality in Disguise — ROOTS &amp; ROUTES, Germany / Italy / Hungary</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">Talking heArts — ROOTS &amp; ROUTES — Florence, Budapest, Bucharest</a></div>
+        <div class="bio-item"><span class="bio-year">2019</span> Mellettük — Grecsó Krisztián &amp; Grecsó Zoltán</div>
+        <div class="bio-item"><span class="bio-year">2019</span> ART-RAVALÓ — social art project</div>                
       </div>
     </div>
 
     <div class="bio-category" id="bio-dance-theatre">
-      <h2>Dance &amp; Theatre</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2019</span> SUPREMA — Tímea Sebestyén — MU Theatre, Budapest, Hungary (composer, performer) (May 3)</div>
-        <div class="bio-item"><span class="bio-year">2016</span> Home Base — Noémi Kulcsár — Budapest, Hungary (composer, sound designer)</div>
-        <div class="bio-item"><span class="bio-year">2014</span> What happens when you touch it — EnKnapGroup — Ljubljana, Slovenia (composer, performer)</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Touch me not — Zoltán Grecsó — Budapest, Hungary / Zagreb, Croatia (composer)</div>
+        <div class="bio-item"><span class="bio-year">2019</span> SUPREMA — MU Theatre, Budapest (May 3)</div>
+        <div class="bio-item"><span class="bio-year">2016</span> Home Base — Budapest</div>
+        <div class="bio-item"><span class="bio-year">2014</span> What happens when you touch it — EnKnapGroup, Ljubljana</div>
+        <div class="bio-item"><span class="bio-year">2011</span> Touch me not — Budapest / Zagreb</div>
       </div>
     </div>
 
     <div class="bio-category" id="bio-film">
-      <h2>Film &amp; Audiovisual</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-03-film-medicontur-educational-film/">Medicontur educational film (composer, producer, sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-film-highlights-of-hungary/">Highlights of Hungary (composer, producer, sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2019–2020</span> <a href="/works/2018-01-01-inst-uncensored/">Uncensored — Caviar &amp; Bull (composer, sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-02-film-abbott-harmony-fragile-life/">Abbott "Harmony" &amp; "a Fragile Life" — Business Influencer Campaign (performer)</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2016-01-01-film-petra/">Petra — Dr. Philip Lewis, feature film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-grantraeet/">Grantræet — Amalie Halsey, short film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-building-up-creativity/">Building up Creativity — Judit Pétervári, dance short (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-02-film-home-base-trailers/">Home Base 01 / 02 / 03 trailers — Noémi Kulcsár (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-03-film-flying-istanbul-trailer/">Flying Istanbul trailer — Olga Pavlenko (sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-film-travel-buddy/">Travel Buddy — Declan Hannigan, short film (composer, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-02-film-what-happens-trailer/">What happens when you touch it trailer — EnKnapGroup (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2013–2020</span> <a href="/works/2013-01-01-film-flying-istanbul/">Flying Istanbul — Olga Pavlenko, animation short (composer, sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-02-film-children-tell-istanbul/">Children tell Istanbul — Olga Pavlenko, documentary (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-01-film-1000-and-1-realities/">1000 and 1 Realities — Olga Pavlenko, jingle (sound designer)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-best-friends-wifes-lover/">Best Friend's Wife's Lover — Declan Hannigan, short film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-far-point/">Far Point — Lorenzo Ciacciavicca, short film (composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">To be told — Lorenzo Ciacciavicca, documentary (composer, performer, producer, sound designer, sound editor)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-02-film-urban-media-festival-trailers/">Urban Media Festival — opening and closing trailers (composer, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-film-ouverture/">Ouverture — Lorenzo Ciacciavicca, short film (composer, performer)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-film-fission/">Fission — Ana Maria Staicu &amp; Paris Tume, dance video (composer, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-film-ricordi-di-cosa-profuma-la-terra/">Ricordi di cosa profuma la terra — Olga Pavlenko, animation short (composer, performer)</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-03-film-medicontur-educational-film/">Medicontur</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-film-highlights-of-hungary/">Highlights of Hungary</a></div>
+        <div class="bio-item"><span class="bio-year">2019–2020</span> <a href="/works/2018-01-01-inst-uncensored/">Uncensored</a></div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-02-film-abbott-harmony-fragile-life/">Abbott "Harmony" &amp; "a Fragile Life" (performer)</a></div>
+        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2016-01-01-film-petra/">Petra</a></div>
+        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-grantraeet/">Grantræet</a></div>
+        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-building-up-creativity/">Building up Creativity</a></div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-02-film-home-base-trailers/">Home Base 01 / 02 / 03</a></div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-03-film-flying-istanbul-trailer/">Flying Istanbul</a></div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-film-travel-buddy/">Travel Buddy</a></div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-02-film-what-happens-trailer/">What happens when you touch it</a></div>
+        <div class="bio-item"><span class="bio-year">2013–2020</span> <a href="/works/2013-01-01-film-flying-istanbul/">Flying Istanbul</a></div>
+        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-02-film-children-tell-istanbul/">Children tell Istanbul</a></div>
+        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-01-film-1000-and-1-realities/">1000 and 1 Realities</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-best-friends-wifes-lover/">Best Friend's Wife's Lover</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-far-point/">Far Point</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">To be told</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-02-film-urban-media-festival-trailers/">Urban Media Festival</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-film-ouverture/">Ouverture</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-film-fission/">Fission</a></div>
+        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-film-ricordi-di-cosa-profuma-la-terra/">Ricordi di cosa profuma la terra</a></div>
       </div>
     </div>
 
     <div class="bio-category" id="bio-releases">
       <h2>Releases</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-01-rels-ex-nihilo-3/">Ex Nihilo 3 — single</a></div>
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-02-rels-ex-nihilo-2/">Ex Nihilo 2 — single</a></div>
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-03-rels-ex-nihilo-1/">Ex Nihilo 1 — single</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-rels-stereo-woods/">Stereo Woods — single</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-02-rels-a-drop-in-the-ocean/">A Drop in the Ocean — album</a></div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-rels-suprema-original-soundtrack/">SUPREMA (Original Soundtrack) — album</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-rels-indigo-theory/">Rainy Day — Indigo Theory — single (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-rels-all-the-promises/">All the Promises — Michael Kentish — album (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-04-rels-michael-kentish-recordings/">Michael Kentish (Recordings) — studio recordings (violinist, composer)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-rels-new-beginnings/">New Beginnings — Michael Kentish — album (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-02-rels-so-proud-of-you/">So Proud of You — Jordi Abel — single (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-rels-n7n8-festival-live/">N7N8 Festival (Live) — improvised duet with Áron Porteleki (violinist, performer)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-rels-massolit-series-live/">MASSOLIT SERIES (Live) — seven improvisation sessions (violinist, founder, performer)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-fkse/">SUR LE FIL (Live at FKSE) — solo violin improvisation (violinist, performer, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor) — solo violin improvisation (violinist, performer, producer)</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-rels-promised-myself-acoustic/">Promised myself (Acoustic) — MC KiKo — single (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-rels-polish-graffiti/">Polish Graffiti — Morzsa Records — album (violin)</a></div>
-        <div class="bio-item"><span class="bio-year">2009</span> <a href="/works/2009-01-01-rels-harry-power/">Harry Power — The Last Drops — single (violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2009</span> <a href="/works/2009-01-01-rels-the-last-drops-tram/">The Last Drops — Gin &amp; Juice / Wagon Wheel (covers) — video clip (violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-01-rels-ex-nihilo-3/">Ex Nihilo 3</a></div>
+        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-02-rels-ex-nihilo-2/">Ex Nihilo 2</a></div>
+        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-03-rels-ex-nihilo-1/">Ex Nihilo 1</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-rels-stereo-woods/">Stereo Woods</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-02-rels-a-drop-in-the-ocean/">A Drop in the Ocean</a></div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-rels-suprema-original-soundtrack/">SUPREMA (Original Soundtrack)</a></div>
+        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-rels-indigo-theory/">Rainy Day — Indigo Theory</a></div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-rels-all-the-promises/">All the Promises — Michael Kentish</a></div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-04-rels-michael-kentish-recordings/">Michael Kentish (Recordings)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-rels-new-beginnings/">New Beginnings — Michael Kentish</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-02-rels-so-proud-of-you/">So Proud of You — Jordi Abel</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-rels-n7n8-festival-live/">N7N8 Festival (Live) — improvised duet with Áron Porteleki</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-rels-massolit-series-live/">MASSOLIT SERIES (Live) — seven improvisation sessions</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-fkse/">SUR LE FIL (Live at FKSE)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor)</a></div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-rels-promised-myself-acoustic/">Promised myself (Acoustic) — MC KiKo</a></div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-rels-polish-graffiti/">Polish Graffiti — Morzsa Records</a></div>
+        <div class="bio-item"><span class="bio-year">2009</span> <a href="/works/2009-01-01-rels-harry-power/">Harry Power — The Last Drops</a></div>
+        <div class="bio-item"><span class="bio-year">2009</span> <a href="/works/2009-01-01-rels-the-last-drops-tram/">The Last Drops — Gin &amp; Juice / Wagon Wheel (covers)</a></div>
       </div>
     </div>
 

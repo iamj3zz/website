@@ -24,7 +24,7 @@
     toggle.setAttribute('aria-label', 'Navigate to year');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'year-nav-panel');
-    toggle.textContent = 'YEARS';
+    toggle.textContent = 'YEAR';
 
     // Create navigation panel
     const panel = document.createElement('nav');

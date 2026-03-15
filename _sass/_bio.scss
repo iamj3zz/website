@@ -60,7 +60,7 @@
 
 /* Bio Lists Section */
 .bio-lists {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -81,6 +81,16 @@
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 2px solid #333;
+}
+
+.bio-section-subtitle {
+  display: block;
+  font-size: 13px;
+  font-weight: normal;
+  text-transform: none;
+  letter-spacing: normal;
+  color: #595959;
+  margin-top: 8px;
 }
 
 .bio-items {
@@ -160,6 +170,19 @@
   }
 }
 
+@media (max-width: 400px) {
+  .bio-item {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .bio-year {
+    width: auto;
+    font-size: 11px;
+    color: #767676;
+  }
+}
+
 /* Bio Link Wrapper - for vertical layout in print */
 .bio-link-wrapper {
   display: contents; /* On screen, wrapper is transparent */
@@ -176,7 +199,7 @@
   bottom: var(--spacing-xl, 20px);
   left: var(--spacing-xl, 20px);
   z-index: var(--z-index-sticky, 50);
-  width: 40px;
+  width: 60px;
   height: 40px;
   border-radius: var(--border-radius, 20px);
   background: var(--color-background, #fff);

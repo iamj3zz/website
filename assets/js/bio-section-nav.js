@@ -31,7 +31,7 @@
     toggle.setAttribute('aria-label', 'Navigate to section');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'bio-nav-panel');
-    toggle.textContent = 'SECTIONS';
+    toggle.textContent = 'SECTION';
 
     // Create navigation panel
     const panel = document.createElement('nav');
