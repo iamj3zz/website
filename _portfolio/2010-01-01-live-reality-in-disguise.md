@@ -68,5 +68,7 @@ sections:
       - [Performance photos](https://www.flickr.com/photos/143298828@N02/) – ROOTS & ROUTES Initiative Flickr archive (394 photos)
       - [Director's biography](https://ap-arts.be/en/person/max-greyson) – Max Greyson at Royal Conservatoire Antwerp
 
+  - type: linked-events
+
   - type: metadata
 ---

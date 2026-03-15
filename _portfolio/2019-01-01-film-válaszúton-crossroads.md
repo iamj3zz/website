@@ -26,5 +26,7 @@ metadata:
       value: "2020 Bujtor István Film Festival; 2020 Ars Sacra Film Festival (Best Short Film)"
 
 sections:
-  # TODO: Add sections here
+  - type: description
+  - type: linked-events
+  - type: metadata
 ---

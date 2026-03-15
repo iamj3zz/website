@@ -7,6 +7,8 @@ abstract: |
   The composer was commissioned to create music for choreographer Tímea Sebestyén's contemporary dance work.
 description: |
   The composer was commissioned to create music for choreographer Tímea Sebestyén's contemporary dance work. The soundtrack comprises several compositions including a series titled "Tape," referencing machinery invented by Dr. William Moulton Marston, creator of Wonder Woman. The composer incorporated "sound references to the different mechanical parts" and piano hammer sounds representing the character's voice. Additional tracks included "Nutter," addressing "a lost mind leaning towards schizophrenia," and a remixed version of "False Truths" for the performance climax. The performance examines Wonder Woman as "a female ideal created by dr. William Moulton Marston," exploring her character through a female perspective. It investigates "layers of our personality through our desires, sexuality, and fears," questioning concepts of female power and identity.
+
+  The work has been produced by multiple companies: the original 2019 premiere at MU Theatre Budapest under Tímea Sebestyén's choreography, and a subsequent 2020 production by the Imre Zoltán Program at Latinovits-Bujtor Játékszín in Veszprém.
 category: performances
 commissioned: true
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
@@ -20,6 +22,8 @@ metadata:
   collaborators: "Tímea Sebestyén (choreography), J3ZZ (music composer), Mészáros Csaba (photography)"
   credits: "Choreography: Tímea Sebestyén. Music composer: J3ZZ. Photography: Mészáros Csaba"
   custom:
+    - label: "2020 Production"
+      value: "Imre Zoltán Program, Latinovits-Bujtor Játékszín, Veszprém (September 6, 2020)"
     - label: "Original Soundtrack"
       value: "SUPREMA (Original Soundtrack) — album release"
       link: "/works/2019-01-01-rels-suprema-original-soundtrack/"
@@ -35,5 +39,6 @@ metadata:
 
 sections:
   - type: description
+  - type: linked-events
   - type: metadata
 ---
