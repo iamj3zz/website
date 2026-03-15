@@ -11,9 +11,9 @@ commissioned: true
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2019-11-06"
-  location: "Esernyős - Óbudai Kulturális, Fő tér 2, Budapest, Hungary"
-  location_link: "https://goo.gl/maps/gD6QKUWczW9qhrkY6"
+  date: "2019"
+  based_in: "Esernyős - Óbudai Kulturális, Fő tér 2, Budapest, Hungary"
+  based_in_link: "https://goo.gl/maps/gD6QKUWczW9qhrkY6"
   role: "violinist (live performance)"
   commissioned_by: "Krisztián Grecsó, Zoltán Grecsó"
   collaborators: "Krisztián Grecsó (writing), Zoltán Grecsó (dance/choreography), Réka Fodor (vocals)"
@@ -25,7 +25,7 @@ metadata:
 
 sections:
   - type: description
-  - type: metadata
   - type: linked-events
     title: "Event"
+  - type: metadata
 ---

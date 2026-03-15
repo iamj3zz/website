@@ -13,7 +13,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2015-09-12"
-  location: "FKSE Studio Gallery, Budapest, Hungary"
+  based_in: "FKSE Studio Gallery, Budapest, Hungary"
   role: "violinist, performer, producer, mixer"
   credits: |
     Violin & mix: J3ZZ (J3ZZ)

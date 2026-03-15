@@ -11,10 +11,10 @@ commissioned: true
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2019-12-15"
+  date: "2019"
   date: "December 15, 2019 • 10:00–12:00"
-  location: "Lóvasút Kulturális és Rendezvényközpont, Zugligeti út 64, Budapest, Hungary"
-  location_link: "https://goo.gl/maps/gcrDVRa1qzMi6qzR6"
+  based_in: "Lóvasút Kulturális és Rendezvényközpont, Zugligeti út 64, Budapest, Hungary"
+  based_in_link: "https://goo.gl/maps/gcrDVRa1qzMi6qzR6"
   role: "composer, violinist"
   collaborators: "János Gerzson (flute, oud), Eszter Cseke-Marosi (animator), Kinga Petrilla (animator)"
   commissioned_by: "Lóvasút Kulturális és Rendezvényközpont"
@@ -29,7 +29,7 @@ metadata:
 
 sections:
   - type: description
-  - type: metadata
   - type: linked-events
     title: "Event & Details"
+  - type: metadata
 ---

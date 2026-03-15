@@ -59,8 +59,8 @@ sections:
 
       **Residency Participants included:** Marina Arienzale, Pamela Barberi, Simon Bradley, Sarah Bulang, Eleftherios Galanis, Greta Grendaite, Katalin Heiszer, Iveta Kudrjavceva, J3ZZ, Tonka Malekovic, Lucie Micikova, Mihaela Mihai, Süleyman Özar, Evangelia Papaloi, Olga Pavlenko, Kalin Serapionov, Ieva Studente, Mine Tapinç, Guy Woueté, Virginia Zanetti
 
-  - type: metadata
 
   - type: linked-events
     title: "Residency & Screenings"
+  - type: metadata
 ---

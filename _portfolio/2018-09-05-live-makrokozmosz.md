@@ -12,8 +12,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2018-09-05"
-  location: "Budapest, Hungary"
+  date: "2018"
+  based_in: "Budapest, Hungary"
   role: "musician, performer"
   collaborators: "DJ Panda, Makrokozmosz"
   custom:

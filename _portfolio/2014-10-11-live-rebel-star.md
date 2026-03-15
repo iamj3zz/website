@@ -12,8 +12,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2014-10-11"
-  location: "Belgrade, Serbia"
+  date: "2014"
+  based_in: "Belgrade, Serbia"
   role: "violinist (guest)"
   collaborators: "Rebel Star"
   custom:

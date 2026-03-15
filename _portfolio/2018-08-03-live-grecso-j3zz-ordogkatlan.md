@@ -12,8 +12,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2018-08-03"
-  location: "Beremend, Hungary"
+  date: "2018"
+  based_in: "Beremend, Hungary"
   role: "violinist, performer"
   collaborators: "Zoltán Grecsó (choreographer/director)"
   custom:

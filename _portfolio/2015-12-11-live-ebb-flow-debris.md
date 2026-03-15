@@ -17,8 +17,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2015-12-11"
-  location: "Művelődési Szint (Müszi), Budapest, Hungary"
+  date: "2015"
+  based_in: "Művelődési Szint (Müszi), Budapest, Hungary"
   role: "violinist"
   collaborators: "Monofog (David Sutherland — DIY instruments, Ilauszky Tamás — prepared bass) · Ferencz Krisztina (dance) · Gál Eszter (dance) · Nagy Zoltán (dance)"
   custom:
@@ -35,8 +35,8 @@ metadata:
 sections:
   - type: description
 
-  - type: metadata
 
   - type: linked-events
     title: "Performances"
+  - type: metadata
 ---

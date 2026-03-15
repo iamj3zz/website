@@ -75,6 +75,8 @@ links:
         <div class="bio-item"><span class="bio-year">2020</span> Racines &amp; Résonances – Under the stars — Lóvasút, Budapest, Hungary (Aug 13)</div>
         <div class="bio-item"><span class="bio-year">2020</span> Racines &amp; Résonances feat. Grecsó Zoltán &amp; Bujdosó Anna — Lóvasút, Budapest, Hungary (Feb 7)</div>
         <div class="bio-item"><span class="bio-year">2020</span> Volt Festival — Sopron, Hungary</div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-01-live-racines-et-resonances/">Racines &amp; Résonances</a> — La Lasagneria, Budapest, Hungary (Sep 25) — first public performance</div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-01-live-racines-et-resonances/">Racines &amp; Résonances</a> — Association of Hungarian Art Photographers, Budapest, Hungary (Sep 19) — premiere</div>
         <div class="bio-item"><span class="bio-year">2019</span> Szabi híd — Budapest, Hungary (×2)</div>
         <div class="bio-item"><span class="bio-year">2019</span> Bankito Festival — Hungary</div>
         <div class="bio-item"><span class="bio-year">2019</span> Zengeto Festival — Hungary</div>
@@ -104,7 +106,7 @@ links:
         <div class="bio-item"><span class="bio-year">2009–2020</span> Willany Léo — Improvisative Dance Theatre (dir. Zoltán Grecsó) — improvisation musician</div>
         <div class="bio-item"><span class="bio-year">2008+</span> Tartit, Tadalat — Tuareg/Tamachek music — collaborative musician</div>
         <div class="bio-item"><span class="bio-year">2008+</span> Samba Touré — Songhai blues (Mali) — collaborative musician</div>
-        <div class="bio-item"><span class="bio-year">2008–2010</span> The Last Drops — electronic musician</div>    
+        <div class="bio-item"><span class="bio-year">2008–2010</span> The Last Drops — violinist, mandolinist</div>    
         <div class="bio-item"><span class="bio-year">2011</span> Eutropia — ROOTS &amp; ROUTES — 9-country European tour (violinist, composer, coach)</div>
         <div class="bio-item"><span class="bio-year">2011</span> Summer Suite (performer)</div>
         <div class="bio-item"><span class="bio-year">2009–2011</span> Reality in Disguise — ROOTS &amp; ROUTES Art'n'Go — Remscheid &amp; Heek, Germany; Florence, Italy; Budapest, Hungary (violinist, composer, co-creator)</div>
@@ -162,10 +164,17 @@ links:
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-rels-suprema-original-soundtrack/">SUPREMA (Original Soundtrack) — album</a></div>
         <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-rels-indigo-theory/">Rainy Day — Indigo Theory — single (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-rels-all-the-promises/">All the Promises — Michael Kentish — album (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-04-rels-michael-kentish-recordings/">Michael Kentish (Recordings) — studio recordings (violinist, composer)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-rels-new-beginnings/">New Beginnings — Michael Kentish — album (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-02-rels-so-proud-of-you/">So Proud of You — Jordi Abel — single (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-rels-n7n8-festival-live/">N7N8 Festival (Live) — improvised duet with Áron Porteleki (violinist, performer)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-rels-massolit-series-live/">MASSOLIT SERIES (Live) — seven improvisation sessions (violinist, founder, performer)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-fkse/">SUR LE FIL (Live at FKSE) — solo violin improvisation (violinist, performer, producer)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor) — solo violin improvisation (violinist, performer, producer)</a></div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-rels-promised-myself-acoustic/">Promised myself (Acoustic) — MC KiKo — single (violin)</a></div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-rels-polish-graffiti/">Polish Graffiti — Morzsa Records — album (violin)</a></div>
+        <div class="bio-item"><span class="bio-year">2009</span> <a href="/works/2009-01-01-rels-harry-power/">Harry Power — The Last Drops — single (violinist)</a></div>
+        <div class="bio-item"><span class="bio-year">2009</span> <a href="/works/2009-01-01-rels-the-last-drops-tram/">The Last Drops — Gin &amp; Juice / Wagon Wheel (covers) — video clip (violinist)</a></div>
       </div>
     </div>
 

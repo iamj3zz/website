@@ -12,8 +12,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2011-04-03"
-  location: "Budapest, Hungary"
+  date: "2010–2012"
+  based_in: "Budapest, Hungary"
   role: "violinist"
   collaborators: "IparKutya"
   custom:

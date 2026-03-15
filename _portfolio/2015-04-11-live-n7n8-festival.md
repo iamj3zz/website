@@ -12,8 +12,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2015-04-11"
-  location: "Massolit Café, Budapest, Hungary"
+  date: "2015"
+  based_in: "Massolit Café, Budapest, Hungary"
   role: "violinist, performer"
   collaborators: "Áron Porteleki"
   custom:

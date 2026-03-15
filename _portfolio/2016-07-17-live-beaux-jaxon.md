@@ -12,8 +12,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2016-07-17"
-  location: "Budapest, Hungary"
+  date: "2016"
+  based_in: "Budapest, Hungary"
   role: "guest violinist"
   collaborators: "Beaux Jaxon"
   custom:

@@ -15,6 +15,8 @@
 {% assign iswc_link = page.metadata.iswc_link | default: include.iswc_link %}
 {% assign location = page.metadata.location | default: include.location %}
 {% assign location_link = page.metadata.location_link | default: include.location_link %}
+{% assign based_in = page.metadata.based_in | default: include.based_in %}
+{% assign based_in_link = page.metadata.based_in_link | default: include.based_in_link %}
 {% assign performed_in = page.metadata.performed_in | default: include.performed_in %}
 {% assign performed_in_link = page.metadata.performed_in_link | default: include.performed_in_link %}
 {% assign places = page.metadata.places | default: include.places %}
@@ -107,6 +109,14 @@
         <span class="metadata-label">Location</span>
         <span class="metadata-value">
           {% if location_link %}<a href="{{ location_link }}" target="_blank" rel="noopener noreferrer">{{ location }}</a>{% else %}{{ location }}{% endif %}
+        </span>
+      </div>
+    {% endif %}
+    {% if based_in %}
+      <div class="metadata-item">
+        <span class="metadata-label">Based in</span>
+        <span class="metadata-value">
+          {% if based_in_link %}<a href="{{ based_in_link }}" target="_blank" rel="noopener noreferrer">{{ based_in }}</a>{% else %}{{ based_in }}{% endif %}
         </span>
       </div>
     {% endif %}

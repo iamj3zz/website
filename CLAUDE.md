@@ -155,6 +155,32 @@ Configuration is in `lefthook.yml`.
 
 This project's documentation is organized into topic-specific files for better performance and maintainability:
 
+### 📋 [Content Coherence Framework](docs/CONTENT-COHERENCE.md)
+**⭐ UNDERSTANDING THE SITE** - How all content categorization works together.
+
+**Read this for:**
+- Three layers of organization (Portfolio Grid, Bio/CV, Events)
+- Portfolio category system (output format based)
+- Bio/CV professional identities and sections
+- How residencies work and connect to output works
+- Events calendar and linking
+- Decision trees for categorizing new content
+- Coherence rules and principles
+- Complete FAQ on categorization decisions
+
+### 📁 [File Organization & Data Structures](docs/FILE-ORGANIZATION-AND-DATA.md)
+**REFERENCE GUIDE** - Filenames, directory structure, and data formats.
+
+**Read this for:**
+- Filename conventions (portfolio, events, pages)
+- Category prefix mapping (inst-, live-, film-, etc.)
+- Front matter field reference and requirements
+- Data relationships and how files connect
+- Work ID system and linking
+- Directory structure overview
+- Example files and templates
+- Complete checklists for creating new content
+
 ### 🚀 [Development Workflow](docs/WORKFLOW.md)
 **⭐ START HERE** - Complete workflow from making changes to deployment.
 
@@ -466,6 +492,53 @@ All page files are located in the `_pages/` directory.
 **Events Page Note:** The events page includes a floating year navigation widget (bottom-left corner) that automatically appears after scrolling 300px. This widget allows users to quickly jump to any year with a single click. The widget is controlled by `assets/js/events-year-nav.js` and styled in `_sass/_events.scss`. Year anchors are automatically generated from the Liquid template.
 
 For detailed information, see [Architecture > Modifying Page Content](docs/architecture.md#modifying-page-content)
+
+### Bio/CV Structure & Professional Identities
+
+The bio page (`_pages/bio.markdown`) is organized to clearly showcase J3ZZ's **three distinct professional identities**, each designed to attract specific commission opportunities:
+
+**The Three Identities:**
+
+1. **New Media Artist** — Creates immersive, interactive spatial installations with sound, light, and sensor-driven responsiveness
+2. **Performer** — Violinist, electronic musician, laserist, video artist performing across multiple contexts
+3. **Composer & Producer** — Creates original compositions and produces music across all formats (film scores, soundtracks, releases, theatre, installations)
+
+**CV Section Organization (in order):**
+
+| Section | Purpose | Professional Identity |
+|---------|---------|----------------------|
+| **Installations & Exhibitions** | Flagship immersive/interactive works | New Media Artist |
+| **Composer & Producer** | All compositional/production work (films, releases, theatre, installations soundscapes) | Composer/Producer |
+| **Performer & Collaborations** | Ensemble memberships, live performances, featured appearances | Performer (Violinist/Electronic Musician/Laserist/Video Artist) |
+| **Residencies** | Artist-in-residence programs | All identities |
+| **Workshops** | Educational/cultural mediation | All identities |
+| **Teaching & Coaching** | Improvisation coaching | Performer/Educator |
+| **Cultural Management & Governance** | Leadership/administrative roles | All identities |
+| **Education & Certificates** | Training and credentials | All identities |
+
+**Key Coherence Principles:**
+
+1. **"Composer & Producer" is unified** — All compositional work lives here, regardless of output format (film, release, theatre, installation sound):
+   - Film & Audiovisual works (composer, sound designer roles)
+   - Releases (music production, original compositions)
+   - Theatre compositions (sound design, original work)
+   - Installation soundscapes and interactive audio
+
+2. **"Performer & Collaborations" shows all performance contexts** — Emphasizing the breadth of your performing practice:
+   - Ensemble memberships (The Last Drops, Willany Léo, Azalai, Iparkutya, etc.) — long-term collaborations
+   - Live performances & festivals — featured appearances, solo work
+   - One-off performances across different scales and contexts
+
+3. **"Installations & Exhibitions" stays prominent** — Your most ambitious new media work; appears first to establish the new media artist identity
+
+**When Adding New Work to the Bio:**
+
+- **Is it a composition or production work?** → Add to **Composer & Producer** section
+- **Is it a performance context (ensemble, festival, featured appearance)?** → Add to **Performer & Collaborations** section
+- **Is it an installation or immersive spatial work?** → Add to **Installations & Exhibitions** section
+- **Is it an artist residency?** → Add to **Residencies** section
+
+This structure ensures that each professional identity remains visually prominent and cohesive, making it clear to potential commissioners what you do and which identity to commission you for.
 
 ### Updating Site Configuration
 

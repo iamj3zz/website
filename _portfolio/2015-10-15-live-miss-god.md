@@ -14,8 +14,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2015-10-15"
-  location: "Szimpla Kert, Budapest, Hungary"
+  date: "2015"
+  based_in: "Szimpla Kert, Budapest, Hungary"
   role: "violinist"
   collaborators: "Miss God (vocals, electronics, composition) — Poland"
   custom:
@@ -44,8 +44,8 @@ sections:
     aspect_ratio: "16:9"
     caption: "Miss God & J3ZZ — Live at Szimpla Kert, Budapest, October 15, 2015"
 
-  - type: metadata
 
   - type: linked-events
     title: "Performances"
+  - type: metadata
 ---

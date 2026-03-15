@@ -10,5 +10,5 @@ venue_name: "Tram line 2"
 venue_address: "Tram line 2. From Jászai Mari tér stop to Fővám tér stop"
 venue_link: ""
 ticket_link: ""
-description: "The Last Drops' Tram Jam afternoon performance, before the evening show at Trapéz."
+description: "Americana band bringing bluegrass and originals aboard tram line 2 — an afternoon street performance before the evening show at Trapéz."
 ---

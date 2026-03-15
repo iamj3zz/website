@@ -14,8 +14,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2015-04-18"
-  location: "Budapest, Hungary"
+  date: "2015"
+  based_in: "Budapest, Hungary"
   role: "violinist"
   collaborators: "Modeo, Tankó Erika, Bios (visuals)"
   custom:
@@ -40,8 +40,8 @@ sections:
       | Apr 18, 2015 | Trafó House of Contemporary Arts, Budapest | Opening for Ben Frost (IS), Vessel (UK) — ELECTRIFY SERIES Vol. 7 |
       | Jun 12, 2015 | Nagyvásártelep, Budapest | Lone (UK), Mo Kolours (UK), Volkova Sisters, and others |
 
-  - type: metadata
 
   - type: linked-events
     title: "Performances"
+  - type: metadata
 ---

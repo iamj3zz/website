@@ -14,8 +14,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2015-02-28"
-  location: "Massolit Books & Café, Budapest, Hungary"
+  date: "2015"
+  based_in: "Massolit Books & Café, Budapest, Hungary"
   role: "violinist, founder, performer"
   custom:
     - label: "Venue"
@@ -46,8 +46,8 @@ sections:
       | 06 | Aug 19, 2015 | Zsolt Sőrés (Ahad) |
       | 07 | Aug 27, 2015 | solo |
 
-  - type: metadata
 
   - type: linked-events
     title: "All Sessions"
+  - type: metadata
 ---

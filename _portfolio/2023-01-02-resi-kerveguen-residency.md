@@ -22,7 +22,7 @@ metadata:
       value: "Kerveguen"
     - label: "Output Work"
       value: "Racines & Résonances (live audiovisual performance)"
-      link: "/works/2023-09-22-live-racines-et-resonances/"
+      link: "/works/2019-09-01-live-racines-et-resonances/"
     - label: "Tags"
       value: "residency, creative development, Réunion Island, biosonification, plant bio-signals"
 
@@ -35,7 +35,7 @@ sections:
 
       The residency enabled further experimentation with the symbiotic relationship between plants and humans, developing the biological data capture systems and audiovisual components that would become central to the Racines & Résonances performance.
 
-      → [View the Racines & Résonances performance](/works/2023-09-22-live-racines-et-resonances/)
+      → [View the Racines & Résonances performance](/works/2019-09-01-live-racines-et-resonances/)
 
   - type: metadata
 ---

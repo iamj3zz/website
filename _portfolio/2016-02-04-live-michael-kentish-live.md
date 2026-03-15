@@ -11,9 +11,9 @@ commissioned: true
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2016-02-04"
-  location: "Pótkulcs, Csengery utca 65/b, Budapest, Hungary"
-  location_link: "http://www.potkulcs.hu"
+  date: "2016"
+  based_in: "Pótkulcs, Csengery utca 65/b, Budapest, Hungary"
+  based_in_link: "http://www.potkulcs.hu"
   role: "violinist, live performer"
   commissioned_by: "Michael Kentish"
   collaborators: "Michael Kentish (artist), Dávid Asztalos"
@@ -26,7 +26,7 @@ metadata:
 
 sections:
   - type: description
-  - type: metadata
   - type: linked-events
     title: "Event"
+  - type: metadata
 ---

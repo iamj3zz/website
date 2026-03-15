@@ -1,7 +1,7 @@
 ---
 published: true
 title: "egy pici nappali — J3ZZ AV koncert"
-work_id: j3zz-av-performance
+work_id: racines-et-resonances
 date: 2019-09-19
 time: "18:30-21:30 (doors 19:00)"
 country: Hungary

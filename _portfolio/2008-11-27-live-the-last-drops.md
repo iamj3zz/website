@@ -4,37 +4,28 @@ layout: work
 title: "The Last Drops"
 work_id: the-last-drops
 abstract: |
-  The artist served as violinist with The Last Drops, "Americana band".
+  Violinist with The Last Drops, a Budapest-based Americana band playing bluegrass covers and originals.
 description: |
-  LIPSORUM yo people!!!! short notice, but the last drops have put together a pre-thanksgiving show this week at cafe montmartre. wednesday night, we're getting started around 8:30. after our TOTALLY F'N INCREDIBLE big show at repeta sarok in october, we're ready to come back with an old-school last drops show at montmartre...meaning sing-alongs, lots of libation, man-o-war shrines, pretty waitresses, and hours and hours of fun. plus...it's greg's birthday party!!!!!!! so get your pre-turkey drink on with us!
+  The Last Drops is a Budapest-based live band with an international lineup — American, Hungarian, and Réunionese members — playing drums, two guitars, violin and mandolin, and bass guitar. The repertoire mixed americana, bluegrass and barn rock covers with a handful of originals, the most notable being *Harry Power*, released as a single. A group of friends before anything else, the band played generously until the very end of the night — or until the last drops.
+
+  J3ZZ performed as the band's violinist/mandolinist, contributing both to the live sets and to the recorded materials.
 category: live-acts
 commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
-# Define metadata once here - it will be used by all modules below
 metadata:
-  release_date: "2008-11-27"
-  location: "Hungary / Europe"
-  collaborators: "Iparkutya band members, J3ZZ (violinist)"
-  credits: "Violinist: J3ZZ"
+  date: "2008–2010"
+  based_in: "Budapest, Hungary"
+  role: "violinist"
   custom:
-    - label: "Facebook"
-      value: "https://www.facebook.com/iparkutya"
-    - label: "External Links"
-      value: "facebook: https://www.facebook.com/iparkutya; photo_gallery: https://www.facebook.com/iparkutya/photos/"
-    - label: "Tags"
-      value: "live, violinist"
-
-# https://www.facebook.com/events/10152654926212434/
-
-# https://www.facebook.com/events/10152858033577945/
-
-# https://www.facebook.com/events/10152924049458095/
-
-# https://www.facebook.com/events/10153288791482533/
-
-
-# https://www.facebook.com/events/10152808222263193/
+    - label: "band members"
+      value: "Matthew Liddle (lead vocals, guitar), J3ZZ (violin, mandolin), Sandor Kubicsko (guitar), Csaba Czinner (bass guitar), Gregory Zeigler (vocals, drums)"
+    - label: "Release"
+      value: "Harry Power — single"
+      link: "/works/2009-01-01-rels-harry-power/"
+    - label: "Release"
+      value: "Gin & Juice / Wagon Wheel — live video"
+      link: "/works/2009-01-01-rels-the-last-drops-tram/"
 
 sections:
   - type: description

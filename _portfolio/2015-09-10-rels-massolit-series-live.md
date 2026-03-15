@@ -74,8 +74,8 @@ sections:
       | 11 | Massolit Series 06 (feat. Zsolt Sőrés / Ahad) | 33:40 |
       | 12 | Massolit Series 07 | 21:56 |
 
-  - type: metadata
 
   - type: linked-events
     title: "Live Sessions"
+  - type: metadata
 ---

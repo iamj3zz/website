@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 layout: work
 title: "J3ZZ A/V Performance"
 work_id: j3zz-av-performance
@@ -12,7 +12,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2019-09-19"
-  location: "Budapest, Hungary"
+  based_in: "Budapest, Hungary"
   role: "audiovisual artist, live performer"
   custom:
     - label: "Format"
@@ -22,7 +22,7 @@ metadata:
 
 sections:
   - type: description
-  - type: metadata
   - type: linked-events
     title: "Performances"
+  - type: metadata
 ---

@@ -12,8 +12,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2009-09-01"
-  location: "Remscheid & Heek, Germany; Florence, Italy; Budapest, Hungary"
+  date: "2009–2011"
+  based_in: "Remscheid & Heek, Germany; Florence, Italy; Budapest, Hungary"
   role: "violinist, composer, co-creator"
   collaborators: "ROOTS & ROUTES international artist network (11 countries: France, Germany, Hungary, Romania, Italy, Netherlands, Spain, Greece, Belgium, UK)"
   custom:

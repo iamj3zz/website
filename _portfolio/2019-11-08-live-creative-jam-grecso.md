@@ -11,9 +11,9 @@ commissioned: true
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2019-11-08"
-  location: "Hungarian Dance Academy, Andrássy út 25, Budapest, Hungary"
-  location_link: "https://goo.gl/maps/fzMDUo5ks5ywCWh96"
+  date: "2019"
+  based_in: "Hungarian Dance Academy, Andrássy út 25, Budapest, Hungary"
+  based_in_link: "https://goo.gl/maps/fzMDUo5ks5ywCWh96"
   role: "sound artist, live performer"
   commissioned_by: "Zoltán Grécso"
   collaborators: "Zoltán Grécso (choreography, organization), dancers from Hungarian Dance Academy"
@@ -25,7 +25,7 @@ metadata:
 
 sections:
   - type: description
-  - type: metadata
   - type: linked-events
     title: "Event"
+  - type: metadata
 ---

@@ -13,8 +13,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
-  release_date: "2013-01-01"
-  location: "Buddha-Bar Hotel Budapest Klotild Palace, Budapest, Hungary"
+  date: "2013–2017"
+  based_in: "Buddha-Bar Hotel Budapest Klotild Palace, Budapest, Hungary"
   collaborators: "J3ZZ (resident violinist), DJ Mada, DJ Tony, DJ Viktor"
   credits: "Resident violinist: J3ZZ. DJs: DJ Mada, DJ Tony, DJ Viktor"
   custom:

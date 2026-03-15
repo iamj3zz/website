@@ -18,8 +18,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2012-02-01"
-  location: "Florence, Italy · Budapest, Hungary · Bucharest, Romania"
+  date: "2012"
+  based_in: "Florence, Italy · Budapest, Hungary · Bucharest, Romania"
   role: "artistic director, violinist, improvisation coach"
   partners: "Subjective Values Foundation (Budapest, Hungary) · Associazione culturale Fabbrica Europa (Florence, Italy) · EuroEst Foundation (Bucharest, Romania) · University of Barcelona–LMI (Spain)"
   credits: |
@@ -66,8 +66,8 @@ sections:
       **Bucharest — October 2012**
       Final residency at Godot Café-Théâtre (October 24–26, 2012), a historic venue in Bucharest's city centre known for theatre and live concerts. Documented with a Radio Romania interview and a stop-motion video.
 
-  - type: metadata
 
   - type: linked-events
     title: "Performances & Residencies"
+  - type: metadata
 ---

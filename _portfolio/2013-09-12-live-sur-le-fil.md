@@ -14,8 +14,8 @@ commissioned: false
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2013-09-12"
-  location: "Florence, Italy · Budapest, Hungary · Singapore"
+  date: "2013–2017"
+  based_in: "Florence, Italy · Budapest, Hungary · Singapore"
   role: "violinist, performer, composer"
   custom:
     - label: "Format"
@@ -44,8 +44,8 @@ sections:
       | Jun 08, 2016 | Canvas Creative Space | Singapore |
       | Oct 26, 2017 | Refuge — RESoNANCE | Budapest, Hungary |
 
-  - type: metadata
 
   - type: linked-events
     title: "Performances"
+  - type: metadata
 ---

@@ -8,7 +8,7 @@ country: Hungary
 city: Budapest
 venue_name: "Treehugger Dan's Bookstore Café"
 venue_address: "Lázár utca 16, 1065 Budapest"
-venue_link: "http://treehugger.hu/"
-ticket_link: "https://www.facebook.com/events/10152808222263193/"
-description: "unplugged"
+# venue_link: "http://treehugger.hu/"
+# ticket_link: "https://www.facebook.com/events/10152808222263193/"
+description: "International Americana band in an intimate unplugged set — violin, mandolin, two guitars, and vocals."
 ---

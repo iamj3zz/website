@@ -9,6 +9,6 @@ city: Budapest
 venue_name: "Könyvtár Klub"
 venue_address: "Múzeum körút 4, 1088 Budapest"
 venue_link: "http://konyvtarklub.hu"
-ticket_link: "https://www.facebook.com/events/10152858033577945/"
-description: "Opening act: Rocking Chair"
+# ticket_link: "https://www.facebook.com/events/10152858033577945/"
+description: "International Americana band mixing bluegrass covers and originals, with opening act Rocking Chair."
 ---

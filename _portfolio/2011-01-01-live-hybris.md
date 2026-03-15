@@ -13,8 +13,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
-  release_date: "2011-01-01"
-  location: "Budapest, Hungary"
+  date: "2011–2020"
+  based_in: "Budapest, Hungary"
   role: "artist_composer_performer: J3ZZ"
   custom:
     - label: "Format"

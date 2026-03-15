@@ -11,9 +11,9 @@ commissioned: true
 image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
-  release_date: "2019-11-16"
-  location: "MagNet Közösségi Ház, Andrássy út 98, Budapest, Hungary"
-  location_link: "https://goo.gl/maps/xcLmjtGiR4e2EZmh6"
+  date: "2019"
+  based_in: "MagNet Közösségi Ház, Andrássy út 98, Budapest, Hungary"
+  based_in_link: "https://goo.gl/maps/xcLmjtGiR4e2EZmh6"
   role: "violinist (live guest)"
   collaborators: "DJ Konrad, Fatoumata Hari (live), Simon Gyuri (live), Viki Matisz (movement workshop)"
   commissioned_by: "Ecstatic Dance Budapest"
@@ -26,7 +26,7 @@ metadata:
 
 sections:
   - type: description
-  - type: metadata
   - type: linked-events
     title: "Event"
+  - type: metadata
 ---

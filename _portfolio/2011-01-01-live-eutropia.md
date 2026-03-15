@@ -13,8 +13,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
-  release_date: "2011-01-01"
-  location: "Multiple European locations"
+  date: "2011"
+  based_in: "Multiple European locations"
   collaborators: "Costas Lamproulis (artistic direction), Lisa Brasile (choreographic advice), Olga Pavlenko (visuals coordination), Gabriele Termine (light design), Fathir Ismail (filming coordination), Stephane 'Stuggi' Ragnit (filming coordination), Marina Bistolfi (organisation), Lisette Reuter (organisation)"
   credits: "Artistic direction: Costas Lamproulis. Choreographic advice: Lisa Brasile. Visuals coordination: Olga Pavlenko. Light design: Luce Attiva di Gabriele Termine. Filming coordination: Fathir Ismail, Stephane 'Stuggi' Ragnit. Organisation: Marina Bistolfi, Lisette Reuter. J3ZZ: Violinist, composer, and producer who performed during shows and contributed to the documentary soundtrack. Served as coach to young artists during the Lille residency"
   custom:

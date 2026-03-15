@@ -13,8 +13,8 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
-  release_date: "2009-01-01"
-  location: "Budapest, Hungary"
+  date: "2009–present"
+  based_in: "Budapest, Hungary"
   collaborators: "Zoltán Grecsó (choreographer/director), J3ZZ (improviser musician/violinist)"
   credits: "Choreographer/Director: Zoltán Grecsó. Improviser musician/violinist: J3ZZ"
   custom:

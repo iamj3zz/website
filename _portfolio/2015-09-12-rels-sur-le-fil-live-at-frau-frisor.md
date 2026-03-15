@@ -13,7 +13,7 @@ image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2015-09-12"
-  location: "Frau Frisor, Florence, Italy"
+  based_in: "Frau Frisor, Florence, Italy"
   role: "violinist, performer, producer"
   custom:
     - label: "Recorded"

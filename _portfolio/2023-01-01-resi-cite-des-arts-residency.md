@@ -22,7 +22,7 @@ metadata:
       value: "Cité des arts"
     - label: "Output Work"
       value: "Racines & Résonances (live audiovisual performance)"
-      link: "/works/2023-09-22-live-racines-et-resonances/"
+      link: "/works/2019-09-01-live-racines-et-resonances/"
     - label: "Tags"
       value: "residency, creative development, Réunion Island, biosonification, plant bio-signals"
 
@@ -35,7 +35,7 @@ sections:
 
       The residency provided access to resources and a creative environment that enabled experimentation with biological data capture systems, transforming plant signals into sound textures and contemporary visual projections. This work exists at the intersection of experimental music, free jazz, electronic music, sound design, and field recording.
 
-      → [View the Racines & Résonances performance](/works/2023-09-22-live-racines-et-resonances/)
+      → [View the Racines & Résonances performance](/works/2019-09-01-live-racines-et-resonances/)
 
   - type: metadata
 ---
