@@ -7,6 +7,35 @@ MY INSTRUCTIONS :
 - never execute the test script yourself.
 - never mention claude in git comments nor files.
 
+## Project Editorial Guidelines
+
+### Career Narrative
+J3ZZ's career arc: violinist/musician (2008–2015) → film composer/performer (2013–2020) → new media artist (2016–present, accelerating). The website should reflect this evolution — foregrounding the new media identity while honoring the musical foundation.
+
+### Three Professional Identities (in priority order for new commissions)
+1. **New Media Artist** — Installations, sensor-driven interactive works (IRIS, Vibrotanica, Unbalanced Forces, Park in Progress)
+2. **Composer & Producer** — All compositional work: film scores, soundtracks, releases, installation soundscapes
+3. **Performer** — Violinist, electronic musician, laserist (Racines & Résonances, Sur le fil, ensemble collaborations)
+
+### Publishing & Status Fields
+- `published: true` = appears on public site
+- `published: false` = hidden from site, preserved in repository
+- **Never delete files** — unpublish instead
+- `status` field in front matter classifies work:
+  - `major` = flagship work, foregrounded in narrative (e.g., IRIS, Vibrotanica, Racines & Résonances)
+  - `minor` = real work, published, lower narrative weight (e.g., commercial films, early releases, collaborations)
+  - `archived` = complete work, intentionally hidden — historical record, never commissioned (e.g., ensemble member portfolio works)
+  - `draft` = work in progress, not ready for public (template files)
+
+### Event Calendar Rules
+- **Only publish events where J3ZZ is the author/leader/co-leader**
+- Member-only appearances (Buddha Bar resident, Willany Léo ensemble, Panda band, etc.) → `published: false`, `status: archived`
+- Keeps the calendar focused on J3ZZ's own creative work and leadership
+
+### Portfolio Grid Purpose
+The grid should answer: "What does J3ZZ make?" — answer with installations first (new media identity), then performances and significant films, then releases. Not a complete diary of every involvement.
+
+---
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 

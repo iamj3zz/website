@@ -1,7 +1,8 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
-title: "What Happens When You Touch It Trailer"
+title: "WHAT HAPPENS WHEN YOU TOUCH IT Trailer"
 work_id: what-happens-trailer
 abstract: "The composer created music for the trailer of EnKnapGroup's performance \"What happens when you touch it\" in 2014."
 description: |

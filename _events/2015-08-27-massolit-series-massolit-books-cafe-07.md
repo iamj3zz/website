@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: J3ZZ Live — Massolit Series #07
 date: 2015-08-27
 time: "20:30"

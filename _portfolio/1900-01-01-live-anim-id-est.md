@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Anim Id Est
 work_id: anim-id-est

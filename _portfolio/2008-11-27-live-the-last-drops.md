@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 layout: work
 title: "The Last Drops"
 work_id: the-last-drops

@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Talking heArts — Sziget Festival / A38 Stage
 date: 2012-08-07
 time: "23:15"

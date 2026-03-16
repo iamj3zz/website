@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "ART-RAVALÓ"
 work_id: art-ravaló

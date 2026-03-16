@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: racines-et-resonances
 title: Vibrotanica & Racines et Résonances - Institut Français de Maurice
 date: 2024-05-04

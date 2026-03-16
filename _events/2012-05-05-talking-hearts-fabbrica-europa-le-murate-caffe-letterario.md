@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Talking heArts — Fabbrica Europa Festival
 date: 2012-05-05
 time: ""

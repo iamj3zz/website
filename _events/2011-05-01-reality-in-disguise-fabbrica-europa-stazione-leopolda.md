@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Reality in Disguise — Fabbrica Europa Festival (May 20–21)
 date: 2011-05-20
 time:

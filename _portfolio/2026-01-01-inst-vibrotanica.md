@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Vibrotanica"
+title: "VIBROTANICA"
 work_id: vibrotanica
 abstract: "An immersive interactive installation using bioelectrical sensors to capture plant bio-signals and transform them into real-time sound and visuals, connecting humans and nature."
 description: |

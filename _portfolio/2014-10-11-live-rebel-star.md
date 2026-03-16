@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Rebel Star"
 work_id: rebel-star

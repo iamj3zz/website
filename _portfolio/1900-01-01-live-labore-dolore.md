@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Labore Et Dolore
 work_id: labore-et-dolore

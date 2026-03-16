@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: "Samsara Festival"
 work_id: sur-le-fil
 date: 2018-08-07

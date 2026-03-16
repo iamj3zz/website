@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: eutropia
 title: Eutropia - Final Performance Utrecht
 date: 2013-04-14

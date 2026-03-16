@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 title: Brody Open Jam
 date: 2018-04-16
 time: "20:30"

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: major
 layout: work
 title: "IparKutya"
 work_id: iparkutya

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 layout: work
 title: "Beaux Jaxon"
 work_id: beaux-jaxon

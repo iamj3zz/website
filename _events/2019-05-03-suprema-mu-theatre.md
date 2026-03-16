@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: suprema
 title: SUPREMA Contemporary Dance Show
 date: 2019-05-03

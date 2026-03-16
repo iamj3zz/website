@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 work_id: makrokozmosz
 title: Makrokozmosz
 date: 2018-09-05

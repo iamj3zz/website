@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Proident Sunt
 work_id: proident-sunt

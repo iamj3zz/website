@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: IparKutya - Budapest Fringe Festival
 date: 2011-04-03
 work_id: iparkutya

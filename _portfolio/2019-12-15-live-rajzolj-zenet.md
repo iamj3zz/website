@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: major
 layout: work
 title: "Rajzolj zenét! (Draw Music!)"
 work_id: rajzolj-zenet

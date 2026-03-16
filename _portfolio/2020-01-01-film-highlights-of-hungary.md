@@ -1,7 +1,8 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
-title: "Highlights of Hungary"
+title: "HIGHLIGHTS OF HUNGARY"
 work_id: highlights-of-hungary
 abstract: |
   The artist composed, produced, and created sound design for a promotional spot titled "Highlights of Hungary.

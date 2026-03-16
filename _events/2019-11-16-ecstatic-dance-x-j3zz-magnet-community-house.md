@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "Ecstatic Dance + Sejtedzés Matisz Vikivel"
 work_id: ecstatic-dance-sejtedzes
 date: 2019-11-16

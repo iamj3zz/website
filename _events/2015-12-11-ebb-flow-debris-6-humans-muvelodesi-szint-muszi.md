@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 title: ebb flow + debris (6 humans)
 date: 2015-12-11
 time: "20:00"

@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Park in Progress"
+title: "PARK IN PROGRESS"
 work_id: park-in-progress
 abstract: |
   A harmony of body and sound in the heart of Nicosia.

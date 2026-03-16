@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Deserunt Mollit
 work_id: deserunt-mollit

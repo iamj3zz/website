@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Urban Media Festival Trailers"
 work_id: urban-media-festival-trailers

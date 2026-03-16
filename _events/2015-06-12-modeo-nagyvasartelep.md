@@ -1,5 +1,6 @@
 ---
 published: true
+status: minor
 title: Modeo — kolor @ Nagyvásártelep
 date: 2015-06-12
 time: "21:00"

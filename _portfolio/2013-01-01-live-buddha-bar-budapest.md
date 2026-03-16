@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 layout: work
 title: "Buddha Bar (Budapest)"
 work_id: buddha-bar-budapest

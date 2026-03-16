@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 layout: work
 title: "Grecsó / J3ZZ at Ördögkatlan Festival"
 work_id: grecso-j3zz-ordogkatlan

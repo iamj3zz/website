@@ -1,5 +1,6 @@
 ---
 published: true
+status: minor
 layout: work
 title: "Fission"
 work_id: fission

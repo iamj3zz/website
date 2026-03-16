@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Pariatur Excepteur
 work_id: pariatur-excepteur

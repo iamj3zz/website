@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "The Last Drops — Völgykavalkád, Taliándörögd"
 date: "2009-07-01"
 time: "20:00"

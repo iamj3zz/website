@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Sur le fil — FKSE Studio Gallery, Budapest
 date: 2015-07-02
 time: "20:30"

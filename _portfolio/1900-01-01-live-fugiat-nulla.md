@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Fugiat Nulla
 work_id: fugiat-nulla

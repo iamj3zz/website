@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 work_id: willany-léo
 title: "Willany Leó: Body and shape"
 date: 2019-06-21

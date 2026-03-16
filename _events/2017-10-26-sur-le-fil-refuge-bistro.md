@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Sur le fil — RESoNANCE, Refuge, Budapest
 date: 2017-10-26
 time: "20:00"

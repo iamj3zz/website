@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Michael Kentish feat. J3ZZ"
 work_id: michael-kentish-live

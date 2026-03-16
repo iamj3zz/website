@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Michael Kentish (Recordings)"
 work_id: michael-kentish-recordings

@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 work_id: biosonification-workshops
 title: Biosonification workshop 
 date: 2023-11-09

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: Rajzolj zenét! (Draw Music!)
 date: 2019-12-15
 time: "10:00-12:00"

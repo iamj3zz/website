@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Travel Buddy"
+title: "TRAVEL BUDDY"
 work_id: travel-buddy
 abstract: "In 2014, the composer scored and produced the soundtrack for this short film."
 description: |

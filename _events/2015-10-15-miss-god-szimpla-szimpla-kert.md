@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 title: Miss God & J3ZZ — Szimpla Kert, Budapest
 date: 2015-10-15
 time: "20:30"

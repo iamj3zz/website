@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: racines-et-resonances
 title: Vibrotanica - Zene Virágnyelvén
 date: 2024-05-31

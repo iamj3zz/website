@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: eutropia
 title: Eutropia - Arkadas Theater Cologne
 date: 2011-04-01

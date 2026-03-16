@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Azalai"
+title: "AZALAI"
 work_id: azalai
 abstract: |
   An innovative cultural exchange initiative operating as an itinerant laboratory for creative experimentation connecting African and European artists.

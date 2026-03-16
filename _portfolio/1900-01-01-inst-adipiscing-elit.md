@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Adipiscing Elit
 work_id: adipiscing-elit

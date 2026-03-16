@@ -1,7 +1,8 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
-title: "Music Maker #2"
+title: "MUSIC MAKER #2"
 work_id: music-maker-2
 abstract: |
   This was a short artist residency at Château Éphémère in fall 2018 enabling collaboration between various artists and creative coders.

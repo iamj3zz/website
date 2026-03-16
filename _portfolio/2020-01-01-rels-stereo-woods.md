@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Stereo Woods"
+title: "STEREO WOODS"
 work_id: stereo-woods
 abstract: |
   A single release exploring field recordings and environmental soundscapes.

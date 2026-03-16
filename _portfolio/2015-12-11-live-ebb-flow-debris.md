@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "ebb flow + debris (6 humans)"
 work_id: ebb-flow-debris

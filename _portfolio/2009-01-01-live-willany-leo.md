@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 layout: work
 title: "Willany léo"
 work_id: willany-léo

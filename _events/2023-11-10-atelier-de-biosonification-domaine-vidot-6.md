@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 title: Biosonification Workshop — Domaine Vidot, Saint-Pierre
 date: 2023-11-10
 work_id: biosonification-workshops

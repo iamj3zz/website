@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 work_id: racines-et-resonances
 title: Racines & Résonances — Brain Bar 2023
 date: 2023-09-22

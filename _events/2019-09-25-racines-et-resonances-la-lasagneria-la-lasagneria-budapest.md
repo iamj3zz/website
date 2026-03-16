@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: "J3ZZ x La Lasagneria - Opening Party"
 work_id: racines-et-resonances
 date: 2019-09-25

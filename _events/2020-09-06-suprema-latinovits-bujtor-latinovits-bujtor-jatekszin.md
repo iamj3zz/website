@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: suprema
 title: Suprema
 date: 2020-09-06

@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 work_id: racines-et-resonances
 title: J3ZZ - Racines & Résonances Concert
 date: 2023-09-23

@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 layout: work
 title: "SUPREMA"
 work_id: suprema
@@ -24,9 +25,6 @@ metadata:
   custom:
     - label: "2020 Production"
       value: "Imre Zoltán Program, Latinovits-Bujtor Játékszín, Veszprém (September 6, 2020)"
-    - label: "Original Soundtrack"
-      value: "SUPREMA (Original Soundtrack) — album release"
-      link: "/works/2019-01-01-rels-suprema-original-soundtrack/"
     - label: "YouTube"
       value: "Performance clips"
       link: "https://www.youtube.com/watch?v=5HJsaGL9L1I"

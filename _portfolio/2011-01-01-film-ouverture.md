@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 layout: work
 title: "Ouverture"
 work_id: ouverture

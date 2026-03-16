@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Sur le fil — Canvas Creative Space, Singapore
 date: 2016-06-08
 time: "22:00"

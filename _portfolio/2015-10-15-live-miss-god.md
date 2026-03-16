@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Miss God & J3ZZ"
 work_id: miss-god

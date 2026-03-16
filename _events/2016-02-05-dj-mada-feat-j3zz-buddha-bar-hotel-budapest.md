@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 work_id: buddha-bar-budapest
 title: DJ Mada feat. J3ZZ
 date: 2016-02-05

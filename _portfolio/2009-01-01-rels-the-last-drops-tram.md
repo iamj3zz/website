@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 layout: work
 title: "The Last Drops — Gin & Juice / Wagon Wheel (covers)"
 work_id: the-last-drops-tram-jam-gin-juice

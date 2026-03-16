@@ -53,193 +53,150 @@ links:
     <div class="bio-category" id="bio-installations">
       <h2>Installations &amp; Exhibitions</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2024</span> Vibrotanica (work in progress) — TBD</div>
-        <div class="bio-item"><span class="bio-year">2020</span> IRIS (Reflectio) — Csokonai Theatre, Debrecen, Hungary — Lighthouse Art 2020 (Aug 18–22)</div>
-        <div class="bio-item"><span class="bio-year">2018</span> Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</div>
-        <div class="bio-item"><span class="bio-year">2016</span> Unbalanced Forces — Lábor Gallery, Budapest, Hungary (premiere Feb 13, 19:00)</div>
-        <div class="bio-item"><span class="bio-year">2014</span> Park in Progress — Municipal Gardens / ARTos Foundation, Nicosia, Cyprus — Pépinières Européennes pour Jeunes Artistes, 11th edition (Sep 29)</div>
+        <div class="bio-item"><span class="bio-year">2026</span> <a href="/works/2026-01-01-inst-vibrotanica/">VIBROTANICA</a> ∙ work in progress</div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-18-inst-iris/">IRIS</a> ∙ sound design &amp; composition ∙ Csokonai Theatre, Debrecen ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-13-inst-unbalanced-forces/">UNBALANCED FORCES</a> ∙ programming &amp; composition ∙ Lábor Gallery, Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">PARK IN PROGRESS</a> ∙ Municipal Gardens, Nicosia ∙ CY</div>
       </div>
     </div>
 
-    <div class="bio-category" id="bio-live-performances">
-      <h2>Live Performances &amp; Festivals</h2>
-      <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2025</span> Racines &amp; Résonances — Villa de la Région, La Réunion</div>
-        <div class="bio-item"><span class="bio-year">2024</span> Racines &amp; Résonances — Institut Français de Budapest, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2024</span> Racines &amp; Résonances — Sciences Po Paris, France</div>
-        <div class="bio-item"><span class="bio-year">2024</span> Racines &amp; Résonances — Institut Français de Maurice, Mauritius</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Racines &amp; Résonances — Nuit des Musiques Expérimentales #5, Lespas, La Réunion (Sep 22)</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Racines &amp; Résonances — Brain Bar Festival, Budapest, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Racines &amp; Résonances — Institut Français de Budapest, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2020</span> Racines &amp; Résonances — Széllkapu, Millenáris, Budapest, Hungary (Oct 18)</div>
-        <div class="bio-item"><span class="bio-year">2020</span> Racines &amp; Résonances – Under the stars — Lóvasút, Budapest, Hungary (Aug 13)</div>
-        <div class="bio-item"><span class="bio-year">2020</span> Racines &amp; Résonances feat. Grecsó Zoltán &amp; Bujdosó Anna — Lóvasút, Budapest, Hungary (Feb 7)</div>
-        <div class="bio-item"><span class="bio-year">2020</span> Volt Festival — Sopron, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-01-live-racines-et-resonances/">Racines &amp; Résonances</a> — La Lasagneria, Budapest, Hungary (Sep 25) — first public performance</div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-01-live-racines-et-resonances/">Racines &amp; Résonances</a> — Association of Hungarian Art Photographers, Budapest, Hungary (Sep 19) — premiere</div>
-        <div class="bio-item"><span class="bio-year">2019</span> Szabi híd — Budapest, Hungary (×2)</div>
-        <div class="bio-item"><span class="bio-year">2019</span> Bankito Festival — Hungary</div>
-        <div class="bio-item"><span class="bio-year">2019</span> Zengeto Festival — Hungary</div>
-        <div class="bio-item"><span class="bio-year">2018</span> Ördögkatlan — Hungary</div>
-        <div class="bio-item"><span class="bio-year">2016</span> Sziget — Budapest, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2014</span> Sziget — Budapest, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2013</span> Wazemmes l'accordéon — Lille, France</div>
-        <div class="bio-item"><span class="bio-year">2013</span> Zénith — Lille, France (opening for Salif Keita during Wazemmes l'accordéon)</div>
-        <div class="bio-item"><span class="bio-year">2013</span> Festival au Désert — Florence, Italy</div>
-        <div class="bio-item"><span class="bio-year">2012</span> Sziget — Budapest, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2012</span> Fabbrica Europa — Florence, Italy</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Festival au Désert — Florence, Italy</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Fabbrica Europa — Florence, Italy</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Hanna Hanna — Komárom, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Sofa — Berlin, Germany</div>
-        <div class="bio-item"><span class="bio-year">2013–2017</span> <a href="/works/2013-09-12-live-sur-le-fil/">Sur le fil — solo violin improvisation (Florence, Budapest, Singapore)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-12-11-live-ebb-flow-debris/">ebb flow + debris — Monofog + group, Müszi Budapest</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-10-15-live-miss-god/">Miss God &amp; J3ZZ — Szimpla Kert, Budapest</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">Modeo — Trafó ELECTRIFY &amp; Nagyvásártelep, Budapest</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">Massolit Series — 7-concert series, Budapest</a></div>
-        <div class="bio-item"><span class="bio-year">2013–2017</span> Buddha Bar Budapest — resident musician</div>
-        <div class="bio-item"><span class="bio-year">2011–2020</span> J3ZZ — pluridisciplinary performances</div>
-        <div class="bio-item"><span class="bio-year">2011–2020</span> Hybris — pluridisciplinary performances</div>
-        <div class="bio-item"><span class="bio-year">2010–2011</span> Morzsa Records — live performer</div>
-        <div class="bio-item"><span class="bio-year">2012–2013</span> Azalai — itinerant cultural laboratory, core ensemble member</div>
-        <div class="bio-item"><span class="bio-year">2010–2012</span> Iparkutya — Balkan free jazz ensemble</div>
-        <div class="bio-item"><span class="bio-year">2009–2020</span> Willany Léo — Improvisative Dance Theatre</div>
-        <div class="bio-item"><span class="bio-year">2008+</span> Tartit, Tadalat — Tuareg/Tamachek music</div>
-        <div class="bio-item"><span class="bio-year">2008+</span> Samba Touré — Songhai blues, Mali</div>
-        <div class="bio-item"><span class="bio-year">2008–2010</span> The Last Drops</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Eutropia — ROOTS &amp; ROUTES — 9-country European tour</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Summer Suite</div>
-        <div class="bio-item"><span class="bio-year">2009–2011</span> Reality in Disguise — ROOTS &amp; ROUTES, Germany / Italy / Hungary</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">Talking heArts — ROOTS &amp; ROUTES — Florence, Budapest, Bucharest</a></div>
-        <div class="bio-item"><span class="bio-year">2019</span> Mellettük — Grecsó Krisztián &amp; Grecsó Zoltán</div>
-        <div class="bio-item"><span class="bio-year">2019</span> ART-RAVALÓ — social art project</div>                
-      </div>
-    </div>
+    <div class="bio-category" id="bio-composer">
+      <h2>Composer &amp; Producer</h2>
 
-    <div class="bio-category" id="bio-dance-theatre">
+      <div class="bio-section-subtitle">Releases</div>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2019</span> SUPREMA — MU Theatre, Budapest (May 3)</div>
-        <div class="bio-item"><span class="bio-year">2016</span> Home Base — Budapest</div>
-        <div class="bio-item"><span class="bio-year">2014</span> What happens when you touch it — EnKnapGroup, Ljubljana</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Touch me not — Budapest / Zagreb</div>
-      </div>
-    </div>
-
-    <div class="bio-category" id="bio-film">
-      <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-03-film-medicontur-educational-film/">Medicontur</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-film-highlights-of-hungary/">Highlights of Hungary</a></div>
-        <div class="bio-item"><span class="bio-year">2019–2020</span> <a href="/works/2018-01-01-inst-uncensored/">Uncensored</a></div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-02-film-abbott-harmony-fragile-life/">Abbott "Harmony" &amp; "a Fragile Life" (performer)</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2016-01-01-film-petra/">Petra</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-grantraeet/">Grantræet</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-building-up-creativity/">Building up Creativity</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-02-film-home-base-trailers/">Home Base 01 / 02 / 03</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-03-film-flying-istanbul-trailer/">Flying Istanbul</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-film-travel-buddy/">Travel Buddy</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-02-film-what-happens-trailer/">What happens when you touch it</a></div>
-        <div class="bio-item"><span class="bio-year">2013–2020</span> <a href="/works/2013-01-01-film-flying-istanbul/">Flying Istanbul</a></div>
-        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-02-film-children-tell-istanbul/">Children tell Istanbul</a></div>
-        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-01-01-film-1000-and-1-realities/">1000 and 1 Realities</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-best-friends-wifes-lover/">Best Friend's Wife's Lover</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-far-point/">Far Point</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">To be told</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-02-film-urban-media-festival-trailers/">Urban Media Festival</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-film-ouverture/">Ouverture</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-film-fission/">Fission</a></div>
-        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-film-ricordi-di-cosa-profuma-la-terra/">Ricordi di cosa profuma la terra</a></div>
-      </div>
-    </div>
-
-    <div class="bio-category" id="bio-releases">
-      <h2>Releases</h2>
-      <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-01-rels-ex-nihilo-3/">Ex Nihilo 3</a></div>
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-02-rels-ex-nihilo-2/">Ex Nihilo 2</a></div>
-        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-03-rels-ex-nihilo-1/">Ex Nihilo 1</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-rels-stereo-woods/">Stereo Woods</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-02-rels-a-drop-in-the-ocean/">A Drop in the Ocean</a></div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-rels-suprema-original-soundtrack/">SUPREMA (Original Soundtrack)</a></div>
-        <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-rels-indigo-theory/">Rainy Day — Indigo Theory</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-rels-all-the-promises/">All the Promises — Michael Kentish</a></div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-04-rels-michael-kentish-recordings/">Michael Kentish (Recordings)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-rels-new-beginnings/">New Beginnings — Michael Kentish</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-02-rels-so-proud-of-you/">So Proud of You — Jordi Abel</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-rels-n7n8-festival-live/">N7N8 Festival (Live) — improvised duet with Áron Porteleki</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-rels-massolit-series-live/">MASSOLIT SERIES (Live) — seven improvisation sessions</a></div>
+        <div class="bio-item"><span class="bio-year">2021</span> <a href="/works/2021-01-01-rels-ex-nihilo/">EX NIHILO</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-rels-stereo-woods/">STEREO WOODS</a></div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-02-rels-a-drop-in-the-ocean/">A DROP IN THE OCEAN</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-rels-massolit-series-live/">MASSOLIT SERIES (Live)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-rels-n7n8-festival-live/">N7N8 FESTIVAL (Live)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-fkse/">SUR LE FIL (Live at FKSE)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor)</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-01-01-rels-promised-myself-acoustic/">Promised myself (Acoustic) — MC KiKo</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-rels-polish-graffiti/">Polish Graffiti — Morzsa Records</a></div>
-        <div class="bio-item"><span class="bio-year">2009</span> <a href="/works/2009-01-01-rels-harry-power/">Harry Power — The Last Drops</a></div>
-        <div class="bio-item"><span class="bio-year">2009</span> <a href="/works/2009-01-01-rels-the-last-drops-tram/">The Last Drops — Gin &amp; Juice / Wagon Wheel (covers)</a></div>
+      </div>
+
+      <div class="bio-section-subtitle">Theatre &amp; Dance</div>
+      <div class="bio-items">
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-perf-suprema/">SUPREMA</a> ∙ Tímea Sebestyén ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-04-14-perf-home-base/">HOME BASE</a> ∙ Kulcsár Noémi ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2013-01-01-perf-what-happens-when-you-touch-it/">WHAT HAPPENS WHEN YOU TOUCH IT</a> ∙ EnKnapGroup ∙ SI</div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-perf-touch-me-not-nebáncsvirág/">TOUCH ME NOT</a> ∙  Zoltán Grecsó ∙ HU/HR</div>
+      </div>
+
+      <div class="bio-section-subtitle">Films</div>
+      <div class="bio-items">
+        <div class="bio-item"><span class="bio-year">2019</span> ∙ fiction short ∙ <a href="/works/2019-01-01-film-válaszúton-crossroads/">CROSSROADS</a> ∙ Flora Chilton ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2017</span> ∙ fiction short ∙ <a href="/works/2017-01-01-film-grantraeet/">GRANTRAEET</a> ∙ Amalie Halsey ∙ DK</div>
+        <div class="bio-item"><span class="bio-year">2017</span> ∙ dance film ∙ <a href="/works/2017-01-01-film-building-up-creativity/">BUILDING UP CREATIVITY</a> ∙ Judit Pétervári ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2016</span> ∙ fiction feature ∙ <a href="/works/2016-01-01-film-petra/">PETRA</a> ∙ Philip Lewis ∙ US</div>
+        <div class="bio-item"><span class="bio-year">2014</span> ∙ fiction short ∙ <a href="/works/2014-01-01-film-travel-buddy/">TRAVEL BUDDY</a> ∙ Declan Hannigan ∙ IE</div>
+        <div class="bio-item"><span class="bio-year">2013</span> ∙ documentary ∙ <a href="/works/2013-01-02-film-children-tell-istanbul/">CHILDREN TELL ISTANBUL</a> ∙ Olga Pavlenko ∙ UA</div>
+        <div class="bio-item"><span class="bio-year">2013</span> ∙ animated shorts ∙ <a href="/works/2013-01-01-film-1000-and-1-realities/">1000 AND 1 REALITIES</a> ∙ Olga Pavlenko ∙ UA</div>
+        <div class="bio-item"><span class="bio-year">2012</span> ∙ fiction short ∙ <a href="/works/2012-01-01-film-best-friends-wifes-lover/">BEST FRIEND'S WIFE'S LOVER</a> ∙ Declan Hannigan ∙ IE</div>
+        <div class="bio-item"><span class="bio-year">2012</span> ∙ documentary ∙ <a href="/works/2012-01-01-film-to-be-told/">TO BE TOLD</a> ∙ Lorenzo Ciacciavicca ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2012</span> ∙ fiction short ∙ <a href="/works/2012-01-01-film-far-point/">FAR POINT</a> ∙ Lorenzo Ciacciavicca ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2011</span> ∙ fiction short ∙ <a href="/works/2011-01-01-film-ouverture/">OUVERTURE</a> ∙ Lorenzo Ciacciavicca ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2011</span> ∙ dance film ∙ <a href="/works/2011-01-01-film-fission/">FISSION</a> ∙ Ana Maria Staicu &amp; Paris Tume ∙ RO</div>
+        <div class="bio-item"><span class="bio-year">2010</span> ∙ animated short ∙ <a href="/works/2010-01-01-film-ricordi-di-cosa-profuma-la-terra/">RICORDI DI COSA PROFUMA LA TERRA</a> ∙ Olga Pavlenko ∙ TR</div>
+        <div class="bio-item"><span class="bio-year">2010</span> ∙ dance film ∙ <a href="/works/2010-01-01-film-in-between/">IN BETWEEN</a> ∙ Massih Parsaei ∙ IT</div>
+      </div>
+
+      <div class="bio-section-subtitle">Corporate &amp; Educational</div>
+      <div class="bio-items">
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-film-basics-of-vision/">BASICS OF VISION</a> ∙ Medicontur ∙ HU</div>
+      </div>
+    </div>
+
+    <div class="bio-category" id="bio-performer">
+      <h2>Performer &amp; Collaborations</h2>
+      <div class="bio-items">
+        <div class="bio-item"><span class="bio-year">2019–2025</span> <a href="/works/2019-09-01-live-racines-et-resonances/">Racines &amp; Résonances</a> ∙ 8 performances ∙ HU/RE/MU</div>
+        <div class="bio-item"><span class="bio-year">2018–2019</span> Panda (DJ) ∙ guest ∙ 7 performances ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-08-03-live-grecso-j3zz-ordogkatlan/">Grecsó / J3ZZ</a> ∙ Ördögkatlan Festival ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015–2016</span> Buddha Bar Budapest ∙ resident ∙ 26 performances ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">Modeo</a> ∙ Trafó ELECTRIFY Series &amp; Nagyvásártelep, Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-live-n7n8-festival/">N7N8 Festival</a> ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">Massolit Series</a> ∙ 8-concert series, Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2013–2018</span> <a href="/works/2013-09-12-live-sur-le-fil/">Sur le fil</a> ∙ solo violin improvisation ∙ 7 performances ∙ IT/HU/SG</div>
+        <div class="bio-item"><span class="bio-year">2013</span> Wazemmes l'accordéon ∙ Zénith, Lille ∙ opening for Salif Keita ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2012–2013</span> Azalai ∙ itinerant cultural laboratory</div>
+        <div class="bio-item"><span class="bio-year">2012</span> Fabbrica Europa ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2011–2016</span> <a href="/works/2011-01-01-live-hybris/">Hybris</a> ∙ pluridisciplinary performances ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-live-talking-hearts/">Talking heArts</a> ∙ ROOTS &amp; ROUTES ∙ IT/HU/RO</div>
+        <div class="bio-item"><span class="bio-year">2011</span> Fabbrica Europa ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2011</span> Summer Suite</div>
+        <div class="bio-item"><span class="bio-year">2010–2012</span>IPARKUTYA ∙ Balkan free jazz ensemble ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2010–2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">Reality in Disguise</a> ∙ ROOTS &amp; ROUTES ∙ DE/IT/HU</div>
+        <div class="bio-item"><span class="bio-year">2009–2020</span> Willany Léo ∙ Improvisative Dance Theatre ∙ 13 performances ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2008–2010</span> The Last Drops ∙ 7 performances ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2008+</span> Tartit, Tadalat ∙ Tuareg/Tamachek music</div>
+        <div class="bio-item"><span class="bio-year">2008+</span> Samba Touré ∙ Songhai blues, Mali ∙ ML</div>
       </div>
     </div>
 
     <div class="bio-category" id="bio-residencies">
       <h2>Residencies</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2025-01-01-resi-citta-della-pieve-residency/">Citta Della Pieve, Italy</a></div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-02-resi-kerveguen-residency/">Kerveguen, Saint-Pierre, Réunion</a></div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-resi-cite-des-arts-residency/">Cité des arts, Saint-Denis, Réunion</a></div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-23-resi-outbreakers-lab-residency/">Outbreakers' Lab — Zsennye, Hungary (Aug 23–25)</a></div>
-        <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-resi-music-maker-2/">Music Maker #2 — Château Éphémère, Carrières-sous-Poissy, France</a></div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">Park in Progress — Nicosia, Cyprus</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">Talking heArts — Florence, Budapest, Bucharest (artistic director, violinist)</a></div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">To be told — Grundtvig Workshop, Florence (residency participant + documentary sound)</a></div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-live-eutropia/">Eutropia — Cologne, Germany / Florence, Italy</a></div>
-        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">Reality in Disguise — Remscheid Academy &amp; Heek, Germany</a></div>
+        <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2025-01-01-resi-citta-della-pieve-residency/">Citta Della Pieve</a> ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-02-resi-kerveguen-residency/">Kerveguen, Saint-Pierre</a> ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-resi-cite-des-arts-residency/">Cité des arts, Saint-Denis</a> ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-23-resi-outbreakers-lab-residency/">Outbreakers' Lab ∙ Zsennye</a> ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-resi-music-maker-2/">Music Maker #2 ∙ Château Éphémère, Carrières-sous-Poissy</a> ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">Park in Progress ∙ Nicosia</a> ∙ CY</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">Talking heArts ∙ Florence, Budapest, Bucharest</a> ∙ IT/HU/RO</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">To be told ∙ Grundtvig Workshop, Florence</a> ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-live-eutropia/">Eutropia ∙ Cologne / Florence</a> ∙ DE/IT</div>
+        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">Reality in Disguise ∙ Remscheid Academy &amp; Heek</a> ∙ DE</div>
       </div>
     </div>
 
     <div class="bio-category" id="bio-workshops">
       <h2>Workshops</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2024</span> Biosonification — Institut Français de Budapest, Hungary</div>
-        <div class="bio-item"><span class="bio-year">2020</span> Biosonification — Széllkapu, Millenáris, Budapest, Hungary (Oct 18)</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Biosonification — Salon du livre Réyoné, La Réunion</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Biosonification — Mizik O Marmay Festival, La Réunion</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Biosonification — Rdv aux jardins, La Réunion</div>
-        <div class="bio-item"><span class="bio-year">2013–2014</span> Steps Ahead (junior coach professionalization) — Florence, Italy</div>
-        <div class="bio-item"><span class="bio-year">2013</span> U-CARE (Urban Culture Against Racism) — Florence, Italy</div>
-        <div class="bio-item"><span class="bio-year">2012</span> EUtropia — Lille, France</div>
-        <div class="bio-item"><span class="bio-year">2011</span> Follow-Up — Budapest, Hungary / Barcelona, Spain</div>
+        <div class="bio-item"><span class="bio-year">2024</span> Biosonification ∙ Institut Français de Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2023</span> Biosonification ∙ Salon du livre Réyoné ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> Biosonification ∙ Mizik O Marmay Festival ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> Biosonification ∙ Rdv aux jardins ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2020</span> Biosonification ∙ Széllkapu, Millenáris, Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2013–2014</span> Steps Ahead (junior coach professionalization) ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2013</span> U-CARE (Urban Culture Against Racism) ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2012</span> EUtropia ∙ Lille ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2011</span> Follow-Up ∙ Budapest / Barcelona ∙ HU/ES</div>
       </div>
     </div>
 
     <div class="bio-category" id="bio-teaching">
       <h2>Teaching &amp; Coaching</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2013–2015</span> Interdisciplinary improvisation coaching — ROOTS &amp; ROUTES projects across Europe</div>
-        <div class="bio-item"><span class="bio-year">2008–2014</span> Improvisation research in theatre — exploring links between movement, musicians, and technicians</div>
+        <div class="bio-item"><span class="bio-year">2013–2015</span> Interdisciplinary improvisation coaching ∙ ROOTS &amp; ROUTES projects across Europe</div>
+        <div class="bio-item"><span class="bio-year">2008–2014</span> Improvisation research in theatre ∙ exploring links between movement, musicians, and technicians</div>
       </div>
     </div>
 
     <div class="bio-category" id="bio-management">
       <h2>Cultural Management &amp; Governance</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2023–present</span> Board Member — KOLET (www.kolet.re), La Réunion</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Deputy General Director, DGA Épanouissement du Citoyen (interim) — Mairie de La Possession, La Réunion — led culture, sports, social services, housing; team of ~170 agents (Jul–Aug)</div>
-        <div class="bio-item"><span class="bio-year">2020–2022</span> Director General Delegate — Territo'Arts (SPL), La Réunion — directed Cité des Arts de La Réunion and Centre Culturel Château Morange; budget 4M€; 50 permanent staff; 170 artistic residencies in 2021 (Nov 2020–Apr 2022)</div>
-        <div class="bio-item"><span class="bio-year">2013–2015</span> Secretary General — ROOTS &amp; ROUTES International Association, Rotterdam, Netherlands — 12 partner countries; EU funds: Creative, Leonardo, Erasmus+, Youth in Action (Jun 2013–Jun 2015)</div>
-        <div class="bio-item"><span class="bio-year">2012–present</span> Active Member — CCC Centro Creazione Cultura, Florence, Italy (www.centrocreazionecultura.eu)</div>
+        <div class="bio-item"><span class="bio-year">2023–present</span> Board Member ∙ KOLET (www.kolet.re) ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> Deputy General Director, DGA Épanouissement du Citoyen (interim) ∙ Mairie de La Possession ∙ RE ∙ led culture, sports, social services, housing; team of ~170 agents (Jul–Aug)</div>
+        <div class="bio-item"><span class="bio-year">2020–2022</span> Director General Delegate ∙ Territo'Arts (SPL) ∙ RE ∙ directed Cité des Arts de La Réunion and Centre Culturel Château Morange; budget 4M€; 50 permanent staff; 170 artistic residencies in 2021 (Nov 2020–Apr 2022)</div>
+        <div class="bio-item"><span class="bio-year">2013–2015</span> Secretary General ∙ ROOTS &amp; ROUTES International Association, Rotterdam ∙ NL ∙ 12 partner countries; EU funds: Creative, Leonardo, Erasmus+, Youth in Action (Jun 2013–Jun 2015)</div>
+        <div class="bio-item"><span class="bio-year">2012–present</span> Active Member ∙ CCC Centro Creazione Cultura, Florence ∙ IT (www.centrocreazionecultura.eu)</div>
       </div>
     </div>
 
     <div class="bio-category" id="bio-education">
       <h2>Education &amp; Certificates</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2024</span> Training — Pratiquer la Transe Cognitive Auto-Induite dans la perspective d'un usage professionnel dans le secteur artistique — TranceLab Training Institute, La Plaine St. Denis, France (Nov 4–5 &amp; 18–19, 26h, Qualiopi)</div>
-        <div class="bio-item"><span class="bio-year">2022</span> Certificate — Protocole MBCT Thérapie Cognitive basée sur la Pleine Conscience — MBSR-MBCT Océan Indien, La Réunion (Oct–Dec 2022, Qualiopi)</div>
-        <div class="bio-item"><span class="bio-year">2021–2022</span> Certificate — Conception et mise en œuvre de la stratégie dans un contexte de Changement — HEC Paris / Fédération des EPL (Oct 2021–Apr 2022)</div>
-        <div class="bio-item"><span class="bio-year">2021</span> Permis d'exploitation (débit de boissons) — SEF Marseille (Sep)</div>
-        <div class="bio-item"><span class="bio-year">2021</span> Licence d'entrepreneur de spectacles — PLATESV-R-2021-009234 (Jul)</div>
-        <div class="bio-item"><span class="bio-year">2015</span> Certificate — Managing the Arts: Marketing for Cultural Organizations — Leuphana University / Goethe-Institut — 92/100, 5 ECTS (Feb–May)</div>
-        <div class="bio-item"><span class="bio-year">2008–2010</span> Peer Coaching Certificate (Aug 2010) — L'Académie Transnationale ROOTS &amp; ROUTES — jfc Medienzentrum, Cologne, Germany — 2-year EU Lifelong Learning Programme (Leonardo da Vinci) for coaches and talents, France, Germany, Hungary, Netherlands, United Kingdom</div>
-        <div class="bio-item"><span class="bio-year">2000–2006</span> Engineering Degree (Information Systems &amp; Software Engineering) — EPITA, Le Kremlin-Bicêtre, France</div>
-        <div class="bio-item"><span class="bio-year">1994–1999</span> Diploma with honors (violin) — Conservatoire National de Région de La Réunion (music theory &amp; violin)</div>
-        <div class="bio-item"><span class="bio-year">1996</span> Summer academy — Académie Nationale d'été "Musique au Grand Jardin", Joinville-en-Champagne, France</div>
-        <div class="bio-item"><span class="bio-year">1985–1994</span> École municipale de musique, de danse et d'art dramatique, Saint-Denis, La Réunion</div>
+        <div class="bio-item"><span class="bio-year">2024</span> Training ∙ Pratiquer la Transe Cognitive Auto-Induite dans la perspective d'un usage professionnel dans le secteur artistique ∙ TranceLab Training Institute, La Plaine St. Denis ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2022</span> Certificate ∙ Protocole MBCT Thérapie Cognitive basée sur la Pleine Conscience ∙ MBSR-MBCT Océan Indien ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2021–2022</span> Certificate ∙ Conception et mise en œuvre de la stratégie dans un contexte de Changement ∙ HEC Paris / Fédération des EPL ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2021</span> Permis d'exploitation (débit de boissons) ∙ SEF Marseille ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2021</span> Licence d'entrepreneur de spectacles ∙ PLATESV-R-2021-009234</div>
+        <div class="bio-item"><span class="bio-year">2015</span> Certificate ∙ Managing the Arts: Marketing for Cultural Organizations ∙ Leuphana University / Goethe-Institut ∙ 92/100, 5 ECTS (Feb–May)</div>
+        <div class="bio-item"><span class="bio-year">2008–2010</span> Peer Coaching Certificate (Aug 2010) ∙ L'Académie Transnationale ROOTS &amp; ROUTES ∙ jfc Medienzentrum, Cologne ∙ DE ∙ 2-year EU Lifelong Learning Programme (Leonardo da Vinci) for coaches and talents, France, Germany, Hungary, Netherlands, United Kingdom</div>
+        <div class="bio-item"><span class="bio-year">2000–2006</span> Engineering Degree (Information Systems &amp; Software Engineering) ∙ EPITA, Le Kremlin-Bicêtre ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">1994–1999</span> Diploma with honors (violin) ∙ Conservatoire National de Région de La Réunion (music theory &amp; violin)</div>
+        <div class="bio-item"><span class="bio-year">1996</span> Summer academy ∙ Académie Nationale d'été "Musique au Grand Jardin", Joinville-en-Champagne ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">1985–1994</span> École municipale de musique, de danse et d'art dramatique, Saint-Denis ∙ RE</div>
       </div>
     </div>
 

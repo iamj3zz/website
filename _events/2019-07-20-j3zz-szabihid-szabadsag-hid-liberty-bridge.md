@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 title: J3ZZ x Szabihíd
 date: 2019-07-20
 time: "20:30-21:30"

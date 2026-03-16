@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Sur le fil — Frau Frisor, Florence
 date: 2013-09-12
 time: "20:30"

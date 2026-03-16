@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 title: j3zzlab 00
 date: 2020-05-09
 time: "19:00-21:00"

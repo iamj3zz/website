@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 title: J3ZZ Live Massolit Series #06
 date: 2015-08-19
 time: "20:30"

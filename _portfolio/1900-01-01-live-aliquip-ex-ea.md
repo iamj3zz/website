@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Aliquip Ex Ea
 work_id: aliquip-ex-ea

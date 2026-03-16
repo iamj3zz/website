@@ -1,7 +1,8 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
-title: "All the Promises"
+title: "ALL THE PROMISES"
 work_id: all-the-promises
 abstract: |
   Collaboration album with Michael Kentish featuring violin performance.

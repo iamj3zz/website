@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 layout: work
 title: "MASSOLIT SERIES (Live)"
 work_id: massolit-series-live

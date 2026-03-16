@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: racines-et-resonances
 title: Racines & Résonances - Résonance d'une île Opening
 date: 2025-08-22

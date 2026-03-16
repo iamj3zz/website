@@ -1,7 +1,8 @@
 ---
 published: true
+status: minor
 layout: work
-title: "Petra"
+title: "PETRA"
 work_id: petra
 abstract: |
   A student feature film created by Georgia State University students and directed by Professor Philip Lewis.

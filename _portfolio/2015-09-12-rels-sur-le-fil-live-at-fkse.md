@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 layout: work
 title: "SUR LE FIL (Live at FKSE)"
 work_id: sur-le-fil-live-fkse

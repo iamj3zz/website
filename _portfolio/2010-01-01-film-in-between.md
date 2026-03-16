@@ -1,5 +1,6 @@
 ---
 published: true
+status: minor
 layout: work
 title: "In Between"
 work_id: in-between
@@ -16,8 +17,8 @@ metadata:
   release_date: "2010-01-01"
   role: "composer, producer"
   commissioned_by: "Massih Parsaei"
-  collaborators: "Massih Parsaei (director), JÉRÔME LI-THIAO-TÉ (music composer/producer)"
-  credits: "Director: Massih Parsaei. Music composer/producer: JÉRÔME LI-THIAO-TÉ"
+  collaborators: "Massih Parsaei (director), J3ZZ (music composer/producer)"
+  credits: "Director: Massih Parsaei. Music composer/producer: J3ZZ"
   custom: []
 
 sections:

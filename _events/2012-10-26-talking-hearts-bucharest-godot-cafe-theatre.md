@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Talking heArts — Godot Café, Bucharest
 date: 2012-10-26
 time: ""

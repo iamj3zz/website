@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Hybris"
+title: "HYBRIS"
 work_id: hybris
 abstract: |
   The artist explores the intersection of classical/folk musicianship and improvisation.

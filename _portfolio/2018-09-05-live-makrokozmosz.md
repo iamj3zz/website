@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: major
 layout: work
 title: "Makrokozmosz"
 work_id: makrokozmosz

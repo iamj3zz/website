@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 title: j3zzlab 02
 date: 2020-05-23
 time: "18:30 (Q&A); 19:00 (performance)"

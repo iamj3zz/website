@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Válaszúton / Crossroads"
+title: "CROSSROADS"
 work_id: válaszúton-crossroads
 abstract: |
   The artist composed and produced the soundtrack for director Flora Chilton's short film.

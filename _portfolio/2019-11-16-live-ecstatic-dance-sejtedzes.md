@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Ecstatic Dance + Sejtedzés Matisz Vikivel"
 work_id: ecstatic-dance-sejtedzes

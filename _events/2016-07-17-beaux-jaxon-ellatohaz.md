@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 work_id: beaux-jaxon
 title: Beaux Jaxon ft. J3ZZ
 date: 2016-07-17

@@ -1,7 +1,8 @@
 ---
 published: true
+status: minor
 layout: work
-title: "To be told"
+title: "TO BE TOLD"
 work_id: to-be-told
 abstract: |
   Documentary film about a European residency bringing together twenty citizens from minority groups across the EU to share stories at risk of disappearing. J3ZZ participated as an artist in the residency and served as composer, performer, producer, sound designer, and sound editor of the film.

@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 show_in_grid: false
 layout: work
 title: "Kerveguen Residency"

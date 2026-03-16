@@ -1,7 +1,8 @@
 ---
 published: true
+status: minor
 layout: work
-title: "1000 and 1 realities"
+title: "1000 AND 1 REALITIES"
 work_id: 1000-and-1-realities
 abstract: |
   This visual art initiative focuses on animated films targeting children, youth, and adults.

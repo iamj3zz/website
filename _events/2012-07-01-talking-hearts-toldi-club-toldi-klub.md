@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Talking heArts — Pre-show at Toldi Club
 date: 2012-07-01
 time: ""

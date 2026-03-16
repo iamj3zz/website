@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Promised myself (Acoustic)"
 work_id: promised-myself-acoustic

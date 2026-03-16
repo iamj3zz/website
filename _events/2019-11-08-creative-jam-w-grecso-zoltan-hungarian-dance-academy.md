@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "Creative Jam w/ Grécso Zoltán"
 work_id: creative-jam-grecso
 date: 2019-11-08

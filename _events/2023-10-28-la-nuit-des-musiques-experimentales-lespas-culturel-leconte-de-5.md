@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 title: La nuit des musiques expérimentales #5
 work_id: racines-et-resonances
 date: 2023-10-28

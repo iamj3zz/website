@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Home Base"
+title: "HOME BASE"
 work_id: home-base
 abstract: |
   Space, sound, and dance installation featuring composer/music producer J3ZZ's commissioned soundtrack.

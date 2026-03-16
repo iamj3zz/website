@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 work_id: willany-léo
 title: Willany Leó x J3ZZ - Swipe me right please
 date: 2019-11-13

@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Talking heArts"
+title: "TALKING HEARTS"
 work_id: talking-hearts
 abstract: |
   EU-funded interdisciplinary performing arts project bringing together young music, media and dance artists from four European countries for improvisation-based performances combining visuals, music and movement.

@@ -1,5 +1,6 @@
 ---
 published: true
+status: minor
 layout: work
 title: "Music Maker #2"
 work_id: music-maker-2

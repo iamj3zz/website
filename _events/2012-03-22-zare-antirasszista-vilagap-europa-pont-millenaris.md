@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "Antirasszista Világnap"
 date: "2012-03-22"
 time: "08:00"

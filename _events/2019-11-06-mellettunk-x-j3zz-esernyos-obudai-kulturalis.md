@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "Mellettünk x J3ZZ"
 work_id: mellettunk
 date: 2019-11-06

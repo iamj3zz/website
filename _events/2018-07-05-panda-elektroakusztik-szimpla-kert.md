@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 work_id: panda
 title: Panda Elektroakusztik
 date: 2018-07-05

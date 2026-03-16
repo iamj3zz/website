@@ -1,8 +1,9 @@
 ---
 published: true
+status: major
 layout: work
-title: "Grantraeet"
-work_id: grantraeet
+title: "GRANTRAEET"
+work_id: Grantraeet
 abstract: |
   A modern cinematic adaptation interpreting Hans Christian Andersen's classic tale "The Fir-Tree.
 description: |

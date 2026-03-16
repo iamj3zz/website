@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 title: J3ZZ Live Massolit Series #04
 date: 2015-07-14
 time: "20:30"

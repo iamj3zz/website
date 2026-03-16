@@ -1,7 +1,8 @@
 ---
 published: true
+status: minor
 layout: work
-title: "Far point"
+title: "FAR POINT"
 work_id: far-point
 abstract: |
   A science fiction short film created for the SCI-FI-LONDON 48 Hour Film Challenge 2012.

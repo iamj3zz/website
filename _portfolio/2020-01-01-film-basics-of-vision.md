@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Basics Of Vision"
+title: "BASICS OF VISION"
 work_id: basics-of-vision
 abstract: |
   Medicontur commissioned the creation of a soundtrack for their educational film targeting patients requiring eye surgery.

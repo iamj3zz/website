@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Unbalanced Forces
 date: 2016-02-13
 time: "19:00-20:00"

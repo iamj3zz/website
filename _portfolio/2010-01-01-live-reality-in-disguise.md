@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Reality in Disguise"
+title: "REALITY IN DISGUISE"
 work_id: reality-in-disguise
 abstract: |
   A live interdisciplinary show co-created with artists from 11 European countries, blending violin, composition, contemporary dance, spoken word, and visual arts — developed through residencies in Germany and performed at major European festivals in 2011.

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "So Proud of You"
 work_id: so-proud-of-you

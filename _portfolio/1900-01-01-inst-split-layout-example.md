@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false 
+status: major
 layout: work
 title: Split Layout Example
 work_id: split-layout-example

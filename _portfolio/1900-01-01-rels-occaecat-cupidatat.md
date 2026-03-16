@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Occaecat Cupidatat
 work_id: occaecat-cupidatat

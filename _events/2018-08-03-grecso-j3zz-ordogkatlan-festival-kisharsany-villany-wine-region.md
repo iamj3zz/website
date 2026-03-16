@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: grecso-j3zz-ordogkatlan
 title: Grecsó / J3ZZ - Ördögkatlan Festival
 date: 2018-08-03

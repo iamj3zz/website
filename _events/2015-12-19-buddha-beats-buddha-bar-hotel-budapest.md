@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 work_id: buddha-bar-budapest
 title: Buddha-Beats
 date: 2015-12-19

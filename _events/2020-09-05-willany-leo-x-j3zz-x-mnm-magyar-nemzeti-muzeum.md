@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 work_id: willany-léo
 title: Willany Leó x J3ZZ x MNM
 date: 2020-09-05

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "The Last Drops"
 date: "2009-01-15"
 time: "19:00"

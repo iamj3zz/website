@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: n7n8-festival
 title: J3ZZ Live at N7N8 Festival
 date: 2015-04-11

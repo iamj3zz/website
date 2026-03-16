@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 work_id: panda
 title: PANDA & J3ZZ / Kazinczy Street Festival
 date: 2019-05-11

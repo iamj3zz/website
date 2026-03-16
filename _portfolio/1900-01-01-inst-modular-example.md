@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Modular Layout Example
 work_id: modular-layout-example

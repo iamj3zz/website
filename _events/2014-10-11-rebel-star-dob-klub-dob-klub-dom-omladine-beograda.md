@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "Rebel Star at DOB // Klub"
 date: "2014-10-11"
 time: "21:00"

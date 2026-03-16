@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 layout: work
 title: |
   Best Friend's Wife's Lover

@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: sur-le-fil
 title: NEVER BORN [Crowdfunding Snack]
 date: 2018-08-02

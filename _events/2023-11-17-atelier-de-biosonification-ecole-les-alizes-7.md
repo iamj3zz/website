@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 title: Biosonification Workshop — École Les Alizés, Entre-Deux
 work_id: biosonification-workshops
 date: 2023-11-17

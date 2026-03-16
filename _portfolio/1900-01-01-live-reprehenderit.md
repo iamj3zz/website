@@ -9,6 +9,7 @@ description: |
 category: live-acts
 image: /assets/works/1900-01-01-reprehenderit/thumbnail.jpg
 published: false
+status: draft
 
 # Define metadata once here
 metadata:

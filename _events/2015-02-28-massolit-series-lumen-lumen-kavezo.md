@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: massolit-series
 title: J3ZZ Live at Lumen
 date: 2015-02-28

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: major
 layout: work
 title: "Flying Istanbul"
 work_id: flying-istanbul

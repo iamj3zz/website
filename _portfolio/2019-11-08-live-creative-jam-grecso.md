@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Creative Jam w/ Grécso Zoltán"
 work_id: creative-jam-grecso

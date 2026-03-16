@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Sur le fil — Living Gallery, Budapest
 date: 2016-04-02
 time: "19:00"

@@ -9,6 +9,7 @@ description: |
 category: releases
 image: /assets/works/1900-01-01-tempor-incididunt/thumbnail.jpg
 published: false
+status: draft
 
 # Define metadata once here
 metadata:

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "Harmónia az Emberiességért — Daniel Pearl World Music Days"
 date: "2012-10-10"
 time: "20:00"

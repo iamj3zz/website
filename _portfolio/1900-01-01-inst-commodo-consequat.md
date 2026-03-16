@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Commodo Consequat
 work_id: commodo-consequat

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Flying Istanbul Trailer"
 work_id: flying-istanbul-trailer

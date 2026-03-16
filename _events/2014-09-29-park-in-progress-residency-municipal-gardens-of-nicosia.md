@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Park in Progress 11 — Artistic Residency & Installation
 date: 2014-09-29
 time:

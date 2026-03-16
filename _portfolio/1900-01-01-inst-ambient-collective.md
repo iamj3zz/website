@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Ambient Collective
 work_id: ambient-collective

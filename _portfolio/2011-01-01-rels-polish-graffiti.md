@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 layout: work
 title: "Polish Graffiti"
 work_id: polish-graffiti

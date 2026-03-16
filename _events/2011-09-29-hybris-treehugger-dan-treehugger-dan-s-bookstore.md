@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: "Hybris"
 date: "2011-09-29"
 work_id: hybris

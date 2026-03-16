@@ -1,5 +1,6 @@
 ---
 published: true
+status: minor
 layout: work
 title: "Modeo"
 work_id: modeo

@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Reality in Disguise — Sziget Festival
 date: 2011-08-09
 time:

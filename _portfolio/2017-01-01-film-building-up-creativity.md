@@ -1,7 +1,8 @@
 ---
 published: true
+status: minor
 layout: work
-title: "Building up creativity"
+title: "BUILDING UP CREATIVITY"
 work_id: building-up-creativity
 abstract: |
   A composer-producer contributed to this dance short film examining PhD research on how people evaluate creative ideas.

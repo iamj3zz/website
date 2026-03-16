@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Home Base
 date: 2016-10-05
 time: "19:00"

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: draft
 layout: work
 title: Fine Arts Sample
 work_id: fine-arts-sample

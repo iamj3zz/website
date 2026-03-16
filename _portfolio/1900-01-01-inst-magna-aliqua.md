@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Magna Aliqua
 work_id: magna-aliqua

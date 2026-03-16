@@ -1,7 +1,8 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
-title: "Home Base 01 / 02 / 03 Trailers"
+title: "HOME BASE 01 / 02 / 03 Trailers"
 work_id: home-base-trailers
 abstract: "The composer created music for three trailers for Noémi Kulcsár's dance performance \"Home Base\" in 2016."
 description: |

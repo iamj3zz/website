@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 work_id: willany-léo
 title: Willany Leó x Kálvin tér - Belly of the Beat
 date: 2020-06-20

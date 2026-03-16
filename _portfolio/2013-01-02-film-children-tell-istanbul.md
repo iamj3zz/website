@@ -1,7 +1,8 @@
 ---
 published: true
+status: minor
 layout: work
-title: "Children Tell Istanbul"
+title: "CHILDREN TELL ISTANBUL"
 work_id: children-tell-istanbul
 abstract: "The composer created music for Olga Pavlenko's documentary \"Children tell Istanbul\" in 2013."
 description: |

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: Indigo Theory feat. J3ZZ
 date: 2016-04-08
 time: "23:30"

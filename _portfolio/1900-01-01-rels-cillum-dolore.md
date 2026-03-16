@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Cillum Dolore
 work_id: cillum-dolore

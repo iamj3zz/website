@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Voluptate Velit
 work_id: voluptate-velit

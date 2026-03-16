@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 layout: work
 title: "N7N8 Festival (Live)"
 work_id: n7n8-festival-live

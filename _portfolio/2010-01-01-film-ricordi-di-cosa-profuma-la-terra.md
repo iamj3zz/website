@@ -1,5 +1,6 @@
 ---
 published: true
+status: minor
 layout: work
 title: "Ricordi di cosa profuma la terra"
 work_id: ricordi-di-cosa-profuma-la-terra

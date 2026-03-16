@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 layout: work
 title: "Racines & Résonances"
 work_id: racines-et-resonances

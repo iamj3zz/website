@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "EUtropia"
+title: "EUTROPIA"
 work_id: eutropia
 abstract: |
   A multidisciplinary European cultural initiative involving young artists from nine countries creating evolving performances across Europe.

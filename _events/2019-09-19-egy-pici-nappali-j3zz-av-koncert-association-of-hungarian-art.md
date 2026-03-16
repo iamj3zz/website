@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: "egy pici nappali — J3ZZ AV koncert"
 work_id: racines-et-resonances
 date: 2019-09-19

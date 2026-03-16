@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Unbalanced Forces"
+title: "UNBALANCED FORCES"
 work_id: unbalanced-forces
 abstract: |
   A sonic exploration of action and intervention.

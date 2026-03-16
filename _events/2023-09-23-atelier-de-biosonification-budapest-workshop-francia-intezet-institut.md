@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 work_id: biosonification-workshops
 title: Biosonification workshop (Budapest Workshop)
 date: 2023-09-23

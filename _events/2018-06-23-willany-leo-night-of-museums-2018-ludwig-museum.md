@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 work_id: willany-léo
 title: Willany Leó - Night of Museums 2018
 date: 2018-06-23

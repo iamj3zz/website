@@ -1,5 +1,6 @@
 ---
-published: true 
+published: false
+status: archived
 work_id: willany-léo
 title: Willany Leó - Szabihíd 2019
 date: 2019-07-14

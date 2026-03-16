@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "A Drop in the Ocean"
+title: "A DROP IN THE OCEAN"
 work_id: a-drop-in-the-ocean
 abstract: |
   An album exploring themes of scale, perspective, and the relationship between the individual and the vast.

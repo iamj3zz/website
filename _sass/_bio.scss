@@ -85,18 +85,26 @@
 
 .bio-section-subtitle {
   display: block;
-  font-size: 13px;
-  font-weight: normal;
-  text-transform: none;
-  letter-spacing: normal;
-  color: #595959;
-  margin-top: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: #333;
+  margin-top: 30px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.bio-category > .bio-section-subtitle:first-of-type {
+  margin-top: 0;
 }
 
 .bio-items {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-bottom: 8px;
 }
 
 .bio-item {
@@ -162,6 +170,13 @@
 
   .bio-category h2 {
     font-size: 14px;
+  }
+
+  .bio-section-subtitle {
+    margin-top: 24px;
+    margin-bottom: 10px;
+    font-size: 11px;
+    padding-bottom: 6px;
   }
 
   .bio-item {

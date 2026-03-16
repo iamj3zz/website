@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
 title: "Mellettünk x J3ZZ"
 work_id: mellettunk

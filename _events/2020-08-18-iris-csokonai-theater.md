@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 work_id: iris
 title: "Lighthouse: O N / Light Art Exhibition"
 date: 2020-08-18

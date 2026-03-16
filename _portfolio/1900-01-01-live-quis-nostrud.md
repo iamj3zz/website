@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Quis Nostrud
 work_id: quis-nostrud

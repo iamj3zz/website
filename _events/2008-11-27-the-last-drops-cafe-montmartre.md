@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "The Last Drops at Café Montmartre"
 date: "2008-11-27"
 time: "20:00"

@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "What happens when you touch it"
+title: "WHAT HAPPENS WHEN YOU TOUCH IT"
 work_id: what-happens-when-you-touch-it
 abstract: |
   This collaborative project involved composing and producing the complete soundtrack for a dance performance by EnKnapGroup, a Ljubljana-based dance company.

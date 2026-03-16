@@ -1,5 +1,6 @@
 ---
 published: true
+status: minor
 title: Modeo — ELECTRIFY SERIES Vol. 7, Trafó
 date: 2015-04-18
 time: "18:06"

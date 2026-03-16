@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Sur le fil"
+title: "SUR LE FIL"
 work_id: sur-le-fil
 abstract: |
   Solo violin improvisation show — nude and contemporary acoustic violin, performed live without preparation. Two recordings released on Bandcamp.

@@ -1,7 +1,8 @@
 ---
 published: true
+status: major
 layout: work
-title: "Touch me not / Nebáncsvirág"
+title: "TOUCH ME NOT"
 work_id: touch-me-not-nebáncsvirág
 abstract: |
   A contemporary dance piece exploring adolescence through the lives of four teenagers.

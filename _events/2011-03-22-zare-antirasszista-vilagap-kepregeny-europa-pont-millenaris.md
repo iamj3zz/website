@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "Képregény-kiállítás és party az Antirasszista Világnapon"
 date: "2011-03-22"
 time: "09:00"

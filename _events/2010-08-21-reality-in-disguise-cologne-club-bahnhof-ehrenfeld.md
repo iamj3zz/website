@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 title: Reality in Disguise — Roots&Routes Festival, Cologne
 date: 2010-08-21
 time:

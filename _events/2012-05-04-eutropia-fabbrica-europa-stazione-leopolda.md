@@ -1,5 +1,6 @@
 ---
 published: true
+status: major
 work_id: eutropia
 title: Eutropia - Fabbrica Europa Festival
 date: 2012-05-04

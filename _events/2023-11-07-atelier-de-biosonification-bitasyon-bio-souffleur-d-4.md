@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 work_id: biosonification-workshops
 title: "Biosonification Workshop — Bitasyon Bio Souffleur d'Arbonne, Saint-Philippe"
 date: 2023-11-07

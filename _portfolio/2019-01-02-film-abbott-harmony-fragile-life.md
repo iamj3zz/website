@@ -1,7 +1,8 @@
 ---
-published: true
+published: false
+status: minor
 layout: work
-title: "Abbott - Harmony & a Fragile Life"
+title: "HARMONY & A FRAGILE LIFE"
 work_id: abbott-harmony-fragile-life
 abstract: "Business Influencer Campaign for Abbott featuring the artist as performer in 2019."
 description: |

@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "Michael Kentish feat. J3ZZ"
 work_id: michael-kentish-live
 date: 2016-02-04

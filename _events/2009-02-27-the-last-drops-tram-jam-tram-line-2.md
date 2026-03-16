@@ -1,5 +1,6 @@
 ---
-published: true
+published: false
+status: archived
 title: "The Last Drops — Tram Jam"
 date: "2009-02-27"
 time: "14:00"

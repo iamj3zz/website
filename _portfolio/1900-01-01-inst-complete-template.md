@@ -1,5 +1,6 @@
 ---
-published: false 
+published: false
+status: major
 layout: work
 title: Complete Template Reference
 work_id: complete-template-reference

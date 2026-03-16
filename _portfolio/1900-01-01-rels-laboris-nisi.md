@@ -1,5 +1,6 @@
 ---
 published: false 
+status: major
 layout: work
 title: Laboris Nisi
 work_id: laboris-nisi

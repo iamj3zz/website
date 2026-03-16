@@ -1,5 +1,6 @@
 ---
-published: true 
+published: true
+status: major
 work_id: biosonification-workshops
 title: Vibrotanica dann lekol - cursus scolaire
 date: 2023-12-18
