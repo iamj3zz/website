@@ -52,8 +52,8 @@ links:
 
     <div class="bio-category" id="bio-installations">
       <h2>Installations &amp; Exhibitions</h2>
-      <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2026</span> <a href="/works/2026-01-01-inst-vibrotanica/">VIBROTANICA</a> ∙ work in progress</div>
+      <div class="bio-items">      
+        <div class="bio-item"><span class="bio-year"><script>document.write(new Date().getFullYear())</script></span> <a href="/works/2026-01-01-inst-vibrotanica/">VIBROTANICA</a> ∙ work in progress</div>
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-18-inst-iris/">IRIS</a> ∙ sound design &amp; composition ∙ Csokonai Theatre, Debrecen ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-13-inst-unbalanced-forces/">UNBALANCED FORCES</a> ∙ programming &amp; composition ∙ Lábor Gallery, Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">PARK IN PROGRESS</a> ∙ Municipal Gardens, Nicosia ∙ CY</div>
@@ -150,6 +150,7 @@ links:
 
       <div class="bio-section-subtitle">Collaborations</div>
       <div class="bio-items">
+        <div class="bio-item"><span class="bio-year">2009–<script>document.write(new Date().getFullYear())</script></span><a href="/works/2009-01-01-live-willany-leo/"> WILLANY LEO</a></div>
         <div class="bio-item"><span class="bio-year">2018–2019</span> <a href="/works/2018-07-05-live-panda/">DJ PANDA ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-08-03-live-grecso-j3zz-ordogkatlan/">GRECSÓ ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2013–2017</span><a href="/works/2013-01-01-live-buddha-bar-budapest/"> BUDDHA BAR ft J3ZZ</a></div>
@@ -160,7 +161,6 @@ links:
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2015-04-18-live-modeo/"> SUMMER SUITE ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2010–2012</span> <a href="/works/2011-04-03-live-iparkutya/"> IPARKUTYA </a></div>
         <div class="bio-item"><span class="bio-year">2010</span><a href="/works/2015-04-18-live-modeo/"> KOUDEDE / TARTIT ft. J3ZZ </a></div>
-        <div class="bio-item"><span class="bio-year">2009–<script>document.write(new Date().getFullYear())</script></span><a href="/works/2009-01-01-live-willany-leo/"> WILLANY LEO</a></div>
         <div class="bio-item"><span class="bio-year">2008–2010</span> <a href="/works/2008-11-27-live-the-last-drops/"> THE LAST DROPS </a></div>
       </div>
     </div>
