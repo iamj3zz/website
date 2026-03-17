@@ -34,13 +34,131 @@
   </header>
 
   <main class="site-content">
-    <article class="bio-gallery-container">
-      <!-- <div class="bio-gallery-header">
+    <article class="artwork-detail">
+      <div class="artwork-header">
+        <p class="artwork-medium">{{ page.medium | upcase }}{% if page.year %} · {{ page.year }}{% endif %}</p>
         <h1>{{ page.title }}</h1>
-      </div> -->
 
-      <div class="bio-gallery-content">
-        {{ content }}
+        {% comment %} Artwork status badge {% endcomment %}
+        {% if page.status == "sold" %}
+          <div class="artwork-status artwork-status--sold">SOLD</div>
+        {% elsif page.status == "reserved" %}
+          <div class="artwork-status artwork-status--reserved">RESERVED</div>
+        {% elsif page.status == "available" %}
+          <div class="artwork-status artwork-status--available">AVAILABLE</div>
+        {% endif %}
+
+        {% comment %} Page metadata: last updated date {% endcomment %}
+        <div class="work-page-metadata">
+          <span class="metadata-item">Updated {{ page.last_modified_at | date: "%b %-d, %Y" }}</span>
+        </div>
+      </div>
+
+      {% comment %} Modular sections system {% endcomment %}
+      {% if page.sections %}
+        <div class="work-modules">
+          {% for section in page.sections %}
+            {% include work-modules/{{ section.type }}.html
+               content_type=section.content_type
+               image=section.image
+               alt=section.alt
+               caption=section.caption
+               title=section.title
+               content=section.content
+               images=section.images
+               captions=section.captions
+               columns=section.columns
+               platform=section.platform
+               video_id=section.video_id
+               url=section.url
+               height=section.height
+               year=section.year
+               year_link=section.year_link
+               date=section.date
+               date_link=section.date_link
+               location=section.location
+               location_link=section.location_link
+               custom=section.custom
+               text=section.text
+               author=section.author
+               embed_code=section.embed_code
+               responsive=section.responsive
+               aspect_ratio=section.aspect_ratio
+            %}
+          {% endfor %}
+        </div>
+      {% else %}
+        {% comment %} Fallback to old structure for backward compatibility {% endcomment %}
+        <div class="work-image">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+        </div>
+
+        <div class="work-content">
+          {{ content }}
+        </div>
+      {% endif %}
+
+      {% comment %} Inquiry block for available artworks {% endcomment %}
+      {% if page.status == "available" %}
+        <div class="artwork-inquiry">
+          <a href="mailto:{{ site.email }}?subject=Inquiry: {{ page.title | url_encode }}" class="artwork-inquiry-link">Inquire about this work</a>
+        </div>
+      {% endif %}
+
+      <div class="work-nav">
+        <div class="work-nav-left">
+          {% comment %} Find previous published artwork (older) {% endcomment %}
+          {% assign prev_artwork = nil %}
+          {% assign sorted_artworks_reverse = site.artworks | sort: 'year' | reverse %}
+          {% assign found_current_prev = false %}
+          {% for artwork in sorted_artworks_reverse %}
+            {% if found_current_prev and artwork.published != false %}
+              {% assign prev_artwork = artwork %}
+              {% break %}
+            {% endif %}
+            {% if artwork.url == page.url %}
+              {% assign found_current_prev = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% if prev_artwork %}
+            <a href="{{ prev_artwork.url | relative_url }}" class="work-nav-link">
+              <span class="nav-arrow">&larr;</span>
+              <span class="nav-label">{{ prev_artwork.title }}</span>
+            </a>
+          {% else %}
+            <span class="work-nav-disabled"></span>
+          {% endif %}
+        </div>
+
+        <div class="work-nav-center">
+          <a href="{{ '/gallery/' | relative_url }}" class="back-to-works">Back to Gallery</a>
+        </div>
+
+        <div class="work-nav-right">
+          {% comment %} Find next published artwork (newer) {% endcomment %}
+          {% assign next_artwork = nil %}
+          {% assign found_current = false %}
+          {% assign sorted_artworks = site.artworks | sort: 'year' %}
+          {% for artwork in sorted_artworks %}
+            {% if found_current and artwork.published != false %}
+              {% assign next_artwork = artwork %}
+              {% break %}
+            {% endif %}
+            {% if artwork.url == page.url %}
+              {% assign found_current = true %}
+            {% endif %}
+          {% endfor %}
+
+          {% if next_artwork %}
+            <a href="{{ next_artwork.url | relative_url }}" class="work-nav-link">
+              <span class="nav-label">{{ next_artwork.title }}</span>
+              <span class="nav-arrow">&rarr;</span>
+            </a>
+          {% else %}
+            <span class="work-nav-disabled"></span>
+          {% endif %}
+        </div>
       </div>
     </article>
   </main>
@@ -150,6 +268,5 @@
   <script src="{{ '/assets/js/navigation.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/qrcode.min.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/print-header-qrcode.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/bio-gallery-qrcode.js' | relative_url }}" defer></script>
 </body>
 </html>

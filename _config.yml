@@ -86,9 +86,20 @@ collections:
     output: true
     permalink: /works/:name/
     sort_by: order
+  artworks:
+    output: true
+    permalink: /gallery/:name/
   events:
     output: false
     sort_by: date
+
+defaults:
+  - scope:
+      path: ""
+      type: "artworks"
+    values:
+      layout: artwork
+      published: true
 
 # Build settings
 future: true  # Allow posts/collections with future dates

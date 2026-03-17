@@ -1,0 +1,267 @@
+/* ============================================================
+   Gallery - Index page and artwork detail page styles
+   ============================================================ */
+
+/* Gallery Grid Index Page */
+
+.gallery-section {
+  padding: var(--spacing-2xl) 0;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 7.5px;
+  margin: var(--spacing-2xl) 0;
+}
+
+.gallery-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: var(--color-background-light);
+  border: 1px solid var(--color-border);
+
+  &--sold,
+  &--reserved {
+    opacity: 0.7;
+  }
+}
+
+.gallery-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--transition-speed) ease;
+  }
+
+  &:hover img {
+    transform: scale(1.05);
+  }
+
+  &:hover .gallery-overlay {
+    opacity: 1;
+  }
+}
+
+.gallery-status-badge {
+  position: absolute;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 10;
+  border-radius: var(--border-radius);
+
+  &--sold {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+
+  &--reserved {
+    background: rgba(255, 152, 0, 0.8);
+    color: white;
+  }
+}
+
+.gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--spacing-lg);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+  color: white;
+  opacity: 0;
+  transition: opacity var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+
+  h2 {
+    margin: 0 0 var(--spacing-xs) 0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+  }
+
+  p {
+    margin: 0;
+    font-size: 0.85rem;
+    opacity: 0.9;
+  }
+}
+
+.gallery-overlay-medium {
+  font-style: italic;
+}
+
+.gallery-overlay-year {
+  margin-top: var(--spacing-xs);
+}
+
+/* Responsive: 2 columns at 768px */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive: 1 column at 480px */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+}
+
+/* ============================================================
+   Artwork Detail Page Styles
+   ============================================================ */
+
+.artwork-detail {
+  padding: var(--spacing-3xl) 0;
+}
+
+.artwork-header {
+  position: relative;
+  margin-bottom: var(--spacing-3xl);
+
+  .artwork-medium {
+    color: var(--color-text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin: 0 0 var(--spacing-sm) 0;
+  }
+
+  h1 {
+    margin: 0 0 var(--spacing-md) 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+  }
+
+  .work-page-metadata {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+  }
+}
+
+.artwork-status {
+  display: inline-block;
+  padding: var(--spacing-sm) var(--spacing-md);
+  margin: var(--spacing-md) 0;
+  font-size: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  border-radius: var(--border-radius);
+
+  &--available {
+    background: rgba(76, 175, 80, 0.2);
+    color: #2e7d32;
+  }
+
+  &--sold {
+    background: rgba(0, 0, 0, 0.1);
+    color: var(--color-text);
+  }
+
+  &--reserved {
+    background: rgba(255, 152, 0, 0.2);
+    color: #e65100;
+  }
+}
+
+.artwork-inquiry {
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--spacing-2xl) 0;
+  margin: var(--spacing-3xl) 0;
+  text-align: center;
+}
+
+.artwork-inquiry-link {
+  display: inline-block;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-link);
+  color: white;
+  text-decoration: none;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: all var(--transition-speed) ease;
+
+  &:hover {
+    filter: brightness(0.85);
+    transform: translateY(-2px);
+  }
+}
+
+/* Print styles for gallery */
+@media print {
+  .gallery-grid {
+    display: block;
+  }
+
+  .gallery-item {
+    aspect-ratio: auto;
+    display: flex;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+    page-break-inside: avoid;
+    border: none;
+
+    img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+  }
+
+  .gallery-link {
+    display: flex;
+    gap: var(--spacing-lg);
+  }
+
+  .gallery-overlay {
+    position: static;
+    opacity: 1;
+    background: none;
+    padding: 0;
+    height: auto;
+
+    h2,
+    p {
+      color: var(--color-text);
+    }
+  }
+
+  .gallery-status-badge {
+    position: static;
+    display: inline;
+    padding: 0;
+    background: none;
+    font-size: 0.75rem;
+    margin-left: var(--spacing-sm);
+  }
+
+  .artwork-inquiry {
+    display: none;
+  }
+}
