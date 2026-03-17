@@ -1,5 +1,6 @@
 ---
-published: false
+published: true
+show_in_grid: false
 status: archived
 layout: work
 title: "Willany léo"

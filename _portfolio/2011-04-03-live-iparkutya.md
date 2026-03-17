@@ -1,6 +1,7 @@
 ---
-published: false
-status: major
+published: true
+show_in_grid: false
+status: archived
 layout: work
 title: "IparKutya"
 work_id: iparkutya

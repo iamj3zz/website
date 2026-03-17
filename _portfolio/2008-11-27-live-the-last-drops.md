@@ -1,5 +1,6 @@
 ---
-published: false
+published: true
+show_in_grid: false
 status: archived
 layout: work
 title: "The Last Drops"
@@ -21,12 +22,12 @@ metadata:
   custom:
     - label: "band members"
       value: "Matthew Liddle (lead vocals, guitar), J3ZZ (violin, mandolin), Sandor Kubicsko (guitar), Csaba Czinner (bass guitar), Gregory Zeigler (vocals, drums)"
-    - label: "Release"
-      value: "Harry Power — single"
-      link: "/works/2009-01-01-rels-harry-power/"
-    - label: "Release"
-      value: "Gin & Juice / Wagon Wheel — live video"
-      link: "/works/2009-01-01-rels-the-last-drops-tram/"
+    # - label: "Release"
+    #   value: "Harry Power — single"
+    #   link: "/works/2009-01-01-rels-harry-power/"
+    # - label: "Release"
+    #   value: "Gin & Juice / Wagon Wheel — live video"
+    #   link: "/works/2009-01-01-rels-the-last-drops-tram/"
 
 sections:
   - type: description
