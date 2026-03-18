@@ -19,7 +19,6 @@ description: |
   The eight works of *Igneous* trace formation from primordial density through the moment of rupture. *Void Emergence* reveals what lies beneath the surface — that emptiness is not absence but presence, that the void is as substantial as stone.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-02-void-emergence/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

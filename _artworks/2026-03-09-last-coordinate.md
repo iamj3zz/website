@@ -19,7 +19,6 @@ description: |
   The eight works of *Erosion* begin where *Igneous* ends — at rupture — and follow matter as it disperses. *Last Coordinate* marks the final boundary where the world still makes sense, before dissolution begins in earnest.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-09-last-coordinate/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

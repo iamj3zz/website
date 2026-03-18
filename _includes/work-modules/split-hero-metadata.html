@@ -19,8 +19,67 @@
   - All standard metadata fields supported
 {% endcomment %}
 
-<div class="module module-split-hero-metadata">
+<div class="module module-split-hero-metadata {% if page.layout == 'artwork' %}artwork-hero{% endif %}">
   <div class="split-container">
+
+    {% comment %} Right column - Metadata (1/3 width or full width on artwork pages) - MOVED ABOVE IMAGE {% endcomment %}
+    {% if include.page_layout == 'artwork' or page.layout == 'artwork' %}
+    <div class="split-right">
+      {% include work-modules/metadata.html
+         year=include.year
+         year_link=include.year_link
+         date=include.date
+         date_link=include.date_link
+         isrc=include.isrc
+         isrc_link=include.isrc_link
+         upc=include.upc
+         upc_link=include.upc_link
+         iswc=include.iswc
+         iswc_link=include.iswc_link
+         location=include.location
+         location_link=include.location_link
+         performed_in=include.performed_in
+         performed_in_link=include.performed_in_link
+         places=include.places
+         places_link=include.places_link
+         produced_by=include.produced_by
+         produced_by_link=include.produced_by_link
+         client=include.client
+         client_link=include.client_link
+         commissioned_by=include.commissioned_by
+         commissioned_by_link=include.commissioned_by_link
+         curated_by=include.curated_by
+         curated_by_link=include.curated_by_link
+         role=include.role
+         role_link=include.role_link
+         technology=include.technology
+         technology_link=include.technology_link
+         collaborators=include.collaborators
+         collaborators_link=include.collaborators_link
+         credits=include.credits
+         credits_link=include.credits_link
+         partners=include.partners
+         partners_link=include.partners_link
+         supporters=include.supporters
+         supporters_link=include.supporters_link
+         composer_performer_producer=include.composer_performer_producer
+         composer_performer_producer_link=include.composer_performer_producer_link
+         mastering_by=include.mastering_by
+         mastering_by_link=include.mastering_by_link
+         artwork_by=include.artwork_by
+         artwork_by_link=include.artwork_by_link
+         interview=include.interview
+         interview_link=include.interview_link
+         press_kit=include.press_kit
+         press_kit_link=include.press_kit_link
+         socials=include.socials
+         socials_link=include.socials_link
+         special_thanks=include.special_thanks
+         special_thanks_link=include.special_thanks_link
+         custom=include.custom
+      %}
+    </div>
+    {% endif %}
 
     {% comment %} Left column - Hero content (2/3 width) {% endcomment %}
     <div class="split-left">
@@ -115,7 +174,8 @@
       {% endif %}
     </div>
 
-    {% comment %} Right column - Metadata (1/3 width) {% endcomment %}
+    {% comment %} Right column - Metadata (1/3 width) - only for work pages, already moved above for artwork pages {% endcomment %}
+    {% unless page.layout == 'artwork' %}
     <div class="split-right">
       {% include work-modules/metadata.html
          year=include.year
@@ -171,6 +231,7 @@
          custom=include.custom
       %}
     </div>
+    {% endunless %}
 
   </div>
 </div>

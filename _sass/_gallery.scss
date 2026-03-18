@@ -215,6 +215,52 @@
   }
 }
 
+/* Artwork Hero - Full-width first image on artwork detail page */
+.artwork-detail .module-split-hero-metadata.artwork-hero {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 60px;
+}
+
+.artwork-detail .module-split-hero-metadata.artwork-hero .split-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.artwork-detail .module-split-hero-metadata.artwork-hero .split-left {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.artwork-detail .module-split-hero-metadata.artwork-hero .split-right {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Compact metadata layout for artwork hero section */
+.artwork-detail .module-split-hero-metadata.artwork-hero .module-metadata {
+  padding: 10px 15px;
+}
+
+.artwork-detail .module-split-hero-metadata.artwork-hero .metadata-grid {
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px 20px;
+}
+
+.artwork-detail .module-split-hero-metadata.artwork-hero .metadata-item {
+  gap: 2px;
+}
+
+.artwork-detail .module-split-hero-metadata.artwork-hero .metadata-label {
+  font-size: 9px;
+}
+
+.artwork-detail .module-split-hero-metadata.artwork-hero .metadata-value {
+  font-size: 12px;
+  line-height: 1.3;
+}
+
 /* Print styles for gallery */
 @media print {
   .gallery-grid {

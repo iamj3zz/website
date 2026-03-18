@@ -19,7 +19,6 @@ description: |
   *Compressed Time* closes the igneous phase — geology's paradox where epochs compress into moments. Radiating forces collide in explosive transformation, frozen stone capturing the instant of rupture.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-08-compressed-time/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

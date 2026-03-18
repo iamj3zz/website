@@ -19,7 +19,6 @@ description: |
   The eight works of *Igneous* trace formation through increasing chaos and density. *Debris Field* captures matter at maximum fragmentation — order still visible but beginning to dissolve.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-03-debris-field/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

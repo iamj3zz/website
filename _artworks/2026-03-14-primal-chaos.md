@@ -19,7 +19,6 @@ description: |
   *Primal Chaos* shows chaos as dynamic force — lines explode from multiple centers in competing energies. Dissolution becomes unstoppable power, the energy released when systems fragment beyond recovery.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-14-primal-chaos/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

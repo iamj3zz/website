@@ -19,7 +19,6 @@ description: |
   *Inverted Territory* inverts the relationship between matter and void — what was dense becomes sparse. Complete dissolution creates a new order: scattered islands, each irreplaceable, yet fundamentally alone.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-12-inverted-territory/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

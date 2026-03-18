@@ -19,7 +19,6 @@ description: |
   *Saturated Network* shows matter under maximum stress — compressed yet maintaining order. The entire surface is saturated with parallel lines, where pressure becomes presence itself.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-06-saturated-network/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

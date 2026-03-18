@@ -18,8 +18,13 @@ description: |
 
   *Fading Lines* closes the series — the final moment where form returns to emptiness. Lines thin and fade gradually, matter scattering endlessly, completing a cycle. A gentle letting go containing both loss and the return of new possibilities.
 
+  *Fading Lines* is part of **Cartography of Collapse**, a series of 16 original ink drawings on paper (2026) tracing geological transformation from formation through dissolution. Created in a single session without revision — the irreversible line mirroring the irreversibility of geological processes.
+
+  Each drawing is improvised, capturing moments in matter's transformation across deep time. The series moves in two acts: *Igneous* (formation, density, compression) and *Erosion* (dissolution, dispersal, return to void).
+
+  **Certificate of Authenticity** included with acquisition.
+
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-16-fading-lines/print.png
@@ -37,13 +42,5 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
-  - type: text
-    content: |
-      ## About This Work
-
-      *Fading Lines* is part of **Cartography of Collapse**, a series of 16 original ink drawings on paper (2026) tracing geological transformation from formation through dissolution. Created in a single session without revision — the irreversible line mirroring the irreversibility of geological processes.
-
-      Each drawing is improvised, capturing moments in matter's transformation across deep time. The series moves in two acts: *Igneous* (formation, density, compression) and *Erosion* (dissolution, dispersal, return to void).
-
-      **Certificate of Authenticity** included with acquisition.
+  - type: description  
 ---

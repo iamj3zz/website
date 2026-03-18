@@ -19,7 +19,6 @@ description: |
   *Layered Collapse* is the threshold — where order meets chaos, where the system fails. The horizontal line that divides two incompatible realities marks the moment of rupture.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-04-layered-collapse/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

@@ -19,7 +19,6 @@ description: |
   *Organic Terrain* reveals erosion as creative force — where destruction and creation are partners. Curves replace angles; new shapes emerge through dissolution as matter transforms into possibility.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-13-organic-terrain/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

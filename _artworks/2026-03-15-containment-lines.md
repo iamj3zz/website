@@ -19,7 +19,6 @@ description: |
   *Containment Lines* shows order's last resistance — geometric lines attempting to contain eroding topography. Neither logic wins; they coexist in uneasy tension, briefly suspended, never resolved.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-15-containment-lines/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

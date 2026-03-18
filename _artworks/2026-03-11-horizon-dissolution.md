@@ -19,7 +19,6 @@ description: |
   *Horizon Dissolution* erases spatial orientation — the horizon vanishes, the final reference point dissolves. With no clear up or down, all orientation becomes impossible.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-11-horizon-dissolution/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

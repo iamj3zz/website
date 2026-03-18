@@ -19,7 +19,6 @@ description: |
   *Scattered Archipelago* follows collapse — unity dissolves into islands. Each mass is complete yet fundamentally disconnected, separated by the void that now defines their relationship.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-05-scattered-archipelago/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

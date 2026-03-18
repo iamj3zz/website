@@ -19,7 +19,6 @@ description: |
   The eight works of *Igneous* begin in darkness and density. These are drawings of formation: of geological pressure, of matter compressed into shape, of the moment before rupture. *Fractured System* is the opening statement — the primordial form emerging from void, the first curve in a series that will trace matter's transformation across deep time.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-01-fractured-system/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work

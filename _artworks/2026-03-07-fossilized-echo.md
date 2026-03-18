@@ -19,7 +19,6 @@ description: |
   *Fossilized Echo* culminates the igneous phase — matter so transformed that only echoes remain. Maximum chaos containing the compressed record of deep time, a perfect archive of transformation.
 
 sections:
-  - type: description
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-07-fossilized-echo/print.png
@@ -37,6 +36,7 @@ sections:
         value: "Unique, non-editioned original"
       - label: "Status"
         value: "Available"
+  - type: description
   - type: text
     content: |
       ## About This Work
