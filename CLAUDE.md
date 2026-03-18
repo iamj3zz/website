@@ -35,6 +35,91 @@ J3ZZ's career arc: violinist/musician (2008–2015) → film composer/performer 
 ### Portfolio Grid Purpose
 The grid should answer: "What does J3ZZ make?" — answer with installations first (new media identity), then performances and significant films, then releases. Not a complete diary of every involvement.
 
+### Artwork Gallery
+The website includes a dedicated fine art gallery for original artworks (drawings, prints, mixed media). Each artwork in the `_artworks/` collection automatically generates a detail page at `/gallery/{slug}/` with a square thumbnail and high-resolution print image.
+
+**Collection:** `_artworks/` (Jekyll collection)
+**URL Structure:** `/gallery/YYYY-MM-DD-{slug}/` (e.g., `/gallery/2026-03-01-fractured-system/`)
+**Layout:** `artwork` (custom Jekyll layout)
+**Image Workflow:** Source JPEG → two outputs: `thumbnail.png` (800×800 letterboxed) and `print.png` (max 1800px longest side)
+
+**Source Image Requirements:**
+- Format: JPEG
+- Resolution: ~3000px on longest side
+- DPI: 72–96 DPI
+- File size: 3–7 MB per file
+- Aspect ratio: Any (will be letterboxed to square for thumbnail)
+
+**Output Files (per artwork):**
+1. **thumbnail.png** — 800×800 px square with white letterbox padding (used in grid display via `image:` field)
+2. **print.png** — Max 1800px longest side, aspect ratio preserved (used in `split-hero-metadata` module for detail page)
+
+**Step-by-Step: Adding a New Artwork Series**
+
+1. **Source files:** Place high-res JPEG in `docs/HIGHRES-IMAGES/` named `1200p_{KEY}.jpg`
+   - Example: `1200p_B1.jpg`, `1200p_W1.jpg`
+   - Keys are short identifiers (alphanumeric, typically 2 chars like B1-B8 or W1-W8 for series)
+
+2. **Update mapping:** Add key → slug entry to the `MAPPING` table in `scripts/process-artworks.sh`
+   ```bash
+   declare -A MAPPING=(
+       [B1]="2026-03-01-fractured-system"
+       [W1]="2026-03-09-last-coordinate"
+       # ... more entries
+   )
+   ```
+
+3. **Create markdown file:** `_artworks/YYYY-MM-DD-{slug}.md` with front matter and sections
+   ```yaml
+   ---
+   published: true
+   title: "Work Title"
+   series: "Series Name"
+   year: "2026"
+   medium: "Medium (e.g., Ink on paper)"
+   dimensions: "29.7 × 42 × 0.1 cm"
+   image: /assets/artworks/YYYY-MM-DD-slug/thumbnail.png
+   abstract: "Brief description"
+   description: |
+     Full description with context...
+
+   sections:
+     - type: description
+     - type: split-hero-metadata
+       content_type: "image"
+       image: /assets/artworks/YYYY-MM-DD-slug/print.png
+       caption: "Caption for detail page"
+       custom:
+         - label: "Series"
+           value: "Value"
+   ---
+   ```
+
+4. **Create output directory:** `assets/artworks/{slug}/` (one per artwork)
+
+5. **Run the script:** Process all source images in the mapping
+   ```bash
+   # Preview without writing files
+   ./scripts/process-artworks.sh --dry-run
+
+   # Process all artwork images
+   ./scripts/process-artworks.sh
+
+   # Reprocess and overwrite existing outputs
+   ./scripts/process-artworks.sh --force
+   ```
+
+6. **Verify output:** Check that thumbnails and print images exist and are correctly sized
+   ```bash
+   identify -format "%f: %wx%h\n" assets/artworks/*/thumbnail.png
+   identify -format "%f: %wx%h\n" assets/artworks/*/print.png
+   ```
+
+**Documentation & Reference:**
+- Full script documentation: [Artwork Processing Script](scripts/ARTWORK-PROCESSING.md)
+- Script location: `scripts/process-artworks.sh`
+- Gallery page: `/gallery/`
+
 ---
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.

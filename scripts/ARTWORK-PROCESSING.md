@@ -150,3 +150,164 @@ Exit codes:
 - Print images are PNG (preserves full quality for detail pages)
 - Skipped files are not reported unless using `--dry-run`
 - All output files are created with read permissions for Jekyll
+
+## Adding a New Artwork Series
+
+To extend the script for new artwork series, follow these steps:
+
+### Step 1: Prepare Source Images
+
+**Requirements:**
+- Format: JPEG or PNG
+- Resolution: ~3000px on longest side (will be resized to 800×800 and 1800×1800)
+- DPI: 72–96 DPI
+- File size: 3–7 MB per file
+- Aspect ratio: Any (portrait, landscape, or square will work; thumbnail will letterbox to square)
+
+**Naming Convention:**
+Place source files in `docs/HIGHRES-IMAGES/` with the pattern: `1200p_{KEY}.(jpg|png)`
+
+Examples:
+- `1200p_B1.jpg` (first image in B series)
+- `1200p_W5.png` (fifth image in W series)
+
+Keys are typically 2-character identifiers (letter + number, e.g., B1-B8, W1-W8 for an 8-work series).
+
+### Step 2: Add Mapping Entry
+
+Edit `scripts/process-artworks.sh` and add your key → slug mapping to the `MAPPING` table (lines 63-80):
+
+```bash
+declare -A MAPPING=(
+    # Existing entries...
+    [B1]="2026-03-01-fractured-system"
+
+    # Add your new entries:
+    [Z1]="2026-04-01-new-work-title"
+    [Z2]="2026-04-02-another-work-title"
+    # ... more new entries
+)
+```
+
+**Slug naming convention:**
+- Format: `YYYY-MM-DD-{work-slug}`
+- Use unique, incrementing dates (one per artwork)
+- Slug is lowercase, hyphen-separated (e.g., `new-work-title`)
+
+### Step 3: Create Markdown Files
+
+Create `_artworks/YYYY-MM-DD-{slug}.md` files for each artwork with:
+
+**Required Front Matter:**
+- `published: true`
+- `title: "Work Title"`
+- `image: /assets/artworks/YYYY-MM-DD-slug/thumbnail.png` (references the generated thumbnail)
+- `abstract: "Brief description"`
+- `description: |` (full description with markdown support)
+
+**Recommended Fields:**
+- `series: "Series Name"`
+- `year: "2026"`
+- `medium: "Medium description"`
+- `dimensions: "H × W × D cm"`
+
+**Sections:**
+Use the `split-hero-metadata` module to display the high-res print image:
+
+```yaml
+sections:
+  - type: description  # Displays the description field
+
+  - type: split-hero-metadata
+    content_type: "image"
+    image: /assets/artworks/YYYY-MM-DD-slug/print.png  # References generated print image
+    caption: "Optional caption"
+    custom:
+      - label: "Series"
+        value: "Series Name"
+      - label: "Medium"
+        value: "Ink on paper"
+      - label: "Dimensions"
+        value: "29.7 × 42 × 0.1 cm"
+      - label: "Year"
+        value: "2026"
+      - label: "Status"
+        value: "Available"
+```
+
+See `_artworks/2026-03-01-fractured-system.md` for a complete example.
+
+### Step 4: Create Output Directories
+
+Create `assets/artworks/{slug}/` directories (one per artwork). These will hold the generated `thumbnail.png` and `print.png` files:
+
+```bash
+mkdir -p assets/artworks/2026-04-01-new-work-title
+mkdir -p assets/artworks/2026-04-02-another-work-title
+```
+
+### Step 5: Run the Script
+
+Process all artworks in the updated mapping:
+
+```bash
+# Preview without creating files
+./scripts/process-artworks.sh --dry-run
+
+# Process all artworks
+./scripts/process-artworks.sh
+
+# Reprocess and overwrite existing images
+./scripts/process-artworks.sh --force
+```
+
+The script will:
+1. Read source images from the mapping
+2. Generate 800×800 thumbnails with white letterbox padding
+3. Generate print images (max 1800px, aspect ratio preserved)
+4. Place outputs in `assets/artworks/{slug}/`
+
+### Step 6: Verify Results
+
+Check that all images were generated with correct dimensions:
+
+```bash
+# List all thumbnails with dimensions
+identify -format "%f: %wx%h\n" assets/artworks/*/thumbnail.png
+
+# List all print images with dimensions
+identify -format "%f: %wx%h\n" assets/artworks/*/print.png
+
+# Expected results:
+# thumbnail.png: 800x800
+# print.png: depends on source aspect ratio, max 1800px longest side
+```
+
+### Troubleshooting
+
+**"cache resources exhausted" error:**
+ImageMagick has hardcoded resource limits in its policy file. If processing fails, increase the limits:
+
+```bash
+sudo nano /etc/ImageMagick-6/policy.xml
+```
+
+Update these values to 4GB (or higher if available):
+```xml
+<policy domain="resource" name="memory" value="4GiB"/>
+<policy domain="resource" name="map" value="4GiB"/>
+<policy domain="resource" name="disk" value="4GiB"/>
+<policy domain="resource" name="area" value="4GP"/>
+```
+
+Or use the automatic sed commands in the script's comments (lines 102-109).
+
+### Reusing the Workflow
+
+This same workflow can be used for:
+- New artwork series (B series, W series, Z series, etc.)
+- Different artwork mediums (paintings, photographs, 3D renders)
+- Multiple series running in parallel
+- Future expansion without modifying the script structure
+
+Just add mapping entries, create markdown files, prepare source images, and run the script.

@@ -139,21 +139,24 @@
 
 .artwork-header {
   position: relative;
-  margin-bottom: var(--spacing-3xl);
+  margin-bottom: 40px;
+  text-align: center;
 
   .artwork-medium {
     color: var(--color-text-muted);
-    font-size: 0.9rem;
-    font-weight: 600;
+    font-size: 14px;
+    font-weight: normal;
     letter-spacing: 1px;
     text-transform: uppercase;
     margin: 0 0 var(--spacing-sm) 0;
   }
 
   h1 {
-    margin: 0 0 var(--spacing-md) 0;
-    font-size: 2.5rem;
-    font-weight: bold;
+    margin: 0 0 10px 0;
+    font-size: 32px;
+    font-weight: normal;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
   .work-page-metadata {
