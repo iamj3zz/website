@@ -211,22 +211,16 @@ links:
     <div class="bio-category" id="bio-education">
       <h2>Education &amp; Certificates</h2>
       <div class="bio-items">
-      
-        <div class="bio-item"><span class="bio-year">2024-2025</span> Training ∙ TouchDesigner Class ∙ The Node Institute ∙ Berlin ∙ DE</div>
-      
-      
-      
-        <div class="bio-item"><span class="bio-year">2024</span> Training ∙ Pratiquer la Transe Cognitive Auto-Induite dans la perspective d'un usage professionnel dans le secteur artistique ∙ TranceLab Training Institute, La Plaine St. Denis ∙ FR</div>
-        <div class="bio-item"><span class="bio-year">2022</span> Certificate ∙ Protocole MBCT Thérapie Cognitive basée sur la Pleine Conscience ∙ MBSR-MBCT Océan Indien ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2021–2022</span> Certificate ∙ Conception et mise en œuvre de la stratégie dans un contexte de Changement ∙ HEC Paris / Fédération des EPL ∙ FR</div>
-        <div class="bio-item"><span class="bio-year">2021</span> Permis d'exploitation (débit de boissons) ∙ SEF Marseille ∙ FR</div>
-        <div class="bio-item"><span class="bio-year">2021</span> Licence d'entrepreneur de spectacles ∙ PLATESV-R-2021-009234</div>
-        <div class="bio-item"><span class="bio-year">2015</span> Certificate ∙ Managing the Arts: Marketing for Cultural Organizations ∙ Leuphana University / Goethe-Institut ∙ 92/100, 5 ECTS (Feb–May)</div>
-        <div class="bio-item"><span class="bio-year">2008–2010</span> Peer Coaching Certificate (Aug 2010) ∙ L'Académie Transnationale ROOTS &amp; ROUTES ∙ jfc Medienzentrum, Cologne ∙ DE ∙ 2-year EU Lifelong Learning Programme (Leonardo da Vinci) for coaches and talents, France, Germany, Hungary, Netherlands, United Kingdom</div>
-        <div class="bio-item"><span class="bio-year">2000–2006</span> Engineering Degree (Information Systems &amp; Software Engineering) ∙ EPITA, Le Kremlin-Bicêtre ∙ FR</div>
-        <div class="bio-item"><span class="bio-year">1994–1999</span> Diploma with honors (violin) ∙ Conservatoire National de Région de La Réunion (music theory &amp; violin)</div>
-        <div class="bio-item"><span class="bio-year">1996</span> Summer academy ∙ Académie Nationale d'été "Musique au Grand Jardin", Joinville-en-Champagne ∙ FR</div>
-        <div class="bio-item"><span class="bio-year">1985–1994</span> École municipale de musique, de danse et d'art dramatique, Saint-Denis ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2024-2025</span> Training ∙ TouchDesigner Class ∙ <a target="_blank" href="https://thenodeinstitute.org/">THE NODE INSTITUTE</a> ∙ Berlin ∙ DE</div>
+        <div class="bio-item"><span class="bio-year">2024</span><span> Training ∙ Practice Self-Induced Cognitive Trance in the context of professional use in the artistic sector ∙ <a href="https://trancelabinstitute.com/" target="_blank">TRANCELAB Training Institute</a> ∙ Saint-Denis ∙ FR</span></div>
+        <div class="bio-item"><span class="bio-year">2022</span> Training ∙ Mindfulness-Based Cognitive Therapy Protocol ∙ <a href="http://www.pleineconscience.re/" target="_blank">MBSR-MBCT Océan Indien</a> ∙ Saint-Denis ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2021–2022</span> Certificate ∙ Strategy Design and Implementation in a Change Management Context ∙ <a href="https://www.hec.edu/en" target="_blank">HEC PARIS</a> ∙ Jouy en Josas ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2015</span> Certificate ∙ Managing the Arts: Marketing for Cultural Organizations ∙ <a target="_blank" href="https://www.leuphana.de/en/university.html">LEUPHANA UNIVERSITY</a> ∙ Lüneburg ∙ DE</div>
+        <div class="bio-item"><span class="bio-year">2008–2010</span> Certificate ∙ <a target="_blank" href="https://rootsnroutes.eu/projects-id62"> ROOTS &amp; ROUTES ACADEMY </a> ∙ Cologne ∙ DE</div>
+        <div class="bio-item"><span class="bio-year">2000–2006</span> Engineering Degree (Information Systems &amp; Software Engineering) ∙ <a target="_blank" href="https://www.epita.fr/"> EPITA</a> ∙ Le Kremlin-Bicêtre ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">1994–1999</span> Diploma with honors (violin) ∙ <a target="_blank" href="https://conservatoire.regionreunion.com/"> REUNION ISLAND ACADEMY OF ARTS </a> ∙ Saint-Denis ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">1996</span> "Musique au Grand Jardin" ∙  Joinville-en-Champagne ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">1985–1994</span>SAINT-DENIS ARTS SCHOOL ∙ Saint-Denis ∙ RE</div>
       </div>
     </div>
 
