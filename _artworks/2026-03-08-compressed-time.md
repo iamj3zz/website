@@ -16,7 +16,14 @@ description: |
 
   *Compressed Time* is geology's paradox: epochs compressed into moments of transformation, vast forces rendered as fine lines. The instant tectonic forces collide into explosive change.
 
-  *Compressed Time* closes the igneous phase — geology's paradox where epochs compress into moments. Radiating forces collide in explosive transformation, frozen stone capturing the instant of rupture.
+  *Compressed Time* closes the igneous phase — geology's paradox where epochs compress into moments. Radiating forces collide in explosive transformation, frozen stone capturing the 
+  instant of rupture.
+
+  *Compressed Time* is part of **Cartography of Collapse**, a series of 16 original ink drawings on paper (2026) tracing geological transformation from formation through dissolution. Created in a single session without revision — the irreversible line mirroring the irreversibility of geological processes.
+
+  Each drawing is improvised, capturing moments in matter's transformation across deep time. The series moves in two acts: *Igneous* (formation, density, compression) and *Erosion* (dissolution, dispersal, return to void).
+
+  **Certificate of Authenticity** included with acquisition.
 
 sections:
   - type: split-hero-metadata
@@ -37,13 +44,5 @@ sections:
       - label: "Status"
         value: "Available"
   - type: description
-  - type: text
-    content: |
-      ## About This Work
 
-      *Compressed Time* is part of **Cartography of Collapse**, a series of 16 original ink drawings on paper (2026) tracing geological transformation from formation through dissolution. Created in a single session without revision — the irreversible line mirroring the irreversibility of geological processes.
-
-      Each drawing is improvised, capturing moments in matter's transformation across deep time. The series moves in two acts: *Igneous* (formation, density, compression) and *Erosion* (dissolution, dispersal, return to void).
-
-      **Certificate of Authenticity** included with acquisition.
 ---

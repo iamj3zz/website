@@ -18,6 +18,12 @@ description: |
 
   The eight works of *Igneous* trace formation from primordial density through the moment of rupture. *Void Emergence* reveals what lies beneath the surface — that emptiness is not absence but presence, that the void is as substantial as stone.
 
+  *Void Emergence* is part of **Cartography of Collapse**, a series of 16 original ink drawings on paper (2026) tracing geological transformation from formation through dissolution. Created in a single session without revision — the irreversible line mirroring the irreversibility of geological processes.
+
+  Each drawing is improvised, capturing moments in matter's transformation across deep time. The series moves in two acts: *Igneous* (formation, density, compression) and *Erosion* (dissolution, dispersal, return to void).
+
+  **Certificate of Authenticity** included with acquisition.
+      
 sections:
   - type: split-hero-metadata
     content_type: "image"
@@ -37,13 +43,5 @@ sections:
       - label: "Status"
         value: "Available"
   - type: description
-  - type: text
-    content: |
-      ## About This Work
 
-      *Void Emergence* is part of **Cartography of Collapse**, a series of 16 original ink drawings on paper (2026) tracing geological transformation from formation through dissolution. Created in a single session without revision — the irreversible line mirroring the irreversibility of geological processes.
-
-      Each drawing is improvised, capturing moments in matter's transformation across deep time. The series moves in two acts: *Igneous* (formation, density, compression) and *Erosion* (dissolution, dispersal, return to void).
-
-      **Certificate of Authenticity** included with acquisition.
 ---

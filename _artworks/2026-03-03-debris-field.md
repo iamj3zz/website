@@ -17,6 +17,12 @@ description: |
   *Debris Field* is the moment of maximum disorder: chaos still coherent, before everything finally lets go.
 
   The eight works of *Igneous* trace formation through increasing chaos and density. *Debris Field* captures matter at maximum fragmentation — order still visible but beginning to dissolve.
+  
+  *Debris Field* is part of **Cartography of Collapse**, a series of 16 original ink drawings on paper (2026) tracing geological transformation from formation through dissolution. Created in a single session without revision — the irreversible line mirroring the irreversibility of geological processes.
+
+  Each drawing is improvised, capturing moments in matter's transformation across deep time. The series moves in two acts: *Igneous* (formation, density, compression) and *Erosion* (dissolution, dispersal, return to void).
+
+  **Certificate of Authenticity** included with acquisition.  
 
 sections:
   - type: split-hero-metadata
@@ -37,13 +43,4 @@ sections:
       - label: "Status"
         value: "Available"
   - type: description
-  - type: text
-    content: |
-      ## About This Work
-
-      *Debris Field* is part of **Cartography of Collapse**, a series of 16 original ink drawings on paper (2026) tracing geological transformation from formation through dissolution. Created in a single session without revision — the irreversible line mirroring the irreversibility of geological processes.
-
-      Each drawing is improvised, capturing moments in matter's transformation across deep time. The series moves in two acts: *Igneous* (formation, density, compression) and *Erosion* (dissolution, dispersal, return to void).
-
-      **Certificate of Authenticity** included with acquisition.
 ---
