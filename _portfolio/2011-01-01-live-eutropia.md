@@ -56,4 +56,13 @@ sections:
   - type: linked-events
 
   - type: metadata
+  
+    # Video documentation
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/QiVnvOX4W0M" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    caption: "Documentation of the installation during Amsterdam Light Festival"
+
+  
 ---

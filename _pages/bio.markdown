@@ -54,9 +54,9 @@ links:
       <h2>Installations &amp; Exhibitions</h2>
       <div class="bio-items">      
         <div class="bio-item"><span class="bio-year"><script>document.write(new Date().getFullYear())</script></span> <a href="/works/2026-01-01-inst-vibrotanica/">VIBROTANICA</a> ∙ work in progress</div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-18-inst-iris/">IRIS</a> ∙ sound design &amp; composition ∙ Csokonai Theatre, Debrecen ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-13-inst-unbalanced-forces/">UNBALANCED FORCES</a> ∙ programming &amp; composition ∙ Lábor Gallery, Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">PARK IN PROGRESS</a> ∙ Municipal Gardens, Nicosia ∙ CY</div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-18-inst-iris/">IRIS</a> ∙ Csokonai Theatre ∙ Debrecen ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-13-inst-unbalanced-forces/">UNBALANCED FORCES</a> ∙ Lábor Gallery ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">PARK IN PROGRESS</a> ∙ UN buffer zone ∙ Nicosia ∙ CY</div>
       </div>
     </div>
 
@@ -120,9 +120,9 @@ links:
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ La Lasagneria ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ MFSZ ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-live-n7n8-festival/">N7N8 FESTIVAL</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Books &amp; Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Books &amp; Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Books &amp; Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
@@ -141,10 +141,10 @@ links:
         <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Sziget Festival A38 Stage ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Toldi Klub ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Le Murate Caffe Letterario ∙ Florence ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA</a> ∙ Stichting ROOTS &amp; ROUTES ∙ Utrecht ∙ NL</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA</a> ∙ Stazione Leopolda ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA</a> ∙ Tivoli ∙ Utrecht ∙ NL</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA</a> ∙ Fabbrica Europa Festival - Stazione Leopolda ∙ Florence ∙ IT</div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA</a> ∙ Arkadas Theater ∙ Cologne ∙ DE</div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Sziget Festival A38 Stage ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Sziget Festival - A38 Stage ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Club Bahnhof Ehrenfeld ∙ Cologne ∙ DE</div>
       </div>
 
@@ -169,15 +169,15 @@ links:
       <h2>Residencies</h2>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2025-01-01-resi-citta-della-pieve-residency/">CITTA DELLA PIEVE</a> ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-02-resi-kerveguen-residency/">LE KERVEGUEN, Saint-Pierre</a> ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-resi-cite-des-arts-residency/">LA CITE DES ARTS, Saint-Denis</a> ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-23-resi-outbreakers-lab-residency/">OUTBREAKERS' LAB ∙ Zsennye</a> ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-resi-music-maker-2/">MUSIC MAKER #2 ∙ CHATEAU EPHEMERE, Carrières-sous-Poissy</a> ∙ FR</div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">PARK IN PROGRESS ∙ Nicosia</a> ∙ CY</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS ∙ Florence, Budapest, Bucharest</a> ∙ IT/HU/RO</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">TO BE TOLD∙ Grundtvig Workshop, Florence</a> ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA ∙ Cologne / Florence</a> ∙ DE/IT</div>
-        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">REALITY IN DISGUISE ∙ Remscheid Academy &amp; Heek</a> ∙ DE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-02-resi-kerveguen-residency/">LE KERVEGUEN</a> ∙ Saint-Pierre ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-01-01-resi-cite-des-arts-residency/">LA CITE DES ARTS</a> ∙ Saint-Denis ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-23-resi-outbreakers-lab-residency/">OUTBREAKERS' LAB</a> ∙ Zsennye ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-resi-music-maker-2/">CHATEAU EPHEMERE </a> ∙ Carrières-sous-Poissy ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">PARK IN PROGRESS</a> ∙ Nicosia ∙ CY</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Barcelona/Florence/ Budapest/Bucharest ∙ SP/IT/HU/RO</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">TO BE TOLD</a> ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2011-2013</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA ∙ Cologne/Florence/Utrecht</a> ∙ DE/IT/NL</div>
+        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Remscheid/Heek/Cologne/Florence/Budapest ∙ DE/IT/HU</div>
       </div>
     </div>
 
@@ -189,35 +189,33 @@ links:
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification-workshops/">BIOSONOFICATION</a> ∙ Mizik O Marmay Festival ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification-workshops/">BIOSONOFICATION</a> ∙ Rdv aux jardins ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2023-06-04-work-biosonification-workshops/">BIOSONOFICATION</a> ∙ Széllkapu, Millenáris, Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2013–2014</span> STEPS AHEAD (junior coach professionalization) ∙ Florence ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2013</span> U-CARE (Urban Culture Against Racism) ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2013–2014</span> STEPS AHEAD ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2013</span> U-CARE ∙ Florence ∙ IT</div>
         <div class="bio-item"><span class="bio-year">2012</span> EUTROPIA ∙ Lille ∙ FR</div>
         <div class="bio-item"><span class="bio-year">2011</span> FOLLOW-UP ∙ Budapest / Barcelona ∙ HU/ES</div>
-      </div>
-    </div>
-
-    <div class="bio-category" id="bio-teaching">
-      <h2>Teaching &amp; Coaching</h2>
-      <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2013–2015</span> Interdisciplinary improvisation coaching ∙ ROOTS &amp; ROUTES projects across Europe</div>
-        <div class="bio-item"><span class="bio-year">2008–2014</span> Improvisation research in theatre ∙ exploring links between movement, musicians, and technicians</div>
       </div>
     </div>
 
     <div class="bio-category" id="bio-management">
       <h2>Cultural Management &amp; Governance</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2023–present</span> Board Member ∙ KOLET (www.kolet.re) ∙ RE</div>
+      <div class="bio-item"><span class="bio-year">2012–<script>document.write(new Date().getFullYear())</script></span> Active Member ∙ CCC Centro Creazione Cultura, Florence ∙ IT (www.centrocreazionecultura.eu)</div>
+      <div class="bio-item"><span class="bio-year">2023–2026</span> Board Member ∙ KOLET (www.kolet.re) ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2023</span> Deputy General Director, DGA Épanouissement du Citoyen (interim) ∙ Mairie de La Possession ∙ RE ∙ led culture, sports, social services, housing; team of ~170 agents (Jul–Aug)</div>
         <div class="bio-item"><span class="bio-year">2020–2022</span> Director General Delegate ∙ Territo'Arts (SPL) ∙ RE ∙ directed Cité des Arts de La Réunion and Centre Culturel Château Morange; budget 4M€; 50 permanent staff; 170 artistic residencies in 2021 (Nov 2020–Apr 2022)</div>
         <div class="bio-item"><span class="bio-year">2013–2015</span> Secretary General ∙ ROOTS &amp; ROUTES International Association, Rotterdam ∙ NL ∙ 12 partner countries; EU funds: Creative, Leonardo, Erasmus+, Youth in Action (Jun 2013–Jun 2015)</div>
-        <div class="bio-item"><span class="bio-year">2012–present</span> Active Member ∙ CCC Centro Creazione Cultura, Florence ∙ IT (www.centrocreazionecultura.eu)</div>
+
       </div>
     </div>
 
     <div class="bio-category" id="bio-education">
       <h2>Education &amp; Certificates</h2>
       <div class="bio-items">
+      
+        <div class="bio-item"><span class="bio-year">2024-2025</span> Training ∙ TouchDesigner Class ∙ The Node Institute ∙ Berlin ∙ DE</div>
+      
+      
+      
         <div class="bio-item"><span class="bio-year">2024</span> Training ∙ Pratiquer la Transe Cognitive Auto-Induite dans la perspective d'un usage professionnel dans le secteur artistique ∙ TranceLab Training Institute, La Plaine St. Denis ∙ FR</div>
         <div class="bio-item"><span class="bio-year">2022</span> Certificate ∙ Protocole MBCT Thérapie Cognitive basée sur la Pleine Conscience ∙ MBSR-MBCT Océan Indien ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2021–2022</span> Certificate ∙ Conception et mise en œuvre de la stratégie dans un contexte de Changement ∙ HEC Paris / Fédération des EPL ∙ FR</div>
