@@ -199,11 +199,12 @@ links:
     <div class="bio-category" id="bio-management">
       <h2>Cultural Management &amp; Governance</h2>
       <div class="bio-items">
-      <div class="bio-item"><span class="bio-year">2012–<script>document.write(new Date().getFullYear())</script></span> Active Member ∙ CCC Centro Creazione Cultura, Florence ∙ IT (www.centrocreazionecultura.eu)</div>
-      <div class="bio-item"><span class="bio-year">2023–2026</span> Board Member ∙ KOLET (www.kolet.re) ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2023</span> Deputy General Director, DGA Épanouissement du Citoyen (interim) ∙ Mairie de La Possession ∙ RE ∙ led culture, sports, social services, housing; team of ~170 agents (Jul–Aug)</div>
-        <div class="bio-item"><span class="bio-year">2020–2022</span> Director General Delegate ∙ Territo'Arts (SPL) ∙ RE ∙ directed Cité des Arts de La Réunion and Centre Culturel Château Morange; budget 4M€; 50 permanent staff; 170 artistic residencies in 2021 (Nov 2020–Apr 2022)</div>
-        <div class="bio-item"><span class="bio-year">2013–2015</span> Secretary General ∙ ROOTS &amp; ROUTES International Association, Rotterdam ∙ NL ∙ 12 partner countries; EU funds: Creative, Leonardo, Erasmus+, Youth in Action (Jun 2013–Jun 2015)</div>
+        <div class="bio-item"> <span class="bio-year">2022–<script>document.write(new Date().getFullYear())</script></span> <a target="_blank" href="https://www.prma-reunion.fr/"> POLE REGIONAL DES MUSIQUES ACTUELLES </a> ∙ Active Member ∙ Reunion island ∙ RE </div>
+        <div class="bio-item"> <span class="bio-year">2022–<script>document.write(new Date().getFullYear())</script></span> <a target="_blank" href="https://www.centrocreazionecultura.eu"> CENTRO CREAZIONE CULTURA </a> ∙ Active Member  ∙ Florence ∙ IT </div>
+        <div class="bio-item"> <span class="bio-year">2023–2026</span><a target="_blank" href="https://www.kolet.re">KOLET</a> ∙ Board Member ∙ Reunion island ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <span><a target="_blank" href="https://www.lapossession.re">LA POSSESSION CITY</a> ∙ Deputy General Director ∙ Citizen Flourishing dept. ∙ led Culture & Local Services, Sports, Social Centre, Inclusion, Housing; team of 170+ agents; reporting to Mayor & elected officials (Jul–Aug) ∙ La Possession ∙ RE</span></div>
+        <div class="bio-item"><span class="bio-year">2020–2022</span><span><a target="_blank" href="https://citedesarts.re"> TERRITO'ARTS</a> ∙ General Manager ∙ RE ∙ Cité des Arts de La Réunion & Centre Culturel Château Morange; budget 4M€; 50+ permanent staff; 170+ artistic residencies, 140+ shows, 140+ cultural mediation actions (2021); crisis management COVID-19; HR, legal, public procurement, union negotiations ∙ Saint-Denis ∙ RE</span></div>
+        <div class="bio-item"><span class="bio-year">2013–2015</span><span><a target="_blank" href="https://www.rootsnroutes.eu/"> ROOTS &amp; ROUTES</a> Secretary General ∙ 12+ partner countries; EU funds: Creative, Leonardo, Erasmus+, Youth in Action... ∙ Rotterdam ∙ NL</span> </div>
 
       </div>
     </div>
