@@ -19,15 +19,19 @@
   const heroImages = document.querySelectorAll('.hero-image[data-lightbox="true"]');
 
   // Add click event to grid images (navigable gallery)
+  // Listen on the parent .grid-item so the transparent ::after overlay forwards clicks
   gridImages.forEach((img, index) => {
-    img.addEventListener('click', function() {
+    const container = img.closest('.grid-item') || img;
+    container.addEventListener('click', function() {
       openLightbox(img, index, false);
     });
   });
 
   // Add click event to hero images (single image, no navigation)
+  // Listen on the parent .split-hero-image so the transparent ::after overlay forwards clicks
   heroImages.forEach((img) => {
-    img.addEventListener('click', function() {
+    const container = img.closest('.split-hero-image') || img;
+    container.addEventListener('click', function() {
       openLightbox(img, 0, true);
     });
   });
@@ -98,6 +102,9 @@
     currentIndex = 0;
     isSingleImage = false;
   }
+
+  // Prevent right-click save on lightbox image
+  lightboxImg.addEventListener('contextmenu', function(e) { e.preventDefault(); });
 
   // Close button
   closeBtn.addEventListener('click', closeLightbox);

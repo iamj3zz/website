@@ -3,6 +3,22 @@
 .hero-image[data-lightbox="true"] {
   cursor: pointer;
   transition: transform 0.3s ease, opacity 0.3s ease;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Transparent overlay blocks right-click save on protected images */
+.grid-item,
+.split-hero-image {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    cursor: pointer;
+  }
 }
 
 .grid-image[data-lightbox="true"]:hover {

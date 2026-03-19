@@ -65,4 +65,7 @@
     };
   };
 
+  // Disable right-click context menu site-wide to discourage image saving
+  document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+
 })();
