@@ -7,6 +7,36 @@ description: "Original drawings, paintings, and visual artworks by J3ZZ."
 
 {% include artwork-inquiry-modal.html %}
 
+<div class="gallery-list-print">
+  <div class="gallery-print-header">GALLERY — Visual Art by J3ZZ</div>
+  {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
+  {% for artwork in sorted_artworks %}
+    {% if artwork.published == false %}{% continue %}{% endif %}
+    <div class="gallery-list-row" data-artwork-url="{{ artwork.url | absolute_url }}">
+      <div class="gallery-col-image">
+        <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
+        <div class="gallery-qr-code"></div>
+      </div>
+      <div class="gallery-col-content">
+        <div class="gallery-col-title">{{ artwork.title }}</div>
+        <div class="gallery-col-meta">
+          {% if artwork.medium %}{{ artwork.medium }}{% endif %}
+          {% if artwork.dimensions %} · {{ artwork.dimensions }}{% endif %}
+          {% if artwork.year %} · {{ artwork.year }}{% endif %}
+        </div>
+        {% if artwork.status == "available" or artwork.status == nil %}
+          <div class="gallery-col-status gallery-col-status--available">AVAILABLE</div>
+        {% elsif artwork.status == "sold" %}
+          <div class="gallery-col-status gallery-col-status--sold">SOLD</div>
+        {% elsif artwork.status == "reserved" %}
+          <div class="gallery-col-status gallery-col-status--reserved">RESERVED</div>
+        {% endif %}
+        {% if artwork.abstract %}<div class="gallery-col-abstract">{{ artwork.abstract }}</div>{% endif %}
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
 <section class="gallery-section">
   <h1 class="visually-hidden">Gallery</h1>
   <div class="gallery-grid">
