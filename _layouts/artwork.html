@@ -101,8 +101,9 @@
       {% comment %} Inquiry block for available artworks {% endcomment %}
       {% if page.status == "available" %}
         <div class="artwork-inquiry">
-          <a href="mailto:{{ site.email }}?subject=Inquiry: {{ page.title | url_encode }}" class="artwork-inquiry-link">Inquire about this work</a>
+          <button id="artwork-inquiry-trigger" class="artwork-inquiry-link">Inquire about this work</button>
         </div>
+        {% include artwork-inquiry-modal.html %}
       {% endif %}
 
       <div class="work-nav">
@@ -268,5 +269,6 @@
   <script src="{{ '/assets/js/navigation.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/qrcode.min.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/print-header-qrcode.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/artwork-inquiry.js' | relative_url }}" defer></script>
 </body>
 </html>

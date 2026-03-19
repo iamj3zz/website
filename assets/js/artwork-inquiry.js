@@ -1,0 +1,146 @@
+(function () {
+  'use strict';
+
+  document.addEventListener('DOMContentLoaded', function () {
+    const modal = document.getElementById('artwork-inquiry-modal');
+    const trigger = document.getElementById('artwork-inquiry-trigger');
+    const closeBtn = modal && modal.querySelector('.inquiry-modal-close');
+    const overlay = modal && modal.querySelector('.inquiry-modal-overlay');
+    const form = document.getElementById('artwork-inquiry-form');
+
+    if (!modal || !trigger) return;
+
+    function openModal() {
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden';
+      const firstInput = modal.querySelector('input, textarea');
+      if (firstInput) firstInput.focus();
+    }
+
+    function closeModal() {
+      modal.hidden = true;
+      document.body.style.overflow = '';
+      // Reset form state for next open
+      if (form) {
+        form.hidden = false;
+        form.reset();
+      }
+      const successMsg = document.getElementById('inquiry-success');
+      const errorMsg = document.getElementById('inquiry-error');
+      if (successMsg) successMsg.hidden = true;
+      if (errorMsg) errorMsg.hidden = true;
+      const submitBtn = form && form.querySelector('[type="submit"]');
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send Inquiry';
+      }
+      trigger.focus();
+    }
+
+    trigger.addEventListener('click', openModal);
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', closeModal);
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && !modal.hidden) closeModal();
+    });
+
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const nameField = form.querySelector('#inquiry-name');
+        const emailField = form.querySelector('#inquiry-email');
+        const phoneField = form.querySelector('#inquiry-phone');
+        const newsletterField = form.querySelector('#inquiry-newsletter');
+        const messageField = form.querySelector('#inquiry-message');
+
+        const name = nameField.value.trim();
+        const email = emailField.value.trim();
+        const phone = phoneField.value.trim();
+        const newsletter = newsletterField && newsletterField.checked;
+        const message = messageField.value.trim();
+
+        // Clear previous errors
+        form.querySelectorAll('.form-error').forEach(function (el) { el.remove(); });
+        form.querySelectorAll('.form-input-error').forEach(function (el) { el.classList.remove('form-input-error'); });
+
+        let valid = true;
+
+        function showFieldError(field, msg) {
+          field.classList.add('form-input-error');
+          const err = document.createElement('span');
+          err.className = 'form-error';
+          err.textContent = msg;
+          field.closest('.form-row').appendChild(err);
+          valid = false;
+        }
+
+        if (!name) showFieldError(nameField, 'Your name is required.');
+
+        const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (!email) {
+          showFieldError(emailField, 'Your email is required.');
+        } else if (!emailPattern.test(email)) {
+          showFieldError(emailField, 'Please enter a valid email address.');
+        }
+
+        // Phone: international format, same rules as contact page
+        if (!phone) {
+          showFieldError(phoneField, 'Your mobile number is required.');
+        } else if (!phone.startsWith('+')) {
+          showFieldError(phoneField, 'Phone must start with + followed by country code (e.g., +33612345678).');
+        } else {
+          const digits = phone.substring(1);
+          if (!/^\d+$/.test(digits)) {
+            showFieldError(phoneField, 'Phone can only contain + and digits.');
+          } else if (digits.length < 7 || digits.length > 15) {
+            showFieldError(phoneField, 'Phone must be between 7 and 15 digits.');
+          } else if (digits[0] === '0') {
+            showFieldError(phoneField, 'Country code cannot start with 0.');
+          }
+        }
+
+        if (!message) showFieldError(messageField, 'A message is required.');
+
+        if (!valid) {
+          const firstError = form.querySelector('.form-error');
+          if (firstError) firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          return;
+        }
+
+        const formData = new FormData(form);
+        // Add newsletter value explicitly (checkboxes don't submit when unchecked)
+        formData.set('newsletter', newsletter ? 'YES — please add to mailing list' : 'No');
+
+        const successMsg = document.getElementById('inquiry-success');
+        const errorMsg = document.getElementById('inquiry-error');
+        const submitBtn = form.querySelector('[type="submit"]');
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(function (res) {
+          if (res.ok) {
+            form.hidden = true;
+            if (successMsg) successMsg.hidden = false;
+          } else {
+            if (errorMsg) errorMsg.hidden = false;
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Send Inquiry';
+          }
+        })
+        .catch(function () {
+          if (errorMsg) errorMsg.hidden = false;
+          submitBtn.disabled = false;
+          submitBtn.textContent = 'Send Inquiry';
+        });
+      });
+    }
+  });
+})();

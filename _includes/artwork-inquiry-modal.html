@@ -1,0 +1,53 @@
+<div id="artwork-inquiry-modal" class="inquiry-modal" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title" hidden>
+  <div class="inquiry-modal-overlay"></div>
+  <div class="inquiry-modal-dialog">
+    <button class="inquiry-modal-close" aria-label="Close inquiry form">&times;</button>
+
+    <p class="inquiry-modal-pre-title">Artwork Inquiry</p>
+    <h2 id="inquiry-modal-title" class="inquiry-modal-artwork-title">{{ page.title }}</h2>
+    <p class="inquiry-modal-meta">{{ page.medium }}{% if page.dimensions %} · {{ page.dimensions }}{% endif %}{% if page.year %} · {{ page.year }}{% endif %}</p>
+
+    <form id="artwork-inquiry-form" class="inquiry-form" action="{{ site.formspree_artwork_inquiry }}" method="POST" novalidate>
+      <input type="hidden" name="_subject" value="Artwork Inquiry: {{ page.title }}">
+      <input type="hidden" name="artwork" value="{{ page.title }}{% if page.medium %} — {{ page.medium }}{% endif %}{% if page.dimensions %}, {{ page.dimensions }}{% endif %}{% if page.year %}, {{ page.year }}{% endif %}">
+
+      <div class="form-row">
+        <input type="text" id="inquiry-name" name="name" placeholder="Your Name *" class="form-input" required autocomplete="name">
+      </div>
+      <div class="form-row">
+        <input type="email" id="inquiry-email" name="email" placeholder="Your Email *" class="form-input" required autocomplete="email">
+      </div>
+      <div class="form-row">
+        <input type="tel" id="inquiry-phone" name="phone" placeholder="Mobile Number * (e.g., +33612345678)" class="form-input" required autocomplete="tel">
+        <span class="form-help-text">Format: +[country code][number]</span>
+      </div>
+      <div class="form-row">
+        <label class="form-checkbox-label">
+          <input type="checkbox" id="inquiry-newsletter" name="newsletter" class="form-checkbox">
+          <span>I'd like to receive occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens. You can unsubscribe anytime.</span>
+        </label>
+      </div>
+      <div class="form-row">
+        <textarea id="inquiry-message" name="message" class="form-input inquiry-textarea" rows="7" required>Hello,
+
+I am interested in acquiring "{{ page.title }}"{% if page.medium %} ({{ page.medium }}{% if page.dimensions %}, {{ page.dimensions }}{% endif %}){% endif %}.
+
+Could you please provide me with more information about:
+- The current availability and price
+- Shipping and packaging details
+- Certificate of authenticity
+
+Thank you,</textarea>
+      </div>
+      <button type="submit" class="form-submit">Send Inquiry</button>
+    </form>
+
+    <div id="inquiry-success" class="inquiry-success" hidden>
+      <p>Thank you — your inquiry has been sent. I'll get back to you soon.</p>
+    </div>
+
+    <div id="inquiry-error" class="inquiry-error" hidden>
+      <p>Something went wrong. Please try again or email directly at {{ site.email }}.</p>
+    </div>
+  </div>
+</div>
