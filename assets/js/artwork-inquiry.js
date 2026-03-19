@@ -13,6 +13,8 @@
     function openModal() {
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
+      const urlField = document.getElementById('inquiry-artwork-url');
+      if (urlField) urlField.value = window.location.href;
       const firstInput = modal.querySelector('input, textarea');
       if (firstInput) firstInput.focus();
     }
@@ -24,6 +26,8 @@
       if (form) {
         form.hidden = false;
         form.reset();
+        form.querySelectorAll('.form-error').forEach(function (el) { el.remove(); });
+        form.querySelectorAll('.form-input-error').forEach(function (el) { el.classList.remove('form-input-error'); });
       }
       const successMsg = document.getElementById('inquiry-success');
       const errorMsg = document.getElementById('inquiry-error');
@@ -49,15 +53,25 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
-        const nameField = form.querySelector('#inquiry-name');
+        const firstNameField = form.querySelector('#inquiry-first-name');
+        const lastNameField = form.querySelector('#inquiry-last-name');
         const emailField = form.querySelector('#inquiry-email');
         const phoneField = form.querySelector('#inquiry-phone');
+        const streetField = form.querySelector('#inquiry-address-street');
+        const cityField = form.querySelector('#inquiry-address-city');
+        const zipField = form.querySelector('#inquiry-address-zip');
+        const countryField = form.querySelector('#inquiry-address-country');
         const newsletterField = form.querySelector('#inquiry-newsletter');
         const messageField = form.querySelector('#inquiry-message');
 
-        const name = nameField.value.trim();
+        const firstName = firstNameField.value.trim();
+        const lastName = lastNameField.value.trim();
         const email = emailField.value.trim();
         const phone = phoneField.value.trim();
+        const street = streetField.value.trim();
+        const city = cityField.value.trim();
+        const zip = zipField.value.trim();
+        const country = countryField.value.trim();
         const newsletter = newsletterField && newsletterField.checked;
         const message = messageField.value.trim();
 
@@ -76,7 +90,8 @@
           valid = false;
         }
 
-        if (!name) showFieldError(nameField, 'Your name is required.');
+        if (!firstName) showFieldError(firstNameField, 'First name is required.');
+        if (!lastName) showFieldError(lastNameField, 'Last name is required.');
 
         const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!email) {
@@ -85,7 +100,7 @@
           showFieldError(emailField, 'Please enter a valid email address.');
         }
 
-        // Phone: international format, same rules as contact page
+        // Phone: international format
         if (!phone) {
           showFieldError(phoneField, 'Your mobile number is required.');
         } else if (!phone.startsWith('+')) {
@@ -100,6 +115,11 @@
             showFieldError(phoneField, 'Country code cannot start with 0.');
           }
         }
+
+        if (!street) showFieldError(streetField, 'Street address is required.');
+        if (!city) showFieldError(cityField, 'City is required.');
+        if (!zip) showFieldError(zipField, 'Postal code is required.');
+        if (!country) showFieldError(countryField, 'Country is required.');
 
         if (!message) showFieldError(messageField, 'A message is required.');
 

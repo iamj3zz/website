@@ -242,7 +242,7 @@
     }
 
     // Validate GDPR Consent Checkbox
-    const consentField = form.querySelector('input[name="CONSENT"]');
+    const consentField = form.querySelector('input[type="checkbox"][required]');
     if (!validateConsent(consentField)) {
       isValid = false;
     }
