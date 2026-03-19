@@ -620,13 +620,67 @@
   left: 0;
   right: 0;
   z-index: 200;
-  background: white;
-  border-top: 1px solid var(--color-border);
+  background: var(--color-text);
+  border-top: none;
   padding: var(--spacing-sm) var(--spacing-md);
   gap: var(--spacing-lg);
-  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
 
   &[hidden] { display: none; }
+
+  /* Invert button colors for dark background */
+  .artwork-heart-btn {
+    border-color: rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.8);
+
+    .gallery-heart-icon {
+      stroke: currentColor;
+    }
+
+    &:hover {
+      border-color: white;
+      color: white;
+    }
+  }
+
+  .artwork-share-btn {
+    background: white;
+    border-color: white;
+    color: var(--color-text);
+
+    &:hover {
+      background: transparent;
+      border-color: white;
+      color: white;
+    }
+  }
+
+  .artwork-heart-btn[aria-pressed="true"] {
+    border-color: #e53e3e;
+    color: #e53e3e;
+
+    .gallery-heart-icon {
+      fill: #e53e3e;
+      stroke: #e53e3e;
+    }
+  }
+
+  .artwork-share-popover--sticky {
+    background: var(--color-text);
+    border-color: rgba(255, 255, 255, 0.2);
+
+    .share-option {
+      color: rgba(255, 255, 255, 0.85);
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      svg {
+        color: rgba(255, 255, 255, 0.5);
+      }
+    }
+  }
 }
 
 /* Heart button adapted for detail page (inline, not absolute) */
@@ -688,18 +742,19 @@
   align-items: center;
   gap: var(--spacing-xs);
   padding: var(--spacing-xs) var(--spacing-md);
-  background: transparent;
-  border: 1px solid var(--color-border);
+  background: var(--color-text);
+  border: 1px solid var(--color-text);
   border-radius: var(--border-radius);
-  color: var(--color-text-muted);
+  color: white;
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   cursor: pointer;
-  transition: border-color var(--transition-speed) ease, color var(--transition-speed) ease;
+  transition: background var(--transition-speed) ease, border-color var(--transition-speed) ease;
 
   &:hover {
+    background: transparent;
     border-color: var(--color-text);
     color: var(--color-text);
   }
