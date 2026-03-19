@@ -46,6 +46,7 @@
           <div class="artwork-status artwork-status--reserved">RESERVED</div>
         {% elsif page.status == "available" %}
           <div class="artwork-status artwork-status--available">AVAILABLE</div>
+          <button data-inquiry-trigger class="artwork-inquiry-trigger-inline">INQUIRE ABOUT THIS WORK</button>
         {% endif %}
 
         {% comment %} Page metadata: last updated date {% endcomment %}
@@ -101,7 +102,7 @@
       {% comment %} Inquiry block for available artworks {% endcomment %}
       {% if page.status == "available" %}
         <div class="artwork-inquiry">
-          <button id="artwork-inquiry-trigger" class="artwork-inquiry-link">Inquire about this work</button>
+          <button data-inquiry-trigger class="artwork-inquiry-link">INQUIRE ABOUT THIS WORK</button>
         </div>
         {% include artwork-inquiry-modal.html %}
       {% endif %}

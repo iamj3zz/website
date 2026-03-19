@@ -3,18 +3,66 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('artwork-inquiry-modal');
-    const trigger = document.getElementById('artwork-inquiry-trigger');
     const closeBtn = modal && modal.querySelector('.inquiry-modal-close');
     const overlay = modal && modal.querySelector('.inquiry-modal-overlay');
     const form = document.getElementById('artwork-inquiry-form');
+    const triggers = document.querySelectorAll('[data-inquiry-trigger]');
 
-    if (!modal || !trigger) return;
+    if (!modal || !triggers.length) return;
 
-    function openModal() {
+    // Store original page-level modal header values
+    const modalTitle = document.getElementById('inquiry-modal-title');
+    const modalMeta = modal.querySelector('.inquiry-modal-meta');
+    const originalTitle = modalTitle ? modalTitle.textContent : '';
+    const originalMeta = modalMeta ? modalMeta.textContent : '';
+
+    // Track which trigger opened the modal (for focus restoration)
+    let lastTrigger = null;
+
+    function openModal(trigger) {
+      lastTrigger = trigger;
+
+      // If trigger has data attributes (grid context), populate modal fields dynamically
+      const dataTitle = trigger.dataset.title;
+      if (dataTitle) {
+        const dataMedium = trigger.dataset.medium || '';
+        const dataDimensions = trigger.dataset.dimensions || '';
+        const dataYear = trigger.dataset.year || '';
+        const dataUrl = trigger.dataset.url || window.location.href;
+
+        if (modalTitle) modalTitle.textContent = dataTitle;
+        if (modalMeta) {
+          const parts = [dataMedium, dataDimensions, dataYear].filter(Boolean);
+          modalMeta.textContent = parts.join(' · ');
+        }
+
+        const artworkField = form && form.querySelector('[name="artwork"]');
+        if (artworkField) {
+          const parts = [dataTitle, dataMedium, dataDimensions, dataYear].filter(Boolean);
+          artworkField.value = parts.join(' — ');
+        }
+
+        const subjectField = form && form.querySelector('[name="_subject"]');
+        if (subjectField) subjectField.value = 'Artwork Inquiry: ' + dataTitle;
+
+        const urlField = document.getElementById('inquiry-artwork-url');
+        if (urlField) urlField.value = dataUrl;
+
+        const textarea = document.getElementById('inquiry-message');
+        if (textarea) {
+          const mediumPart = dataMedium ? ' (' + dataMedium + (dataDimensions ? ', ' + dataDimensions : '') + ')' : '';
+          textarea.value = 'Hello,\n\nI am interested in acquiring "' + dataTitle + '"' + mediumPart + '.\n\nCould you please provide me with more information about:\n- The current availability and price\n- Shipping costs to my address (provided above)\n- Packaging and delivery conditions\n- Certificate of authenticity\n\nThank you,';
+        }
+      } else {
+        // Detail page: restore defaults and set URL
+        if (modalTitle) modalTitle.textContent = originalTitle;
+        if (modalMeta) modalMeta.textContent = originalMeta;
+        const urlField = document.getElementById('inquiry-artwork-url');
+        if (urlField) urlField.value = window.location.href;
+      }
+
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
-      const urlField = document.getElementById('inquiry-artwork-url');
-      if (urlField) urlField.value = window.location.href;
       const firstInput = modal.querySelector('input, textarea');
       if (firstInput) firstInput.focus();
     }
@@ -22,6 +70,11 @@
     function closeModal() {
       modal.hidden = true;
       document.body.style.overflow = '';
+
+      // Restore modal header to page defaults
+      if (modalTitle) modalTitle.textContent = originalTitle;
+      if (modalMeta) modalMeta.textContent = originalMeta;
+
       // Reset form state for next open
       if (form) {
         form.hidden = false;
@@ -38,10 +91,13 @@
         submitBtn.disabled = false;
         submitBtn.textContent = 'Send Inquiry';
       }
-      trigger.focus();
+      if (lastTrigger) lastTrigger.focus();
     }
 
-    trigger.addEventListener('click', openModal);
+    triggers.forEach(function (trigger) {
+      trigger.addEventListener('click', function () { openModal(trigger); });
+    });
+
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
     if (overlay) overlay.addEventListener('click', closeModal);
 
