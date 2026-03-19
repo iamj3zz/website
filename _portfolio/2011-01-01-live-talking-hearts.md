@@ -16,7 +16,7 @@ description: |
   Lead coordinator: Subjective Values Foundation (Budapest). Partners: Associazione culturale Fabbrica Europa (Florence), EuroEst Foundation (Bucharest), University of Barcelona–LMI (Spain).
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2012"

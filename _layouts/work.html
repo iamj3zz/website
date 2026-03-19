@@ -78,6 +78,15 @@
         </div>
       </div>
 
+      {% comment %} Print-only hero image — only rendered if hero_image: true in front matter {% endcomment %}
+      {% if page.hero_image %}
+        {% assign work_slug = page.date | date: "%Y-%m-%d" | append: "-" | append: page.slug %}
+        {% assign hero_path = "/assets/works/" | append: work_slug | append: "/hero.jpg" %}
+        <div class="work-print-hero">
+          <img src="{{ hero_path | relative_url }}" alt="{{ page.title }}">
+        </div>
+      {% endif %}
+
       {% comment %} Modular sections system {% endcomment %}
       {% if page.sections %}
         <div class="work-modules">

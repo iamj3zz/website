@@ -11,7 +11,7 @@ description: |
   J3ZZ participated in an artistic residency at Kerveguen in Saint-Pierre, Réunion. This residency offered a focused environment for creative work and artistic research on the Racines & Résonances live audiovisual performance. The unique cultural landscape of southern Réunion provided inspiration for exploring the symbiotic relationship between plants and humans through biosonification and immersive concert development.
 category: residencies
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -23,7 +23,7 @@ metadata:
       value: "Kerveguen"
     - label: "Output Work"
       value: "Racines & Résonances (live audiovisual performance)"
-      link: "/works/2019-09-01-live-racines-et-resonances/"
+      link: "/works/2019-09-19-live-racines-et-resonances/"
 
 sections:
   - type: description
@@ -34,7 +34,7 @@ sections:
 
       The residency enabled further experimentation with the symbiotic relationship between plants and humans, developing the biological data capture systems and audiovisual components that would become central to the Racines & Résonances performance.
 
-      → [View the Racines & Résonances performance](/works/2019-09-01-live-racines-et-resonances/)
+      → [View the Racines & Résonances performance](/works/2019-09-19-live-racines-et-resonances/)
 
   - type: metadata
 ---

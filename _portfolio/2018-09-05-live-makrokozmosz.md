@@ -10,7 +10,7 @@ description: |
   Makrokozmosz is a live audiovisual performance featuring a collaboration between J3ZZ (violin), DJ Panda, and Makrokozmosz. The performance took place on September 5, 2018 at Valyo Kikötő in Budapest, combining music, electronics, and visual elements for an immersive multimedia experience.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2018"

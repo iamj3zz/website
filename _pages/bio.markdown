@@ -53,7 +53,7 @@ links:
     <div class="bio-category" id="bio-installations">
       <h2>Installations &amp; Exhibitions</h2>
       <div class="bio-items">      
-        <div class="bio-item"><span class="bio-year"><script>document.write(new Date().getFullYear())</script></span> <a href="/works/2026-01-01-inst-vibrotanica/">VIBROTANICA</a> ∙ work in progress</div>
+        <!--<div class="bio-item"><span class="bio-year"><script>document.write(new Date().getFullYear())</script></span> <a href="/works/2026-01-01-inst-vibrotanica/">VIBROTANICA</a> ∙ work in progress</div>-->
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-18-inst-iris/">IRIS</a> ∙ Csokonai Theatre ∙ Debrecen ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-02-13-inst-unbalanced-forces/">UNBALANCED FORCES</a> ∙ Lábor Gallery ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">PARK IN PROGRESS</a> ∙ UN buffer zone ∙ Nicosia ∙ CY</div>
@@ -111,14 +111,14 @@ links:
 
       <div class="bio-section-subtitle">Own Creations</div>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Villa de la Région ∙ Saint-Denis ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2024</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut Français de Hongrie ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2024</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut Français de Maurice ∙ Rose-Hill ∙ MU</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Léspas culturel Leconte de Lisle ∙ Saint-Paul ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut français de Budapest ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ House of Music Hungary ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ La Lasagneria ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-01-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ MFSZ ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Villa de la Région ∙ Saint-Denis ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2024</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut Français de Hongrie ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2024</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut Français de Maurice ∙ Rose-Hill ∙ MU</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Léspas culturel Leconte de Lisle ∙ Saint-Paul ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut français de Budapest ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ House of Music Hungary ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ La Lasagneria ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ MFSZ ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-live-n7n8-festival/">N7N8 FESTIVAL</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>

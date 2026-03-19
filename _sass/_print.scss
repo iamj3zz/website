@@ -827,6 +827,19 @@
     margin-bottom: 12px;
   }
 
+  /* Work Print Hero Image */
+  .work-print-hero {
+    display: block !important;
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+
+  .work-print-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
   /* ── Artwork Detail Print ── */
 
   /* Hide all interactive/screen-only elements */

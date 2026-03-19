@@ -10,7 +10,7 @@ description: |
   Performance collaboration between choreographer/director Zoltán Grecsó and J3ZZ at the Ördögkatlan Festival 2018. The festival is a multicultural pan-art event spanning four villages in the Kisharsány-Villany Wine region of Hungary. The performance took place on August 3, 2018 at Beremendi Kovácsműhely in Beremend as part of this expansive festival celebrating contemporary arts and cultural exchange.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2018"

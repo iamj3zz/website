@@ -9,7 +9,7 @@ description: |
   Michael Kentish (Recordings) is a collection of studio recordings featuring J3ZZ on violin, created for artist Michael Kentish as part of their collaborative work. The recordings were developed alongside the live performance project and represent a distinct body of composed and recorded material specifically created for the artist's work.
 category: releases
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2016-02-04"

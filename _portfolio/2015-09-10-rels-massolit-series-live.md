@@ -14,7 +14,7 @@ description: |
   The complete live recordings were released as a digital album on September 10, 2015, on Bandcamp.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2015-09-10"

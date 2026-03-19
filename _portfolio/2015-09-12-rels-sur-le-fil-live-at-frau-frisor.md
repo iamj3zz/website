@@ -10,7 +10,7 @@ description: |
   Live recording of the premiere performance of Sur le fil at Frau Frisor, Florence, on September 12, 2013. A single uninterrupted 25-minute solo acoustic violin improvisation — no preparation, no electronics. Released as a digital album on Bandcamp two years later, on the second anniversary of the performance.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2015-09-12"

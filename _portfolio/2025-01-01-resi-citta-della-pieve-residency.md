@@ -11,7 +11,7 @@ description: |
   J3ZZ participated in an artistic residency in Citta Della Pieve, Italy. This residency provided an opportunity for creative exploration and development of the Vibrotanica immersive interactive installation. The historic Italian town, known for its rich cultural heritage and artistic traditions, offered an inspiring environment for developing this work exploring the symbiotic relationship between humans and plants through bioelectrical sensors and real-time audiovisual transformation.
 category: residencies
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

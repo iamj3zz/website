@@ -11,5 +11,5 @@ venue_name: Csokonai Theater
 venue_address: "Kossuth utca 10, 4024 Debrecen, Hungary"
 venue_link: https://goo.gl/maps/gWWQ8LhLcBfcMFr57
 ticket_link: 
-description: "IRIS — Group light art exhibition at Csokonai Theater (Lighthouse collective) featuring analogue/digital light art and kinetic installations by 17 artists including J3ZZ."
+description: "IRIS — Group light art exhibition at Csokonai Theater (2020 Aug. 18-22 - Lighthouse collective) featuring analogue/digital light art and kinetic installations by 17 artists including J3ZZ."
 ---

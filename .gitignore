@@ -45,4 +45,6 @@ lhci-reports/
 print-test-results/
 
 # Local resource documentation (not tracked)
-docs/
+docs/HIGHRES-IMAGES/
+docs/Resources/
+docs/samples/

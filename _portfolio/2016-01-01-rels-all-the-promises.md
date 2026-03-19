@@ -10,7 +10,7 @@ description: |
   All the Promises is an album by Michael Kentish featuring J3ZZ on violin. The collaboration explores the intersection of singer-songwriter traditions with string arrangements, creating intimate musical narratives through the combination of voice, guitar, and violin textures.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2016-01-01"

@@ -10,7 +10,7 @@ description: |
   Video documentation of The Last Drops' performance at the Tram Jam event, featuring J3ZZ on violin alongside the Americana band.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2009-01-01"

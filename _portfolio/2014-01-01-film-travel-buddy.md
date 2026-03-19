@@ -9,7 +9,7 @@ description: |
   In 2014, the composer scored and produced the soundtrack for this short film. The project represents work in film scoring and soundtrack production for fiction cinema.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

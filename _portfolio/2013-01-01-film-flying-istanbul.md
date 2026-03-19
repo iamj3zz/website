@@ -9,7 +9,7 @@ description: |
   The artist composed music and created sound design for Olga Pavlenko's animation short "Flying Istanbul," a project that developed from 2013 to 2020. This long-form animation project explores themes of migration, displacement, and cultural identity through visual storytelling and sonic landscapes.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

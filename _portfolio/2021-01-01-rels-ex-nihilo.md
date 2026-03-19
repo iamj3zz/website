@@ -15,7 +15,7 @@ description: |
   - **Ex Nihilo 3** — Part 3 of 3
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2021-01-01"

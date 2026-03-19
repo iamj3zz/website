@@ -4,13 +4,14 @@ status: major
 layout: work
 title: "PARK IN PROGRESS"
 work_id: park-in-progress
+hero_image: true
 abstract: |
   A harmony of body and sound in the heart of Nicosia.
 description: |
   For this project, the artist created an outdoor spatial audio installation featuring 16 speakers following a residency period. During the residency, J3ZZ "established a catalogue of sounds produced by human body, creating a vocabulary of sounds." The installation functioned as "a place where the imaginary vision of the performer meet Nicosia's reality." A circus performer and her dog participated in the opening performance alongside the artist.
 category: installations
 commissioned: false
-image: /assets/works/2014-09-29-park-in-progress/thumbnail.jpg
+image: /assets/works/2014-09-29-inst-park-in-progress/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -55,19 +56,19 @@ metadata:
       link: "https://www.youtube.com/watch?v=D67JKMnHHyQ"
     - label: ""
       value: "PDF: Calaméo — Park in Progress artist biographies catalogue (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/calameo-park-in-progress-artist-biographies.pdf"
+      link: "/assets/works/2014-09-29-inst-park-in-progress/calameo-park-in-progress-artist-biographies.pdf"
     - label: ""
       value: "PDF: Open call announcement — Institut Français de Suède (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/ifsuede-open-call-park-in-progress-11-nicosia-2014.pdf"
+      link: "/assets/works/2014-09-29-inst-park-in-progress/ifsuede-open-call-park-in-progress-11-nicosia-2014.pdf"
     - label: ""
       value: "PDF: Transcultures — Park in Progress 11, Nuit Européenne de la Jeune Création (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/transcultures-park-in-progress-11-nicosia-2014.pdf"
+      link: "/assets/works/2014-09-29-inst-park-in-progress/transcultures-park-in-progress-11-nicosia-2014.pdf"
     - label: ""
       value: "PDF: Check In Cyprus — Park in Progress 11 (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/checkincyprus-park-in-progress-11-nicosia-2014.pdf"
+      link: "/assets/works/2014-09-29-inst-park-in-progress/checkincyprus-park-in-progress-11-nicosia-2014.pdf"
     - label: ""
       value: "PDF: Nicosia city portal — announcement (archive)"
-      link: "/assets/works/2014-09-29-park-in-progress/nicosia-org-announcement-park-in-progress-11-2014.pdf"
+      link: "/assets/works/2014-09-29-inst-park-in-progress/nicosia-org-announcement-park-in-progress-11-2014.pdf"
 
 sections:
 
@@ -99,13 +100,13 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery01_1440w.jpg
-      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery02_1440w.jpg
-      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery03_1440w.jpg
-      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery04_1440w.jpg
-      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery05_1440w.jpg
-      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery06_1440w.jpg
-      - /assets/works/2014-09-29-park-in-progress/park-in-progress-gallery07_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery01_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery02_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery03_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery04_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery05_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery06_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery07_1440w.jpg
 
   - type: linked-events
 

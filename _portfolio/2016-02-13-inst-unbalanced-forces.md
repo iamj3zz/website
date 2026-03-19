@@ -4,13 +4,14 @@ status: major
 layout: work
 title: "UNBALANCED FORCES"
 work_id: unbalanced-forces
+hero_image: true
 abstract: |
   A sonic exploration of action and intervention.
 description: |
   An interactive audio spatial installation exploring contemporary Hungarian society. The artist describes it as "a performative sound installation, an interactive experiment willing to present the space and the system we are in." Visitors navigate a multichannel soundscape and observe how their sounds and movements affect the living space, raising philosophical questions about individual agency and collective responsibility.
 category: installations
 commissioned: false
-image: /assets/works/2016-02-13-unbalanced-forces/thumbnail.jpg
+image: /assets/works/2016-02-13-inst-unbalanced-forces/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -50,10 +51,10 @@ metadata:
       link:  http://labor.c3.hu/2016/01/connections-az-fkse-uj-tagjainak-bemutatkozo-kiallitasa/
     - label: ""
       value: "PDF: exindex.hu Kapcsolatok 3. listing (archive)"
-      link: /assets/works/2016-02-13-unbalanced-forces/exindex-kapcsolatok-3.pdf
+      link: /assets/works/2016-02-13-inst-unbalanced-forces/exindex-kapcsolatok-3.pdf
     - label: ""
       value: "PDF: LABOR gallery event page (archive)"
-      link: /assets/works/2016-02-13-unbalanced-forces/labor-connections-fkse-2016.pdf
+      link: /assets/works/2016-02-13-inst-unbalanced-forces/labor-connections-fkse-2016.pdf
     - label: ""
       value: "interview"
       link: https://www.youtube.com/watch?v=5IfBEep7vZU
@@ -95,9 +96,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/works/2016-02-13-unbalanced-forces/unbalanced-forces-gallery01_1440w.jpg
-      - /assets/works/2016-02-13-unbalanced-forces/unbalanced-forces-gallery02_1440w.jpg
-      - /assets/works/2016-02-13-unbalanced-forces/unbalanced-forces-gallery03_1440w.jpg
+      - /assets/works/2016-02-13-inst-unbalanced-forces/unbalanced-forces-gallery01_1440w.jpg
+      - /assets/works/2016-02-13-inst-unbalanced-forces/unbalanced-forces-gallery02_1440w.jpg
+      - /assets/works/2016-02-13-inst-unbalanced-forces/unbalanced-forces-gallery03_1440w.jpg
 
   - type: linked-events
 

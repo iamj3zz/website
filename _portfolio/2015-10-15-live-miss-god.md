@@ -12,7 +12,7 @@ description: |
   Miss God's music draws comparisons to Burial, Mister Lies and Soap&Skin. She supported Dizzie Rascal & Modeselektor at Electronic Beats Festival in Poznań (2013), appeared at Ambition Festival (London), Heineken Opener Festival and Soundrive Festival, and won the Skoda & T-Mobile competition for emerging musicians (2014). She also composes for film and performed in Paris with dance theatre Le Flux.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2015"

@@ -141,7 +141,7 @@ while IFS= read -r -d '' IMG; do
     # -------------------------------------------------------------------------
     # {slug}-gallery##_1440w.jpg — resize to 1440px wide, quality 85
     # -------------------------------------------------------------------------
-    if echo "$FILENAME" | grep -qE "^${GALLERY_SLUG}-gallery[0-9]{2}_1440w\.(jpg|jpeg|png)$"; then
+    if echo "$FILENAME" | grep -qE "^${GALLERY_SLUG}-gallery[0-9]{2}_[0-9]+w\.(jpg|jpeg|png)$"; then
         WIDTH="$(identify -format "%w" "$IMG" 2>/dev/null || echo "0")"
         if [ "$WIDTH" = "1440" ]; then
             echo -e "${GREEN}${CHECK} $FILENAME — 1440px wide, OK${NC}"
@@ -163,7 +163,7 @@ while IFS= read -r -d '' IMG; do
     echo "  This file does not match any known convention:"
     echo "    • thumbnail.jpg"
     echo "    • hero.jpg"
-    echo "    • ${GALLERY_SLUG}-gallery##_1440w.jpg  (e.g. ${GALLERY_SLUG}-gallery01_1440w.jpg)"
+    echo "    • ${GALLERY_SLUG}-gallery##_Nw.jpg  (e.g. ${GALLERY_SLUG}-gallery01_1440w.jpg)"
     echo "  Please rename it manually, then re-run the test."
     HAS_UNKNOWN=true
 

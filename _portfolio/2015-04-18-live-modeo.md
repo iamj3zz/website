@@ -12,7 +12,7 @@ description: |
   The first was at Trafó House of Contemporary Arts on April 18, 2015, as the opening act for Ben Frost (IS) and Vessel (UK) as part of Trafó's ELECTRIFY electronic music series. The second was at the Nagyvásártelep open-air festival on June 12, 2015, sharing the bill with Lone (UK), Mo Kolours (UK), and Volkova Sisters.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2015"

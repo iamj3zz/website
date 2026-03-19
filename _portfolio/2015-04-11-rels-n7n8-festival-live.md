@@ -10,7 +10,7 @@ description: |
   N7N8 Festival (Live) documents the live performance recorded on April 11, 2015 at Massolit Café in Budapest. The recording captures an improvised duet between J3ZZ on violin and Áron Porteleki, representing the second appearance of this collaboration following their first session in the Massolit Series concert cycle.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2015-04-11"

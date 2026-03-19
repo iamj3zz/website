@@ -9,7 +9,7 @@ description: |
   The composer created music for three trailers for Noémi Kulcsár's dance performance "Home Base" in 2016. These promotional pieces were created for a contemporary dance work exploring themes of belonging and displacement.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

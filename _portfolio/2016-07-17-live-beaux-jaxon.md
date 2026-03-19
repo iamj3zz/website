@@ -10,7 +10,7 @@ description: |
   Beaux Jaxon is a Blues and R&B band that features J3ZZ as a guest violinist. The band performed at various venues including ÉllatóHáz, an outdoor courtyard venue in Budapest known for live music performances.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2016"

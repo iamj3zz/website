@@ -10,7 +10,7 @@ description: |
   A science fiction short film created for the SCI-FI-LONDON 48 Hour Film Challenge 2012. The narrative explores a dystopian future where governments control reproduction and impose a maximum lifespan to manage resources in a formerly overpopulated world.
 category: films
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

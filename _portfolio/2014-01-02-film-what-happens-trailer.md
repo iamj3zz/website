@@ -9,7 +9,7 @@ description: |
   The composer created music for the trailer of EnKnapGroup's performance "What happens when you touch it" in 2014. This promotional piece was created for the Ljubljana-based performance work where the artist also served as composer and performer.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

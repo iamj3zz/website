@@ -9,7 +9,7 @@ description: |
   Mellettünk x J3ZZ was a commissioned collaborative artistic evening featuring writer Krisztián Grecsó and dancer Zoltán Grecsó. The performance explores shared identity and village roots through distinct artistic languages. Rather than text explaining dance, the work presents a peculiar struggle, spiritual inventory, and virtual family constellation examining common themes from different perspectives. J3ZZ performed live violin alongside vocalist Réka Fodor, creating an immersive soundscape for the dancers' movements and the writers' spoken word.
 category: live-acts
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2019"

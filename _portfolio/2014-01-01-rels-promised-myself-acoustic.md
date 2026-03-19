@@ -10,7 +10,7 @@ description: |
   Promised myself (Acoustic) is a single by MC KiKo featuring J3ZZ on violin. The acoustic arrangement strips the production to its essentials, highlighting the interplay between voice and strings in an intimate setting. The collaboration explores themes of commitment and self-reflection through minimal instrumentation.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2014-01-01"

@@ -10,7 +10,7 @@ description: |
   Live recording of Sur le fil performed at FKSE (Fiatal Képzőművészek Stúdiója Egyesület) Studio Gallery, Budapest, on July 2, 2015. A 15-minute solo acoustic violin improvisation — no preparation, no electronics. Curated by Erlich Gábor & Tábori András. Audio recorded by Zsolt László Kiss, video by Erlich Gábor. Edited and mixed by J3ZZ. Released as a digital single on Bandcamp on September 12, 2015.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2015-09-12"

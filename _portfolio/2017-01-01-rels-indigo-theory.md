@@ -10,7 +10,7 @@ description: |
   "Rainy Day" is a single by the electronic band Indigo Theory, featuring J3ZZ as composer and violinist. Created during summer 2017, this collaboration blends the band's deep house aesthetic with classical string arrangements, combining violin performance with electronic production.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2017-01-01"

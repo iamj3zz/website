@@ -10,7 +10,7 @@ description: |
   An experimental dance short film created during a residency in Cologne where the artist served as music composer and producer. The project emerged from collaborative work developed during this creative residency period.
 category: films
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

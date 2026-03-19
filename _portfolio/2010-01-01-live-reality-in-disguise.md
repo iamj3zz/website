@@ -10,7 +10,7 @@ description: |
   Reality in Disguise was one of seven productions created under Art'n'Go – New Routes to Intercultural Creativity, a ROOTS & ROUTES project supported by the EU CULTURE Programme (September 2009 – August 2011). J3ZZ participated as violinist and co-creator/composer, contributing to the development of a show described as "a shockingly unique mixture of art genres from contemporary dance to pop music, from dub step to slam poetry, from the art of storytelling to visual arts." The work was developed during residencies at Remscheid Academy and Heek (Germany), and performed at Fabbrica Europa (Florence, Italy) and Sziget Festival (Budapest, Hungary) in 2011.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2009–2011"

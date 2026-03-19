@@ -12,7 +12,7 @@ description: |
   The show was performed five times between 2013 and 2017, in Florence, Budapest, and Singapore. Two performances were recorded and released on Bandcamp: the premiere at Frau Frisor, Florence (September 12, 2013, 25:42) and the FKSE Studio Gallery, Budapest (July 2, 2015, 15:09).
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2013–2017"

@@ -11,7 +11,7 @@ description: |
   IparKutya is a band that featured J3ZZ as violinist. The band performed at the Budapest Fringe Festival at Hölgyválasz on April 3, 2011, as part of the festival's diverse musical programming.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2010–2012"

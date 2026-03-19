@@ -9,7 +9,7 @@ description: |
   Rajzolj zenét! (Draw Music!) was a commissioned family morning show created for Lóvasút Kulturális és Rendezvényközpont in Budapest. Written and performed by J3ZZ alongside guest musician János Gerzson (flute, oud), the show brought together live violin, electronics, and world music influences spanning Réunion island, Hungary, Africa, Arabia and Asia — described as music with no borders. Children aged 3 and up painted and felted while listening to music, guided by animators Eszter Cseke-Marosi and Kinga Petrilla. The event was produced in association with Watcha Studios and sold out completely.
 category: live-acts
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2019"

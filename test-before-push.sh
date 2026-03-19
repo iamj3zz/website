@@ -135,10 +135,10 @@ else
 
         # Detect gallery slug from existing conforming gallery files
         GALLERY_SLUG=""
-        for gf in "$WORK_DIR"*-gallery[0-9][0-9]_1440w.jpg; do
+        for gf in "$WORK_DIR"*-gallery[0-9][0-9]_*w.jpg; do
             [ -f "$gf" ] || continue
             gf_basename="$(basename "$gf")"
-            detected="$(echo "$gf_basename" | sed 's/-gallery[0-9][0-9]_1440w\.jpg$//')"
+            detected="$(echo "$gf_basename" | sed 's/-gallery[0-9][0-9]_[0-9]*w\.jpg$//')"
             [ -n "$detected" ] && GALLERY_SLUG="$detected" && break
         done
         [ -z "$GALLERY_SLUG" ] && GALLERY_SLUG="$DEFAULT_SLUG"
@@ -174,19 +174,15 @@ else
                 continue
             fi
 
-            # gallery files — must match slug pattern and be 1440px wide
-            if echo "$FILENAME" | grep -qE "^${GALLERY_SLUG}-gallery[0-9]{2}_1440w\.(jpg|jpeg|png)$"; then
-                WIDTH="$(identify -format "%w" "$IMG" 2>/dev/null || echo "0")"
-                if [ "$WIDTH" != "1440" ]; then
-                    echo -e "${YELLOW}→ $WORK_DIR$FILENAME is ${WIDTH}px wide (needs resize to 1440px)${NC}"
-                    FOLDER_NEEDS_PROCESSING=true
-                fi
+            # gallery files — must match slug pattern (any width suffix)
+            if echo "$FILENAME" | grep -qE "^${GALLERY_SLUG}-gallery[0-9]{2}_[0-9]+w\.(jpg|jpeg|png)$"; then
+                echo -e "${GREEN}${CHECK} $WORK_DIR$FILENAME — gallery image${NC}"
                 continue
             fi
 
             # unknown filename
             echo -e "${RED}✗ Unknown image filename: $WORK_DIR$FILENAME${NC}"
-            echo "  Expected: thumbnail.jpg | hero.jpg | ${GALLERY_SLUG}-gallery##_1440w.jpg"
+            echo "  Expected: thumbnail.jpg | hero.jpg | ${GALLERY_SLUG}-gallery##_Nw.jpg"
             FOLDER_NEEDS_PROCESSING=true
 
         done < <(git ls-files --cached --others --exclude-standard "$WORK_DIR" | grep -iE '\.(jpg|jpeg|png)$' | sort | tr '\n' '\0')

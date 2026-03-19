@@ -12,7 +12,7 @@ description: |
   The work has been produced by multiple companies: the original 2019 premiere at MU Theatre Budapest under Tímea Sebestyén's choreography, and a subsequent 2020 production by the Imre Zoltán Program at Latinovits-Bujtor Játékszín in Veszprém.
 category: performances
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

@@ -13,7 +13,7 @@ description: |
   J3ZZ performed as the band's violinist/mandolinist, contributing both to the live sets and to the recorded materials.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2008–2010"

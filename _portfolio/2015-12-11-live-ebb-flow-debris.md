@@ -15,7 +15,7 @@ description: |
   Monofog is an audio-visual formation by visual artists David Sutherland and Ilauszky Tamás, whose performances blend free improvisation noise and free jazz played on prepared and homemade (DIY) instruments, with strong performance character — on riverbanks, in concert halls, or exhibition spaces.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2015"

@@ -11,7 +11,7 @@ description: |
   Panda Elektroakusztik is an electroacoustic ensemble featuring a collaboration between DJ Panda and J3ZZ as violinist. The ensemble combines traditional instruments including santur, cello, shakuhachi, bass, and vocals with electronic music production. Performances took place at various Budapest venues including Szimpla Kert during summer 2018.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2018"

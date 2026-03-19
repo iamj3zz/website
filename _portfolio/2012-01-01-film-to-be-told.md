@@ -14,7 +14,7 @@ description: |
   Conceived and coordinated by Pietro Gaglianò, the project was managed by Marina Bistolfi at Associazione Fabbrica Europa and supported by the EU Lifelong Learning Programme (Grundtvig).
 category: films
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2012-03-16"

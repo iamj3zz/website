@@ -10,7 +10,7 @@ description: |
   A composer-producer contributed to this dance short film examining PhD research on how people evaluate creative ideas. The project visualizes creativity as "a room which needs to be furnished in order to see how the different components add up." The work compares laypeople and experts, analyzing how four criteria—usefulness, originality, riskiness, and growth potential—influence creativity judgments. The research found laypeople possess "a robust internalized model of creativity" despite processing noise, while experts demonstrate synchronized, clockwork-like precision in assessment criteria.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

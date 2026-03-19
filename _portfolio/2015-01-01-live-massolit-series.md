@@ -12,7 +12,7 @@ description: |
   Over seven sessions, J3ZZ performed on violin and electronics alongside Áron Porteleki (Series 01, 03), Ernő Zoltán Rubik (Series 02), Endre Kertész (Series 04), Bálint Bolcsó (Series 05), and Zsolt Sőrés / Ahad (Series 06). Series 07 was a solo performance. All sessions were recorded live and released as a digital album on September 10, 2015.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   date: "2015"

@@ -10,7 +10,7 @@ description: |
   A short fiction film exploring an emotionally charged moment. The narrative follows "a husband, wife and his best friend" during a casual social gathering where unspoken tensions and revelations alter the dynamics between all parties involved.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

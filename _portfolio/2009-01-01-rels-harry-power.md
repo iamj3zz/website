@@ -10,7 +10,7 @@ description: |
   "Harry Power" is an audio single released by The Last Drops, featuring J3ZZ as violinist with the Americana band.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2009-01-01"

@@ -4,6 +4,7 @@ status: major
 layout: work
 title: "BIOSONIFICATION"
 work_id: biosonification-workshops
+hero_image: true
 abstract: |
   Educational workshops and ateliers exploring plant biosonification through the collective "Nout plant i chant". Participants learn to capture plant vibrations and transform them into melodies using sensor technology.
 description: |
@@ -14,7 +15,7 @@ description: |
   The vibrotanica box device, developed since 2019, converts plant biodata into sound through sensors and specialized software. The school-based program "Vibrotanica dann lékol" brings this technology into educational curricula, combining electronic music, ecology, and music informatics for student-centered learning and musical creation.
 category: workshops
 commissioned: false
-image: /assets/works/1900-01-01-complete-template/thumbnail.jpg
+image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 
 metadata:
   release_date: "2023-06-04"
