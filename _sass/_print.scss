@@ -826,4 +826,111 @@
   .module-description .description-content p {
     margin-bottom: 12px;
   }
+
+  /* ── Artwork Detail Print ── */
+
+  /* Hide all interactive/screen-only elements */
+  .artwork-status,
+  .artwork-inquiry-trigger-inline,
+  .work-nav,
+  .back-to-top,
+  #lightbox,
+  .artwork-share-btn,
+  .artwork-share-popover {
+    display: none !important;
+  }
+
+  /* Ensure artwork content is always visible */
+  .artwork-detail .work-modules {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .artwork-detail .module-description,
+  .artwork-detail .module-split-hero-metadata {
+    display: block !important;
+  }
+
+  /* Description appears before image in print (reorder via flexbox) */
+  .artwork-detail .module-description {
+    order: -1;
+  }
+
+  /* Full-page print image: collapse split to single column */
+  /* Collapse split to single column, use flex to order metadata before image */
+  .artwork-detail .module-split-hero-metadata.artwork-hero .split-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Show metadata sidebar after image on new page */
+  .artwork-detail .module-split-hero-metadata.artwork-hero .split-right {
+    display: block !important;
+    order: 1;
+    width: 100% !important;
+    margin-top: 0;
+    page-break-before: always;
+  }
+
+  .artwork-detail .module-split-hero-metadata.artwork-hero .split-left {
+    width: 100% !important;
+    margin-bottom: 0 !important;
+    order: 0;
+  }
+
+  /* Hero block: description + image share page 1; gallery breaks to page 2 */
+  .artwork-detail .module-split-hero-metadata.artwork-hero {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  /* Image fills remaining page height after description */
+  .artwork-detail .module-split-hero-metadata.artwork-hero .hero-image {
+    max-height: 280mm;
+    width: auto;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Caption below image */
+  .artwork-detail .module-split-hero-metadata.artwork-hero .image-caption {
+    font-size: 9pt;
+    color: #595959;
+    font-style: italic;
+    text-align: center;
+    margin-top: 4mm;
+  }
+
+  /* Gallery images — show in print as a 2-column grid */
+  .artwork-detail .artwork-gallery {
+    margin-top: 20mm;
+    page-break-before: always;
+  }
+
+  .artwork-detail .artwork-gallery-heading {
+    font-size: 11pt;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 8mm;
+    padding-bottom: 4mm;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .artwork-detail .artwork-gallery .image-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6mm;
+  }
+
+  .artwork-detail .artwork-gallery .grid-item {
+    page-break-inside: avoid;
+  }
+
+  .artwork-detail .artwork-gallery .grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
 }
