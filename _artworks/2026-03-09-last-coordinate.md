@@ -5,8 +5,13 @@ title: "Last Coordinate"
 series: "Cartography of Collapse"
 series_part: "II. EROSION"
 year: "2026"
-medium: "Ink on paper"
+medium: "Drawing, Ink on paper"
 dimensions: "42 × 29.7 × 0.1 cm"
+rarity: "One-of-a-kind Artwork"
+ready_to_hang: "No"
+frame: "Not Framed"
+authenticity: "Certificate Included"
+packaging: "Ships Rolled in a Tube"
 image: /assets/artworks/2026-03-09-last-coordinate/thumbnail.png
 abstract: "A winding channel cuts through the composition — neither purely geometric nor purely organic. This is the boundary where one logic gives way to another, where measurement can still hold."
 description: |
@@ -28,18 +33,7 @@ sections:
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-09-last-coordinate/print.png
-    caption: "Last Coordinate — Ink on paper, 42 × 29.7 cm, 2026"
-    custom:
-      - label: "Series"
-        value: "Cartography of Collapse — II. Erosion"
-      - label: "Medium"
-        value: "Ink on paper"
-      - label: "Dimensions"
-        value: "42 × 29.7 × 0.1 cm"
-      - label: "Year"
-        value: "2026"
-      - label: "Edition"
-        value: "Unique, non-editioned original"
+    caption: "Last Coordinate — Drawing, Ink on paper, 42 × 29.7 cm, 2026"
   - type: description
 
 gallery:

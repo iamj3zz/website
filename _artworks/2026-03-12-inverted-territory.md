@@ -5,8 +5,13 @@ title: "Inverted Territory"
 series: "Cartography of Collapse"
 series_part: "II. EROSION"
 year: "2026"
-medium: "Ink on paper"
+medium: "Drawing, Ink on paper"
 dimensions: "29.7 × 42 × 0.1 cm"
+rarity: "One-of-a-kind Artwork"
+ready_to_hang: "No"
+frame: "Not Framed"
+authenticity: "Certificate Included"
+packaging: "Ships Rolled in a Tube"
 image: /assets/artworks/2026-03-12-inverted-territory/thumbnail.png
 abstract: "The relationship between matter and void inverts. Islands of dark topographic material float in white void, each isolated and complete yet fundamentally disconnected."
 description: |
@@ -28,18 +33,7 @@ sections:
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-12-inverted-territory/print.png
-    caption: "Inverted Territory — Ink on paper, 29.7 × 42 cm, 2026"
-    custom:
-      - label: "Series"
-        value: "Cartography of Collapse — II. Erosion"
-      - label: "Medium"
-        value: "Ink on paper"
-      - label: "Dimensions"
-        value: "29.7 × 42 × 0.1 cm"
-      - label: "Year"
-        value: "2026"
-      - label: "Edition"
-        value: "Unique, non-editioned original"
+    caption: "Inverted Territory — Drawing, Ink on paper, 29.7 × 42 cm, 2026"
   - type: description
 
 gallery:

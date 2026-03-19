@@ -5,8 +5,13 @@ title: "Compressed Time"
 series: "Cartography of Collapse"
 series_part: "I. IGNEOUS"
 year: "2026"
-medium: "Ink on paper"
+medium: "Drawing, Ink on paper"
 dimensions: "42 × 29.7 × 0.1 cm"
+rarity: "One-of-a-kind Artwork"
+ready_to_hang: "No"
+frame: "Not Framed"
+authenticity: "Certificate Included"
+packaging: "Ships Rolled in a Tube"
 image: /assets/artworks/2026-03-08-compressed-time/thumbnail.png
 abstract: "Radiating lines fan outward like an explosion frozen in stone — geological forces collide and transform, creating dynamic radiating patterns that suggest deep time compressed into a single instant."
 description: |
@@ -29,18 +34,7 @@ sections:
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-08-compressed-time/print.png
-    caption: "Compressed Time — Ink on paper, 42 × 29.7 cm, 2026"
-    custom:
-      - label: "Series"
-        value: "Cartography of Collapse — I. Igneous"
-      - label: "Medium"
-        value: "Ink on paper"
-      - label: "Dimensions"
-        value: "42 × 29.7 × 0.1 cm"
-      - label: "Year"
-        value: "2026"
-      - label: "Edition"
-        value: "Unique, non-editioned original"
+    caption: "Compressed Time — Drawing, Ink on paper, 42 × 29.7 cm, 2026"
   - type: description
 
 gallery:

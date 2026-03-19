@@ -324,6 +324,72 @@
   margin: 0 0 var(--spacing-lg) 0;
 }
 
+/* Artwork Purchasing Information */
+
+.artwork-purchasing-info {
+  border-top: 1px solid var(--color-border);
+  padding: var(--spacing-2xl) 0;
+  margin: var(--spacing-2xl) 0 0 0;
+}
+
+.artwork-purchasing-heading {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--color-text-muted);
+  margin: 0 0 var(--spacing-xl) 0;
+}
+
+.artwork-purchasing-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-xl) var(--spacing-2xl);
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.artwork-purchasing-item {
+  display: flex;
+  gap: var(--spacing-md);
+  align-items: flex-start;
+}
+
+.purchasing-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.artwork-purchasing-item > div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.purchasing-label {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-text-muted);
+}
+
+.purchasing-value {
+  font-size: 0.85rem;
+  color: var(--color-text);
+  line-height: 1.5;
+
+  &--muted {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+  }
+}
+
 /* Artwork Inquiry Modal */
 .inquiry-modal {
   position: fixed;

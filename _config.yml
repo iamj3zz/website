@@ -80,6 +80,17 @@ mailchimp_gdpr_field: "14182"
 # Formspree Integration
 formspree_artwork_inquiry: "https://formspree.io/f/contact@j3zz.com"
 
+# Artwork Shipping & Purchasing Policy
+artwork_shipping:
+  ships_from: "Réunion Island, France"
+  delivery_cost: "Shipping cost is calculated based on your destination and confirmed before any commitment."
+  delivery_time_domestic: "5–7 business days"
+  delivery_time_international: "Varies by destination — communicated before any commitment."
+  handling: "Each work is carefully rolled, wrapped in acid-free glassine paper, and shipped in a rigid protective tube, fully tracked and insured."
+  customs: "International buyers are responsible for any applicable customs duties or import taxes."
+  satisfaction: "If the work arrives damaged or you are not satisfied, contact me directly — I handle every case personally."
+  authenticity: "A signed Certificate of Authenticity is included with every original work."
+
 # Events
 event_description_truncate: 300  # Character limit for event descriptions before showing expand toggle (0 = never truncate)
 

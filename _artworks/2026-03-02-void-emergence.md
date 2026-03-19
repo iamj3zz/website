@@ -5,8 +5,13 @@ title: "Void Emergence"
 series: "Cartography of Collapse"
 series_part: "I. IGNEOUS"
 year: "2026"
-medium: "Ink on paper"
+medium: "Drawing, Ink on paper"
 dimensions: "42 × 29.7 × 0.1 cm"
+rarity: "One-of-a-kind Artwork"
+ready_to_hang: "No"
+frame: "Not Framed"
+authenticity: "Certificate Included"
+packaging: "Ships Rolled in a Tube"
 image: /assets/artworks/2026-03-02-void-emergence/thumbnail.png
 abstract: "Deep gorges carve through mineral deposits, their walls rendered in white lines against the surrounding blackness. The voids are so substantial they dominate the composition — absence becomes presence."
 description: |
@@ -28,18 +33,7 @@ sections:
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-02-void-emergence/print.png
-    caption: "Void Emergence — Ink on paper, 42 × 29.7 cm, 2026"
-    custom:
-      - label: "Series"
-        value: "Cartography of Collapse — I. Igneous"
-      - label: "Medium"
-        value: "Ink on paper"
-      - label: "Dimensions"
-        value: "42 × 29.7 × 0.1 cm"
-      - label: "Year"
-        value: "2026"
-      - label: "Edition"
-        value: "Unique, non-editioned original"
+    caption: "Void Emergence — Drawing, Ink on paper, 42 × 29.7 cm, 2026"
   - type: description
 
 gallery:

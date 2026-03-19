@@ -117,6 +117,75 @@
         </div>
       {% endif %}
 
+      {% comment %} Purchasing information — always visible {% endcomment %}
+      {% if site.artwork_shipping %}
+        {% assign s = site.artwork_shipping %}
+        <div class="artwork-purchasing-info">
+          <h2 class="artwork-purchasing-heading">Purchasing Information</h2>
+          <div class="artwork-purchasing-grid">
+
+            <div class="artwork-purchasing-item">
+              <svg class="purchasing-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <span class="purchasing-label">Ships from</span>
+                <span class="purchasing-value">{{ s.ships_from }}</span>
+              </div>
+            </div>
+
+            <div class="artwork-purchasing-item">
+              <svg class="purchasing-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="1" y="3" width="15" height="13" rx="1" stroke="currentColor" stroke-width="1.5"/>
+                <path d="M16 8h4l3 5v4h-7V8z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="5.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+                <circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <div>
+                <span class="purchasing-label">Delivery</span>
+                <span class="purchasing-value">{{ s.delivery_cost }}</span>
+                <span class="purchasing-value purchasing-value--muted">{{ s.delivery_time_domestic }} domestic · {{ s.delivery_time_international }} international</span>
+                {% if s.customs %}<span class="purchasing-value purchasing-value--muted">{{ s.customs }}</span>{% endif %}
+              </div>
+            </div>
+
+            <div class="artwork-purchasing-item">
+              <svg class="purchasing-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
+              </svg>
+              <div>
+                <span class="purchasing-label">Handling</span>
+                <span class="purchasing-value">{{ s.handling }}</span>
+              </div>
+            </div>
+
+            <div class="artwork-purchasing-item">
+              <svg class="purchasing-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <span class="purchasing-label">Authenticity</span>
+                <span class="purchasing-value">{{ s.authenticity }}</span>
+              </div>
+            </div>
+
+            <div class="artwork-purchasing-item">
+              <svg class="purchasing-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div>
+                <span class="purchasing-label">Satisfaction</span>
+                <span class="purchasing-value">{{ s.satisfaction }}</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      {% endif %}
+
       {% comment %} Inquiry block for available artworks {% endcomment %}
       {% if page.status == "available" %}
         <div class="artwork-inquiry">
