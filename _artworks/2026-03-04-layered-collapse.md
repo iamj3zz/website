@@ -40,7 +40,5 @@ sections:
         value: "2026"
       - label: "Edition"
         value: "Unique, non-editioned original"
-      - label: "Status"
-        value: "Available"
   - type: description
 ---
