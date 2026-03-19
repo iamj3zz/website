@@ -15,7 +15,6 @@ description: "Original drawings, paintings, and visual artworks by J3ZZ."
     <div class="gallery-list-row" data-artwork-url="{{ artwork.url | absolute_url }}">
       <div class="gallery-col-image">
         <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
-        <div class="gallery-qr-code"></div>
       </div>
       <div class="gallery-col-content">
         <div class="gallery-col-title">{{ artwork.title }}</div>
@@ -24,14 +23,10 @@ description: "Original drawings, paintings, and visual artworks by J3ZZ."
           {% if artwork.dimensions %} · {{ artwork.dimensions }}{% endif %}
           {% if artwork.year %} · {{ artwork.year }}{% endif %}
         </div>
-        {% if artwork.status == "available" or artwork.status == nil %}
-          <div class="gallery-col-status gallery-col-status--available">AVAILABLE</div>
-        {% elsif artwork.status == "sold" %}
-          <div class="gallery-col-status gallery-col-status--sold">SOLD</div>
-        {% elsif artwork.status == "reserved" %}
-          <div class="gallery-col-status gallery-col-status--reserved">RESERVED</div>
-        {% endif %}
         {% if artwork.abstract %}<div class="gallery-col-abstract">{{ artwork.abstract }}</div>{% endif %}
+      </div>
+      <div class="gallery-col-qr">
+        <div class="gallery-qr-code"></div>
       </div>
     </div>
   {% endfor %}

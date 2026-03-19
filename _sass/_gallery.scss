@@ -492,6 +492,11 @@
   display: none;
 }
 
+/* Hide QR code on screen — print only */
+.gallery-qr-code {
+  display: none;
+}
+
 .inquiry-success,
 .inquiry-error {
   padding: 20px;
@@ -569,6 +574,32 @@
       object-fit: cover;
       display: block;
     }
+  }
+
+  .gallery-col-qr {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .gallery-qr-code {
+    display: block !important;
+    width: 70px;
+    height: 70px;
+    flex-shrink: 0;
+  }
+
+  .gallery-qr-code img {
+    width: 70px !important;
+    height: 70px !important;
+    display: block;
+  }
+
+  .gallery-qr-code canvas {
+    width: 70px !important;
+    height: 70px !important;
+    display: block;
   }
 
   .gallery-col-content {
