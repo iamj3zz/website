@@ -99,6 +99,24 @@
         </div>
       {% endif %}
 
+      {% comment %} Additional gallery: mockups, details, context images {% endcomment %}
+      {% if page.gallery %}
+        <div class="artwork-gallery">
+          <h2 class="artwork-gallery-heading">Gallery</h2>
+          <div class="image-grid grid-3">
+            {% for item in page.gallery %}
+              <div class="grid-item">
+                <img src="{{ item.image | relative_url }}"
+                     alt="{{ item.caption | default: page.title }}"
+                     class="grid-image"
+                     data-lightbox="true"
+                     data-caption="{{ item.caption | default: '' }}">
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
       {% comment %} Inquiry block for available artworks {% endcomment %}
       {% if page.status == "available" %}
         <div class="artwork-inquiry">

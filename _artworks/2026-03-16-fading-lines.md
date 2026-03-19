@@ -40,5 +40,12 @@ sections:
         value: "2026"
       - label: "Edition"
         value: "Unique, non-editioned original"
-  - type: description  
+  - type: description
+
+gallery:
+  - image: /assets/artworks/2026-03-16-fading-lines/gallery/mockup-1.jpg
+  - image: /assets/artworks/2026-03-16-fading-lines/gallery/mockup-2.jpg
+  - image: /assets/artworks/tube.jpg
+    caption: "Shipping — the artwork is rolled and sent in a protective tube"
+
 ---

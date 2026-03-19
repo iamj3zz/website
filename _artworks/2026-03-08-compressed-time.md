@@ -43,4 +43,10 @@ sections:
         value: "Unique, non-editioned original"
   - type: description
 
+gallery:
+  - image: /assets/artworks/2026-03-08-compressed-time/gallery/mockup-1.jpg
+  - image: /assets/artworks/2026-03-08-compressed-time/gallery/mockup-2.jpg
+  - image: /assets/artworks/tube.jpg
+    caption: "Shipping — the artwork is rolled and sent in a protective tube"
+
 ---

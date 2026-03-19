@@ -246,6 +246,113 @@ for key in "${!MAPPING[@]}"; do
 done
 
 # ============================================================================
+# Gallery Images (mockups + tube)
+# ============================================================================
+#
+# Source naming: NN_KEY_M.jpg  (e.g. 01_B1_1.jpg, 01_B1_2.jpg)
+# Output:        assets/artworks/{slug}/gallery/mockup-M.jpg  (max 1800px)
+# Tube:          assets/artworks/tube.jpg  (shared, max 1800px, processed once)
+#
+
+# Ordered list for predictable processing: "NN KEY" pairs
+MOCKUP_PAIRS=(
+    "01 B1"
+    "02 B2"
+    "03 B3"
+    "04 B4"
+    "05 B5"
+    "06 B6"
+    "07 B7"
+    "08 B8"
+    "09 W1"
+    "10 W2"
+    "11 W3"
+    "12 W4"
+    "13 W5"
+    "14 W6"
+    "15 W7"
+    "16 W8"
+)
+
+# Process tube image (shared, output once)
+TUBE_SRC="$SOURCE_DIR/_tube.jpg"
+TUBE_OUT="$ARTWORKS_DIR/tube.jpg"
+
+if [ -f "$TUBE_SRC" ]; then
+    if [ "$FORCE" = true ] || [ ! -f "$TUBE_OUT" ]; then
+        if [ "$DRY_RUN" = true ]; then
+            echo -e "${YELLOW}${ARROW} [DRY RUN] tube.jpg${NC}"
+            echo "  convert '$TUBE_SRC' -resize 1800x1800> '$TUBE_OUT'"
+        else
+            echo -e "${YELLOW}${ARROW} tube.jpg${NC}"
+            convert "$TUBE_SRC" -resize '1800x1800>' "$TUBE_OUT" 2>/tmp/convert_err_$$.txt
+            if [ -f "$TUBE_OUT" ]; then
+                DIMS="$(identify -format "%wx%h" "$TUBE_OUT" 2>/dev/null || echo "unknown")"
+                echo -e "${GREEN}${CHECK} tube.jpg — ${DIMS}${NC}"
+                PROCESSED=$((PROCESSED + 1))
+            else
+                echo -e "${RED}${CROSS} Failed to generate tube.jpg${NC}"
+                ERRORS=$((ERRORS + 1))
+            fi
+            rm -f /tmp/convert_err_$$.txt
+        fi
+    else
+        if [ "$DRY_RUN" = false ]; then
+            echo -e "${GREEN}${CHECK} tube.jpg — already exists${NC}"
+            SKIPPED=$((SKIPPED + 1))
+        fi
+    fi
+else
+    echo -e "${YELLOW}${WARN} Tube image not found: $TUBE_SRC${NC}"
+fi
+echo ""
+
+# Process mockup images per artwork
+for pair in "${MOCKUP_PAIRS[@]}"; do
+    num="${pair% *}"
+    key="${pair#* }"
+    slug="${MAPPING[$key]}"
+    gallery_dir="$ARTWORKS_DIR/$slug/gallery"
+
+    if [ "$DRY_RUN" = false ] && [ ! -d "$gallery_dir" ]; then
+        mkdir -p "$gallery_dir"
+    fi
+
+    m=1
+    while true; do
+        src="$SOURCE_DIR/${num}_${key}_${m}.jpg"
+        [ -f "$src" ] || break
+        out="$gallery_dir/mockup-${m}.jpg"
+
+        if [ "$FORCE" = true ] || [ ! -f "$out" ]; then
+            if [ "$DRY_RUN" = true ]; then
+                echo -e "${YELLOW}${ARROW} [DRY RUN] $slug/gallery/mockup-${m}.jpg${NC}"
+                echo "  convert '$src' -resize 1800x1800> '$out'"
+            else
+                echo -e "${YELLOW}${ARROW} $slug/gallery/mockup-${m}.jpg${NC}"
+                convert "$src" -resize '1800x1800>' "$out" 2>/tmp/convert_err_$$.txt
+                if [ -f "$out" ]; then
+                    DIMS="$(identify -format "%wx%h" "$out" 2>/dev/null || echo "unknown")"
+                    echo -e "${GREEN}${CHECK} mockup-${m}.jpg — ${DIMS}${NC}"
+                    PROCESSED=$((PROCESSED + 1))
+                else
+                    echo -e "${RED}${CROSS} Failed: $slug/gallery/mockup-${m}.jpg${NC}"
+                    ERRORS=$((ERRORS + 1))
+                fi
+                rm -f /tmp/convert_err_$$.txt
+            fi
+        else
+            if [ "$DRY_RUN" = false ]; then
+                echo -e "${GREEN}${CHECK} $slug/gallery/mockup-${m}.jpg — already exists${NC}"
+                SKIPPED=$((SKIPPED + 1))
+            fi
+        fi
+        m=$((m + 1))
+    done
+    echo ""
+done
+
+# ============================================================================
 # Summary
 # ============================================================================
 
