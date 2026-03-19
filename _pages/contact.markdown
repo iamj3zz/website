@@ -77,11 +77,14 @@ image: /assets/img/J3ZZ-logo-black-300px.png
         </a>
         {% endif %}
         {% if site.twitter_username %}
-        <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="X (Twitter) - {{ site.twitter_username }}" title="X (Twitter) - {{ site.twitter_username }}">
+        <span class="contact-social-icon social-icon--disabled" aria-label="X (formerly Twitter) — not linked" tabindex="0" role="img">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M4 4l7 9.5M20 4l-7 9.5m0 0L4 20m9-6.5L20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
           </svg>
-        </a>
+          <span class="social-icon__tooltip">
+            I maintain a presence on X but do not endorse the platform. Since Elon Musk's acquisition, X has become a vector for hate speech, disinformation, and the erosion of content moderation. I don't link there.
+          </span>
+        </span>
         {% endif %}
         {% if site.linkedin_username %}
         <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="LinkedIn - {{ site.linkedin_username }}" title="LinkedIn - {{ site.linkedin_username }}">
@@ -188,15 +191,14 @@ image: /assets/img/J3ZZ-logo-black-300px.png
         </div>
         {% endif %}
         {% if site.twitter_username %}
-        <div class="social-print-item" data-url="https://twitter.com/{{ site.twitter_username }}" data-name="X (Twitter)">
-          <div class="social-print-qr"></div>
+        <div class="social-print-item social-print-item--no-link">
           <div class="social-print-icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M4 4l7 9.5M20 4l-7 9.5m0 0L4 20m9-6.5L20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
             </svg>
           </div>
           <div class="social-print-name">X (Twitter)</div>
-          <div class="social-print-url">twitter.com/{{ site.twitter_username }}</div>
+          <div class="social-print-url social-print-url--note">I maintain a presence on X but do not endorse the platform. Since Elon Musk's acquisition, X has become a vector for hate speech, disinformation, and the erosion of content moderation. I don't link there.</div>
         </div>
         {% endif %}
         {% if site.linkedin_username %}
