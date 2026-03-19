@@ -138,6 +138,69 @@
   }
 }
 
+/* Heart/Like Button */
+.gallery-heart-btn {
+  position: absolute;
+  bottom: var(--spacing-sm);
+  right: var(--spacing-sm);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 6px;
+  background: rgba(0, 0, 0, 0.45);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  color: white;
+  transition: background var(--transition-speed) ease, transform 0.15s ease;
+  user-select: none;
+  -webkit-user-select: none;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.65);
+    transform: scale(1.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+}
+
+.gallery-heart-icon {
+  display: block;
+  fill: none;
+  stroke: white;
+  stroke-width: 1.5;
+  transition: fill var(--transition-speed) ease, stroke var(--transition-speed) ease;
+}
+
+.gallery-heart-btn[aria-pressed="true"] .gallery-heart-icon {
+  fill: #e53e3e;
+  stroke: #e53e3e;
+}
+
+@keyframes heart-beat {
+  0%   { transform: scale(1); }
+  40%  { transform: scale(1.4); }
+  70%  { transform: scale(0.9); }
+  100% { transform: scale(1); }
+}
+
+.gallery-heart-btn.is-beating .gallery-heart-icon {
+  animation: heart-beat 0.35s ease forwards;
+}
+
+.gallery-heart-count {
+  display: block;
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+  line-height: 1;
+}
+
 /* Responsive: 2 columns at 768px */
 @media (max-width: 768px) {
   .gallery-grid {
@@ -637,5 +700,9 @@
 
   .artwork-inquiry {
     display: none;
+  }
+
+  .gallery-heart-btn {
+    display: none !important;
   }
 }

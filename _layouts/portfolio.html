@@ -124,6 +124,15 @@
 
   <button class="back-to-top" hidden aria-label="Back to top">↑</button>
 
+  {% if site.supabase_url and site.supabase_anon_key %}
+  <script>
+    window.J3ZZ_CONFIG = {
+      supabaseUrl: {{ site.supabase_url | jsonify }},
+      supabaseAnonKey: {{ site.supabase_anon_key | jsonify }}
+    };
+  </script>
+  {% endif %}
+
   <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/utils.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/back-to-top.js' | relative_url }}" defer></script>
@@ -140,5 +149,6 @@
   <script src="{{ '/assets/js/events-year-nav.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/bio-section-nav.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/artwork-inquiry.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/gallery-hearts.js' | relative_url }}" defer></script>
 </body>
 </html>

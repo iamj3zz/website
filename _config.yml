@@ -80,6 +80,10 @@ mailchimp_gdpr_field: "14182"
 # Formspree Integration
 formspree_artwork_inquiry: "https://formspree.io/f/contact@j3zz.com"
 
+# Supabase (gallery like counts — anon key is safe to commit)
+supabase_url: "https://xyrtwlvquuqshoulglvk.supabase.co"
+supabase_anon_key: "sb_publishable_9Qs1t9ruTVNHbyDEZDEKEA_0d4b66kf"
+
 # Artwork Shipping & Purchasing Policy
 artwork_shipping:
   ships_from: "Réunion Island, France"
