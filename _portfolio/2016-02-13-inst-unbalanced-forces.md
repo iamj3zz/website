@@ -6,7 +6,7 @@ title: "UNBALANCED FORCES"
 work_id: unbalanced-forces
 hero_image: true
 abstract: |
-  A sonic exploration of action and intervention.
+  Interactive/Live Sound Installation. A sonic exploration of action and intervention.
 description: |
   An interactive audio spatial installation exploring contemporary Hungarian society. The artist describes it as "a performative sound installation, an interactive experiment willing to present the space and the system we are in." Visitors navigate a multichannel soundscape and observe how their sounds and movements affect the living space, raising philosophical questions about individual agency and collective responsibility.
 category: installations
@@ -17,23 +17,18 @@ image: /assets/works/2016-02-13-inst-unbalanced-forces/thumbnail.jpg
 metadata:
   release_date: "2016-02-13"
   location: "Budapest, Hungary - Lábor gallery (Képíró u. 6, 1053)"
-  role: "author, programmer, composer"
+  role: "author, programmer, composer, producer"
   technology: "Ambisonic spatialization for 4 speakers, Ableton Live, Max for Live"
   credits: "Author, Programmer, Composer: J3ZZ"
   custom:
     - label: "Exhibition"
       value: "Kapcsolatok 3. (Connections 3.) — FKSE new members' introductory exhibition"
-    - label: "Co-artists"
-      value: "Konopás Judit Emese, Rubi Anna"
-    - label: "Curators"
-      value: "Vincze-Bába Gabriella, Konopás Judit Emese"
+    - label: "Curator"
+      value: "Konopás Judit Emese"
     # --- links ---
     - label: ""
       value: "exindex.hu: Kapcsolatok 3. exhibition listing (HU)" 
       link: https://exindex.hu/event/kapcsolatok-3/ 
-    - label: ""
-      value: "YouTube: Binaural POV recording of the installation" 
-      link: https://www.youtube.com/watch?v=0LOZHHs_kzo          
     - label: ""
       value: "exindex.hu: LABOR gallery venue page (HU)" 
       link: https://exindex.hu/venue/labor/ 
@@ -50,23 +45,26 @@ metadata:
       value: "LABOR gallery event"
       link:  http://labor.c3.hu/2016/01/connections-az-fkse-uj-tagjainak-bemutatkozo-kiallitasa/
     - label: ""
-      value: "PDF: exindex.hu Kapcsolatok 3. listing (archive)"
-      link: /assets/works/2016-02-13-inst-unbalanced-forces/exindex-kapcsolatok-3.pdf
+      value: "BIO part 1 (PDF)"
+      link: /assets/works/2016-02-13-inst-unbalanced-forces/UNBALANCED_FORCES_BIO_01_01.pdf
     - label: ""
-      value: "PDF: LABOR gallery event page (archive)"
-      link: /assets/works/2016-02-13-inst-unbalanced-forces/labor-connections-fkse-2016.pdf
+      value: "BIO part 2 (PDF)"
+      link: /assets/works/2016-02-13-inst-unbalanced-forces/UNBALANCED_FORCES_BIO_02_01.pdf
     - label: ""
-      value: "interview"
-      link: https://www.youtube.com/watch?v=5IfBEep7vZU
-
-
-     
-        
-        
-
-# https://www.youtube.com/watch?v=0LOZHHs_kzo
-
+      value: "POSTER LONG (PDF)"
+      link: /assets/works/2016-02-13-inst-unbalanced-forces/UNBALANCED_FORCES_POSTER_LONG_01.pdf
+    - label: ""
+      value: "POSTER OPENING (PDF)"
+      link: /assets/works/2016-02-13-inst-unbalanced-forces/UNBALANCED_FORCES_POSTER_OPENING_01.pdf
+    - label: ""
+      value: "POSTER SHORT (PDF)"
+      link: /assets/works/2016-02-13-inst-unbalanced-forces/UNBALANCED_FORCES_POSTER_SHORT_01.pdf
+    - label: ""
+      value: "PRESS ARTICLES (PDF)"
+      link: /assets/works/2016-02-13-inst-unbalanced-forces/unbalanced-forces-press-prints.pdf
+      
 sections:
+  - type: description
 
   - type: iframe
     embed_code: '<iframe src="https://www.youtube.com/embed/0LOZHHs_kzo" frameborder="0" allowfullscreen></iframe>'
@@ -74,24 +72,37 @@ sections:
     aspect_ratio: "16:9"  # Options: "16:9" (default), "4:3", "1:1", "21:9"
     caption: "Binaural visit of the exhibition"
 
+  - type: text
+    title: ""
+    content: |
+      Aren't we making the transition from former to new times the scapegoat for our lack of intervention and responsible actions? Through this installation, the artists offer a reflection on a contemporary "photography" of present Hungarian society. The space itself echoes the reminiscences of its visits.
 
-  # - type: hero-image
-  #   image: /assets/works/2020-08-18-iris/hero.jpg
-  #   caption: "IRIS - Csokonai Theatre, Debrecen, August 2020"
+      As visitors, let's consider our options:
+      — Raise our voice or remain silent?
+      — Can we change the way we live together?
+      — Are we the ones deciding our destiny?
 
-  - type: description
+  - type: text
+    content: |
+      "Unbalanced Forces" is a description of a system. First exhibited in Budapest (2016 February 13-16), it allowed the audience to navigate an interactive multichannel soundscape and reflect on the system they live in. Through interaction, visitors observed their own impact — a metaphor for their implication in the Hungarian system.
+     
+      Our main research topic centers on interdisciplinary improvisation — specifically the moment between human, sound, and space. Our aim is to create a frame for sound installation that one can enter and explore, making it her/his own.
+
+  - type: iframe
+    embed_code: '<iframe src="https://www.youtube.com/embed/s_O939u-SHs" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"  # Options: "16:9" (default), "4:3", "1:1", "21:9"
+    caption: "UNBALANCED FORCES - words and behind the scenes"
 
 
   - type: text
     title: ""
     content: |
-      "Unbalanced Forces" is an interactive sound installation that explores our transition from ancient times to a new era, questioning our tendency to view change as a neglected responsibility rather than an active commitment. First presented at the Labor Gallery in Budapest on February 13, 2016, this immersive work invites deep reflection on a contemporary snapshot of Hungarian society, capturing its essence through an interactive spatial audio experience.
-      
-      Designed as a living laboratory of interactive experimentation, "Unbalanced Forces" allows the public to navigate through a multi-channel soundscape, offering a meditation on the system in which we live. Participants become actors within this installation, controlling the living space of the exhibition with their own sounds and movements. Through this interaction, the installation provides a powerful metaphor for our involvement in the surrounding system, questioning the forms and impacts of our actions.
-      
-      The space of "Unbalanced Forces" resonates with the echoes of its visitors, posing fundamental questions about our capacity and willingness to intervene in the course of our shared destiny. Should we raise our voices or remain silent? Do we have the power to change the way we coexist? Are we truly the masters of our fate, and would we dare to speak out or let others speak for us? This interactive installation does not merely present a space and a system; it invites each participant to observe, reflect, and react. "Unbalanced Forces" challenges visitors, encouraging them to recognize their own power and responsibility in creating a shared future.
-       
-      The premiere of "Unbalanced Forces" at the Labor Gallery marked a significant moment in the artistic exploration of societal engagement and individual responsibility. Through sounds, movements, and interaction, this work offers a unique perspective on the challenges and opportunities of our time, reminding us that action and intervention are not only possible but essential for shaping the future of our society.
+      A dialogue space whose only constant is the room itself; a sonic surface subject to the randomness inherent in human formats; an architecture unsettled by the forces that inhabit it — the multidisciplinary work Unbalanced Forces is a performative sound piece, permeable to the shocks of its environment.
+
+      The vast field of relation opens and closes with the open microphones that capture each interaction from the audience. To the original soundtrack is added the accidental contributions of visitors and collaborators called to perform within the space, interrogating the collective unconscious of the place. Movements and images collide with the forces and systems that interlock, shift, and clash.
+
+      What are the consequences of our actions on our world? A pessimistic perspective: the systems we create escape us, like the continuity of our gestures — like the echo of our voices. The enduring forces of soundtrack and architecture are themselves disrupted by the audience's actions, whose after-the-fact interpretation ultimately undermines the original intentions. A playground of play and fault lines — where only the absurd bizarre keeps madness at bay — Unbalanced Forces is a metaphor for the reversal and recommencement of trajectories that weaken our societies and our politics.
 
   - type: image-grid
     columns: 3

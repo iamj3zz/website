@@ -44,7 +44,7 @@ const CONFIG = {
       checks: ['qr-code', 'print-layout', 'contact-info']
     },
     {
-      path: 'works/1900-01-01-inst-split-layout-example/index.html',
+      path: 'works/2020-08-18-inst-iris/index.html',
       name: 'work-example',
       checks: ['qr-code', 'print-layout']
     }

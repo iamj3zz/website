@@ -107,7 +107,9 @@ sections:
       - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery05_1440w.jpg
       - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery06_1440w.jpg
       - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery07_1440w.jpg
-
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery08_2550w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery09_2550w.jpg
+    
   - type: linked-events
 
   - type: metadata
