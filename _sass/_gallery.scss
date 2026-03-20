@@ -818,12 +818,16 @@
 @media print {
   /* Hide screen-only grid */
   .gallery-section {
-    display: none;
+    display: none !important;
   }
 
   /* Show and style the print list */
   .gallery-list-print {
     display: block;
+  }
+
+  .gallery-item {
+    height: 80px;
   }
 
   .gallery-print-header {
@@ -883,6 +887,7 @@
   }
 
   .gallery-col-content {
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
