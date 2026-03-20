@@ -8,6 +8,21 @@
   - aspect_ratio: "16:9", "4:3", "1:1", etc. (only used if responsive: true)
 {% endcomment %}
 
+{% comment %} Extract src URL from embed code once at the top {% endcomment %}
+{% assign src_start = include.embed_code | split: 'src="' | last %}
+{% assign src_url = src_start | split: '"' | first %}
+
+{% comment %} Convert embed URLs to human-readable watch URLs for print {% endcomment %}
+{% if src_url contains "youtube.com/embed/" or src_url contains "youtube-nocookie.com/embed/" %}
+  {% assign yt_id = src_url | split: '/embed/' | last | split: '?' | first %}
+  {% assign print_url = "https://www.youtube.com/watch?v=" | append: yt_id %}
+{% elsif src_url contains "player.vimeo.com/video/" %}
+  {% assign vimeo_id = src_url | split: '/video/' | last | split: '?' | first %}
+  {% assign print_url = "https://vimeo.com/" | append: vimeo_id %}
+{% else %}
+  {% assign print_url = src_url %}
+{% endif %}
+
 {% assign is_responsive = include.responsive | default: false %}
 
 {% if is_responsive %}
@@ -26,10 +41,6 @@
   {% else %}
     {% assign padding = "56.25%" %}
   {% endif %}
-
-  {% comment %} Extract src URL from embed code {% endcomment %}
-  {% assign src_start = include.embed_code | split: 'src="' | last %}
-  {% assign src_url = src_start | split: '"' | first %}
 
   {% comment %} Security: Validate URL is from trusted domain {% endcomment %}
   {% assign is_trusted = false %}
@@ -61,6 +72,15 @@
     {% if include.caption %}
       <p class="iframe-caption">{{ include.caption }}</p>
     {% endif %}
+    <div class="iframe-print-fallback" style="display:none;">
+      <div class="iframe-qr-placeholder" data-url="{{ print_url }}"></div>
+      <div class="iframe-print-text">
+        <span class="iframe-print-link">{{ print_url }}</span>
+        {% if include.caption %}
+          <span class="iframe-print-caption">{{ include.caption }}</span>
+        {% endif %}
+      </div>
+    </div>
   </div>
   {% else %}
   <div class="module module-iframe">
@@ -72,10 +92,6 @@
 
 {% else %}
   {% comment %} Fixed height mode - extract exact dimensions {% endcomment %}
-
-  {% comment %} Extract src URL from embed code {% endcomment %}
-  {% assign src_start = include.embed_code | split: 'src="' | last %}
-  {% assign src_url = src_start | split: '"' | first %}
 
   {% comment %} Extract width from embed code {% endcomment %}
   {% assign width_start = include.embed_code | split: 'width: ' | last %}
@@ -137,6 +153,15 @@
     {% if include.caption %}
       <p class="iframe-caption">{{ include.caption }}</p>
     {% endif %}
+    <div class="iframe-print-fallback" style="display:none;">
+      <div class="iframe-qr-placeholder" data-url="{{ print_url }}"></div>
+      <div class="iframe-print-text">
+        <span class="iframe-print-link">{{ print_url }}</span>
+        {% if include.caption %}
+          <span class="iframe-print-caption">{{ include.caption }}</span>
+        {% endif %}
+      </div>
+    </div>
   </div>
   {% else %}
   <div class="module module-iframe">
