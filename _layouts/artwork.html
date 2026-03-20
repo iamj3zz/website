@@ -426,6 +426,15 @@
       <span class="artwork-heart-label">Like</span>
     </button>
 
+    {% if page.status == "available" %}
+    <button
+      class="artwork-inquiry-trigger-sticky"
+      data-inquiry-trigger
+      aria-label="Inquire about {{ page.title }}"
+      type="button"
+    >INQUIRE</button>
+    {% endif %}
+
     <div class="artwork-share-wrap">
       <button
         class="artwork-share-btn"
