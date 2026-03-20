@@ -78,7 +78,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Released on</span>
         <span class="metadata-value">
-          {% if release_date_link %}<a href="{{ release_date_link }}" target="_blank" rel="noopener noreferrer">{{ release_date | date: "%B %-d, %Y" }}</a>{% else %}{{ release_date | date: "%B %-d, %Y" }}{% endif %}
+          {% if release_date_link %}<a href="{{ release_date_link }}" target="_blank" rel="noopener noreferrer">{{ release_date | date: "%B %-d, %Y" }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ release_date_link }}"></span>
+              <span class="metadata-print-url">{{ release_date_link }}</span>
+            </span>
+          {% else %}{{ release_date | date: "%B %-d, %Y" }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -86,7 +91,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Date</span>
         <span class="metadata-value">
-          {% if date_link %}<a href="{{ date_link }}" target="_blank" rel="noopener noreferrer">{{ date }}</a>{% else %}{{ date }}{% endif %}
+          {% if date_link %}<a href="{{ date_link }}" target="_blank" rel="noopener noreferrer">{{ date }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ date_link }}"></span>
+              <span class="metadata-print-url">{{ date_link }}</span>
+            </span>
+          {% else %}{{ date }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -96,7 +106,12 @@
       <div class="metadata-item">
         <span class="metadata-label">ISRC</span>
         <span class="metadata-value">
-          {% if isrc_link %}<a href="{{ isrc_link }}" target="_blank" rel="noopener noreferrer">{{ isrc }}</a>{% else %}{{ isrc }}{% endif %}
+          {% if isrc_link %}<a href="{{ isrc_link }}" target="_blank" rel="noopener noreferrer">{{ isrc }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ isrc_link }}"></span>
+              <span class="metadata-print-url">{{ isrc_link }}</span>
+            </span>
+          {% else %}{{ isrc }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -104,7 +119,12 @@
       <div class="metadata-item">
         <span class="metadata-label">UPC</span>
         <span class="metadata-value">
-          {% if upc_link %}<a href="{{ upc_link }}" target="_blank" rel="noopener noreferrer">{{ upc }}</a>{% else %}{{ upc }}{% endif %}
+          {% if upc_link %}<a href="{{ upc_link }}" target="_blank" rel="noopener noreferrer">{{ upc }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ upc_link }}"></span>
+              <span class="metadata-print-url">{{ upc_link }}</span>
+            </span>
+          {% else %}{{ upc }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -112,7 +132,12 @@
       <div class="metadata-item">
         <span class="metadata-label">ISWC</span>
         <span class="metadata-value">
-          {% if iswc_link %}<a href="{{ iswc_link }}" target="_blank" rel="noopener noreferrer">{{ iswc }}</a>{% else %}{{ iswc }}{% endif %}
+          {% if iswc_link %}<a href="{{ iswc_link }}" target="_blank" rel="noopener noreferrer">{{ iswc }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ iswc_link }}"></span>
+              <span class="metadata-print-url">{{ iswc_link }}</span>
+            </span>
+          {% else %}{{ iswc }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -122,7 +147,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Location</span>
         <span class="metadata-value">
-          {% if location_link %}<a href="{{ location_link }}" target="_blank" rel="noopener noreferrer">{{ location }}</a>{% else %}{{ location }}{% endif %}
+          {% if location_link %}<a href="{{ location_link }}" target="_blank" rel="noopener noreferrer">{{ location }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ location_link }}"></span>
+              <span class="metadata-print-url">{{ location_link }}</span>
+            </span>
+          {% else %}{{ location }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -130,7 +160,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Based in</span>
         <span class="metadata-value">
-          {% if based_in_link %}<a href="{{ based_in_link }}" target="_blank" rel="noopener noreferrer">{{ based_in }}</a>{% else %}{{ based_in }}{% endif %}
+          {% if based_in_link %}<a href="{{ based_in_link }}" target="_blank" rel="noopener noreferrer">{{ based_in }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ based_in_link }}"></span>
+              <span class="metadata-print-url">{{ based_in_link }}</span>
+            </span>
+          {% else %}{{ based_in }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -138,7 +173,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Performed in</span>
         <span class="metadata-value">
-          {% if performed_in_link %}<a href="{{ performed_in_link }}" target="_blank" rel="noopener noreferrer">{{ performed_in }}</a>{% else %}{{ performed_in }}{% endif %}
+          {% if performed_in_link %}<a href="{{ performed_in_link }}" target="_blank" rel="noopener noreferrer">{{ performed_in }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ performed_in_link }}"></span>
+              <span class="metadata-print-url">{{ performed_in_link }}</span>
+            </span>
+          {% else %}{{ performed_in }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -146,7 +186,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Places</span>
         <span class="metadata-value">
-          {% if places_link %}<a href="{{ places_link }}" target="_blank" rel="noopener noreferrer">{{ places }}</a>{% else %}{{ places }}{% endif %}
+          {% if places_link %}<a href="{{ places_link }}" target="_blank" rel="noopener noreferrer">{{ places }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ places_link }}"></span>
+              <span class="metadata-print-url">{{ places_link }}</span>
+            </span>
+          {% else %}{{ places }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -156,7 +201,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Produced by</span>
         <span class="metadata-value">
-          {% if produced_by_link %}<a href="{{ produced_by_link }}" target="_blank" rel="noopener noreferrer">{{ produced_by }}</a>{% else %}{{ produced_by }}{% endif %}
+          {% if produced_by_link %}<a href="{{ produced_by_link }}" target="_blank" rel="noopener noreferrer">{{ produced_by }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ produced_by_link }}"></span>
+              <span class="metadata-print-url">{{ produced_by_link }}</span>
+            </span>
+          {% else %}{{ produced_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -164,7 +214,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Commissioned by</span>
         <span class="metadata-value">
-          {% if commissioned_by_link %}<a href="{{ commissioned_by_link }}" target="_blank" rel="noopener noreferrer">{{ commissioned_by }}</a>{% else %}{{ commissioned_by }}{% endif %}
+          {% if commissioned_by_link %}<a href="{{ commissioned_by_link }}" target="_blank" rel="noopener noreferrer">{{ commissioned_by }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ commissioned_by_link }}"></span>
+              <span class="metadata-print-url">{{ commissioned_by_link }}</span>
+            </span>
+          {% else %}{{ commissioned_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -172,7 +227,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Curated by</span>
         <span class="metadata-value">
-          {% if curated_by_link %}<a href="{{ curated_by_link }}" target="_blank" rel="noopener noreferrer">{{ curated_by }}</a>{% else %}{{ curated_by }}{% endif %}
+          {% if curated_by_link %}<a href="{{ curated_by_link }}" target="_blank" rel="noopener noreferrer">{{ curated_by }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ curated_by_link }}"></span>
+              <span class="metadata-print-url">{{ curated_by_link }}</span>
+            </span>
+          {% else %}{{ curated_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -182,7 +242,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Role</span>
         <span class="metadata-value">
-          {% if role_link %}<a href="{{ role_link }}" target="_blank" rel="noopener noreferrer">{{ role }}</a>{% else %}{{ role }}{% endif %}
+          {% if role_link %}<a href="{{ role_link }}" target="_blank" rel="noopener noreferrer">{{ role }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ role_link }}"></span>
+              <span class="metadata-print-url">{{ role_link }}</span>
+            </span>
+          {% else %}{{ role }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -190,7 +255,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Technology</span>
         <span class="metadata-value">
-          {% if technology_link %}<a href="{{ technology_link }}" target="_blank" rel="noopener noreferrer">{{ technology }}</a>{% else %}{{ technology }}{% endif %}
+          {% if technology_link %}<a href="{{ technology_link }}" target="_blank" rel="noopener noreferrer">{{ technology }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ technology_link }}"></span>
+              <span class="metadata-print-url">{{ technology_link }}</span>
+            </span>
+          {% else %}{{ technology }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -200,7 +270,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Collaborators</span>
         <span class="metadata-value">
-          {% if collaborators_link %}<a href="{{ collaborators_link }}" target="_blank" rel="noopener noreferrer">{{ collaborators }}</a>{% else %}{{ collaborators }}{% endif %}
+          {% if collaborators_link %}<a href="{{ collaborators_link }}" target="_blank" rel="noopener noreferrer">{{ collaborators }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ collaborators_link }}"></span>
+              <span class="metadata-print-url">{{ collaborators_link }}</span>
+            </span>
+          {% else %}{{ collaborators }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -208,7 +283,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Credits</span>
         <span class="metadata-value">
-          {% if credits_link %}<a href="{{ credits_link }}" target="_blank" rel="noopener noreferrer">{{ credits }}</a>{% else %}{{ credits }}{% endif %}
+          {% if credits_link %}<a href="{{ credits_link }}" target="_blank" rel="noopener noreferrer">{{ credits }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ credits_link }}"></span>
+              <span class="metadata-print-url">{{ credits_link }}</span>
+            </span>
+          {% else %}{{ credits }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -216,7 +296,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Partners</span>
         <span class="metadata-value">
-          {% if partners_link %}<a href="{{ partners_link }}" target="_blank" rel="noopener noreferrer">{{ partners }}</a>{% else %}{{ partners }}{% endif %}
+          {% if partners_link %}<a href="{{ partners_link }}" target="_blank" rel="noopener noreferrer">{{ partners }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ partners_link }}"></span>
+              <span class="metadata-print-url">{{ partners_link }}</span>
+            </span>
+          {% else %}{{ partners }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -224,7 +309,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Supporters</span>
         <span class="metadata-value">
-          {% if supporters_link %}<a href="{{ supporters_link }}" target="_blank" rel="noopener noreferrer">{{ supporters }}</a>{% else %}{{ supporters }}{% endif %}
+          {% if supporters_link %}<a href="{{ supporters_link }}" target="_blank" rel="noopener noreferrer">{{ supporters }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ supporters_link }}"></span>
+              <span class="metadata-print-url">{{ supporters_link }}</span>
+            </span>
+          {% else %}{{ supporters }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -234,7 +324,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Composer, performer, producer</span>
         <span class="metadata-value">
-          {% if composer_performer_producer_link %}<a href="{{ composer_performer_producer_link }}" target="_blank" rel="noopener noreferrer">{{ composer_performer_producer }}</a>{% else %}{{ composer_performer_producer }}{% endif %}
+          {% if composer_performer_producer_link %}<a href="{{ composer_performer_producer_link }}" target="_blank" rel="noopener noreferrer">{{ composer_performer_producer }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ composer_performer_producer_link }}"></span>
+              <span class="metadata-print-url">{{ composer_performer_producer_link }}</span>
+            </span>
+          {% else %}{{ composer_performer_producer }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -242,7 +337,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Mastering by</span>
         <span class="metadata-value">
-          {% if mastering_by_link %}<a href="{{ mastering_by_link }}" target="_blank" rel="noopener noreferrer">{{ mastering_by }}</a>{% else %}{{ mastering_by }}{% endif %}
+          {% if mastering_by_link %}<a href="{{ mastering_by_link }}" target="_blank" rel="noopener noreferrer">{{ mastering_by }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ mastering_by_link }}"></span>
+              <span class="metadata-print-url">{{ mastering_by_link }}</span>
+            </span>
+          {% else %}{{ mastering_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -250,7 +350,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Artwork by</span>
         <span class="metadata-value">
-          {% if artwork_by_link %}<a href="{{ artwork_by_link }}" target="_blank" rel="noopener noreferrer">{{ artwork_by }}</a>{% else %}{{ artwork_by }}{% endif %}
+          {% if artwork_by_link %}<a href="{{ artwork_by_link }}" target="_blank" rel="noopener noreferrer">{{ artwork_by }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ artwork_by_link }}"></span>
+              <span class="metadata-print-url">{{ artwork_by_link }}</span>
+            </span>
+          {% else %}{{ artwork_by }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -260,7 +365,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Interview</span>
         <span class="metadata-value">
-          {% if interview_link %}<a href="{{ interview_link }}" target="_blank" rel="noopener noreferrer">{{ interview }}</a>{% else %}{{ interview }}{% endif %}
+          {% if interview_link %}<a href="{{ interview_link }}" target="_blank" rel="noopener noreferrer">{{ interview }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ interview_link }}"></span>
+              <span class="metadata-print-url">{{ interview_link }}</span>
+            </span>
+          {% else %}{{ interview }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -268,7 +378,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Press kit</span>
         <span class="metadata-value">
-          {% if press_kit_link %}<a href="{{ press_kit_link }}" target="_blank" rel="noopener noreferrer">{{ press_kit }}</a>{% else %}{{ press_kit }}{% endif %}
+          {% if press_kit_link %}<a href="{{ press_kit_link }}" target="_blank" rel="noopener noreferrer">{{ press_kit }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ press_kit_link }}"></span>
+              <span class="metadata-print-url">{{ press_kit_link }}</span>
+            </span>
+          {% else %}{{ press_kit }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -276,7 +391,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Socials</span>
         <span class="metadata-value">
-          {% if socials_link %}<a href="{{ socials_link }}" target="_blank" rel="noopener noreferrer">{{ socials }}</a>{% else %}{{ socials }}{% endif %}
+          {% if socials_link %}<a href="{{ socials_link }}" target="_blank" rel="noopener noreferrer">{{ socials }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ socials_link }}"></span>
+              <span class="metadata-print-url">{{ socials_link }}</span>
+            </span>
+          {% else %}{{ socials }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -286,7 +406,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Special thanks</span>
         <span class="metadata-value">
-          {% if special_thanks_link %}<a href="{{ special_thanks_link }}" target="_blank" rel="noopener noreferrer">{{ special_thanks }}</a>{% else %}{{ special_thanks }}{% endif %}
+          {% if special_thanks_link %}<a href="{{ special_thanks_link }}" target="_blank" rel="noopener noreferrer">{{ special_thanks }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ special_thanks_link }}"></span>
+              <span class="metadata-print-url">{{ special_thanks_link }}</span>
+            </span>
+          {% else %}{{ special_thanks }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -294,7 +419,12 @@
       <div class="metadata-item">
         <span class="metadata-label">Client</span>
         <span class="metadata-value">
-          {% if client_link %}<a href="{{ client_link }}" target="_blank" rel="noopener noreferrer">{{ client }}</a>{% else %}{{ client }}{% endif %}
+          {% if client_link %}<a href="{{ client_link }}" target="_blank" rel="noopener noreferrer">{{ client }}</a>
+            <span class="metadata-print-link-fallback" style="display:none;">
+              <span class="metadata-qr-placeholder" data-url="{{ client_link }}"></span>
+              <span class="metadata-print-url">{{ client_link }}</span>
+            </span>
+          {% else %}{{ client }}{% endif %}
         </span>
       </div>
     {% endif %}
@@ -368,7 +498,12 @@
         <div class="metadata-item">
           <span class="metadata-label">{{ item.label }}</span>
           <span class="metadata-value">
-            {% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.value }}</a>{% else %}{{ item.value }}{% endif %}
+            {% if item.link %}<a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.value }}</a>
+              <span class="metadata-print-link-fallback" style="display:none;">
+                <span class="metadata-qr-placeholder" data-url="{{ item.link }}"></span>
+                <span class="metadata-print-url">{{ item.link }}</span>
+              </span>
+            {% else %}{{ item.value }}{% endif %}
           </span>
         </div>
       {% endfor %}
