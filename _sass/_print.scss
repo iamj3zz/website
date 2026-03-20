@@ -13,6 +13,14 @@
     display: none !important;
   }
 
+  /* Cookie consent — never print */
+  #cookie-consent-banner,
+  .cookie-consent-banner,
+  #cookie-settings-button,
+  .cookie-settings-button {
+    display: none !important;
+  }
+
   /* Optimize header: QR+URL on left, Logo+URL on right in one line */
   .site-header {
     display: flex !important;
@@ -835,6 +843,23 @@
   }
 
   .work-print-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* Image grid in portfolio work pages: match artwork gallery print styling */
+  .work-modules .image-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 6mm;
+  }
+
+  .work-modules .image-grid .grid-item {
+    page-break-inside: avoid;
+  }
+
+  .work-modules .image-grid .grid-item img {
     width: 100%;
     height: auto;
     display: block;
