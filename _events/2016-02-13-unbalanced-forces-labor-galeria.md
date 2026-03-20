@@ -11,5 +11,5 @@ venue_address: "Budapest, Képíró u 6, 1053 Hungary"
 venue_link: http://labor.c3.hu/en/
 ticket_link:
 work_id: unbalanced-forces
-description: "UNBALANCED FORCES — Collaborative exhibition: dance sound and video installations exploring Hungarian society"
+description: "UNBALANCED FORCES — Collaborative exhibition: dance sound and video installations exploring Hungarian society - 2016 February 13-16"
 ---
