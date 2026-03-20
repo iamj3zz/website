@@ -98,6 +98,7 @@
       var observer = new IntersectionObserver(function (entries) {
         var inlineVisible = entries[0].isIntersecting;
         stickyBar.hidden = inlineVisible;
+        document.body.classList.toggle('has-sticky-bar', !inlineVisible);
       }, { threshold: 0 });
       observer.observe(inlineBar);
     }
