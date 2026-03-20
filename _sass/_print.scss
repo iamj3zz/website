@@ -51,7 +51,7 @@
   .site-logo::after {
     content: "www.j3zz.com";
     display: block;
-    font-size: 10px;
+    font-size: 8pt;
     color: #595959;
     letter-spacing: 0.5px;
     text-align: center;
@@ -62,7 +62,7 @@
     content: "EVENTS";
     display: block;
     text-align: left;
-    font-size: 18px;
+    font-size: 14pt;
     color: #000;
     font-weight: bold;
     text-transform: uppercase;
@@ -87,7 +87,7 @@
   }
 
   .events-section h1 {
-    font-size: 24px;
+    font-size: 18pt;
     margin-bottom: 30px;
   }
 
@@ -101,7 +101,7 @@
   }
 
   .events-year-title {
-    font-size: 20px;
+    font-size: 15pt;
     margin-bottom: 20px;
     page-break-after: avoid;
   }
@@ -122,7 +122,7 @@
   }
 
   .events-table-header > div {
-    font-size: 10px;
+    font-size: 8pt;
     font-weight: bold;
     color: #333;
     text-transform: uppercase;
@@ -158,7 +158,7 @@
   }
 
   .events-table-row > div {
-    font-size: 11px;
+    font-size: 9pt;
   }
 
   /* Hide mobile labels in print - applies to ALL event columns */
@@ -175,17 +175,17 @@
 
   /* Maintain all text styling */
   .event-col-date {
-    font-size: 10px;
+    font-size: 8pt;
   }
 
   .event-col-time,
   .event-col-country,
   .event-col-city {
-    font-size: 10px;
+    font-size: 8pt;
   }
 
   .event-col-description {
-    font-size: 11px;
+    font-size: 9pt;
     line-height: 1.5;
   }
 
@@ -208,7 +208,7 @@
 
   /* Reset date styling */
   .event-col-date {
-    font-size: 10px !important;
+    font-size: 8pt !important;
     font-weight: normal !important;
     color: #333 !important;
     margin-bottom: 0 !important;
@@ -216,7 +216,7 @@
 
   /* Reset time styling */
   .event-col-time {
-    font-size: 10px !important;
+    font-size: 8pt !important;
     color: #595959 !important;
     margin-bottom: 0 !important;
   }
@@ -225,7 +225,7 @@
   .event-col-country,
   .event-col-city {
     display: block !important;
-    font-size: 10px !important;
+    font-size: 8pt !important;
     color: #595959 !important;
     font-weight: normal !important;
     margin-bottom: 0 !important;
@@ -237,7 +237,7 @@
 
   /* Reset venue styling */
   .event-col-venue {
-    font-size: 11px !important;
+    font-size: 9pt !important;
     font-weight: normal !important;
     margin-bottom: 0 !important;
   }
@@ -250,7 +250,7 @@
   /* Venue Address - Show in print below venue name */
   .event-venue-address {
     display: block !important;
-    font-size: 10px !important;
+    font-size: 8pt !important;
     color: #767676 !important;
     font-weight: normal !important;
     line-height: 1.3;
@@ -269,7 +269,7 @@
     color: #333 !important;
     border: none !important;
     border-radius: 0 !important;
-    font-size: 11px !important;
+    font-size: 9pt !important;
     text-transform: none !important;
     letter-spacing: normal !important;
     border-bottom: 1px solid #ccc !important;
@@ -277,7 +277,7 @@
 
   /* Reset description styling */
   .event-col-description {
-    font-size: 11px !important;
+    font-size: 9pt !important;
     line-height: 1.5 !important;
     margin-top: 0 !important;
   }
@@ -348,7 +348,7 @@
     content: "WORKS";
     display: block;
     text-align: left;
-    font-size: 18px;
+    font-size: 14pt;
     color: #000;
     font-weight: bold;
     text-transform: uppercase;
@@ -423,7 +423,7 @@
   }
 
   .works-col-title {
-    font-size: 12px;
+    font-size: 10pt;
     font-weight: bold;
     line-height: 1.4;
   }
@@ -435,7 +435,7 @@
   }
 
   .works-col-categories {
-    font-size: 10px;
+    font-size: 8pt;
     color: #767676;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -444,14 +444,14 @@
   }
 
   .works-col-abstract {
-    font-size: 10px;
+    font-size: 9pt;
     color: #595959;
     line-height: 1.6;
     text-align: justify;
   }
 
   .works-col-description {
-    font-size: 10px;
+    font-size: 9pt;
     color: #333;
     line-height: 1.6;
     text-align: justify;
@@ -461,7 +461,7 @@
   }
 
   .works-col-metadata {
-    font-size: 10px;
+    font-size: 8pt;
     color: #767676;
     line-height: 1.5;
     font-style: italic;
@@ -500,7 +500,7 @@
   }
 
   .works-print-category-header {
-    font-size: 13px;
+    font-size: 10pt;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1.5px;
@@ -512,7 +512,7 @@
   }
 
   .works-col-commissioned {
-    font-size: 9px;
+    font-size: 8pt;
     color: #333;
     font-style: normal;
     font-weight: 500;
@@ -525,7 +525,7 @@
     content: "BIO";
     display: block;
     text-align: left;
-    font-size: 18px;
+    font-size: 14pt;
     color: #000;
     font-weight: bold;
     text-transform: uppercase;
@@ -566,7 +566,7 @@
   .bio-link {
     display: block !important;
     margin: 0;
-    font-size: 10px;
+    font-size: 8pt;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -606,7 +606,7 @@
   }
 
   .bio-text p {
-    font-size: 11px;
+    font-size: 9pt;
     line-height: 1.6;
     margin-bottom: 12px;
   }
@@ -635,7 +635,7 @@
   }
 
   .bio-category h2 {
-    font-size: 14px;
+    font-size: 11pt;
     margin-bottom: 15px;
     padding-bottom: 8px;
     border-bottom: 2px solid #333;
@@ -647,13 +647,13 @@
   }
 
   .bio-item {
-    font-size: 10px;
+    font-size: 9pt;
     line-height: 1.5;
     page-break-inside: avoid;
   }
 
   .bio-year {
-    font-size: 10px;
+    font-size: 9pt;
     min-width: 35px;
   }
 
@@ -662,7 +662,7 @@
     content: "CONTACT";
     display: block;
     text-align: left;
-    font-size: 18px;
+    font-size: 14pt;
     color: #000;
     font-weight: bold;
     text-transform: uppercase;
@@ -682,22 +682,22 @@
   }
 
   .contact-description {
-    font-size: 11px;
+    font-size: 9pt;
     line-height: 1.6;
     margin-bottom: 12px;
   }
 
   .contact-item {
-    font-size: 11px;
+    font-size: 9pt;
     line-height: 1.6;
   }
 
   .contact-label {
-    font-size: 10px;
+    font-size: 8pt;
   }
 
   .contact-link {
-    font-size: 11px;
+    font-size: 9pt;
   }
 
   /* Hide newsletter form in print, show print-only message */
@@ -753,7 +753,7 @@
   }
 
   .social-print-name {
-    font-size: 10px;
+    font-size: 9pt;
     font-weight: 600;
     color: #333;
     text-transform: uppercase;
@@ -763,7 +763,7 @@
   }
 
   .social-print-url {
-    font-size: 10px;
+    font-size: 9pt;
     color: #595959;
     word-break: break-all;
     grid-column: 2;
@@ -807,7 +807,7 @@
   }
 
   .page-title-qr-code .qr-url {
-    font-size: 10px;
+    font-size: 9pt;
     color: #595959;
     word-break: break-all;
     max-width: 150px;
@@ -827,7 +827,7 @@
 
   /* Work Page Metadata Print Styles */
   .work-page-metadata {
-    font-size: 10px !important;
+    font-size: 8pt !important;
     margin-top: 10px;
     margin-bottom: 15px;
   }
@@ -839,7 +839,7 @@
   }
 
   .module-description .description-content {
-    font-size: 11px;
+    font-size: 10pt;
     line-height: 1.7;
     text-align: justify;
   }
