@@ -32,8 +32,8 @@
   // Generate QR code in the image wrapper
   new QRCode(qrImageWrapper, {
     text: currentUrl,
-    width: 50,
-    height: 50,
+    width: 80,
+    height: 80,
     colorDark: '#000000',
     colorLight: '#ffffff',
     correctLevel: QRCode.CorrectLevel.M

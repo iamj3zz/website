@@ -41,8 +41,8 @@
     // Generate small QR code
     new QRCode(qrContainer, {
       text: linkUrl,
-      width: 40,
-      height: 40,
+      width: 80,
+      height: 80,
       colorDark: '#000000',
       colorLight: '#ffffff',
       correctLevel: QRCode.CorrectLevel.M
