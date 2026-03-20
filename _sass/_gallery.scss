@@ -683,6 +683,30 @@
   }
 }
 
+/* Inquiry button in sticky engagement bar */
+.artwork-inquiry-trigger-sticky {
+  display: flex;
+  align-items: center;
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: white;
+  color: var(--color-text);
+  border: 1px solid white;
+  border-radius: var(--border-radius);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background var(--transition-speed) var(--transition-easing),
+              color var(--transition-speed) var(--transition-easing);
+
+  &:hover {
+    background: transparent;
+    color: white;
+  }
+}
+
 /* Heart button adapted for detail page (inline, not absolute) */
 .artwork-heart-btn {
   position: static;
