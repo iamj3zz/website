@@ -1,6 +1,7 @@
 ---
 published: true
 show_in_grid: false
+hero_image: true
 status: archived
 layout: work
 title: "Willany léo"
@@ -33,11 +34,21 @@ metadata:
   collaborators: "Zoltán Grecsó (choreographer/director), J3ZZ (improviser musician/violinist)"
   credits: "Choreographer/Director: Zoltán Grecsó. Improviser musician/violinist: J3ZZ"
   custom:
-    - label: "External Links"
-      value: "project_website: willany.com; facebook_events: facebook.com/willanyleoimproszinhaz/events/"
+    - label: ""
+      value: "Project website"
+      link: "https://www.willany.com/"
+    - label: ""
+      value: "Facebook events"
+      link: "https://www.facebook.com/willanyleoimproszinhaz/events/"
+    - label: ""
+      value: "KNI photography"
+      link: "https://knipictures.wordpress.com/"
 
 sections:
- 
+
+  # - type: hero-image
+  #   image: /assets/works/2009-01-01-live-willany-leo/hero.jpg
+
     # Video documentation
   - type: iframe
     embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/biWqTyerj7A" frameborder="0" allowfullscreen></iframe>'
@@ -47,17 +58,14 @@ sections:
     
   - type: description
 
-  # - type: image-grid
-  #   images:
-  #     - src: /assets/works/2009-01-01-live-willany-leo/willany-leo-gallery01_1440w.jpg
-  #       alt: "Willany Léo ensemble performance"
-  #     - src: /assets/works/2009-01-01-live-willany-leo/willany-leo-gallery02_1440w.jpg
-  #       alt: "Dancers and musicians in collaboration"
-  #     - src: /assets/works/2009-01-01-live-willany-leo/willany-leo-gallery03_1440w.jpg
-  #       alt: "Movement and sound improvisation"
-  #     - src: /assets/works/2009-01-01-live-willany-leo/willany-leo-gallery04_1440w.jpg
-  #       alt: "Willany Léo workshop or performance moment"
-
+  - type: image-grid
+    images:
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery01_921w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery02_921w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery03_647w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery04_1111w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery05_1111w.jpg
+      
   # - type: linked-events
 
   - type: metadata

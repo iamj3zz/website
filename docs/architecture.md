@@ -29,11 +29,16 @@ The `_pages/` directory is configured as a Jekyll collection in `_config.yml` to
 
 **Collections:**
 - `_portfolio/` - Portfolio items collection (real works + `1900-01-01-*` template/placeholder files)
-  - Each item has: `title`, `work_id`, `abstract`, `category`/`categories`, `image`, `order`, `metadata`, and `sections` array
+  - Each item has: `title`, `work_id`, `abstract`, `description`, `category`/`categories`, `image`, `order`, `metadata`, and `sections` array
   - Required `work_id` field (alphanumeric with hyphens/underscores only) for linking to events and internal references
   - Required `abstract` field (1-2 sentences) displayed in grid hover and printable page
+  - Required `description` field (comprehensive) displayed on work detail page
   - Required `metadata` field (centralized metadata structure) with category-specific fields
-  - Categories: `installations`, `live-acts`, `releases`, `commissions`
+  - Optional `status` field: `major`, `minor`, `archived`, `draft` (editorial classification)
+  - Optional `show_in_grid: false` to hide from portfolio grid while keeping detail page accessible
+  - Optional `order` field (integer) to control grid display position (higher numbers appear first)
+  - Optional `hero_image: true` for print-only hero image (auto-constructs path)
+  - Categories: `installations`, `live-acts`, `films`, `performances`, `releases`, `workshops`, `residencies`
   - Items generate individual pages at `/works/:name/`
   - Supports both single category and multi-category assignments
   - All works use centralized metadata + modular sections structure

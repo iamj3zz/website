@@ -614,11 +614,62 @@ Two-column responsive layout with iframe on the left (1/3 width) and metadata pl
 - Default bottom margin: 60px between modules
 - Use spacer modules for custom spacing control
 
+## Hero Image Mechanisms
+
+There are two ways to display hero images on work detail pages:
+
+### 1. Front Matter `hero_image: true` (Print Only)
+
+Use this flag for print-only hero images that automatically use the standard location:
+
+```yaml
+---
+layout: work
+title: Work Title
+hero_image: true  # ← Print-only hero image flag
+# ... other fields ...
+---
+```
+
+**How it works:**
+- Automatically constructs path: `/assets/works/YYYY-MM-DD-{slug}/hero.jpg`
+- Print-only (hidden in web view by CSS)
+- No path override possible — always looks for `hero.jpg` in the work's asset directory
+- Placed after the work header on the print page
+
+**When to use:**
+- Standard portfolio work print layouts
+- When the hero image is always in the work's asset directory with the name `hero.jpg`
+
+### 2. `type: hero-image` Module (Web + Print)
+
+Use this module for web + print hero images with custom positioning and paths:
+
+```yaml
+sections:
+  - type: hero-image
+    image: /assets/img/custom-hero.jpg  # ← Explicit path required
+    caption: "Optional caption"
+```
+
+**How it works:**
+- Requires explicit image path in `image:` parameter
+- Displays on both web and print versions
+- Can be positioned anywhere in the sections flow
+- Supports optional captions
+- More flexible for non-standard layouts
+
+**When to use:**
+- Custom image paths outside the work's asset directory
+- Non-standard image naming (not `hero.jpg`)
+- When you need the hero image visible on the web version
+- When custom positioning in the sections flow is needed
+
 ## Example Works
 
 See these portfolio works for complete working examples:
 
-- **Work 31** (`_portfolio/31-complete-template.md`): **⭐ ULTIMATE TEMPLATE** - ALL metadata fields and ALL 11 module types with multiple configurations
-- **Work 28** (`_portfolio/28-modular-example.md`): Complete example using all standard module types
-- **Work 29** (`_portfolio/29-split-layout-example.md`): Split layout modules demonstration
-- **Work 30** (`_portfolio/30-centralized-metadata-example.md`): Centralized metadata system example
+- **⭐ ULTIMATE TEMPLATE** (`_portfolio/1900-01-01-complete-template.md`): ALL metadata fields and ALL 11 module types with multiple configurations
+- **Complete Example** (`_portfolio/1900-01-01-modular-example.md`): Complete example using all standard module types
+- **Split Layout Example** (`_portfolio/1900-01-01-split-layout-example.md`): Split layout modules demonstration
+- **Centralized Metadata Example** (`_portfolio/1900-01-01-centralized-metadata-example.md`): Centralized metadata system example
