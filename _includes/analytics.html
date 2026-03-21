@@ -14,18 +14,18 @@
     if (!consent.analytics) return; // Analytics not consented
 
     // Load Google Analytics
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+    window.gtag('js', new Date());
+    window.gtag('config', '{{ site.google_analytics }}', {
+      'anonymize_ip': true,
+      'cookie_flags': 'SameSite=None;Secure'
+    });
+
     const script1 = document.createElement('script');
     script1.async = true;
     script1.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}';
     document.head.appendChild(script1);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', '{{ site.google_analytics }}', {
-      'anonymize_ip': true,
-      'cookie_flags': 'SameSite=None;Secure'
-    });
 
     window.gaLoaded = true;
   }
