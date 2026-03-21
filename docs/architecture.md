@@ -359,6 +359,9 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
      - Includes: name, description, image, URL, author, datePublished, dateModified, genre
      - Uses `page.metadata.release_date` for publication date
      - Uses `page.last_modified_at` (from jekyll-last-modified-at plugin) for modification date
+   - **Portfolio work breadcrumbs** get `BreadcrumbList` structured data
+     - Provides hierarchical navigation path: Works → Category → Work Title
+     - Improves search result snippet display with breadcrumb path
    - **Visual artworks** get `VisualArtwork` structured data
      - Includes: name, description, image, URL, creator, medium, dateCreated, spatialCoverage
 
@@ -372,10 +375,12 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
      - `article:section` from work category
      - `article:tag` for each category in multi-category works
    - **Page-specific OG images:**
-     - `/works/` uses IRIS installation thumbnail
+     - `/works/` uses IRIS installation thumbnail (`/assets/works/2020-08-18-inst-iris/thumbnail.jpg`)
      - `/gallery/` uses representative artwork thumbnail
-     - `/bio/` uses bio portrait photo
-     - Default fallback for other pages: `default_image` from config
+     - `/bio/` uses bio portrait photo (`/assets/bio/bio-photo.jpg`)
+     - `/events/` uses bio portrait photo (`/assets/bio/bio-photo.jpg`)
+     - `/contact/` uses bio portrait photo (`/assets/bio/bio-photo.jpg`)
+     - Default fallback for other pages: `default_image` from config (`/assets/bio/bio-photo.jpg`)
 
 4. **Favicon Configuration:**
    - Applied to all 4 layouts (portfolio, work, artwork, bio-gallery)
@@ -394,6 +399,9 @@ author:
   email: hello@j3zz.com
   twitter: j3zz
 
+twitter:
+  username: j3zz
+
 social:
   name: J3ZZ
   links:
@@ -406,21 +414,40 @@ default_image: /assets/bio/bio-photo.jpg
 lang: en_US
 ```
 
+**Description Override (Meta & OG Descriptions):**
+
+Both portfolio work pages and artwork pages use the `abstract` field as their description for better SEO control:
+- **Portfolio works** (`page.layout == "work"` with `page.abstract`):
+  - `meta name="description"` and `og:description` both use the abstract
+  - Provides concise, SEO-friendly description instead of raw markdown content
+- **Artwork pages** (`page.layout == "artwork"` with `page.abstract`):
+  - Same behavior: abstract used for both meta and OG descriptions
+- Fallback: If abstract is missing, jekyll-seo-tag generates description from page content
+
+**Image Alt Text Improvements:**
+
+- **Image grid module** (`_includes/work-modules/image-grid.html`):
+  - Per-image alt text uses the `caption` variable (from `include.captions` array)
+  - Falls back to `include.alt`, then to `page.title` if no caption provided
+  - Each image in a grid gets its own descriptive alt text rather than shared title
+  - Improves accessibility and SEO for image-heavy work pages
+
 **Page-Specific Front Matter for Enhanced SEO:**
 
 Individual pages can override defaults:
 - `/works/` has explicit description and thumbnail image
 - `/gallery/` has explicit OG image (artwork thumbnail)
 - `/bio/` has explicit image field (bio photo)
-- Portfolio works inherit `CreativeWork` schema automatically
+- Portfolio works inherit `CreativeWork` schema + `BreadcrumbList` automatically
 - Artwork pages inherit `VisualArtwork` schema automatically
 
 **Benefits:**
-- Improved search engine discoverability with rich snippets
+- Improved search engine discoverability with rich snippets and breadcrumbs
 - Rich social media sharing previews with relevant images
 - Structured data for enhanced search results (Google Rich Results)
 - Proper indexing with sitemap and robots.txt
 - Work-specific metadata for better content categorization
+- Per-image alt text improves accessibility and image search visibility
 - Visual consistency in browser tabs and bookmarks via favicon
 
 ## Analytics & Cookie Consent

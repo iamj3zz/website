@@ -2,7 +2,7 @@
 layout: portfolio
 title: "Gallery — Visual Art by J3ZZ"
 permalink: /gallery/
-description: "Original drawings, paintings, and visual artworks by J3ZZ."
+description: "Original ink drawings and visual artworks by J3ZZ. The Cartography of Collapse series — 16 drawings tracing geological transformation from formation through dissolution."
 image: /assets/artworks/2026-03-16-fading-lines/thumbnail.png
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: portfolio
-title: Contact
+title: "Contact & Booking"
 permalink: /contact/
 description: "Get in touch with J3ZZ for bookings, collaborations, teaching activities, and consulting. Contact information, social media, and newsletter signup."
-image: /assets/img/J3ZZ-logo-black-300px.png
+image: /assets/bio/bio-photo.jpg
 ---
 
 <section class="contact-section">
