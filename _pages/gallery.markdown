@@ -3,6 +3,7 @@ layout: portfolio
 title: "Gallery — Visual Art by J3ZZ"
 permalink: /gallery/
 description: "Original drawings, paintings, and visual artworks by J3ZZ."
+image: /assets/artworks/2026-03-16-fading-lines/thumbnail.png
 ---
 
 {% include artwork-inquiry-modal.html %}

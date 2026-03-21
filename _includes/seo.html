@@ -8,7 +8,6 @@
 <!-- Additional custom meta tags -->
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
-<link rel="canonical" href="{{ page.url | absolute_url }}">
 
 <!-- Additional Open Graph tags for portfolio works -->
 {% if page.layout == "work" %}
@@ -50,6 +49,30 @@
   "datePublished": "{{ page.metadata.release_date }}"{% endif %}{% if page.last_modified_at %},
   "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"{% endif %}{% if page.category %},
   "genre": "{{ page.category | replace: '-', ' ' | capitalize }}"{% endif %}
+}
+</script>
+{% endif %}
+
+<!-- Structured Data for Visual Artworks -->
+{% if page.layout == "artwork" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VisualArtwork",
+  "name": "{{ page.title }}",
+  "description": "{{ page.abstract | default: page.description | strip_html | truncatewords: 50 }}",
+  {% if page.image %}
+  "image": "{{ page.image | absolute_url }}",
+  {% endif %}
+  "url": "{{ page.url | absolute_url }}",
+  "creator": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}",
+    "url": "{{ site.url }}"
+  }{% if page.medium %},
+  "medium": "{{ page.medium }}"{% endif %}{% if page.year %},
+  "dateCreated": "{{ page.year }}"{% endif %}{% if page.dimensions %},
+  "spatialCoverage": "{{ page.dimensions }}"{% endif %}
 }
 </script>
 {% endif %}

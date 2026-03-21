@@ -22,8 +22,8 @@ title: J3ZZ
 email: hello@j3zz.com
 booking_email: booking@j3zz.com
 description: >- # this means to ignore newlines until "baseurl:"
-  French sound artist creating experimental electronic music, immersive installations,
-  and audiovisual performances merging art, science, and technology.
+    French new media artist creating experimental electronic music, immersive installations,
+    and audiovisual performances merging art, science, and technology.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://www.j3zz.com" # the base hostname & protocol for your site, e.g. http://example.com
 repository: iamj3zz/website
@@ -49,11 +49,10 @@ social:
     - https://github.com/j3zz
 
 tagline: "Experimental sound art merging music, generative systems, and immersive installations"
-default_image: /assets/img/J3ZZ-logo-black-300px.png
+default_image: /assets/bio/bio-photo.jpg
 lang: en_US
 
 # Google Analytics 4
-# google_analytics: G-09KW8XZSZW  # Replace with your actual GA4 measurement ID
 google_analytics: G-8NXZYG48TB
 
 # Social Media
@@ -96,7 +95,7 @@ artwork_shipping:
   authenticity: "A signed Certificate of Authenticity is included with every original work."
 
 # Events
-event_description_truncate: 300  # Character limit for event descriptions before showing expand toggle (0 = never truncate)
+event_description_truncate: 300 # Character limit for event descriptions before showing expand toggle (0 = never truncate)
 
 # Collections
 collections:
@@ -120,7 +119,7 @@ defaults:
       published: true
 
 # Build settings
-future: true  # Allow posts/collections with future dates
+future: true # Allow posts/collections with future dates
 plugins:
   - jekyll-feed
   - jekyll-last-modified-at

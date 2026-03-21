@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   {% include seo.html %}
   {% include analytics.html %}
+  <link rel="icon" type="image/png" href="/assets/bio/logo-square.png">
+  <link rel="apple-touch-icon" href="/assets/bio/logo-square.png">
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
   <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
 </head>
@@ -94,11 +96,14 @@
       </a>
       {% endif %}
       {% if site.twitter_username %}
-      <a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="X (Twitter) - {{ site.twitter_username }}" title="X (Twitter) - {{ site.twitter_username }}">
+      <span class="social-icon social-icon--disabled" aria-label="X (formerly Twitter) — not linked" tabindex="0" role="img">
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M4 4l7 9.5M20 4l-7 9.5m0 0L4 20m9-6.5L20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
         </svg>
-      </a>
+        <span class="social-icon__tooltip">
+          I maintain a presence on X but do not endorse the platform. Since Elon Musk's acquisition, X has become a vector for hate speech, disinformation, and the erosion of content moderation. I don't link there.
+        </span>
+      </span>
       {% endif %}
       {% if site.linkedin_username %}
       <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn - {{ site.linkedin_username }}" title="LinkedIn - {{ site.linkedin_username }}">
