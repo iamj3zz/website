@@ -1,5 +1,6 @@
 ---
 published: false 
+sitemap: false
 status: major
 layout: work
 title: Adipiscing Elit
