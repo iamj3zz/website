@@ -1,5 +1,6 @@
 ---
 published: false
+sitemap: false
 status: draft
 layout: work
 title: Fine Arts Sample

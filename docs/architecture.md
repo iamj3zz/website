@@ -349,21 +349,27 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
 
 1. **`_includes/seo.html`** - Main SEO include with:
    - `{% seo %}` tag from jekyll-seo-tag plugin (handles canonical URLs)
+   - `dns-prefetch` hint for Google Tag Manager (in all 4 layouts)
    - Custom meta tags for robots and googlebot
    - Enhanced Open Graph tags for portfolio works (article type)
-   - Structured data (JSON-LD) for portfolio works as Creative Works
-   - Structured data (JSON-LD) for visual artworks as VisualArtwork
+   - Structured data (JSON-LD) for portfolio works as CreativeWork (with `sameAs` social links)
+   - Structured data (JSON-LD) for portfolio work breadcrumbs as BreadcrumbList
+   - Structured data (JSON-LD) for visual artworks as VisualArtwork (with `sameAs` social links)
+   - Structured data (JSON-LD) for artwork breadcrumbs as BreadcrumbList
 
 2. **Structured Data (Schema.org):**
    - **Portfolio works** get `CreativeWork` structured data
-     - Includes: name, description, image, URL, author, datePublished, dateModified, genre
+     - Includes: name, description, image, URL, author (with `sameAs` social links), datePublished, dateModified, genre
      - Uses `page.metadata.release_date` for publication date
      - Uses `page.last_modified_at` (from jekyll-last-modified-at plugin) for modification date
    - **Portfolio work breadcrumbs** get `BreadcrumbList` structured data
      - Provides hierarchical navigation path: Works → Category → Work Title
      - Improves search result snippet display with breadcrumb path
    - **Visual artworks** get `VisualArtwork` structured data
-     - Includes: name, description, image, URL, creator, medium, dateCreated, spatialCoverage
+     - Includes: name, description, image, URL, creator (with `sameAs` social links), medium, dateCreated
+   - **Artwork breadcrumbs** get `BreadcrumbList` structured data
+     - Provides navigation path: Gallery → Artwork Title
+     - Consistent with portfolio work breadcrumb pattern
 
 3. **Open Graph Tags:**
    - Standard Open Graph tags for all pages (title, description, image, URL)
@@ -439,7 +445,7 @@ Individual pages can override defaults:
 - `/gallery/` has explicit OG image (artwork thumbnail)
 - `/bio/` has explicit image field (bio photo)
 - Portfolio works inherit `CreativeWork` schema + `BreadcrumbList` automatically
-- Artwork pages inherit `VisualArtwork` schema automatically
+- Artwork pages inherit `VisualArtwork` schema + `BreadcrumbList` automatically
 
 **Benefits:**
 - Improved search engine discoverability with rich snippets and breadcrumbs

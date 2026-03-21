@@ -1,5 +1,6 @@
 ---
 published: false 
+sitemap: false
 layout: work
 title: Reprehenderit
 work_id: reprehenderit
@@ -8,7 +9,6 @@ description: |
   A theatrical live performance integrating spoken word, electroacoustic textures, and spatially-distributed sound sources throughout the venue.
 category: live-acts
 image: /assets/works/1900-01-01-reprehenderit/thumbnail.jpg
-published: false
 status: draft
 
 # Define metadata once here

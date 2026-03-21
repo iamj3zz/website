@@ -1,5 +1,6 @@
 ---
 published: false 
+sitemap: false
 layout: work
 title: Tempor Incididunt
 work_id: tempor-incididunt
@@ -8,7 +9,6 @@ description: |
   A concept album blending electroacoustic composition with techno influences, exploring themes of time dilation and cyclical patterns.
 category: releases
 image: /assets/works/1900-01-01-tempor-incididunt/thumbnail.jpg
-published: false
 status: draft
 
 # Define metadata once here

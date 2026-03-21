@@ -695,10 +695,13 @@ The site includes comprehensive SEO optimization powered by the `jekyll-seo-tag`
 - Automatic meta tags (title, description, keywords)
 - Open Graph tags for social media sharing with page-specific images
 - Twitter Card support
-- Structured data (JSON-LD) for portfolio works as Creative Works
-- Structured data (JSON-LD) for visual artworks as VisualArtwork
+- Structured data (JSON-LD) for portfolio works as CreativeWork (with author `sameAs` social links)
+- Structured data (JSON-LD) for portfolio work and artwork pages as BreadcrumbList
+- Structured data (JSON-LD) for visual artworks as VisualArtwork (with creator `sameAs` social links)
 - Canonical URLs (provided by jekyll-seo-tag)
 - Automatic sitemap generation (`jekyll-sitemap` plugin)
+- Template files (`1900-01-01-*`) excluded from sitemap via `sitemap: false`
+- `dns-prefetch` hint for Google Tag Manager in all 4 layouts
 - robots.txt for search engine crawler control
 - Favicon implementation for visual branding
 
@@ -738,10 +741,13 @@ Pages can override the default OG image in front matter:
 **SEO Implementation:**
 - `_includes/seo.html` - Main SEO include with jekyll-seo-tag and custom enhancements
 - `robots.txt` - Search engine crawler configuration
-- Structured data automatically generated for portfolio works (CreativeWork)
-- Structured data automatically generated for artworks (VisualArtwork)
+- `dns-prefetch` for Google Tag Manager in all 4 layout `<head>` sections
+- Structured data automatically generated for portfolio works (CreativeWork + BreadcrumbList)
+- Structured data automatically generated for artworks (VisualArtwork + BreadcrumbList)
+- `sameAs` social profile links on author/creator in all structured data schemas
 - Work-specific Open Graph tags (article type, published/modified dates, categories)
 - Favicon links in all 4 layouts (portfolio.html, work.html, artwork.html, bio-gallery.html)
+- Template files excluded from sitemap: `sitemap: false` on all `_portfolio/1900-01-01-*.md` files
 
 **Note**: The site automatically generates a sitemap at `/sitemap.xml` and declares it in `robots.txt`.
 
@@ -950,7 +956,6 @@ Consider these advanced improvements if needed:
 - Content Security Policy (CSP) header for deeper XSS protection
 - Service Worker for Progressive Web App capabilities
 - Image lazy loading and WebP format
-- Resource hints (preconnect, dns-prefetch)
 - Additional structured data types
 
 ## Need Help?

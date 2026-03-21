@@ -8,8 +8,8 @@
         "http://localhost/bio/index.html",
         "http://localhost/events/index.html",
         "http://localhost/contact/index.html",
-        "http://localhost/works/01-lorem-ipsum/index.html",
-        "http://localhost/works/28-modular-example/index.html"
+        "http://localhost/works/2020-08-18-inst-iris/index.html",
+        "http://localhost/works/2026-01-01-inst-vibrotanica/index.html"
       ]
     },
     "assert": {
