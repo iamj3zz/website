@@ -13,7 +13,7 @@ description: |
   The project includes both participatory workshops (Biosonification workshop) and concert performances, performed across multiple countries including Hungary, Réunion, and Mauritius. The work combines scientific curiosity about plant communication with artistic improvisation, inviting audiences to listen to the "plant language" (musique végétale) in new ways.
 category: live-acts
 commissioned: false
-image: /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery01_1440w.jpg
+image: /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery01_1440w.jpg
 
 metadata:
   date: "2019–present"
@@ -97,14 +97,14 @@ sections:
   - type: image-grid
     columns: 4
     images:
-      - /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery01_1440w.jpg
-      - /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery02_1440w.jpg
-      - /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery03_1440w.jpg
-      - /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery04_1440w.jpg
-      - /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery05_1440w.jpg
-      - /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery06_1440w.jpg
-      - /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery07_1440w.jpg
-      - /assets/works/2019-09-19-live-racines-et-resonances/racines-resonances-gallery08_1440w.jpg
+      - /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery01_1440w.jpg
+      - /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery02_1440w.jpg
+      - /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery03_1440w.jpg
+      - /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery04_1440w.jpg
+      - /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery05_1440w.jpg
+      - /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery06_1440w.jpg
+      - /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery07_1440w.jpg
+      - /assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery08_1440w.jpg
     captions:
 
   - type: linked-events

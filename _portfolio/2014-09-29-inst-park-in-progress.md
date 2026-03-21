@@ -83,7 +83,7 @@ sections:
   - type: description
 
   - type: hero-image
-    image: /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery13_800w.jpg
+    image: /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery13_800w.jpg
 
   - type: text
     title: ""
@@ -103,18 +103,18 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery10_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery11_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery12_1440w.jpg      
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery01_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery02_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery03_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery04_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery05_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery06_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery07_1440w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery08_2550w.jpg
-      - /assets/works/2014-09-29-inst-park-in-progress/park-in-progress-gallery09_2550w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery10_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery11_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery12_1440w.jpg      
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery01_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery02_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery03_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery04_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery05_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery06_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery07_1440w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery08_2550w.jpg
+      - /assets/works/2014-09-29-inst-park-in-progress/inst-park-in-progress-gallery09_2550w.jpg
 
     
   - type: linked-events

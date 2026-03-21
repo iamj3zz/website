@@ -107,9 +107,9 @@ sections:
   - type: image-grid
     columns: 3
     images:
-      - /assets/works/2016-02-13-inst-unbalanced-forces/unbalanced-forces-gallery01_1440w.jpg
-      - /assets/works/2016-02-13-inst-unbalanced-forces/unbalanced-forces-gallery02_1440w.jpg
-      - /assets/works/2016-02-13-inst-unbalanced-forces/unbalanced-forces-gallery03_1440w.jpg
+      - /assets/works/2016-02-13-inst-unbalanced-forces/inst-unbalanced-forces-gallery01_1440w.jpg
+      - /assets/works/2016-02-13-inst-unbalanced-forces/inst-unbalanced-forces-gallery02_1440w.jpg
+      - /assets/works/2016-02-13-inst-unbalanced-forces/inst-unbalanced-forces-gallery03_1440w.jpg
 
   - type: linked-events
 
