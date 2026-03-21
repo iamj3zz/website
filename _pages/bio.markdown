@@ -43,7 +43,7 @@ links:
       </p>
     </div>
     <div class="bio-image">
-      <img src="{{ page.bio_image }}" alt="{{ site.title }}">
+      <img src="{{ page.bio_image }}" alt="J3ZZ — French sound artist and new media creator">
     </div>
   </div>
 

@@ -693,12 +693,14 @@ The site includes comprehensive SEO optimization powered by the `jekyll-seo-tag`
 
 **SEO Features:**
 - Automatic meta tags (title, description, keywords)
-- Open Graph tags for social media sharing
+- Open Graph tags for social media sharing with page-specific images
 - Twitter Card support
 - Structured data (JSON-LD) for portfolio works as Creative Works
-- Canonical URLs
+- Structured data (JSON-LD) for visual artworks as VisualArtwork
+- Canonical URLs (provided by jekyll-seo-tag)
 - Automatic sitemap generation (`jekyll-sitemap` plugin)
 - robots.txt for search engine crawler control
+- Favicon implementation for visual branding
 
 **Configuration in `_config.yml`:**
 ```yaml
@@ -723,15 +725,23 @@ social:
 
 # Additional SEO settings
 tagline: "Experimental sound art merging music, generative systems, and immersive installations"
-default_image: /assets/img/J3ZZ-logo-black-300px.png
+default_image: /assets/bio/bio-photo.jpg
 lang: en_US
 ```
+
+**Page-Specific OG Images:**
+Pages can override the default OG image in front matter:
+- `/works/` → `/assets/works/2020-08-18-inst-iris/thumbnail.jpg` (IRIS installation)
+- `/gallery/` → `/assets/artworks/2026-03-16-fading-lines/thumbnail.png` (representative artwork)
+- `/bio/` → `/assets/bio/bio-photo.jpg` (bio portrait)
 
 **SEO Implementation:**
 - `_includes/seo.html` - Main SEO include with jekyll-seo-tag and custom enhancements
 - `robots.txt` - Search engine crawler configuration
-- Structured data automatically generated for portfolio works
+- Structured data automatically generated for portfolio works (CreativeWork)
+- Structured data automatically generated for artworks (VisualArtwork)
 - Work-specific Open Graph tags (article type, published/modified dates, categories)
+- Favicon links in all 4 layouts (portfolio.html, work.html, artwork.html, bio-gallery.html)
 
 **Note**: The site automatically generates a sitemap at `/sitemap.xml` and declares it in `robots.txt`.
 

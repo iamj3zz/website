@@ -348,17 +348,19 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
 **SEO Components:**
 
 1. **`_includes/seo.html`** - Main SEO include with:
-   - `{% seo %}` tag from jekyll-seo-tag plugin
+   - `{% seo %}` tag from jekyll-seo-tag plugin (handles canonical URLs)
    - Custom meta tags for robots and googlebot
-   - Canonical URL declaration
    - Enhanced Open Graph tags for portfolio works (article type)
    - Structured data (JSON-LD) for portfolio works as Creative Works
+   - Structured data (JSON-LD) for visual artworks as VisualArtwork
 
 2. **Structured Data (Schema.org):**
-   - Portfolio works automatically get `CreativeWork` structured data
-   - Includes: name, description, image, URL, author, datePublished, dateModified, genre
-   - Uses `page.metadata.release_date` for publication date
-   - Uses `page.last_modified_at` (from jekyll-last-modified-at plugin) for modification date
+   - **Portfolio works** get `CreativeWork` structured data
+     - Includes: name, description, image, URL, author, datePublished, dateModified, genre
+     - Uses `page.metadata.release_date` for publication date
+     - Uses `page.last_modified_at` (from jekyll-last-modified-at plugin) for modification date
+   - **Visual artworks** get `VisualArtwork` structured data
+     - Includes: name, description, image, URL, creator, medium, dateCreated, spatialCoverage
 
 3. **Open Graph Tags:**
    - Standard Open Graph tags for all pages (title, description, image, URL)
@@ -369,8 +371,18 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
      - `article:author` from site author
      - `article:section` from work category
      - `article:tag` for each category in multi-category works
+   - **Page-specific OG images:**
+     - `/works/` uses IRIS installation thumbnail
+     - `/gallery/` uses representative artwork thumbnail
+     - `/bio/` uses bio portrait photo
+     - Default fallback for other pages: `default_image` from config
 
-4. **robots.txt:**
+4. **Favicon Configuration:**
+   - Applied to all 4 layouts (portfolio, work, artwork, bio-gallery)
+   - Uses `logo-square.png` (2048×1446 PNG) for both favicon and apple-touch-icon
+   - Provides visual branding in browser tabs and bookmarks
+
+5. **robots.txt:**
    - Located at site root
    - Allows all crawlers: `User-agent: * / Allow: /`
    - Declares sitemap location: `Sitemap: https://www.j3zz.com/sitemap.xml`
@@ -390,16 +402,26 @@ social:
     # ... additional social profile URLs
 
 tagline: "Experimental sound art merging music, generative systems, and immersive installations"
-default_image: /assets/img/J3ZZ-logo-black-300px.png
+default_image: /assets/bio/bio-photo.jpg
 lang: en_US
 ```
 
+**Page-Specific Front Matter for Enhanced SEO:**
+
+Individual pages can override defaults:
+- `/works/` has explicit description and thumbnail image
+- `/gallery/` has explicit OG image (artwork thumbnail)
+- `/bio/` has explicit image field (bio photo)
+- Portfolio works inherit `CreativeWork` schema automatically
+- Artwork pages inherit `VisualArtwork` schema automatically
+
 **Benefits:**
-- Improved search engine discoverability
-- Rich social media sharing previews
-- Structured data for enhanced search results
+- Improved search engine discoverability with rich snippets
+- Rich social media sharing previews with relevant images
+- Structured data for enhanced search results (Google Rich Results)
 - Proper indexing with sitemap and robots.txt
 - Work-specific metadata for better content categorization
+- Visual consistency in browser tabs and bookmarks via favicon
 
 ## Analytics & Cookie Consent
 

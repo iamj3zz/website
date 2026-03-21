@@ -2,6 +2,8 @@
 layout: portfolio
 title: Works
 permalink: /works/
+description: "Portfolio of J3ZZ — immersive installations, live acts, films, performances, releases, and workshops."
+image: /assets/works/2020-08-18-inst-iris/thumbnail.jpg
 ---
 
 <h1 class="visually-hidden">Works</h1>
