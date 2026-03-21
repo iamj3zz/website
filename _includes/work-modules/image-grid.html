@@ -7,7 +7,7 @@
         {% else %}
           {% assign caption = "" %}
         {% endif %}
-        <img src="{{ image | relative_url }}" alt="{{ include.alt | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}">
+        <img src="{{ image | relative_url }}" alt="{{ caption | default: include.alt | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}">
       </div>
     {% endfor %}
   </div>

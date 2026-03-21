@@ -1,6 +1,6 @@
 ---
 layout: portfolio
-title: Bio
+title: "Bio & CV"
 permalink: /bio/
 description: "J3ZZ is a French artist working in the transitional area between sound art, music, light, programming and science. Explore his artistic practice, philosophy, and creative approach through a phenomenological lens."
 image: /assets/bio/bio-photo.jpg

@@ -35,6 +35,9 @@ author:
   email: hello@j3zz.com
   twitter: j3zz
 
+twitter:
+  username: j3zz
+
 social:
   name: J3ZZ
   links:
@@ -165,3 +168,4 @@ exclude:
   - README.md
   - lefthook.yml
   - .claude/
+  - print-test-results/
