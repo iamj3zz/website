@@ -1,5 +1,5 @@
 ---
-published: true
+published: false
 show_in_grid: false
 status: archived
 layout: work
