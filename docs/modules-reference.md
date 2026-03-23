@@ -618,7 +618,7 @@ Two-column responsive layout with iframe on the left (1/3 width) and metadata pl
 
 There are two ways to display hero images on work detail pages:
 
-### 1. Front Matter `hero_image: true` (Print Only)
+### 1. Front Matter `print_hero_image: true` (Print Only)
 
 Use this flag for print-only hero images that automatically use the standard location:
 
@@ -626,7 +626,7 @@ Use this flag for print-only hero images that automatically use the standard loc
 ---
 layout: work
 title: Work Title
-hero_image: true  # ← Print-only hero image flag
+print_hero_image: true  # ← Print-only hero image flag
 # ... other fields ...
 ---
 ```

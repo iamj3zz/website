@@ -37,7 +37,7 @@ The `_pages/` directory is configured as a Jekyll collection in `_config.yml` to
   - Optional `status` field: `major`, `minor`, `archived`, `draft` (editorial classification)
   - Optional `show_in_grid: false` to hide from portfolio grid while keeping detail page accessible
   - Optional `order` field (integer) to control grid display position (higher numbers appear first)
-  - Optional `hero_image: true` for print-only hero image (auto-constructs path)
+  - Optional `print_hero_image: true` for print-only hero image (auto-constructs path)
   - Categories: `installations`, `live-acts`, `films`, `performances`, `releases`, `workshops`, `residencies`
   - Items generate individual pages at `/works/:name/`
   - Supports both single category and multi-category assignments

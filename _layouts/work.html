@@ -80,8 +80,8 @@
         </div>
       </div>
 
-      {% comment %} Print-only hero image — only rendered if hero_image: true in front matter {% endcomment %}
-      {% if page.hero_image %}
+      {% comment %} Print-only hero image — only rendered if print_hero_image: true in front matter {% endcomment %}
+      {% if page.print_hero_image %}
         {% assign work_slug = page.date | date: "%Y-%m-%d" | append: "-" | append: page.slug %}
         {% assign hero_path = "/assets/works/" | append: work_slug | append: "/hero.jpg" %}
         <div class="work-print-hero">

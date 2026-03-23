@@ -37,18 +37,18 @@ All collection items must follow these front matter standards to ensure consiste
 - `published` - Set to `false` to hide from site (defaults to true if omitted)
 - `show_in_grid` - Set to `false` to hide from portfolio grid while keeping page accessible (used for pure residency pages)
 - `status` - Editorial classification (string): `major` = flagship work with high narrative weight; `minor` = real work, lower narrative weight; `archived` = complete work, intentionally hidden; `draft` = work in progress, not ready for public
-- `hero_image` - Set to `true` to display a hero image on the work's print layout. Automatically constructs path `/assets/works/YYYY-MM-DD-{slug}/hero.jpg`. Hidden in web view by CSS. No path override possible.
+- `print_hero_image` - Set to `true` to display a hero image on the work's print layout. Automatically constructs path `/assets/works/YYYY-MM-DD-{slug}/hero.jpg`. Hidden in web view by CSS. No path override possible.
 - `order` - Numeric order for sorting in portfolio grid (higher numbers appear first; independent of filename date)
 - `sections` - Array of modular layout sections (for modular layout mode)
 - Content below front matter (for simple layout mode)
 
-**Important: `hero_image: true` vs `type: hero-image` Module**
+**Important: `print_hero_image: true` vs `type: hero-image` Module**
 
 These are two different mechanisms:
-- **`hero_image: true` (front matter flag)**: Print-only. Auto-constructs the image path as `/assets/works/YYYY-MM-DD-{slug}/hero.jpg`. Placed after the work header on the print page. No configuration needed beyond setting the flag.
+- **`print_hero_image: true` (front matter flag)**: Print-only. Auto-constructs the image path as `/assets/works/YYYY-MM-DD-{slug}/hero.jpg`. Placed after the work header on the print page. No configuration needed beyond setting the flag.
 - **`type: hero-image` (sections module)**: Web and print. Requires explicit path in `image:` parameter. Placed in the sections flow. Useful for custom positioning or non-standard image paths.
 
-Use `hero_image: true` for standard print layouts. Use `type: hero-image` module when you need custom positioning or a non-standard image path.
+Use `print_hero_image: true` for standard print layouts. Use `type: hero-image` module when you need custom positioning or a non-standard image path.
 
 **Special Case: Residency Pages**
 

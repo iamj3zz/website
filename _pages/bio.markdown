@@ -150,7 +150,7 @@ links:
 
       <div class="bio-section-subtitle">Collaborations</div>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2009–<script>document.write(new Date().getFullYear())</script></span><a href="/works/2018-06-23-live-willany-leo/"> WILLANY LEO</a></div>
+        <div class="bio-item"><span class="bio-year">2009–<script>document.write(new Date().getFullYear())</script></span><a href="/works/2009-01-01-live-willany-leo/"> WILLANY LEO</a></div>
         <div class="bio-item"><span class="bio-year">2018–2019</span> DJ PANDA ft. J3ZZ</div>
         <div class="bio-item"><span class="bio-year">2013–2017</span><a href="/works/2015-12-12-live-buddha-bar-budapest/"> BUDDHA BAR ft J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">MODEO ft. J3ZZ</a></div>

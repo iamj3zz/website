@@ -1,7 +1,7 @@
 ---
 published: true
 show_in_grid: false
-hero_image: false
+print_hero_image: true
 status: archived
 layout: work
 title: "Willany léo"
@@ -24,7 +24,7 @@ description: |
   The ensemble participated in the EU-funded Beyond Fronta: Bridging New Territories project (2012–2014), earning a Success Story designation, and received the László Lábán Special Award in May 2019. Weekly performances take place at MU Színház's Káva Room (Wednesday, 20:30–21:30 local time). Regular involvement includes improvisation-based movement/sound experimentations performed for audiences across Hungary, particularly in Budapest, spanning galleries, theatres, and festivals.
 category: live-acts
 commissioned: false
-image: /assets/works/2018-06-23-live-willany-leo/thumbnail.jpg
+image: /assets/works/2009-01-01-live-willany-leo/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -45,11 +45,10 @@ metadata:
       link: "https://knipictures.wordpress.com/"
 
 sections:
-
   # - type: hero-image
-  #   image: /assets/works/2018-06-23-live-willany-leo/hero.jpg
-
-    # Video documentation
+  #   image: /assets/works/2009-01-01-live-willany-leo/hero.jpg
+  
+  # Video documentation
   - type: iframe
     embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/biWqTyerj7A" frameborder="0" allowfullscreen></iframe>'
     responsive: true
@@ -60,11 +59,11 @@ sections:
 
   - type: image-grid
     images:
-      - /assets/works/2018-06-23-live-willany-leo/live-willany-leo-gallery01_921w.jpg
-      - /assets/works/2018-06-23-live-willany-leo/live-willany-leo-gallery02_921w.jpg
-      - /assets/works/2018-06-23-live-willany-leo/live-willany-leo-gallery03_647w.jpg
-      - /assets/works/2018-06-23-live-willany-leo/live-willany-leo-gallery04_1111w.jpg
-      - /assets/works/2018-06-23-live-willany-leo/live-willany-leo-gallery05_1111w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery01_921w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery02_921w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery03_647w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery04_1111w.jpg
+      - /assets/works/2009-01-01-live-willany-leo/live-willany-leo-gallery05_1111w.jpg
       
   # - type: linked-events
 

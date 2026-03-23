@@ -106,7 +106,7 @@ sections:
 | `status` | string | ✗ | Editorial classification | `major`, `minor`, `archived`, or `draft` |
 | `show_in_grid` | boolean | ✗ | Grid visibility | Set to `false` to hide from portfolio grid (detail page still accessible) |
 | `order` | integer | ✗ | Grid display order | Higher numbers appear first; independent of filename date |
-| `hero_image` | boolean | ✗ | Print hero image | Set to `true` to display hero image on print layout (auto-constructs path: `/assets/works/YYYY-MM-DD-slug/hero.jpg`) |
+| `print_hero_image` | boolean | ✗ | Print hero image | Set to `true` to display hero image on print layout (auto-constructs path: `/assets/works/YYYY-MM-DD-slug/hero.jpg`) |
 | `metadata.release_date` | date | ✓ | Creation date | Format: `"YYYY-MM-DD"` |
 | `metadata.role` | string | ✓ | Your role(s) | Examples: composer, violinist, performer, sound designer |
 | `metadata.location` or `metadata.based_in` | string | ✗ | Location | Both are valid; use whichever fits (location for specific events, based_in for ongoing works) |
