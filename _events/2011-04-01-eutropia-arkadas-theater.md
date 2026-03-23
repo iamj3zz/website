@@ -11,5 +11,5 @@ venue_name: Arkadas Theater
 venue_address: "Platenstraße 32, 50825 Cologne, Germany"
 venue_link: https://arkadas-theater.de/
 ticket_link:
-description: Live performance.
+description: "Live performance of EUtropia (ROOTS & ROUTES / EU CULTURE Programme) at Arkadas Theater, Cologne — J3ZZ as violinist, composer, and performer."
 ---
