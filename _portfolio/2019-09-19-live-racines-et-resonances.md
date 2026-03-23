@@ -4,7 +4,7 @@ status: major
 layout: work
 title: "RACINES & RESONANCES"
 work_id: racines-et-resonances
-hero_image: true
+print_hero_image: true
 abstract: |
   Immersive live audiovisual performance where sensors capture plant bio-signals and transform them into sounds and visuals in real time. Workshops and performances combining biosonification, music, and ecology across Hungary, Réunion, and Mauritius.
 description: |

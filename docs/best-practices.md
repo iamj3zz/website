@@ -53,10 +53,10 @@ sections:
 
 1. **Create the file**: Use format `YYYY-MM-DD-work-slug.md` in `_portfolio/` directory (e.g., `2026-01-01-new-work.md` using the actual release/creation date)
 2. **Define basic front matter**: title, work_id, abstract, **description**, category, commissioned, image, order
-3. **Add optional editorial fields**: `status` (major/minor/archived/draft), `show_in_grid`, `hero_image`
+3. **Add optional editorial fields**: `status` (major/minor/archived/draft), `show_in_grid`, `print_hero_image`
 4. **Add centralized metadata**: Use category-specific template from [Metadata Reference](metadata-reference.md)
 5. **Build sections array**: Start with `description` module, then combine other modules to tell the work's story (see [Modules Reference](modules-reference.md))
-6. **Place hero image (print only, optional)**: If the work has a print hero image, place `hero.jpg` in `assets/works/YYYY-MM-DD-slug/` and set `hero_image: true` in front matter
+6. **Place hero image (print only, optional)**: If the work has a print hero image, place `hero.jpg` in `assets/works/YYYY-MM-DD-slug/` and set `print_hero_image: true` in front matter
 7. **Test locally**: Run `bundle exec jekyll serve` and verify display
 8. **Check printable version**: View works.markdown to ensure proper print display
 
@@ -73,7 +73,7 @@ sections:
 - ✅ Use `custom` array for fields not covered by standard metadata
 - ✅ Quote all year values as strings: `year: "2024"`
 - ✅ Include `description` module in sections array (typically first)
-- ✅ Set `hero_image: true` and place `hero.jpg` in `assets/works/YYYY-MM-DD-slug/` for works that have a print hero image
+- ✅ Set `print_hero_image: true` and place `hero.jpg` in `assets/works/YYYY-MM-DD-slug/` for works that have a print hero image
 - ✅ Add `status` field for editorial classification (`major`, `minor`, `archived`, or `draft`)
 - ✅ Set `commissioned: true/false` field on all works (required)
 

@@ -4,7 +4,7 @@ status: major
 layout: work
 title: "PARK IN PROGRESS"
 work_id: park-in-progress
-hero_image: true
+print_hero_image: true
 abstract: |
   A multichannel spatial audio installation merging 16 speakers with live circus performance in Nicosia's Municipal Gardens.
 description: |

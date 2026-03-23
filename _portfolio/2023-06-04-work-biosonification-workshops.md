@@ -4,7 +4,7 @@ status: major
 layout: work
 title: "BIOSONIFICATION"
 work_id: biosonification-workshops
-hero_image: true
+print_hero_image: true
 abstract: |
   Educational workshops and ateliers exploring plant biosonification through the collective "Nout plant i chant". Participants learn to capture plant vibrations and transform them into melodies using sensor technology.
 description: |

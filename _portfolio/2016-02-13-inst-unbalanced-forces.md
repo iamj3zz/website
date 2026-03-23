@@ -4,7 +4,7 @@ status: major
 layout: work
 title: "UNBALANCED FORCES"
 work_id: unbalanced-forces
-hero_image: true
+print_hero_image: true
 abstract: |
   Interactive/Live Sound Installation. A sonic exploration of action and intervention.
 description: |

@@ -10,7 +10,7 @@ description: |
   This is the ultimate reference template demonstrating every feature of the portfolio system. It showcases all available metadata fields (temporal, industry identifiers, location, production, roles, collaborators, and custom fields), all 10 section module types (hero-image, text, image-grid, metadata, quote, spacer, linked-events, iframe, split layouts, and description), and best practices for organizing complex works. Use this as a reference when creating new portfolio works to understand all available options and their proper formatting.
 category: installations
 image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
-# hero_image: true  # Uncomment to display hero.jpg on print layout
+# print_hero_image: true  # Uncomment to display hero.jpg on print layout
                     # Requires: assets/works/YYYY-MM-DD-slug/hero.jpg
 
 # CENTRALIZED METADATA - Define once, use everywhere
