@@ -5,12 +5,16 @@ layout: work
 title: "REALITY IN DISGUISE"
 work_id: reality-in-disguise
 abstract: |
-  A live interdisciplinary show co-created with artists from 11 European countries, blending violin, composition, contemporary dance, spoken word, and visual arts — developed through residencies in Germany and performed at major European festivals in 2011.
+  One of seven flagship productions in the Art'n'Go initiative — a live interdisciplinary show co-created with emerging artists from 11 European countries, blending violin, composition, contemporary dance, spoken word, and visual arts. Developed through residencies in Germany and performed across major European festivals in 2010–2011.
 description: |
-  Reality in Disguise was one of seven productions created under Art'n'Go – New Routes to Intercultural Creativity, a ROOTS & ROUTES project supported by the EU CULTURE Programme (September 2009 – August 2011). J3ZZ participated as violinist and co-creator/composer, contributing to the development of a show described as "a shockingly unique mixture of art genres from contemporary dance to pop music, from dub step to slam poetry, from the art of storytelling to visual arts." The work was developed during residencies at Remscheid Academy and Heek (Germany), and performed at Fabbrica Europa (Florence, Italy) and Sziget Festival (Budapest, Hungary) in 2011.
+  **Reality in Disguise** is one of seven independent artistic productions created under **Art'n'Go – New Routes to Intercultural Creativity**, a landmark ROOTS & ROUTES umbrella initiative supported by the EU CULTURE Programme (September 2009 – August 2011).
+
+  **The Art'n'Go Project Structure:** Art'n'Go commissioned original proposals from young artists who had previously collaborated through ROOTS & ROUTES initiatives. These artists became authors, directors, and managers of their own independent productions, which were then collectively showcased across major European festivals between May and August 2011. The seven productions (About Traffic, Braincheck, Coloured Life, Ether Sides, My World, Reality in Disguise, Traces) represented a coordinated strategy to promote intercultural creativity and cultural dialogue between Eastern and Western Europe.
+
+  **J3ZZ's Role:** J3ZZ participated as violinist, composer, and co-creator, contributing to a show described as "a shockingly unique mixture of art genres from contemporary dance to pop music, from dub step to slam poetry, from the art of storytelling to visual arts." The work was developed during intensive residencies at Akademie der Kulturellen Bildung in Remscheid and the artistic development space in Heek (Germany), and performed at three major European festivals: Roots&Routes Cologne (August 2010, premiere), Fabbrica Europa Festival in Florence (May 2011), and Sziget Festival in Budapest (August 2011).
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2010-08-21-live-reality-in-disguise/thumbnail.jpg
 
 metadata:
   date: "2009–2011"
@@ -64,13 +68,32 @@ metadata:
     - label: "Fabbrica Europa Festival"
       value: "XVIII edition (May 3–28, 2011) – contemporary stage arts"
       link: "https://fabbricaeuropa.net/en/fabbrica-europa-2012/"
+    - label: "Fabbrica Europa 2011 Event Page"
+      value: "Reality in Disguise + Traces + About Traffic performance documentation"
+      link: "https://fabbricaeuropa.net/en/events/reality-in-disguise-traces-about-traffic/"
 
 sections:
+    # Video documentation
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/8oTRJNRk0tE" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    caption: "REALITY IN DISGUISE - Fabbrica Europa Festival - 2011"
+
+
   - type: description
 
   - type: text
     content: |
-      *Reality in Disguise* emerged from an intensive two-year intercultural creation process spanning September 2009 to August 2011, bringing together emerging artists from 11 European countries through the Art'n'Go initiative — a landmark program supporting sustainable artistic production by young creators. Developed through residencies at Akademie der Kulturellen Bildung in Remscheid and continued in Heek, Germany, the work synthesized diverse cultural perspectives into a "shockingly unique mixture" of violin, contemporary dance, electronic music, slam poetry, visual arts, and storytelling.
+      ## The Art'n'Go Context
+
+      *Reality in Disguise* is one of seven independent artistic productions created under the Art'n'Go initiative (September 2009 – August 2011), a landmark European project that gave emerging artists from 11 countries the opportunity to develop sustainable, professionally-managed productions for presentation at major festivals. Art'n'Go represented a coordinated strategy to amplify intercultural creativity and cultural dialogue across Europe, with each of the seven productions functioning as a distinct artistic vision while united by a shared commitment to interdisciplinary creation and artistic innovation.
+
+      The seven Art'n'Go productions are: **About Traffic**, **Braincheck**, **Coloured Life**, **Ether Sides**, **My World**, **Reality in Disguise**, and **Traces**.
+
+      ## Production Overview
+
+      *Reality in Disguise* emerged from an intensive two-year intercultural creation process, bringing together emerging artists from 11 European countries through the Art'n'Go initiative — a landmark program supporting sustainable artistic production by young creators. Developed through residencies at Akademie der Kulturellen Bildung in Remscheid and continued in Heek, Germany, the work synthesized diverse cultural perspectives into a "shockingly unique mixture" of violin, contemporary dance, electronic music, slam poetry, visual arts, and storytelling.
 
       The production was directed by **Max Greyson** and **Ruben Vandendriessche**, with an ensemble of musicians, dancers, vocalists, and visual artists who had previously collaborated on earlier ROOTS & ROUTES initiatives. The show challenged the boundaries between musical genres and artistic disciplines, creating an immersive environment where classical violin met dub step, spoken word merged with visual projection, and live composition provided a fluid backbone for choreography and performance art.
 

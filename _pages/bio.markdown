@@ -76,7 +76,7 @@ links:
 
       <div class="bio-section-subtitle">Theatre &amp; Dance</div>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-01-01-perf-suprema/">SUPREMA</a> ∙ Tímea Sebestyén </div>
+        <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-05-03-perf-suprema/">SUPREMA</a> ∙ Tímea Sebestyén </div>
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-04-14-perf-home-base/">HOME BASE</a> ∙ Kulcsár Noémi </div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2013-01-01-perf-what-happens-when-you-touch-it/">WHAT HAPPENS WHEN YOU TOUCH IT</a> ∙ EnKnapGroup </div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-perf-touch-me-not-nebáncsvirág/">TOUCH ME NOT</a> ∙  Zoltán Grecsó </div>
@@ -84,7 +84,7 @@ links:
 
       <div class="bio-section-subtitle">Films</div>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2019</span><a href="/works/2019-01-01-film-valaszuton-crossroads/">CROSSROADS</a> ∙ fiction short ∙ Flora Chilton </div>
+        <div class="bio-item"><span class="bio-year">2020</span><a href="/works/2020-08-18-film-valaszuton-crossroads/">CROSSROADS</a> ∙ fiction short ∙ Flora Chilton </div>
         <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-grantraeet/">GRANTRAEET</a> ∙ fiction short ∙ Amalie Halsey </div>
         <div class="bio-item"><span class="bio-year">2017</span>  <a href="/works/2017-01-01-film-building-up-creativity/">BUILDING UP CREATIVITY</a> ∙ dance film ∙ Judit Pétervári </div>
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-01-01-film-petra/">PETRA</a> ∙ fiction feature ∙ Philip Lewis </div>
@@ -120,14 +120,14 @@ links:
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ La Lasagneria ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ MFSZ ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-live-n7n8-festival/">N7N8 FESTIVAL</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-01-01-live-massolit-series/">MASSOLIT SERIES</a> ∙ Lumen Kávézó ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Lumen Kávézó ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2013-09-12-live-sur-le-fil/">SUR LE FIL</a> ∙ Samsara Festival ∙ Siófok ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2013-09-12-live-sur-le-fil/">SUR LE FIL</a> ∙ El Asador de Pata Negra ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2013-09-12-live-sur-le-fil/">SUR LE FIL</a> ∙ Refuge Bistro ∙ Budapest ∙ HU</div>
@@ -135,24 +135,24 @@ links:
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2013-09-12-live-sur-le-fil/">SUR LE FIL</a> ∙ Living Gallery ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2013-09-12-live-sur-le-fil/">SUR LE FIL</a> ∙ FKSE Studio Gallery ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-09-12-live-sur-le-fil/">SUR LE FIL</a> ∙ Frau Frisor FOSCA ∙ Florence ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2011-01-01-live-hybris/">HYBRIS</a> ∙ Brody Studios ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-live-hybris/">HYBRIS</a> ∙ Treehugger Dan's Bookstore Café ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Godot Café-Théâtre ∙ Bucharest ∙ RO</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Sziget Festival A38 Stage ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Toldi Klub ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Le Murate Caffe Letterario ∙ Florence ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA</a> ∙ Tivoli ∙ Utrecht ∙ NL</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA</a> ∙ Fabbrica Europa Festival - Stazione Leopolda ∙ Florence ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA</a> ∙ Arkadas Theater ∙ Cologne ∙ DE</div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Sziget Festival - A38 Stage ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-01-01-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Club Bahnhof Ehrenfeld ∙ Cologne ∙ DE</div>
+        <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2011-09-29-live-hybris/">HYBRIS</a> ∙ Brody Studios ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-09-29-live-hybris/">HYBRIS</a> ∙ Treehugger Dan's Bookstore Café ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-05-05-live-talking-hearts/">TALKING HEARTS</a> ∙ Godot Café-Théâtre ∙ Bucharest ∙ RO</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-05-05-live-talking-hearts/">TALKING HEARTS</a> ∙ Sziget Festival A38 Stage ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-05-05-live-talking-hearts/">TALKING HEARTS</a> ∙ Toldi Klub ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-05-05-live-talking-hearts/">TALKING HEARTS</a> ∙ Le Murate Caffe Letterario ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2011-04-01-live-eutropia/">EUTROPIA</a> ∙ Tivoli ∙ Utrecht ∙ NL</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-04-01-live-eutropia/">EUTROPIA</a> ∙ Fabbrica Europa Festival - Stazione Leopolda ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-04-01-live-eutropia/">EUTROPIA</a> ∙ Arkadas Theater ∙ Cologne ∙ DE</div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2010-08-21-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Sziget Festival - A38 Stage ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2010</span> <a href="/works/2010-08-21-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Club Bahnhof Ehrenfeld ∙ Cologne ∙ DE</div>
       </div>
 
       <div class="bio-section-subtitle">Collaborations</div>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2009–<script>document.write(new Date().getFullYear())</script></span><a href="/works/2009-01-01-live-willany-leo/"> WILLANY LEO</a></div>
+        <div class="bio-item"><span class="bio-year">2009–<script>document.write(new Date().getFullYear())</script></span><a href="/works/2018-06-23-live-willany-leo/"> WILLANY LEO</a></div>
         <div class="bio-item"><span class="bio-year">2018–2019</span> DJ PANDA ft. J3ZZ</div>
-        <div class="bio-item"><span class="bio-year">2013–2017</span><a href="/works/2013-01-01-live-buddha-bar-budapest/"> BUDDHA BAR ft J3ZZ</a></div>
+        <div class="bio-item"><span class="bio-year">2013–2017</span><a href="/works/2015-12-12-live-buddha-bar-budapest/"> BUDDHA BAR ft J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">MODEO ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2013</span><a href="/works/2015-04-18-live-modeo/"> TADALAT ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2012–2013</span> <a href="/works/2012-01-01-live-azalai/"> AZALAI </a></div>
@@ -173,10 +173,10 @@ links:
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-08-23-resi-outbreakers-lab-residency/">OUTBREAKERS' LAB</a> ∙ Zsennye ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2018</span> <a href="/works/2018-01-01-resi-music-maker-2/">CHATEAU EPHEMERE </a> ∙ Carrières-sous-Poissy ∙ FR</div>
         <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-09-29-inst-park-in-progress/">PARK IN PROGRESS</a> ∙ Nicosia ∙ CY</div>
-        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2011-01-01-live-talking-hearts/">TALKING HEARTS</a> ∙ Barcelona/Florence/ Budapest/Bucharest ∙ SP/IT/HU/RO</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-05-05-live-talking-hearts/">TALKING HEARTS</a> ∙ Barcelona/Florence/ Budapest/Bucharest ∙ SP/IT/HU/RO</div>
         <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-01-01-film-to-be-told/">TO BE TOLD</a> ∙ Florence ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2011-2013</span> <a href="/works/2011-01-01-live-eutropia/">EUTROPIA ∙ Cologne/Florence/Utrecht</a> ∙ DE/IT/NL</div>
-        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-01-01-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Remscheid/Heek/Cologne/Florence/Budapest ∙ DE/IT/HU</div>
+        <div class="bio-item"><span class="bio-year">2011-2013</span> <a href="/works/2011-04-01-live-eutropia/">EUTROPIA ∙ Cologne/Florence/Utrecht</a> ∙ DE/IT/NL</div>
+        <div class="bio-item"><span class="bio-year">2009–2011</span> <a href="/works/2010-08-21-live-reality-in-disguise/">REALITY IN DISGUISE</a> ∙ Remscheid/Heek/Cologne/Florence/Budapest ∙ DE/IT/HU</div>
       </div>
     </div>
 

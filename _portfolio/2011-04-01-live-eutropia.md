@@ -34,6 +34,7 @@ metadata:
       link: "https://smouth.com/pf/eutropia/"
     - label: "Fabbrica Europa Festival"
       value: "May 2012 — Stazione Leopolda, Florence"
+      link: "https://fabbricaeuropa.net/events/eutropia/"
 
 sections:
 
