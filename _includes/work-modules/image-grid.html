@@ -1,14 +1,22 @@
 <div class="module module-image-grid" data-columns="{{ include.columns | default: 2 }}">
   <div class="image-grid grid-{{ include.columns | default: 2 }}">
-    {% for image in include.images %}
-      <div class="grid-item">
-        {% if include.captions %}
-          {% assign caption = include.captions[forloop.index0] %}
-        {% else %}
-          {% assign caption = "" %}
-        {% endif %}
-        <img src="{{ image | relative_url }}" alt="{{ caption | default: include.alt | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}">
-      </div>
-    {% endfor %}
+    {% if include.image_captions %}
+      {% for item in include.image_captions %}
+        <div class="grid-item">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.caption | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ item.caption }}">
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for image in include.images %}
+        <div class="grid-item">
+          {% if include.captions %}
+            {% assign caption = include.captions[forloop.index0] %}
+          {% else %}
+            {% assign caption = "" %}
+          {% endif %}
+          <img src="{{ image | relative_url }}" alt="{{ caption | default: include.alt | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}">
+        </div>
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
