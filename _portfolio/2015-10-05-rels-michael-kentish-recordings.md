@@ -57,7 +57,7 @@ Dávid Asztalos – drums on Fires, One Adult No Return, Gift Exchange.
 Beaux Jaxon – resonator guitar on One Adult No Return.
 Michael Kentish – bass guitar, acoustic guitars, vocals.
 Rae Lambinon – backing vocals on all songs.
-Jérôme Li Thiao Te – violins on Fires, So Much More.
+J3ZZ – violins on Fires, So Much More.
 
 Bass, drums, resonator guitar and violins recorded by Eszter Polyák at Echo Hangstúdió.
 Recording of other instruments, mixing and production by pabloslam.

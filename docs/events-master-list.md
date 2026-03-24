@@ -1,6 +1,6 @@
 # J3ZZ — Complete Events List
 
-**Jérôme Li-Thiao-Té (J3ZZ / Jeromos)**
+**J3ZZ (Jeromos)**
 
 **Total events:** ~120 (105 in `_events/` database + ~15 additional from research)
 **Date range:** 2011–2025
@@ -52,9 +52,9 @@
 | 2015-07-03 | Hungary | Budapest | Massolit Café — Nagy Diófa utca 30, 1072 | J3ZZ Live Massolit Series #03 | Improvisation with Áron Porteleki. Budapest traditional dance-house movement | [massolitbudapest.com](http://massolitbudapest.com/) | — |
 | 2015-07-14 | Hungary | Budapest | Massolit Café — Nagy Diófa utca 30, 1072 | J3ZZ Live Massolit Series #04 | Improvisation with cellist Endre Kertész performing classical Austrian cello from 1828 | [massolitbudapest.com](http://massolitbudapest.com/) | — |
 | 2015-07-23 | Hungary | Budapest | Massolit Café — Nagy Diófa utca 30, 1072 | J3ZZ Live Massolit Series #06 | Improvisational performance with Zsolt Sőrés (Ahad) Hungarian experimental musician | [massolitbudapest.com](http://massolitbudapest.com/) | — |
-| 2015-10-15 | Hungary | Budapest | Szimpla Kert — Kazinczy utca 14, 1075 | Jérôme Li-Thiao-Té // Miss God | Collaboration with Polish exquisite singer composer producer | [szimpla.hu](https://szimpla.hu/) | — |
+| 2015-10-15 | Hungary | Budapest | Szimpla Kert — Kazinczy utca 14, 1075 | J3ZZ // Miss God | Collaboration with Polish exquisite singer composer producer | [szimpla.hu](https://szimpla.hu/) | — |
 | 2015-12-11 | Hungary | Budapest | Müszi [Művelődési Szint] — Blaha Lujza tér 1-2, 1085 | ebb flow + debris (6 humans) | Monofog performance: Sound Waves + Dance Movements | [muszi.org](http://muszi.org/) | — |
-| 2015-12-12 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2015-12-12 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2015-12-19 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | Buddha-Beats | Electronic world music | [buddhabar.com](https://www.buddhabar.com/) | — |
 
 ---
@@ -63,44 +63,44 @@
 
 | Date | Time | Country | City | Venue | Event Name | Description | Source / Link | Media |
 |------|------|---------|------|-------|------------|-------------|---------------|-------|
-| 2016-01-09 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Viktor feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-01-09 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Viktor feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-01-16 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | Buddha-Beats | Electronic world music | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-01-18 | 20:00 | Hungary | Budapest | Brody Studios — Bródy Sándor utca 10, 1088 | Hybris | Acoustic improvisational duet: cello and violin | [brody.land](http://www.brody.land/) | — |
-| 2016-01-22 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-02-04 | 20:00 | Hungary | Budapest | Pótkulcs — Csengery utca 65/b, 1067 | Michael Kentish feat. Jérôme Li-Thiao-Té | Michael Kentish with friends Dávid Asztalos and Jérôme | [potkulcs.hu](http://www.potkulcs.hu) | — |
-| 2016-02-05 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-01-22 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-02-04 | 20:00 | Hungary | Budapest | Pótkulcs — Csengery utca 65/b, 1067 | Michael Kentish feat. J3ZZ | Michael Kentish with friends Dávid Asztalos and J3ZZ | [potkulcs.hu](http://www.potkulcs.hu) | — |
+| 2016-02-05 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-02-05 | 23:30 | Hungary | Budapest | TESLA Budapest Klub — Kazinczy utca 21, 1075 | Indigo Theory feat. J3ZZ | Stil Vor Talent showcase. Deep house music. J3ZZ warmup | — | — |
 | 2016-02-13 | 19:00–20:00 | Hungary | Budapest | Lábor Gallery | Unbalanced Forces | Collaborative exhibition: dance sound and video installations exploring Hungarian society | — | — |
 | 2016-02-20 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | Buddha-Beats | Chill-out electronic world music | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-02-26 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-03-05 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-02-26 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-03-05 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-03-12 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | Buddha-Beats | Electronic world music | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-03-25 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-04-01 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Mada feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-03-25 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-04-01 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Mada feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-04-02 | 19:00 | Hungary | Budapest | Living Gallery | Sur le fil (solo) | Musical performance in intimate gallery | — | — |
 | 2016-04-08 | 23:30 | Hungary | Budapest | TESLA Budapest Klub — Kazinczy utca 21, 1075 | Indigo Theory feat. J3ZZ | 3rd birthday Budapest Calling. Pure quality House music. J3ZZ warmup | [tixa.hu](https://tixa.hu/schories) | — |
 | 2016-04-09 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | Buddha-Beats | Electronic world music blend | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-04-14 | 19:00 | Hungary | Budapest | MOMKult — Alkotás utca 53, 1123 | Home Base (19:00 show) | Special installation combining space sound dance | [momkult.hu](https://momkult.hu/) | — |
 | 2016-04-14 | 21:30 | Hungary | Budapest | MOMKult — Alkotás utca 53, 1123 | Home Base (21:30 show) | Multimedia installation space sound dance | [momkult.hu](https://momkult.hu/) | — |
-| 2016-04-22 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-06-08 | 22:00 | Singapore | Singapore | Canvas Creative Space — 20 Upper Circular Road, #B1-01 | Catherine Brogan & Jérôme Li-Thiao-Té | Poet and spoken word artist (BBC Edinburgh Slam winner) with violinist | — | — |
+| 2016-04-22 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-06-08 | 22:00 | Singapore | Singapore | Canvas Creative Space — 20 Upper Circular Road, #B1-01 | Catherine Brogan & J3ZZ | Poet and spoken word artist (BBC Edinburgh Slam winner) with violinist | — | — |
 | 2016-06-18 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | Buddha-Beats | Electronic world music | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-06-25 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. Jérôme Li-Thiao-Té | Buddha-Bar resident DJ performance | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-07-02 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. Jérôme Li-Thiao-Té | Chill-out electronic world music with ethnic vibes | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-07-09 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-07-17 | 18:00 | Hungary | Budapest | ÉllatóHáz — Dob utca 19, 1074 | Beaux Jaxon ft. Jérôme Li-Thiao-Té | Blues and R&B. Outdoor courtyard venue | [ellatohaz.hu](http://ellatohaz.hu/) | — |
-| 2016-07-30 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-08-14 | 18:00 | Hungary | Budapest | Sziget Festival — Óbudai-sziget, 1033 | Beaux Jaxon ft. Jérôme Li-Thiao-Té | American blues musician 30+ years experience. Full Octet performance | [szigetfestival.com](https://szigetfestival.com/) | — |
-| 2016-08-20 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-06-25 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. J3ZZ | Buddha-Bar resident DJ performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-07-02 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. J3ZZ | Chill-out electronic world music with ethnic vibes | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-07-09 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-07-17 | 18:00 | Hungary | Budapest | ÉllatóHáz — Dob utca 19, 1074 | Beaux Jaxon ft. J3ZZ | Blues and R&B. Outdoor courtyard venue | [ellatohaz.hu](http://ellatohaz.hu/) | — |
+| 2016-07-30 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-08-14 | 18:00 | Hungary | Budapest | Sziget Festival — Óbudai-sziget, 1033 | Beaux Jaxon ft. J3ZZ | American blues musician 30+ years experience. Full Octet performance | [szigetfestival.com](https://szigetfestival.com/) | — |
+| 2016-08-20 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-09-10 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | Buddha-Beats | Electronic world music performance | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-09-24 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-09-24 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-10-05 | 19:00 | Hungary | Budapest | MOMKult — Alkotás utca 53, 1123 | Home Base (19:00 show) | Spatial sound dance installation inspired by Giselle | [momkult.hu](https://momkult.hu/) | — |
 | 2016-10-05 | 21:30 | Hungary | Budapest | MOMKult — Alkotás utca 53, 1123 | Home Base (21:30 show) | Spatial sound dance installation inspired by Giselle. Free audience movement | [momkult.hu](https://momkult.hu/) | — |
-| 2016-10-08 | 22:30 | Hungary | Budapest | Brody Studios — Bródy Sándor utca 10, 1088 | Beaux Jaxon ft. Jérôme Li-Thiao-Té | American blues guitarist with European band. J3ZZ on electric violin | [brody.land](http://www.brody.land/) | — |
-| 2016-10-22 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-10-08 | 22:30 | Hungary | Budapest | Brody Studios — Bródy Sándor utca 10, 1088 | Beaux Jaxon ft. J3ZZ | American blues guitarist with European band. J3ZZ on electric violin | [brody.land](http://www.brody.land/) | — |
+| 2016-10-22 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 | 2016-11-12 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | Buddha-Beats | Electronic world music with ethnic vibes | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-11-19 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. Jérôme Li-Thiao-Té | Buddha-Bar resident DJ performance with J3ZZ | [buddhabar.com](https://www.buddhabar.com/) | — |
-| 2016-12-02 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. Jérôme Li-Thiao-Té | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-11-19 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | DJ Mada feat. J3ZZ | Buddha-Bar resident DJ performance with J3ZZ | [buddhabar.com](https://www.buddhabar.com/) | — |
+| 2016-12-02 | 22:00 | Hungary | Budapest | Buddha-Bar Hotel Budapest — Váci utca 34, 1052 | dj Tony feat. J3ZZ | Buddha-Bar performance | [buddhabar.com](https://www.buddhabar.com/) | — |
 
 ---
 
@@ -166,7 +166,7 @@
 | 2020-05-23 | 18:30 Q&A; 19:00 performance | Online | Online | Online (Resident Advisor) | j3zzlab 02 | Online musical laboratory. Q&A at 18:30, performance at 19:00 | [Resident Advisor](https://www.residentadvisor.net/events/1408925) | — |
 | 2020-06-20 | 17:30–18:30 | Hungary | Budapest | Kálvin tér, 1053 | Willany Leó x Kálvin tér — Belly of the Beat | Collaborative open-air event | [Facebook event](https://www.facebook.com/events/1723042947899951/) | — |
 | 2020-07-13 | 19:00 | Hungary | Budapest | Mammut Tető – Mammut 2 — Lövőház utca 2-6, 1024 | Willany Léo x Ema — Première Screening | Film screening (EMA, 2019, Pablo Larraín) paired with contemporary dance improvisation. Rooftop cinema | [cooltix](https://cooltix.hu/event/5efc951089e0970013f228c0) | — |
-| 2020-08-18 | 17:00–22:00 | Hungary | Debrecen | Csokonai Theater — Kossuth utca 10, 4024 | Lighthouse: O N / Light Art Exhibition | Light art exhibition. Jérôme Li-Thiao-Té among 17 participating artists. Analogue/digital light art and kinetic installations | — | — |
+| 2020-08-18 | 17:00–22:00 | Hungary | Debrecen | Csokonai Theater — Kossuth utca 10, 4024 | Lighthouse: O N / Light Art Exhibition | Light art exhibition. J3ZZ among 17 participating artists. Analogue/digital light art and kinetic installations | — | — |
 | 2020-08-18 | 11:00 | Hungary | Balatonszemes | Bujtor István Film Festival — Szabadság utca 1, 8636 | Válaszúton / Crossroads — Film Festival | Premiere screening of short film *Crossroads* featuring music composed by J3ZZ | [bujtorfilmfesztival.hu](https://bujtorfilmfesztival.hu/valaszuton-2/) | — |
 | 2020-09-05 | 19:00 | Hungary | Budapest | Magyar Nemzeti Múzeum Díszterme — Múzeum körút 14-16, 1088 | Willany Leó x J3ZZ x MNM | Contemporary improvisation dance + open workshop. Free improvisation at Hungarian National Museum | — | — |
 | 2020-09-06 | 22:00 | Hungary | Veszprém | Latinovits-Bujtor Játékszín — Iskola utca 1, 8200 | Suprema | Dance/theater exploring Wonder Woman through female perspective. Themes: female power, desire, sexuality, fear. Ages 16+ | — | — |
