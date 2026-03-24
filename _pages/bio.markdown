@@ -152,9 +152,9 @@ links:
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2009–<script>document.write(new Date().getFullYear())</script></span><a href="/works/2009-01-01-live-willany-leo/"> WILLANY LEO</a></div>
         <div class="bio-item"><span class="bio-year">2018–2019</span> DJ PANDA ft. J3ZZ</div>
-        <div class="bio-item"><span class="bio-year">2013–2017</span><a href="/works/2015-12-12-live-buddha-bar-budapest/"> BUDDHA BAR ft J3ZZ</a></div>
+        <div class="bio-item"><span class="bio-year">2013–2017</span><a href="https://www.buddhabar.com/"> BUDDHA BAR</a> ft. J3ZZ (resident musician)</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">MODEO ft. J3ZZ</a></div>
-        <div class="bio-item"><span class="bio-year">2013</span><a href="/works/2015-04-18-live-modeo/"> TADALAT ft. J3ZZ</a></div>
+        <div class="bio-item"><span class="bio-year">2013</span><a href="/works/"> TADALAT ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2012–2013</span> <a href="/works/2012-01-01-live-azalai/"> AZALAI </a></div>
         <div class="bio-item"><span class="bio-year">2012</span><a href="/works/2015-04-18-live-modeo/"> SAMBA TOURE ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2015-04-18-live-modeo/"> SUMMER SUITE ft. J3ZZ</a></div>
