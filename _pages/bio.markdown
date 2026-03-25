@@ -154,12 +154,12 @@ links:
         <div class="bio-item"><span class="bio-year">2018–2019</span> DJ PANDA ft. J3ZZ</div>
         <div class="bio-item"><span class="bio-year">2013–2017</span><a href="https://www.buddhabar.com/"> BUDDHA BAR</a> ft. J3ZZ (resident musician)</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-18-live-modeo/">MODEO ft. J3ZZ</a></div>
-        <div class="bio-item"><span class="bio-year">2013</span><a href="/works/"> TADALAT ft. J3ZZ</a></div>
+        <div class="bio-item"><span class="bio-year">2013</span><a href="/works/2013-07-04-live-tadalat/"> TADALAT ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2012–2013</span> <a href="/works/2012-01-01-live-azalai/"> AZALAI </a></div>
-        <div class="bio-item"><span class="bio-year">2012</span><a href="/works/2015-04-18-live-modeo/"> SAMBA TOURE ft. J3ZZ</a></div>
+        <div class="bio-item"><span class="bio-year">2012</span><a href="/works/2012-08-11-live-samba-toure/"> SAMBA TOURÉ ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2015-04-18-live-modeo/"> SUMMER SUITE ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2010–2012</span> <a href="/works/2011-04-03-live-iparkutya/"> IPARKUTYA </a></div>
-        <div class="bio-item"><span class="bio-year">2010</span><a href="/works/2015-04-18-live-modeo/"> KOUDEDE / TARTIT ft. J3ZZ </a></div>
+        <div class="bio-item"><span class="bio-year">2011</span><a href="/works/2011-07-21-live-koudede-tartit/"> KOUDEDE & TARTIT ft. J3ZZ</a></div>
         <div class="bio-item"><span class="bio-year">2008–2010</span> <a href="/works/2008-11-27-live-the-last-drops/"> THE LAST DROPS </a></div>
       </div>
     </div>
