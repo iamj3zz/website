@@ -69,7 +69,6 @@ links:
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-rels-stereo-woods/">STEREO WOODS</a></div>
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-02-rels-a-drop-in-the-ocean/">A DROP IN THE OCEAN</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-rels-massolit-series-live/">MASSOLIT SERIES (Live)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-rels-n7n8-festival-live/">N7N8 FESTIVAL (Live)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-fkse/">SUR LE FIL (Live at FKSE)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor)</a></div>
       </div>
@@ -119,7 +118,6 @@ links:
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ House of Music Hungary ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ La Lasagneria ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ MFSZ ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-04-11-live-n7n8-festival/">N7N8 FESTIVAL</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-02-28-live-massolit-series/">MASSOLIT SERIES</a> ∙ Massolit Café ∙ Budapest ∙ HU</div>

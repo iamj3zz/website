@@ -1,7 +1,7 @@
 ---
 published: true
 status: major
-title: J3ZZ Live — Massolit Series #07
+title: "MASSOLIT SERIES #07 — J3ZZ solo"
 date: 2015-08-27
 time: "20:30"
 country: Hungary
@@ -10,6 +10,6 @@ venue_name: Massolit Books & Café
 venue_address: "Nagy Diófa utca 30, 1072 Budapest, Hungary"
 venue_link: http://massolitbudapest.com/
 ticket_link:
-description: MASSOLIT SERIES — Solo improvisation performance. Final session of the Massolit Series. J3ZZ as violinist and series founder.
+description: "J3ZZ performs solo (violin) — no guest, no preparation. The series closes as it began: a Polaroid, a room, and the risk of the unplanned."
 work_id: massolit-series
 ---
