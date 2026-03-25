@@ -24,10 +24,10 @@ metadata:
   credits: "TADALAT: Oumar Ould Badi (Mauritania) – guitar, vocals; Aboubacrene Ag Mohamed (Mali) – guitar, vocals; Zeidi Ag Baba (Mali) – bass, choir; Mohamed Ag Ibrahim (Mali) – djembe; Issa Samaké (Mali) – calebasse. Extended ensemble: Silvia Bolognesi (Italy) – double bass; Jérôme Li Thiao Te (France) – violin; J3ZZ (Réunion Island/Hungary) – violin. Festival organized by Fabrica Europa in collaboration with Festival au Désert."
   custom:
     - label: "Festival au Désert/presenze d'Africa"
-      value: "Festival au Désert/presenze d'Africa (4th edition), Florence"
+      value: "4th edition (July 4–6, 2013) — Fabbrica Europa"
       link: "https://fabbricaeuropa.net/en/events/festival-au-desert-presenze-dafrica/"
-    - label: "Fabrica Europa"
-      value: "Festival organizer"
+    - label: "Fabbrica Europa"
+      value: "Festival organizer & host"
       link: "https://fabbricaeuropa.net"
     - label: "AZALAI – Laboratoire Nomade"
       value: "EU Culture Programme initiative supporting this collaboration"
