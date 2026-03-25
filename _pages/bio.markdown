@@ -101,7 +101,7 @@ links:
 
       <div class="bio-section-subtitle">Corporate &amp; Educational</div>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-01-01-film-basics-of-vision/">BASICS OF VISION</a> ∙ Medicontur </div>
+        <div class="bio-item"><span class="bio-year">2020</span> BASICS OF VISION ∙ Medicontur </div>
       </div>
     </div>
 
