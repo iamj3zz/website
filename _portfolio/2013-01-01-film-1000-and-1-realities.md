@@ -5,9 +5,15 @@ layout: work
 title: "1000 AND 1 REALITIES"
 work_id: 1000-and-1-realities
 abstract: |
-  This visual art initiative focuses on animated films targeting children, youth, and adults.
+  An international educational animation project creating films from children's drawings in Iraq, Turkey, and Cyprus. J3ZZ composed original soundtracks for three animated shorts, a documentary, and promotional materials.
 description: |
-  This visual art initiative focuses on animated films targeting children, youth, and adults. The creator served as sound designer and composer, developing audio for three animated shorts and their accompanying documentary and trailer. The project aims to "listen to the inside voice of different cultural communities and spread it through the world." The initiative involves animated films inspired by children's drawings representing daily life in Najaf (Iraq), Istanbul (Turkey), and Nicosia (Cyprus). Workshops in these cities gathered drawings from children aged 6-10, which then informed the animation production. The completed films were screened across Iraq, Turkey, Italy, Spain, and Cyprus.
+  **1000 AND 1 REALITIES** is an international visual art initiative dedicated to promoting cultural diversity, tolerance, and multicultural dialogue through the voices of children. The project creates animated films based on drawings produced by children aged 6–10 in three cities: Najaf (Iraq), Istanbul (Turkey), and Nicosia (Cyprus).
+
+  **The Methodology:** The project conducted participatory workshops in each city where children were invited to draw representations of their daily lives, their neighborhoods, and their worlds. Artists then analyzed these drawings — what children chose to depict, which places they wanted to tell stories about — and transformed them into animated narratives. The resulting films were then screened across multiple countries (Iraq, Turkey, Italy, Spain, Cyprus), creating a cultural exchange: children in one country watching stories drawn by children in another.
+
+  **The Vision:** Rather than producing didactic content *about* these communities, the project centers the perspective of the children themselves. As the project states, it aims to "listen to the inside voice of different cultural communities and spread it through the world." The result is a genuinely cross-cultural artistic practice rooted in the drawn line, the child's eye, and the power of animation to make invisible worlds visible.
+
+  **The Sound Design:** J3ZZ composed original soundscapes for three animated shorts, an accompanying documentary, and promotional materials. The music had to work across linguistic and cultural boundaries — supporting visual narratives that spoke to children and adults alike, in multiple languages and cultural contexts.
 category: films
 commissioned: true
 image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
@@ -15,17 +21,44 @@ image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
 # Define metadata once here - it will be used by all modules below
 metadata:
   release_date: "2013-01-01"
-  location: "Najaf (Iraq), Istanbul (Turkey), Nicosia (Cyprus)"
+  location: "Najaf (Iraq), Istanbul (Turkey), Nicosia (Cyprus), screened across 5 countries"
   role: "composer, sound designer"
-  commissioned_by: "1000 and 1 Realities"
-  collaborators: "Ayse Taspinar (Turkey), Laia Farrera (Spain), Laith Mutawaq (Iraq), Lorenzo Ciacciavicca (Italy), Maria Papadopoulou (Cyprus), Olga Pavlenko (Italy), Ruben Vandendriessche (Spain)"
-  credits: "Music/sound design: J3ZZ. Team members: Ayse Taspinar (Turkey), Laia Farrera (Spain), Laith Mutawaq (Iraq), Lorenzo Ciacciavicca (Italy), Maria Papadopoulou (Cyprus), Olga Pavlenko (Italy), Ruben Vandendriessche (Spain)"
+  commissioned_by: "1000 and 1 Realities international collaborative"
+  collaborators: "International team: Ayse Taspinar (Turkey), Laia Farrera (Spain), Laith Mutawaq (Iraq), Lorenzo Ciacciavicca (Italy), Maria Papadopoulou (Cyprus), Olga Pavlenko (Italy), Ruben Vandendriessche (Spain)"
+  credits: "Composition/Sound Design: J3ZZ. International Creative Team: Ayse Taspinar, Laia Farrera, Laith Mutawaq, Lorenzo Ciacciavicca, Maria Papadopoulou, Olga Pavlenko, Ruben Vandendriessche"
   custom:
-    - label: "YouTube"
-      value: "Children tell Istanbul (August 2013); Flying Istanbul trailer (October 2016); Working bites (August 2013)"
-    - label: "External Links"
-      value: "project_website: http://www.1000and1realities.org"
+    - label: "Project Website"
+      value: "1000and1realities.org"
+      link: "https://1000and1realities.org/"
+    - label: "Format"
+      value: "Three animated shorts + documentary + trailers"
+    - label: "Participants"
+      value: "Children aged 6–10 from Najaf, Istanbul, Nicosia"
+    - label: "Screening Locations"
+      value: "Iraq, Turkey, Italy, Spain, Cyprus"
+    - label: "Featured Films"
+      value: "Children Tell Istanbul, Flying Istanbul, Working Bites"
 
 sections:
-  # TODO: Add sections here
+  - type: description
+
+  - type: text
+    title: "Children's Vision, Animated"
+    content: |
+      What do children in Najaf draw? What stories do Istanbul children want to tell? What matters to a child in Nicosia?
+
+      **1000 AND 1 REALITIES** begins with this simple question and trusts the answer. Through participatory workshops, children become researchers of their own worlds, mapping the ordinary and extraordinary of where they live. Their drawings become source material — not something to be corrected or improved, but material to be honored and amplified.
+
+      Professional animators then translate these drawings into motion, preserving the immediacy and honesty of the child's line while extending it into narrative. The result is animation that carries the authority of lived experience — stories about actual places, drawn by people who inhabit them.
+
+  - type: text
+    title: "Sound Across Boundaries"
+    content: |
+      J3ZZ's compositional work for **1000 AND 1 REALITIES** faced a unique challenge: create music that works across languages, cultures, and geographic contexts. The sound needed to enhance narratives that would be experienced by children in Iraq, Turkey, Spain, Italy, and Cyprus — audiences with different musical traditions, different relationships to the subject matter, different forms of listening.
+
+      The solution was not universality, but specificity. Rather than creating abstract "world music," J3ZZ created soundscapes that honored the particular places and stories while remaining emotionally legible across cultural difference. Music that a child in Istanbul could recognize as their own, and a child in Nicosia could enter into.
+
+      This is the deepest work of cross-cultural artistic practice: not erasure of difference, but respect for it. Sound that builds bridges without flattening what it connects.
+
+  - type: metadata
 ---

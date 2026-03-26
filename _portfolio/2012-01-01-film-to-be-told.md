@@ -31,34 +31,44 @@ metadata:
     Technical support: Vanni Bartolini
     Assistant: Francesca Biagini
   custom:
-    - label: "Residency"
-      value: "Grundtvig Workshop — Florence, 16–24 March 2012"
+    - label: "Residency Program"
+      value: "Grundtvig Workshop, 16–24 March 2012"
+    - label: "Location"
+      value: "Exfila connessioni metropolitane, Arci Firenze"
     - label: "Funding"
       value: "EU Lifelong Learning Programme — Grundtvig"
     - label: "Organiser"
-      value: "Associazione Fabbrica Europa, Florence"
+      value: "Associazione Fabbrica Europa"
       link: "https://fabbricaeuropa.net/en/"
     - label: "Project Blog"
-      value: "tobetoldflorence.tumblr.com"
+      value: "To Be Told — Tumblr"
       link: "http://tobetoldflorence.tumblr.com"
     - label: "Director"
-      value: "Lorenzo Ciacciavicca — Vimeo"
-      link: "http://vimeo.com/lorenzoci"
+      value: "Lorenzo Ciacciavicca"
+      link: "https://www.rootsnroutes.eu/rnrstories-id101"
 
 sections:
   - type: description
 
   - type: text
+    title: "Twenty Stories, Twenty Witnesses"
     content: |
-      Twenty citizens from across the EU — witnesses of stories and cultural assets at risk of disappearing — gathered for a ten-day workshop in Florence to narrate and share their stories, translating them into drama, dance, photography, video, and writing. J3ZZ was one of the twenty participants.
+      Twenty citizens from across the European Union gathered in Florence for ten days in March 2012 — each carrying stories and cultural knowledge at risk of disappearing. Participants came from minority communities: Roma, Sinti, migrants, refugees, and indigenous groups whose narratives are often excluded from mainstream European discourse.
 
-      Beyond his role as a residency artist, J3ZZ handled the entire audio dimension of the resulting documentary: composition, performance, production, sound design, and sound editing.
+      The Grundtvig Workshop created space for these citizens to become storytellers. Rather than being subjects of a documentary, they became authors of their own narratives. The project translated these stories into multiple forms: drama, dance, photography, video, written testimony. The residency was not extractive — it was generative. Participants left with their stories amplified, documented, and shared.
 
-      **Project Timeline:**
-      - **March 16–24, 2012** — Grundtvig Workshop residency, Florence (venue: Exfila connessioni metropolitane, Arci Firenze)
-      - Documentary film produced following the residency
+      J3ZZ participated both as an artist within this community and as the sonic architect of the resulting film. The workshop itself became the work: twenty people from different backgrounds, different languages, different histories, collaborating to make their voices heard.
 
       **Residency Participants included:** Marina Arienzale, Pamela Barberi, Simon Bradley, Sarah Bulang, Eleftherios Galanis, Greta Grendaite, Katalin Heiszer, Iveta Kudrjavceva, J3ZZ, Tonka Malekovic, Lucie Micikova, Mihaela Mihai, Süleyman Özar, Evangelia Papaloi, Olga Pavlenko, Kalin Serapionov, Ieva Studente, Mine Tapinç, Guy Woueté, Virginia Zanetti
+
+  - type: text
+    title: "Sound as Documentation and Presence"
+    content: |
+      J3ZZ's role in **TO BE TOLD** transcended traditional film scoring. As composer, performer, producer, sound designer, and sound editor, the artist took full responsibility for the sonic dimension of the documentary — not as an afterthought, but as integral to the storytelling itself.
+
+      In a documentary about testimony and voice, sound design becomes crucial. How do you honor the voices of speakers who may not be accustomed to being recorded? How do you create sonic space for stories that have been historically silenced? J3ZZ's work answers these questions through careful, respectful sound architecture.
+
+      The composition supports rather than overwhelms. The sound design honors the primary material — the participants' own words, their testimony, their presence. Yet the music and sonic landscape create an emotional and spatial container, a kind of attentive listening that the viewer is invited to enter. Sound becomes a form of witness itself — present, responsive, dignified.
 
 
   - type: linked-events
