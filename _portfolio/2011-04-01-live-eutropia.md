@@ -51,6 +51,8 @@ metadata:
       link: "https://smouth.com/pf/eutropia/"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2011-04-01-live-eutropia/hero.jpg
 
   # Video documentation
   - type: iframe
