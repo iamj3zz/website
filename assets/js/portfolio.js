@@ -6,7 +6,6 @@
   const filterButtons = document.querySelectorAll('.filter-btn');
   const portfolioItems = document.querySelectorAll('.portfolio-item');
   const categoryTags = document.querySelectorAll('.category-tag');
-  const commissionedCheckbox = document.getElementById('commissioned-filter');
 
   let currentCategoryFilter = 'all';
 
@@ -24,22 +23,18 @@
     applyFilters();
   }
 
-  // Function to apply both category and commissioned filters
+  // Function to apply category filter
   function applyFilters() {
-    const commissionedOnly = commissionedCheckbox ? commissionedCheckbox.checked : false;
-
     portfolioItems.forEach(item => {
       const itemCategories = item.getAttribute('data-category');
-      const itemCommissioned = item.getAttribute('data-commissioned') === 'true';
 
       // Split by space to handle multiple categories
       const categoriesArray = itemCategories ? itemCategories.split(' ') : [];
 
       // Check if filter matches any of the item's categories
       const matchesCategory = currentCategoryFilter === 'all' || categoriesArray.includes(currentCategoryFilter);
-      const matchesCommissioned = !commissionedOnly || itemCommissioned;
 
-      if (matchesCategory && matchesCommissioned) {
+      if (matchesCategory) {
         item.classList.remove('hidden');
         // Trigger reflow for smooth animation
         setTimeout(() => {
@@ -71,12 +66,5 @@
       applyFilter(filterValue);
     });
   });
-
-  // Commissioned checkbox handler
-  if (commissionedCheckbox) {
-    commissionedCheckbox.addEventListener('change', function() {
-      applyFilters();
-    });
-  }
   });
 })();
