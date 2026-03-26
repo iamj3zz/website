@@ -72,12 +72,12 @@ Residencies are **NOT a grid category**. Instead:
 
 ### Commissioned Status
 
-Every portfolio work has a `commissioned` field:
+Every portfolio work has a `commissioned` field in front matter:
 
 - `commissioned: true` = You were given specific requirements/brief by a client
 - `commissioned: false` = You had full creative freedom (self-initiated, collaborative, artistic choice)
 
-**Grid filter:** Users can toggle "Show commissioned only" to see your work-for-hire projects.
+This metadata is used to track commission relationships. When `commissioned: true`, the `metadata.commissioned_by` field documents who commissioned the work (appears in work detail pages as informational metadata, not as a browsable filter).
 
 ---
 

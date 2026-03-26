@@ -25,10 +25,10 @@
   .site-header {
     display: flex !important;
     justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px 15px 0;
+    align-items: flex-start;
+    padding: 5px 20px 5px 0;
     border-bottom: 1px solid #333;
-    margin-bottom: 15px;
+    margin-bottom: 6px;
     position: relative;
   }
 
@@ -39,11 +39,11 @@
     align-items: center;
     justify-content: center;
     margin: 0;
-    gap: 5px;
+    gap: 1px;
   }
 
   .site-logo img {
-    height: 50px;
+    height: 28px;
     display: block;
   }
 
@@ -51,7 +51,7 @@
   .site-logo::after {
     content: "www.j3zz.com";
     display: block;
-    font-size: 8pt;
+    font-size: 7pt;
     color: #595959;
     letter-spacing: 0.5px;
     text-align: center;
@@ -76,7 +76,16 @@
   .site-content {
     max-width: 100%;
     padding: 0;
+    margin: 0;
     min-height: auto;
+  }
+
+  /* Contact Section Optimization */
+  .contact-section {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    page-break-before: avoid;
   }
 
   /* Events Section Optimization */
