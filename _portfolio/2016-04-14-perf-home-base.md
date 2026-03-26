@@ -10,7 +10,7 @@ description: |
   Home Base is a space, sound, and dance installation that premiered on April 14, 2016 at MOM Kulturális Központ in Budapest. The performance allows audiences to move freely and choose their viewing perspective, reimagining the 1841 romantic ballet "Giselle" through contemporary choreography. The production explores a complex picture of a love triangle and the power of jealousy, discovering modern interpretations of classical characters and themes. J3ZZ composed and produced the soundtrack for the work, with the music also featured in the promotional trailers for the show. The installation was co-conceived with Rubi Anna (concept/co-direction), with dramaturgy by Cseh Dávid and lighting design by Csere Zoltán.
 category: performances
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2016-04-14-perf-home-base/thumbnail.jpg
 
 metadata:
   release_date: "2016-04-14"

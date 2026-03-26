@@ -8,33 +8,49 @@ print_hero_image: true
 abstract: |
   The composer was commissioned to create music for choreographer Tímea Sebestyén's contemporary dance work.
 description: |
-  The composer was commissioned to create music for choreographer Tímea Sebestyén's contemporary dance work. The soundtrack comprises several compositions including a series titled "Tape," referencing machinery invented by Dr. William Moulton Marston, creator of Wonder Woman. The composer incorporated "sound references to the different mechanical parts" and piano hammer sounds representing the character's voice. Additional tracks included "Nutter," addressing "a lost mind leaning towards schizophrenia," and a remixed version of "False Truths" for the performance climax. The performance examines Wonder Woman as "a female ideal created by dr. William Moulton Marston," exploring her character through a female perspective. It investigates "layers of our personality through our desires, sexuality, and fears," questioning concepts of female power and identity.
+  SUPREMA is a choreographic work by Tímea Sebestyén exploring the Wonder Woman origin story from a distinctly female perspective. The title itself reclaims William Moulton Marston's original 1941 name for the character—before it became "Wonder Woman"—and interrogates the female ideal through contemporary dance and original soundtrack composition.
 
-  The work has been produced by multiple companies: the original 2019 premiere at MU Theatre Budapest under Tímea Sebestyén's choreography, and a subsequent 2020 production by the Imre Zoltán Program at Latinovits-Bujtor Játékszín in Veszprém.
+  J3ZZ served as composer and producer of the entire soundtrack, crafting a sonic landscape that mirrors the piece's thematic concerns: the lie detector machine (Marston's invention), the lasso of truth, and the fracture between constructed ideals and lived female experience. The score employs:
+
+  - **"Tape" sequences:** Mechanical piano performance and tape loops evoking the sound of the lie detector's needle and Marston's polygraph machinery
+  - **Hammer and string textures:** Piano hammer sounds and stringed instruments representing voice, identity, and the machinery of control
+  - **"Nutter" and distorted vocal fragments:** Reflecting psychological fragmentation and the slippage between reality and fantasy
+  - **Finale: "False Truths"** — a layered, distorted composition with processed voice and warped electronics, capturing the disorienting moment when reality dissolves into constructed narrative
+
+  The two performers embody contrasting female archetypes—one austere and martial, the other conforming to conventional femininity—that eventually merge, probing "the layers of our personalities through our desires, sexuality, and fears." The work operates as a reflective mirror, inviting audiences to examine how cultural conditioning shapes understandings of womanhood and power.
+
+  Premiered May 5, 2019 at MU Theatre, Budapest (Imre Zoltán Program). Subsequently performed at A Tánc Fesztiválja (The Dance Festival) in Veszprém (September 2020) and in various IZP touring productions through 2022.
+
+  **Critical Reception:**
+  Critic Ladányi István (SÉD Journal, Vol. VI, Issue 5) highlighted the exceptional quality of J3ZZ's score, noting how the music intensifies the work's exploration of fractured identity and constructed femininity. The soundscape becomes inseparable from the choreography's interrogation of power, control, and the machinery of social conditioning.
 category: performances
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2019-05-03-perf-suprema/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
-  release_date: "2019-01-01"
-  location: "Budapest, Hungary"
-  role: "composer"
-  commissioned_by: "Tímea Sebestyén"
+  release_date: "2019-05-05"
+  location: "MU Theatre, Budapest, Hungary"
+  role: "composer, producer (soundtrack)"
+  commissioned_by: "Tímea Sebestyén / Zadam Company"
   collaborators: "Tímea Sebestyén (choreography), J3ZZ (music composer), Mészáros Csaba (photography)"
   credits: "Choreography: Tímea Sebestyén. Music composer: J3ZZ. Photography: Mészáros Csaba"
   custom:
-    - label: "2020 Production"
-      value: "Imre Zoltán Program, Latinovits-Bujtor Játékszín, Veszprém (September 6, 2020)"
-    - label: "YouTube"
-      value: "Performance clips"
-      link: "https://www.youtube.com/watch?v=5HJsaGL9L1I"
+    - label: "A Tánc Fesztiválja (The Dance Festival)"
+      value: "Official program page with production details"
+      link: "https://atancfesztivalja.hu/en/program/zadam-company-suprema-izp-en/"
+    - label: "Press Review"
+      value: "Ladányi István essay on SUPREMA (A Tánc Fesztiválja)"
+      link: "https://atancfesztivalja.hu/woman-woman/"
+    - label: "Rehearsal Photography"
+      value: "KNI Pictures – May 5, 2019 MU Theatre (42 photographs)"
+      link: "https://knipictures.wordpress.com/2019/05/07/19-05-05-suprema/"
     - label: "Spotify"
       value: "Soundtrack album"
       link: "https://open.spotify.com/album/0EjQX5im76nt8EcbwVILAo"
-    - label: "Project Website"
-      value: "http://www.zadam.hu/project/suprema/"
-      link: "http://www.zadam.hu/project/suprema/"
+    - label: "Zadam Company"
+      value: "Production company / Zadam Társulat (Facebook)"
+      link: "https://www.facebook.com/ZadamCompany/"
 
 sections:
   - type: hero-image
