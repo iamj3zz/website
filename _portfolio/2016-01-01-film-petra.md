@@ -52,6 +52,12 @@ metadata:
       link: "https://www.facebook.com/offthegridGSU/"
 
 sections:
+  - type: iframe
+    embed_code: '<iframe src="https://player.vimeo.com/video/201564161" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    caption: "PETRA — Georgia State University's First Student Feature Film, 2017"
+
   - type: description
 
   - type: text
