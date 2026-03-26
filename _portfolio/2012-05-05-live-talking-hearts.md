@@ -56,6 +56,8 @@ metadata:
       value: "Art speaks one language"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2012-05-05-live-talking-hearts/hero.jpg
 
   # Video documentation
   - type: iframe

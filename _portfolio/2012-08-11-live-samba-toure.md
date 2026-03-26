@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: "SAMBA TOURÉ"
 work_id: samba-toure
+print_hero_image: true
 abstract: |
   J3ZZ performed as violinist with Samba Touré & AZALAI at Sziget Festival's World Village stage — a cross-cultural encounter uniting West African desert blues with European improvisation.
 description: |
@@ -34,6 +35,9 @@ metadata:
       link: "https://szigetfestival.com"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2012-08-11-live-samba-toure/hero.jpg
+
   - type: description
 
   - type: linked-events

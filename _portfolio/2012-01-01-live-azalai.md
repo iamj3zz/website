@@ -4,6 +4,7 @@ status: major
 layout: work
 title: "AZALAI"
 work_id: azalai
+print_hero_image: true
 abstract: |
   An innovative EU-funded cultural exchange initiative operating as an itinerant laboratory for creative experimentation connecting African and European artists across a 2013 European tour.
 description: |
@@ -32,6 +33,9 @@ metadata:
       link: "http://www.festivalpresenzedafica.eu"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2012-01-01-live-azalai/hero.jpg
+
   - type: description
 
   - type: text

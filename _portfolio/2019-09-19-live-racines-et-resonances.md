@@ -29,6 +29,9 @@ metadata:
       value: "Hungary, Réunion (Indian Ocean), Mauritius"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2019-09-19-live-racines-et-resonances/hero.jpg
+
   - type: description
 
   - type: text

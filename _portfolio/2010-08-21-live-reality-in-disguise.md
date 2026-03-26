@@ -50,6 +50,9 @@ metadata:
       link: "https://fabbricaeuropa.net/en/events/reality-in-disguise-traces-about-traffic/"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2010-08-21-live-reality-in-disguise/hero.jpg
+
     # Video documentation
   - type: iframe
     embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/8oTRJNRk0tE" frameborder="0" allowfullscreen></iframe>'
