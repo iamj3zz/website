@@ -27,7 +27,10 @@ links:
   <div class="bio-intro">
     <div class="bio-text">
       <p>
-        J3ZZ is a French artist &amp; musician. He works in the transitional area between sound art, music, light, programming &amp; science. His work unfolds through music releases, live performances &amp; installations, especially. Through a phenomenological approach, his work is based both on experimenting and programming, always guided by concepts of time elasticity and as such located in the time-based media art field.
+        J3ZZ is a French artist &amp; musician from Réunion Island. Trained as a violinist and shaped by a decade of live performance and cross-cultural collaboration, his practice expanded progressively into film scoring, stage composition, and ultimately immersive installations — sensor-driven environments where sound, light, and living systems converge into time-based media art.
+      </p>
+      <p>
+        He works in the transitional area between sound art, music, light, programming &amp; science. His work unfolds through music releases, live performances &amp; installations. Through a phenomenological approach, his work is based both on experimenting and programming, always guided by concepts of time elasticity.
       </p>
       <p>
         His interests in microsound have pushed him to expand his work by opening up new ways of including field recording-based sounds into his practice. Through a positive-nihilist approach to process and structural deconstruction, he explores the infinitesimal and the imperceptible over time, employing various scientific techniques and methods.
@@ -39,7 +42,7 @@ links:
         His practice also extends to working with living organisms to generate sounds and visuals in real time, further blurring the boundaries between art, science, and the biological world. These living systems become active collaborators in the creative process, introducing elements of unpredictability and organic evolution into his performances and installations.
       </p>
       <p>
-        New media serves as a vital medium of expression throughout his work, incorporating video, laser visuals, and other digital technologies into interactive, sensor-driven immersive environments. These spatial sound installations and performances invite audiences to become active participants, their movements and presence shaping the sonic and visual landscapes in real time. The integration of these technologies creates multisensory experiences where light, sound, and space converge into unified, responsive compositions.
+        New media serves as a vital medium of expression throughout his work, incorporating video, laser visuals, and other digital technologies into interactive environments. These spatial sound installations and performances invite audiences to become active participants, their movements and presence shaping the sonic and visual landscapes in real time.
       </p>
     </div>
     <div class="bio-image">
