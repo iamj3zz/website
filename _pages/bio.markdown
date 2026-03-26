@@ -77,8 +77,8 @@ links:
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-05-03-perf-suprema/">SUPREMA</a> ∙ Tímea Sebestyén </div>
         <div class="bio-item"><span class="bio-year">2016</span> <a href="/works/2016-04-14-perf-home-base/">HOME BASE</a> ∙ Kulcsár Noémi </div>
-        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2013-01-01-perf-what-happens-when-you-touch-it/">WHAT HAPPENS WHEN YOU TOUCH IT</a> ∙ EnKnapGroup </div>
-        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-01-01-perf-touch-me-not-nebáncsvirág/">TOUCH ME NOT</a> ∙  Zoltán Grecsó </div>
+        <div class="bio-item"><span class="bio-year">2014</span> <a href="/works/2014-02-13-perf-what-happens-when-you-touch-it/">WHAT HAPPENS WHEN YOU TOUCH IT</a> ∙ EnKnapGroup </div>
+        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-04-19-perf-touch-me-not-nebancsvirag/">TOUCH ME NOT</a> ∙  Zoltán Grecsó </div>
       </div>
 
       <div class="bio-section-subtitle">Films</div>
