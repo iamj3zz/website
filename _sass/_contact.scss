@@ -353,9 +353,23 @@
 
 /* Print version: Contact page layout */
 @media print {
+  .contact-section {
+    padding: 10px 20px;
+    margin: 0;
+  }
+
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 10px;
+  }
+
+  .contact-column {
+    gap: 15px;
+  }
+
+  .contact-block {
+    gap: 10px;
+    page-break-inside: avoid;
   }
 
   .contact-column--right {
@@ -379,23 +393,109 @@
   .print-only-block {
     display: flex !important;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
   }
 
   .contact-social-print-list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+  }
+
+  .social-print-item {
+    page-break-inside: avoid;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  .social-print-qr {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+  }
+
+  .social-print-icon {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-top: 2px;
+  }
+
+  .social-print-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .social-print-name {
+    font-size: 11px;
+    font-weight: bold;
+    margin-bottom: 2px;
+  }
+
+  .social-print-url {
+    font-size: 10px;
+    color: #666;
+    word-break: break-word;
+  }
+
+  .social-print-url--note {
+    font-size: 10px;
+    font-style: italic;
+    color: #666;
   }
 
   .print-only-newsletter-message {
     display: block;
-    margin-top: 20px;
-    padding-top: 20px;
+    margin-top: 10px;
+    padding-top: 10px;
     border-top: 1px solid #e0e0e0;
+    page-break-inside: avoid;
   }
 
   .print-only-newsletter-message .contact-description {
+    font-size: 11px;
+    margin: 0 0 8px 0;
+  }
+
+  .contact-description {
+    margin: 0 0 10px 0;
+    font-size: 13px;
+  }
+
+  .contact-heading {
     font-size: 12px;
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+
+  .contact-items {
+    gap: 8px;
+  }
+
+  .contact-item {
+    gap: 8px;
+    font-size: 12px;
+  }
+
+  .contact-label {
+    font-size: 10px;
+    white-space: nowrap;
+  }
+
+  .contact-link {
+    font-size: 12px;
+  }
+
+  .contact-availability {
+    font-size: 12px;
+    padding-left: 15px;
+    margin: 0;
+  }
+
+  .contact-availability li {
+    margin-bottom: 6px;
   }
 }
