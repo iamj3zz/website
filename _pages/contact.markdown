@@ -8,26 +8,41 @@ image: /assets/bio/bio-photo.jpg
 
 <section class="contact-section">
   <div class="contact-content">
-    <!-- Email Section -->
-    <div class="contact-block">
-      <div class="contact-items">
-             {% if site.booking_email %}
-        <div class="contact-item">
-          <span class="contact-label">booking & production:</span>
-          <a href="mailto:{{ site.booking_email }}" class="contact-link">{{ site.booking_email }}</a>
-      </div>
-        {% endif %}
-        {% if site.email %}
-        <div class="contact-item">
-          <span class="contact-label">teaching & consulting activities:</span>
-          <a href="mailto:{{ site.email }}" class="contact-link">{{ site.email }}</a>
-          </div>
-        {% endif %}
-      </div>
-    </div>
 
-    <!-- Social Media Icons Section -->
-    <div class="contact-block">
+    <!-- Left Column: Availability + Emails -->
+    <div class="contact-column contact-column--left">
+
+      <!-- Available For Section -->
+      <div class="contact-block">
+        <p class="contact-description">J3ZZ is available for:</p>
+        <ul class="contact-availability">
+          <li>Commission of new media installations and interactive content — for festivals, cultural events, and institutions</li>
+          <li>Soundtrack composition and production — for film, contemporary dance, and stage</li>
+          <li>Live performance booking and artwork exhibition</li>
+        </ul>
+      </div>
+
+      <!-- Email Section -->
+      <div class="contact-block">
+        <p class="contact-description" style="margin-bottom: 15px;"><strong>Get in touch</strong></p>
+        <div class="contact-items">
+          {% if site.booking_email %}
+          <div class="contact-item">
+            <span class="contact-label">booking & production:</span>
+            <a href="mailto:{{ site.booking_email }}" class="contact-link">{{ site.booking_email }}</a>
+          </div>
+          {% endif %}
+          {% if site.email %}
+          <div class="contact-item">
+            <span class="contact-label">teaching & consulting:</span>
+            <a href="mailto:{{ site.email }}" class="contact-link">{{ site.email }}</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+
+      <!-- Social Media Icons Section -->
+      <div class="contact-block">
       <!-- Screen version: icon grid -->
       <div class="contact-social-icons">
         {% if site.bandcamp_username %}
@@ -112,6 +127,11 @@ image: /assets/bio/bio-photo.jpg
         {% endif %}
       </div>
 
+      </div><!-- End contact-block with social icons -->
+
+      <!-- Print-only: Social Links Section -->
+      <div class="contact-block print-only-block">
+      <p class="contact-description"><strong>Connect</strong></p>
       <!-- Print version: QR code + icon + name + URL layout -->
       <div class="contact-social-print-list">
         {% if site.bandcamp_username %}
@@ -241,11 +261,16 @@ image: /assets/bio/bio-photo.jpg
         </div>
         {% endif %}
       </div>
-    </div>
+      </div><!-- End print-only social block -->
 
-    <!-- Newsletter Section -->
+    </div><!-- End left column -->
+
+    <!-- Right Column: Newsletter -->
+    <div class="contact-column contact-column--right">
+
     <div class="contact-block">
-      <p class="contact-description">Stay updated with the latest news, releases, and events.</p>
+      <p class="contact-description"><strong>Stay updated</strong></p>
+      <p class="contact-description">Occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens.</p>
 
       <!-- Print-only newsletter invitation -->
       <div class="print-only-newsletter-message">
@@ -294,6 +319,9 @@ image: /assets/bio/bio-photo.jpg
       {% endif %}
       <!-- End Mailchimp Signup Form -->
     </div>
+
+    </div><!-- End right column -->
+
   </div>
 </section>
 

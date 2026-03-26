@@ -1,11 +1,17 @@
 /* Contact Section */
 .contact-section {
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
 .contact-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.contact-column {
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -17,13 +23,16 @@
   gap: 25px;
 }
 
-/* Hide print-only newsletter message on screen */
+/* Hide print-only content on screen */
 .print-only-newsletter-message {
   display: none;
 }
 
-/* Hide print version of social media list on screen */
 .contact-social-print-list {
+  display: none;
+}
+
+.print-only-block {
   display: none;
 }
 
@@ -82,6 +91,14 @@
   line-height: 1.8;
   margin: 0 0 20px 0;
   text-align: justify;
+}
+
+.contact-availability {
+  font-size: 14px;
+  color: #595959;
+  line-height: 1.8;
+  margin: 0 0 20px 0;
+  padding-left: 20px;
 }
 
 /* Social Icons in Contact */
@@ -272,13 +289,14 @@
 }
 
 /* Responsive Contact */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .contact-section {
     padding: 40px 20px;
   }
 
   .contact-content {
-    gap: 35px;
+    grid-template-columns: 1fr;
+    gap: 40px;
   }
 
   /* Stack contact items vertically on small screens */
@@ -331,4 +349,53 @@
 .social-print-url--note {
   font-style: italic;
   color: #999;
+}
+
+/* Print version: Contact page layout */
+@media print {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-column--right {
+    display: none;
+  }
+
+  .contact-newsletter-form {
+    display: none;
+  }
+
+  /* Hide screen version of social icons block */
+  .contact-block:has(.contact-social-icons) {
+    display: none;
+  }
+
+  .contact-social-icons {
+    display: none;
+  }
+
+  /* Show print-only social block */
+  .print-only-block {
+    display: flex !important;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .contact-social-print-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .print-only-newsletter-message {
+    display: block;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+  }
+
+  .print-only-newsletter-message .contact-description {
+    font-size: 12px;
+  }
 }
