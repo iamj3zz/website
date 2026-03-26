@@ -4,6 +4,7 @@ status: major
 layout: work
 title: "SUPREMA"
 work_id: suprema
+print_hero_image: true
 abstract: |
   The composer was commissioned to create music for choreographer Tímea Sebestyén's contemporary dance work.
 description: |
@@ -36,6 +37,9 @@ metadata:
       link: "http://www.zadam.hu/project/suprema/"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2019-05-03-perf-suprema/hero.jpg
+
   - type: description
   - type: linked-events
   - type: metadata
