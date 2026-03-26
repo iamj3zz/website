@@ -354,26 +354,66 @@
 /* Print version: Contact page layout */
 @media print {
   .contact-section {
-    padding: 10px 20px;
+    padding: 0;
     margin: 0;
+    max-width: 100%;
+  }
+
+  .contact-section::before {
+    content: "CONTACT";
+    display: block;
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #333;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #333;
+    margin: 0 0 0 0;
+    line-height: 1;
+  }
+
+  .contact-content {
+    margin-top: 0 !important;
+  }
+
+  .contact-column {
+    margin-top: 0 !important;
+  }
+
+  .contact-block:first-of-type {
+    margin-top: 0 !important;
+    gap: 0;
+  }
+
+  .contact-description:first-of-type {
+    margin-top: 0 !important;
   }
 
   .contact-content {
     grid-template-columns: 1fr;
-    gap: 10px;
+    gap: 0;
+    margin: 0 !important;
+    padding: 0;
+    display: flex !important;
+    flex-direction: column;
   }
 
   .contact-column {
-    gap: 15px;
-  }
-
-  .contact-block {
     gap: 10px;
-    page-break-inside: avoid;
+    margin: 0;
+    padding: 0;
   }
 
   .contact-column--right {
-    display: none;
+    display: none !important;
+  }
+
+  .contact-block {
+    gap: 6px;
+    page-break-inside: avoid;
+    margin: 0;
+    padding: 0;
   }
 
   .contact-newsletter-form {
@@ -381,63 +421,73 @@
   }
 
   /* Hide screen version of social icons block */
-  .contact-block:has(.contact-social-icons) {
-    display: none;
+  .contact-block--screen-only {
+    display: none !important;
   }
 
   .contact-social-icons {
-    display: none;
+    display: none !important;
   }
 
   /* Show print-only social block */
   .print-only-block {
     display: flex !important;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #333;
+    padding-top: 8px;
+    margin-top: 8px;
   }
 
   .contact-social-print-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
   }
 
   .social-print-item {
     page-break-inside: avoid;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 6px;
     align-items: flex-start;
+    margin: 0;
+    padding: 0;
   }
 
   .social-print-qr {
     flex-shrink: 0;
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
   }
 
   .social-print-icon {
     flex-shrink: 0;
-    width: 16px;
-    height: 16px;
-    margin-top: 2px;
+    width: 14px;
+    height: 14px;
+    margin-top: 1px;
   }
 
   .social-print-icon svg {
-    width: 16px;
-    height: 16px;
+    width: 14px;
+    height: 14px;
   }
 
   .social-print-name {
-    font-size: 11px;
+    font-size: 10px;
     font-weight: bold;
-    margin-bottom: 2px;
+    margin-bottom: 0;
   }
 
   .social-print-url {
-    font-size: 10px;
+    font-size: 9px;
     color: #666;
     word-break: break-word;
+    margin: 0;
   }
 
   .social-print-url--note {
@@ -448,36 +498,43 @@
 
   .print-only-newsletter-message {
     display: block;
-    margin-top: 10px;
-    padding-top: 10px;
-    border-top: 1px solid #e0e0e0;
+    margin: 0;
+    padding: 0;
+    border-top: 1px solid #333;
+    padding-top: 8px;
+    margin-top: 8px;
     page-break-inside: avoid;
   }
 
   .print-only-newsletter-message .contact-description {
     font-size: 11px;
-    margin: 0 0 8px 0;
+    margin: 0 0 4px 0;
+    padding: 0;
   }
 
   .contact-description {
-    margin: 0 0 10px 0;
+    margin: 0 0 6px 0 !important;
     font-size: 13px;
   }
 
   .contact-heading {
     font-size: 12px;
     margin: 0;
-    padding-bottom: 10px;
-    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 0;
+    border-bottom: none;
   }
 
   .contact-items {
-    gap: 8px;
+    gap: 4px;
+    margin: 0;
+    padding: 0;
   }
 
   .contact-item {
-    gap: 8px;
+    gap: 4px;
     font-size: 12px;
+    margin: 0;
+    padding: 0;
   }
 
   .contact-label {
@@ -491,11 +548,12 @@
 
   .contact-availability {
     font-size: 12px;
-    padding-left: 15px;
+    padding-left: 12px;
     margin: 0;
   }
 
   .contact-availability li {
-    margin-bottom: 6px;
+    margin-bottom: 3px;
+    margin: 0 0 3px 0;
   }
 }

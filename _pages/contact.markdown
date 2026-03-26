@@ -41,10 +41,22 @@ image: /assets/bio/bio-photo.jpg
         </div>
       </div>
 
-      <!-- Social Media Icons Section -->
-      <div class="contact-block">
-      <!-- Screen version: icon grid -->
-      <div class="contact-social-icons">
+      <!-- Print-only newsletter invitation -->
+      <div class="print-only-newsletter-message">
+        <p class="contact-description" style="margin-bottom: 10px;"><strong>Newsletter Sign-Up</strong></p>
+        <p class="contact-description">I invite you to sign up for occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens. Your contact means support, and I handle all data personally with care. You can unsubscribe anytime.</p>
+        <p class="contact-description" style="margin-top: 10px;"><strong>How to subscribe:</strong></p>
+        <ul class="contact-availability">
+          <li>Visit www.j3zz.com/contact/ and fill out the newsletter form on the right column</li>
+          <li>Scan the QR code on this page with your phone to go directly to the sign-up form</li>
+          <li>Provide your email, phone, name, and consent to receive occasional updates</li>
+        </ul>
+      </div>
+
+      <!-- Social Media Icons Section (screen only) -->
+      <div class="contact-block contact-block--screen-only">
+        <!-- Screen version: icon grid -->
+        <div class="contact-social-icons">
         {% if site.bandcamp_username %}
         <a href="https://{{ site.bandcamp_username }}.bandcamp.com" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="Bandcamp - {{ site.bandcamp_username }}" title="Bandcamp - {{ site.bandcamp_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -125,9 +137,8 @@ image: /assets/bio/bio-photo.jpg
           </svg>
         </a>
         {% endif %}
-      </div>
-
-      </div><!-- End contact-block with social icons -->
+        </div>
+      </div><!-- End screen-only social icons block -->
 
       <!-- Print-only: Social Links Section -->
       <div class="contact-block print-only-block">
@@ -266,18 +277,12 @@ image: /assets/bio/bio-photo.jpg
     </div><!-- End left column -->
 
     <!-- Right Column: Newsletter -->
+
     <div class="contact-column contact-column--right">
 
     <div class="contact-block">
       <p class="contact-description"><strong>Stay updated</strong></p>
       <p class="contact-description">Occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens.</p>
-
-      <!-- Print-only newsletter invitation -->
-      <div class="print-only-newsletter-message">
-        <p class="contact-description" style="margin-bottom: 10px;"><strong>Newsletter Sign-Up</strong></p>
-        <p class="contact-description">I invite you to sign up for occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens. Your contact means support, and I handle all data personally with care. You can unsubscribe anytime.</p>
-        <p class="contact-description" style="margin-top: 10px;"><strong>Visit the online contact page to subscribe.</strong> The QR code displayed on this page links directly to the sign-up form.</p>
-      </div>
 
       <!-- Begin Mailchimp Signup Form -->
       {% if site.mailchimp_action_url %}
