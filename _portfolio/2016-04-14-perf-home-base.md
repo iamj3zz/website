@@ -7,28 +7,49 @@ work_id: home-base
 abstract: |
   Space, sound, and dance installation featuring composer/music producer J3ZZ's commissioned soundtrack.
 description: |
-  Home Base is a space, sound, and dance installation that premiered on April 14, 2016 at MOM Kulturális Központ in Budapest. The performance allows audiences to move freely and choose their viewing perspective, reimagining the 1841 romantic ballet "Giselle" through contemporary choreography. The production explores a complex picture of a love triangle and the power of jealousy, discovering modern interpretations of classical characters and themes. J3ZZ composed and produced the soundtrack for the work, with the music also featured in the promotional trailers for the show. The installation was co-conceived with Rubi Anna (concept/co-direction), with dramaturgy by Cseh Dávid and lighting design by Csere Zoltán.
+  HOME BASE is a space, sound, and dance installation that premiered on April 14, 2016 at MOM Kulturális Központ in Budapest. Choreographed and directed by Nóemi Kulcsár with concept development by Rubi Anna, the work reimagines the classical 1841 Giselle ballet through a contemporary, immersive installation format. Rather than traditional passive spectatorship, audiences move freely through the space as "research observers," choosing their viewing perspective and becoming active participants in the choreographic exploration.
+
+  The work deconstructs and reinterprets Giselle's central narratives—the love triangle, jealousy, betrayal, and the supernatural split between desire and duty—translating classical themes into contemporary movement and lived experience. By dissolving the boundary between observer and observed, the installation probes questions of agency, complicity, and transformation.
+
+  J3ZZ served as composer and producer of the entire soundtrack, creating a contemporary sonic interpretation that mirrors the choreography's deconstruction of Giselle's classical narrative. The score navigates between harmonic language rooted in Giselle's Romantic era and abstracted, distorted textures that fragment and reassemble the ballet's emotional core—capturing the disorientation of a classical narrative recontextualized in real time and space. The music was also featured in promotional materials and trailers for the performance.
+
+  The installation was developed with dramaturge Cseh Dávid and lighting design by Csere Zoltán, creating an integrated sensory environment where sound, light, movement, and architectural space work together to dissolve conventional performance boundaries.
 category: performances
 commissioned: true
 image: /assets/works/2016-04-14-perf-home-base/thumbnail.jpg
 
 metadata:
   release_date: "2016-04-14"
-  location: "Budapest, Hungary"
-  role: "composer, music producer"
-  commissioned_by: "Kulcsár Noémi"
-  collaborators: "Kulcsár Noémi (choreography/director), Rubi Anna (concept/co-director), J3ZZ (music/sound design), Cseh Dávid (dramaturge), Csere Zoltán (lights/assistant)"
-  credits: "Choreographer/director: Kulcsár Noémi. Concept/co-director: Rubi Anna. Music/sound design: J3ZZ. Dramaturge: Cseh Dávid. Lights: Csere Zoltán. Assistant: Csere Zoltán"
+  location: "MOM Kulturális Központ, Budapest, Hungary"
+  role: "composer, producer (soundtrack)"
+  commissioned_by: "Nóemi Kulcsár / Tellabor"
+  collaborators: "Nóemi Kulcsár (choreography, direction), Rubi Anna (concept, co-direction), J3ZZ (composer, music producer), Cseh Dávid (dramaturge), Csere Zoltán (lighting design)"
+  credits: "Choreography & Direction: Nóemi Kulcsár. Concept & Co-direction: Rubi Anna. Music & Sound Design: J3ZZ. Dramaturge: Cseh Dávid. Lighting & Assistant: Csere Zoltán"
   custom:
-    - label: "Format"
-      value: "Dance and installation performance"
     - label: "Venue"
       value: "MOM Kulturális Központ"
       link: "https://momkult.hu/"
-    - label: "Choreography"
-      value: "Kulcsár Noémi"
-    - label: "Type"
-      value: "Space, sound, and dance installation"
+    - label: "Nóemi Kulcsár – Tellabor"
+      value: "Choreographer's company website"
+      link: "https://en.tellabor.com/"
+    - label: "Tellabor Repertoire (HU)"
+      value: "Production company repertoire page"
+      link: "https://www.tellabor.com/repertoár"
+    - label: "Fidelio.hu Database"
+      value: "Hungarian performing arts database entry"
+      link: "https://fidelio.hu/kulcsar-noemi-tellabor"
+    - label: "Jegy.hu"
+      value: "Hungarian ticketing & arts database"
+      link: "https://www.jegy.hu/person/kulcsar-noemi-693"
+    - label: "National Dance Theatre"
+      value: "Nemzeti Táncszínház (Hungarian National Dance Theatre)"
+      link: "https://www.nemzetitancszinhaz.hu/"
+    - label: "Tellabor – Facebook"
+      value: "Production company social media"
+      link: "https://www.facebook.com/kulcsarnoemitellabor/"
+    - label: "Tellabor – Instagram"
+      value: "Production company social media"
+      link: "https://www.instagram.com/kntellabor/"
 
 sections:
   - type: description
