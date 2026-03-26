@@ -60,28 +60,6 @@
       list.appendChild(item);
     });
 
-    // Commissioned separator
-    const sep = document.createElement('li');
-    sep.className = 'filter-nav-separator';
-    list.appendChild(sep);
-
-    // Commissioned toggle item
-    const commItem = document.createElement('li');
-    const commBtn = document.createElement('button');
-    commBtn.className = 'filter-nav-btn filter-nav-commissioned';
-    commBtn.textContent = 'Commissioned only';
-    commBtn.addEventListener('click', function() {
-      const checkbox = document.getElementById('commissioned-filter');
-      if (checkbox) {
-        checkbox.checked = !checkbox.checked;
-        checkbox.dispatchEvent(new Event('change'));
-      }
-      updateActiveState();
-      // Keep panel open so user can see the toggle state
-    });
-    commItem.appendChild(commBtn);
-    list.appendChild(commItem);
-
     panel.appendChild(list);
 
     // Reflect active state from existing filter bar into widget
@@ -91,8 +69,6 @@
       list.querySelectorAll('.filter-nav-btn[data-filter]').forEach(btn => {
         btn.classList.toggle('is-active', btn.getAttribute('data-filter') === activeFilter);
       });
-      const checkbox = document.getElementById('commissioned-filter');
-      commBtn.classList.toggle('is-active', checkbox ? checkbox.checked : false);
     }
 
     // Toggle panel open/close

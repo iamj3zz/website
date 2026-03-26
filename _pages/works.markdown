@@ -17,10 +17,6 @@ image: /assets/works/2020-08-18-inst-iris/thumbnail.jpg
     <button class="filter-btn" data-filter="performances">Performances</button>
     <button class="filter-btn" data-filter="releases">Releases</button>
     <button class="filter-btn" data-filter="workshops">Workshops</button>
-    <label class="commissioned-toggle">
-      <input type="checkbox" id="commissioned-filter" aria-label="Show only commissioned works">
-      <span>Commissioned only</span>
-    </label>
   </div>
 
   <div class="portfolio-grid">
@@ -38,11 +34,8 @@ image: /assets/works/2020-08-18-inst-iris/thumbnail.jpg
         {% assign item_categories = item.category %}
         {% assign all_categories = item.category | split: ',' %}
       {% endif %}
-      <div class="portfolio-item" data-category="{{ item_categories }}" data-commissioned="{{ item.commissioned }}">
+      <div class="portfolio-item" data-category="{{ item_categories }}">
         <a href="{{ item.url | relative_url }}" class="portfolio-link">
-          {% if item.commissioned == true %}
-            <span class="commissioned-badge" aria-label="Commissioned work">C</span>
-          {% endif %}
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
           <div class="portfolio-overlay">
             <h2>{{ item.title }}</h2>
@@ -96,9 +89,6 @@ image: /assets/works/2020-08-18-inst-iris/thumbnail.jpg
               </div>
               <div class="works-col-content">
                 <div class="works-col-title"><a href="{{ item.url | relative_url }}">{{ item.title }}</a></div>
-                {% if item.commissioned == true %}
-                  <div class="works-col-commissioned">※ Commissioned</div>
-                {% endif %}
                 {% comment %} Display categories separately {% endcomment %}
                 {% if item.categories %}
                   {% assign display_categories = item.categories | join: ', ' | replace: '-', ' ' | upcase %}

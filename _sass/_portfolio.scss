@@ -34,39 +34,6 @@
   border-bottom-color: #333;
 }
 
-/* Commissioned Toggle */
-.commissioned-toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin-left: 8px;
-  padding: 8px 10px;
-  font-size: 12px;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  color: #767676;
-  cursor: pointer;
-  user-select: none;
-  transition: color 0.3s ease;
-  white-space: nowrap;
-}
-
-.commissioned-toggle:hover {
-  color: #595959;
-}
-
-.commissioned-toggle input[type="checkbox"] {
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-  margin: 0;
-}
-
-.commissioned-toggle input[type="checkbox"]:checked ~ span {
-  color: #333;
-  font-weight: 500;
-}
-
 /* Portfolio Grid */
 .portfolio-grid {
   display: grid;
@@ -89,32 +56,6 @@
   color: inherit;
   position: relative;
   height: 100%;
-}
-
-/* Commissioned Badge */
-.commissioned-badge {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: rgba(51, 51, 51, 0.85);
-  color: #fff;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  z-index: 5;
-  transition: all 0.3s ease;
-}
-
-.portfolio-item:hover .commissioned-badge {
-  background: rgba(255, 255, 255, 0.95);
-  color: #333;
-  transform: scale(1.1);
 }
 
 .portfolio-item.hidden {
@@ -389,10 +330,6 @@
   height: 1px;
   background: var(--color-border, #e0e0e0);
   margin: 4px 0;
-}
-
-.filter-nav-commissioned {
-  font-style: italic;
 }
 
 @media print {
