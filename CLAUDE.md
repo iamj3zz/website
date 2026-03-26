@@ -7,7 +7,8 @@
 - Never build nor serve Jekyll yourself
 - Never execute the test script yourself
 - Never mention Claude in git comments nor files
-- Use **J3ZZ** (not Jérôme Li Thiao Té) throughout the project for consistency
+- Use **J3ZZ** (not Jérôme Li Thiao Té nor JLTT) throughout the project for consistency
+- Respect the naming convention before even passing the tests
 
 ---
 

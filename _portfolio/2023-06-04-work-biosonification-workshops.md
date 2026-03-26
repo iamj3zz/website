@@ -32,6 +32,9 @@ metadata:
       value: "Nout plant i chant"
     - label: "Focus"
       value: "Plant awareness, ecology, sound art, sensor technology"
+    - label: "VIBROTANICA – Bois de Néfles"
+      value: "Documentation from Collège Bois de Néfles, Réunion (2024)"
+      link: "https://etab.ac-reunion.fr/clg-bois-de-nefles/2024/04/02/vibrotanica-quand-les-plantes-jouent-de-la-musique/"
 
 sections:
   - type: description
