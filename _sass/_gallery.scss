@@ -42,7 +42,8 @@
     transition: transform var(--transition-speed) ease;
   }
 
-  &:hover img {
+  &:hover img,
+  &.overlay-active img {
     transform: scale(1.05);
   }
 }
@@ -105,7 +106,8 @@
   }
 }
 
-.gallery-item:hover .gallery-overlay {
+.gallery-item:hover .gallery-overlay,
+.gallery-item.overlay-active .gallery-overlay {
   opacity: 1;
 }
 

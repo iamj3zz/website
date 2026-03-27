@@ -88,7 +88,8 @@
   text-align: center;
 }
 
-.portfolio-item:hover .portfolio-overlay {
+.portfolio-item:hover .portfolio-overlay,
+.portfolio-item.overlay-active .portfolio-overlay {
   opacity: 1;
 }
 
@@ -121,7 +122,8 @@
   background: rgba(245, 200, 66, 0.68); /* Yellow/Gold */
 }
 
-.portfolio-item:hover img {
+.portfolio-item:hover img,
+.portfolio-item.overlay-active img {
   transform: scale(1.02);
 }
 

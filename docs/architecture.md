@@ -81,6 +81,7 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 **Assets:**
 - `_sass/` - SCSS stylesheets compiled by Jekyll (including `_portfolio.scss`, `_work-detail.scss`, `_print.scss`, `_bio-gallery.scss`, `_events.scss`, etc.)
 - `assets/js/portfolio.js` - JavaScript for portfolio filtering with multi-category support
+- `assets/js/portfolio-scroll-overlay.js` - Mobile scroll overlay for portfolio and gallery grids (IntersectionObserver-based, touch-device only)
 - `assets/js/lightbox.js` - Lightbox functionality for image galleries
 - `assets/js/cookie-consent.js` - GDPR-compliant cookie consent manager for analytics and embedded content
 - `assets/js/utils.js` - Reusable utility functions (debounce, throttle) for performance optimization
@@ -289,6 +290,34 @@ Optional work description content in markdown.
 - Main nav: 2px solid underline on active page
 - Filter buttons: 2px solid underline on active filter
 - Both use `border-bottom-color: #333`
+
+## Mobile Scroll Overlay
+
+The portfolio and gallery grids display overlay descriptions while scrolling on touch devices, mimicking desktop hover behavior for mobile users.
+
+**Implementation:**
+- **File:** `assets/js/portfolio-scroll-overlay.js`
+- **Trigger:** Touch device detection using `'ontouchstart' in window` and `navigator.maxTouchPoints`
+- **API:** IntersectionObserver with threshold `[0, 0.25, 0.5, 0.75, 1.0]`
+- **Behavior:** Shows overlay when item is >50% visible in viewport
+
+**How It Works:**
+1. Detects if device supports touch events; exits immediately on desktop
+2. Tracks the single most-visible grid item using IntersectionObserver
+3. Applies `.overlay-active` class when visibility ratio exceeds 50%
+4. Removes class when a different item becomes most visible
+5. Supports portfolio grid (respects hidden/filtered items) and gallery grid
+6. Re-observes portfolio items after filter changes (350ms delay for animation)
+
+**CSS Integration:**
+- `_portfolio.scss`: `.portfolio-item.overlay-active .portfolio-overlay` and `.portfolio-item.overlay-active img` selectors mirror hover behavior
+- `_gallery.scss`: `.gallery-item.overlay-active .gallery-overlay` and image zoom effect
+- Zoom animation: `transform: scale(1.02)` (portfolio) and `scale(1.05)` (gallery)
+
+**One Item at a Time:**
+- Only one overlay visible during scroll (by design)
+- Avoids visual clutter on mobile
+- User sees focused overlay as they scroll
 
 ## Color Scheme
 
