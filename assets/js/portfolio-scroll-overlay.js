@@ -1,5 +1,5 @@
 // Scroll overlay for touch/mobile devices
-// Activates overlays on the most visible item while scrolling (portfolio grid & gallery)
+// Activates overlay on the item closest to viewport center while scrolling
 (function() {
   'use strict';
 
@@ -8,7 +8,6 @@
     if (!('ontouchstart' in window) && !navigator.maxTouchPoints) return;
 
     let activeItem = null;
-    let observer = null;
 
     function setActive(item) {
       if (activeItem === item) return;
@@ -17,47 +16,51 @@
       if (activeItem) activeItem.classList.add('overlay-active');
     }
 
-    function initObserver(selector) {
-      if (observer) observer.disconnect();
-
-      observer = new IntersectionObserver(function(entries) {
-        // Find the entry with the highest intersection ratio
-        let best = null;
-        let bestRatio = 0;
-
-        entries.forEach(function(entry) {
-          if (entry.intersectionRatio > bestRatio) {
-            bestRatio = entry.intersectionRatio;
-            best = entry.target;
-          }
-        });
-
-        // Only activate if meaningfully visible (>50%)
-        if (best && bestRatio > 0.5) {
-          setActive(best);
-        }
-      }, {
-        threshold: [0, 0.25, 0.5, 0.75, 1.0],
-        rootMargin: '0px'
-      });
-
+    function updateOverlay(selector) {
       const items = document.querySelectorAll(selector);
+      const viewportCenter = window.innerHeight / 2;
+      let best = null;
+      let bestDistance = Infinity;
+
       items.forEach(function(item) {
-        observer.observe(item);
+        const rect = item.getBoundingClientRect();
+        const itemCenter = rect.top + rect.height / 2;
+        const distance = Math.abs(itemCenter - viewportCenter);
+
+        if (distance < bestDistance) {
+          bestDistance = distance;
+          best = item;
+        }
       });
+
+      setActive(best);
+    }
+
+    function setupScroll(selector) {
+      // Throttle scroll updates for performance
+      let scrollTimeout;
+      window.addEventListener('scroll', function() {
+        clearTimeout(scrollTimeout);
+        scrollTimeout = setTimeout(function() {
+          updateOverlay(selector);
+        }, 50);
+      }, { passive: true });
+
+      // Initial update
+      updateOverlay(selector);
     }
 
     // Handle portfolio grid
     const portfolioGrid = document.querySelector('.portfolio-grid');
     if (portfolioGrid) {
-      initObserver('.portfolio-grid .portfolio-item:not(.hidden)');
+      setupScroll('.portfolio-grid .portfolio-item:not(.hidden)');
 
       const filterButtons = document.querySelectorAll('.filter-btn');
       filterButtons.forEach(function(btn) {
         btn.addEventListener('click', function() {
           setActive(null);
           setTimeout(function() {
-            initObserver('.portfolio-grid .portfolio-item:not(.hidden)');
+            updateOverlay('.portfolio-grid .portfolio-item:not(.hidden)');
           }, 350);
         });
       });
@@ -66,7 +69,7 @@
     // Handle gallery grid
     const galleryGrid = document.querySelector('.gallery-grid');
     if (galleryGrid) {
-      initObserver('.gallery-grid .gallery-item');
+      setupScroll('.gallery-grid .gallery-item');
     }
   });
 })();
