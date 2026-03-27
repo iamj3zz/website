@@ -95,31 +95,31 @@
 
 /* Category-specific overlay colors */
 .portfolio-item[data-category~="installations"] .portfolio-overlay {
-  background: rgba(66, 135, 245, 0.68); /* Blue */
+  background: rgba(15, 50, 120, 0.80); /* Blue */
 }
 
 .portfolio-item[data-category~="live-acts"] .portfolio-overlay {
-  background: rgba(245, 66, 66, 0.68); /* Red */
+  background: rgba(120, 15, 15, 0.80); /* Red */
 }
 
 .portfolio-item[data-category~="films"] .portfolio-overlay {
-  background: rgba(245, 176, 66, 0.68); /* Orange */
+  background: rgba(120, 65, 0, 0.80); /* Orange */
 }
 
 .portfolio-item[data-category~="performances"] .portfolio-overlay {
-  background: rgba(176, 66, 245, 0.68); /* Purple */
+  background: rgba(75, 15, 120, 0.80); /* Purple */
 }
 
 .portfolio-item[data-category~="residencies"] .portfolio-overlay {
-  background: rgba(245, 66, 176, 0.68); /* Pink */
+  background: rgba(120, 15, 75, 0.80); /* Pink */
 }
 
 .portfolio-item[data-category~="releases"] .portfolio-overlay {
-  background: rgba(66, 245, 135, 0.68); /* Green */
+  background: rgba(0, 85, 45, 0.80); /* Green */
 }
 
 .portfolio-item[data-category~="workshops"] .portfolio-overlay {
-  background: rgba(245, 200, 66, 0.68); /* Yellow/Gold */
+  background: rgba(100, 75, 0, 0.80); /* Yellow/Gold */
 }
 
 .portfolio-item:hover img,
