@@ -5,7 +5,7 @@ layout: work
 title: "ebb flow + debris (6 humans)"
 work_id: ebb-flow-debris
 abstract: |
-  Interdisciplinary free improvisation performance combining sound and dance at Művelődési Szint (Müszi), Budapest, December 11, 2015. J3ZZ as violinist alongside Monofog and three dancer-choreographers.
+  Free improvisation performance combining violin, DIY instruments, and dance choreography.
 description: |
   "ebb flow + debris (6 humans)" was a live interdisciplinary performance exploring the interconnections and departures between sound and movement. Six performers — three musicians and three dancers — built a free improvisation together, moving between group, duet, and solo situations in space, movement, quality, and time.
 

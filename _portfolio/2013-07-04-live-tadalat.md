@@ -5,7 +5,7 @@ layout: work
 title: "TADALAT"
 work_id: tadalat
 abstract: |
-  A cross-cultural musical collaboration with the acclaimed Tuareg ensemble TADALAT during Festival au Désert/presenze d'Africa in Florence.
+  Cross-cultural jam session with Tuareg ensemble TADALAT, exploring desert blues and Saharan musical traditions.
 description: |
   A pivotal cross-cultural live performance and jam session with TADALAT, a Tuareg ensemble that emerged as a revelation at the 2012 Festival au Désert in Timbuktu. This collaboration represents a profound engagement with folk and world music traditions—particularly the desert blues and Tamashek musical heritage of the Sahara—bringing together Tuareg and Malian musicians with European artists. The ensemble bridges centuries of nomadic musical traditions with contemporary improvisation, exploring themes of cultural exchange, oral storytelling, and musical synthesis. Part of the AZALAI – Laboratoire Nomade initiative (EU Culture Programme), this work embodies J3ZZ's artistic practice of learning from and improvising within living folk traditions, grounded in his deep cultural affinity with African music through his Réunion Island heritage.
 category: live-acts

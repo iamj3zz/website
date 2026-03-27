@@ -4,7 +4,7 @@ status: minor
 layout: work
 title: "WHAT HAPPENS WHEN YOU TOUCH IT Trailer"
 work_id: what-happens-trailer
-abstract: "The composer created music for the trailer of EnKnapGroup's performance \"What happens when you touch it\" in 2014."
+abstract: "Promotional trailer video with original score for EnKnapGroup's contemporary dance performance."
 description: |
   The composer created music for the trailer of EnKnapGroup's performance "What happens when you touch it" in 2014. This promotional piece was created for the Ljubljana-based performance work where the artist also served as composer and performer.
 category: films

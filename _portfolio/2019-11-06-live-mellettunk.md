@@ -4,7 +4,7 @@ status: minor
 layout: work
 title: "Mellettünk x J3ZZ"
 work_id: mellettunk
-abstract: "Commissioned collaborative artistic evening exploring shared identity and village roots through writing, dance, and live violin, featuring writer Krisztián Grecsó and dancer Zoltán Grecsó."
+abstract: "Multidisciplinary performance combining writing, dance, and live violin to explore shared identity and village heritage."
 description: |
   Mellettünk x J3ZZ was a commissioned collaborative artistic evening featuring writer Krisztián Grecsó and dancer Zoltán Grecsó. The performance explores shared identity and village roots through distinct artistic languages. Rather than text explaining dance, the work presents a peculiar struggle, spiritual inventory, and virtual family constellation examining common themes from different perspectives. J3ZZ performed live violin alongside vocalist Réka Fodor, creating an immersive soundscape for the dancers' movements and the writers' spoken word.
 category: live-acts
