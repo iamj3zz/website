@@ -15,8 +15,8 @@ description: |
   The vibrotanica box device, developed since 2019, converts plant biodata into sound through sensors and specialized software. The school-based program "Vibrotanica dann lékol" brings this technology into educational curricula, combining electronic music, ecology, and music informatics for student-centered learning and musical creation.
 category: workshops
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
-
+image: /assets/works/2023-06-04-work-biosonification/thumbnail.jpg
+  
 metadata:
   release_date: "2023-06-04"
   location: "Réunion · Hungary · Mauritius"
@@ -37,6 +37,9 @@ metadata:
       link: "https://etab.ac-reunion.fr/clg-bois-de-nefles/2024/04/02/vibrotanica-quand-les-plantes-jouent-de-la-musique/"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2023-06-04-work-biosonification/hero.jpg
+    
   - type: description
 
   - type: linked-events
