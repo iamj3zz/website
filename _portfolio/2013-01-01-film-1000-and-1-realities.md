@@ -2,6 +2,7 @@
 published: true
 status: minor
 layout: work
+print_hero_image: true
 title: "1000 AND 1 REALITIES"
 work_id: 1000-and-1-realities
 abstract: |
@@ -16,7 +17,7 @@ description: |
   **The Sound Design:** J3ZZ composed original soundscapes for three animated shorts, an accompanying documentary, and promotional materials. The music had to work across linguistic and cultural boundaries — supporting visual narratives that spoke to children and adults alike, in multiple languages and cultural contexts.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2013-01-01-film-1000-and-1-realities/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -40,6 +41,13 @@ metadata:
       value: "Children Tell Istanbul, Flying Istanbul, Working Bites"
 
 sections:
+  
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/zYVaY3Ykpts/" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    caption: "1000 AND 1 REALITIES - FLYING ISTANBUL (trailer)"
+        
   - type: description
 
   - type: text

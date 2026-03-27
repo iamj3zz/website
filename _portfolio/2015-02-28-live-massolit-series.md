@@ -18,6 +18,7 @@ metadata:
   date: "2015"
   based_in: "Massolit Books & Café, Budapest, Hungary"
   role: "violinist, founder, performer"
+  collaborators: "Áron Porteleki, Ernő Zoltán Rubik, Endre Kertész, Bálint Bolcsó, Zsolt Sőrés / Ahad (performers); Krisztina Bogo (drawings)"
   custom:
     - label: "Venue"
       value: "Massolit Books & Café, Nagy Diófa utca 30, Budapest"

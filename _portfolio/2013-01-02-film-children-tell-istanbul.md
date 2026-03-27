@@ -2,6 +2,7 @@
 published: true
 status: minor
 layout: work
+print_hero_image: true
 title: "CHILDREN TELL ISTANBUL"
 work_id: children-tell-istanbul
 abstract: |
@@ -16,7 +17,7 @@ description: |
   J3ZZ's compositional approach had to honor this intimacy. The music needed to support, not overwhelm; to enhance without editorializing. The result is a score that functions almost like a presence in the room — attentive, respectful, emotionally intelligent.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2013-01-02-film-children-tell-istanbul/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -35,6 +36,13 @@ metadata:
       value: "Documentary with original score"
 
 sections:
+  
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/afUVIsuTBBU/" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    # caption: ""
+    
   - type: description
 
   - type: text

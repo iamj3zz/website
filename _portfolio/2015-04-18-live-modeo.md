@@ -41,6 +41,10 @@ metadata:
     - label: "Modeo"
       value: "Beatport artist profile"
       link: "https://www.beatport.com/artist/modeo/274586"
+    - label: "Modeo"
+      value: "trafo"
+      link: "https://ra.co/events/685101"
+
 
 sections:
   - type: hero-image

@@ -3,6 +3,7 @@ published: true
 status: major
 layout: work
 title: "TRAVEL BUDDY"
+print_hero_image: true
 work_id: travel-buddy
 abstract: |
   A 18-minute drama exploring grief, justice, and the lengths a father will go to protect his son. Feri embarks on a cross-European road trip with his son Dani — but beneath the surface of a father-son adventure lies a quest for reckoning.
@@ -14,7 +15,7 @@ description: |
   The film was funded by MTVA (Hungarian Public Television), reflecting both its artistic merit and its engagement with urgent social themes.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2014-01-01-film-travel-buddy/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -42,6 +43,13 @@ metadata:
       link: "https://www.imdb.com/name/nm0360426/"
 
 sections:
+  
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/5bfJfkmtuOs/" frameborder="0" allowfullscreen></iframe>' 
+    responsive: true
+    aspect_ratio: "16:9"
+    # caption: ""
+      
   - type: description
 
   - type: text
