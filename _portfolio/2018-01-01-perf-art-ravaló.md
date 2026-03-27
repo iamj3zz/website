@@ -5,7 +5,7 @@ layout: work
 title: "ART-RAVALÓ"
 work_id: art-ravaló
 abstract: |
-  A Hungarian artistic and social program designed for young adults experiencing life difficulties or from foster care backgrounds.
+  Music and arts program combining personality development with social integration for vulnerable young adults in Hungary.
 description: |
   A Hungarian artistic and social program designed for young adults experiencing life difficulties or from foster care backgrounds. Launched in September 2018 as an adult education training program, it emphasizes "personality development of young people through their artistic activities, which promotes social integration and employment." The initiative operates under support from the Hungarian National Crime Prevention Council.
 category: performances

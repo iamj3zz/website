@@ -4,7 +4,7 @@ status: minor
 layout: work
 title: "Michael Kentish feat. J3ZZ"
 work_id: michael-kentish-live
-abstract: "Commissioned live violin performance for artist Michael Kentish at Pótkulcs, Budapest, featuring collaboration with Dávid Asztalos."
+abstract: "Live collaborative performance: J3ZZ (violin) with artist Michael Kentish and Dávid Asztalos."
 description: |
   Michael Kentish feat. J3ZZ was a commissioned live performance at Pótkulcs in Budapest, featuring J3ZZ on violin performing with artist Michael Kentish and collaborator Dávid Asztalos. The performance showcased the artist's live violin work in collaboration with Michael Kentish's artistic vision.
 category: live-acts

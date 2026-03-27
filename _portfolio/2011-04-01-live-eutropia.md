@@ -6,7 +6,7 @@ print_hero_image: true
 title: "EUTROPIA"
 work_id: eutropia
 abstract: |
-  A large-scale EU CULTURE 2007–2013 initiative — approximately 250 young artists from Belgium, Denmark, France, Germany, Greece, Hungary, Italy, the Netherlands, and Serbia co-creating a multidisciplinary performance that evolved continuously across residencies and a 9-country European tour (July 2011 – June 2013).
+  Multidisciplinary collaborative performance exploring cultural dialogue across 9 European countries, 250+ artists, EU-funded residencies.
 description: |
   **EUtropia** was a large-scale collaborative performance developed under the EU CULTURE 2007–2013 programme, coordinated by jfc Medienzentrum e.V. (Germany) within the ROOTS & ROUTES International Network. Running from July 2011 to June 2013, the project brought together approximately 250 young artists from nine European countries — Belgium, Denmark, France, Germany, Greece, Hungary, Italy, the Netherlands, and Serbia — to co-create a shared multidisciplinary artistic language.
 

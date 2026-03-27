@@ -6,7 +6,7 @@ layout: work
 title: "Outbreakers' Lab Residency"
 work_id: outbreakers-lab-residency
 abstract: |
-  A three-day international mentoring residency for music artists, focused on artistic, marketing, and music industry professional development.
+  International mentoring program for emerging musicians combining professional development with artistic networking.
 description: |
   J3ZZ participated as a performer and music composer/producer in the Outbreakers' Lab 2020, a three-day mentoring camp organised by HOTS (Hungarian Oncoming Tunes) in Zsennye, Hungary. The program brought together emerging artists with international music industry professionals for individual mentoring sessions, workshops, and group discussions covering artistic development, career strategy, marketing, mental health, and international music industry practices.
 category: residencies
