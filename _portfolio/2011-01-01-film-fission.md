@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: "Fission"
 work_id: fission
+print_hero_image: true
 abstract: |
   An experimental dance short film created during a creative residency in Cologne. Co-directed by Ana Maria Staicu and Paris Tume, with original music composition and production by J3ZZ.
 description: |
@@ -14,7 +15,7 @@ description: |
   J3ZZ composed and produced the original score, creating a sonic architecture that mirrors the physicality of the dance. The title "Fission" suggests both the splitting of atoms and the fragmentation/separation of bodies in space — a visual and conceptual metaphor that J3ZZ's music reinforces through its own structural approach to sound.
 category: films
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2011-01-01-film-fission/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -36,6 +37,13 @@ metadata:
       value: "Cologne, Germany"
 
 sections:
+  
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/nTOUF7rpS8I/" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    # caption: ""
+      
   - type: description
 
   - type: text
