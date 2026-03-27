@@ -9,7 +9,8 @@ description: |
   A short film exploring themes of art, colors, sex, love, and communication. The filmmaker drew inspiration from Paul Klee's philosophy: "Art does not reproduce the visible; rather, it makes visible." The composer crafted the score using cello and violin harmonies and dissonances as metaphors for the relationship dynamics between the two main characters.
 category: films
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+print_hero_image: true
+image: /assets/works/2011-01-01-film-ouverture/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -43,6 +44,12 @@ sections:
     responsive: true
     aspect_ratio: "16:9"
     caption: "OUVERTURE — Written and directed by Lorenzo Ciacciavicca, 2011"
+    
+  # - type: iframe
+  #   embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/JKDGdAon5_Q/" frameborder="0" allowfullscreen></iframe>'
+  #   responsive: true
+  #   aspect_ratio: "16:9"
+  #   caption: "OUVERTURE — Written and directed by Lorenzo Ciacciavicca, 2011"
 
   - type: description
 
