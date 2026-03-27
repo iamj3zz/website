@@ -184,11 +184,11 @@ links:
     <div class="bio-category" id="bio-workshops">
       <h2>Workshops</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2024</span><a href="/works/2023-06-04-work-biosonification-workshops/">BIOSONOFICATION</a> ∙ Institut Français de Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification-workshops/">BIOSONOFICATION</a> ∙ Salon du livre Réyoné ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification-workshops/">BIOSONOFICATION</a> ∙ Mizik O Marmay Festival ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification-workshops/">BIOSONOFICATION</a> ∙ Rdv aux jardins ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2023-06-04-work-biosonification-workshops/">BIOSONOFICATION</a> ∙ Széllkapu, Millenáris, Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2024</span><a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Institut Français de Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Salon du livre Réyoné ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Mizik O Marmay Festival ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Rdv aux jardins ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Széllkapu, Millenáris, Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2013–2014</span> STEPS AHEAD ∙ Florence ∙ IT</div>
         <div class="bio-item"><span class="bio-year">2013</span> U-CARE ∙ Florence ∙ IT</div>
         <div class="bio-item"><span class="bio-year">2012</span> EUTROPIA ∙ Lille ∙ FR</div>
