@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: "In Between"
 work_id: in-between
+print_hero_image: true
 abstract: |
   A video installation and short film by Iranian-born artist Massih Parsaei, with original soundtrack composition and production by J3ZZ. An early collaborative work exploring the intersection of visual and sonic art.
 description: |
@@ -14,7 +15,7 @@ description: |
   For this project, J3ZZ was commissioned to create and produce an original soundtrack — a full audio landscape designed to enhance the visual and narrative dimensions of the work. The collaboration represents an early example of cross-disciplinary creative practice, bridging composer and visual artist in service of a unified artistic vision.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2010-01-01-film-in-between/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -33,6 +34,13 @@ metadata:
       value: "Multimedia art, Sound design, Film composition"
 
 sections:
+  
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/tDMEhnrhtyQ" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    caption: "IN BETWEEN (excerpt video)"
+    
   - type: description
 
   - type: text
