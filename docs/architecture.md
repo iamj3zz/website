@@ -293,31 +293,38 @@ Optional work description content in markdown.
 
 ## Mobile Scroll Overlay
 
-The portfolio and gallery grids display overlay descriptions while scrolling on touch devices, mimicking desktop hover behavior for mobile users.
+The portfolio and gallery grids display overlay descriptions on the centered item while scrolling on touch devices, mimicking desktop hover behavior for mobile users.
 
 **Implementation:**
 - **File:** `assets/js/portfolio-scroll-overlay.js`
 - **Trigger:** Touch device detection using `'ontouchstart' in window` and `navigator.maxTouchPoints`
-- **API:** IntersectionObserver with threshold `[0, 0.25, 0.5, 0.75, 1.0]`
-- **Behavior:** Shows overlay when item is >50% visible in viewport
+- **Mechanism:** Scroll event listener with throttled updates (50ms debounce)
+- **Behavior:** Shows overlay on the item closest to viewport center
 
 **How It Works:**
 1. Detects if device supports touch events; exits immediately on desktop
-2. Tracks the single most-visible grid item using IntersectionObserver
-3. Applies `.overlay-active` class when visibility ratio exceeds 50%
-4. Removes class when a different item becomes most visible
-5. Supports portfolio grid (respects hidden/filtered items) and gallery grid
-6. Re-observes portfolio items after filter changes (350ms delay for animation)
+2. On page load, finds the item centered in the viewport
+3. Applies `.overlay-active` class to that centered item
+4. On scroll, recalculates which item is closest to viewport center
+5. Updates overlay when a different item becomes centered
+6. Supports portfolio grid (respects hidden/filtered items) and gallery grid
+7. Re-calculates after filter changes (350ms delay for animation)
+
+**Distance Calculation:**
+- For each visible item, calculates: `Math.abs(itemCenter - viewportCenter)`
+- Item with smallest distance gets the overlay
+- Updates throttled to 50ms for performance (passive scroll listener)
 
 **CSS Integration:**
 - `_portfolio.scss`: `.portfolio-item.overlay-active .portfolio-overlay` and `.portfolio-item.overlay-active img` selectors mirror hover behavior
 - `_gallery.scss`: `.gallery-item.overlay-active .gallery-overlay` and image zoom effect
 - Zoom animation: `transform: scale(1.02)` (portfolio) and `scale(1.05)` (gallery)
 
-**One Item at a Time:**
+**Centered Focus:**
 - Only one overlay visible during scroll (by design)
-- Avoids visual clutter on mobile
-- User sees focused overlay as they scroll
+- Overlay follows the item closest to screen center
+- Provides natural, intuitive focus as user scrolls through grid
+- User sees focused overlay on the centered square
 
 ## Color Scheme
 
