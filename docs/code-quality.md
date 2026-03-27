@@ -20,7 +20,7 @@ This codebase follows modern web development best practices and maintains high c
 - `assets/js/utils.js` - Performance helper functions
 - `assets/js/cookie-consent.js` - GDPR-compliant consent management with localStorage error handling
 - `assets/js/portfolio.js` - Portfolio filtering
-- `assets/js/portfolio-scroll-overlay.js` - Mobile scroll overlay using IntersectionObserver
+- `assets/js/portfolio-scroll-overlay.js` - Mobile scroll overlay that focuses on centered grid item
 - `assets/js/navigation.js` - Mobile menu with ARIA support
 - `assets/js/newsletter-form.js` - Form validation
 - `assets/js/lightbox.js` - Image gallery
