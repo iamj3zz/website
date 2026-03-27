@@ -67,5 +67,17 @@ sections:
 
       The music is both performer and narrative tool: it carries conflict and resolution, tension and release, voice and silence. By grounding the abstract themes of the film (art, color, sex, love, communication) in the physicality of acoustic instruments, the score invites the audience into the emotional depth of the encounter.
 
+  - type: image-grid
+    columns: 3
+    images:
+      # - /assets/works/2011-01-01-film-ouverture/film-ouverture-gallery00_1920w.jpg
+      - /assets/works/2011-01-01-film-ouverture/film-ouverture-gallery01_1920w.jpg
+      - /assets/works/2011-01-01-film-ouverture/film-ouverture-gallery02_1920w.jpg
+      - /assets/works/2011-01-01-film-ouverture/film-ouverture-gallery03_1920w.jpg
+      - /assets/works/2011-01-01-film-ouverture/film-ouverture-gallery04_1920w.jpg
+      - /assets/works/2011-01-01-film-ouverture/film-ouverture-gallery05_1920w.jpg
+      - /assets/works/2011-01-01-film-ouverture/film-ouverture-gallery06_1920w.jpg
+      # - /assets/works/2011-01-01-film-ouverture/film-ouverture-gallery07_1920w.jpg
+
   - type: metadata
 ---

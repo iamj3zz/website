@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: "FAR POINT"
 work_id: far-point
+print_hero_image: true
 abstract: |
   A four-minute science fiction short created in 48 hours for SCI-FI-LONDON 2012. A speculative fiction exploring population control, mortality, and the state's claim over biological life.
 description: |
@@ -16,7 +17,7 @@ description: |
   The SCI-FI-LONDON 48 Hour Film Challenge is a prestigious competition that has launched significant careers in speculative fiction filmmaking. Films created under these constraints often demonstrate remarkable creativity precisely because of their limitations.
 category: films
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2012-01-01-film-far-point/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

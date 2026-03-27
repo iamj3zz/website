@@ -3,6 +3,7 @@ published: true
 status: minor
 layout: work
 title: "PETRA"
+print_hero_image: true
 work_id: petra
 abstract: |
   Georgia State University's inaugural student feature film. A sassy romantic comedy about an American photographer and a Hungarian art professor discovering that "off the grid" means something different to each of them.
@@ -16,7 +17,7 @@ description: |
   **Production Achievement:** In just five weeks, a team of eleven film students shot the entire feature across nearly 50 locations in Budapest and surrounding villages, completing what would typically be a professional multi-month production. The project represents a remarkable educational achievement and a testament to the creative capacity of emerging filmmakers.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2016-01-01-film-petra/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -53,11 +54,11 @@ metadata:
 
 sections:
   - type: iframe
-    embed_code: '<iframe src="https://player.vimeo.com/video/201564161" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>'
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/q-LmFo83kYM" frameborder="0" allowfullscreen></iframe>'
     responsive: true
     aspect_ratio: "16:9"
-    caption: "PETRA — Georgia State University's First Student Feature Film, 2017"
-
+    caption: "PETRA (excerpt)"
+    
   - type: description
 
   - type: text

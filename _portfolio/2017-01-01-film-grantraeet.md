@@ -2,6 +2,7 @@
 published: true
 status: major
 layout: work
+print_hero_image: true
 title: "GRANTRAEET"
 work_id: Grantraeet
 abstract: |
@@ -14,7 +15,7 @@ description: |
   Halsey's film adaptation translates these philosophical concerns into cinematic form, using the tree's journey as a mirror to contemporary desires — the pressure to achieve, to matter, to leave a mark. The work invites viewers to reflect on their own stories of longing, fulfillment, and the complex relationship between expectation and reality.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2017-01-01-film-grantraeet/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -32,6 +33,12 @@ metadata:
       link: "https://www.linkedin.com/in/amaliehalsey/"
 
 sections:
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/OQzE8iyXPks" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    # caption: ""
+
   - type: description
 
   - type: text

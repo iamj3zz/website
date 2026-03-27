@@ -2,6 +2,7 @@
 published: true
 status: minor
 layout: work
+print_hero_image: true
 title: "TO BE TOLD"
 work_id: to-be-told
 abstract: |
@@ -14,7 +15,7 @@ description: |
   Conceived and coordinated by Pietro Gaglianò, the project was managed by Marina Bistolfi at Associazione Fabbrica Europa and supported by the EU Lifelong Learning Programme (Grundtvig).
 category: films
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2012-01-01-film-to-be-told/thumbnail.jpg
 
 metadata:
   release_date: "2012-03-16"
@@ -48,6 +49,13 @@ metadata:
       link: "https://www.rootsnroutes.eu/rnrstories-id101"
 
 sections:
+  
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/IhAqm5mY5HM/" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    # caption: ""
+    
   - type: description
 
   - type: text

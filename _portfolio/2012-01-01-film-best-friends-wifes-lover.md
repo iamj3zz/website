@@ -2,6 +2,7 @@
 published: true
 status: major
 layout: work
+print_hero_image: true
 title: |
   Best Friend's Wife's Lover
 work_id: best-friends-wifes-lover
@@ -10,7 +11,7 @@ description: |
   A short fiction film directed by Declan Hannigan exploring an emotionally charged moment of human vulnerability. The narrative captures a deceptively simple scene: a husband, wife, and his best friend sharing an innocent Sunday afternoon drink. Yet through careful observation and subtle restraint, life shifts for everyone — without a single word being spoken about what truly happened. A meditation on unspoken truths, intimacy, and the fragility of relationships.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2012-01-01-film-best-friends-wifes-lover/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -33,6 +34,12 @@ metadata:
       link: "https://www.imdb.com/name/nm0360426/"
 
 sections:
+  - type: iframe
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/vKNWriyTn2A" frameborder="0" allowfullscreen></iframe>'
+    responsive: true
+    aspect_ratio: "16:9"
+    # caption: ""
+  
   - type: description
 
   - type: text

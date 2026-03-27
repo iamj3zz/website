@@ -2,6 +2,7 @@
 published: true
 status: major
 layout: work
+print_hero_image: true
 title: "VÁLASZÚTON / CROSSROADS"
 work_id: valaszuton-crossroads
 abstract: |
@@ -10,7 +11,7 @@ description: |
   **VÁLASZÚTON / CROSSROADS** is a short film directed by Flóra Chilton that transforms a dangerous real-world scenario into cinema with unflinching honesty. The narrative follows a young man returning from prison, sent by his hustler stepfather to the countryside with one task: lure a vulnerable girl from a foster home into exploitation.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2020-08-18-film-valaszuton-crossroads/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:

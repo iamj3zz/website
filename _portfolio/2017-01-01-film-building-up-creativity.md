@@ -2,6 +2,7 @@
 published: true
 status: minor
 layout: work
+print_hero_image: true
 title: "BUILDING UP CREATIVITY"
 work_id: building-up-creativity
 abstract: |
@@ -16,7 +17,7 @@ description: |
   **The Score:** J3ZZ's composition had to bridge research and performance, translating abstract criteria (usefulness, originality) into sound that a viewer could feel, not just understand intellectually. The music becomes part of the research presentation — not decoration, but a method of knowledge-making.
 category: films
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2017-01-01-film-building-up-creativity/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -25,7 +26,7 @@ metadata:
   role: "composer, producer"
   commissioned_by: "Judit Pétervári"
   collaborators: "Judit Pétervári (researcher/creator), JLTT - J3ZZ (composer/producer), Queen Mary University of London"
-  credits: "Researcher/creator: Judit Pétervári. Composer/producer: JLTT (J3ZZ). PhD supervisors: Magda Osman, Joydeep Bhattacharya. Institution: School of Biological and Chemical Sciences, Queen Mary University of London. Additional credits: Artus Stúdió, Magdolna Fodor, Péter Goretić, Natália Kovács, Erik Lakatos, Péter Novák, Gábor Szűcs, Márton Túry, Dániel Vaszari, Gabriella Zettwitz, Tamás Zöldy"
+  credits: "Researcher/creator: Judit Pétervári. Composer/producer:  (J3ZZ). PhD supervisors: Magda Osman, Joydeep Bhattacharya. Institution: School of Biological and Chemical Sciences, Queen Mary University of London. Additional credits: Artus Stúdió, Magdolna Fodor, Péter Goretić, Natália Kovács, Erik Lakatos, Péter Novák, Gábor Szűcs, Márton Túry, Dániel Vaszari, Gabriella Zettwitz, Tamás Zöldy"
   custom:
     - label: "YouTube"
       value: "https://www.youtube.com/watch?v=wXzPH3iQV8E"
@@ -38,7 +39,7 @@ metadata:
 
 sections:
   - type: iframe
-    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/wXzPH3iQV8E" frameborder="0" allowfullscreen></iframe>'
+    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VlRJD9cPqZc" frameborder="0" allowfullscreen></iframe>'
     responsive: true
     aspect_ratio: "16:9"
     caption: "BUILDING UP CREATIVITY — Dance visualization of PhD research on how humans evaluate creativity"
