@@ -39,7 +39,7 @@ image: /assets/artworks/2026-03-16-fading-lines/thumbnail.png
     {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
     {% for artwork in sorted_artworks %}
       {% if artwork.published == false %}{% continue %}{% endif %}
-      <div class="gallery-item gallery-item--{{ artwork.status | default: 'available' }}">
+      <div class="gallery-item gallery-item--{{ artwork.status | default: 'available' }}" data-label="{{ artwork.title }}{% if artwork.medium %} · {{ artwork.medium | upcase }}{% endif %}">
         <a href="{{ artwork.url | relative_url }}" class="gallery-link">
           <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
         </a>

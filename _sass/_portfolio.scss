@@ -184,6 +184,26 @@
   transform: scale(1.05);
 }
 
+/* Multi-column touch: persistent title + category bar */
+.portfolio-grid.grid-multicolumn .portfolio-item::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.70);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
 /* Responsive Design */
 @media (max-width: 1200px) {
   .portfolio-grid {

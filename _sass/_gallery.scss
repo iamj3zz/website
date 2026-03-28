@@ -111,6 +111,26 @@
   opacity: 1;
 }
 
+/* Multi-column touch: persistent title + medium bar */
+.gallery-grid.grid-multicolumn .gallery-item::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 6px 8px;
+  background: rgba(0, 0, 0, 0.70);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  pointer-events: none;
+}
+
 .gallery-overlay-medium {
   font-style: italic;
 }

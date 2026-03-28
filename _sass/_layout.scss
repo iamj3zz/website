@@ -52,6 +52,26 @@
   border-bottom-color: #333;
 }
 
+/* CTA link — CONTACT & BOOK */
+.nav-cta {
+  background: #333;
+  color: #fff !important;
+  padding: 5px 10px !important;
+  border-bottom: none !important;
+  border-radius: 2px;
+  transition: background 0.3s ease, color 0.3s ease !important;
+
+  &:hover {
+    background: #000;
+    color: #fff !important;
+  }
+
+  &.active {
+    background: #000;
+    border-bottom: none !important;
+  }
+}
+
 /* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
   display: none;
@@ -201,6 +221,11 @@
   font-size: 12px;
 }
 
+/* Header CTA link — mobile only */
+.header-cta {
+  display: none;
+}
+
 /* Responsive Design */
 @media (max-width: 900px) {
   .main-nav ul {
@@ -209,7 +234,7 @@
 }
 
 @media (max-width: 600px) {
-  /* Mobile header layout: logo left, hamburger right */
+  /* Mobile header layout: logo left, BOOK CTA center, hamburger right */
   .site-header {
     display: flex;
     flex-wrap: wrap;
@@ -229,11 +254,28 @@
     margin: 0;
   }
 
+  /* Header CTA — always visible on mobile */
+  .header-cta {
+    display: inline-flex;
+    align-items: center;
+    order: 2;
+    margin-left: auto;
+    margin-right: 12px;
+    font-size: 11px;
+  }
+
   /* Show hamburger menu on mobile - positioned to the right */
   .mobile-menu-toggle {
     display: flex;
     margin: 0;
-    order: 2;
+    order: 3;
+    background: #333;
+    border-radius: 2px;
+    padding: 8px;
+  }
+
+  .mobile-menu-toggle .hamburger-line {
+    background-color: #fff;
   }
 
   /* Navigation takes full width below header */
@@ -257,13 +299,11 @@
   }
 }
 
-/* Bottom navigation — mobile only */
+/* Bottom navigation — shown on long pages (all screen sizes) */
 .bottom-nav {
-  display: none; /* hidden on desktop */
-}
+  display: none;
 
-@media (max-width: 600px) {
-  .bottom-nav {
+  &--visible {
     display: block;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;

@@ -119,16 +119,33 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 
 **Main Navigation (appears on all pages):**
 - Logo (clickable, links to homepage) - configured via `site.logo` in `_config.yml`
-- BIO | WORKS | EVENTS | CONTACT
+- BIO | WORKS | GALLERY | EVENTS | CONTACT & BOOK
 - Active page is underlined
 - Navigation state uses `class="active"` based on page URL
 - Bio Gallery page (`/bio-gallery/`) accessible via bio page links
+- **CONTACT & BOOK** uses `.nav-cta` class: black background, white text pill — visually distinct CTA across all nav locations
+
+**Mobile Header (≤600px):**
+- Logo left, **BOOK** pill center-right, hamburger far right — always visible regardless of menu state
+- BOOK button: `.header-cta.nav-cta` class, same black pill styling as nav CTA
+- Hamburger button: black background, white lines — matches BOOK pill visually
+- BOOK label used instead of "CONTACT & BOOK" for brevity at small sizes
+- Expanded menu: full nav links shown vertically below header row
+
+**Bottom Navigation (all screen sizes, long pages only):**
+- Horizontal nav bar above the footer: BIO | WORKS | GALLERY | EVENTS | CONTACT & BOOK
+- Shown only when `document.documentElement.scrollHeight > window.innerHeight` (page is scrollable)
+- Toggled via `.bottom-nav--visible` class added by JS in `navigation.js`
+- Active page link underlined
+- Hidden in print view
+- HTML: `<nav class="bottom-nav">` in all 4 layouts, before `<footer>`
+- CSS: `_sass/_layout.scss` (`.bottom-nav`, `.bottom-nav--visible`)
 
 **Works Page Sub-Navigation:**
-- Filter buttons: All | Installations | Live Acts | Releases | Commissions
+- Filter buttons: All | Installations | Live Acts | Films | Performances | Releases | Workshops
 - Active filter is underlined
 - JavaScript-powered filtering with multi-category support (portfolio.js)
-- Clicking category tags on portfolio items filters the grid
+- Category tags on portfolio overlays are not clickable on mobile (≤600px) — `pointer-events: none`
 
 **Events Page Navigation:**
 - Floating year navigation widget (bottom-left corner) for quick year jumping
@@ -293,38 +310,50 @@ Optional work description content in markdown.
 
 ## Mobile Scroll Overlay
 
-The portfolio and gallery grids display overlay descriptions on the centered item while scrolling on touch devices, mimicking desktop hover behavior for mobile users.
+The portfolio and gallery grids provide adaptive touch interaction based on grid layout:
 
 **Implementation:**
 - **File:** `assets/js/portfolio-scroll-overlay.js`
 - **Trigger:** Touch device detection using `'ontouchstart' in window` and `navigator.maxTouchPoints`
-- **Mechanism:** Scroll event listener with throttled updates (50ms debounce)
-- **Behavior:** Shows overlay on the item closest to viewport center
+- **Column Detection:** Compares `offsetLeft` of first two grid items; if equal → 1 column; otherwise → multi-column
+
+**1-Column Mode (narrow phones):**
+- Scroll-focused overlay: finds the item closest to viewport center
+- Mechanism: Scroll event listener with throttled updates (50ms debounce)
+- Applies `.overlay-active` class to the centered item only
+- Shows full overlay (title, categories, abstract) for the focused item
+
+**Multi-Column Mode (tablets, wider phones):**
+- Persistent title + category bar at bottom of each item
+- Uses `data-label` attribute (e.g. "IRIS · INSTALLATION")
+- CSS `::after` pseudo-element renders the label
+- All items show their label, no scroll detection
+- Cleaner than full overlay, avoids clutter
 
 **How It Works:**
-1. Detects if device supports touch events; exits immediately on desktop
-2. On page load, finds the item centered in the viewport
-3. Applies `.overlay-active` class to that centered item
-4. On scroll, recalculates which item is closest to viewport center
-5. Updates overlay when a different item becomes centered
-6. Supports portfolio grid (respects hidden/filtered items) and gallery grid
-7. Re-calculates after filter changes (350ms delay for animation)
+1. Detects if device supports touch; exits immediately on desktop
+2. Detects grid layout on load and on resize (debounced 150ms)
+3. **1-column:** Applies `.overlay-active` to centered item; updates on scroll/filter
+4. **Multi-column:** Adds `grid-multicolumn` class to grid; CSS shows persistent labels
+5. Automatically switches modes on device rotation
+6. Re-applies mode after filter changes (350ms delay for animation)
 
-**Distance Calculation:**
-- For each visible item, calculates: `Math.abs(itemCenter - viewportCenter)`
+**Distance Calculation (1-column only):**
+- For each visible item: `Math.abs(itemCenter - viewportCenter)`
 - Item with smallest distance gets the overlay
-- Updates throttled to 50ms for performance (passive scroll listener)
+- Only one overlay visible at a time
 
 **CSS Integration:**
-- `_portfolio.scss`: `.portfolio-item.overlay-active .portfolio-overlay` and `.portfolio-item.overlay-active img` selectors mirror hover behavior
-- `_gallery.scss`: `.gallery-item.overlay-active .gallery-overlay` and image zoom effect
-- Zoom animation: `transform: scale(1.02)` (portfolio) and `scale(1.05)` (gallery)
+- `_portfolio.scss`:
+  - `.portfolio-item.overlay-active .portfolio-overlay` — shows overlay for scroll-focused item
+  - `.portfolio-grid.grid-multicolumn .portfolio-item::after` — persistent title+category bar
+- `_gallery.scss`: Same pattern with gallery selectors
+- Zoom animation: `transform: scale(1.02)` (portfolio) and `scale(1.05)` (gallery) on overlay or hover
 
-**Centered Focus:**
-- Only one overlay visible during scroll (by design)
-- Overlay follows the item closest to screen center
-- Provides natural, intuitive focus as user scrolls through grid
-- User sees focused overlay on the centered square
+**User Experience:**
+- **1-column:** Natural scroll-focused interaction, one item dominates screen
+- **Multi-column:** Labels always visible, clean grid, no interaction needed for titles
+- **Desktop:** Hover overlays, unchanged
 
 ## Color Scheme
 
