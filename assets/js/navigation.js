@@ -37,5 +37,16 @@
       }
     });
   }
+
+  // Bottom nav: show only on pages taller than viewport
+  function updateBottomNav() {
+    const bottomNav = document.querySelector('.bottom-nav');
+    if (!bottomNav) return;
+    const isLong = document.documentElement.scrollHeight > window.innerHeight;
+    bottomNav.classList.toggle('bottom-nav--visible', isLong);
+  }
+
+  updateBottomNav();
+  window.addEventListener('resize', window.throttle ? window.throttle(updateBottomNav, 150) : updateBottomNav);
   });
 })();

@@ -34,7 +34,7 @@ image: /assets/bio/bio-photo.jpg
         {% assign item_categories = item.category %}
         {% assign all_categories = item.category | split: ',' %}
       {% endif %}
-      <div class="portfolio-item" data-category="{{ item_categories }}">
+      <div class="portfolio-item" data-category="{{ item_categories }}" data-label="{{ item.title }} · {{ item.category | replace: '-', ' ' | upcase }}">
         <a href="{{ item.url | relative_url }}" class="portfolio-link">
           <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
           <div class="portfolio-overlay">

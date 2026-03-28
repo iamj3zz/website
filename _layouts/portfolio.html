@@ -19,6 +19,7 @@
         <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
       </a>
     </div>
+    <a href="{{ '/contact/' | relative_url }}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="Book J3ZZ">BOOK</a>
     <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -30,7 +31,7 @@
         <li><a href="{{ '/works/' | relative_url }}" {% if page.url contains '/works' or page.url == '/' %}class="active"{% endif %}>WORKS</a></li>
         <li><a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery' %}class="active"{% endif %}>GALLERY</a></li>
         <li><a href="{{ '/events/' | relative_url }}" {% if page.url contains '/events' %}class="active"{% endif %}>EVENTS</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>CONTACT & BOOK</a></li>
+        <li><a href="{{ '/contact/' | relative_url }}" class="nav-cta{% if page.url contains '/contact' %} active{% endif %}">CONTACT & BOOK</a></li>
       </ul>
     </nav>
   </header>
@@ -45,7 +46,7 @@
       <li><a href="{{ '/works/' | relative_url }}" {% if page.url contains '/works' or page.url == '/' %}class="active"{% endif %}>WORKS</a></li>
       <li><a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery' %}class="active"{% endif %}>GALLERY</a></li>
       <li><a href="{{ '/events/' | relative_url }}" {% if page.url contains '/events' %}class="active"{% endif %}>EVENTS</a></li>
-      <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>CONTACT & BOOK</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}" class="nav-cta{% if page.url contains '/contact' %} active{% endif %}">CONTACT & BOOK</a></li>
     </ul>
   </nav>
 
