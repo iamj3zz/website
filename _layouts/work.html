@@ -299,6 +299,16 @@
     </article>
   </main>
 
+  <nav class="bottom-nav" aria-label="Bottom navigation">
+    <ul>
+      <li><a href="{{ '/bio/' | relative_url }}" {% if page.url contains '/bio' %}class="active"{% endif %}>BIO</a></li>
+      <li><a href="{{ '/works/' | relative_url }}" {% if page.url contains '/works' %}class="active"{% endif %}>WORKS</a></li>
+      <li><a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery' %}class="active"{% endif %}>GALLERY</a></li>
+      <li><a href="{{ '/events/' | relative_url }}" {% if page.url contains '/events' %}class="active"{% endif %}>EVENTS</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>CONTACT & BOOK</a></li>
+    </ul>
+  </nav>
+
   <footer class="site-footer">
     <div class="social-links">
       {% if site.bandcamp_username %}
