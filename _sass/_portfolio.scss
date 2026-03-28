@@ -209,6 +209,12 @@
     margin: 2px;
   }
 
+  /* Disable category tag clicks on mobile grid */
+  .category-tag {
+    pointer-events: none;
+    cursor: default;
+  }
+
 }
 
 @media (max-width: 480px) {
