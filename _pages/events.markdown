@@ -55,7 +55,7 @@ image: /assets/bio/bio-photo.jpg
           <div class="event-col-venue">{% if event.venue_link and event.venue_link != "" %}<a href="{{ event.venue_link }}" target="_blank" rel="noopener noreferrer">{{ event.venue_name }}</a>{% else %}{{ event.venue_name }}{% endif %}{% if event.venue_address %}<span class="event-venue-address">{{ event.venue_address }}</span>{% endif %}</div>
           <div class="event-col-tickets">
             {% if event.ticket_link and event.ticket_link != "" %}
-            <a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer" class="event-ticket-link">Tickets</a>
+            <a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer" class="event-ticket-link">TICKETS</a>
             <span class="event-ticket-qr" data-ticket-url="{{ event.ticket_link }}"></span>
             {% endif %}
           </div>
@@ -63,7 +63,7 @@ image: /assets/bio/bio-photo.jpg
             {% if event.work_id %}
               {% assign linked_work = site.portfolio | where: "work_id", event.work_id | first %}
               {% if linked_work %}
-                <a href="{{ linked_work.url }}" class="event-work-link">{{ linked_work.title }}</a>
+                <a href="{{ linked_work.url }}" class="event-work-link">{{ linked_work.title | upcase }}</a>
               {% endif %}
             {% endif %}
           </div>
