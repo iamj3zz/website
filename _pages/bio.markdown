@@ -189,10 +189,10 @@ links:
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Mizik O Marmay Festival ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Rdv aux jardins ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Széllkapu, Millenáris, Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2013–2014</span> STEPS AHEAD ∙ Florence ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2013</span> U-CARE ∙ Florence ∙ IT</div>
-        <div class="bio-item"><span class="bio-year">2012</span> EUTROPIA ∙ Lille ∙ FR</div>
-        <div class="bio-item"><span class="bio-year">2011</span> FOLLOW-UP ∙ Budapest / Barcelona ∙ HU/ES</div>
+        <div class="bio-item"><span class="bio-year">2013–2014</span> <a href="/works/2013-08-01-work-steps-ahead/">STEPS AHEAD</a> ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-07-01-work-u-care/">U-CARE</a> ∙ Florence ∙ IT</div>
+        <div class="bio-item"><span class="bio-year">2012</span> <a href="/works/2012-09-01-work-eutropia-coaching/">EUTROPIA</a> ∙ Lille ∙ FR</div>
+        <div class="bio-item"><span class="bio-year">2011</span> <a href="/works/2011-02-01-work-follow-up/">FOLLOW-UP</a> ∙ Budapest / Barcelona ∙ HU/ES</div>
       </div>
     </div>
 
@@ -211,6 +211,9 @@ links:
     <div class="bio-category" id="bio-education">
       <h2>Education &amp; Certificates</h2>
       <div class="bio-items">
+        <div class="bio-item"><span class="bio-year">2026–2028</span> COP Cycle (planned — until diploma) ∙ <a target="_blank" href="https://conservatoire.regionreunion.com/">CONSERVATOIRE À RAYONNEMENT RÉGIONAL DE LA RÉUNION</a> ∙ Saint-Denis ∙ RE</div>      
+        <div class="bio-item"><span class="bio-year">2025–2026</span> SAS Cycle ∙ <a target="_blank" href="https://conservatoire.regionreunion.com/">CONSERVATOIRE À RAYONNEMENT RÉGIONAL DE LA RÉUNION</a> ∙ Saint-Denis ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">2023–2025</span> Cycle Projet (Informatique Musicale) ∙ <a target="_blank" href="https://conservatoire.regionreunion.com/">CONSERVATOIRE À RAYONNEMENT RÉGIONAL DE LA RÉUNION</a> ∙ Saint-Denis ∙ RE</div>        
         <div class="bio-item"><span class="bio-year">2024-2025</span> Training ∙ TouchDesigner Class ∙ <a target="_blank" href="https://thenodeinstitute.org/">THE NODE INSTITUTE</a> ∙ Berlin ∙ DE</div>
         <div class="bio-item"><span class="bio-year">2024</span><span> Training ∙ Practice Self-Induced Cognitive Trance in the context of professional use in the artistic sector ∙ <a href="https://trancelabinstitute.com/" target="_blank">TRANCELAB Training Institute</a> ∙ Saint-Denis ∙ FR</span></div>
         <div class="bio-item"><span class="bio-year">2022</span> Training ∙ Mindfulness-Based Cognitive Therapy Protocol ∙ <a href="http://www.pleineconscience.re/" target="_blank">MBSR-MBCT Océan Indien</a> ∙ Saint-Denis ∙ RE</div>
