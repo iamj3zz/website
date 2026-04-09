@@ -2,7 +2,8 @@
 published: true
 status: major
 layout: work
-title: "HYBRIS EX NIHILO (Live)"
+title: "HYBRIS EX NIHILO"
+print_hero_image: true
 work_id: hybris-ex-nihilo-live
 abstract: |
   A trio of pure improvisation recordings for acoustic cello and violin.
@@ -10,7 +11,7 @@ description: |
   HYBRIS EX NIHILO (Live) is a live album by J3ZZ, comprising three pure improvisation recordings for acoustic cello and violin. The album was recorded live with Endre Kertész on cello and J3ZZ on violin — no overdubs, no electronics, just two instruments and the moment.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2015-05-10-rels-ex-nihilo/thumbnail.jpg
 
 metadata:
   release_date: "2015-05-10"
