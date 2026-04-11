@@ -71,9 +71,9 @@ links:
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-04-13-rels-stereo-woods/">STEREO WOODS</a></div>
         <div class="bio-item"><span class="bio-year">2020</span> <a href="/works/2020-05-20-rels-a-drop-in-the-ocean/">A DROP IN THE OCEAN</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-05-10-rels-ex-nihilo/">EX NIHILO</a></div>        
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-rels-massolit-series-live/">MASSOLIT SERIES (Live)</a></div>
+        <!--<div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-10-rels-massolit-series-live/">MASSOLIT SERIES (Live)</a></div>
         <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-fkse/">SUR LE FIL (Live at FKSE)</a></div>
-        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor)</a></div>
+        <div class="bio-item"><span class="bio-year">2015</span> <a href="/works/2015-09-12-rels-sur-le-fil-live-at-frau-frisor/">SUR LE FIL (Live at Frau Frisor)</a></div>-->
       </div>
 
       <div class="bio-section-subtitle">Theatre &amp; Dance</div>

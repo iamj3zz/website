@@ -4,6 +4,7 @@ status: major
 layout: work
 title: "SUR LE FIL (Live at FKSE)"
 work_id: sur-le-fil-live-fkse
+published: false
 abstract: |
   Live recording of the Sur le fil solo violin improvisation at FKSE Studio Gallery, Budapest, July 2, 2015. Released digitally on September 12, 2015.
 description: |
