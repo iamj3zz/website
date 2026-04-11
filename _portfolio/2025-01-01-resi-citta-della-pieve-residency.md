@@ -11,17 +11,17 @@ description: |
   J3ZZ participated in an artistic residency in Citta Della Pieve, Italy. This residency provided an opportunity for creative exploration and development of the Vibrotanica immersive interactive installation. The historic Italian town, known for its rich cultural heritage and artistic traditions, offered an inspiring environment for developing this work exploring the symbiotic relationship between humans and plants through bioelectrical sensors and real-time audiovisual transformation.
 category: residencies
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2025-01-01-resi-citta-della-pieve-residency/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
   release_date: "2025-01-01"
   location: "Citta Della Pieve, Italy"
   role: "sound artist, composer"
-  custom:
-    - label: "Output Work"
-      value: "Vibrotanica (immersive interactive installation)"
-      link: "/works/2026-01-01-inst-vibrotanica/"
+  # custom:
+  #   - label: "Output Work"
+  #     value: "Vibrotanica (immersive interactive installation)"
+  #     link: "/works/2026-01-01-inst-vibrotanica/"
 
 sections:
   - type: description
@@ -33,8 +33,6 @@ sections:
       The residency enabled the development and refinement of the "Vibrotanica box" — a custom bioelectrical sensor system designed by the artist to capture micro-electrical variations in plants. This technology transforms plant bio-signals into real-time sounds and visuals, creating an immersive experience that explores the symbiotic relationship between humans and nature.
 
       The work combines ambisonic audio, HD projection, generative visuals, and complex software interfaces to create an atmosphere where each interaction between visitors and plants triggers a unique audiovisual response.
-
-      → [View the Vibrotanica installation](/works/2026-01-01-inst-vibrotanica/)
 
   - type: metadata
 ---
