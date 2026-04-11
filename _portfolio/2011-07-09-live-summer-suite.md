@@ -3,7 +3,6 @@ published: true
 status: minor
 layout: work
 title: "SUMMER SUITE"
-print_hero_image: true 
 work_id: summer-suite
 abstract: |
   J3ZZ performed as violin soloist in Summer Suite — a live work-show for 25 young dancers and musicians at the Anfiteatro delle Cascine, Florence, directed by composer Alessandro Nisticò as part of Estate Fiorentina 2011.
@@ -35,6 +34,10 @@ metadata:
       link: "http://rootsnroutes.eu"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2011-07-09-live-summer-suite/hero.jpg
+    # caption: "Anfiteatro delle Cascine, Florence, July 2011"
+  
   - type: description
 
   - type: linked-events
