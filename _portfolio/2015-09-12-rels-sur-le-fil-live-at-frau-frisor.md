@@ -4,6 +4,7 @@ status: major
 layout: work
 title: "SUR LE FIL (Live at Frau Frisor)"
 work_id: sur-le-fil-live-frau-frisor
+published: false
 abstract: |
   Live recording of the Sur le fil solo violin improvisation premiere at Frau Frisor, Florence, September 12, 2013. Released digitally on September 12, 2015.
 description: |
