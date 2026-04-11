@@ -40,6 +40,8 @@ metadata:
       link: "https://rootsnroutes.eu/projects-id63"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2011-02-01-work-follow-up/hero.jpg  
   - type: description
   - type: metadata
 ---

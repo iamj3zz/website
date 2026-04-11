@@ -41,6 +41,10 @@ metadata:
       link: "http://rootsnroutes.eu/projects-id65"
 
 sections:
+  
+  - type: hero-image
+    image: /assets/works/2013-07-01-work-u-care/hero.jpg
+        
   - type: description
   - type: metadata
 ---

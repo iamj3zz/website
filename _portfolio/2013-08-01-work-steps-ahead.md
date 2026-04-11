@@ -44,6 +44,9 @@ metadata:
       link: "https://fabbricaeuropa.net/en/projects/"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2013-08-01-work-steps-ahead/hero.jpg
+      
   - type: description
   - type: metadata
 ---

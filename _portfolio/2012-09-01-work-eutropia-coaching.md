@@ -44,6 +44,9 @@ metadata:
       link: "https://rootsnroutes.eu/projects-id59"
 
 sections:
+  - type: hero-image
+    image: /assets/works/2012-09-01-work-eutropia-coaching/hero.jpg
+    
   - type: description
   - type: metadata
 ---
