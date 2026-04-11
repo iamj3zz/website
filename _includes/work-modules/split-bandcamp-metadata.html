@@ -63,6 +63,17 @@
           <p class="iframe-caption">{{ include.caption }}</p>
         {% endif %}
       </div>
+
+      <!-- Print fallback: hide iframe, show QR code + URL -->
+      <div class="iframe-print-fallback" style="display:none;">
+        <div class="iframe-qr-placeholder" data-url="{{ src_url }}"></div>
+        <div class="iframe-print-text">
+          <span class="iframe-print-link">{{ src_url }}</span>
+          {% if include.caption %}
+            <span class="iframe-print-caption">{{ include.caption }}</span>
+          {% endif %}
+        </div>
+      </div>
     </div>
 
     {% comment %} Right column - Metadata (2/3 width) {% endcomment %}
