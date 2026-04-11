@@ -26,7 +26,8 @@ metadata:
       link: "https://vibrotanica.j3zz.com"
 
 sections:
-
+  - type: hero-image
+    image: /assets/works/2026-01-01-inst-vibrotanica/hero.jpg
   - type: description
 
   - type: text

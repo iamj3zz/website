@@ -10,7 +10,7 @@ description: |
   This was a short artist residency at Château Éphémère in fall 2018 enabling collaboration between various artists and creative coders. Organized with Adami as part of Culture Experience Days, the initiative brought together "30 creators with complementary profiles to prototype the sound and scenic devices of tomorrow." The residency resulted in a performance showcasing the prototyped sound and scenic devices.
 category: residencies
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
+image: /assets/works/2018-01-01-resi-music-maker-2/thumbnail.jpg
 
 # Define metadata once here - it will be used by all modules below
 metadata:
@@ -28,4 +28,7 @@ metadata:
 
 sections:
   # TODO: Add sections here
+  - type: hero-image
+    image: /assets/works/2018-01-01-resi-music-maker-2/hero.jpg
+   
 ---
