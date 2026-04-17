@@ -37,7 +37,7 @@
 }
 
 .bio-text {
-  text-align: justify;
+  text-align: left;
 }
 
 .bio-text p {
@@ -54,7 +54,9 @@
 
 .bio-image img {
   width: 100%;
-  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  object-position: center top;
   display: block;
 }
 
@@ -142,7 +144,7 @@
   }
 
   .bio-text {
-    text-align: justify;
+    text-align: left;
   }
 }
 
