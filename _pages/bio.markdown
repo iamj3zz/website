@@ -6,18 +6,14 @@ description: "J3ZZ is a French artist working in the transitional area between s
 image: /assets/bio/bio-photo.jpg
 bio_image: /assets/bio/bio-photo.jpg
 links:
+  - title: CV
+    url: /assets/bio/cv.pdf
+  - title: Press Kit
+    url: /assets/bio/press-kit.pdf
+  - title: Pictures
+    url: /bio-gallery/
   - title: IMDb
     url: https://www.imdb.com/name/nm6903099/
-    
-# links:
-#   - title: CV
-#     url: /assets/bio/cv.pdf
-#   - title: Press Kit
-#     url: /assets/bio/press-kit.pdf
-#   - title: Pictures
-#     url: /bio-gallery/
-#   - title: IMDb
-#     url: https://www.imdb.com/name/nm6903099/
 ---
 
 <section class="bio-section">
@@ -90,7 +86,7 @@ links:
         <div class="bio-item"><span class="bio-year">2013</span> <a href="/works/2013-04-19-perf-touch-me-not-nebancsvirag/">TOUCH ME NOT</a> ∙  Zoltán Grecsó </div>
       </div>
 
-      <div class="bio-section-subtitle">Films</div>
+      <div class="bio-section-subtitle">Films ∙ <a href="https://www.imdb.com/name/nm6903099/" target="_blank" rel="noopener noreferrer">IMDb</a></div>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2020</span><a href="/works/2020-08-18-film-valaszuton-crossroads/">CROSSROADS</a> ∙ fiction short ∙ Flora Chilton </div>
         <div class="bio-item"><span class="bio-year">2017</span> <a href="/works/2017-01-01-film-grantraeet/">GRANTRAEET</a> ∙ fiction short ∙ Amalie Halsey </div>
