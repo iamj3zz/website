@@ -244,17 +244,17 @@
 
       <div class="work-nav">
         <div class="work-nav-left">
-          {% comment %} Find previous published work (older) {% endcomment %}
+          {% comment %} Find previous work in grid (newer, earlier in newest-first order) {% endcomment %}
           {% assign prev_work = nil %}
-          {% assign sorted_portfolio_reverse = site.portfolio | sort: 'metadata.release_date' | reverse %}
-          {% assign found_current_prev = false %}
-          {% for work in sorted_portfolio_reverse %}
-            {% if found_current_prev and work.published != false %}
+          {% assign found_current = false %}
+          {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' %}
+          {% for work in sorted_portfolio %}
+            {% if found_current and work.published != false and work.show_in_grid != false %}
               {% assign prev_work = work %}
               {% break %}
             {% endif %}
             {% if work.url == page.url %}
-              {% assign found_current_prev = true %}
+              {% assign found_current = true %}
             {% endif %}
           {% endfor %}
 
@@ -273,17 +273,17 @@
         </div>
 
         <div class="work-nav-right">
-          {% comment %} Find next published work (newer) {% endcomment %}
+          {% comment %} Find next work in grid (older, later in newest-first order) {% endcomment %}
           {% assign next_work = nil %}
-          {% assign found_current = false %}
-          {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' %}
-          {% for work in sorted_portfolio %}
-            {% if found_current and work.published != false %}
+          {% assign found_current_next = false %}
+          {% assign sorted_portfolio_reverse = site.portfolio | sort: 'metadata.release_date' | reverse %}
+          {% for work in sorted_portfolio_reverse %}
+            {% if found_current_next and work.published != false and work.show_in_grid != false %}
               {% assign next_work = work %}
               {% break %}
             {% endif %}
             {% if work.url == page.url %}
-              {% assign found_current = true %}
+              {% assign found_current_next = true %}
             {% endif %}
           {% endfor %}
 
