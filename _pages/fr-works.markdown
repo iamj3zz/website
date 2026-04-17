@@ -1,24 +1,24 @@
 ---
 layout: portfolio
-title: Works
-permalink: /works/
-description: "Portfolio of J3ZZ — immersive installations, live acts, films, performances, releases, and workshops."
+title: Œuvres
+permalink: /fr/works/
+description: "Portfolio de J3ZZ — installations immersives, lives, films, performances, sorties discographiques et ateliers."
 image: /assets/works/2020-08-18-inst-iris/thumbnail.jpg
-lang: en
-lang_alternate: /fr/works/
+lang: fr
+lang_alternate: /works/
 ---
 
-<h1 class="visually-hidden">Works</h1>
+<h1 class="visually-hidden">Œuvres</h1>
 
 <section id="works">
   <div class="filter-container">
-    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn active" data-filter="all">Tout</button>
     <button class="filter-btn" data-filter="installations">Installations</button>
-    <button class="filter-btn" data-filter="live-acts">Live Acts</button>
+    <button class="filter-btn" data-filter="live-acts">Lives</button>
     <button class="filter-btn" data-filter="films">Films</button>
     <button class="filter-btn" data-filter="performances">Performances</button>
     <button class="filter-btn" data-filter="releases">Releases</button>
-    <button class="filter-btn" data-filter="workshops">Workshops</button>
+    <button class="filter-btn" data-filter="workshops">Ateliers</button>
   </div>
 
   <div class="portfolio-grid">
@@ -82,7 +82,24 @@ lang_alternate: /fr/works/
 
       {% if cat_works.size > 0 %}
         <div class="works-print-category-section">
-          <h2 class="works-print-category-header">{{ cat | replace: '-', ' ' | upcase }}</h2>
+          {% comment %} Translate category headers to French {% endcomment %}
+          {% case cat %}
+            {% when 'installations' %}
+              {% assign cat_label = 'INSTALLATIONS' %}
+            {% when 'live-acts' %}
+              {% assign cat_label = 'LIVES' %}
+            {% when 'films' %}
+              {% assign cat_label = 'FILMS' %}
+            {% when 'performances' %}
+              {% assign cat_label = 'PERFORMANCES' %}
+            {% when 'releases' %}
+              {% assign cat_label = 'RELEASES' %}
+            {% when 'workshops' %}
+              {% assign cat_label = 'ATELIERS' %}
+            {% else %}
+              {% assign cat_label = cat | replace: '-', ' ' | upcase %}
+          {% endcase %}
+          <h2 class="works-print-category-header">{{ cat_label }}</h2>
           {% for item in cat_works %}
             <div class="works-list-row" data-work-url="{{ site.url }}{{ item.url }}">
               <div class="works-col-image">
@@ -104,28 +121,28 @@ lang_alternate: /fr/works/
                 {% if item.description %}
                 <div class="works-col-description">{{ item.description }}</div>
                 {% endif %}
-                {% comment %} Build metadata string WITHOUT categories {% endcomment %}
+                {% comment %} Build metadata string WITHOUT categories — with French labels {% endcomment %}
                 {% assign metadata_string = "" %}
                 {% if item.metadata.release_date %}
-                  {% assign formatted_date = item.metadata.release_date | date: "%B %-d, %Y" %}
+                  {% assign formatted_date = item.metadata.release_date | date: "%d %B %Y" %}
                   {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-                  {% assign metadata_string = metadata_string | append: "Released: " | append: formatted_date %}
+                  {% assign metadata_string = metadata_string | append: "Sorti le: " | append: formatted_date %}
                 {% endif %}
                 {% if item.metadata.location %}
                   {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-                  {% assign metadata_string = metadata_string | append: "Location: " | append: item.metadata.location %}
+                  {% assign metadata_string = metadata_string | append: "Lieu: " | append: item.metadata.location %}
                 {% endif %}
                 {% if item.metadata.role %}
                   {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-                  {% assign metadata_string = metadata_string | append: "Role: " | append: item.metadata.role %}
+                  {% assign metadata_string = metadata_string | append: "Rôle: " | append: item.metadata.role %}
                 {% endif %}
                 {% if item.metadata.technology %}
                   {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-                  {% assign metadata_string = metadata_string | append: "Technology: " | append: item.metadata.technology %}
+                  {% assign metadata_string = metadata_string | append: "Technologie: " | append: item.metadata.technology %}
                 {% endif %}
                 {% if item.metadata.collaborators %}
                   {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-                  {% assign metadata_string = metadata_string | append: "Collaborators: " | append: item.metadata.collaborators %}
+                  {% assign metadata_string = metadata_string | append: "Collaborateurs: " | append: item.metadata.collaborators %}
                 {% endif %}
                 {% if item.metadata.client %}
                   {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
@@ -133,7 +150,7 @@ lang_alternate: /fr/works/
                 {% endif %}
                 {% if item.metadata.commissioned_by %}
                   {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}
-                  {% assign metadata_string = metadata_string | append: "Commissioned by: " | append: item.metadata.commissioned_by %}
+                  {% assign metadata_string = metadata_string | append: "Commandé par: " | append: item.metadata.commissioned_by %}
                 {% endif %}
                 {% if item.metadata.isrc %}
                   {% if metadata_string != "" %}{% assign metadata_string = metadata_string | append: " • " %}{% endif %}

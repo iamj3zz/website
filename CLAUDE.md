@@ -129,7 +129,8 @@ This project's documentation is organized into topic-specific files for performa
 **Reference:** [Content Management](docs/content-management.md#events)
 
 ### Modifying Site Pages
-- **Bio:** `_pages/bio.markdown` — See [Content Coherence Framework](docs/CONTENT-COHERENCE.md) for CV section structure
+- **Bio:** `_pages/bio.markdown` — See [Content Coherence Framework](docs/CONTENT-COHERENCE.md) for CV section structure. IMDb composer profile linked in top links block and inline next to "Films" subtitle.
+- **Bio Gallery:** `_pages/bio-gallery.markdown` — Currently shows "coming soon" message. Add press photos when ready.
 - **Events:** `_pages/events.markdown` — Includes year navigation widget
 - **Contact:** `_pages/contact.markdown`
 - **Homepage:** `_pages/index.markdown` or manage via `_portfolio/` collection

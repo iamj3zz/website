@@ -1,0 +1,12 @@
+nav:
+  bio: "BIO"
+  works: "ŒUVRES"
+  gallery: "GALERIE"
+  events: "AGENDA"
+  releases: "RELEASES"
+  contact: "CONTACT & BOOK"
+  book: "BOOK"
+
+lang_switcher:
+  label_en: "EN"
+  label_fr: "FR"

@@ -201,21 +201,12 @@ All pages (BIO, BIO GALLERY, WORKS, EVENTS, CONTACT) are optimized for A4 print 
 - Clean typography with year-based organization
 - Print-specific styles in `portfolio.css` (lines 1762-2148)
 
-**BIO GALLERY Page Print Layout:**
-- Professional press photo gallery optimized for A4 print
-- Single-column vertical layout for optimal print quality:
-  - **QR code** (40x40px) at top of each entry
-  - **Image caption** below QR code (11px, descriptive text)
-  - **Full-width image** at bottom with border
-- Each gallery item is kept together (no page breaks within items)
-- JavaScript: `bio-gallery-qrcode.js` generates QR codes for direct image download URLs
-- Gallery images configured via front matter with `gallery_images` array:
-  - Each entry has `filename` and `caption` fields
-  - Captions provide context about the photo (event, equipment, context)
-- Contact information displayed at bottom for press inquiries
-- Print-specific styles in `_sass/_bio-gallery.scss`
-- Web version shows 4-column grid with lightbox; print shows vertical layout
-- Hidden elements in print: download instructions, web-only intro text
+**BIO GALLERY Page:**
+- Currently displays a "coming soon" message with press contact email (contact@j3zz.com)
+- Gallery images not yet ready for publication
+- When ready: will show press photos with download instructions, 4-column grid with lightbox on web, single-column print layout with QR codes
+- Gallery images will be configured via `gallery_images` front matter array (each entry: `filename` + `caption`)
+- Images go in `assets/bio/gallery/`
 
 **EVENTS Page Print Layout:**
 - Chronological event listing optimized for print
@@ -301,6 +292,9 @@ Optional work description content in markdown.
   2. **Modular layout**: Flexible sections system (see [Modules Reference](modules-reference.md))
 - Work title and category/categories display
 - Navigation: Previous work (← left) | Back to Works (center) | Next work (→ right)
+  - Navigation follows portfolio grid order (sorted by `metadata.release_date`, newest first)
+  - Only navigates between published works visible in the grid (`show_in_grid != false`)
+  - Each nav link shows work title + category below (subtitle style)
 - Lightbox system for image viewing with captions and keyboard navigation
 
 **Active Navigation States:**
@@ -354,6 +348,12 @@ The portfolio and gallery grids provide adaptive touch interaction based on grid
 - **1-column:** Natural scroll-focused interaction, one item dominates screen
 - **Multi-column:** Labels always visible, clean grid, no interaction needed for titles
 - **Desktop:** Hover overlays, unchanged
+
+## Typography Notes
+
+- All prose text on screen uses `text-align: left` (not justify) — WCAG 1.4.8 compliance
+- Print stylesheets (`_print.scss`) retain `text-align: justify` (correct for printed documents)
+- Affected files: `_bio.scss`, `_work-modules.scss`, `_events.scss`, `_work-detail.scss`, `_contact.scss`, `_portfolio.scss`
 
 ## Color Scheme
 
@@ -608,20 +608,7 @@ All page files are located in the `_pages/` directory:
 - **Privacy**: Edit `_pages/privacy.markdown`
 - **Homepage/Works Grid**: Edit `_pages/index.markdown` or managed by portfolio collection in `_portfolio/`
 
-**Bio Gallery Front Matter Structure:**
-```yaml
----
-layout: bio-gallery
-title: Bio Gallery
-permalink: /bio-gallery/
-gallery_images:
-  - filename: photo-01.jpg
-    caption: Descriptive caption with event and equipment details
-  - filename: photo-02.jpg
-    caption: Another descriptive caption
----
-```
-Gallery images should be placed in `assets/img/bio-gallery/` directory.
+**Bio Gallery:** Currently shows "coming soon" message. When ready to add press photos, populate the `gallery_images` array in `_pages/bio-gallery.markdown` and place images in `assets/bio/gallery/`.
 
 ## Updating Logo
 

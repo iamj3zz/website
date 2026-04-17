@@ -1,11 +1,11 @@
 ---
 layout: portfolio
-title: "Events & Performances"
-permalink: /events/
-description: "Upcoming and past performances, installations, and exhibitions by J3ZZ. Live acts, sound art installations, and audiovisual performances worldwide."
+title: "Agenda"
+permalink: /fr/events/
+description: "Performances et installations à venir et passées de J3ZZ. Lives, installations sonores et performances audiovisuelles dans le monde entier."
 image: /assets/bio/bio-photo.jpg
-lang: en
-lang_alternate: /fr/events/
+lang: fr
+lang_alternate: /events/
 ---
 
 <section class="events-section">
@@ -38,12 +38,12 @@ lang_alternate: /fr/events/
     <div class="events-table">
       <div class="events-table-header">
         <div class="event-col-date">DATE</div>
-        <div class="event-col-time">TIME</div>
-        <div class="event-col-country">COUNTRY</div>
-        <div class="event-col-city">CITY</div>
-        <div class="event-col-venue">VENUE</div>
-        <div class="event-col-tickets">TICKETS</div>
-        <div class="event-col-work">WORK</div>
+        <div class="event-col-time">HEURE</div>
+        <div class="event-col-country">PAYS</div>
+        <div class="event-col-city">VILLE</div>
+        <div class="event-col-venue">LIEU</div>
+        <div class="event-col-tickets">BILLETS</div>
+        <div class="event-col-work">ŒUVRE</div>
       </div>
 
       {% for event in published_events %}
@@ -57,7 +57,7 @@ lang_alternate: /fr/events/
           <div class="event-col-venue">{% if event.venue_link and event.venue_link != "" %}<a href="{{ event.venue_link }}" target="_blank" rel="noopener noreferrer">{{ event.venue_name }}</a>{% else %}{{ event.venue_name }}{% endif %}{% if event.venue_address %}<span class="event-venue-address">{{ event.venue_address }}</span>{% endif %}</div>
           <div class="event-col-tickets">
             {% if event.ticket_link and event.ticket_link != "" %}
-            <a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer" class="event-ticket-link">TICKETS</a>
+            <a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer" class="event-ticket-link">BILLETS</a>
             <span class="event-ticket-qr" data-ticket-url="{{ event.ticket_link }}"></span>
             {% endif %}
           </div>

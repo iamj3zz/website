@@ -235,7 +235,7 @@ primary_category: installations  # Used for primary overlay color
 
 **IMPORTANT**: All new works should follow the standardized structure with centralized metadata and modular sections (see [Best Practices](best-practices.md)).
 
-**⭐ RECOMMENDED**: Copy `_portfolio/1900-01-01-complete-template.md` as your starting point - it includes ALL metadata fields and module types with comprehensive examples and guidance.
+**⭐ RECOMMENDED**: Copy `_portfolio/1900-01-01-TEMPLATE-all-layouts.md` as your starting point - it includes ALL metadata fields and module types with comprehensive examples and guidance.
 
 ### Recommended Approach - Modular Layout with Centralized Metadata
 

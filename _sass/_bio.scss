@@ -310,7 +310,8 @@
 /* Hide bio section navigation in print */
 @media print {
   .bio-nav-toggle,
-  .bio-nav-panel {
+  .bio-nav-panel,
+  .header-lang-switcher {
     display: none;
   }
 }

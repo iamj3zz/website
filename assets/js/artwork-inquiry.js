@@ -7,6 +7,8 @@
     const overlay = modal && modal.querySelector('.inquiry-modal-overlay');
     const form = document.getElementById('artwork-inquiry-form');
     const triggers = document.querySelectorAll('[data-inquiry-trigger]');
+    const pageLanguage = document.documentElement.lang || 'en';
+    const isFrench = pageLanguage === 'fr';
 
     if (!modal || !triggers.length) return;
 
@@ -43,7 +45,7 @@
         }
 
         const subjectField = form && form.querySelector('[name="_subject"]');
-        if (subjectField) subjectField.value = 'Artwork Inquiry: ' + dataTitle;
+        if (subjectField) subjectField.value = (isFrench ? 'Demande d\'information : ' : 'Artwork Inquiry: ') + dataTitle;
 
         const urlField = document.getElementById('inquiry-artwork-url');
         if (urlField) urlField.value = dataUrl;
@@ -51,7 +53,11 @@
         const textarea = document.getElementById('inquiry-message');
         if (textarea) {
           const mediumPart = dataMedium ? ' (' + dataMedium + (dataDimensions ? ', ' + dataDimensions : '') + ')' : '';
-          textarea.value = 'Hello,\n\nI am interested in acquiring "' + dataTitle + '"' + mediumPart + '.\n\nCould you please provide me with more information about:\n- The current availability and price\n- Shipping costs to my address (provided above)\n- Packaging and delivery conditions\n- Certificate of authenticity\n\nThank you,';
+          if (isFrench) {
+            textarea.value = 'Bonjour,\n\nJe suis intéressé(e) par l\'acquisition de « ' + dataTitle + ' »' + mediumPart + '.\n\nPourriez-vous me fournir plus d\'informations sur :\n- La disponibilité actuelle et le prix\n- Les frais d\'expédition à mon adresse (mentionnée ci-dessus)\n- Les conditions d\'emballage et de livraison\n- Le certificat d\'authenticité\n\nMerci,';
+          } else {
+            textarea.value = 'Hello,\n\nI am interested in acquiring "' + dataTitle + '"' + mediumPart + '.\n\nCould you please provide me with more information about:\n- The current availability and price\n- Shipping costs to my address (provided above)\n- Packaging and delivery conditions\n- Certificate of authenticity\n\nThank you,';
+          }
         }
       } else {
         // Detail page: restore defaults and set URL
