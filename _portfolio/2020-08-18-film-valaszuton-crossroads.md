@@ -39,6 +39,9 @@ metadata:
     - label: "IMDb"
       value: "tt11615846"
       link: "https://www.imdb.com/title/tt11615846/"
+    - label: "Composer Profile"
+      value: "J3ZZ on IMDb"
+      link: "https://www.imdb.com/name/nm6903099/"
 
 sections:
   - type: iframe

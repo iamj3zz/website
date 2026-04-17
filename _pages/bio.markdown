@@ -12,6 +12,8 @@ links:
     url: /assets/bio/press-kit.pdf
   - title: Pictures
     url: /bio-gallery/
+  - title: IMDb
+    url: https://www.imdb.com/name/nm6903099/
 ---
 
 <section class="bio-section">
