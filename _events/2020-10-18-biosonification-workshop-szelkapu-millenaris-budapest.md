@@ -11,5 +11,5 @@ venue_name: Széllkapu, Millenáris
 venue_address: "Kis Rókus utca 16-20, 1024 Budapest, Hungary"
 venue_link:
 ticket_link:
-description: Biosonification workshop conducted by J3ZZ at Széllkapu, Millenáris, Budapest — 30 participants.
+description: Biosonification workshop — 30 participants.
 ---

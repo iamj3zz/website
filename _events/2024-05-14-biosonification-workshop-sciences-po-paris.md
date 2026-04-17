@@ -11,5 +11,5 @@ venue_name: Sciences Po
 venue_address: "Paris, France"
 venue_link: https://www.sciencespo.fr/
 ticket_link:
-description: Biosonification workshop conducted by J3ZZ at Sciences Po, Paris — same day as the Racines & Résonances performance.
+description: Biosonification workshop — same day as the Racines & Résonances performance.
 ---

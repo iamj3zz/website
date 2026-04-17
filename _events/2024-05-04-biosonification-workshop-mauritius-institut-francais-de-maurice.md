@@ -11,5 +11,5 @@ venue_name: French Institute
 venue_address: "30 avenue Julius Nyerere, Beau-Bassin Rose Hill, Mauritius"
 venue_link: https://www.institutfrancais.mu/fr
 ticket_link:
-description: Biosonification workshop conducted by J3ZZ at Institut Français de Maurice, Rose-Hill (Mauritius) — 30 participants. Same day as the Racines & Résonances performance.
+description: Biosonification workshop — 30 participants. Same day as the Racines & Résonances performance.
 ---

@@ -11,5 +11,5 @@ venue_name: Sciences Po
 venue_address: "Paris, France"
 venue_link: https://www.sciencespo.fr/
 ticket_link:
-description: RACINES & RÉSONANCES performance at Sciences Po, Paris.
+description: RACINES & RÉSONANCES — Live performance. Impact Day.
 ---
