@@ -3,6 +3,7 @@
   padding: 40px 20px 30px;
   text-align: center;
   border-bottom: 1px solid #e0e0e0;
+  position: relative;
 }
 
 .site-logo {
@@ -221,6 +222,46 @@
   font-size: 12px;
 }
 
+/* Language Switcher */
+.nav-lang {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.header-lang-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.header-lang-link {
+  font-size: 13px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 3px 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+  color: #aaa;
+
+  &.is-active {
+    background: #333;
+    color: #fff;
+  }
+
+  &:hover:not(.is-active) {
+    color: #333;
+  }
+}
+
+.header-lang-sep {
+  color: #ddd;
+  font-size: 11px;
+  user-select: none;
+}
+
 /* Header CTA link — mobile only */
 .header-cta {
   display: none;
@@ -296,6 +337,16 @@
     flex-direction: column;
     gap: 15px;
     padding: 20px 0;
+  }
+
+  /* Language switcher on mobile: flows inside nav menu */
+  .nav-lang {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    padding-top: 5px;
+    border-top: 1px solid #e0e0e0;
   }
 }
 

@@ -1,0 +1,18 @@
+{% assign lang = page.lang | default: 'en' %}
+{% if page.lang_alternate %}
+  {% if lang == 'fr' %}
+    {% assign en_url = page.lang_alternate %}
+    {% assign fr_url = page.url %}
+  {% else %}
+    {% assign en_url = page.url %}
+    {% assign fr_url = page.lang_alternate %}
+  {% endif %}
+{% else %}
+  {% assign en_url = '/bio/' %}
+  {% assign fr_url = '/fr/bio/' %}
+{% endif %}
+<span class="header-lang-switcher">
+  <a href="{{ en_url }}" class="header-lang-link{% if lang == 'en' %} is-active{% endif %}" hreflang="en">EN</a>
+  <span class="header-lang-sep">|</span>
+  <a href="{{ fr_url }}" class="header-lang-link{% if lang == 'fr' %} is-active{% endif %}" hreflang="fr">FR</a>
+</span>

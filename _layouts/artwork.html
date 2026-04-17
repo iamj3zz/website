@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,13 @@
   {% include cookie-consent.html %}
 
   <header class="site-header">
+    {% assign _lang = page.lang | default: 'en' %}{% assign t = site.data.translations[_lang] %}
     <div class="site-logo">
       <a href="{{ '/' | relative_url }}">
         <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
       </a>
     </div>
-    <a href="{{ '/contact/' | relative_url }}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="Book J3ZZ">BOOK</a>
+    <a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="Book J3ZZ">{{ t.nav.book }}</a>
     <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -27,11 +28,12 @@
     </button>
     <nav class="main-nav">
       <ul>
-        <li><a href="{{ '/bio/' | relative_url }}" {% if page.url contains '/bio' %}class="active"{% endif %}>BIO</a></li>
-        <li><a href="{{ '/works/' | relative_url }}" {% if page.url contains '/works' %}class="active"{% endif %}>WORKS</a></li>
-        <li><a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery' %}class="active"{% endif %}>GALLERY</a></li>
-        <li><a href="{{ '/events/' | relative_url }}" {% if page.url contains '/events' %}class="active"{% endif %}>EVENTS</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}" class="nav-cta{% if page.url contains '/contact' %} active{% endif %}">CONTACT & BOOK</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/bio/{% else %}/bio/{% endif %}" {% if page.url contains '/bio' %}class="active"{% endif %}>{{ t.nav.bio }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/works/{% else %}/works/{% endif %}" {% if page.url contains '/works' %}class="active"{% endif %}>{{ t.nav.works }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}" {% if page.url contains '/gallery' %}class="active"{% endif %}>{{ t.nav.gallery }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/events/{% else %}/events/{% endif %}" {% if page.url contains '/events' %}class="active"{% endif %}>{{ t.nav.events }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="nav-cta{% if page.url contains '/contact' %} active{% endif %}">{{ t.nav.contact }}</a></li>
+        <li class="nav-lang">{% include lang-switcher.html %}</li>
       </ul>
     </nav>
   </header>
@@ -315,11 +317,11 @@
 
   <nav class="bottom-nav" aria-label="Bottom navigation">
     <ul>
-      <li><a href="{{ '/bio/' | relative_url }}" {% if page.url contains '/bio' %}class="active"{% endif %}>BIO</a></li>
-      <li><a href="{{ '/works/' | relative_url }}" {% if page.url contains '/works' %}class="active"{% endif %}>WORKS</a></li>
-      <li><a href="{{ '/gallery/' | relative_url }}" {% if page.url contains '/gallery' %}class="active"{% endif %}>GALLERY</a></li>
-      <li><a href="{{ '/events/' | relative_url }}" {% if page.url contains '/events' %}class="active"{% endif %}>EVENTS</a></li>
-      <li><a href="{{ '/contact/' | relative_url }}" {% if page.url contains '/contact' %}class="active"{% endif %}>CONTACT & BOOK</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/bio/{% else %}/bio/{% endif %}" {% if page.url contains '/bio' %}class="active"{% endif %}>{{ t.nav.bio }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/works/{% else %}/works/{% endif %}" {% if page.url contains '/works' %}class="active"{% endif %}>{{ t.nav.works }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}" {% if page.url contains '/gallery' %}class="active"{% endif %}>{{ t.nav.gallery }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/events/{% else %}/events/{% endif %}" {% if page.url contains '/events' %}class="active"{% endif %}>{{ t.nav.events }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" {% if page.url contains '/contact' %}class="active"{% endif %}>{{ t.nav.contact }}</a></li>
     </ul>
   </nav>
 

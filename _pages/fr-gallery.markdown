@@ -1,17 +1,17 @@
 ---
 layout: portfolio
-title: "Gallery — Visual Art by J3ZZ"
-permalink: /gallery/
-description: "Original ink drawings and visual artworks by J3ZZ. The Cartography of Collapse series — 16 drawings tracing geological transformation from formation through dissolution."
+title: "Galerie — Œuvres visuelles par J3ZZ"
+permalink: /fr/gallery/
+description: "Dessins originaux à l'encre et œuvres visuelles par J3ZZ. La série Cartography of Collapse — 16 dessins traçant la transformation géologique de la formation à la dissolution."
 image: /assets/artworks/2026-03-16-fading-lines/thumbnail.png
-lang: en
-lang_alternate: /fr/gallery/
+lang: fr
+lang_alternate: /gallery/
 ---
 
 {% include artwork-inquiry-modal.html %}
 
 <div class="gallery-list-print">
-  <div class="gallery-print-header">GALLERY — Visual Art by J3ZZ</div>
+  <div class="gallery-print-header">GALERIE — Œuvres visuelles par J3ZZ</div>
   {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
   {% for artwork in sorted_artworks %}
     {% if artwork.published == false %}{% continue %}{% endif %}
@@ -36,7 +36,7 @@ lang_alternate: /fr/gallery/
 </div>
 
 <section class="gallery-section">
-  <h1 class="visually-hidden">Gallery</h1>
+  <h1 class="visually-hidden">Galerie</h1>
   <div class="gallery-grid">
     {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
     {% for artwork in sorted_artworks %}
@@ -51,25 +51,25 @@ lang_alternate: /fr/gallery/
           {% if artwork.dimensions %}<p class="gallery-overlay-dimensions">{{ artwork.dimensions }}</p>{% endif %}
           {% if artwork.year %}<p class="gallery-overlay-year">{{ artwork.year }}</p>{% endif %}
           {% if artwork.status == "available" or artwork.status == nil %}
-            <span class="gallery-status-badge gallery-status-badge--available">AVAILABLE</span>
+            <span class="gallery-status-badge gallery-status-badge--available">DISPONIBLE</span>
             <button class="gallery-inquiry-btn" data-inquiry-trigger
                     data-title="{{ artwork.title }}"
                     data-medium="{{ artwork.medium }}"
                     data-dimensions="{{ artwork.dimensions }}"
                     data-year="{{ artwork.year }}"
                     data-url="{{ artwork.url | absolute_url }}">
-                        INQUIRE ABOUT THIS WORK
+                        S'INFORMER SUR CETTE ŒUVRE
             </button>
           {% endif %}
-          {% if artwork.status == "sold" %}<span class="gallery-status-badge gallery-status-badge--sold">SOLD</span>{% endif %}
-          {% if artwork.status == "reserved" %}<span class="gallery-status-badge gallery-status-badge--reserved">RESERVED</span>{% endif %}
+          {% if artwork.status == "sold" %}<span class="gallery-status-badge gallery-status-badge--sold">VENDU</span>{% endif %}
+          {% if artwork.status == "reserved" %}<span class="gallery-status-badge gallery-status-badge--reserved">RÉSERVÉ</span>{% endif %}
         </div>
         <button
           class="gallery-heart-btn"
           data-heart-btn
           data-artwork-slug="{{ artwork.url }}"
           data-artwork-title="{{ artwork.title }}"
-          aria-label="Like {{ artwork.title }}"
+          aria-label="Aimer {{ artwork.title }}"
           aria-pressed="false"
           type="button"
         >
