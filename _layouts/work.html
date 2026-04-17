@@ -261,7 +261,10 @@
           {% if prev_work %}
             <a href="{{ prev_work.url | relative_url }}" class="work-nav-link">
               <span class="nav-arrow">&larr;</span>
-              <span class="nav-label">{{ prev_work.title }}</span>
+              <span class="nav-text">
+                <span class="nav-label">{{ prev_work.title }}</span>
+                <span class="nav-title">{{ prev_work.category | replace: '-', ' ' | capitalize }}</span>
+              </span>
             </a>
           {% else %}
             <span class="work-nav-disabled"></span>
@@ -289,7 +292,10 @@
 
           {% if next_work %}
             <a href="{{ next_work.url | relative_url }}" class="work-nav-link">
-              <span class="nav-label">{{ next_work.title }}</span>
+              <span class="nav-text">
+                <span class="nav-label">{{ next_work.title }}</span>
+                <span class="nav-title">{{ next_work.category | replace: '-', ' ' | capitalize }}</span>
+              </span>
               <span class="nav-arrow">&rarr;</span>
             </a>
           {% else %}
