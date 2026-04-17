@@ -6,14 +6,18 @@ description: "J3ZZ is a French artist working in the transitional area between s
 image: /assets/bio/bio-photo.jpg
 bio_image: /assets/bio/bio-photo.jpg
 links:
-  - title: CV
-    url: /assets/bio/cv.pdf
-  - title: Press Kit
-    url: /assets/bio/press-kit.pdf
-  - title: Pictures
-    url: /bio-gallery/
   - title: IMDb
     url: https://www.imdb.com/name/nm6903099/
+    
+# links:
+#   - title: CV
+#     url: /assets/bio/cv.pdf
+#   - title: Press Kit
+#     url: /assets/bio/press-kit.pdf
+#   - title: Pictures
+#     url: /bio-gallery/
+#   - title: IMDb
+#     url: https://www.imdb.com/name/nm6903099/
 ---
 
 <section class="bio-section">
