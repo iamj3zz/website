@@ -27,13 +27,10 @@ links:
   <div class="bio-intro">
     <div class="bio-text">
       <p>
-        J3ZZ is a French artist &amp; musician from Réunion Island Island. Trained as a violinist and shaped by a decade of live performance and cross-cultural collaboration, his practice expanded progressively into film scoring, stage composition, and ultimately immersive installations — sensor-driven environments where sound, light, and living systems converge into time-based media art.
+        J3ZZ is a French artist &amp; musician from Réunion Island. Trained as a violinist and shaped by a decade of live performance and cross-cultural collaboration, his practice expanded progressively into film scoring, stage composition, and ultimately immersive installations — sensor-driven environments where sound, light, and living systems converge into time-based media art.
       </p>
       <p>
-        He works in the transitional area between sound art, music, light, programming &amp; science. His work unfolds through music releases, live performances &amp; installations. Through a phenomenological approach, his work is based both on experimenting and programming, always guided by concepts of time elasticity.
-      </p>
-      <p>
-        His interests in microsound have pushed him to expand his work by opening up new ways of including field recording-based sounds into his practice. Through a positive-nihilist approach to process and structural deconstruction, he explores the infinitesimal and the imperceptible over time, employing various scientific techniques and methods.
+        Working at the intersection of sound art, music, light, programming, and science, his practice unfolds through releases, live performances, and spatial installations. A sustained interest in microsound and ambisonics field recording has led him to incorporate the barely audible into increasingly complex compositional architectures — time as an elastic material, the infinitesimal as subject matter.
       </p>
       <p>
         This meticulous attention to the barely audible often contrasts with his use of the acoustic violin, an instrument whose character he transforms through synthesizers, effects processing, and sensors. The tension between organic string timbre and electronic manipulation creates a dynamic interplay between the natural and the synthetic.
@@ -42,7 +39,10 @@ links:
         His practice also extends to working with living organisms to generate sounds and visuals in real time, further blurring the boundaries between art, science, and the biological world. These living systems become active collaborators in the creative process, introducing elements of unpredictability and organic evolution into his performances and installations.
       </p>
       <p>
-        New media serves as a vital medium of expression throughout his work, incorporating video, laser visuals, and other digital technologies into interactive environments. These spatial sound installations and performances invite audiences to become active participants, their movements and presence shaping the sonic and visual landscapes in real time.
+        His technical practice draws on a custom-built ecosystem of tools assembled around the specificity of each project. Bioelectrical signal capture, real-time data sonification, modular synthesis, ambisonics and multi-channel spatialization, generative visual programming, and machine learning form the recurring substrate of his work. Software environments — Max/MSP, Ableton Live, TouchDesigner — are not used as finished platforms but as laboratories, continuously modified and extended through custom devices and purpose-built interfaces. The violin, far from decorative, remains central: amplified, processed, and sensor-augmented, it functions as both acoustic instrument and live controller. This integration of handcraft and computation, of biological signal and digital environment, is what gives his practice its particular material texture.
+      </p>
+      <p>
+        Three projects currently define the core of his new media practice. <a href="/works/2019-09-19-live-racines-et-resonances/"><em>Racines &amp; Résonances</em></a> is an immersive live audiovisual performance in which bioelectrical sensors capture plant bio-signals and transform them in real time into sound, music, and generative visuals — a concert that stages the living world as both instrument and narrator, performed across Hungary, Réunion Island, Mauritius, and France since 2019. <a href="/works/2023-06-04-work-biosonification/"><em>Biosonification Workshops</em></a> extend this investigation into participatory education, inviting diverse audiences — from schoolchildren to festival visitors — to listen to plants and compose with their signals. <em>Vibrotanica</em> is a large-scale immersive interactive installation currently in development, deepening this same inquiry into the bio-electrical life of plants within an architectural and multi-sensory environment — a work seeking production partnerships and institutional support.
       </p>
     </div>
     <div class="bio-image">
