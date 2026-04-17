@@ -4,12 +4,12 @@ status: major
 work_id: racines-et-resonances
 title: Racines & Résonances - Résonance d'une île Opening
 date: 2025-08-22
-time:
+time: "20:00"
 country: France
 city: Saint-Denis
 venue_name: Villa de la Région
 venue_address: "49 Rue de Paris, 97400 Saint-Denis, La Réunion"
 venue_link:
 ticket_link:
-description: RACINES & RÉSONANCES — Live performance for the opening of "Résonance d'une île", the first collective sound art exhibition in Reunion Island, curated by Nina Sanchez. Supported by DAC Réunion and the Rezom pole. Exhibition ran August 22 – October 5, 2025.
+description: RACINES & RÉSONANCES — Live performance for the opening of "Résonance d'une île", the first collective sound art exhibition in Réunion, curated by Nina Sanchez. Supported by DAC Réunion and the Rezom pole. Exhibition ran August 22 – October 5, 2025.
 ---

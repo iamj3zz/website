@@ -5,7 +5,7 @@ work_id: biosonification-workshops
 title: Biosonification workshop
 date: 2023-11-06
 time: "10:00"
-country: Réunion
+country: Réunion Island
 city: Cilaos
 venue_name: Jardin de Betoum
 venue_address: "Cilaos, 97413 Réunion"

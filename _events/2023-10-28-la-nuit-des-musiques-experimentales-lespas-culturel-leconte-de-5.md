@@ -5,7 +5,7 @@ title: La nuit des musiques expérimentales #5
 work_id: racines-et-resonances
 date: 2023-10-28
 time: "20:00"
-country: Réunion
+country: Réunion Island
 city: Saint-Paul
 venue_name: Léspas culturel Leconte de Lisle
 venue_address: "5 Rue Eugène Dayot, 97411 Saint-Paul, Réunion"

@@ -5,7 +5,7 @@ work_id: biosonification-workshops
 title: "Biosonification Workshop — Bitasyon Bio Souffleur d'Arbonne, Saint-Philippe"
 date: 2023-11-07
 time: "10:00"
-country: Réunion
+country: Réunion Island
 city: Saint-Philippe
 venue_name: Bitasyon Bio Souffleur d'Arbonne
 venue_address: "18 Impasse Surcouf, 97442 Saint-Philippe, Réunion"

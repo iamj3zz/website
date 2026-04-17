@@ -27,7 +27,7 @@ links:
   <div class="bio-intro">
     <div class="bio-text">
       <p>
-        J3ZZ is a French artist &amp; musician from Réunion Island. Trained as a violinist and shaped by a decade of live performance and cross-cultural collaboration, his practice expanded progressively into film scoring, stage composition, and ultimately immersive installations — sensor-driven environments where sound, light, and living systems converge into time-based media art.
+        J3ZZ is a French artist &amp; musician from Réunion Island Island. Trained as a violinist and shaped by a decade of live performance and cross-cultural collaboration, his practice expanded progressively into film scoring, stage composition, and ultimately immersive installations — sensor-driven environments where sound, light, and living systems converge into time-based media art.
       </p>
       <p>
         He works in the transitional area between sound art, music, light, programming &amp; science. His work unfolds through music releases, live performances &amp; installations. Through a phenomenological approach, his work is based both on experimenting and programming, always guided by concepts of time elasticity.
@@ -114,10 +114,10 @@ links:
       <div class="bio-section-subtitle">Own Creations</div>
       <div class="bio-items">
         <div class="bio-item"><span class="bio-year">2025</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Villa de la Région ∙ Saint-Denis ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2024</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut Français de Hongrie ∙ Budapest ∙ HU</div>
-        <div class="bio-item"><span class="bio-year">2024</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut Français de Maurice ∙ Rose-Hill ∙ MU</div>
+        <div class="bio-item"><span class="bio-year">2024</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ French Institute∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2024</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ French Institute ∙ Rose-Hill ∙ MU</div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Léspas culturel Leconte de Lisle ∙ Saint-Paul ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ Institut français de Budapest ∙ Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ French Institute ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ House of Music Hungary ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ La Lasagneria ∙ Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2019</span> <a href="/works/2019-09-19-live-racines-et-resonances/">RACINES &amp; RESONANCES</a> ∙ MFSZ ∙ Budapest ∙ HU</div>
@@ -184,7 +184,7 @@ links:
     <div class="bio-category" id="bio-workshops">
       <h2>Workshops</h2>
       <div class="bio-items">
-        <div class="bio-item"><span class="bio-year">2024</span><a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Institut Français de Budapest ∙ HU</div>
+        <div class="bio-item"><span class="bio-year">2024</span><a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ French Institute, Budapest ∙ HU</div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Salon du livre Réyoné ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Mizik O Marmay Festival ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2023</span> <a href="/works/2023-06-04-work-biosonification/">BIOSONOFICATION</a> ∙ Rdv aux jardins ∙ RE</div>
@@ -199,11 +199,11 @@ links:
     <div class="bio-category" id="bio-management">
       <h2>Cultural Management &amp; Governance</h2>
       <div class="bio-items">
-        <div class="bio-item"> <span class="bio-year">2022–<script>document.write(new Date().getFullYear())</script></span> <a target="_blank" href="https://www.prma-reunion.fr/"> POLE REGIONAL DES MUSIQUES ACTUELLES </a> ∙ Active Member ∙ Reunion island ∙ RE </div>
+        <div class="bio-item"> <span class="bio-year">2022–<script>document.write(new Date().getFullYear())</script></span> <a target="_blank" href="https://www.prma-reunion.fr/"> POLE REGIONAL DES MUSIQUES ACTUELLES </a> ∙ Active Member ∙ Réunion Island ∙ RE </div>
         <div class="bio-item"> <span class="bio-year">2012–<script>document.write(new Date().getFullYear())</script></span> <a target="_blank" href="https://www.centrocreazionecultura.eu"> CENTRO CREAZIONE CULTURA </a> ∙ Active Member  ∙ Florence ∙ IT </div>
-        <div class="bio-item"> <span class="bio-year">2023–2026</span><a target="_blank" href="https://www.kolet.re">KOLET</a> ∙ Board Member ∙ Reunion island ∙ RE</div>
+        <div class="bio-item"> <span class="bio-year">2023–2026</span><a target="_blank" href="https://www.kolet.re">KOLET</a> ∙ Board Member ∙ Réunion Island ∙ RE</div>
         <div class="bio-item"><span class="bio-year">2023</span> <span><a target="_blank" href="https://www.lapossession.re">LA POSSESSION CITY</a> ∙ Deputy General Director ∙ Citizen Flourishing dept. ∙ led Culture & Local Services, Sports, Social Centre, Inclusion, Housing; team of 170+ agents; reporting to Mayor & elected officials (Jul–Aug) ∙ La Possession ∙ RE</span></div>
-        <div class="bio-item"><span class="bio-year">2020–2022</span><span><a target="_blank" href="https://citedesarts.re"> TERRITO'ARTS</a> ∙ General Manager ∙ RE ∙ Cité des Arts de La Réunion & Centre Culturel Château Morange; budget 4M€; 50+ permanent staff; 170+ artistic residencies, 140+ shows, 140+ cultural mediation actions (2021); crisis management COVID-19; HR, legal, public procurement, union negotiations ∙ Saint-Denis ∙ RE</span></div>
+        <div class="bio-item"><span class="bio-year">2020–2022</span><span><a target="_blank" href="https://citedesarts.re"> TERRITO'ARTS</a> ∙ General Manager ∙ RE ∙ Cité des Arts de La Réunion Island & Centre Culturel Château Morange; budget 4M€; 50+ permanent staff; 170+ artistic residencies, 140+ shows, 140+ cultural mediation actions (2021); crisis management COVID-19; HR, legal, public procurement, union negotiations ∙ Saint-Denis ∙ RE</span></div>
         <div class="bio-item"><span class="bio-year">2013–2015</span><span><a target="_blank" href="https://www.rootsnroutes.eu/"> ROOTS &amp; ROUTES</a> Secretary General ∙ administered and represented the organization; coordinated international project development & grant applications; supported 12 partner countries; EU funds: Creative, Leonardo, Erasmus+, Youth in Action, Lifelong Learning... ∙ Rotterdam ∙ NL</span> </div>
       </div>
     </div>

@@ -5,7 +5,7 @@ title: Biosonification workshop
 work_id: biosonification-workshops
 date: 2023-10-28
 time: "14:00"
-country: Réunion
+country: Réunion Island
 city: Saint-Leu
 venue_name: E-Leclerc PORTAL PITON ST LEU
 venue_address: "29 Rue du Moulin, 97424 Piton Saint-Leu, Réunion"

@@ -5,7 +5,7 @@ work_id: biosonification-workshops
 title: Vibrotanica dann lekol - cursus scolaire
 date: 2023-12-18
 time: "10:00-17:00"
-country: Réunion
+country: Réunion Island
 city: Saint Denis
 venue_name: Collège De Bois De Nèfles
 venue_address: "Chemin des Franciscéas, 97493 Saint-Denis, Réunion"

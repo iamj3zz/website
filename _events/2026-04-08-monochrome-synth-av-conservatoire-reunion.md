@@ -3,8 +3,8 @@ published: true
 status: minor
 title: Monochrome Synth AV
 date: 2026-04-08
-time: "18:00"
-country: Réunion
+time: "19:00"
+country: Réunion Island
 city: Saint-Denis
 venue_name: Conservatoire à Rayonnement Régional (Site Maxime Laope)
 venue_address: "6 bis rue Pasteur, 97400 Saint-Denis, Réunion"
