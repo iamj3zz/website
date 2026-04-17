@@ -102,11 +102,21 @@
   line-height: 1.4;
 }
 
+.nav-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
 .nav-title {
   font-size: 11px;
   color: #767676;
   text-transform: none;
   letter-spacing: 0;
+}
+
+.work-nav-right .nav-text {
+  text-align: right;
 }
 
 .back-to-works {
