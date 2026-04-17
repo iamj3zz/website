@@ -11,5 +11,5 @@ venue_name: French Institute
 venue_address: "30 avenue Julius Nyerere, Beau-Bassin Rose Hill, Mauritius"
 venue_link: https://www.institutfrancais.mu/fr
 ticket_link:
-description: RACINES & RÉSONANCES — an immersive live audiovisual performance exploring biosonification. 
+description: RACINES & RÉSONANCES — Immersive live audiovisual performance exploring biosonification.
 ---

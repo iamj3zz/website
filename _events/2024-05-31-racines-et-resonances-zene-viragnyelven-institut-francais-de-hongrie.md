@@ -11,5 +11,5 @@ venue_name: French Institute
 venue_address: "Fő utca 17, 1011 Budapest, Hungary"
 venue_link: https://franciaintezet.hu/
 ticket_link:
-description: RACINES & RÉSONANCES — an immersive live audiovisual performance exploring biosonification. 
+description: RACINES & RÉSONANCES — Immersive live audiovisual performance exploring biosonification.
 ---
