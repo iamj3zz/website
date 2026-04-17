@@ -5,7 +5,7 @@ work_id: biosonification-workshops
 title: Biosonification workshop 
 date: 2023-11-09
 time: "10:00"
-country: Réunion
+country: Réunion Island
 city: Saint Joseph
 venue_name: Forêt des Nuages
 venue_address: "Chemin Assing, 97480 Saint-Joseph, Réunion"

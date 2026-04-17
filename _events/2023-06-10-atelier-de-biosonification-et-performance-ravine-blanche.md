@@ -5,7 +5,7 @@ title: Biosonification workshop
 work_id: biosonification-workshops
 date: 2023-06-10
 time: "16:15"
-country: Reunion Island
+country: Réunion Island
 city: Saint-Pierre
 venue_name: Ravine Blanche
 venue_address: "Ravine Blanche, 97410 Saint-Pierre, Réunion"

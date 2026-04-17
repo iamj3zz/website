@@ -160,7 +160,10 @@
 
 | Date | Time | Country | City | Venue | Event Name | Description | Source / Link | Media |
 |------|------|---------|------|-------|------------|-------------|---------------|-------|
-| 2020-02-29 | 18:52 | Hungary | Budapest | TRIP boat — Petőfi tér 3, 1052 | Willany Leó Special // TRIP — TáncKedd VOL.7 | Weekly dance performance series launched Jan 2020. Improvised dance piece with Willany Leó ensemble | [trip.jegyx1.hu](https://trip.jegyx1.hu/eloadas/389/willany-leo-special) | — |
+| 2020-02-07 | 19:00 | Hungary | Budapest (Hungary) | Lóvasút Kulturális és Rendezvényközpont — Zugligeti út 64, 1121 | Racines & Résonances — Lóvasút | Live performance with guest dancers Grecsó Zoltán and Bujdosó Anna. First event of the concert series | — | — |
+| 2020-02-29 | 18:52 | Hungary | Budapest (Hungary) | TRIP boat — Petőfi tér 3, 1052 | Willany Leó Special // TRIP — TáncKedd VOL.7 | Weekly dance performance series launched Jan 2020. Improvised dance piece with Willany Leó ensemble | [trip.jegyx1.hu](https://trip.jegyx1.hu/eloadas/389/willany-leo-special) | — |
+| 2020-08-13 | 18:00 | Hungary | Budapest (Hungary) | Lóvasút Kulturális és Rendezvényközpont — Zugligeti út 64, 1121 | Racines & Résonances — Lóvasút | Live performance at Lóvasút Kulturális és Rendezvényközpont | — | — |
+| 2020-10-18 | — | Hungary | Budapest (Hungary) | Széllkapu, Millenáris — Kis Rókus utca 16-20, 1024 | Biosonification Workshop | Educational workshop conducted by J3ZZ. 30 participants | — | — |
 | 2020-05-09 | 19:00–21:00 | Online | Online | Online (Resident Advisor) | j3zzlab 00 | Online lab: connect, talk and make music during COVID-19. #j3zzlabs series. Org: Watcha Studios | [Resident Advisor](https://www.residentadvisor.net/events/1408200) | — |
 | 2020-05-16 | 19:00–21:00 | Online | Online | Online (Resident Advisor) | j3zzlab 01 | Online musical laboratory and experimental session | [Resident Advisor](https://www.residentadvisor.net/events/1408633) | — |
 | 2020-05-23 | 18:30 Q&A; 19:00 performance | Online | Online | Online (Resident Advisor) | j3zzlab 02 | Online musical laboratory. Q&A at 18:30, performance at 19:00 | [Resident Advisor](https://www.residentadvisor.net/events/1408925) | — |
@@ -203,8 +206,9 @@
 
 | Date | Time | Country | City | Venue | Event Name | Description | Source / Link | Media |
 |------|------|---------|------|-------|------------|-------------|---------------|-------|
-| 2024-05-04 | — | Mauritius | Rose-Hill | Institut Français de Maurice | Vibrotanica — Racines et résonances | Vibrotanica performance at Institut Français de Maurice | — | — |
-| 2024-05-31 | — | Hungary | Budapest | Institut Français de Hongrie | Vibrotanica — Zene virágnyelven | Vibrotanica performance "Music in the language of flowers" at Institut Français de Hongrie | — | — |
+| 2024-05-04 | — | Mauritius | Rose-Hill (Mauritius) | Institut Français de Maurice — 30 avenue Julius Nyerere | Racines & Résonances | Immersive live audiovisual performance exploring biosonification. 300 people + Biosonification workshop (30 participants) | — | — |
+| 2024-05-14 | — | France | Paris (France) | Sciences Po | Racines & Résonances | Immersive live audiovisual performance exploring biosonification. 100 people, Impact Day + Biosonification workshop (30 participants) | — | — |
+| 2024-05-31 | — | Hungary | Budapest (Hungary) | Institut Français de Hongrie — Fő utca 17, 1011 | Racines & Résonances — Zene Virágnyelvén | Immersive live audiovisual performance "Music in the language of flowers". 150 people + Biosonification workshop (30 participants) | — | — |
 
 ---
 
@@ -231,12 +235,12 @@
 | 2017 | 1 | 1 (Cannes) | 2 |
 | 2018 | 9 | 0 | 9 |
 | 2019 | 19 | 0 | 19 |
-| 2020 | 10 | 0 | 10 |
+| 2020 | 13 | 0 | 13 |
 | 2021–2022 | 0 | 0 | 0 |
 | 2023 | 13 | 0 | 13 |
-| 2024 | 0 | 2 | 2 |
+| 2024 | 3 | 0 | 3 |
 | 2025 | 0 | 2 | 2 |
-| **Total** | **105** | **~14** | **~119** |
+| **Total** | **121** | **~14** | **~135** |
 
 ### Known Gaps
 
@@ -268,4 +272,4 @@ When adding new events to `_events/`, also update the corresponding year table i
 | Source / Link | `ticket_link` or `venue_link` |
 | Media | (not in front matter — add manually from research) |
 
-*Last updated: 2026-02-20*
+*Last updated: 2026-04-17*

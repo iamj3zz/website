@@ -11,5 +11,5 @@ venue_name: House of Music Hungary (Magyar Zene Háza)
 venue_address: "Olof Palme sétány 3, 1146 Budapest, Hungary"
 venue_link: https://maps.app.goo.gl/uCZk3i9PoevT8NBD9
 ticket_link: https://brainbar.com/en/person/vibrotanica
-description: "RACINES & RÉSONANCES — Live performance at Brain Bar Festival, House of Music Hungary, Budapest."
+description: "RACINES & RÉSONANCES — Live performance at Brain Bar Festival, House of Music Hungary, Budapest (Hungary)."
 ---

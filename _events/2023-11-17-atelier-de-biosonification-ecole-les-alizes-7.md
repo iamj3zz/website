@@ -5,7 +5,7 @@ title: Biosonification Workshop — École Les Alizés, Entre-Deux
 work_id: biosonification-workshops
 date: 2023-11-17
 time: "10:30-15:30"
-country: Réunion
+country: Réunion Island
 city: Entre-Deux
 venue_name: École Les Alizés
 venue_address: "110 Rue Defaud, 97414 Entre-Deux, Réunion"

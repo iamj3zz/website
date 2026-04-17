@@ -5,7 +5,7 @@ title: Biosonification workshop
 work_id: biosonification-workshops
 date: 2023-06-04
 time: "09:30-11:00"
-country: Réunion
+country: Réunion Island
 city: Saint-Denis
 venue_name: Jardin de l'État
 venue_address: "Rue de Paris, 97400 Saint-Denis, Réunion"

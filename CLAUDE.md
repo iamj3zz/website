@@ -22,6 +22,10 @@ J3ZZ's career arc: violinist/musician (2008–2015) → film composer/performer 
 2. **Composer & Producer** — All compositional work: film scores, soundtracks, releases, installation soundscapes
 3. **Performer** — Violinist, electronic musician, laserist (Racines & Résonances, Sur le fil, ensemble collaborations)
 
+### Key Distinction: Vibrotanica vs. Racines & Résonances
+- **Vibrotanica** — Future interactive installation (currently unpublished, `published: false`). Work in progress using bioelectrical sensors to capture plant bio-signals.
+- **Racines & Résonances** — Immersive live audiovisual performance (released, performed since 2019, `published: true`). A mature touring show that demonstrates biosonification with plants and synthesizers.
+
 ### Publishing & Status Fields
 - `published: true` = appears on public site
 - `published: false` = hidden from site, preserved in repository
@@ -31,6 +35,7 @@ J3ZZ's career arc: violinist/musician (2008–2015) → film composer/performer 
 ### Event Calendar Rules
 - **Only publish events where J3ZZ is the author/leader/co-leader**
 - Member-only appearances (Buddha Bar, Willany Léo, etc.) → `published: false`, `status: archived`
+- **Every city mention in prose/descriptions must be followed by country in parentheses**, e.g. "Budapest (Hungary)", "Paris (France)", "Saint-Denis (Réunion Island)"
 
 ### Portfolio Grid Purpose
 The grid answers: "What does J3ZZ make?" Start with installations (new media identity), then performances and significant films, then releases. Not a complete diary.
@@ -103,12 +108,15 @@ This project's documentation is organized into topic-specific files for performa
 ## Common Tasks
 
 ### Adding a New Portfolio Work
-1. Create file: `_portfolio/YYYY-MM-DD-{category-prefix}-{slug}.md`
-2. Choose category (see Portfolio Categories above)
-3. Set `commissioned: true/false`
-4. Use category-specific metadata template from [Metadata Reference](docs/metadata-reference.md)
-5. Combine modules from [Modules Reference](docs/modules-reference.md)
-6. Test locally: `bundle exec jekyll serve` (see [Development Workflow](docs/WORKFLOW.md) for full details)
+1. Copy the master template: `_portfolio/1900-01-01-TEMPLATE-all-layouts.md`
+2. Create new file: `_portfolio/YYYY-MM-DD-{category-prefix}-{slug}.md`
+3. Choose category (see Portfolio Categories above)
+4. Set `commissioned: true/false`
+5. Use category-specific metadata fields from the template
+6. Combine modules from [Modules Reference](docs/modules-reference.md)
+7. Test locally: `bundle exec jekyll serve` (see [Development Workflow](docs/WORKFLOW.md) for full details)
+
+**Master Template:** `_portfolio/1900-01-01-TEMPLATE-all-layouts.md` — Single comprehensive reference covering all 8 categories, all metadata fields, all module types, and best practices.
 
 **Reference:** [Best Practices](docs/best-practices.md)
 
