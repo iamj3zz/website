@@ -42,6 +42,34 @@ The grid answers: "What does J3ZZ make?" Start with installations (new media ide
 
 ---
 
+## Bio Gallery (Press Photos) Workflow
+
+The bio gallery displays press and media-use photos with both web and high-resolution downloads.
+
+**Setup:**
+- English page: `_pages/bio-gallery.markdown` at `/bio-gallery/`
+- French page: `_pages/fr-bio-gallery.markdown` at `/fr/bio-gallery/`
+- Web images: `assets/bio/gallery/` — 1440px wide (proportional height)
+- High-res images: `assets/bio/gallery/hires/` — Original high-resolution files (3000px+)
+
+**To add/update photos:**
+1. Place web version at `assets/bio/gallery/photo-XX.jpg` (1440px wide)
+2. Place high-res version at `assets/bio/gallery/hires/photo-XX-hires.jpg`
+3. Edit `_pages/bio-gallery.markdown` and `_pages/fr-bio-gallery.markdown`:
+   - Add/update entry in `gallery_images` array with filename, hires path, caption
+   - Caption format: "J3ZZ by Photographer Name, City (Country), Year"
+4. All UI strings auto-translate via `_data/translations.yml` under `bio_gallery` section
+5. Captions (photographer names, locations) are proper nouns — not translated between languages
+
+**Features:**
+- Web grid: 4-column square crop (responsive to 2-column at 900px, 1-column at 480px)
+- Lightbox: Click image to open full-screen viewer with prev/next navigation
+- Download: Click link to download high-res version (opens browser download dialog)
+- Print: Full-size images (not cropped), includes QR codes for each photo
+- Bilingual: `/bio-gallery/` (EN) ↔ `/fr/bio-gallery/` (FR) with language switcher
+
+---
+
 ## Artwork Gallery Workflow
 
 The website includes a dedicated fine art gallery (`_artworks/` Jekyll collection) with square thumbnails and high-resolution print images.

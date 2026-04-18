@@ -22,9 +22,20 @@
   // Listen on the parent .grid-item so the transparent ::after overlay forwards clicks
   gridImages.forEach((img, index) => {
     const container = img.closest('.grid-item') || img;
-    container.addEventListener('click', function() {
+    container.addEventListener('click', function(e) {
+      // Don't open lightbox when clicking download links or other interactive elements
+      if (e.target.closest('a')) return;
       openLightbox(img, index, false);
     });
+  });
+
+  // Prevent lightbox from opening when clicking download/interactive links
+  const downloadLinks = document.querySelectorAll('.gallery-download-link');
+  downloadLinks.forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.stopPropagation();
+      e.stopImmediatePropagation();
+    }, true); // Use capture phase to intercept before bubbling
   });
 
   // Add click event to hero images (single image, no navigation)
