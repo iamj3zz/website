@@ -274,3 +274,32 @@ inquiry_form:
   sending_state:
     en: "Sending…"
     fr: "Envoi en cours…"
+
+# ─────────────────────────────────────────────
+# Bio Gallery
+# ─────────────────────────────────────────────
+bio_gallery:
+  press_title:
+    en: "Press & Media Use"
+    fr: "Presse & Médias"
+  press_intro:
+    en: "These photos are available for press and editorial use."
+    fr: "Ces photos sont disponibles pour un usage presse et éditorial."
+  instruction_open:
+    en: "Click any photo to open it in full size"
+    fr: "Cliquez sur une photo pour l'agrandir"
+  instruction_download_pre:
+    en: "Click"
+    fr: "Cliquez sur"
+  instruction_download_post:
+    en: "below each photo for the print-ready file"
+    fr: "sous chaque photo pour le fichier prêt à imprimer"
+  instruction_credit:
+    en: "Credit: J3ZZ"
+    fr: "Crédit : J3ZZ"
+  download_link:
+    en: "↓ Download high-res"
+    fr: "↓ Télécharger haute-résolution"
+  contact_note:
+    en: "For press kits or additional materials, contact"
+    fr: "Pour des dossiers de presse ou des visuels supplémentaires, contactez"

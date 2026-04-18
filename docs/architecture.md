@@ -126,6 +126,7 @@ The site supports English and French with **URL-based language detection** — s
 | Gallery index | `/gallery/` | `/fr/gallery/` |
 | Artwork detail | `/gallery/2026-03-01-fractured-system/` | `/fr/gallery/2026-03-01-fractured-system/` |
 | Bio | `/bio/` | `/fr/bio/` |
+| Bio Gallery (press photos) | `/bio-gallery/` | `/fr/bio-gallery/` |
 | Works | `/works/` | `/fr/works/` |
 | Events | `/events/` | `/fr/events/` |
 | Contact | `/contact/` | `/fr/contact/` |
@@ -155,7 +156,7 @@ nav:
 {{ _trans.artwork.status.available[_lang] }}
 ```
 
-**Sections:** `nav`, `lang_switcher`, `months`, `artwork`, `metadata`, `inquiry_modal`, `inquiry_form`
+**Sections:** `nav`, `lang_switcher`, `months`, `artwork`, `metadata`, `inquiry_modal`, `inquiry_form`, `bio_gallery`
 
 **Important:** `_data/translations.yml` must remain a single file. Do NOT create a `_data/translations/` directory alongside it — Jekyll would use the directory and ignore the file.
 
@@ -189,8 +190,37 @@ French versions of pages use the `fr-` filename prefix (matching the `_pages/` c
 | Collection | English file | French file |
 |-----------|-------------|-------------|
 | Pages | `_pages/bio.markdown` | `_pages/fr-bio.markdown` |
+| Pages | `_pages/bio-gallery.markdown` | `_pages/fr-bio-gallery.markdown` |
 | Pages | `_pages/gallery.markdown` | `_pages/fr-gallery.markdown` |
 | Artworks | `_artworks/2026-03-01-fractured-system.md` | `_artworks/fr-2026-03-01-fractured-system.md` |
+
+### Bio Gallery (Press Photos) Bilingual Setup
+
+The bio gallery page displays press and media use photos with high-resolution downloads.
+
+**Files:**
+- `_pages/bio-gallery.markdown` — English version at `/bio-gallery/`
+- `_pages/fr-bio-gallery.markdown` — French version at `/fr/bio-gallery/`
+
+**Front matter structure:**
+```yaml
+layout: bio-gallery
+title: Bio Gallery (or "Galerie Bio" in French)
+permalink: /bio-gallery/ (or /fr/bio-gallery/)
+lang: en (or fr)
+lang_alternate: /fr/bio-gallery/ (or /bio-gallery/)
+gallery_images:
+  - filename: photo-01.jpg
+    hires: photo-01-hires.jpg
+    caption: "J3ZZ by Photographer Name, Location, Year"  # Not translated
+```
+
+**Image structure:**
+- Web images: `assets/bio/gallery/` — 1440px wide, proportional height
+- High-res images: `assets/bio/gallery/hires/` — Original high-resolution files (3000px+) for press/print use
+- Print version: Displays full-size images (not square-cropped)
+
+**Translations:** All UI strings (`press_title`, `press_intro`, `instruction_*`, `download_link`, `contact_note`) are in `_data/translations.yml` under `bio_gallery` section. Captions are proper nouns (photographer names, locations) and are not translated.
 
 ### Artwork Gallery Bilingual Setup
 
@@ -317,11 +347,20 @@ All pages (BIO, BIO GALLERY, WORKS, EVENTS, CONTACT) are optimized for A4 print 
 - Print-specific styles in `portfolio.css` (lines 1762-2148)
 
 **BIO GALLERY Page:**
-- Currently displays a "coming soon" message with press contact email (contact@j3zz.com)
-- Gallery images not yet ready for publication
-- When ready: will show press photos with download instructions, 4-column grid with lightbox on web, single-column print layout with QR codes
-- Gallery images will be configured via `gallery_images` front matter array (each entry: `filename` + `caption`)
-- Images go in `assets/bio/gallery/`
+- Press photos for editorial and media use, 4-column grid with lightbox on web, single-column print layout with QR codes
+- Each photo has a **web version** (1440px wide, displayed in grid and lightbox) and a **high-res version** (original camera resolution, for press download)
+- Images go in:
+  - `assets/bio/gallery/` — web versions (`photo-01.jpg`, `photo-02.jpg`, …)
+  - `assets/bio/gallery/hires/` — high-res versions (`photo-01-hires.jpg`, `photo-02-hires.jpg`, …)
+- Gallery images configured via `gallery_images` front matter array in `_pages/bio-gallery.markdown`:
+  ```yaml
+  gallery_images:
+    - filename: photo-01.jpg        # web version (1440px wide, ~200–500 KB)
+      hires: photo-01-hires.jpg     # full-res version (original, ~5–20 MB)
+      caption: "J3ZZ — Press photo"
+  ```
+- Download link per photo triggers browser download of the high-res file directly
+- Download links hidden in print view (irrelevant on paper)
 
 **EVENTS Page Print Layout:**
 - Chronological event listing optimized for print
