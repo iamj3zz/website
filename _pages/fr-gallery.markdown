@@ -15,7 +15,7 @@ lang_alternate: /gallery/
   {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
   {% for artwork in sorted_artworks %}
     {% if artwork.published == false %}{% continue %}{% endif %}
-    <div class="gallery-list-row" data-artwork-url="{{ artwork.url | absolute_url }}">
+    <div class="gallery-list-row" data-artwork-url="{{ artwork.url | absolute_url }}?lang=fr">
       <div class="gallery-col-image">
         <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
       </div>
@@ -42,7 +42,7 @@ lang_alternate: /gallery/
     {% for artwork in sorted_artworks %}
       {% if artwork.published == false %}{% continue %}{% endif %}
       <div class="gallery-item gallery-item--{{ artwork.status | default: 'available' }}" data-label="{{ artwork.title }}{% if artwork.medium %} · {{ artwork.medium | upcase }}{% endif %}">
-        <a href="{{ artwork.url | relative_url }}" class="gallery-link">
+        <a href="{{ artwork.url | relative_url }}?lang=fr" class="gallery-link">
           <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
         </a>
         <div class="gallery-overlay">
@@ -57,7 +57,7 @@ lang_alternate: /gallery/
                     data-medium="{{ artwork.medium }}"
                     data-dimensions="{{ artwork.dimensions }}"
                     data-year="{{ artwork.year }}"
-                    data-url="{{ artwork.url | absolute_url }}">
+                    data-url="{{ artwork.url | absolute_url }}?lang=fr">
                         S'INFORMER SUR CETTE ŒUVRE
             </button>
           {% endif %}

@@ -97,6 +97,16 @@ artwork_shipping:
   satisfaction: "If the work arrives damaged or you are not satisfied, contact me directly — I handle every case personally."
   authenticity: "A signed Certificate of Authenticity is included with every original work."
 
+artwork_shipping_fr:
+  ships_from: "Île de la Réunion, France"
+  delivery_cost: "Les frais d'expédition sont calculés selon votre destination et confirmés avant tout engagement."
+  delivery_time_domestic: "5 à 7 jours ouvrés"
+  delivery_time_international: "Variable selon la destination — communiqué avant tout engagement."
+  handling: "Chaque œuvre est soigneusement roulée, enveloppée dans du papier glassine sans acide et expédiée dans un tube protecteur rigide, entièrement suivi et assuré."
+  customs: "Les acheteurs internationaux sont responsables des éventuels droits de douane ou taxes à l'importation."
+  satisfaction: "Si l'œuvre arrive endommagée ou si vous n'êtes pas satisfait, contactez-moi directement — je gère chaque cas personnellement."
+  authenticity: "Un certificat d'authenticité signé est inclus avec chaque œuvre originale."
+
 # Events
 event_description_truncate: 300 # Character limit for event descriptions before showing expand toggle (0 = never truncate)
 

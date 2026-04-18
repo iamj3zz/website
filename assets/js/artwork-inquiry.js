@@ -95,7 +95,7 @@
       const submitBtn = form && form.querySelector('[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = 'Send Inquiry';
+        submitBtn.textContent = isFrench ? 'Envoyer la demande' : 'Send Inquiry';
       }
       if (lastTrigger) lastTrigger.focus();
     }
@@ -200,7 +200,7 @@
         const submitBtn = form.querySelector('[type="submit"]');
 
         submitBtn.disabled = true;
-        submitBtn.textContent = 'Sending…';
+        submitBtn.textContent = isFrench ? 'Envoi en cours…' : 'Sending…';
 
         fetch(form.action, {
           method: 'POST',
@@ -220,7 +220,7 @@
         .catch(function () {
           if (errorMsg) errorMsg.hidden = false;
           submitBtn.disabled = false;
-          submitBtn.textContent = 'Send Inquiry';
+          submitBtn.textContent = isFrench ? 'Envoyer la demande' : 'Send Inquiry';
         });
       });
     }

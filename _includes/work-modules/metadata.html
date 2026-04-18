@@ -3,6 +3,8 @@
   This allows metadata to be defined once in front matter and reused across modules
 {% endcomment %}
 
+{% assign _lang = page.lang | default: 'en' %}
+
 {% assign release_date = page.metadata.release_date | default: include.release_date %}
 {% assign release_date_link = page.metadata.release_date_link | default: include.release_date_link %}
 {% assign date = page.metadata.date | default: include.date %}
@@ -433,55 +435,55 @@
     {% if page.layout == 'artwork' %}
       {% if aw_series %}
         <div class="metadata-item">
-          <span class="metadata-label">Series</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Série{% else %}Series{% endif %}</span>
           <span class="metadata-value">{{ aw_series }}{% if aw_series_part %} — {{ aw_series_part }}{% endif %}</span>
         </div>
       {% endif %}
       {% if aw_medium %}
         <div class="metadata-item">
-          <span class="metadata-label">Medium</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Médium{% else %}Medium{% endif %}</span>
           <span class="metadata-value">{{ aw_medium }}</span>
         </div>
       {% endif %}
       {% if aw_dimensions %}
         <div class="metadata-item">
-          <span class="metadata-label">Dimensions</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Dimensions{% else %}Dimensions{% endif %}</span>
           <span class="metadata-value">{{ aw_dimensions }}</span>
         </div>
       {% endif %}
       {% if aw_year %}
         <div class="metadata-item">
-          <span class="metadata-label">Year</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Année{% else %}Year{% endif %}</span>
           <span class="metadata-value">{{ aw_year }}</span>
         </div>
       {% endif %}
       {% if aw_rarity %}
         <div class="metadata-item">
-          <span class="metadata-label">Rarity</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Rareté{% else %}Rarity{% endif %}</span>
           <span class="metadata-value">{{ aw_rarity }}</span>
         </div>
       {% endif %}
       {% if aw_ready_to_hang %}
         <div class="metadata-item">
-          <span class="metadata-label">Ready to Hang</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Prêt à accrocher{% else %}Ready to Hang{% endif %}</span>
           <span class="metadata-value">{{ aw_ready_to_hang }}</span>
         </div>
       {% endif %}
       {% if aw_frame %}
         <div class="metadata-item">
-          <span class="metadata-label">Frame</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Encadrement{% else %}Frame{% endif %}</span>
           <span class="metadata-value">{{ aw_frame }}</span>
         </div>
       {% endif %}
       {% if aw_authenticity %}
         <div class="metadata-item">
-          <span class="metadata-label">Authenticity</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Authenticité{% else %}Authenticity{% endif %}</span>
           <span class="metadata-value">{{ aw_authenticity }}</span>
         </div>
       {% endif %}
       {% if aw_packaging %}
         <div class="metadata-item">
-          <span class="metadata-label">Packaging</span>
+          <span class="metadata-label">{% if _lang == 'fr' %}Emballage{% else %}Packaging{% endif %}</span>
           <span class="metadata-value">{{ aw_packaging }}</span>
         </div>
       {% endif %}
