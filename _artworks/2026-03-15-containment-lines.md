@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-15-containment-lines/
 published: true
 status: available
 title: "Containment Lines"

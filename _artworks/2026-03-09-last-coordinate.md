@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-09-last-coordinate/
 published: true
 status: available
 title: "Last Coordinate"

@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-11-horizon-dissolution/
 published: true
 status: available
 title: "Horizon Dissolution"

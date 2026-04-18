@@ -14,13 +14,14 @@
   {% include cookie-consent.html %}
 
   <header class="site-header">
-    {% assign _lang = page.lang | default: 'en' %}{% assign t = site.data.translations[_lang] %}
+    {% assign _lang = page.lang | default: 'en' %}
+    {% assign _trans = site.data.translations %}
     <div class="site-logo">
       <a href="{{ '/' | relative_url }}">
         <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
       </a>
     </div>
-    <a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="Book J3ZZ">{{ t.nav.book }}</a>
+    <a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="Book J3ZZ">{{ _trans.nav.book[_lang] }}</a>
     <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -28,11 +29,11 @@
     </button>
     <nav class="main-nav">
       <ul>
-        <li><a href="{% if _lang == 'fr' %}/fr/bio/{% else %}/bio/{% endif %}" {% if page.url contains '/bio' %}class="active"{% endif %}>{{ t.nav.bio }}</a></li>
-        <li><a href="{% if _lang == 'fr' %}/fr/works/{% else %}/works/{% endif %}" {% if page.url contains '/works' %}class="active"{% endif %}>{{ t.nav.works }}</a></li>
-        <li><a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}" {% if page.url contains '/gallery' %}class="active"{% endif %}>{{ t.nav.gallery }}</a></li>
-        <li><a href="{% if _lang == 'fr' %}/fr/events/{% else %}/events/{% endif %}" {% if page.url contains '/events' %}class="active"{% endif %}>{{ t.nav.events }}</a></li>
-        <li><a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="nav-cta{% if page.url contains '/contact' %} active{% endif %}">{{ t.nav.contact }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/bio/{% else %}/bio/{% endif %}" {% if page.url contains '/bio' %}class="active"{% endif %}>{{ _trans.nav.bio[_lang] }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/works/{% else %}/works/{% endif %}" {% if page.url contains '/works' %}class="active"{% endif %}>{{ _trans.nav.works[_lang] }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}" {% if page.url contains '/gallery' %}class="active"{% endif %}>{{ _trans.nav.gallery[_lang] }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/events/{% else %}/events/{% endif %}" {% if page.url contains '/events' %}class="active"{% endif %}>{{ _trans.nav.events[_lang] }}</a></li>
+        <li><a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="nav-cta{% if page.url contains '/contact' %} active{% endif %}">{{ _trans.nav.contact[_lang] }}</a></li>
         <li class="nav-lang">{% include lang-switcher.html %}</li>
       </ul>
     </nav>
@@ -46,23 +47,24 @@
 
         {% comment %} Artwork status badge {% endcomment %}
         {% if page.status == "sold" %}
-          <div class="artwork-status artwork-status--sold">{% if _lang == 'fr' %}VENDU{% else %}SOLD{% endif %}</div>
+          <div class="artwork-status artwork-status--sold">{{ _trans.artwork.status.sold[_lang] }}</div>
         {% elsif page.status == "reserved" %}
-          <div class="artwork-status artwork-status--reserved">{% if _lang == 'fr' %}RÉSERVÉ{% else %}RESERVED{% endif %}</div>
+          <div class="artwork-status artwork-status--reserved">{{ _trans.artwork.status.reserved[_lang] }}</div>
         {% elsif page.status == "available" %}
-          <div class="artwork-status artwork-status--available">{% if _lang == 'fr' %}DISPONIBLE{% else %}AVAILABLE{% endif %}</div>
-          <button data-inquiry-trigger class="artwork-inquiry-trigger-inline">{% if _lang == 'fr' %}S'INFORMER SUR CETTE ŒUVRE{% else %}INQUIRE ABOUT THIS WORK{% endif %}</button>
+          <div class="artwork-status artwork-status--available">{{ _trans.artwork.status.available[_lang] }}</div>
+          <button data-inquiry-trigger class="artwork-inquiry-trigger-inline">{{ _trans.artwork.buttons.inquire[_lang] }}</button>
         {% endif %}
 
         {% comment %} Page metadata: last updated date {% endcomment %}
         <div class="work-page-metadata">
           {% if _lang == 'fr' %}
             {% assign month_num = page.last_modified_at | date: "%m" | plus: 0 | minus: 1 %}
-            {% assign months = "janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre" | split: "|" %}
-            {% assign month_name = months[month_num] %}
-            <span class="metadata-item">Mis à jour le {{ page.last_modified_at | date: "%d" }} {{ month_name }} {{ page.last_modified_at | date: "%Y" }}</span>
+            {% assign month_keys = "january|february|march|april|may|june|july|august|september|october|november|december" | split: "|" %}
+            {% assign month_key = month_keys[month_num] %}
+            {% assign month_name = _trans.months[month_key][_lang] %}
+            <span class="metadata-item">{{ _trans.artwork.labels.last_updated[_lang] }} {{ page.last_modified_at | date: "%d" }} {{ month_name }} {{ page.last_modified_at | date: "%Y" }}</span>
           {% else %}
-            <span class="metadata-item">Updated {{ page.last_modified_at | date: "%b %-d, %Y" }}</span>
+            <span class="metadata-item">{{ _trans.artwork.labels.last_updated[_lang] }} {{ page.last_modified_at | date: "%b %-d, %Y" }}</span>
           {% endif %}
         </div>
       </div>
@@ -107,7 +109,7 @@
                   data-heart-btn
                   data-artwork-slug="{{ page.url }}"
                   data-artwork-title="{{ page.title }}"
-                  aria-label="{% if _lang == 'fr' %}J'aime{% else %}Like{% endif %} {{ page.title }}"
+                  aria-label="{{ _trans.artwork.labels.like[_lang] }} {{ page.title }}"
                   aria-pressed="false"
                   type="button"
                 >
@@ -115,7 +117,7 @@
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   <span class="gallery-heart-count"></span>
-                  <span class="artwork-heart-label">{% if _lang == 'fr' %}J'aime{% else %}Like{% endif %}</span>
+                  <span class="artwork-heart-label">{{ _trans.artwork.labels.like[_lang] }}</span>
                 </button>
 
                 <div class="artwork-share-wrap">
@@ -125,20 +127,20 @@
                     data-share-url="{{ site.url }}{{ page.url }}"
                     data-share-title="{{ page.title }}"
                     data-share-text="{{ page.abstract | default: page.title }} — {{ page.medium }}, {{ page.year }}"
-                    aria-label="{% if _lang == 'fr' %}Partager{% else %}Share{% endif %} {{ page.title }}"
+                    aria-label="{{ _trans.artwork.labels.share[_lang] }} {{ page.title }}"
                     type="button"
                   >
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                       <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
                       <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
                     </svg>
-                    <span>{% if _lang == 'fr' %}Partager{% else %}Share{% endif %}</span>
+                    <span>{{ _trans.artwork.labels.share[_lang] }}</span>
                   </button>
 
-                  <div class="artwork-share-popover" hidden role="dialog" aria-label="{% if _lang == 'fr' %}Options de partage{% else %}Share options{% endif %}">
+                  <div class="artwork-share-popover" hidden role="dialog" aria-label="{{ _trans.artwork.labels.share_modal_title[_lang] }}">
                     <a class="share-option" data-share-copy href="#" role="button">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
-                      {% if _lang == 'fr' %}Copier le lien{% else %}Copy link{% endif %}
+                      {{ _trans.artwork.labels.copy_link[_lang] }}
                     </a>
                     <a class="share-option" data-share-email href="#">
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
@@ -172,7 +174,7 @@
       {% comment %} Additional gallery: mockups, details, context images {% endcomment %}
       {% if page.gallery %}
         <div class="artwork-gallery">
-          <h2 class="artwork-gallery-heading">{% if _lang == 'fr' %}Galerie{% else %}Gallery{% endif %}</h2>
+          <h2 class="artwork-gallery-heading">{{ _trans.artwork.labels.gallery_heading[_lang] }}</h2>
           <div class="image-grid grid-3">
             {% for item in page.gallery %}
               <div class="grid-item">
@@ -195,7 +197,7 @@
           {% assign s = site.artwork_shipping %}
         {% endif %}
         <div class="artwork-purchasing-info">
-          <h2 class="artwork-purchasing-heading">{% if _lang == 'fr' %}Informations d'achat{% else %}Purchasing Information{% endif %}</h2>
+          <h2 class="artwork-purchasing-heading">{{ _trans.artwork.labels.purchasing_heading[_lang] }}</h2>
           <div class="artwork-purchasing-grid">
 
             <div class="artwork-purchasing-item">
@@ -204,7 +206,7 @@
                 <polyline points="9 22 9 12 15 12 15 22" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <span class="purchasing-label">{% if _lang == 'fr' %}Expédié depuis{% else %}Ships from{% endif %}</span>
+                <span class="purchasing-label">{{ _trans.artwork.labels.ships_from[_lang] }}</span>
                 <span class="purchasing-value">{{ s.ships_from }}</span>
               </div>
             </div>
@@ -217,9 +219,9 @@
                 <circle cx="18.5" cy="18.5" r="2.5" stroke="currentColor" stroke-width="1.5"/>
               </svg>
               <div>
-                <span class="purchasing-label">{% if _lang == 'fr' %}Livraison{% else %}Delivery{% endif %}</span>
+                <span class="purchasing-label">{{ _trans.artwork.labels.delivery[_lang] }}</span>
                 <span class="purchasing-value">{{ s.delivery_cost }}</span>
-                <span class="purchasing-value purchasing-value--muted">{% if _lang == 'fr' %}national{% else %}domestic{% endif %} · {% if _lang == 'fr' %}international{% else %}international{% endif %}</span>
+                <span class="purchasing-value purchasing-value--muted">{{ _trans.artwork.labels.shipping_scope_domestic[_lang] }} · {{ _trans.artwork.labels.shipping_scope_international[_lang] }}</span>
                 {% if s.customs %}<span class="purchasing-value purchasing-value--muted">{{ s.customs }}</span>{% endif %}
               </div>
             </div>
@@ -230,7 +232,7 @@
                 <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="1.5"/>
               </svg>
               <div>
-                <span class="purchasing-label">{% if _lang == 'fr' %}Emballage{% else %}Handling{% endif %}</span>
+                <span class="purchasing-label">{{ _trans.artwork.labels.handling[_lang] }}</span>
                 <span class="purchasing-value">{{ s.handling }}</span>
               </div>
             </div>
@@ -241,7 +243,7 @@
                 <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <span class="purchasing-label">{% if _lang == 'fr' %}Authenticité{% else %}Authenticity{% endif %}</span>
+                <span class="purchasing-label">{{ _trans.artwork.labels.authenticity[_lang] }}</span>
                 <span class="purchasing-value">{{ s.authenticity }}</span>
               </div>
             </div>
@@ -251,7 +253,7 @@
                 <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               <div>
-                <span class="purchasing-label">{% if _lang == 'fr' %}Satisfaction{% else %}Satisfaction{% endif %}</span>
+                <span class="purchasing-label">{{ _trans.artwork.labels.satisfaction[_lang] }}</span>
                 <span class="purchasing-value">{{ s.satisfaction }}</span>
               </div>
             </div>
@@ -263,7 +265,7 @@
       {% comment %} Inquiry block for available artworks {% endcomment %}
       {% if page.status == "available" %}
         <div class="artwork-inquiry">
-          <button data-inquiry-trigger class="artwork-inquiry-link">{% if _lang == 'fr' %}S'INFORMER SUR CETTE ŒUVRE{% else %}INQUIRE ABOUT THIS WORK{% endif %}</button>
+          <button data-inquiry-trigger class="artwork-inquiry-link">{{ _trans.artwork.buttons.inquire[_lang] }}</button>
         </div>
         {% include artwork-inquiry-modal.html %}
       {% endif %}
@@ -272,7 +274,11 @@
         <div class="work-nav-left">
           {% comment %} Find previous published artwork (older — further back in forward sort) {% endcomment %}
           {% assign prev_artwork = nil %}
-          {% assign sorted_artworks_forward = site.artworks | sort: 'year' %}
+          {% if _lang == 'fr' %}
+            {% assign sorted_artworks_forward = site.artworks | where: "lang", "fr" | sort: 'year' %}
+          {% else %}
+            {% assign sorted_artworks_forward = site.artworks | where_exp: "a", "a.lang != 'fr'" | sort: 'year' %}
+          {% endif %}
           {% assign found_current_prev = false %}
           {% for artwork in sorted_artworks_forward %}
             {% if found_current_prev and artwork.published != false %}
@@ -295,14 +301,18 @@
         </div>
 
         <div class="work-nav-center">
-          <a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}" class="back-to-works">{% if _lang == 'fr' %}Retour à la galerie{% else %}Back to Gallery{% endif %}</a>
+          <a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}" class="back-to-works">{{ _trans.artwork.labels.back_to_gallery[_lang] }}</a>
         </div>
 
         <div class="work-nav-right">
           {% comment %} Find next published artwork (newer — further forward in reverse sort) {% endcomment %}
           {% assign next_artwork = nil %}
           {% assign found_current = false %}
-          {% assign sorted_artworks_reverse = site.artworks | sort: 'year' | reverse %}
+          {% if _lang == 'fr' %}
+            {% assign sorted_artworks_reverse = site.artworks | where: "lang", "fr" | sort: 'year' | reverse %}
+          {% else %}
+            {% assign sorted_artworks_reverse = site.artworks | where_exp: "a", "a.lang != 'fr'" | sort: 'year' | reverse %}
+          {% endif %}
           {% for artwork in sorted_artworks_reverse %}
             {% if found_current and artwork.published != false %}
               {% assign next_artwork = artwork %}
@@ -328,11 +338,11 @@
 
   <nav class="bottom-nav" aria-label="Bottom navigation">
     <ul>
-      <li><a href="{% if _lang == 'fr' %}/fr/bio/{% else %}/bio/{% endif %}" {% if page.url contains '/bio' %}class="active"{% endif %}>{{ t.nav.bio }}</a></li>
-      <li><a href="{% if _lang == 'fr' %}/fr/works/{% else %}/works/{% endif %}" {% if page.url contains '/works' %}class="active"{% endif %}>{{ t.nav.works }}</a></li>
-      <li><a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}" {% if page.url contains '/gallery' %}class="active"{% endif %}>{{ t.nav.gallery }}</a></li>
-      <li><a href="{% if _lang == 'fr' %}/fr/events/{% else %}/events/{% endif %}" {% if page.url contains '/events' %}class="active"{% endif %}>{{ t.nav.events }}</a></li>
-      <li><a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" {% if page.url contains '/contact' %}class="active"{% endif %}>{{ t.nav.contact }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/bio/{% else %}/bio/{% endif %}" {% if page.url contains '/bio' %}class="active"{% endif %}>{{ _trans.nav.bio[_lang] }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/works/{% else %}/works/{% endif %}" {% if page.url contains '/works' %}class="active"{% endif %}>{{ _trans.nav.works[_lang] }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}" {% if page.url contains '/gallery' %}class="active"{% endif %}>{{ _trans.nav.gallery[_lang] }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/events/{% else %}/events/{% endif %}" {% if page.url contains '/events' %}class="active"{% endif %}>{{ _trans.nav.events[_lang] }}</a></li>
+      <li><a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" {% if page.url contains '/contact' %}class="active"{% endif %}>{{ _trans.nav.contact[_lang] }}</a></li>
     </ul>
   </nav>
 

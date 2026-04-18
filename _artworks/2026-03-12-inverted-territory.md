@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-12-inverted-territory/
 published: true
 status: available
 title: "Inverted Territory"

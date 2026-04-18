@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-03-debris-field/
 published: true
 status: available
 title: "Debris Field"

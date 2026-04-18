@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-08-compressed-time/
 published: true
 status: available
 title: "Compressed Time"

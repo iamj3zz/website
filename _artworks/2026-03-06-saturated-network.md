@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-06-saturated-network/
 published: true
 status: available
 title: "Saturated Network"

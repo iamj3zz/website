@@ -1,0 +1,276 @@
+# UI Translations — Single source of truth for all structural UI strings
+# Both languages visible side-by-side for easy maintenance.
+# Access in templates: {% assign _trans = site.data.translations %}
+#                      {{ _trans.artwork.status.sold[_lang] }}
+
+# ─────────────────────────────────────────────
+# Navigation
+# ─────────────────────────────────────────────
+nav:
+  bio:
+    en: "BIO"
+    fr: "BIO"
+  works:
+    en: "WORKS"
+    fr: "ŒUVRES"
+  gallery:
+    en: "GALLERY"
+    fr: "GALERIE"
+  events:
+    en: "EVENTS"
+    fr: "AGENDA"
+  releases:
+    en: "RELEASES"
+    fr: "RELEASES"
+  contact:
+    en: "CONTACT & BOOK"
+    fr: "CONTACT & BOOK"
+  book:
+    en: "BOOK"
+    fr: "BOOK"
+
+lang_switcher:
+  label_en:
+    en: "EN"
+    fr: "EN"
+  label_fr:
+    en: "FR"
+    fr: "FR"
+
+# ─────────────────────────────────────────────
+# Month names (used in date formatting)
+# ─────────────────────────────────────────────
+months:
+  january:
+    en: "January"
+    fr: "janvier"
+  february:
+    en: "February"
+    fr: "février"
+  march:
+    en: "March"
+    fr: "mars"
+  april:
+    en: "April"
+    fr: "avril"
+  may:
+    en: "May"
+    fr: "mai"
+  june:
+    en: "June"
+    fr: "juin"
+  july:
+    en: "July"
+    fr: "juillet"
+  august:
+    en: "August"
+    fr: "août"
+  september:
+    en: "September"
+    fr: "septembre"
+  october:
+    en: "October"
+    fr: "octobre"
+  november:
+    en: "November"
+    fr: "novembre"
+  december:
+    en: "December"
+    fr: "décembre"
+
+# ─────────────────────────────────────────────
+# Artwork Detail Pages
+# ─────────────────────────────────────────────
+artwork:
+  status:
+    sold:
+      en: "SOLD"
+      fr: "VENDU"
+    reserved:
+      en: "RESERVED"
+      fr: "RÉSERVÉ"
+    available:
+      en: "AVAILABLE"
+      fr: "DISPONIBLE"
+  buttons:
+    inquire:
+      en: "INQUIRE ABOUT THIS WORK"
+      fr: "S'INFORMER SUR CETTE ŒUVRE"
+  labels:
+    last_updated:
+      en: "Updated"
+      fr: "Mis à jour le"
+    like:
+      en: "Like"
+      fr: "J'aime"
+    share:
+      en: "Share"
+      fr: "Partager"
+    share_modal_title:
+      en: "Share options"
+      fr: "Options de partage"
+    copy_link:
+      en: "Copy link"
+      fr: "Copier le lien"
+    gallery_heading:
+      en: "Gallery"
+      fr: "Galerie"
+    purchasing_heading:
+      en: "Purchasing Information"
+      fr: "Informations d'achat"
+    ships_from:
+      en: "Ships from"
+      fr: "Expédié depuis"
+    delivery:
+      en: "Delivery"
+      fr: "Livraison"
+    shipping_scope_domestic:
+      en: "domestic"
+      fr: "national"
+    shipping_scope_international:
+      en: "international"
+      fr: "international"
+    handling:
+      en: "Handling"
+      fr: "Emballage"
+    authenticity:
+      en: "Authenticity"
+      fr: "Authenticité"
+    satisfaction:
+      en: "Satisfaction"
+      fr: "Satisfaction"
+    back_to_gallery:
+      en: "Back to Gallery"
+      fr: "Retour à la galerie"
+
+# ─────────────────────────────────────────────
+# Artwork Metadata Labels
+# ─────────────────────────────────────────────
+metadata:
+  series:
+    en: "Series"
+    fr: "Série"
+  medium:
+    en: "Medium"
+    fr: "Médium"
+  dimensions:
+    en: "Dimensions"
+    fr: "Dimensions"
+  year:
+    en: "Year"
+    fr: "Année"
+  rarity:
+    en: "Rarity"
+    fr: "Rareté"
+  ready_to_hang:
+    en: "Ready to Hang"
+    fr: "Prêt à accrocher"
+  frame:
+    en: "Frame"
+    fr: "Encadrement"
+  authenticity:
+    en: "Authenticity"
+    fr: "Authenticité"
+  packaging:
+    en: "Packaging"
+    fr: "Emballage"
+
+# ─────────────────────────────────────────────
+# Artwork Inquiry Modal
+# ─────────────────────────────────────────────
+inquiry_modal:
+  close_button:
+    en: "Close inquiry form"
+    fr: "Fermer le formulaire"
+  title:
+    en: "Artwork Inquiry"
+    fr: "Demande d'information"
+  email_subject_prefix:
+    en: "Artwork Inquiry: "
+    fr: "Demande d'information : "
+  success_message:
+    en: "Thank you — your inquiry has been sent. I'll get back to you soon."
+    fr: "Merci — votre demande a été envoyée. Je vous recontacterai bientôt."
+  success_gallery_prompt_pre:
+    en: "In the meantime, explore more works in the"
+    fr: "En attendant, explorez d'autres œuvres dans la"
+  success_gallery_link_text:
+    en: "art gallery"
+    fr: "galerie d'art"
+  error_message:
+    en: "Something went wrong. Please try again or email directly at"
+    fr: "Une erreur s'est produite. Veuillez réessayer ou envoyer un email directement à"
+
+# ─────────────────────────────────────────────
+# Artwork Inquiry Form
+# ─────────────────────────────────────────────
+inquiry_form:
+  first_name:
+    en: "First Name *"
+    fr: "Prénom *"
+  last_name:
+    en: "Last Name *"
+    fr: "Nom *"
+  email:
+    en: "Your Email *"
+    fr: "Votre email *"
+  phone:
+    en: "Mobile Number * (e.g., +33612345678)"
+    fr: "Numéro de téléphone * (ex. : +33612345678)"
+  phone_format:
+    en: "Format: +[country code][number]"
+    fr: "Format : +[indicatif pays][numéro]"
+  street:
+    en: "Street Address *"
+    fr: "Adresse *"
+  city:
+    en: "City *"
+    fr: "Ville *"
+  postal_code:
+    en: "Postal Code *"
+    fr: "Code postal *"
+  country:
+    en: "Country *"
+    fr: "Pays *"
+  address_requirement:
+    en: "Your complete shipping address is required so I can calculate exact shipping costs and get back to you with a precise quote."
+    fr: "Votre adresse d'expédition complète est requise pour que je puisse calculer les frais d'expédition exacts et vous proposer un devis précis."
+  newsletter:
+    en: "I'd like to receive occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens. You can unsubscribe anytime."
+    fr: "Je souhaite recevoir des nouvelles occasionnelles sur les concerts, ateliers et releases. En tant qu'artiste expérimental indépendant, j'envoie rarement des messages — seulement quand quelque chose de significatif se passe. Vous pouvez vous désinscrire à tout moment."
+  message_greeting:
+    en: "Hello,"
+    fr: "Bonjour,"
+  message_interested:
+    en: "I am interested in acquiring"
+    fr: "Je suis intéressé(e) par l'acquisition de"
+  message_quote_open:
+    en: "\""
+    fr: "« "
+  message_quote_close:
+    en: "\""
+    fr: " »"
+  message_request:
+    en: "Could you please provide me with more information about:"
+    fr: "Pourriez-vous me fournir plus d'informations sur :"
+  message_availability:
+    en: "- The current availability and price"
+    fr: "- La disponibilité actuelle et le prix"
+  message_shipping:
+    en: "- Shipping costs to my address (provided above)"
+    fr: "- Les frais d'expédition à mon adresse (mentionnée ci-dessus)"
+  message_conditions:
+    en: "- Packaging and delivery conditions"
+    fr: "- Les conditions d'emballage et de livraison"
+  message_certificate:
+    en: "- Certificate of authenticity"
+    fr: "- Le certificat d'authenticité"
+  message_closing:
+    en: "Thank you,"
+    fr: "Merci,"
+  submit_button:
+    en: "Send Inquiry"
+    fr: "Envoyer la demande"
+  sending_state:
+    en: "Sending…"
+    fr: "Envoi en cours…"

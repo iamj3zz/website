@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-16-fading-lines/
 published: true
 status: sold
 title: "Fading Lines"

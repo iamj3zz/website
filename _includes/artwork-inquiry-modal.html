@@ -1,82 +1,72 @@
 {% assign _lang = page.lang | default: 'en' %}
-{% assign _t = site.data.translations[_lang] %}
+{% assign _trans = site.data.translations %}
 
 <div id="artwork-inquiry-modal" class="inquiry-modal" role="dialog" aria-modal="true" aria-labelledby="inquiry-modal-title" hidden>
   <div class="inquiry-modal-overlay"></div>
   <div class="inquiry-modal-dialog">
-    <button class="inquiry-modal-close" aria-label="{% if _lang == 'fr' %}Fermer le formulaire{% else %}Close inquiry form{% endif %}">&times;</button>
+    <button class="inquiry-modal-close" aria-label="{{ _trans.inquiry_modal.close_button[_lang] }}">&times;</button>
 
-    <p class="inquiry-modal-pre-title">{% if _lang == 'fr' %}Demande d'information{% else %}Artwork Inquiry{% endif %}</p>
+    <p class="inquiry-modal-pre-title">{{ _trans.inquiry_modal.title[_lang] }}</p>
     <h2 id="inquiry-modal-title" class="inquiry-modal-artwork-title">{{ page.title }}</h2>
     <p class="inquiry-modal-meta">{{ page.medium }}{% if page.dimensions %} · {{ page.dimensions }}{% endif %}{% if page.year %} · {{ page.year }}{% endif %}</p>
 
     <form id="artwork-inquiry-form" class="inquiry-form" action="{{ site.formspree_artwork_inquiry }}" method="POST" novalidate>
-      <input type="hidden" name="_subject" value="{% if _lang == 'fr' %}Demande d'information : {% else %}Artwork Inquiry: {% endif %}{{ page.title }}">
+      <input type="hidden" name="_subject" value="{{ _trans.inquiry_modal.email_subject_prefix[_lang] }}{{ page.title }}" data-subject-prefix-en="Artwork Inquiry: " data-subject-prefix-fr="Demande d'information : ">
       <input type="hidden" name="artwork" value="{{ page.title }}{% if page.medium %} — {{ page.medium }}{% endif %}{% if page.dimensions %}, {{ page.dimensions }}{% endif %}{% if page.year %}, {{ page.year }}{% endif %}">
       <input type="hidden" name="artwork_url" id="inquiry-artwork-url">
       <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
 
       <div class="form-row form-row--split">
-        <input type="text" id="inquiry-first-name" name="first_name" placeholder="{% if _lang == 'fr' %}Prénom *{% else %}First Name *{% endif %}" class="form-input" required autocomplete="given-name">
-        <input type="text" id="inquiry-last-name" name="last_name" placeholder="{% if _lang == 'fr' %}Nom *{% else %}Last Name *{% endif %}" class="form-input" required autocomplete="family-name">
+        <input type="text" id="inquiry-first-name" name="first_name" placeholder="{{ _trans.inquiry_form.first_name[_lang] }}" class="form-input" required autocomplete="given-name">
+        <input type="text" id="inquiry-last-name" name="last_name" placeholder="{{ _trans.inquiry_form.last_name[_lang] }}" class="form-input" required autocomplete="family-name">
       </div>
       <div class="form-row">
-        <input type="email" id="inquiry-email" name="email" placeholder="{% if _lang == 'fr' %}Votre email *{% else %}Your Email *{% endif %}" class="form-input" required autocomplete="email">
+        <input type="email" id="inquiry-email" name="email" placeholder="{{ _trans.inquiry_form.email[_lang] }}" class="form-input" required autocomplete="email">
       </div>
       <div class="form-row">
-        <input type="tel" id="inquiry-phone" name="phone" placeholder="{% if _lang == 'fr' %}Numéro de téléphone * (ex. : +33612345678){% else %}Mobile Number * (e.g., +33612345678){% endif %}" class="form-input" required autocomplete="tel">
-        <span class="form-help-text">{% if _lang == 'fr' %}Format : +[indicatif pays][numéro]{% else %}Format: +[country code][number]{% endif %}</span>
+        <input type="tel" id="inquiry-phone" name="phone" placeholder="{{ _trans.inquiry_form.phone[_lang] }}" class="form-input" required autocomplete="tel">
+        <span class="form-help-text">{{ _trans.inquiry_form.phone_format[_lang] }}</span>
       </div>
       <div class="form-row">
-        <input type="text" id="inquiry-address-street" name="address_street" placeholder="{% if _lang == 'fr' %}Adresse *{% else %}Street Address *{% endif %}" class="form-input" required autocomplete="street-address">
+        <input type="text" id="inquiry-address-street" name="address_street" placeholder="{{ _trans.inquiry_form.street[_lang] }}" class="form-input" required autocomplete="street-address">
       </div>
       <div class="form-row form-row--split">
-        <input type="text" id="inquiry-address-city" name="address_city" placeholder="{% if _lang == 'fr' %}Ville *{% else %}City *{% endif %}" class="form-input" required autocomplete="address-level2">
-        <input type="text" id="inquiry-address-zip" name="address_zip" placeholder="{% if _lang == 'fr' %}Code postal *{% else %}Postal Code *{% endif %}" class="form-input" required autocomplete="postal-code">
+        <input type="text" id="inquiry-address-city" name="address_city" placeholder="{{ _trans.inquiry_form.city[_lang] }}" class="form-input" required autocomplete="address-level2">
+        <input type="text" id="inquiry-address-zip" name="address_zip" placeholder="{{ _trans.inquiry_form.postal_code[_lang] }}" class="form-input" required autocomplete="postal-code">
       </div>
       <div class="form-row">
-        <input type="text" id="inquiry-address-country" name="address_country" placeholder="{% if _lang == 'fr' %}Pays *{% else %}Country *{% endif %}" class="form-input" required autocomplete="country-name">
-        <span class="form-help-text">{% if _lang == 'fr' %}Votre adresse d'expédition complète est requise pour que je puisse calculer les frais d'expédition exacts et vous proposer un devis précis.{% else %}Your complete shipping address is required so I can calculate exact shipping costs and get back to you with a precise quote.{% endif %}</span>
+        <input type="text" id="inquiry-address-country" name="address_country" placeholder="{{ _trans.inquiry_form.country[_lang] }}" class="form-input" required autocomplete="country-name">
+        <span class="form-help-text">{{ _trans.inquiry_form.address_requirement[_lang] }}</span>
       </div>
       <div class="form-row">
         <label class="form-checkbox-label">
           <input type="checkbox" id="inquiry-newsletter" name="newsletter" class="form-checkbox" checked>
-          <span>{% if _lang == 'fr' %}Je souhaite recevoir des nouvelles occasionnelles sur les concerts, ateliers et releases. En tant qu'artiste expérimental indépendant, j'envoie rarement des messages — seulement quand quelque chose de significatif se passe. Vous pouvez vous désinscrire à tout moment.{% else %}I'd like to receive occasional updates about shows, workshops, and releases. As a solo experimental artist, I rarely send messages—only when something meaningful happens. You can unsubscribe anytime.{% endif %}</span>
+          <span>{{ _trans.inquiry_form.newsletter[_lang] }}</span>
         </label>
       </div>
       <div class="form-row">
-        <textarea id="inquiry-message" name="message" class="form-input inquiry-textarea" rows="7" required>{% if _lang == 'fr' %}Bonjour,
+        <textarea id="inquiry-message" name="message" class="form-input inquiry-textarea" rows="7" required>{{ _trans.inquiry_form.message_greeting[_lang] }}
 
-Je suis intéressé(e) par l'acquisition de « {{ page.title }} »{% if page.medium %} ({{ page.medium }}{% if page.dimensions %}, {{ page.dimensions }}{% endif %}){% endif %}.
+{{ _trans.inquiry_form.message_interested[_lang] }} {{ _trans.inquiry_form.message_quote_open[_lang] }}{{ page.title }}{{ _trans.inquiry_form.message_quote_close[_lang] }}{% if page.medium %} ({{ page.medium }}{% if page.dimensions %}, {{ page.dimensions }}{% endif %}){% endif %}.
 
-Pourriez-vous me fournir plus d'informations sur :
-- La disponibilité actuelle et le prix
-- Les frais d'expédition à mon adresse (mentionnée ci-dessus)
-- Les conditions d'emballage et de livraison
-- Le certificat d'authenticité
+{{ _trans.inquiry_form.message_request[_lang] }}
+{{ _trans.inquiry_form.message_availability[_lang] }}
+{{ _trans.inquiry_form.message_shipping[_lang] }}
+{{ _trans.inquiry_form.message_conditions[_lang] }}
+{{ _trans.inquiry_form.message_certificate[_lang] }}
 
-Merci,{% else %}Hello,
-
-I am interested in acquiring "{{ page.title }}"{% if page.medium %} ({{ page.medium }}{% if page.dimensions %}, {{ page.dimensions }}{% endif %}){% endif %}.
-
-Could you please provide me with more information about:
-- The current availability and price
-- Shipping costs to my address (provided above)
-- Packaging and delivery conditions
-- Certificate of authenticity
-
-Thank you,{% endif %}</textarea>
+{{ _trans.inquiry_form.message_closing[_lang] }},</textarea>
       </div>
-      <button type="submit" class="form-submit">{% if _lang == 'fr' %}Envoyer la demande{% else %}Send Inquiry{% endif %}</button>
+      <button type="submit" class="form-submit" data-submit-button-en="Send Inquiry" data-submit-button-fr="Envoyer la demande" data-sending-state-en="Sending…" data-sending-state-fr="Envoi en cours…">{{ _trans.inquiry_form.submit_button[_lang] }}</button>
     </form>
 
     <div id="inquiry-success" class="inquiry-success" hidden>
-      <p>{% if _lang == 'fr' %}Merci — votre demande a été envoyée. Je vous recontacterai bientôt.{% else %}Thank you — your inquiry has been sent. I'll get back to you soon.{% endif %}</p>
-      <p class="inquiry-success-gallery-prompt">{% if _lang == 'fr' %}En attendant, explorez d'autres œuvres dans la <a href="/fr/gallery/">galerie d'art</a>.{% else %}In the meantime, explore more works in the <a href="/gallery/">art gallery</a>.{% endif %}</p>
+      <p>{{ _trans.inquiry_modal.success_message[_lang] }}</p>
+      <p class="inquiry-success-gallery-prompt">{{ _trans.inquiry_modal.success_gallery_prompt_pre[_lang] }} <a href="{% if _lang == 'fr' %}/fr/gallery/{% else %}/gallery/{% endif %}">{{ _trans.inquiry_modal.success_gallery_link_text[_lang] }}</a>.</p>
     </div>
 
     <div id="inquiry-error" class="inquiry-error" hidden>
-      <p>{% if _lang == 'fr' %}Une erreur s'est produite. Veuillez réessayer ou envoyer un email directement à {{ site.email }}.{% else %}Something went wrong. Please try again or email directly at {{ site.email }}.{% endif %}</p>
+      <p>{{ _trans.inquiry_modal.error_message[_lang] }} {{ site.email }}.</p>
     </div>
   </div>
 </div>

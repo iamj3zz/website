@@ -12,7 +12,7 @@ lang_alternate: /fr/gallery/
 
 <div class="gallery-list-print">
   <div class="gallery-print-header">GALLERY — Visual Art by J3ZZ</div>
-  {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
+  {% assign sorted_artworks = site.artworks | where_exp: "a", "a.lang != 'fr'" | sort: 'year' | reverse %}
   {% for artwork in sorted_artworks %}
     {% if artwork.published == false %}{% continue %}{% endif %}
     <div class="gallery-list-row" data-artwork-url="{{ artwork.url | absolute_url }}">
@@ -38,7 +38,7 @@ lang_alternate: /fr/gallery/
 <section class="gallery-section">
   <h1 class="visually-hidden">Gallery</h1>
   <div class="gallery-grid">
-    {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
+    {% assign sorted_artworks = site.artworks | where_exp: "a", "a.lang != 'fr'" | sort: 'year' | reverse %}
     {% for artwork in sorted_artworks %}
       {% if artwork.published == false %}{% continue %}{% endif %}
       <div class="gallery-item gallery-item--{{ artwork.status | default: 'available' }}" data-label="{{ artwork.title }}{% if artwork.medium %} · {{ artwork.medium | upcase }}{% endif %}">

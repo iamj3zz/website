@@ -8,8 +8,8 @@
     {% assign fr_url = page.lang_alternate %}
   {% endif %}
 {% else %}
-  {% assign en_url = '/bio/' %}
-  {% assign fr_url = '/fr/bio/' %}
+  {% assign en_url = page.url %}
+  {% assign fr_url = page.url %}
 {% endif %}
 <span class="header-lang-switcher">
   <a href="{{ en_url }}" class="header-lang-link{% if lang == 'en' %} is-active{% endif %}" hreflang="en">EN</a>
