@@ -484,6 +484,18 @@ The artwork collection uses a two-step image workflow:
    - **print.png:** Max 1800px longest side, aspect ratio preserved (used in `split-hero-metadata` module)
    - Location: `assets/artworks/{slug}/`
 
+**French Artwork Files:**
+
+French translations of artworks are separate files with `fr-` prefix:
+- **Filename:** `_artworks/fr-YYYY-MM-DD-{slug}.md`
+- **Required front matter:** `lang: fr`, `permalink: /fr/gallery/YYYY-MM-DD-{slug}/`, `lang_alternate: /gallery/YYYY-MM-DD-{slug}/`
+- **Translated content:** `title`, `abstract`, `description`, and all metadata fields in French
+- **Language switcher:** Clicking FR on an English artwork page navigates to the French version automatically
+
+**English artwork files must have:** `lang_alternate: /fr/gallery/YYYY-MM-DD-{slug}/` to enable language switching
+
+See [Bilingual System](architecture.md#bilingual-system-enfr) for complete bilingual setup and navigation coherence.
+
 **Complete Example:**
 
 ```yaml

@@ -12,10 +12,10 @@ lang_alternate: /gallery/
 
 <div class="gallery-list-print">
   <div class="gallery-print-header">GALERIE — Œuvres visuelles par J3ZZ</div>
-  {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
+  {% assign sorted_artworks = site.artworks | where: "lang", "fr" | sort: 'year' | reverse %}
   {% for artwork in sorted_artworks %}
     {% if artwork.published == false %}{% continue %}{% endif %}
-    <div class="gallery-list-row" data-artwork-url="{{ artwork.url | absolute_url }}?lang=fr">
+    <div class="gallery-list-row" data-artwork-url="{{ artwork.url | absolute_url }}">
       <div class="gallery-col-image">
         <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
       </div>
@@ -38,11 +38,11 @@ lang_alternate: /gallery/
 <section class="gallery-section">
   <h1 class="visually-hidden">Galerie</h1>
   <div class="gallery-grid">
-    {% assign sorted_artworks = site.artworks | sort: 'year' | reverse %}
+    {% assign sorted_artworks = site.artworks | where: "lang", "fr" | sort: 'year' | reverse %}
     {% for artwork in sorted_artworks %}
       {% if artwork.published == false %}{% continue %}{% endif %}
       <div class="gallery-item gallery-item--{{ artwork.status | default: 'available' }}" data-label="{{ artwork.title }}{% if artwork.medium %} · {{ artwork.medium | upcase }}{% endif %}">
-        <a href="{{ artwork.url | relative_url }}?lang=fr" class="gallery-link">
+        <a href="{{ artwork.url | relative_url }}" class="gallery-link">
           <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
         </a>
         <div class="gallery-overlay">
@@ -57,7 +57,7 @@ lang_alternate: /gallery/
                     data-medium="{{ artwork.medium }}"
                     data-dimensions="{{ artwork.dimensions }}"
                     data-year="{{ artwork.year }}"
-                    data-url="{{ artwork.url | absolute_url }}?lang=fr">
+                    data-url="{{ artwork.url | absolute_url }}">
                         S'INFORMER SUR CETTE ŒUVRE
             </button>
           {% endif %}

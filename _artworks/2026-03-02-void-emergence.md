@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-02-void-emergence/
 published: true
 status: available
 title: "Void Emergence"

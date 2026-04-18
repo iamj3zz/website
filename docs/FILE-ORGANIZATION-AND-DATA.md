@@ -422,6 +422,34 @@ venue_address: "Street, Postal"      # Full address (optional)
 
 ---
 
+## Bilingual Files
+
+The site supports English and French. French versions of pages and artworks use the `fr-` filename prefix.
+
+### French Page Files
+
+| English file | French file | URL |
+|-------------|------------|-----|
+| `_pages/bio.markdown` | `_pages/fr-bio.markdown` | `/fr/bio/` |
+| `_pages/gallery.markdown` | `_pages/fr-gallery.markdown` | `/fr/gallery/` |
+| `_pages/contact.markdown` | `_pages/fr-contact.markdown` | `/fr/contact/` |
+| `_pages/events.markdown` | `_pages/fr-events.markdown` | `/fr/events/` |
+
+Each French page must have:
+- `lang: fr` in front matter
+- `permalink: /fr/{slug}/` in front matter
+- `lang_alternate: /{slug}/` pointing to English version
+
+### French Artwork Files
+
+French artworks are separate files with the `fr-` prefix:
+- File: `_artworks/fr-YYYY-MM-DD-{slug}.md`
+- URL: `/fr/gallery/YYYY-MM-DD-{slug}/`
+- Front matter: `lang: fr`, `permalink: /fr/gallery/YYYY-MM-DD-{slug}/`, `lang_alternate: /gallery/YYYY-MM-DD-{slug}/`
+- Content: Fully translated `title`, `abstract`, `description`, and metadata
+
+See [Bilingual System](architecture.md#bilingual-system-enfr) in Architecture docs for full details.
+
 ## Special Files
 
 ### Template Works

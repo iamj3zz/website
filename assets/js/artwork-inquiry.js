@@ -95,7 +95,7 @@
       const submitBtn = form && form.querySelector('[type="submit"]');
       if (submitBtn) {
         submitBtn.disabled = false;
-        submitBtn.textContent = isFrench ? 'Envoyer la demande' : 'Send Inquiry';
+        submitBtn.textContent = submitButtonEn && isFrench ? submitButtonFr : submitButtonEn;
       }
       if (lastTrigger) lastTrigger.focus();
     }
@@ -112,6 +112,11 @@
     });
 
     if (form) {
+      const submitButtonEn = form.dataset.submitButtonEn;
+      const submitButtonFr = form.dataset.submitButtonFr;
+      const sendingStateEn = form.dataset.sendingStateEn;
+      const sendingStateFr = form.dataset.sendingStateFr;
+
       form.addEventListener('submit', function (e) {
         e.preventDefault();
 
@@ -200,7 +205,7 @@
         const submitBtn = form.querySelector('[type="submit"]');
 
         submitBtn.disabled = true;
-        submitBtn.textContent = isFrench ? 'Envoi en cours…' : 'Sending…';
+        submitBtn.textContent = sendingStateEn && isFrench ? sendingStateFr : sendingStateEn;
 
         fetch(form.action, {
           method: 'POST',
@@ -220,7 +225,7 @@
         .catch(function () {
           if (errorMsg) errorMsg.hidden = false;
           submitBtn.disabled = false;
-          submitBtn.textContent = isFrench ? 'Envoyer la demande' : 'Send Inquiry';
+          submitBtn.textContent = submitButtonEn && isFrench ? submitButtonFr : submitButtonEn;
         });
       });
     }

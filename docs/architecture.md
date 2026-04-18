@@ -115,6 +115,121 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
   - `split-hero-metadata.html` - Two-column layout with hero content (2/3) and metadata (1/3)
   - `split-bandcamp-metadata.html` - Two-column layout with iframe (1/3) and metadata/text (2/3)
 
+## Bilingual System (EN/FR)
+
+The site supports English and French with **URL-based language detection** — separate pages and files per language, no query parameters.
+
+### URL Structure
+
+| Page | English | French |
+|------|---------|--------|
+| Gallery index | `/gallery/` | `/fr/gallery/` |
+| Artwork detail | `/gallery/2026-03-01-fractured-system/` | `/fr/gallery/2026-03-01-fractured-system/` |
+| Bio | `/bio/` | `/fr/bio/` |
+| Works | `/works/` | `/fr/works/` |
+| Events | `/events/` | `/fr/events/` |
+| Contact | `/contact/` | `/fr/contact/` |
+
+Portfolio work pages (`/works/…`) are English-only for now — no French versions exist yet.
+
+### Translation Data (`_data/translations.yml`)
+
+Single source of truth for all structural UI strings. Both languages visible side-by-side:
+
+```yaml
+artwork:
+  status:
+    available:
+      en: "AVAILABLE"
+      fr: "DISPONIBLE"
+nav:
+  gallery:
+    en: "GALLERY"
+    fr: "GALERIE"
+```
+
+**Access in templates:**
+```liquid
+{% assign _lang = page.lang | default: 'en' %}
+{% assign _trans = site.data.translations %}
+{{ _trans.artwork.status.available[_lang] }}
+```
+
+**Sections:** `nav`, `lang_switcher`, `months`, `artwork`, `metadata`, `inquiry_modal`, `inquiry_form`
+
+**Important:** `_data/translations.yml` must remain a single file. Do NOT create a `_data/translations/` directory alongside it — Jekyll would use the directory and ignore the file.
+
+### Language Detection
+
+Pages declare their language via `page.lang` front matter:
+- English pages: no `lang:` field (defaults to `'en'`)
+- French pages: `lang: fr`
+
+Templates use `{% assign _lang = page.lang | default: 'en' %}` to branch.
+
+### Language Switcher (`_includes/lang-switcher.html`)
+
+Uses `page.lang_alternate` front matter to know the URL of the other-language version:
+
+```yaml
+# English page
+lang_alternate: /fr/gallery/2026-03-01-fractured-system/
+
+# French page
+lang: fr
+lang_alternate: /gallery/2026-03-01-fractured-system/
+```
+
+**Fallback behavior:** If a page has no `lang_alternate` (e.g. untranslated portfolio work pages), both EN and FR links point to `page.url` — clicking FR keeps the user on the current English page.
+
+### French Page Files
+
+French versions of pages use the `fr-` filename prefix (matching the `_pages/` convention):
+
+| Collection | English file | French file |
+|-----------|-------------|-------------|
+| Pages | `_pages/bio.markdown` | `_pages/fr-bio.markdown` |
+| Pages | `_pages/gallery.markdown` | `_pages/fr-gallery.markdown` |
+| Artworks | `_artworks/2026-03-01-fractured-system.md` | `_artworks/fr-2026-03-01-fractured-system.md` |
+
+### Artwork Gallery Bilingual Setup
+
+The gallery has full bilingual support — 16 English artworks + 16 French artworks.
+
+**English artwork files** (`_artworks/YYYY-MM-DD-{slug}.md`):
+- No `lang:` field (defaults to `'en'`)
+- Must have `lang_alternate: /fr/gallery/YYYY-MM-DD-{slug}/`
+
+**French artwork files** (`_artworks/fr-YYYY-MM-DD-{slug}.md`):
+- `lang: fr`
+- `lang_alternate: /gallery/YYYY-MM-DD-{slug}/`
+- `permalink: /fr/gallery/YYYY-MM-DD-{slug}/`
+- Translated `title`, `abstract`, `description`, and French metadata values
+
+**Gallery page filtering:** Each gallery page filters artworks by language to avoid cross-language links:
+```liquid
+# English gallery (gallery.markdown)
+{% assign sorted_artworks = site.artworks | where_exp: "a", "a.lang != 'fr'" | sort: 'year' | reverse %}
+
+# French gallery (fr-gallery.markdown)
+{% assign sorted_artworks = site.artworks | where: "lang", "fr" | sort: 'year' | reverse %}
+```
+
+**Artwork prev/next navigation** also filters by language so arrows stay within the same language space.
+
+### Adding a New Translated Page
+
+1. Create English page `_pages/{slug}.markdown` with `lang_alternate: /fr/{slug}/`
+2. Create French page `_pages/fr-{slug}.markdown` with `lang: fr`, `permalink: /fr/{slug}/`, `lang_alternate: /{slug}/`
+3. Add nav links to all 4 layouts (artwork.html, work.html, portfolio.html, bio-gallery.html) following the existing `{% if _lang == 'fr' %}/fr/{slug}/{% else %}/{slug}/{% endif %}` pattern
+
+### Adding a New Translated Artwork
+
+1. Add `lang_alternate: /fr/gallery/YYYY-MM-DD-{slug}/` to the English artwork file
+2. Create `_artworks/fr-YYYY-MM-DD-{slug}.md` with `lang: fr`, `lang_alternate: /gallery/YYYY-MM-DD-{slug}/`, `permalink: /fr/gallery/YYYY-MM-DD-{slug}/`, and translated content
+
+---
+
 ## Navigation
 
 **Main Navigation (appears on all pages):**
@@ -467,7 +582,7 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
 ```yaml
 author:
   name: J3ZZ
-  email: hello@j3zz.com
+  email: contact@j3zz.com
   twitter: j3zz
 
 twitter:

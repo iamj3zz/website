@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-14-primal-chaos/
 published: true
 status: available
 title: "Primal Chaos"

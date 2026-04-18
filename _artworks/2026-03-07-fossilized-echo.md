@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-07-fossilized-echo/
 published: true
 status: available
 title: "Fossilized Echo"

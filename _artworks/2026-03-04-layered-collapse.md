@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-04-layered-collapse/
 published: true
 status: available
 title: "Layered Collapse"

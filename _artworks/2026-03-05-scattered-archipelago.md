@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-05-scattered-archipelago/
 published: true
 status: available
 title: "Scattered Archipelago"

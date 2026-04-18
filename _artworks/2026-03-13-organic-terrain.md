@@ -1,4 +1,5 @@
 ---
+lang_alternate: /fr/gallery/2026-03-13-organic-terrain/
 published: true
 status: available
 title: "Organic Terrain"
