@@ -3,34 +3,32 @@ published: false
 show_in_grid: false
 status: archived
 layout: work
-title: "Panda Elektroakusztik"
+title: Panda Elektroakusztik
 work_id: panda
-abstract: |
-  Electroacoustic ensemble collaboration between DJ Panda and J3ZZ featuring traditional and contemporary instruments.
-description: |
-  Panda Elektroakusztik is an electroacoustic ensemble featuring a collaboration between DJ Panda and J3ZZ as violinist. The ensemble combines traditional instruments including santur, cello, shakuhachi, bass, and vocals with electronic music production. Performances took place at various Budapest venues including Szimpla Kert during summer 2018.
+abstract: 'Electroacoustic ensemble collaboration between DJ Panda and J3ZZ featuring
+  traditional and contemporary instruments.
+
+  '
+description: Electroacoustic ensemble collaboration between DJ Panda and J3ZZ featuring
+  traditional and contemporary instruments.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
-
+image: "/assets/works/1900-01-01-inst-complete-template/thumbnail.jpg"
 metadata:
-  date: "2018"
-  based_in: "Budapest, Hungary"
-  role: "violinist, musician"
-  collaborators: "DJ Panda"
+  date: '2018'
+  based_in: Budapest, Hungary
+  role: violinist, musician
+  collaborators: DJ Panda
   custom:
-    - label: "Format"
-      value: "Live electroacoustic performances"
-    - label: "Ensemble Instrumentation"
-      value: "Santur, cello, shakuhachi, bass, violin, vocals, electronics"
-    - label: "Venue"
-      value: "Szimpla Kert"
-      link: "https://szimpla.hu/"
-
+  - label: Format
+    value: Live electroacoustic performances
+  - label: Ensemble Instrumentation
+    value: Santur, cello, shakuhachi, bass, violin, vocals, electronics
+  - label: Venue
+    value: Szimpla Kert
+    link: https://szimpla.hu/
 sections:
-  - type: description
-
-  - type: linked-events
-
-  - type: metadata
+- type: description
+- type: linked-events
+- type: metadata
 ---

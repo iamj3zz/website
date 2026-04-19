@@ -666,15 +666,14 @@ default_image: /assets/bio/bio-photo.jpg
 lang: en_US
 ```
 
-**Description Override (Meta & OG Descriptions):**
+**Description (Meta & OG Descriptions):**
 
-Both portfolio work pages and artwork pages use the `abstract` field as their description for better SEO control:
-- **Portfolio works** (`page.layout == "work"` with `page.abstract`):
-  - `meta name="description"` and `og:description` both use the abstract
-  - Provides concise, SEO-friendly description instead of raw markdown content
-- **Artwork pages** (`page.layout == "artwork"` with `page.abstract`):
-  - Same behavior: abstract used for both meta and OG descriptions
-- Fallback: If abstract is missing, jekyll-seo-tag generates description from page content
+Portfolio works and artworks use the `abstract` field as their `description` in front matter. This ensures:
+- A single, concise `<meta name="description">` (from `page.description` via jekyll-seo-tag)
+- No duplicate meta description tags
+- The short abstract (1–2 sentences) appears in search results, not the full multi-paragraph content
+
+The `description` field in `_portfolio/*.md` and `_artworks/*.md` is set equal to the `abstract` value. The `abstract` field is kept separately for use in other contexts (portfolio grid hover, print layout, JSON-LD structured data).
 
 **Image Alt Text Improvements:**
 

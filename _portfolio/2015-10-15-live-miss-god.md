@@ -2,51 +2,47 @@
 published: false
 status: minor
 layout: work
-title: "Miss God & J3ZZ"
+title: Miss God & J3ZZ
 work_id: miss-god
-abstract: |
-  Live collaboration with Polish singer, composer and producer Miss God at Szimpla Kert, Budapest, October 15, 2015. J3ZZ as violinist.
-description: |
-  A live collaboration between Miss God — Polish singer, composer and producer known for subtle electronic sound, deep basslines, and ethnically inspired experimental vocals — and J3ZZ on violin, performed at Szimpla Kert, Budapest on October 15, 2015.
+abstract: 'Live collaboration with Polish singer, composer and producer Miss God at
+  Szimpla Kert, Budapest, October 15, 2015. J3ZZ as violinist.
 
-  Miss God's music draws comparisons to Burial, Mister Lies and Soap&Skin. She supported Dizzie Rascal & Modeselektor at Electronic Beats Festival in Poznań (2013), appeared at Ambition Festival (London), Heineken Opener Festival and Soundrive Festival, and won the Skoda & T-Mobile competition for emerging musicians (2014). She also composes for film and performed in Paris with dance theatre Le Flux.
+  '
+description: Live collaboration with Polish singer, composer and producer Miss God
+  at Szimpla Kert, Budapest, October 15, 2015. J3ZZ as violinist.
 category: live-acts
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
-
+image: "/assets/works/1900-01-01-inst-complete-template/thumbnail.jpg"
 metadata:
-  date: "2015"
-  based_in: "Szimpla Kert, Budapest, Hungary"
-  role: "violinist"
-  collaborators: "Miss God (vocals, electronics, composition) — Poland"
+  date: '2015'
+  based_in: Szimpla Kert, Budapest, Hungary
+  role: violinist
+  collaborators: Miss God (vocals, electronics, composition) — Poland
   custom:
-    - label: "Venue"
-      value: "Szimpla Kert, Kazinczy utca 14, Budapest"
-      link: "https://szimpla.hu/"
-    - label: "Facebook event"
-      value: "Miss God & J3ZZ at Szimpla"
-      link: "https://www.facebook.com/events/548879445262803/"
-    - label: "Video"
-      value: "Live at Szimpla Kert — YouTube"
-      link: "https://www.youtube.com/watch?v=_6riQItJ7Co"
-    - label: "Miss God — Bandcamp"
-      value: "missgod.bandcamp.com"
-      link: "http://missgod.bandcamp.com/"
-    - label: "Miss God — Facebook"
-      value: "facebook.com/MissGodMusic"
-      link: "https://www.facebook.com/MissGodMusic"
-
+  - label: Venue
+    value: Szimpla Kert, Kazinczy utca 14, Budapest
+    link: https://szimpla.hu/
+  - label: Facebook event
+    value: Miss God & J3ZZ at Szimpla
+    link: https://www.facebook.com/events/548879445262803/
+  - label: Video
+    value: Live at Szimpla Kert — YouTube
+    link: https://www.youtube.com/watch?v=_6riQItJ7Co
+  - label: Miss God — Bandcamp
+    value: missgod.bandcamp.com
+    link: http://missgod.bandcamp.com/
+  - label: Miss God — Facebook
+    value: facebook.com/MissGodMusic
+    link: https://www.facebook.com/MissGodMusic
 sections:
-  - type: description
-
-  - type: iframe
-    embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/_6riQItJ7Co" frameborder="0" allowfullscreen></iframe>'
-    responsive: true
-    aspect_ratio: "16:9"
-    caption: "Miss God & J3ZZ — Live at Szimpla Kert, Budapest, October 15, 2015"
-
-
-  - type: linked-events
-    title: "Performances"
-  - type: metadata
+- type: description
+- type: iframe
+  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/_6riQItJ7Co"
+    frameborder="0" allowfullscreen></iframe>
+  responsive: true
+  aspect_ratio: '16:9'
+  caption: Miss God & J3ZZ — Live at Szimpla Kert, Budapest, October 15, 2015
+- type: linked-events
+  title: Performances
+- type: metadata
 ---

@@ -2,48 +2,48 @@
 published: false
 status: major
 layout: work
-title: "VIBROTANICA"
+title: VIBROTANICA
 work_id: vibrotanica
 print_hero_image: true
-abstract: "An immersive interactive installation using bioelectrical sensors to capture plant bio-signals and transform them into real-time sound and visuals, connecting humans and nature."
-description: |
-  Vibrotanica is an immersive interactive audiovisual installation exploring the symbiotic relationship between humans and plants. Bioelectrical sensors capture micro-electrical variations in plants and transform them into real-time sounds and visuals — every interaction with a plant triggers a unique audiovisual response. The work raises awareness about biodiversity, fosters empathy towards nature, and invites reflection on our connection to the environment.
+abstract: An immersive interactive installation using bioelectrical sensors to capture
+  plant bio-signals and transform them into real-time sound and visuals, connecting
+  humans and nature.
+description: An immersive interactive installation using bioelectrical sensors to
+  capture plant bio-signals and transform them into real-time sound and visuals, connecting
+  humans and nature.
 category: installations
 commissioned: false
-image: /assets/works/2026-01-01-inst-vibrotanica/thumbnail.jpg
-
+image: "/assets/works/2026-01-01-inst-vibrotanica/thumbnail.jpg"
 metadata:
-  release_date: "2024-08-27"
-  location: "TBD (work in progress)"
-  role: "concept, sound artist, programmer"
-  technology: "Bioelectrical sensors, ambisonic audio, HD projection, generative visuals, fog machines, Max for Live / Ableton Live"
-  credits: "Concept, sound, programming: J3ZZ. Hardware (Vibrotanica Box): J3ZZ"
+  release_date: '2024-08-27'
+  location: TBD (work in progress)
+  role: concept, sound artist, programmer
+  technology: Bioelectrical sensors, ambisonic audio, HD projection, generative visuals,
+    fog machines, Max for Live / Ableton Live
+  credits: 'Concept, sound, programming: J3ZZ. Hardware (Vibrotanica Box): J3ZZ'
   custom:
-    - label: "Status"
-      value: "Work in progress"
-    - label: "Website"
-      value: "vibrotanica.j3zz.com"
-      link: "https://vibrotanica.j3zz.com"
-
+  - label: Status
+    value: Work in progress
+  - label: Website
+    value: vibrotanica.j3zz.com
+    link: https://vibrotanica.j3zz.com
 sections:
-  - type: hero-image
-    image: /assets/works/2026-01-01-inst-vibrotanica/hero.jpg
-  - type: description
+- type: hero-image
+  image: "/assets/works/2026-01-01-inst-vibrotanica/hero.jpg"
+- type: description
+- type: text
+  title: ''
+  content: |
+    Visitors explore the interactions between humans and plants by transforming the **bio-signals** of plants into **visual and auditory stimuli**.
 
-  - type: text
-    title: ""
-    content: |
-      Visitors explore the interactions between humans and plants by transforming the **bio-signals** of plants into **visual and auditory stimuli**.
+    The project uses **bioelectrical sensors to capture the micro-electrical variations** in plants through the "Vibrotanica box", a device designed by the artist. These signals are then transformed into data to generate **real-time sounds and visuals**. The installation features an immersive sound system, high-definition video projectors, and a complex software interface that enables the creation of ambisonic visuals and sounds. These technologies work together to create an **immersive atmosphere where each interaction between the visitors and the plants triggers a unique audiovisual response**.
 
-      The project uses **bioelectrical sensors to capture the micro-electrical variations** in plants through the "Vibrotanica box", a device designed by the artist. These signals are then transformed into data to generate **real-time sounds and visuals**. The installation features an immersive sound system, high-definition video projectors, and a complex software interface that enables the creation of ambisonic visuals and sounds. These technologies work together to create an **immersive atmosphere where each interaction between the visitors and the plants triggers a unique audiovisual response**.
+    **Vibrotanica** is an artistic and technological exploration that immerses the audience in the profound and **symbiotic relationship between humans and plants**. This installation not only aims to raise awareness about the importance of the environment and biodiversity but also seeks to evoke strong emotions related to **empathy, the fragility of our ecosystem, and the intimate connection between humans and nature**.
 
-      **Vibrotanica** is an artistic and technological exploration that immerses the audience in the profound and **symbiotic relationship between humans and plants**. This installation not only aims to raise awareness about the importance of the environment and biodiversity but also seeks to evoke strong emotions related to **empathy, the fragility of our ecosystem, and the intimate connection between humans and nature**.
+    The goal is to foster enlightened **awareness and mindfulness** of our place within the natural universe. The installation highlights the **universality of the bond between all forms of life** while inviting an **inner transformation**, subtly altering the audience's perception to better understand the impact of our actions on the environment. Through this geopoetic, collective, and educational experience, **Vibrotanica** aspires to strengthen this fragile yet powerful connection with nature, creating a moment of **reflection, wonder, and transformation**.
 
-      The goal is to foster enlightened **awareness and mindfulness** of our place within the natural universe. The installation highlights the **universality of the bond between all forms of life** while inviting an **inner transformation**, subtly altering the audience's perception to better understand the impact of our actions on the environment. Through this geopoetic, collective, and educational experience, **Vibrotanica** aspires to strengthen this fragile yet powerful connection with nature, creating a moment of **reflection, wonder, and transformation**.
+    The staging of **Vibrotanica** is meticulously designed to **amplify the connection between the ordinary and the extraordinary**. The solemn lighting, focused on the plants, creates an **intimate and familiar atmosphere**, evoking the common imagery of potted plants and grounding the work in something recognizable for the audience. **Large-scale visual projections** immerse the audience in the reactions of the plants and their interactions with their immediate environment. The fog, generated by machines, evokes the **humidity of tropical forests**, adding an additional sensory dimension to the experience. The sound diffusion system is intentionally kept "invisible" so that the **focus remains on the interaction between the artist, the plants, and the visual elements**.
 
-      The staging of **Vibrotanica** is meticulously designed to **amplify the connection between the ordinary and the extraordinary**. The solemn lighting, focused on the plants, creates an **intimate and familiar atmosphere**, evoking the common imagery of potted plants and grounding the work in something recognizable for the audience. **Large-scale visual projections** immerse the audience in the reactions of the plants and their interactions with their immediate environment. The fog, generated by machines, evokes the **humidity of tropical forests**, adding an additional sensory dimension to the experience. The sound diffusion system is intentionally kept "invisible" so that the **focus remains on the interaction between the artist, the plants, and the visual elements**.
-
-      **Vibrotanica** targets a broad spectrum of participants, making the experience **accessible and engaging for a diverse audience**. The project places special emphasis on including marginalized or underserved groups by leveraging the **strong sensory dimension** of the installation, which **engages touch, sight, and hearing**. The work is also designed for an **intergenerational** audience, creating a space where people of all ages can come together and share a common experience, thereby **strengthening familial and social bonds through the exploration of nature**.
-
-  - type: metadata
+    **Vibrotanica** targets a broad spectrum of participants, making the experience **accessible and engaging for a diverse audience**. The project places special emphasis on including marginalized or underserved groups by leveraging the **strong sensory dimension** of the installation, which **engages touch, sight, and hearing**. The work is also designed for an **intergenerational** audience, creating a space where people of all ages can come together and share a common experience, thereby **strengthening familial and social bonds through the exploration of nature**.
+- type: metadata
 ---

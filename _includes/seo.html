@@ -40,17 +40,6 @@
   {% endif %}
 {% endif %}
 
-<!-- Description override for artwork pages -->
-{% if page.layout == "artwork" and page.abstract %}
-<meta name="description" content="{{ page.abstract | strip_html | escape }}">
-<meta property="og:description" content="{{ page.abstract | strip_html | escape }}">
-{% endif %}
-
-<!-- Description override for work pages -->
-{% if page.layout == "work" and page.abstract %}
-<meta name="description" content="{{ page.abstract | strip_html | escape }}">
-<meta property="og:description" content="{{ page.abstract | strip_html | escape }}">
-{% endif %}
 
 <!-- Structured Data for Portfolio Works -->
 {% if page.layout == "work" %}

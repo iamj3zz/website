@@ -2,31 +2,31 @@
 published: false
 status: minor
 layout: work
-title: "Mellettünk x J3ZZ"
+title: Mellettünk x J3ZZ
 work_id: mellettunk
-abstract: "Multidisciplinary performance combining writing, dance, and live violin to explore shared identity and village heritage."
-description: |
-  Mellettünk x J3ZZ was a commissioned collaborative artistic evening featuring writer Krisztián Grecsó and dancer Zoltán Grecsó. The performance explores shared identity and village roots through distinct artistic languages. Rather than text explaining dance, the work presents a peculiar struggle, spiritual inventory, and virtual family constellation examining common themes from different perspectives. J3ZZ performed live violin alongside vocalist Réka Fodor, creating an immersive soundscape for the dancers' movements and the writers' spoken word.
+abstract: Multidisciplinary performance combining writing, dance, and live violin
+  to explore shared identity and village heritage.
+description: Multidisciplinary performance combining writing, dance, and live violin
+  to explore shared identity and village heritage.
 category: live-acts
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
-
+image: "/assets/works/1900-01-01-inst-complete-template/thumbnail.jpg"
 metadata:
-  date: "2019"
-  based_in: "Esernyős - Óbudai Kulturális, Fő tér 2, Budapest, Hungary"
-  based_in_link: "https://goo.gl/maps/gD6QKUWczW9qhrkY6"
-  role: "violinist (live performance)"
-  commissioned_by: "Krisztián Grecsó, Zoltán Grecsó"
-  collaborators: "Krisztián Grecsó (writing), Zoltán Grecsó (dance/choreography), Réka Fodor (vocals)"
+  date: '2019'
+  based_in: Esernyős - Óbudai Kulturális, Fő tér 2, Budapest, Hungary
+  based_in_link: https://goo.gl/maps/gD6QKUWczW9qhrkY6
+  role: violinist (live performance)
+  commissioned_by: Krisztián Grecsó, Zoltán Grecsó
+  collaborators: Krisztián Grecsó (writing), Zoltán Grecsó (dance/choreography), Réka
+    Fodor (vocals)
   custom:
-    - label: "Format"
-      value: "Collaborative multimedia performance"
-    - label: "Disciplines"
-      value: "Dance, spoken word, live violin, vocals"
-
+  - label: Format
+    value: Collaborative multimedia performance
+  - label: Disciplines
+    value: Dance, spoken word, live violin, vocals
 sections:
-  - type: description
-  - type: linked-events
-    title: "Event"
-  - type: metadata
+- type: description
+- type: linked-events
+  title: Event
+- type: metadata
 ---
