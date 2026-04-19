@@ -23,9 +23,9 @@ All page files are located in the `_pages/` directory:
 The `_pages/` directory is configured as a Jekyll collection in `_config.yml` to organize all site pages in one location.
 
 **Layouts:**
-- `_layouts/portfolio.html` - Main layout for pages with navigation and logo
+- `_layouts/portfolio.html` - Main layout for pages with navigation and logo (used by `/bio/`, `/bio-gallery/`, `/works/`, `/gallery/`, `/events/`, `/contact/`)
 - `_layouts/work.html` - Layout for individual portfolio work detail pages
-- `_layouts/bio-gallery.html` - Layout for bio gallery page with lightbox support
+- `_layouts/artwork.html` - Layout for individual fine art detail pages
 
 **Collections:**
 - `_portfolio/` - Portfolio items collection (real works + `1900-01-01-*` template/placeholder files)
@@ -196,7 +196,7 @@ French versions of pages use the `fr-` filename prefix (matching the `_pages/` c
 
 ### Bio Gallery (Press Photos) Bilingual Setup
 
-The bio gallery page displays press and media use photos with high-resolution downloads.
+The bio gallery page displays press and media use photos with high-resolution downloads. It uses the `portfolio` layout (same as `/bio/`) to ensure consistent styling and share the bio submenu (CV, Press Kit, Pictures/Photos, IMDb).
 
 **Files:**
 - `_pages/bio-gallery.markdown` — English version at `/bio-gallery/`
@@ -204,11 +204,20 @@ The bio gallery page displays press and media use photos with high-resolution do
 
 **Front matter structure:**
 ```yaml
-layout: bio-gallery
+layout: portfolio
 title: Bio Gallery (or "Galerie Bio" in French)
 permalink: /bio-gallery/ (or /fr/bio-gallery/)
 lang: en (or fr)
 lang_alternate: /fr/bio-gallery/ (or /bio-gallery/)
+links:
+  - title: CV
+    url: /assets/bio/cv.pdf
+  - title: Press Kit
+    url: /assets/bio/press-kit.pdf
+  - title: Pictures (or "Photos" in French)
+    url: /bio-gallery/ (or /fr/bio-gallery/)
+  - title: IMDb
+    url: https://www.imdb.com/name/nm6903099/
 gallery_images:
   - filename: photo-01.jpg
     hires: photo-01-hires.jpg
@@ -218,7 +227,10 @@ gallery_images:
 **Image structure:**
 - Web images: `assets/bio/gallery/` — 1440px wide, proportional height
 - High-res images: `assets/bio/gallery/hires/` — Original high-resolution files (3000px+) for press/print use
-- Print version: Displays full-size images (not square-cropped)
+- Print version: Displays full-size images (not square-cropped) with QR codes for each photo
+
+**Submenu (bio-links):**
+The `links` front matter array generates a centered submenu at the top of the page (matching the bio page layout). The current page link is marked with `.active` class and shows an underline. Lightbox clicks on gallery images are properly intercepted to prevent opening when clicking download links.
 
 **Translations:** All UI strings (`press_title`, `press_intro`, `instruction_*`, `download_link`, `contact_note`) are in `_data/translations.yml` under `bio_gallery` section. Captions are proper nouns (photographer names, locations) and are not translated.
 
@@ -251,7 +263,7 @@ The gallery has full bilingual support — 16 English artworks + 16 French artwo
 
 1. Create English page `_pages/{slug}.markdown` with `lang_alternate: /fr/{slug}/`
 2. Create French page `_pages/fr-{slug}.markdown` with `lang: fr`, `permalink: /fr/{slug}/`, `lang_alternate: /{slug}/`
-3. Add nav links to all 4 layouts (artwork.html, work.html, portfolio.html, bio-gallery.html) following the existing `{% if _lang == 'fr' %}/fr/{slug}/{% else %}/{slug}/{% endif %}` pattern
+3. Add nav links to all 4 layouts (artwork.html, work.html, portfolio.html) following the existing `{% if _lang == 'fr' %}/fr/{slug}/{% else %}/{slug}/{% endif %}` pattern
 
 ### Adding a New Translated Artwork
 
@@ -283,7 +295,7 @@ The gallery has full bilingual support — 16 English artworks + 16 French artwo
 - Toggled via `.bottom-nav--visible` class added by JS in `navigation.js`
 - Active page link underlined
 - Hidden in print view
-- HTML: `<nav class="bottom-nav">` in all 4 layouts, before `<footer>`
+- HTML: `<nav class="bottom-nav">` in all layouts, before `<footer>`
 - CSS: `_sass/_layout.scss` (`.bottom-nav`, `.bottom-nav--visible`)
 
 **Works Page Sub-Navigation:**
@@ -621,7 +633,7 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
      - Default fallback for other pages: `default_image` from config (`/assets/bio/bio-photo.jpg`)
 
 4. **Favicon Configuration:**
-   - Applied to all 4 layouts (portfolio, work, artwork, bio-gallery)
+   - Applied to all layouts (portfolio, work, artwork)
    - Uses `logo-square.png` (2048×1446 PNG) for both favicon and apple-touch-icon
    - Provides visual branding in browser tabs and bookmarks
 

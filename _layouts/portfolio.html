@@ -141,6 +141,17 @@
     </div>
   </footer>
 
+  <!-- Lightbox Modal -->
+  <div id="lightbox" class="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-content" id="lightbox-img" alt="" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7">
+    <div class="lightbox-caption" id="lightbox-caption"></div>
+    <div class="lightbox-nav">
+      <button class="lightbox-prev">&#10094;</button>
+      <button class="lightbox-next">&#10095;</button>
+    </div>
+  </div>
+
   <button class="back-to-top" hidden aria-label="Back to top">↑</button>
 
   {% if site.supabase_url and site.supabase_anon_key %}
@@ -155,6 +166,7 @@
   <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/utils.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/back-to-top.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/lightbox.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/portfolio.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/portfolio-scroll-overlay.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/portfolio-filter-nav.js' | relative_url }}" defer></script>

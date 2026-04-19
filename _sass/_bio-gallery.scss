@@ -73,6 +73,11 @@
   margin: 0 0 10px 0;
 }
 
+/* Increase grid gap to accommodate download links without overlap */
+.bio-section .module-image-grid .image-grid {
+  gap: 35px;
+}
+
 .download-instructions strong {
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -119,9 +124,11 @@
 .bio-gallery-container .image-grid .grid-item {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
 .bio-gallery-container .image-grid .grid-item img {
+  width: 100%;
   height: auto;
   flex-shrink: 0;
 }
@@ -159,6 +166,7 @@
 .gallery-download-link {
   display: block;
   margin-top: 8px;
+  margin-bottom: 0;
   font-size: 12px;
   color: #666;
   text-decoration: none;
@@ -166,8 +174,6 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 2px;
   transition: color 0.2s, border-color 0.2s;
-  position: relative;
-  z-index: 10;
   pointer-events: auto;
 
   &:hover {
