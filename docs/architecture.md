@@ -743,7 +743,8 @@ Each page declares its type in front matter (`page_type: works`, `page_type: con
 | *(none)* | *(universal only)* | `/privacy/` |
 
 **Universal Scripts** (loaded on all pages):
-`cookie-consent.js`, `utils.js`, `back-to-top.js`, `lightbox.js`, `navigation.js`, `qrcode.min.js`, `print-header-qrcode.js`
+- `cookie-consent.js` (loaded immediately without defer — must initialize before other scripts)
+- `utils.js`, `back-to-top.js`, `lightbox.js`, `navigation.js`, `qrcode.min.js`, `print-header-qrcode.js` (all loaded with `defer` attribute)
 
 **Implementation in Layout:**
 ```liquid
