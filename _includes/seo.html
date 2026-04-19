@@ -1,5 +1,13 @@
 {% seo %}
 
+<!-- Override og:locale for bilingual pages -->
+{% assign page_lang = page.lang | default: 'en' %}
+{% if page_lang == 'fr' %}
+<meta property="og:locale" content="fr_FR">
+{% else %}
+<meta property="og:locale" content="en_US">
+{% endif %}
+
 <!-- Hreflang for bilingual EN/FR pages -->
 {% assign page_lang = page.lang | default: 'en' %}
 {% if page.lang_alternate %}
