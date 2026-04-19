@@ -2,6 +2,7 @@
 layout: portfolio
 title: Privacy Policy
 permalink: /privacy/
+noindex: true
 ---
 
 <section class="privacy-section">
