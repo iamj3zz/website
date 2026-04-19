@@ -123,7 +123,7 @@ The site supports English and French with **URL-based language detection** — s
 | Events | `/events/` | `/fr/events/` |
 | Contact | `/contact/` | `/fr/contact/` |
 
-Portfolio work pages (`/works/…`) are English-only for now — no French versions exist yet.
+Portfolio work pages (`/works/…`) and the homepage (`/`) are English-only — no French versions exist yet. The homepage has `lang: en` but no `lang_alternate`, so no hreflang alternate link is emitted for it.
 
 ### Translation Data (`_data/translations.yml`)
 
