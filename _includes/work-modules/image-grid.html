@@ -14,7 +14,13 @@
           {% else %}
             {% assign caption = "" %}
           {% endif %}
-          <img src="{{ image | relative_url }}" alt="{{ caption | default: include.alt | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}" loading="lazy">
+          {% assign base_alt = caption | default: include.alt | default: page.title %}
+          {% if caption == "" %}
+            {% assign alt_text = base_alt | append: " (image " | append: forloop.index | append: ")" %}
+          {% else %}
+            {% assign alt_text = base_alt %}
+          {% endif %}
+          <img src="{{ image | relative_url }}" alt="{{ alt_text }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}" loading="lazy">
         </div>
       {% endfor %}
     {% endif %}
