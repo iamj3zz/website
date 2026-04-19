@@ -4,6 +4,7 @@ title: Bio Gallery
 permalink: /bio-gallery/
 lang: en
 lang_alternate: /fr/bio-gallery/
+page_type: bio-gallery
 links:
   - title: CV
     url: /assets/bio/cv.pdf

@@ -163,24 +163,54 @@
   </script>
   {% endif %}
 
+  <!-- Universal scripts (all pages) -->
   <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}"></script>
   <script src="{{ '/assets/js/utils.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/back-to-top.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/lightbox.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/navigation.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/qrcode.min.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/print-header-qrcode.js' | relative_url }}" defer></script>
+
+  <!-- Works/Portfolio pages -->
+  {% if page.page_type == 'works' %}
   <script src="{{ '/assets/js/portfolio.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/portfolio-scroll-overlay.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/portfolio-filter-nav.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/navigation.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/qrcode.min.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/works-qrcode.js' | relative_url }}" defer></script>
+  {% endif %}
+
+  <!-- Gallery page -->
+  {% if page.page_type == 'gallery' %}
   <script src="{{ '/assets/js/gallery-qrcode.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/print-header-qrcode.js' | relative_url }}" defer></script>
+  {% endif %}
+
+  <!-- Bio and bio-gallery pages -->
+  {% if page.page_type == 'bio' or page.page_type == 'bio-gallery' %}
   <script src="{{ '/assets/js/bio-links-qrcode.js' | relative_url }}" defer></script>
+  {% endif %}
+
+  <!-- Bio page only -->
+  {% if page.page_type == 'bio' %}
+  <script src="{{ '/assets/js/bio-section-nav.js' | relative_url }}" defer></script>
+  {% endif %}
+
+  <!-- Bio gallery page only -->
+  {% if page.page_type == 'bio-gallery' %}
+  <script src="{{ '/assets/js/bio-gallery-qrcode.js' | relative_url }}" defer></script>
+  {% endif %}
+
+  <!-- Contact page -->
+  {% if page.page_type == 'contact' %}
+  <script src="{{ '/assets/js/contact-social-qrcodes.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/newsletter-form.js' | relative_url }}" defer></script>
+  {% endif %}
+
+  <!-- Events page -->
+  {% if page.page_type == 'events' %}
   <script src="{{ '/assets/js/events-tickets-qrcode.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/events-description.js' | relative_url }}" defer></script>
   <script src="{{ '/assets/js/events-year-nav.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/bio-section-nav.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/artwork-inquiry.js' | relative_url }}" defer></script>
-  <script src="{{ '/assets/js/gallery-hearts.js' | relative_url }}" defer></script>
+  {% endif %}
 </body>
 </html>
