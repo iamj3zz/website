@@ -8,9 +8,9 @@ permalink: /fr/gallery/2026-03-03-debris-field/
 series: "Cartography of Collapse"
 series_part: "I. IGNEOUS"
 year: "2026"
-medium: "Drawing, Ink on paper"
+medium: "Dessin, encre sur papier"
 dimensions: "29.7 × 42 × 0.1 cm"
-rarity: "One-of-a-kind Artwork"
+rarity: "Œuvre unique"
 ready_to_hang: "Non"
 frame: "Sans cadre"
 authenticity: "Certificat inclus"
@@ -36,7 +36,7 @@ sections:
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-03-debris-field/print.png
-    caption: "Debris Field — Drawing, Ink on paper, 29.7 × 42 cm, 2026"
+    caption: "Debris Field — Dessin, encre sur papier, 29.7 × 42 cm, 2026"
   - type: description
 
 gallery:
