@@ -855,6 +855,11 @@
   }
 }
 
+/* Push footer above sticky engagement bar when it's visible */
+body.has-sticky-bar .site-footer {
+  padding-bottom: 80px;
+}
+
 /* Hide engagement bar in print */
 @media print {
   .artwork-engagement-bar { display: none; }

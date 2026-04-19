@@ -137,7 +137,7 @@
       {% endif %}
     </div>
     <div class="copyright">
-      <p>&copy; Copyright 2000-<script>document.write(new Date().getFullYear())</script>. All Rights Reserved {{ site.title }}</p>
+      <p>&copy; Copyright 2000-<script>document.write(new Date().getFullYear())</script>. All Rights Reserved {{ site.title }} &mdash; <a href="{% if _lang == 'fr' %}/fr/privacy/{% else %}/privacy/{% endif %}">{% if _lang == 'fr' %}Politique de confidentialité{% else %}Privacy Policy{% endif %}</a></p>
     </div>
   </footer>
 
