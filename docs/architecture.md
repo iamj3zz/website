@@ -513,6 +513,26 @@ The portfolio and gallery grids provide adaptive touch interaction based on grid
 - **Multi-column:** Labels always visible, clean grid, no interaction needed for titles
 - **Desktop:** Hover overlays, unchanged
 
+## Artwork Sticky Engagement Bar
+
+On artwork detail pages, a fixed bottom bar appears when the user scrolls past the inline engagement bar (heart/share/inquiry buttons shown below the artwork image).
+
+**Behaviour:**
+- Inline bar (`artwork-engagement-bar--inline`) is visible on page load
+- An `IntersectionObserver` in `artwork-share.js` watches the inline bar
+- When the inline bar scrolls out of view, the sticky bar (`artwork-engagement-bar--sticky`) appears at the bottom of the viewport
+- `document.body` gets class `has-sticky-bar` while the sticky bar is visible
+
+**Footer visibility fix:**
+- When `body.has-sticky-bar` is set, `.site-footer` gains `padding-bottom: 80px`
+- This prevents the fixed bar from obscuring the footer content
+- Defined in `_gallery.scss` near the sticky bar styles
+
+**Files:**
+- `_layouts/artwork.html` — both bar elements
+- `assets/js/artwork-share.js` — IntersectionObserver, `has-sticky-bar` class toggle
+- `_sass/_gallery.scss` — `.artwork-engagement-bar--sticky` styles + footer padding rule
+
 ## Typography Notes
 
 - All prose text on screen uses `text-align: left` (not justify) — WCAG 1.4.8 compliance
@@ -659,17 +679,13 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
 author:
   name: J3ZZ
   email: contact@j3zz.com
-  twitter: j3zz
-
-twitter:
-  username: j3zz
 
 social:
   name: J3ZZ
   links:
     - https://bandcamp.com/iamj3zz
     - https://soundcloud.com/j3zz
-    # ... additional social profile URLs
+    # ... additional social profile URLs (Twitter excluded — not linked on site)
 
 tagline: "Experimental sound art merging music, generative systems, and immersive installations"
 default_image: /assets/bio/bio-photo.jpg
