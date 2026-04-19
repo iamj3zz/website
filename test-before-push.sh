@@ -351,6 +351,82 @@ if [ "$ALL_PASSED" = false ]; then
 fi
 
 # ============================================================================
+# STEP 3.5: SEO Validation
+# ============================================================================
+
+print_header "Step 3.5/5: SEO Validation"
+print_step "Checking critical SEO invariants in built site..."
+
+SEO_PASSED=true
+
+seo_check() {
+    local description="$1"
+    local result="$2"  # 0 = pass, 1 = fail
+    if [ "$result" -eq 0 ]; then
+        print_success "$description"
+    else
+        print_error "$description"
+        SEO_PASSED=false
+    fi
+}
+
+# Sitemap
+[ -f "_site/sitemap.xml" ]
+seo_check "sitemap.xml exists" $?
+
+grep -q "xhtml:link" _site/sitemap.xml 2>/dev/null
+seo_check "sitemap has xhtml:link alternates (bilingual)" $?
+
+# robots.txt
+[ -f "_site/robots.txt" ]
+seo_check "robots.txt exists" $?
+
+grep -q "Sitemap:" _site/robots.txt 2>/dev/null
+seo_check "robots.txt declares sitemap location" $?
+
+# noindex pages
+grep -q "noindex" _site/404.html 2>/dev/null
+seo_check "404 page has noindex" $?
+
+grep -q "noindex" _site/privacy/index.html 2>/dev/null
+seo_check "/privacy/ has noindex" $?
+
+grep -q "noindex" _site/fr/privacy/index.html 2>/dev/null
+seo_check "/fr/privacy/ has noindex" $?
+
+# Homepage SEO
+grep -q 'meta name="description"' _site/index.html 2>/dev/null
+seo_check "homepage has meta description" $?
+
+grep -q 'rel="canonical"' _site/index.html 2>/dev/null
+seo_check "homepage has canonical URL" $?
+
+grep -q 'og:image' _site/index.html 2>/dev/null
+seo_check "homepage has og:image" $?
+
+# Bilingual hreflang
+grep -q 'hreflang' _site/bio/index.html 2>/dev/null
+seo_check "/bio/ has hreflang alternates" $?
+
+# Structured data
+grep -q 'CreativeWork' _site/works/2020-08-18-inst-iris/index.html 2>/dev/null
+seo_check "portfolio work has CreativeWork JSON-LD" $?
+
+grep -q 'VisualArtwork' _site/gallery/2026-03-01-fractured-system/index.html 2>/dev/null
+seo_check "artwork page has VisualArtwork JSON-LD" $?
+
+if [ "$SEO_PASSED" = false ]; then
+    print_error "SEO validation failed!"
+    echo ""
+    echo "Fix the SEO issues listed above, then run this script again."
+    ALL_PASSED=false
+    print_header "Tests Failed"
+    exit 1
+else
+    print_success "All SEO checks passed!"
+fi
+
+# ============================================================================
 # STEP 4: Print Testing
 # ============================================================================
 

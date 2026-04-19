@@ -7,7 +7,7 @@ task :build do
 end
 
 desc 'Test the built site with html-proofer'
-task :test => :build do
+task :test do
   puts "Testing with html-proofer..."
 
   options = {
@@ -26,8 +26,8 @@ task :test => :build do
       /127\.0\.0\.1/
     ],
 
-    # Ignore empty alt tags (can be set to false for stricter accessibility)
-    :ignore_missing_alt => true,
+    # Enforce alt text on all images for accessibility and SEO
+    :ignore_missing_alt => false,
 
     # Allow missing href (for JavaScript-based navigation)
     :allow_missing_href => false,
