@@ -115,6 +115,7 @@ The bio gallery displays press and media-use photos with both web and high-resol
 3. Edit `_pages/bio-gallery.markdown` and `_pages/fr-bio-gallery.markdown`:
    - Add/update entry in `gallery_images` array with filename, hires path, caption
    - Caption format: "J3ZZ by Photographer Name, City (Country), Year"
+   - Both pages must include `description:` field for SEO meta descriptions
 4. All UI strings auto-translate via `_data/translations.yml` under `bio_gallery` section
 5. Captions (photographer names, locations) are proper nouns — not translated between languages
 
