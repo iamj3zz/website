@@ -13,6 +13,11 @@
   function applyFilter(filterValue) {
     currentCategoryFilter = filterValue;
     location.replace('#' + (filterValue === 'all' ? '' : filterValue));
+    if (filterValue === 'all') {
+      delete document.body.dataset.activeFilter;
+    } else {
+      document.body.dataset.activeFilter = filterValue;
+    }
 
     // Update active button
     filterButtons.forEach(btn => btn.classList.remove('active'));

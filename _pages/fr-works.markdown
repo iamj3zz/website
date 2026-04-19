@@ -81,7 +81,7 @@ lang_alternate: /works/
       {% endfor %}
 
       {% if cat_works.size > 0 %}
-        <div class="works-print-category-section">
+        <div class="works-print-category-section" data-category="{{ cat }}">
           {% comment %} Translate category headers to French {% endcomment %}
           {% case cat %}
             {% when 'installations' %}

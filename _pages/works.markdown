@@ -81,7 +81,7 @@ lang_alternate: /fr/works/
       {% endfor %}
 
       {% if cat_works.size > 0 %}
-        <div class="works-print-category-section">
+        <div class="works-print-category-section" data-category="{{ cat }}">
           <h2 class="works-print-category-header">{{ cat | replace: '-', ' ' | upcase }}</h2>
           {% for item in cat_works %}
             <div class="works-list-row" data-work-url="{{ site.url }}{{ item.url }}">
