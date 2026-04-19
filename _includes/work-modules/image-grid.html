@@ -3,7 +3,7 @@
     {% if include.image_captions %}
       {% for item in include.image_captions %}
         <div class="grid-item">
-          <img src="{{ item.image | relative_url }}" alt="{{ item.caption | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ item.caption }}">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.caption | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ item.caption }}" loading="lazy">
         </div>
       {% endfor %}
     {% else %}
@@ -14,7 +14,7 @@
           {% else %}
             {% assign caption = "" %}
           {% endif %}
-          <img src="{{ image | relative_url }}" alt="{{ caption | default: include.alt | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}">
+          <img src="{{ image | relative_url }}" alt="{{ caption | default: include.alt | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}" loading="lazy">
         </div>
       {% endfor %}
     {% endif %}

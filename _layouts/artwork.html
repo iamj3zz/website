@@ -18,7 +18,7 @@
     {% assign _trans = site.data.translations %}
     <div class="site-logo">
       <a href="{{ '/' | relative_url }}">
-        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" loading="lazy">
       </a>
     </div>
     <a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="Book J3ZZ">{{ _trans.nav.book[_lang] }}</a>
@@ -163,7 +163,7 @@
       {% else %}
         {% comment %} Fallback to old structure for backward compatibility {% endcomment %}
         <div class="work-image">
-          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy">
         </div>
 
         <div class="work-content">
@@ -182,7 +182,8 @@
                      alt="{{ item.caption | default: page.title }}"
                      class="grid-image"
                      data-lightbox="true"
-                     data-caption="{{ item.caption | default: '' }}">
+                     data-caption="{{ item.caption | default: '' }}"
+                     loading="lazy">
               </div>
             {% endfor %}
           </div>
