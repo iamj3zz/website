@@ -500,6 +500,25 @@
     margin: 0 auto;
   }
 
+  /* Hide non-matching category sections when a filter is active */
+  body[data-active-filter] .works-print-category-section {
+    display: none;
+  }
+
+  body[data-active-filter] .works-print-category-section[data-category] {
+    display: none;
+  }
+
+  /* Show only the matching category */
+  body[data-active-filter="installations"] .works-print-category-section[data-category="installations"],
+  body[data-active-filter="live-acts"] .works-print-category-section[data-category="live-acts"],
+  body[data-active-filter="films"] .works-print-category-section[data-category="films"],
+  body[data-active-filter="performances"] .works-print-category-section[data-category="performances"],
+  body[data-active-filter="releases"] .works-print-category-section[data-category="releases"],
+  body[data-active-filter="workshops"] .works-print-category-section[data-category="workshops"] {
+    display: block;
+  }
+
   /* Category section headers */
   .works-print-category-section {
     margin-top: 20px;
