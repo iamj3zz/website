@@ -4,6 +4,7 @@ title: Galerie Bio
 permalink: /fr/bio-gallery/
 lang: fr
 lang_alternate: /bio-gallery/
+description: "Photos haute résolution et portraits de J3ZZ disponibles au téléchargement. Images professionnelles pour les médias, dossiers de presse et usage promotionnel."
 page_type: bio-gallery
 links:
   - title: CV
