@@ -130,6 +130,14 @@ defaults:
     values:
       layout: artwork
       published: true
+      seo:
+        type: VisualArtwork
+  - scope:
+      path: ""
+      type: "portfolio"
+    values:
+      seo:
+        type: CreativeWork
 
 # Build settings
 future: true # Allow posts/collections with future dates
@@ -138,6 +146,7 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-seo-tag
   - jekyll-sitemap
+
 
 # Include _pages directory
 include:
