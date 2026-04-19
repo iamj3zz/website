@@ -19,6 +19,8 @@ links:
     url: https://www.imdb.com/name/nm6903099/
 ---
 
+<h1 class="visually-hidden">Bio &amp; CV</h1>
+
 <section class="bio-section">
 
   <!-- Links Section -->

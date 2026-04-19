@@ -9,6 +9,8 @@ lang_alternate: /fr/events/
 page_type: events
 ---
 
+<h1 class="visually-hidden">Events &amp; Performances</h1>
+
 <section class="events-section">
 
   {% assign sorted_events = site.events | sort: 'date' | reverse %}

@@ -683,6 +683,19 @@ The `description` field in `_portfolio/*.md` and `_artworks/*.md` is set equal t
   - Each image in a grid gets its own descriptive alt text rather than shared title
   - Improves accessibility and SEO for image-heavy work pages
 
+6. **Heading Hierarchy (H1 Structure):**
+   - All portfolio pages include a visually-hidden `<h1>` at the top of the main content area
+   - Pages and their H1 text:
+     - `/bio/` → "Bio & CV"
+     - `/fr/bio/` → "Bio & CV"
+     - `/contact/` → "Contact & Booking"
+     - `/fr/contact/` → "Contact & Booking"
+     - `/events/` → "Events & Performances"
+     - `/fr/events/` → "Agenda"
+   - **Implementation:** `<h1 class="visually-hidden">Page Title</h1>` placed after the markdown front matter closing `---`, before main section content
+   - **Purpose:** Ensures proper semantic HTML heading hierarchy for accessibility and SEO without visual impact (CSS class hides it from display but keeps it for screen readers and search engines)
+   - Note: `/works/` and `/gallery/` pages include their H1s in the layout or page-specific styling
+
 **Page-Specific Front Matter for Enhanced SEO:**
 
 Individual pages can override defaults:
