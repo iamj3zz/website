@@ -80,22 +80,14 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 
 **Assets:**
 - `_sass/` - SCSS stylesheets compiled by Jekyll (including `_portfolio.scss`, `_work-detail.scss`, `_print.scss`, `_bio-gallery.scss`, `_events.scss`, etc.)
-- `assets/js/portfolio.js` - JavaScript for portfolio filtering with multi-category support
-- `assets/js/portfolio-scroll-overlay.js` - Mobile scroll overlay for portfolio and gallery grids (IntersectionObserver-based, touch-device only)
-- `assets/js/lightbox.js` - Lightbox functionality for image galleries
-- `assets/js/cookie-consent.js` - GDPR-compliant cookie consent manager for analytics and embedded content
-- `assets/js/utils.js` - Reusable utility functions (debounce, throttle) for performance optimization
-- `assets/js/back-to-top.js` - Back-to-top button for page navigation
-- `assets/js/events-year-nav.js` - Year navigation widget for events page with smooth scrolling and active year highlighting
-- `assets/js/events-description.js` - Event description expand/collapse functionality
-- `assets/js/print-header-qrcode.js` - Universal QR code generator for print header (all pages)
-- `assets/js/works-qrcode.js` - QR codes for individual works in printable WORKS page
-- `assets/js/bio-links-qrcode.js` - QR codes for bio page links in print version
-- `assets/js/bio-gallery-qrcode.js` - QR codes for bio gallery images in print version
-- `assets/js/contact-social-qrcodes.js` - QR codes for social media links in print version of contact page
-- `assets/js/newsletter-form.js` - Newsletter form validation and submission handling
-- `assets/js/navigation.js` - Mobile menu toggle and navigation functionality
-- `assets/js/qrcode.min.js` - QR code generation library
+- `assets/js/` — JavaScript organized by page type with conditional loading (see **Script Loading** section below)
+  - **Universal** (loaded on all pages): `cookie-consent.js`, `utils.js`, `back-to-top.js`, `lightbox.js`, `navigation.js`, `qrcode.min.js`, `print-header-qrcode.js`
+  - **Works pages** (`/works/`, `/`): `portfolio.js`, `portfolio-scroll-overlay.js`, `portfolio-filter-nav.js`, `works-qrcode.js`
+  - **Gallery pages** (`/gallery/`): `gallery-qrcode.js`, `gallery-hearts.js`, `artwork-inquiry.js`
+  - **Bio pages** (`/bio/`, `/bio-gallery/`): `bio-links-qrcode.js`, `bio-section-nav.js` (bio only), `bio-gallery-qrcode.js` (bio-gallery only)
+  - **Contact pages** (`/contact/`): `contact-social-qrcodes.js`, `newsletter-form.js`
+  - **Events pages** (`/events/`): `events-tickets-qrcode.js`, `events-description.js`, `events-year-nav.js`
+  - **Third-party**: `qrcode.min.js` (QR code generation library)
 - `assets/img/` - Images including logo and portfolio work images
 - `assets/img/bio-gallery/` - Press photos and artist images for bio gallery
 
@@ -699,6 +691,37 @@ Individual pages can override defaults:
 - Work-specific metadata for better content categorization
 - Per-image alt text improves accessibility and image search visibility
 - Visual consistency in browser tabs and bookmarks via favicon
+
+## Script Loading & Performance
+
+`_layouts/portfolio.html` conditionally loads page-specific JavaScript based on a `page_type` front matter field. This reduces unnecessary script parsing and execution on irrelevant pages.
+
+**Page Types and Scripts:**
+
+Each page declares its type in front matter (`page_type: works`, `page_type: contact`, etc.):
+
+| page_type | Scripts loaded | Pages |
+|---|---|---|
+| `works` | portfolio, portfolio-scroll-overlay, portfolio-filter-nav, works-qrcode | `/works/`, `/` (index) |
+| `gallery` | gallery-qrcode, gallery-hearts, artwork-inquiry | `/gallery/` |
+| `bio` | bio-links-qrcode, bio-section-nav | `/bio/` |
+| `bio-gallery` | bio-links-qrcode, bio-gallery-qrcode | `/bio-gallery/` |
+| `contact` | contact-social-qrcodes, newsletter-form | `/contact/` |
+| `events` | events-tickets-qrcode, events-description, events-year-nav | `/events/` |
+| *(none)* | *(universal only)* | `/privacy/` |
+
+**Universal Scripts** (loaded on all pages):
+`cookie-consent.js`, `utils.js`, `back-to-top.js`, `lightbox.js`, `navigation.js`, `qrcode.min.js`, `print-header-qrcode.js`
+
+**Implementation in Layout:**
+```liquid
+{% if page.page_type == 'works' %}
+  <script src="{{ '/assets/js/portfolio.js' | relative_url }}" defer></script>
+  <!-- ... other works-specific scripts -->
+{% endif %}
+```
+
+**Result:** `/privacy/` loads only 7 universal scripts; `/works/` loads 11 scripts. Each page loads only what it needs, improving page load performance.
 
 ## Analytics & Cookie Consent
 

@@ -42,6 +42,33 @@ The grid answers: "What does J3ZZ make?" Start with installations (new media ide
 
 ---
 
+## Page Performance: Conditional Script Loading
+
+All pages in `_pages/` that use `layout: portfolio` must declare a `page_type:` field in front matter to control which JavaScript files load. This optimizes performance by only loading scripts relevant to the page.
+
+**Add `page_type:` to pages:**
+
+```yaml
+---
+layout: portfolio
+title: Works
+page_type: works  # ← Add this
+permalink: /works/
+```
+
+**Valid page_type values:**
+- `works` — Portfolio works grid and index (portfolio.js, portfolio-filter-nav.js, etc.)
+- `gallery` — Fine art gallery (gallery-qrcode.js, gallery-hearts.js, artwork-inquiry.js)
+- `bio` — Bio/CV page (bio-section-nav.js, bio-links-qrcode.js)
+- `bio-gallery` — Bio gallery/press photos (bio-gallery-qrcode.js, bio-links-qrcode.js)
+- `contact` — Contact form (newsletter-form.js, contact-social-qrcodes.js)
+- `events` — Events calendar (events-year-nav.js, events-description.js, events-tickets-qrcode.js)
+- *(omit field)* — Pages with no page-specific scripts (privacy.markdown loads universal scripts only)
+
+**Result:** Scripts only load on pages where they're needed, reducing parse/execution time.
+
+---
+
 ## Bio Gallery (Press Photos) Workflow
 
 The bio gallery displays press and media-use photos with both web and high-resolution downloads.
