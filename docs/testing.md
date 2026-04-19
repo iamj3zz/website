@@ -38,6 +38,46 @@ The site uses a comprehensive testing suite that runs **on your local machine be
 - ✓ Print media queries applied correctly
 - ✓ Generates PDFs for manual review
 
+## Test Steps in `test-before-push.sh`
+
+The main test script (`./test-before-push.sh`) runs **5 steps by default**:
+
+| Step | What it tests | Speed | Runs by default |
+|---|---|---|---|
+| **0** | Image dimensions, naming conventions | ~2s | ✅ Yes |
+| **0.5** | File sizes (blocks >100MB) | <1s | ✅ Yes |
+| **1** | YAML syntax | ~1s | ✅ Yes |
+| **2** | Jekyll build + sitemap generation | ~5s | ✅ Yes |
+| **3** | HTML links, images, structure | ~3s | ✅ Yes |
+| **3.5** | **SEO Invariants** (NEW) | ~1s | ✅ Yes |
+| **4** | Print layouts and QR codes | ~10-30s | ✅ Yes |
+| **5** | Lighthouse (performance, accessibility, SEO) | ~60-120s | ❌ Optional (`--full`) |
+
+**By default**, the script runs steps 0–4 and skips Lighthouse. Run with `--full` to include Lighthouse.
+
+### SEO Validation (Step 3.5)
+
+The new **Step 3.5** runs critical SEO checks on the built site without needing Lighthouse. It validates:
+
+| Check | Ensures |
+|---|---|
+| Sitemap exists | `_site/sitemap.xml` file present |
+| Sitemap has alternates | xhtml:link entries for bilingual pages |
+| robots.txt exists | `_site/robots.txt` file present |
+| robots.txt declares sitemap | Sitemap location declared for crawlers |
+| 404 page has noindex | Error pages not indexed |
+| Privacy pages have noindex | Utility pages not indexed |
+| Homepage has meta description | SEO-critical tag present |
+| Homepage has canonical | Duplicate content prevention |
+| Homepage has og:image | Social media sharing metadata |
+| Bio page has hreflang | Bilingual page relationship declared |
+| Portfolio work has CreativeWork JSON-LD | Structured data for search engines |
+| Artwork page has VisualArtwork JSON-LD | Proper schema for art pieces |
+
+**Why separate from Lighthouse?** These checks are fast (~1s) and catch SEO regressions immediately on every commit, without waiting for optional Lighthouse analysis. Lighthouse adds comprehensive performance/accessibility audits but is slower and opt-in.
+
+---
+
 ## Running Tests Locally
 
 ### YAML Linting

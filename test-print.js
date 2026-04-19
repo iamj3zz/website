@@ -47,6 +47,16 @@ const CONFIG = {
       path: 'works/2020-08-18-inst-iris/index.html',
       name: 'work-example',
       checks: ['qr-code', 'print-layout']
+    },
+    {
+      path: 'gallery/index.html',
+      name: 'gallery',
+      checks: ['qr-code', 'print-layout']
+    },
+    {
+      path: 'bio-gallery/index.html',
+      name: 'bio-gallery',
+      checks: ['qr-code', 'print-layout']
     }
   ],
   a4: {

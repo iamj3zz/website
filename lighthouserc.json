@@ -6,10 +6,12 @@
       "url": [
         "http://localhost/index.html",
         "http://localhost/bio/index.html",
+        "http://localhost/fr/bio/index.html",
         "http://localhost/events/index.html",
         "http://localhost/contact/index.html",
-        "http://localhost/works/2020-08-18-inst-iris/index.html",
-        "http://localhost/works/2026-01-01-inst-vibrotanica/index.html"
+        "http://localhost/gallery/index.html",
+        "http://localhost/bio-gallery/index.html",
+        "http://localhost/works/2020-08-18-inst-iris/index.html"
       ]
     },
     "assert": {
@@ -26,10 +28,10 @@
 
         "errors-in-console": "warn",
         "valid-source-maps": "off",
-        "canonical": "off",
+        "canonical": "warn",
         "crawlable-anchors": "warn",
         "is-crawlable": "error",
-        "robots-txt": "off",
+        "robots-txt": "warn",
 
         "color-contrast": "warn",
         "document-title": "error",
