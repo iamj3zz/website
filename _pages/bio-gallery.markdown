@@ -51,18 +51,18 @@ gallery_images:
   </div>
 
   <div class="bio-gallery-intro">
-  <div class="download-instructions">
-    <strong>{{ _trans.bio_gallery.press_title[_lang] }}</strong>
-    <p>{{ _trans.bio_gallery.press_intro[_lang] }}</p>
-    <ol>
-      <li>{{ _trans.bio_gallery.instruction_open[_lang] }}</li>
-      <li>{{ _trans.bio_gallery.instruction_download_pre[_lang] }} <strong>{{ _trans.bio_gallery.download_link[_lang] }}</strong> {{ _trans.bio_gallery.instruction_download_post[_lang] }}</li>
-      <li><strong>{{ _trans.bio_gallery.instruction_credit[_lang] }}</strong></li>
-    </ol>
+    <div class="download-instructions">
+      <strong>{{ _trans.bio_gallery.press_title[_lang] }}</strong>
+      <p>{{ _trans.bio_gallery.press_intro[_lang] }}</p>
+      <ol>
+        <li>{{ _trans.bio_gallery.instruction_open[_lang] }}</li>
+        <li>{{ _trans.bio_gallery.instruction_download_pre[_lang] }} <strong>{{ _trans.bio_gallery.download_link[_lang] }}</strong> {{ _trans.bio_gallery.instruction_download_post[_lang] }}</li>
+        <li><strong>{{ _trans.bio_gallery.instruction_credit[_lang] }}</strong></li>
+      </ol>
+    </div>
   </div>
-</div>
 
-<div class="module-image-grid">
+  <div class="module-image-grid">
   <div class="image-grid grid-4">
     {% for photo in page.gallery_images %}
     <div class="grid-item">
@@ -82,7 +82,7 @@ gallery_images:
     </div>
     {% endfor %}
   </div>
-</div>
+  </div>
 
   <div class="bio-gallery-note">
     <p>{{ _trans.bio_gallery.contact_note[_lang] }} <a href="mailto:contact@j3zz.com">contact@j3zz.com</a></p>
