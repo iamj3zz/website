@@ -249,6 +249,11 @@ Grid of images with 1-6 column layouts, square thumbnail cropping, lightbox view
 - Custom captions displayed in lightbox
 - Responsive: Collapses to 1 column on mobile
 
+**Accessibility (Alt Text):**
+- When captions are provided: each image's `alt` text is its caption (unique per image)
+- When no captions: alt text auto-generates as "{work title} (image N)" where N is the image number, ensuring unique alt text for each image in the grid
+- This prevents duplicate alt text in grids and improves accessibility for screen readers
+
 ### 5. Metadata Module
 
 Display project metadata in a clean grid layout. All fields are optional - include only what's relevant for your project.

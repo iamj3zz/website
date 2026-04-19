@@ -306,11 +306,16 @@ if bundle exec jekyll build ; then
     print_success "Jekyll build completed successfully!"
 
     # Generate sitemap with xhtml:link alternates for bilingual pages
+    print_step "Generating sitemap with xhtml:link alternates..."
     if ruby generate-sitemap.rb ; then
-        print_success "Sitemap generated successfully!"
+        print_success "Sitemap generated with bilingual language alternates!"
     else
         print_error "Sitemap generation failed!"
+        echo ""
+        echo "Fix the sitemap generation error listed above, then run this script again."
         ALL_PASSED=false
+        print_header "Tests Failed"
+        exit 1
     fi
 else
     print_error "Jekyll build failed!"
