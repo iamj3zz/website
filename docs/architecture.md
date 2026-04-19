@@ -556,6 +556,19 @@ The portfolio and gallery grids provide adaptive touch interaction based on grid
 - `mailchimp_action_url` - Mailchimp form action URL
 - `mailchimp_bot_field` - Mailchimp bot field name for spam prevention
 
+**Artwork Shipping & Purchasing Policy:**
+Two parallel blocks — `artwork_shipping` (EN) and `artwork_shipping_fr` (FR). The layout picks `artwork_shipping_fr` when `page.lang == 'fr'`, falling back to `artwork_shipping`.
+- `ships_from` - Origin location displayed on artwork pages (e.g. "Réunion Island" / "Île de la Réunion")
+- `delivery_cost` - Shipping cost policy text
+- `delivery_time_domestic` - Estimated domestic delivery time
+- `delivery_time_international` - Estimated international delivery time
+- `handling` - Packaging and handling description
+- `customs` - Customs/import duties notice
+- `satisfaction` - Satisfaction/damage policy
+- `authenticity` - Certificate of authenticity notice
+
+Note: `ships_from` is a plain string, not a translation key — update both `artwork_shipping.ships_from` and `artwork_shipping_fr.ships_from` independently.
+
 ## SEO Architecture
 
 The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plugin with custom enhancements.

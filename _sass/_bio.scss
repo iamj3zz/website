@@ -23,7 +23,8 @@
   padding-bottom: 2px;
 }
 
-.bio-link:hover {
+.bio-link:hover,
+.bio-link.active {
   border-bottom-color: #333;
 }
 

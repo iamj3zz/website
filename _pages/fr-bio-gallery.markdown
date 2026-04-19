@@ -1,9 +1,18 @@
 ---
-layout: bio-gallery
+layout: portfolio
 title: Galerie Bio
 permalink: /fr/bio-gallery/
 lang: fr
 lang_alternate: /bio-gallery/
+links:
+  - title: CV
+    url: /assets/bio/cv.pdf
+  - title: Press Kit
+    url: /assets/bio/press-kit.pdf
+  - title: Photos
+    url: /fr/bio-gallery/
+  - title: IMDb
+    url: https://www.imdb.com/name/nm6903099/
 gallery_images:
   - filename: photo-01.jpg
     hires: photo-01-hires.jpg
@@ -34,7 +43,14 @@ gallery_images:
 {% assign _lang = page.lang | default: 'en' %}
 {% assign _trans = site.data.translations %}
 
-<div class="bio-gallery-intro">
+<section class="bio-section">
+  <div class="bio-links">
+    {% for link in page.links %}
+      <a href="{{ link.url }}" class="bio-link{% if link.url == page.url %} active{% endif %}" {% if link.url contains 'http' %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ link.title }}</a>
+    {% endfor %}
+  </div>
+
+  <div class="bio-gallery-intro">
   <div class="download-instructions">
     <strong>{{ _trans.bio_gallery.press_title[_lang] }}</strong>
     <p>{{ _trans.bio_gallery.press_intro[_lang] }}</p>
@@ -68,6 +84,7 @@ gallery_images:
   </div>
 </div>
 
-<div class="bio-gallery-note">
-  <p>{{ _trans.bio_gallery.contact_note[_lang] }} <a href="mailto:contact@j3zz.com">contact@j3zz.com</a></p>
-</div>
+  <div class="bio-gallery-note">
+    <p>{{ _trans.bio_gallery.contact_note[_lang] }} <a href="mailto:contact@j3zz.com">contact@j3zz.com</a></p>
+  </div>
+</section>
