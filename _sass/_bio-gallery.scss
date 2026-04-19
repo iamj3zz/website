@@ -3,50 +3,6 @@
    Press photos gallery page with download instructions
    ============================================================ */
 
-/* Bio Links Section (shared with bio.scss) */
-.bio-links {
-  text-align: center;
-  padding-bottom: 40px;
-}
-
-.bio-link {
-  color: #333;
-  text-decoration: none;
-  font-size: 13px;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 0 20px;
-  border-bottom: 1px solid transparent;
-  transition: border-color 0.3s ease;
-  display: inline-block;
-  padding-bottom: 2px;
-}
-
-.bio-link:hover,
-.bio-link.active {
-  border-bottom-color: #333;
-}
-
-.bio-gallery-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
-
-.bio-gallery-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.bio-gallery-header h1 {
-  font-size: 32px;
-  font-weight: normal;
-  color: #333;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin: 0;
-}
-
 .bio-gallery-intro {
   text-align: center;
   margin-bottom: 40px;
@@ -76,6 +32,32 @@
 /* Increase grid gap to accommodate download links without overlap */
 .bio-section .module-image-grid .image-grid {
   gap: 35px;
+}
+
+/* grid-item as flex column so download link sits below image cleanly */
+.bio-section .image-grid .grid-item {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.bio-section .image-grid .grid-item img {
+  width: 100%;
+  height: auto;
+  flex-shrink: 0;
+}
+
+/* Responsive: 4 col → 2 col on tablet, 1 col on mobile */
+@media (max-width: 900px) {
+  .bio-section .image-grid.grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .bio-section .image-grid.grid-4 {
+    grid-template-columns: 1fr;
+  }
 }
 
 .download-instructions strong {
@@ -119,34 +101,6 @@
   border-bottom-color: #333;
 }
 
-/* grid-item as flex column so download link sits below image cleanly,
-   and override height: 100% which conflicts with aspect-ratio: 1/1 */
-.bio-gallery-container .image-grid .grid-item {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-.bio-gallery-container .image-grid .grid-item img {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
-}
-
-/* Responsive: 4 col → 2 col on tablet, 1 col on mobile
-   (overrides the 768px → 1 col collapse from _work-modules.scss) */
-@media (max-width: 900px) {
-  .bio-gallery-container .image-grid.grid-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 480px) {
-  .bio-gallery-container .image-grid.grid-4 {
-    grid-template-columns: 1fr;
-  }
-}
-
 /* Hide QR codes and helper text on screen - only show in print */
 .gallery-image-qr,
 .gallery-image-caption,
@@ -166,7 +120,6 @@
 .gallery-download-link {
   display: block;
   margin-top: 8px;
-  margin-bottom: 0;
   font-size: 12px;
   color: #666;
   text-decoration: none;
@@ -174,7 +127,6 @@
   border-bottom: 1px solid #ccc;
   padding-bottom: 2px;
   transition: color 0.2s, border-color 0.2s;
-  pointer-events: auto;
 
   &:hover {
     color: #333;
@@ -186,32 +138,8 @@
   .gallery-download-link {
     display: none;
   }
-}
-
-@media print {
-  /* Page Title Header */
-  .bio-gallery-container::before {
-    content: "BIO GALLERY";
-    display: block;
-    text-align: left;
-    font-size: 18px;
-    color: #000;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #333;
-  }
-
-  .bio-gallery-container {
-    max-width: 100%;
-    padding: 0;
-    margin: 0;
-  }
 
   /* Hide web-only elements */
-  .bio-gallery-header,
   .download-instructions,
   .bio-gallery-intro > p {
     display: none !important;
@@ -246,7 +174,7 @@
     display: block !important;
   }
 
-  /* Grid item with vertical layout: QR code → text → image */
+  /* Grid item with vertical layout: QR code → caption → image */
   .grid-item {
     display: block !important;
     margin-bottom: 40px;
@@ -293,7 +221,6 @@
     border: 1px solid #e0e0e0;
   }
 
-  /* Hide QR helper text in print */
   .gallery-qr-helper {
     display: none !important;
   }
