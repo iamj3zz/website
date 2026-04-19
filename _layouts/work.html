@@ -18,7 +18,7 @@
     {% assign _trans = site.data.translations %}
     <div class="site-logo">
       <a href="{{ '/' | relative_url }}">
-        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}">
+        <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" loading="lazy">
       </a>
     </div>
     <a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="Book J3ZZ">{{ _trans.nav.book[_lang] }}</a>
@@ -89,7 +89,7 @@
         {% assign work_slug = page.date | date: "%Y-%m-%d" | append: "-" | append: page.slug %}
         {% assign hero_path = "/assets/works/" | append: work_slug | append: "/hero.jpg" %}
         <div class="work-print-hero">
-          <img src="{{ hero_path | relative_url }}" alt="{{ page.title }}">
+          <img src="{{ hero_path | relative_url }}" alt="{{ page.title }}" loading="lazy">
         </div>
       {% endif %}
 
@@ -237,7 +237,7 @@
         {% endif %}
 
         <div class="work-image">
-          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}">
+          <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy">
         </div>
 
         <div class="work-content">

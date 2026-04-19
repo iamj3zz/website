@@ -91,6 +91,12 @@ order: 29  # Displayed after works with order 30+, before works with order 28-
 - `assets/img/` - Images including logo and portfolio work images
 - `assets/img/bio-gallery/` - Press photos and artist images for bio gallery
 
+**Image Performance:**
+- All `<img>` tags include `loading="lazy"` attribute for deferred image loading
+- Applied to: hero images, image grids, layout logos, artwork gallery images, bio gallery photos
+- Improves page load performance by deferring off-screen image loads until they're needed by the viewport
+- Supported in all modern browsers (Chrome 76+, Firefox 75+, Safari 15.1+, Edge 79+)
+
 **Includes:**
 - `_includes/seo.html` - SEO optimization with jekyll-seo-tag, structured data, Open Graph tags, and canonical URLs
 - `_includes/analytics.html` - Privacy-compliant Google Analytics 4 integration with cookie consent

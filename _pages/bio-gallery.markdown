@@ -73,7 +73,8 @@ gallery_images:
            alt="{{ photo.caption }}"
            class="grid-image"
            data-lightbox="true"
-           data-caption="{{ photo.caption }}">
+           data-caption="{{ photo.caption }}"
+           loading="lazy">
       {% if photo.credit %}<span class="gallery-photo-credit">{{ photo.credit }}</span>{% endif %}
       {% if photo.hires %}
       <a href="/assets/bio/gallery/hires/{{ photo.hires }}"

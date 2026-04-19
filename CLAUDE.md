@@ -63,6 +63,11 @@ The site implements comprehensive SEO with special attention to:
 - Both include breadcrumb schemas for enhanced search result display
 - Configured via `seo.type` defaults in `_config.yml`
 
+### Image Performance
+- All `<img>` tags include `loading="lazy"` for deferred image loading
+- Improves page load performance by deferring off-screen images until viewport approach
+- Applied to: hero images, grids, logos, gallery images, bio photos
+
 **For details:** See [Architecture > SEO Architecture](docs/architecture.md)
 
 ---
