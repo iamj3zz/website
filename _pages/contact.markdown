@@ -108,16 +108,6 @@ page_type: contact
           </svg>
         </a>
         {% endif %}
-        {% if site.twitter_username %}
-        <span class="contact-social-icon social-icon--disabled" aria-label="X (formerly Twitter) — not linked" tabindex="0" role="img">
-          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M4 4l7 9.5M20 4l-7 9.5m0 0L4 20m9-6.5L20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-          </svg>
-          <span class="social-icon__tooltip">
-            I maintain a presence on X but do not endorse the platform. Since Elon Musk's acquisition, X has become a vector for hate speech, disinformation, and the erosion of content moderation. I don't link there.
-          </span>
-        </span>
-        {% endif %}
         {% if site.linkedin_username %}
         <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer" class="contact-social-icon" aria-label="LinkedIn - {{ site.linkedin_username }}" title="LinkedIn - {{ site.linkedin_username }}">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -141,6 +131,16 @@ page_type: contact
             <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </a>
+        {% endif %}
+        {% if site.twitter_username %}
+        <span class="contact-social-icon social-icon--disabled" aria-label="X (formerly Twitter) — not linked" tabindex="0" role="img">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 4l7 9.5M20 4l-7 9.5m0 0L4 20m9-6.5L20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          <span class="social-icon__tooltip">
+            I maintain a presence on X but do not endorse the platform. Since Elon Musk's acquisition, X has become a vector for hate speech, disinformation, and the erosion of content moderation. I don't link there.
+          </span>
+        </span>
         {% endif %}
         </div>
       </div><!-- End screen-only social icons block -->
@@ -226,17 +226,6 @@ page_type: contact
           <div class="social-print-url">instagram.com/{{ site.instagram_username }}</div>
         </div>
         {% endif %}
-        {% if site.twitter_username %}
-        <div class="social-print-item social-print-item--no-link">
-          <div class="social-print-icon">
-            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M4 4l7 9.5M20 4l-7 9.5m0 0L4 20m9-6.5L20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="social-print-name">X (Twitter)</div>
-          <div class="social-print-url social-print-url--note">I maintain a presence on X but do not endorse the platform. Since Elon Musk's acquisition, X has become a vector for hate speech, disinformation, and the erosion of content moderation. I don't link there.</div>
-        </div>
-        {% endif %}
         {% if site.linkedin_username %}
         <div class="social-print-item" data-url="https://linkedin.com/in/{{ site.linkedin_username }}" data-name="LinkedIn">
           <div class="social-print-qr"></div>
@@ -274,6 +263,17 @@ page_type: contact
           </div>
           <div class="social-print-name">Malt</div>
           <div class="social-print-url">malt.fr/profile/{{ site.malt_username }}</div>
+        </div>
+        {% endif %}
+        {% if site.twitter_username %}
+        <div class="social-print-item social-print-item--no-link">
+          <div class="social-print-icon">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 4l7 9.5M20 4l-7 9.5m0 0L4 20m9-6.5L20 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="social-print-name">X (Twitter)</div>
+          <div class="social-print-url social-print-url--note">I maintain a presence on X but do not endorse the platform. Since Elon Musk's acquisition, X has become a vector for hate speech, disinformation, and the erosion of content moderation. I don't link there.</div>
         </div>
         {% endif %}
       </div>
