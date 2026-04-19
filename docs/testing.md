@@ -40,7 +40,7 @@ The site uses a comprehensive testing suite that runs **on your local machine be
 
 ## Test Steps in `test-before-push.sh`
 
-The main test script (`./test-before-push.sh`) runs **5 steps by default**:
+The main test script (`./test-before-push.sh`) runs **7 steps by default** (0, 0.5, 1, 2, 3, 3.5, 4):
 
 | Step | What it tests | Speed | Runs by default |
 |---|---|---|---|
@@ -143,7 +143,9 @@ Validates print layouts and generates PDFs for manual review. Tests:
 - Bio page (bio/index.html)
 - Events page (events/index.html)
 - Contact page (contact/index.html)
-- Example work page (works/28-modular-example/index.html)
+- Example work page (works/2020-08-18-inst-iris/index.html)
+- Gallery page (gallery/index.html)
+- Bio gallery page (bio-gallery/index.html)
 
 ### All Tests Together
 ```bash
