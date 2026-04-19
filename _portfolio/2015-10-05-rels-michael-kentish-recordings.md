@@ -1,9 +1,9 @@
 ---
 published: false
-status: minor
+status: archived
 layout: work
-title: Michael Kentish (Recordings)
-work_id: michael-kentish-recordings
+title: Michael Kentish (Recordings) [Archive 2015]
+work_id: michael-kentish-recordings-2015
 abstract: Studio recordings of violin tracks for artist Michael Kentish, commissioned
   as part of a collaborative artistic project.
 description: Studio recordings of violin tracks for artist Michael Kentish, commissioned
