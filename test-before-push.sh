@@ -304,6 +304,14 @@ print_step "Running: bundle exec jekyll build"
 
 if bundle exec jekyll build ; then
     print_success "Jekyll build completed successfully!"
+
+    # Generate sitemap with xhtml:link alternates for bilingual pages
+    if ruby generate-sitemap.rb ; then
+        print_success "Sitemap generated successfully!"
+    else
+        print_error "Sitemap generation failed!"
+        ALL_PASSED=false
+    fi
 else
     print_error "Jekyll build failed!"
     echo ""

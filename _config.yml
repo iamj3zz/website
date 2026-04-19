@@ -139,7 +139,7 @@ plugins:
   - jekyll-feed
   - jekyll-last-modified-at
   - jekyll-seo-tag
-  - jekyll-sitemap
+  # jekyll-sitemap disabled: using custom sitemap.xml with xhtml:link alternates
 
 
 # Include _pages directory
