@@ -533,13 +533,14 @@ After setting up the project, you can configure optional features like SEO, Goog
 
 ### SEO Configuration
 
-The site includes comprehensive SEO optimization powered by `jekyll-seo-tag` and `jekyll-sitemap` plugins.
+The site includes comprehensive SEO optimization powered by `jekyll-seo-tag` with automated sitemap generation.
 
 **What's already configured:**
-- Automatic sitemap generation at `/sitemap.xml`
+- Automatic sitemap generation with bilingual xhtml:link alternates at `/sitemap.xml` (via `generate-sitemap.rb`)
 - robots.txt for search engine crawlers
-- Structured data (JSON-LD) for portfolio works
+- Structured data (JSON-LD) for portfolio works and artworks
 - Open Graph tags for social media sharing
+- hreflang tags for bilingual page pairs
 
 **To customize SEO settings:**
 

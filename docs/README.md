@@ -225,7 +225,7 @@ website/
 
 ### Dependencies
 
-- **Ruby Gems** - github-pages, jekyll-feed, jekyll-seo-tag, jekyll-sitemap, jekyll-last-modified-at, html-proofer, rake
+- **Ruby Gems** - github-pages, jekyll-feed, jekyll-seo-tag, jekyll-last-modified-at, html-proofer, rake
 - **npm Packages** - @lhci/cli, @evilmartians/lefthook, puppeteer
 
 ---
@@ -284,10 +284,11 @@ Edit `_config.yml` for:
 ### Optional Features
 
 **SEO Optimization:**
-- Pre-configured with jekyll-seo-tag and jekyll-sitemap plugins
-- Automatic sitemap generation at `/sitemap.xml`
-- Structured data (JSON-LD) for portfolio works
+- Powered by jekyll-seo-tag plugin with custom enhancements
+- Automatic sitemap generation with bilingual xhtml:link alternates at `/sitemap.xml`
+- Structured data (JSON-LD) for portfolio works and artworks
 - Open Graph tags for social media sharing
+- hreflang tags for bilingual page pairs
 - Customize author and social settings in `_config.yml`
 
 **Google Analytics 4:**

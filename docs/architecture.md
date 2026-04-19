@@ -605,7 +605,12 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
 
 **Jekyll Plugins:**
 - `jekyll-seo-tag` - Automatic generation of SEO meta tags
-- `jekyll-sitemap` - Automatic sitemap generation at `/sitemap.xml`
+- `jekyll-last-modified-at` - Provides modification timestamps for pages and collections
+
+**Sitemap Generation:**
+- Custom post-build Ruby script (`generate-sitemap.rb`) generates `/sitemap.xml` with xhtml:link alternates
+- Runs automatically after Jekyll build in local tests and GitHub Actions deployment
+- Replaces jekyll-sitemap plugin (which couldn't handle bilingual alternates)
 
 **SEO Components:**
 
