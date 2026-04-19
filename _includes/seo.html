@@ -14,8 +14,12 @@
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 
 <!-- Additional custom meta tags -->
+{% if page.noindex %}
+<meta name="robots" content="noindex, nofollow">
+{% else %}
 <meta name="robots" content="index, follow">
 <meta name="googlebot" content="index, follow">
+{% endif %}
 
 <!-- Additional Open Graph tags for portfolio works -->
 {% if page.layout == "work" %}

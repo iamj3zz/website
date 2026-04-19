@@ -7,6 +7,7 @@
 - Never build nor serve Jekyll yourself
 - Never execute the test script yourself
 - Never mention Claude in git comments nor files
+- **Never commit without explicit instruction** — implement, test, report, then wait
 - Use **J3ZZ** (not Jérôme Li Thiao Té nor JLTT) throughout the project for consistency
 - Respect the naming convention before even passing the tests
 
@@ -39,6 +40,30 @@ J3ZZ's career arc: violinist/musician (2008–2015) → film composer/performer 
 
 ### Portfolio Grid Purpose
 The grid answers: "What does J3ZZ make?" Start with installations (new media identity), then performances and significant films, then releases. Not a complete diary.
+
+---
+
+## SEO Best Practices
+
+The site implements comprehensive SEO with special attention to:
+
+### Bilingual (EN/FR) Content
+- All pages with `lang_alternate` in front matter automatically emit `<link rel="alternate" hreflang="...">` tags in the `<head>`
+- Each EN/FR page pair signals the alternate language version to Google
+- `hreflang="x-default"` points to the homepage
+
+### Robots & Indexing
+- Pages can opt-out of indexing via `noindex: true` in front matter
+- Currently applied to: `404.html`, `_pages/privacy.markdown`
+- Default: all pages are `index, follow`
+
+### Structured Data
+- Portfolio works emit `CreativeWork` (overrides jekyll-seo-tag default)
+- Artworks emit `VisualArtwork` (overrides jekyll-seo-tag default)
+- Both include breadcrumb schemas for enhanced search result display
+- Configured via `seo.type` defaults in `_config.yml`
+
+**For details:** See [Architecture > SEO Architecture](docs/architecture.md)
 
 ---
 
