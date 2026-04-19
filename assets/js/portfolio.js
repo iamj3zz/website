@@ -12,6 +12,7 @@
   // Function to apply filter
   function applyFilter(filterValue) {
     currentCategoryFilter = filterValue;
+    location.replace('#' + (filterValue === 'all' ? '' : filterValue));
 
     // Update active button
     filterButtons.forEach(btn => btn.classList.remove('active'));
@@ -66,5 +67,12 @@
       applyFilter(filterValue);
     });
   });
+
+  // Read hash on page load and apply filter if valid
+  const hashFilter = location.hash.slice(1);
+  const validFilters = Array.from(filterButtons).map(b => b.getAttribute('data-filter'));
+  if (hashFilter && validFilters.includes(hashFilter)) {
+    applyFilter(hashFilter);
+  }
   });
 })();

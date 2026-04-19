@@ -16,3 +16,15 @@
   <span class="header-lang-sep">|</span>
   <a href="{{ fr_url }}" class="header-lang-link{% if lang == 'fr' %} is-active{% endif %}" hreflang="fr">FR</a>
 </span>
+<script>
+(function() {
+  document.querySelectorAll('.header-lang-link').forEach(function(a) {
+    a.addEventListener('click', function() {
+      var h = window.location.hash;
+      if (h && h !== '#') {
+        this.href = this.href.split('#')[0] + h;
+      }
+    });
+  });
+})();
+</script>
