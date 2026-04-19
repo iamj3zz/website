@@ -32,6 +32,7 @@ J3ZZ's career arc: violinist/musician (2008–2015) → film composer/performer 
 - `published: false` = hidden from site, preserved in repository
 - **Never delete files** — unpublish instead
 - `status` field in front matter classifies work: `major` (flagship), `minor` (real work, lower weight), `archived` (complete, intentionally hidden), `draft` (in progress)
+- **Titles must be unique** — if you have duplicate/archived versions of the same work, use `[Archive YYYY]` suffix and unique `work_id` to distinguish them
 
 ### Event Calendar Rules
 - **Only publish events where J3ZZ is the author/leader/co-leader**
