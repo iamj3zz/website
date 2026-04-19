@@ -620,6 +620,10 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
 
 3. **Open Graph Tags:**
    - Standard Open Graph tags for all pages (title, description, image, URL)
+   - **Locale handling:** `og:locale` is set per-page based on language:
+     - English pages: `og:locale: en_US`
+     - French pages: `og:locale: fr_FR`
+     - Implemented in `_includes/seo.html` after jekyll-seo-tag tag (last tag wins for social media crawlers)
    - Enhanced tags for portfolio works:
      - `og:type` set to "article"
      - `article:published_time` from release_date
