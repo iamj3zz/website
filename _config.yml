@@ -33,10 +33,6 @@ logo: /assets/img/J3ZZ-logo-black-300px.png
 author:
   name: J3ZZ
   email: contact@j3zz.com
-  twitter: j3zz
-
-twitter:
-  username: j3zz
 
 social:
   name: J3ZZ
@@ -47,7 +43,6 @@ social:
     - https://vimeo.com/j3zz
     - https://facebook.com/iamj3zz
     - https://instagram.com/iamj3zz
-    - https://twitter.com/j3zz
     - https://linkedin.com/in/j3zz
     - https://github.com/j3zz
 
@@ -65,7 +60,6 @@ youtube_username: iamj3zz
 vimeo_username: j3zz
 facebook_username: iamj3zz
 instagram_username: iamj3zz
-twitter_username: j3zz
 linkedin_username: j3zz
 github_username: j3zz
 twitch_username: j3zz
