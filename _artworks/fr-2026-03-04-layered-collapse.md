@@ -8,9 +8,9 @@ permalink: /fr/gallery/2026-03-04-layered-collapse/
 series: "Cartography of Collapse"
 series_part: "I. IGNEOUS"
 year: "2026"
-medium: "Drawing, Ink on paper"
+medium: "Dessin, encre sur papier"
 dimensions: "29.7 × 42 × 0.1 cm"
-rarity: "One-of-a-kind Artwork"
+rarity: "Œuvre unique"
 ready_to_hang: "Non"
 frame: "Sans cadre"
 authenticity: "Certificat inclus"
@@ -36,7 +36,7 @@ sections:
   - type: split-hero-metadata
     content_type: "image"
     image: /assets/artworks/2026-03-04-layered-collapse/print.png
-    caption: "Layered Collapse — Drawing, Ink on paper, 29.7 × 42 cm, 2026"
+    caption: "Layered Collapse — Dessin, encre sur papier, 29.7 × 42 cm, 2026"
   - type: description
 
 gallery:
