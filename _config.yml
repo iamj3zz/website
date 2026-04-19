@@ -88,7 +88,7 @@ supabase_anon_key: "sb_publishable_9Qs1t9ruTVNHbyDEZDEKEA_0d4b66kf"
 
 # Artwork Shipping & Purchasing Policy
 artwork_shipping:
-  ships_from: "Réunion Island, France"
+  ships_from: "Réunion Island"
   delivery_cost: "Shipping cost is calculated based on your destination and confirmed before any commitment."
   delivery_time_domestic: "5–7 business days"
   delivery_time_international: "Varies by destination — communicated before any commitment."
@@ -98,7 +98,7 @@ artwork_shipping:
   authenticity: "A signed Certificate of Authenticity is included with every original work."
 
 artwork_shipping_fr:
-  ships_from: "Île de la Réunion, France"
+  ships_from: "Île de la Réunion"
   delivery_cost: "Les frais d'expédition sont calculés selon votre destination et confirmés avant tout engagement."
   delivery_time_domestic: "5 à 7 jours ouvrés"
   delivery_time_international: "Variable selon la destination — communiqué avant tout engagement."
