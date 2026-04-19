@@ -2,27 +2,25 @@
 published: false
 status: minor
 layout: work
-title: "ALL THE PROMISES"
+title: ALL THE PROMISES
 work_id: all-the-promises
-abstract: |
-  Collaboration album with Michael Kentish featuring violin performance.
-description: |
-  All the Promises is an album by Michael Kentish featuring J3ZZ on violin. The collaboration explores the intersection of singer-songwriter traditions with string arrangements, creating intimate musical narratives through the combination of voice, guitar, and violin textures.
+abstract: 'Collaboration album with Michael Kentish featuring violin performance.
+
+  '
+description: Collaboration album with Michael Kentish featuring violin performance.
 category: releases
 commissioned: false
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
-
+image: "/assets/works/1900-01-01-inst-complete-template/thumbnail.jpg"
 metadata:
-  release_date: "2016-01-01"
-  role: "violinist"
-  collaborators: "Michael Kentish"
+  release_date: '2016-01-01'
+  role: violinist
+  collaborators: Michael Kentish
   custom:
-    - label: "Format"
-      value: "Album"
-    - label: "Release Type"
-      value: "Collaboration - Michael Kentish"
-
+  - label: Format
+    value: Album
+  - label: Release Type
+    value: Collaboration - Michael Kentish
 sections:
-  - type: description
-  - type: metadata
+- type: description
+- type: metadata
 ---

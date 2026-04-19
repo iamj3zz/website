@@ -2,45 +2,41 @@
 published: true
 status: major
 layout: work
-title: "BIOSONIFICATION"
+title: BIOSONIFICATION
 work_id: biosonification-workshops
 print_hero_image: true
-abstract: |
-  Educational workshops and ateliers exploring plant biosonification through the collective "Nout plant i chant". Participants learn to capture plant vibrations and transform them into melodies using sensor technology.
-description: |
-  Biosonification Workshops are educational ateliers facilitated by J3ZZ and the collective "Nout plant i chant" that teach participants how plants can "sing" by using sensors to capture their vibrations and convert them into melodies. These immersive, participatory experiences aim to reconnect people with the plant world while raising awareness about botanical diversity, particularly Réunion Island's endemic flora.
+abstract: 'Educational workshops and ateliers exploring plant biosonification through
+  the collective "Nout plant i chant". Participants learn to capture plant vibrations
+  and transform them into melodies using sensor technology.
 
-  The workshops combine science, art, and ecology through hands-on experimentation with the vibrotanica device technology. The three-atelier format (Zilien, Robinson, J3ZZ) explores different connections between botany and sound: theatre/music/herbalism, graphic transcription and botanical illustration, and plant-listening instrument design. Held across multiple locations in Réunion and other regions, these ateliers serve students, educators, and general audiences in natural and cultural settings.
-
-  The vibrotanica box device, developed since 2019, converts plant biodata into sound through sensors and specialized software. The school-based program "Vibrotanica dann lékol" brings this technology into educational curricula, combining electronic music, ecology, and music informatics for student-centered learning and musical creation.
+  '
+description: Educational workshops and ateliers exploring plant biosonification through
+  the collective "Nout plant i chant". Participants learn to capture plant vibrations
+  and transform them into melodies using sensor technology.
 category: workshops
 commissioned: false
-image: /assets/works/2023-06-04-work-biosonification/thumbnail.jpg
-  
+image: "/assets/works/2023-06-04-work-biosonification/thumbnail.jpg"
 metadata:
-  release_date: "2023-06-04"
-  role: "workshop facilitator, sound artist, educator"
-  technology: "Custom built Vibrotanica devices with sensors"
+  release_date: '2023-06-04'
+  role: workshop facilitator, sound artist, educator
+  technology: Custom built Vibrotanica devices with sensors
   custom:
-    - label: "Format"
-      value: "Site-specific educational workshops, ateliers, participatory experiences"
-    - label: "Key Concept"
-      value: "Biosonification — translating plant vibrations into sound and visuals"
-    - label: "Focus"
-      value: "Environmental awareness, ecology, sound and visual arts, interactive and sensor technologies"
-    - label: "Testimonials"
-      value: "Documentation from Collège Bois de Néfles (school), Réunion Island (2024)"
-      link: "https://etab.ac-reunion.fr/clg-bois-de-nefles/2024/04/02/vibrotanica-quand-les-plantes-jouent-de-la-musique/"
-
+  - label: Format
+    value: Site-specific educational workshops, ateliers, participatory experiences
+  - label: Key Concept
+    value: Biosonification — translating plant vibrations into sound and visuals
+  - label: Focus
+    value: Environmental awareness, ecology, sound and visual arts, interactive and
+      sensor technologies
+  - label: Testimonials
+    value: Documentation from Collège Bois de Néfles (school), Réunion Island (2024)
+    link: https://etab.ac-reunion.fr/clg-bois-de-nefles/2024/04/02/vibrotanica-quand-les-plantes-jouent-de-la-musique/
 sections:
-  - type: hero-image
-    image: /assets/works/2023-06-04-work-biosonification/hero.jpg
-    caption: "French Institute in Budapest, Hungary (2023)"
-    
-  - type: description
-
-  - type: linked-events
-    title: "Ateliers & Workshops"
-
-  - type: metadata
+- type: hero-image
+  image: "/assets/works/2023-06-04-work-biosonification/hero.jpg"
+  caption: French Institute in Budapest, Hungary (2023)
+- type: description
+- type: linked-events
+  title: Ateliers & Workshops
+- type: metadata
 ---

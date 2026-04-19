@@ -3,34 +3,32 @@ published: false
 show_in_grid: false
 status: archived
 layout: work
-title: "Buddha Bar (Budapest)"
+title: Buddha Bar (Budapest)
 work_id: buddha-bar-budapest
-abstract: |
-  The artist served as the first resident live musician at Buddha Bar Budapest, performing as a violinist from 2013 to 2017.
-description: |
-  The artist served as the first resident live musician at Buddha Bar Budapest, performing as a violinist from 2013 to 2017. The role involved improvising violin melodies over DJ sets by Mada, Tony, and Viktor in the magnificent Klotild Palace venue. The establishment subsequently closed in 2019.
+abstract: 'The artist served as the first resident live musician at Buddha Bar Budapest,
+  performing as a violinist from 2013 to 2017.
+
+  '
+description: The artist served as the first resident live musician at Buddha Bar Budapest,
+  performing as a violinist from 2013 to 2017.
 category: live-acts
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
-
-# Define metadata once here - it will be used by all modules below
+image: "/assets/works/1900-01-01-inst-complete-template/thumbnail.jpg"
 metadata:
-  date: "2013–2017"
-  based_in: "Buddha-Bar Hotel Budapest Klotild Palace, Budapest, Hungary"
-  role: "resident violinist"
-  commissioned_by: "Buddha-Bar Hotel Budapest Klotild Palace"
-  collaborators: "J3ZZ (resident violinist), DJ Mada, DJ Tony, DJ Viktor"
-  credits: "Resident violinist: J3ZZ. DJs: DJ Mada, DJ Tony, DJ Viktor"
+  date: 2013–2017
+  based_in: Buddha-Bar Hotel Budapest Klotild Palace, Budapest, Hungary
+  role: resident violinist
+  commissioned_by: Buddha-Bar Hotel Budapest Klotild Palace
+  collaborators: J3ZZ (resident violinist), DJ Mada, DJ Tony, DJ Viktor
+  credits: 'Resident violinist: J3ZZ. DJs: DJ Mada, DJ Tony, DJ Viktor'
   custom:
-    - label: "External Links"
-      value: "we_love_budapest: https://welovebudapest.com/en/article/2018/12/7/buddha-bar-hotel-budapest-klotild-palace-to-close-down; mellow_mood_hotels: https://www.mellowmoodhotels.com/buddha-bar-hotel-info/"
-    - label: "Duration"
-      value: "5 years (2013-2017)"
-
+  - label: External Links
+    value: 'we_love_budapest: https://welovebudapest.com/en/article/2018/12/7/buddha-bar-hotel-budapest-klotild-palace-to-close-down;
+      mellow_mood_hotels: https://www.mellowmoodhotels.com/buddha-bar-hotel-info/'
+  - label: Duration
+    value: 5 years (2013-2017)
 sections:
-  - type: description
-
-  - type: linked-events
-
-  - type: metadata
+- type: description
+- type: linked-events
+- type: metadata
 ---

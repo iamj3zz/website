@@ -2,31 +2,33 @@
 published: false
 status: minor
 layout: work
-title: "Creative Jam w/ Grécso Zoltán"
+title: Creative Jam w/ Grécso Zoltán
 work_id: creative-jam-grecso
-abstract: "Commissioned performance exploring sound and movement collaboration at the Hungarian Dance Academy, featuring live soundscapes and an open jam session with dancers."
-description: |
-  Creative Jam w/ Grécso Zoltán was a commissioned performance at the Hungarian Dance Academy, organized by choreographer and teacher Zoltán Grécso. The event explored sound and movement collaboration through two parts: first, the artist created live soundscapes for a dance class, then an open jam session where dancers and the sound artist inspired each other in real-time. The artist describes the experience: "I am grateful to have been invited to the dance academy to be myself, accept my mood, experiment soundscapes and push boundaries." A live recording archive of the session was made available on SoundCloud.
+abstract: Commissioned performance exploring sound and movement collaboration at the
+  Hungarian Dance Academy, featuring live soundscapes and an open jam session with
+  dancers.
+description: Commissioned performance exploring sound and movement collaboration at
+  the Hungarian Dance Academy, featuring live soundscapes and an open jam session
+  with dancers.
 category: live-acts
 commissioned: true
-image: /assets/works/1900-01-01-inst-complete-template/thumbnail.jpg
-
+image: "/assets/works/1900-01-01-inst-complete-template/thumbnail.jpg"
 metadata:
-  date: "2019"
-  based_in: "Hungarian Dance Academy, Andrássy út 25, Budapest, Hungary"
-  based_in_link: "https://goo.gl/maps/fzMDUo5ks5ywCWh96"
-  role: "sound artist, live performer"
-  commissioned_by: "Zoltán Grécso"
-  collaborators: "Zoltán Grécso (choreography, organization), dancers from Hungarian Dance Academy"
+  date: '2019'
+  based_in: Hungarian Dance Academy, Andrássy út 25, Budapest, Hungary
+  based_in_link: https://goo.gl/maps/fzMDUo5ks5ywCWh96
+  role: sound artist, live performer
+  commissioned_by: Zoltán Grécso
+  collaborators: Zoltán Grécso (choreography, organization), dancers from Hungarian
+    Dance Academy
   custom:
-    - label: "Format"
-      value: "Live soundscape performance + collaborative jam session"
-    - label: "Archive"
-      value: "Live recording available on SoundCloud"
-
+  - label: Format
+    value: Live soundscape performance + collaborative jam session
+  - label: Archive
+    value: Live recording available on SoundCloud
 sections:
-  - type: description
-  - type: linked-events
-    title: "Event"
-  - type: metadata
+- type: description
+- type: linked-events
+  title: Event
+- type: metadata
 ---

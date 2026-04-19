@@ -2,33 +2,32 @@
 published: true
 status: minor
 layout: work
-title: "Music Maker #2"
+title: 'Music Maker #2'
 work_id: music-maker-2
-abstract: |
-  This was a short artist residency at Château Éphémère in fall 2018 enabling collaboration between various artists and creative coders.
-description: |
-  This was a short artist residency at Château Éphémère in fall 2018 enabling collaboration between various artists and creative coders. Organized with Adami as part of Culture Experience Days, the initiative brought together "30 creators with complementary profiles to prototype the sound and scenic devices of tomorrow." The residency resulted in a performance showcasing the prototyped sound and scenic devices.
+abstract: 'This was a short artist residency at Château Éphémère in fall 2018 enabling
+  collaboration between various artists and creative coders.
+
+  '
+description: This was a short artist residency at Château Éphémère in fall 2018 enabling
+  collaboration between various artists and creative coders.
 category: residencies
 commissioned: false
-image: /assets/works/2018-01-01-resi-music-maker-2/thumbnail.jpg
-
-# Define metadata once here - it will be used by all modules below
+image: "/assets/works/2018-01-01-resi-music-maker-2/thumbnail.jpg"
 metadata:
-  release_date: "2018-01-01"
-  location: "Château Éphémère"
-  role: "violinist, artist"
-  collaborators: "Adami"
+  release_date: '2018-01-01'
+  location: Château Éphémère
+  role: violinist, artist
+  collaborators: Adami
   custom:
-    - label: "YouTube"
-      value: "https://www.youtube.com/watch?v=CtmxzECuBqQ"
-    - label: "Facebook"
-      value: "https://www.facebook.com/chateaufmr"
-    - label: "External Links"
-      value: "chateau_ephemere: https://chateauephemere.org/; culture_experience_days: https://cultureexperiencedays.adami.fr/evenements/music-maker-2-au-chateau-ephemere/; facebook: https://www.facebook.com/chateaufmr"
-
+  - label: YouTube
+    value: https://www.youtube.com/watch?v=CtmxzECuBqQ
+  - label: Facebook
+    value: https://www.facebook.com/chateaufmr
+  - label: External Links
+    value: 'chateau_ephemere: https://chateauephemere.org/; culture_experience_days:
+      https://cultureexperiencedays.adami.fr/evenements/music-maker-2-au-chateau-ephemere/;
+      facebook: https://www.facebook.com/chateaufmr'
 sections:
-  # TODO: Add sections here
-  - type: hero-image
-    image: /assets/works/2018-01-01-resi-music-maker-2/hero.jpg
-   
+- type: hero-image
+  image: "/assets/works/2018-01-01-resi-music-maker-2/hero.jpg"
 ---
