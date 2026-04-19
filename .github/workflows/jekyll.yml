@@ -40,6 +40,9 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Generate Sitemap with xhtml:link alternates
+        run: ruby generate-sitemap.rb
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
 
