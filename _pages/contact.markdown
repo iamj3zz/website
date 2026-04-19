@@ -9,6 +9,8 @@ lang_alternate: /fr/contact/
 page_type: contact
 ---
 
+<h1 class="visually-hidden">Contact &amp; Booking</h1>
+
 <section class="contact-section">
   <div class="contact-content">
 
