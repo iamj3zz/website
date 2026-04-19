@@ -7,6 +7,7 @@ image: /assets/bio/bio-photo.jpg
 bio_image: /assets/bio/bio-photo.jpg
 lang: en
 lang_alternate: /fr/bio/
+page_type: bio
 links:
   - title: CV
     url: /assets/bio/cv.pdf

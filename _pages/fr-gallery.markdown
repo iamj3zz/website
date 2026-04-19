@@ -6,6 +6,7 @@ description: "Dessins originaux à l'encre et œuvres visuelles par J3ZZ. La sé
 image: /assets/artworks/2026-03-16-fading-lines/thumbnail.png
 lang: fr
 lang_alternate: /gallery/
+page_type: gallery
 ---
 
 {% include artwork-inquiry-modal.html %}

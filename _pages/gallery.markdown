@@ -6,6 +6,7 @@ description: "Original ink drawings and visual artworks by J3ZZ. The Cartography
 image: /assets/artworks/2026-03-16-fading-lines/thumbnail.png
 lang: en
 lang_alternate: /fr/gallery/
+page_type: gallery
 ---
 
 {% include artwork-inquiry-modal.html %}

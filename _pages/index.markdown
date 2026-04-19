@@ -4,6 +4,7 @@ title: "J3ZZ - Experimental Sound Art & Immersive Installations"
 permalink: /
 description: "French sound artist J3ZZ creates experimental electronic music, immersive installations, and audiovisual performances merging art, science, and technology. Explore works, events, and releases."
 image: /assets/bio/bio-photo.jpg
+page_type: works
 ---
 
 <h1 class="visually-hidden">Portfolio Works</h1>

@@ -6,6 +6,7 @@ description: "Contactez J3ZZ pour des bookings, collaborations, activités d'ens
 image: /assets/bio/bio-photo.jpg
 lang: fr
 lang_alternate: /contact/
+page_type: contact
 ---
 
 <section class="contact-section">
@@ -331,8 +332,3 @@ lang_alternate: /contact/
   </div>
 </section>
 
-<!-- Newsletter Form Scripts -->
-<script src="{{ '/assets/js/newsletter-form.js' | relative_url }}"></script>
-
-<!-- Social Media QR Codes for Print -->
-<script src="{{ '/assets/js/contact-social-qrcodes.js' | relative_url }}"></script>

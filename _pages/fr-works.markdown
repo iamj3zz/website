@@ -6,6 +6,7 @@ description: "Portfolio de J3ZZ — installations immersives, lives, films, perf
 image: /assets/works/2020-08-18-inst-iris/thumbnail.jpg
 lang: fr
 lang_alternate: /works/
+page_type: works
 ---
 
 <h1 class="visually-hidden">Œuvres</h1>

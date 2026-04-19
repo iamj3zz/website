@@ -6,6 +6,7 @@ description: "Upcoming and past performances, installations, and exhibitions by 
 image: /assets/bio/bio-photo.jpg
 lang: en
 lang_alternate: /fr/events/
+page_type: events
 ---
 
 <section class="events-section">

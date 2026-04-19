@@ -6,6 +6,7 @@ description: "Performances et installations à venir et passées de J3ZZ. Lives,
 image: /assets/bio/bio-photo.jpg
 lang: fr
 lang_alternate: /events/
+page_type: events
 ---
 
 <section class="events-section">
