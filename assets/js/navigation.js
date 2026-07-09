@@ -38,6 +38,37 @@
     });
   }
 
+  // Theme toggle
+  const themeToggle = document.querySelector('.theme-toggle');
+  if (themeToggle) {
+    function getStoredTheme() {
+      try { return localStorage.getItem('theme'); } catch (e) { return null; }
+    }
+    function storeTheme(value) {
+      try { localStorage.setItem('theme', value); } catch (e) {}
+    }
+    function currentEffectiveTheme() {
+      const stored = getStoredTheme();
+      if (stored === 'dark' || stored === 'light') return stored;
+      return (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? 'dark' : 'light';
+    }
+    function applyLabel(theme) {
+      const toDark = themeToggle.getAttribute('data-label-to-dark');
+      const toLight = themeToggle.getAttribute('data-label-to-light');
+      themeToggle.setAttribute('aria-label', theme === 'dark' ? toLight : toDark);
+      themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    }
+
+    applyLabel(currentEffectiveTheme());
+
+    themeToggle.addEventListener('click', function() {
+      const next = currentEffectiveTheme() === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      storeTheme(next);
+      applyLabel(next);
+    });
+  }
+
   // Bottom nav: show only on pages taller than viewport
   function updateBottomNav() {
     const bottomNav = document.querySelector('.bottom-nav');

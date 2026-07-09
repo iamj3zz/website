@@ -317,7 +317,7 @@
 
   &:hover {
     background: var(--color-link);
-    color: white;
+    color: var(--color-background);
     border-color: var(--color-link);
   }
 }
@@ -334,7 +334,7 @@
   display: inline-block;
   padding: var(--spacing-md) var(--spacing-lg);
   background: var(--color-link);
-  color: white;
+  color: var(--color-background);
   text-decoration: none;
   border-radius: var(--border-radius);
   font-weight: 600;
@@ -496,7 +496,7 @@
 
 .inquiry-modal-dialog {
   position: relative;
-  background: #fff;
+  background: var(--color-surface);
   padding: 40px;
   max-width: 520px;
   width: 100%;
@@ -512,18 +512,18 @@
   border: none;
   font-size: 24px;
   cursor: pointer;
-  color: #767676;
+  color: var(--color-muted);
   line-height: 1;
   padding: 0;
 
   &:hover {
-    color: #333;
+    color: var(--color-text);
   }
 }
 
 .inquiry-modal-pre-title {
   font-size: 11px;
-  color: #767676;
+  color: var(--color-muted);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 8px 0;
@@ -535,12 +535,12 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   margin: 0 0 6px 0;
-  color: #333;
+  color: var(--color-text);
 }
 
 .inquiry-modal-meta {
   font-size: 12px;
-  color: #767676;
+  color: var(--color-muted);
   margin: 0 0 30px 0;
 }
 
@@ -587,7 +587,7 @@
   padding: 20px;
   font-size: 14px;
   line-height: 1.8;
-  color: #333;
+  color: var(--color-text);
   text-align: center;
 }
 
@@ -642,7 +642,7 @@
   left: 0;
   right: 0;
   z-index: 200;
-  background: var(--color-text);
+  background: var(--color-inverse-surface);
   border-top: none;
   padding: var(--spacing-sm) var(--spacing-md);
   gap: var(--spacing-lg);
@@ -666,14 +666,14 @@
   }
 
   .artwork-share-btn {
-    background: white;
-    border-color: white;
-    color: var(--color-text);
+    background: var(--color-inverse-text);
+    border-color: var(--color-inverse-text);
+    color: var(--color-inverse-surface);
 
     &:hover {
       background: transparent;
-      border-color: white;
-      color: white;
+      border-color: var(--color-inverse-text);
+      color: var(--color-inverse-text);
     }
   }
 
@@ -688,7 +688,7 @@
   }
 
   .artwork-share-popover--sticky {
-    background: var(--color-text);
+    background: var(--color-inverse-surface);
     border-color: rgba(255, 255, 255, 0.2);
 
     .share-option {
@@ -710,9 +710,9 @@
   display: flex;
   align-items: center;
   padding: var(--spacing-xs) var(--spacing-md);
-  background: white;
-  color: var(--color-text);
-  border: 1px solid white;
+  background: var(--color-inverse-text);
+  color: var(--color-inverse-surface);
+  border: 1px solid var(--color-inverse-text);
   border-radius: var(--border-radius);
   font-size: 0.8rem;
   font-weight: bold;
@@ -725,7 +725,7 @@
 
   &:hover {
     background: transparent;
-    color: white;
+    color: var(--color-inverse-text);
   }
 }
 
@@ -788,10 +788,10 @@
   align-items: center;
   gap: var(--spacing-xs);
   padding: var(--spacing-xs) var(--spacing-md);
-  background: var(--color-text);
-  border: 1px solid var(--color-text);
+  background: var(--color-chip-bg);
+  border: 1px solid var(--color-chip-bg);
   border-radius: var(--border-radius);
-  color: white;
+  color: var(--color-chip-text);
   font-size: 13px;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -801,12 +801,12 @@
 
   &:hover {
     background: transparent;
-    border-color: var(--color-text);
-    color: var(--color-text);
+    border-color: var(--color-chip-bg);
+    color: var(--color-chip-bg);
   }
 
   &:focus-visible {
-    outline: 2px solid var(--color-text);
+    outline: 2px solid var(--color-chip-bg);
     outline-offset: 2px;
   }
 }
@@ -817,7 +817,7 @@
   top: calc(100% + 8px);
   left: 50%;
   transform: translateX(-50%);
-  background: white;
+  background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: var(--border-radius);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);

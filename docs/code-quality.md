@@ -21,7 +21,7 @@ This codebase follows modern web development best practices and maintains high c
 - `assets/js/cookie-consent.js` - GDPR-compliant consent management with localStorage error handling
 - `assets/js/portfolio.js` - Portfolio filtering
 - `assets/js/portfolio-scroll-overlay.js` - Mobile scroll overlay that focuses on centered grid item
-- `assets/js/navigation.js` - Mobile menu with ARIA support
+- `assets/js/navigation.js` - Mobile menu with ARIA support, and the light/dark theme toggle (persists choice to `localStorage`, updates `aria-label`/`aria-pressed`)
 - `assets/js/newsletter-form.js` - Form validation
 - `assets/js/lightbox.js` - Image gallery
 - All QR code generation scripts
@@ -31,12 +31,14 @@ This codebase follows modern web development best practices and maintains high c
 **ARIA Support:**
 - ✅ ARIA labels on all interactive elements (buttons, toggles)
 - ✅ Dynamic `aria-expanded` state management on mobile menu
+- ✅ Dynamic `aria-pressed`/`aria-label` state management on the theme toggle (label describes the action — "Switch to dark/light mode" — not the current state, translated via `_data/translations.yml`)
 - ✅ Screen reader friendly navigation
 - ✅ Semantic HTML structure
 
 **Implementation:**
 - Cookie consent buttons have descriptive aria-label attributes
 - Mobile menu toggle updates aria-expanded dynamically
+- Theme toggle updates aria-pressed/aria-label dynamically, in the visitor's page language
 - All layouts follow accessibility best practices
 
 ## Security
@@ -57,6 +59,7 @@ This codebase follows modern web development best practices and maintains high c
 
 **Script Loading:**
 - ✅ Cookie consent loads immediately (needed for banner)
+- ✅ `theme-init.html` loads as a tiny inline (non-deferred) script, first in `<head>` — required so the visitor's saved theme applies before first paint, avoiding a flash of the wrong theme
 - ✅ All other scripts use `defer` attribute for non-blocking load
 - ✅ Optimized page load performance
 
@@ -69,11 +72,11 @@ This codebase follows modern web development best practices and maintains high c
 **CSS Custom Properties:**
 - Centralized design tokens in `_sass/_variables.scss`
 - Color palette, spacing scale, typography, layout variables
-- Easy theming and dark mode support (prepared but not implemented)
+- Dark mode implemented site-wide: follows OS `prefers-color-scheme` by default, overridable via a header toggle (persisted in `localStorage`), always forced light when printing — see [Color Scheme & Dark Mode](architecture.md#color-scheme--dark-mode)
 - Consistent design system throughout the site
 
 **Variables Available:**
-- Colors: `--color-text`, `--color-background`, `--color-link`, etc.
+- Colors: `--color-text`, `--color-text-secondary`, `--color-background`, `--color-surface`, `--color-link`, `--color-link-hover`, `--color-border`, `--color-border-strong`, `--color-muted`, `--color-chip-bg`/`--color-chip-text`/`--color-chip-bg-hover`, `--color-inverse-surface`/`--color-inverse-text`
 - Spacing: `--spacing-xs` through `--spacing-3xl`
 - Typography: `--font-family-base`, `--font-size-*`, `--line-height-base`
 - Layout: `--max-width-content`, `--border-radius`, `--transition-speed`

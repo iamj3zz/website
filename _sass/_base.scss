@@ -14,8 +14,8 @@ img {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
-  color: #333;
-  background: #fff;
+  color: var(--color-text);
+  background: var(--color-background);
 }
 
 /* Accessibility Utilities */

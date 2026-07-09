@@ -37,6 +37,14 @@ lang_switcher:
     en: "FR"
     fr: "FR"
 
+theme_toggle:
+  to_dark:
+    en: "Switch to dark mode"
+    fr: "Passer en mode sombre"
+  to_light:
+    en: "Switch to light mode"
+    fr: "Passer en mode clair"
+
 # ─────────────────────────────────────────────
 # Month names (used in date formatting)
 # ─────────────────────────────────────────────

@@ -11,7 +11,7 @@
 }
 
 .bio-link {
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
   font-size: 13px;
   letter-spacing: 1px;
@@ -25,7 +25,7 @@
 
 .bio-link:hover,
 .bio-link.active {
-  border-bottom-color: #333;
+  border-bottom-color: var(--color-text);
 }
 
 /* Bio Intro: Text + Image */
@@ -44,7 +44,7 @@
 .bio-text p {
   font-size: 14px;
   line-height: 1.8;
-  color: #595959;
+  color: var(--color-text-secondary);
   margin-bottom: 20px;
 }
 
@@ -78,12 +78,12 @@
 .bio-category h2 {
   font-size: 16px;
   font-weight: normal;
-  color: #333;
+  color: var(--color-text);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid #333;
+  border-bottom: 2px solid var(--color-border-strong);
 }
 
 .bio-section-subtitle {
@@ -92,11 +92,11 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.8px;
-  color: #333;
+  color: var(--color-text);
   margin-top: 30px;
   margin-bottom: 12px;
   padding-bottom: 8px;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .bio-category > .bio-section-subtitle:first-of-type {
@@ -113,21 +113,21 @@
 .bio-item {
   font-size: 13px;
   line-height: 1.6;
-  color: #595959;
+  color: var(--color-text-secondary);
   display: flex;
   align-items: flex-start;
   gap: 8px;
 }
 
 .bio-year {
-  color: #333;
+  color: var(--color-text);
   font-weight: normal;
   width: 100px;  // Fixed width for alignment
   flex-shrink: 0;
 }
 
 .bio-bullet {
-  color: #767676;
+  color: var(--color-muted);
   flex-shrink: 0;
 }
 
@@ -197,7 +197,7 @@
   .bio-year {
     width: auto;
     font-size: 11px;
-    color: #767676;
+    color: var(--color-muted);
   }
 }
 
@@ -300,12 +300,12 @@
 }
 
 .bio-nav-link:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(128, 128, 128, 0.12);
 }
 
 .bio-nav-link.is-active {
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(128, 128, 128, 0.2);
 }
 
 /* Hide bio section navigation in print */

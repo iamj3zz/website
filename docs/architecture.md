@@ -279,6 +279,7 @@ The gallery has full bilingual support — 16 English artworks + 16 French artwo
 - Navigation state uses `class="active"` based on page URL
 - Bio Gallery page (`/bio-gallery/`) accessible via bio page links
 - **CONTACT & BOOK** uses `.nav-cta` class: black background, white text pill — visually distinct CTA across all nav locations
+- **Theme toggle + language switcher** (top-right corner, `.nav-lang`): sun/moon light/dark toggle button followed by EN | FR — see [Color Scheme & Dark Mode](#color-scheme--dark-mode)
 
 **Mobile Header (≤600px):**
 - Logo left, **BOOK** pill center-right, hamburger far right — always visible regardless of menu state
@@ -462,9 +463,9 @@ Optional work description content in markdown.
 - Lightbox system for image viewing with captions and keyboard navigation
 
 **Active Navigation States:**
-- Main nav: 2px solid underline on active page
-- Filter buttons: 2px solid underline on active filter
-- Both use `border-bottom-color: #333`
+- Main nav: 2px solid underline on active page (`var(--color-border-strong)`)
+- Filter buttons: 2px solid underline on active filter (`var(--color-text)`)
+- Both theme-aware — see [Color Scheme & Dark Mode](#color-scheme--dark-mode)
 
 ## Mobile Scroll Overlay
 
@@ -539,13 +540,26 @@ On artwork detail pages, a fixed bottom bar appears when the user scrolls past t
 - Print stylesheets (`_print.scss`) retain `text-align: justify` (correct for printed documents)
 - Affected files: `_bio.scss`, `_work-modules.scss`, `_events.scss`, `_work-detail.scss`, `_contact.scss`, `_portfolio.scss`
 
-## Color Scheme
+## Color Scheme & Dark Mode
 
-- Primary text: `#333`
-- Secondary text: `#666`
-- Light text: `#999`
-- Background light: `#f9f9f9`
-- Border color: `#e0e0e0`
+All color is driven by CSS custom properties defined in `_sass/_variables.scss` — no partial should hardcode a chrome/text/surface color directly (functional colors like gallery availability status and category-overlay scrims are the deliberate exception; see [Code Quality](code-quality.md)).
+
+**Tokens** (light values shown; see `_sass/_variables.scss` for the dark equivalents):
+- `--color-text` (`#333`), `--color-text-secondary` (`#595959`), `--color-muted` (`#999`)
+- `--color-background` (`#fff`), `--color-surface` (`#f5f5f5`)
+- `--color-link` (`#000`), `--color-link-hover` (`#666`)
+- `--color-border` (`#ddd`), `--color-border-strong` (`#333`)
+- `--color-chip-bg` / `--color-chip-text` / `--color-chip-bg-hover` — small filled accent controls (nav CTA, ticket/submit buttons, active language link)
+- `--color-inverse-surface` / `--color-inverse-text` — fixed-dark UI (tooltips, lightbox, the sticky artwork engagement bar) that intentionally does **not** flip with the theme
+
+**Resolution (three-way, in `_sass/_variables.scss` and the `.site-logo img` rule in `_sass/_layout.scss`):**
+1. No explicit visitor choice → follows OS `prefers-color-scheme: dark`, live-updates if the OS theme changes mid-session
+2. Explicit choice via the header toggle → `data-theme="dark"` or `data-theme="light"` on `<html>` overrides system preference either way, persisted in `localStorage`
+3. Printing → always forced light regardless of theme (`@media not print` guards every dark rule) — some print stylesheets (`_gallery.scss`, `_contact.scss`, `_bio-gallery.scss`) reuse the same color tokens inside their own `@media print` blocks, so this guard matters even outside `_variables.scss`
+
+**Toggle button:** sun/moon icon button in the header next to the language switcher (`.theme-toggle`, all three layouts). `_includes/theme-init.html` is a small inline, non-deferred script in `<head>` (before the stylesheet) that applies a stored preference before first paint, avoiding a flash of the wrong theme. Click handling lives in `assets/js/navigation.js`.
+
+**Header logo:** `assets/img/J3ZZ-logo-black-300px.png` is inverted via CSS `filter: invert(1)` in dark mode — a placeholder until a proper white logo variant is supplied (see [Updating Logo](#updating-logo)).
 
 ## Configuration Variables (_config.yml)
 
@@ -771,8 +785,9 @@ Each page declares its type in front matter (`page_type: works`, `page_type: con
 | *(none)* | *(universal only)* | `/privacy/` |
 
 **Universal Scripts** (loaded on all pages):
+- `{% include theme-init.html %}` — tiny inline (not deferred) script, first line in `<head>` before the stylesheet link; applies a stored `localStorage` theme choice to `<html data-theme>` before first paint to avoid a flash of the wrong theme
 - `cookie-consent.js` (loaded immediately without defer — must initialize before other scripts)
-- `utils.js`, `back-to-top.js`, `lightbox.js`, `navigation.js`, `qrcode.min.js`, `print-header-qrcode.js` (all loaded with `defer` attribute)
+- `utils.js`, `back-to-top.js`, `lightbox.js`, `navigation.js`, `qrcode.min.js`, `print-header-qrcode.js` (all loaded with `defer` attribute) — `navigation.js` also handles the theme toggle's click behavior
 
 **Implementation in Layout:**
 ```liquid
@@ -880,3 +895,5 @@ Change the `logo` path in `_config.yml`:
 logo: /assets/img/your-logo.png
 ```
 Restart Jekyll server after config changes.
+
+**Dark mode:** the current logo (black outline on transparent) is auto-inverted to white via CSS `filter: invert(1)` in `_sass/_layout.scss` whenever dark mode is active — this is a placeholder. Once a proper white logo variant exists, replace the filter with a real asset swap (e.g. a `<picture>`/`data-theme` source swap) instead of relying on `invert()`.

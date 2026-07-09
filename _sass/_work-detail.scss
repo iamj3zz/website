@@ -26,7 +26,7 @@
 
 .work-category {
   font-size: 14px;
-  color: #767676;
+  color: var(--color-muted);
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -46,7 +46,7 @@
 .work-content {
   font-size: 15px;
   line-height: 1.8;
-  color: #595959;
+  color: var(--color-text-secondary);
   margin-bottom: 60px;
 }
 
@@ -62,7 +62,7 @@
   align-items: center;
   padding-top: 40px;
   margin-top: 40px;
-  border-top: 1px solid #e0e0e0;
+  border-top: 1px solid var(--color-border);
 }
 
 .work-nav-left {
@@ -81,13 +81,13 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .work-nav-link:hover {
-  color: #595959;
+  color: var(--color-text-secondary);
 }
 
 .nav-arrow {
@@ -110,7 +110,7 @@
 
 .nav-title {
   font-size: 11px;
-  color: #767676;
+  color: var(--color-muted);
   text-transform: none;
   letter-spacing: 0;
 }
@@ -120,7 +120,7 @@
 }
 
 .back-to-works {
-  color: #333;
+  color: var(--color-text);
   text-decoration: none;
   font-size: 14px;
   text-transform: uppercase;
@@ -130,7 +130,7 @@
 }
 
 .back-to-works:hover {
-  color: #595959;
+  color: var(--color-text-secondary);
 }
 
 .work-nav-disabled {

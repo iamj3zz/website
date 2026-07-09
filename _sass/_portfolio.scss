@@ -12,7 +12,7 @@
 .filter-btn {
   background: none;
   border: none;
-  color: #767676;
+  color: var(--color-muted);
   font-size: 12px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -26,12 +26,12 @@
 }
 
 .filter-btn:hover {
-  color: #595959;
+  color: var(--color-text-secondary);
 }
 
 .filter-btn.active {
-  color: #333;
-  border-bottom-color: #333;
+  color: var(--color-text);
+  border-bottom-color: var(--color-text);
 }
 
 /* Portfolio Grid */
@@ -45,7 +45,7 @@
 .portfolio-item {
   position: relative;
   overflow: hidden;
-  background: #f5f5f5;
+  background: var(--color-surface);
   transition: opacity 0.3s ease;
   aspect-ratio: 1 / 1;
 }
@@ -332,12 +332,12 @@
 }
 
 .filter-nav-btn:hover {
-  background-color: rgba(0, 0, 0, 0.05);
+  background-color: rgba(128, 128, 128, 0.12);
 }
 
 .filter-nav-btn.is-active {
   font-weight: bold;
-  background-color: rgba(0, 0, 0, 0.08);
+  background-color: rgba(128, 128, 128, 0.2);
 }
 
 .filter-nav-btn:last-child {

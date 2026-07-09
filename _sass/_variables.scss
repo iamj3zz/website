@@ -10,6 +10,18 @@
   --color-link-hover: #666;
   --color-border: #ddd;
   --color-muted: #999;
+  --color-text-secondary: #595959;
+  --color-surface: #f5f5f5;
+  --color-border-strong: #333;
+  --color-chip-bg: #333;
+  --color-chip-text: #fff;
+  --color-chip-bg-hover: #000;
+  --color-inverse-surface: #111;
+  --color-inverse-text: #fff;
+
+  /* Compatibility aliases (referenced directly by _gallery.scss) */
+  --color-background-light: var(--color-surface);
+  --color-text-muted: var(--color-muted);
 
   /* Spacing */
   --spacing-xs: 0.25rem;   /* 4px */
@@ -44,15 +56,34 @@
   --z-index-tooltip: 400;
 }
 
-/* Example: Dark mode support (future implementation)
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-text: #f0f0f0;
-    --color-background: #1a1a1a;
-    --color-link: #fff;
-    --color-link-hover: #ccc;
-    --color-border: #444;
-    --color-muted: #888;
+@mixin dark-theme-tokens {
+  --color-text: #f0f0f0;
+  --color-background: #1a1a1a;
+  --color-link: #fff;
+  --color-link-hover: #ccc;
+  --color-border: #444;
+  --color-muted: #888;
+  --color-text-secondary: #bbb;
+  --color-surface: #262626;
+  --color-border-strong: #555;
+  --color-chip-bg: #f0f0f0;
+  --color-chip-text: #1a1a1a;
+  --color-chip-bg-hover: #fff;
+  /* --color-inverse-* intentionally not redefined: stays fixed-dark in both themes */
+}
+
+/* System preference — only when the visitor hasn't made an explicit choice */
+@media not print and (prefers-color-scheme: dark) {
+  :root:not([data-theme]) {
+    @include dark-theme-tokens;
   }
 }
-*/
+
+/* Explicit choice via the theme toggle — overrides system preference either way */
+@media not print {
+  :root[data-theme="dark"] {
+    @include dark-theme-tokens;
+  }
+  /* [data-theme="light"] needs no rule: base :root already holds light
+     values, and it's excluded from both dark-selecting blocks above. */
+}
