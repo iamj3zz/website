@@ -210,6 +210,17 @@ inquiry_modal:
     fr: "Une erreur s'est produite. Veuillez réessayer ou envoyer un email directement à"
 
 # ─────────────────────────────────────────────
+# Splash Screen (first-visit intro video)
+# ─────────────────────────────────────────────
+splash:
+  close_button:
+    en: "Close"
+    fr: "Fermer"
+  skip_button:
+    en: "Skip intro — Enter site"
+    fr: "Passer l'intro — Entrer sur le site"
+
+# ─────────────────────────────────────────────
 # Artwork Inquiry Form
 # ─────────────────────────────────────────────
 inquiry_form:

@@ -18,6 +18,7 @@
 @import 'layout';
 
 /* Page-specific styles */
+@import 'splash';        /* First-visit splash screen (homepage intro video) */
 @import 'portfolio';     /* Homepage portfolio grid and filters */
 @import 'bio';           /* Bio page */
 @import 'bio-gallery';   /* Bio gallery page */

@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   {% include theme-init.html %}
+  {% include splash-init.html %}
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="dns-prefetch" href="https://www.googletagmanager.com">
   {% include seo.html %}
@@ -12,6 +13,9 @@
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
 <body>
+  {% if page.url == '/' %}
+  {% include splash-screen.html %}
+  {% endif %}
   {% include cookie-consent.html %}
 
   <header class="site-header">
@@ -195,6 +199,11 @@
   <script src="{{ '/assets/js/works-qrcode.js' | relative_url }}" defer></script>
   {% endif %}
 
+  <!-- Homepage splash screen -->
+  {% if page.url == '/' %}
+  <script src="{{ '/assets/js/splash-screen.js' | relative_url }}" defer></script>
+  {% endif %}
+
   <!-- Gallery page -->
   {% if page.page_type == 'gallery' %}
   <script src="{{ '/assets/js/gallery-qrcode.js' | relative_url }}" defer></script>
@@ -210,6 +219,7 @@
   <!-- Bio page only -->
   {% if page.page_type == 'bio' %}
   <script src="{{ '/assets/js/bio-section-nav.js' | relative_url }}" defer></script>
+  <script src="{{ '/assets/js/iframe-print-qrcode.js' | relative_url }}" defer></script>
   {% endif %}
 
   <!-- Bio gallery page only -->

@@ -1,0 +1,26 @@
+{% assign _lang = page.lang | default: 'en' %}
+{% assign _trans = site.data.translations %}
+{% assign _video_title = site.intro_video_title %}
+{% if _lang == 'fr' %}
+  {% assign _video_title = site.intro_video_title_fr %}
+{% endif %}
+
+<div id="splash-screen" class="splash-overlay" role="dialog" aria-modal="true" aria-labelledby="splash-title" hidden>
+  <div class="splash-overlay-backdrop"></div>
+  <div class="splash-dialog">
+    <button type="button" class="splash-close" aria-label="{{ _trans.splash.close_button[_lang] }}">&times;</button>
+    <h2 id="splash-title" class="visually-hidden">{{ _video_title }}</h2>
+    <div class="splash-video-wrapper">
+      <iframe
+        id="splash-video-iframe"
+        data-src="{{ site.intro_video_embed_url }}"
+        src=""
+        title="{{ _video_title }}"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    </div>
+    <button type="button" class="splash-skip">{{ _trans.splash.skip_button[_lang] }}</button>
+  </div>
+</div>

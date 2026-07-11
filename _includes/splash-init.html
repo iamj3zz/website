@@ -1,0 +1,11 @@
+{% if page.url == '/' %}
+<script>
+(function() {
+  try {
+    if (!localStorage.getItem('hasVisitedSplash')) {
+      document.documentElement.setAttribute('data-splash', 'show');
+    }
+  } catch (e) {}
+})();
+</script>
+{% endif %}

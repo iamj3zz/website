@@ -492,6 +492,18 @@ The module automatically detects height from these formats in embed codes:
 - Choose responsive mode for video embeds that should adapt to screen size
 - Choose fixed-height mode for audio players and embeds with specific dimensions
 
+**Direct Include Usage (outside `sections:`):**
+This module can also be called directly with `{% include work-modules/iframe.html %}` on any page that isn't a `layout: work` portfolio item — e.g. the bio page's intro video (`_pages/bio.markdown` / `_pages/fr-bio.markdown`, embedded under the profile photo in `.bio-image`), sourced from `_config.yml`'s `intro_video_*` keys rather than front matter:
+```liquid
+{% assign _embed_code = '<iframe src="' | append: site.intro_video_embed_url | append: '" frameborder="0" allowfullscreen></iframe>' %}
+{% include work-modules/iframe.html
+   embed_code=_embed_code
+   responsive=true
+   aspect_ratio="16:9"
+   caption=site.intro_video_caption %}
+```
+**Important:** the page's layout must load `iframe-print-qrcode.js` for the print QR fallback to render — `_layouts/work.html` already does; `_layouts/portfolio.html` only loads it for `page_type: bio`. Using this module on any other `layout: portfolio` page requires adding that script there too (see `docs/architecture.md` → Script Loading & Performance).
+
 ### 10. Split Hero-Metadata Module
 
 Two-column responsive layout with hero content (image or iframe) on the left (2/3 width) and metadata on the right (1/3 width). Perfect for showcasing visual or video content alongside project details.

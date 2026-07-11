@@ -50,6 +50,18 @@ tagline: "Experimental sound art merging music, generative systems, and immersiv
 default_image: /assets/bio/bio-photo.jpg
 lang: en_US
 
+# Intro / Press Video
+# Used by: homepage splash screen (_includes/splash-screen.html)
+#          and bio page press section (_pages/bio.markdown, _pages/fr-bio.markdown)
+# intro_video_embed_url must be a full embeddable PLAYER url, e.g.:
+#   YouTube:  https://www.youtube-nocookie.com/embed/VIDEO_ID
+#   Vimeo:    https://player.vimeo.com/video/VIDEO_ID
+intro_video_embed_url: "https://www.youtube-nocookie.com/embed/H9SJmB-fFHY"
+intro_video_title: "Welcome to J3ZZ"
+intro_video_title_fr: "Bienvenue chez J3ZZ"
+intro_video_caption: "J3ZZ featured on Réunion La 1ère local news, January 2026"
+intro_video_caption_fr: "J3ZZ à la une du journal télévisé de Réunion La 1ère, janvier 2026"
+
 # Google Analytics 4
 google_analytics: G-8NXZYG48TB
 

@@ -54,6 +54,12 @@ links:
     </div>
     <div class="bio-image">
       <img src="{{ page.bio_image }}" alt="J3ZZ — artiste sonore et créateur de nouveaux médias">
+      {% assign _intro_embed_code = '<iframe src="' | append: site.intro_video_embed_url | append: '" frameborder="0" allowfullscreen></iframe>' %}
+      {% include work-modules/iframe.html
+         embed_code=_intro_embed_code
+         responsive=true
+         aspect_ratio="16:9"
+         caption=site.intro_video_caption_fr %}
     </div>
   </div>
 

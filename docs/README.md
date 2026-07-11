@@ -13,6 +13,7 @@ Official portfolio website for J3ZZ, featuring a modular grid-based design syste
 - **Responsive Design** - Mobile-first, tablet, and desktop optimized
 - **Print Functionality** - A4-optimized layouts with QR codes for all pages
 - **Event Management** - Link events to portfolio works
+- **First-Visit Splash Screen** - Config-driven intro video shown once to new homepage visitors, also embedded on the bio page
 - **SEO Optimized** - Structured data, Open Graph tags, automatic sitemap generation
 - **Privacy-Compliant Analytics** - Google Analytics 4 with GDPR cookie consent
 - **Cookie Consent System** - GDPR-compliant preference management

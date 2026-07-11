@@ -90,7 +90,7 @@ permalink: /works/
 **Valid page_type values:**
 - `works` — Portfolio works grid and index (portfolio.js, portfolio-filter-nav.js, etc.)
 - `gallery` — Fine art gallery (gallery-qrcode.js, gallery-hearts.js, artwork-inquiry.js)
-- `bio` — Bio/CV page (bio-section-nav.js, bio-links-qrcode.js)
+- `bio` — Bio/CV page (bio-section-nav.js, bio-links-qrcode.js, iframe-print-qrcode.js — needed for the intro video's print fallback)
 - `bio-gallery` — Bio gallery/press photos (bio-gallery-qrcode.js, bio-links-qrcode.js)
 - `contact` — Contact form (newsletter-form.js, contact-social-qrcodes.js)
 - `events` — Events calendar (events-year-nav.js, events-description.js, events-tickets-qrcode.js)
@@ -126,6 +126,24 @@ The bio gallery displays press and media-use photos with both web and high-resol
 - Download: Click link to download high-res version (opens browser download dialog)
 - Print: Full-size images (not cropped), includes QR codes for each photo
 - Bilingual: `/bio-gallery/` (EN) ↔ `/fr/bio-gallery/` (FR) with language switcher
+
+---
+
+## Intro / Press Video Workflow
+
+A single video (currently a Réunion La 1ère news feature) appears in two places on the site:
+1. **Homepage splash screen** — a full-screen overlay shown only on a visitor's true first visit to `/` (gated by a permanent `localStorage` flag, `hasVisitedSplash`). Returning visitors skip straight to the portfolio grid, exactly as before. Markup/behavior: `_includes/splash-init.html` (no-flash gate), `_includes/splash-screen.html` (dialog), `assets/js/splash-screen.js`, `_sass/_splash.scss`.
+2. **Bio page** — the same video is embedded under the profile photo in `.bio-image` (`_pages/bio.markdown`, mirrored in `_pages/fr-bio.markdown`), via the standard `work-modules/iframe.html` include (responsive 16:9, with an automatic print QR/link fallback since a live iframe can't print).
+
+**To change the video** (including switching providers, e.g. YouTube → Vimeo), edit only these 5 keys in `_config.yml` — no template edits needed:
+```yaml
+intro_video_embed_url: "https://www.youtube-nocookie.com/embed/VIDEO_ID" # full embeddable PLAYER url
+intro_video_title: "..."       # EN — splash dialog title
+intro_video_title_fr: "..."    # FR
+intro_video_caption: "..."     # EN — caption shown under the bio page embed
+intro_video_caption_fr: "..."  # FR
+```
+`intro_video_embed_url` must be a full player URL (e.g. `https://www.youtube-nocookie.com/embed/VIDEO_ID` or `https://player.vimeo.com/video/VIDEO_ID`), not a bare ID or a `youtu.be/...` share link — both usages build an `<iframe src="...">` directly from this value.
 
 ---
 
@@ -216,11 +234,11 @@ This project's documentation is organized into topic-specific files for performa
 **Reference:** [Content Management](docs/content-management.md#events)
 
 ### Modifying Site Pages
-- **Bio:** `_pages/bio.markdown` — See [Content Coherence Framework](docs/CONTENT-COHERENCE.md) for CV section structure. IMDb composer profile linked in top links block and inline next to "Films" subtitle.
+- **Bio:** `_pages/bio.markdown` — See [Content Coherence Framework](docs/CONTENT-COHERENCE.md) for CV section structure. IMDb composer profile linked in top links block and inline next to "Films" subtitle. A video embed sits under the profile photo in `.bio-image` (mirrored in `_pages/fr-bio.markdown`) — see "Intro / Press Video Workflow" above.
 - **Bio Gallery:** `_pages/bio-gallery.markdown` — Currently shows "coming soon" message. Add press photos when ready.
 - **Events:** `_pages/events.markdown` — Includes year navigation widget
 - **Contact:** `_pages/contact.markdown`
-- **Homepage:** `_pages/index.markdown` or manage via `_portfolio/` collection
+- **Homepage:** `_pages/index.markdown` or manage via `_portfolio/` collection. First-time visitors see a full-screen splash overlay with the intro video before reaching the grid — see "Intro / Press Video Workflow" above.
 
 **Reference:** [Architecture > Modifying Page Content](docs/architecture.md)
 

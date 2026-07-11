@@ -353,6 +353,7 @@ All pages (BIO, BIO GALLERY, WORKS, EVENTS, CONTACT) are optimized for A4 print 
   - JavaScript: `bio-links-qrcode.js` generates QR codes for CV, Press Kit, Pictures links
   - Converts relative URLs to absolute for QR code generation
 - Bio text and image section in two-column layout
+- Intro video (under the photo, on-screen) is replaced in print by the standard iframe-module fallback — a QR code + link, since a live iframe can't print. Requires `iframe-print-qrcode.js` (loaded on `page_type: bio`, see Script Loading & Performance)
 - Categorized lists (Live Performances, Installations, Releases, Teaching, Workshops, Lectures, Books)
 - Clean typography with year-based organization
 - Print-specific styles in `portfolio.css` (lines 1762-2148)
@@ -600,6 +601,12 @@ All color is driven by CSS custom properties defined in `_sass/_variables.scss` 
 - `mailchimp_action_url` - Mailchimp form action URL
 - `mailchimp_bot_field` - Mailchimp bot field name for spam prevention
 
+**Intro / Press Video:**
+Drives both the homepage first-visit splash screen (`_includes/splash-screen.html`) and the video embedded under the photo on the bio page (`_pages/bio.markdown` / `_pages/fr-bio.markdown`). Changing the video means editing only these keys — no template changes needed.
+- `intro_video_embed_url` - Full embeddable player URL (e.g. `https://www.youtube-nocookie.com/embed/VIDEO_ID` or `https://player.vimeo.com/video/VIDEO_ID`) — not a bare ID or a `youtu.be/...` share link
+- `intro_video_title` / `intro_video_title_fr` - Splash dialog title (EN/FR)
+- `intro_video_caption` / `intro_video_caption_fr` - Caption shown under the bio page embed (EN/FR)
+
 **Artwork Shipping & Purchasing Policy:**
 Two parallel blocks — `artwork_shipping` (EN) and `artwork_shipping_fr` (FR). The layout picks `artwork_shipping_fr` when `page.lang == 'fr'`, falling back to `artwork_shipping`.
 - `ships_from` - Origin location displayed on artwork pages (e.g. "Réunion Island" / "Île de la Réunion")
@@ -778,11 +785,13 @@ Each page declares its type in front matter (`page_type: works`, `page_type: con
 |---|---|---|
 | `works` | portfolio, portfolio-scroll-overlay, portfolio-filter-nav, works-qrcode | `/works/`, `/` (index) |
 | `gallery` | gallery-qrcode, gallery-hearts, artwork-inquiry | `/gallery/` |
-| `bio` | bio-links-qrcode, bio-section-nav | `/bio/` |
+| `bio` | bio-links-qrcode, bio-section-nav, iframe-print-qrcode | `/bio/` |
 | `bio-gallery` | bio-links-qrcode, bio-gallery-qrcode | `/bio-gallery/` |
 | `contact` | contact-social-qrcodes, newsletter-form | `/contact/` |
 | `events` | events-tickets-qrcode, events-description, events-year-nav | `/events/` |
 | *(none)* | *(universal only)* | `/privacy/` |
+
+**Homepage splash screen (URL-gated, not `page_type`-gated):** `/` also conditionally loads `splash-init.html` (blocking inline script in `<head>`) and `splash-screen.js`, guarded by `{% if page.url == '/' %}` rather than `page_type` — since `/` and `/works/` share `page_type: works` but only `/` is the true entry point that should show the splash. See "Intro / Press Video Workflow" in `CLAUDE.md`.
 
 **Universal Scripts** (loaded on all pages):
 - `{% include theme-init.html %}` — tiny inline (not deferred) script, first line in `<head>` before the stylesheet link; applies a stored `localStorage` theme choice to `<html data-theme>` before first paint to avoid a flash of the wrong theme
@@ -879,7 +888,7 @@ Site deploys to GitHub Pages automatically when pushed to the `main` branch. The
 
 All page files are located in the `_pages/` directory:
 
-- **Bio**: Edit `_pages/bio.markdown`
+- **Bio**: Edit `_pages/bio.markdown` (mirror in `_pages/fr-bio.markdown`). The video under the profile photo is not hardcoded here — it's pulled from `_config.yml`'s `intro_video_*` keys (see Configuration Variables above)
 - **Bio Gallery**: Edit `_pages/bio-gallery.markdown` (press photos with front matter-based image management)
 - **Events**: Edit `_pages/events.markdown`
 - **Contact**: Edit `_pages/contact.markdown`
