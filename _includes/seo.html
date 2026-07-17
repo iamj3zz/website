@@ -17,9 +17,24 @@
 {% endif %}
 
 <!-- Security Headers -->
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+<!-- X-Content-Type-Options and X-Frame-Options are HTTP-header-only directives:
+     browsers silently ignore them when set via <meta>, and GitHub Pages has no
+     mechanism to send custom response headers. Only Referrer-Policy and CSP
+     below are meta-tag-effective and actually enforced. -->
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+{% capture csp %}
+default-src 'self';
+script-src 'self' 'unsafe-inline' https://www.googletagmanager.com;
+style-src 'self' 'unsafe-inline';
+img-src 'self' data: https:;
+font-src 'self' data:;
+connect-src 'self' https://formspree.io{% if site.supabase_url %} {{ site.supabase_url }}{% endif %}{% if site.google_analytics %} https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com{% endif %};
+frame-src https://www.youtube-nocookie.com https://player.vimeo.com;
+form-action 'self' https://formspree.io https://j3zz.us6.list-manage.com;
+object-src 'none';
+base-uri 'self';
+{% endcapture %}
+<meta http-equiv="Content-Security-Policy" content="{{ csp | normalize_whitespace }}">
 
 <!-- Additional custom meta tags -->
 {% if page.noindex %}
