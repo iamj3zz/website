@@ -99,6 +99,23 @@ if ! command -v identify &>/dev/null || ! command -v convert &>/dev/null; then
     exit 1
 fi
 
+# Check exiftool availability (optional — embeds rights metadata, see embed_rights_metadata below)
+HAS_EXIFTOOL=false
+if command -v exiftool &>/dev/null; then
+    HAS_EXIFTOOL=true
+else
+    echo -e "${YELLOW}${WARN} exiftool not installed — generated images will not carry embedded rights/AI-training-opt-out metadata.${NC}"
+    echo "  Install with: sudo apt-get install libimage-exiftool-perl (see docs/ARTWORK-PROCESSING.md)"
+    echo ""
+fi
+
+# Embed IPTC/XMP rights metadata (best-effort — skips silently if exiftool is unavailable)
+embed_rights_metadata() {
+    local file="$1"
+    [ "$HAS_EXIFTOOL" = true ] || return 0
+    "$SCRIPT_DIR/embed-image-rights.sh" "$file"
+}
+
 # For large images, ImageMagick policy may need adjustment
 # The policy.xml file enforces hard resource limits that cannot be overridden via CLI
 # If you get "cache resources exhausted" errors, increase the limits in:
@@ -175,6 +192,7 @@ for key in "${!MAPPING[@]}"; do
                 rm -f /tmp/convert_err_$$.txt
                 continue
             elif [ -f "$thumb_out" ] && [ $CONVERT_EXIT -eq 0 ]; then
+                embed_rights_metadata "$thumb_out"
                 DIMS="$(identify -format "%wx%h" "$thumb_out" 2>/dev/null || echo "unknown")"
                 echo -e "${GREEN}${CHECK} thumbnail.png — ${DIMS}${NC}"
                 PROCESSED=$((PROCESSED + 1))
@@ -221,6 +239,7 @@ for key in "${!MAPPING[@]}"; do
                 rm -f /tmp/convert_err_$$.txt
                 continue
             elif [ -f "$print_out" ] && [ $CONVERT_EXIT -eq 0 ]; then
+                embed_rights_metadata "$print_out"
                 DIMS="$(identify -format "%wx%h" "$print_out" 2>/dev/null || echo "unknown")"
                 echo -e "${GREEN}${CHECK} print.png — ${DIMS}${NC}"
                 PROCESSED=$((PROCESSED + 1))

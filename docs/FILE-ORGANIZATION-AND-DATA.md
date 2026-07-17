@@ -249,6 +249,7 @@ Main site pages that aren't portfolio works.
 | `events.markdown` | `/events/` | Events calendar with year navigation |
 | `contact.markdown` | `/contact/` | Contact form & newsletter |
 | `privacy.markdown` | `/privacy/` | Privacy policy |
+| `licensing.markdown` | `/licensing/` | Licensing & rights / AI-training opt-out notice |
 
 ### Bio/CV Page Structure (`bio.markdown`)
 

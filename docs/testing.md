@@ -173,6 +173,7 @@ bundle exec rake
 
 **Pre-commit hook** (runs when you `git commit`):
 - Validates YAML syntax in staged files
+- Embeds AI-training opt-out rights metadata (`exiftool`) into any staged image files under `assets/**/*.{jpg,jpeg,png}`, then re-stages them automatically — no-ops with a warning if `exiftool` isn't installed. See "AI-Scraping & Rights Protection Workflow" in `CLAUDE.md`.
 - **Blocks the commit** if YAML validation fails
 
 **Pre-push hook** (runs when you `git push`):

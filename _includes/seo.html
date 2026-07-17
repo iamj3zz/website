@@ -29,6 +29,9 @@
 <meta name="googlebot" content="index, follow">
 {% endif %}
 
+<!-- AI/TDM opt-out (supplementary signal; not a search-engine indexing directive) -->
+<meta name="robots" content="noai, noimageai">
+
 <!-- Additional Open Graph tags for portfolio works -->
 {% if page.layout == "work" %}
   {% if page.metadata.release_date %}
@@ -66,7 +69,11 @@
     "name": "{{ site.author.name }}",
     "url": "{{ site.url }}",
     "sameAs": [{% for link in site.social.links %}"{{ link }}"{% unless forloop.last %}, {% endunless %}{% endfor %}]
-  }{% if page.metadata.release_date %},
+  },
+  "license": "{{ site.license_url }}",
+  "usageInfo": "{{ site.license_url }}",
+  "copyrightNotice": "{{ site.copyright_notice }}",
+  "creditText": "{{ site.author.name }}"{% if page.metadata.release_date %},
   "datePublished": "{{ page.metadata.release_date }}"{% endif %}{% if page.last_modified_at %},
   "dateModified": "{{ page.last_modified_at | date_to_xmlschema }}"{% endif %}{% if page.category %},
   "genre": "{{ page.category | replace: '-', ' ' | capitalize }}"{% endif %}
@@ -119,7 +126,11 @@
     "name": "{{ site.author.name }}",
     "url": "{{ site.url }}",
     "sameAs": [{% for link in site.social.links %}"{{ link }}"{% unless forloop.last %}, {% endunless %}{% endfor %}]
-  }{% if page.medium %},
+  },
+  "license": "{{ site.license_url }}",
+  "usageInfo": "{{ site.license_url }}",
+  "copyrightNotice": "{{ site.copyright_notice }}",
+  "creditText": "{{ site.author.name }}"{% if page.medium %},
   "medium": "{{ page.medium }}"{% endif %}{% if page.year %},
   "dateCreated": "{{ page.year }}"{% endif %}
 }

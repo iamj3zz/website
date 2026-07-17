@@ -27,6 +27,11 @@ pre-commit:
         Claude cannot be added as a co-author in this repository.
         Please update your commit message to remove the Claude co-author line.
 
+    embed-image-rights:
+      glob: "assets/**/*.{jpg,jpeg,png}"
+      run: ./scripts/embed-image-rights.sh {staged_files}
+      stage_fixed: true
+
     full-tests:
       run: ./test-before-push.sh
       fail_text: |

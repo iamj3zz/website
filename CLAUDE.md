@@ -55,13 +55,14 @@ The site implements comprehensive SEO with special attention to:
 
 ### Robots & Indexing
 - Pages can opt-out of indexing via `noindex: true` in front matter
-- Currently applied to: `404.html`, `_pages/privacy.markdown`
+- Currently applied to: `404.html`, `_pages/privacy.markdown`, `_pages/licensing.markdown` (and FR equivalents)
 - Default: all pages are `index, follow`
 
 ### Structured Data
 - Portfolio works emit `CreativeWork` (overrides jekyll-seo-tag default)
 - Artworks emit `VisualArtwork` (overrides jekyll-seo-tag default)
 - Both include breadcrumb schemas for enhanced search result display
+- Both include `license`, `usageInfo`, `copyrightNotice`, and `creditText` fields sourced from `site.license_url`/`site.copyright_notice`
 - Configured via `seo.type` defaults in `_config.yml`
 
 ### Image Performance
@@ -70,6 +71,27 @@ The site implements comprehensive SEO with special attention to:
 - Applied to: hero images, grids, logos, gallery images, bio photos
 
 **For details:** See [Architecture > SEO Architecture](docs/architecture.md)
+
+---
+
+## AI-Scraping & Rights Protection Workflow
+
+The site asserts a machine-readable opt-out of AI/LLM training use, at multiple layers, per Article 4(3) of the EU Digital Single Market Directive (2019/790). This is separate from ordinary search-engine SEO (above) — search indexing stays fully enabled; only AI-training use is opted out.
+
+**Layers:**
+1. **`robots.txt`** (repo root) — `Disallow: /` blocks for ~20 known AI-training crawlers (`GPTBot`, `CCBot`, `ClaudeBot`, `Google-Extended`, `Bytespider`, `PerplexityBot`, etc.), while `User-agent: * / Allow: /` stays untouched so normal search indexing is unaffected. Do not add bare `Applebot`/`Googlebot` disallows — only the `-Extended`/AI-specific variants.
+2. **Meta tag** — `_includes/seo.html` emits an unconditional `<meta name="robots" content="noai, noimageai">` on every page (separate from, and in addition to, the standard indexing `<meta name="robots">` tag).
+3. **Structured data** — `license`/`usageInfo`/`copyrightNotice`/`creditText` fields in the JSON-LD blocks (see Structured Data above), sourced from `_config.yml`'s `copyright_notice` and `license_url` keys.
+4. **Licensing & Rights page** — `_pages/licensing.markdown` + `_pages/fr-licensing.markdown` (`/licensing/`, `/fr/licensing/`), given the same discreet treatment as the Privacy Policy: `noindex: true`, linked only from the footer (all three layouts), no main-nav entry. States the TDM opt-out explicitly and distinguishes it from the bio-gallery press photos (which remain intentionally downloadable for press/media use).
+5. **Embedded image metadata** — `scripts/embed-image-rights.sh` writes IPTC/XMP rights-reserved + "not licensed for AI/ML training" tags (`XMP-xmpRights:Marked`, `XMP-xmpRights:WebStatement`, `IPTC:CopyrightNotice`, `XMP-dc:Rights`) into image files via `exiftool`. This is the most robust layer — it travels with the file itself even if downloaded or copied, unlike `robots.txt` which only stops crawlers that choose to respect it.
+
+**Automation — fully local, no CI changes:**
+- A Lefthook `pre-commit` command (`embed-image-rights` in `lefthook.yml`) automatically runs `embed-image-rights.sh` on any staged `assets/**/*.{jpg,jpeg,png}` file, then re-stages the modified file (`stage_fixed: true`) — every future commit touching an image gets it protected with no manual step. This matches the project's existing convention (`lefthook.yml`'s own header comment: *"GitHub Actions only builds and deploys — it does NOT run tests. These hooks are your ONLY safety net."*) — this hook lives in Lefthook, not `.github/workflows/jekyll.yml`.
+- `scripts/process-artworks.sh` also calls `embed-image-rights.sh` directly after generating each `thumbnail.png`/`print.png`.
+- Both paths no-op gracefully (warn, don't block) if `exiftool` isn't installed locally. Install with `sudo apt-get install libimage-exiftool-perl` (or `brew install exiftool`).
+- **One-time backfill required** for images already committed before this system existed (the hook only catches future commits): run `./scripts/embed-image-rights.sh assets/` once, locally.
+
+**Explicitly out of scope** (visual/infra decisions requiring separate sign-off, not implemented): watermarking gallery images; fronting GitHub Pages with a CDN/proxy (e.g. Cloudflare) for actual request-time bot blocking — `robots.txt` only works on crawlers that choose to respect it, and GitHub Pages has no native mechanism to block ones that don't.
 
 ---
 

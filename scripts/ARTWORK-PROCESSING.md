@@ -63,6 +63,26 @@ All 16 artworks are mapped in the script:
 - ImageMagick 6 or later (`convert`, `identify` commands)
 - Sufficient disk space: ~200 MB for generated images
 - ImageMagick policy configured with sufficient resource limits
+- `exiftool` (optional) — embeds rights/AI-training-opt-out metadata into generated images; the script skips this step with a warning if not installed. Install with: `sudo apt-get install libimage-exiftool-perl` (Debian/Ubuntu) or `brew install exiftool` (macOS)
+
+## Embedded Rights Metadata
+
+If `exiftool` is installed, every generated `thumbnail.png` and `print.png` has the following IPTC/XMP fields written into it (via the shared `scripts/embed-image-rights.sh` — see below):
+
+- `XMP-xmpRights:Marked` = `True`
+- `XMP-xmpRights:WebStatement` = the site's licensing page (`https://www.j3zz.com/licensing/`)
+- `IPTC:CopyrightNotice` / `XMP-dc:Rights` = a rights-reserved notice including a "not licensed for AI/ML training" clause
+
+### `scripts/embed-image-rights.sh` — the shared tagging script
+
+The actual `exiftool` invocation lives in one place, `scripts/embed-image-rights.sh`, and is reused by two callers:
+
+1. **`process-artworks.sh`** calls it directly on each freshly generated `thumbnail.png`/`print.png`.
+2. **Lefthook's `pre-commit` hook** (`embed-image-rights` command in `lefthook.yml`) calls it automatically on any staged `assets/**/*.{jpg,jpeg,png}` file for *every* commit — not just artwork images — and re-stages the modified file. This is the primary, always-on mechanism; running `process-artworks.sh` manually isn't required for the metadata to end up in a commit, since the Lefthook hook catches it regardless.
+
+Both no-op gracefully (warn, don't fail) if `exiftool` isn't installed. See "AI-Scraping & Rights Protection Workflow" in the root `CLAUDE.md` for the complete picture, including the one-time backfill command needed for images that predate this system.
+
+This metadata travels with the file itself (unlike `robots.txt`, which only affects well-behaved crawlers requesting the page) and is invisible in normal use. It's a best-effort, non-fatal step — the script logs a warning and continues if `exiftool` isn't present. See `/licensing/` for the full rights-reservation notice this metadata points to.
 
 ## ImageMagick Configuration
 
