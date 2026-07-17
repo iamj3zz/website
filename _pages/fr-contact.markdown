@@ -44,6 +44,7 @@ page_type: contact
           </div>
           {% endif %}
         </div>
+        <p class="contact-description" style="margin-top: 10px;">Pour les demandes de licence et de reproduction, consultez la page <a href="/fr/licensing/">Licence &amp; Droits</a>.</p>
       </div>
 
       <!-- Print-only newsletter invitation -->
