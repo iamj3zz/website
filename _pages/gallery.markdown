@@ -18,7 +18,7 @@ page_type: gallery
     {% if artwork.published == false %}{% continue %}{% endif %}
     <div class="gallery-list-row" data-artwork-url="{{ artwork.url | absolute_url }}">
       <div class="gallery-col-image">
-        <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
+        <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}" width="800" height="800" loading="lazy">
       </div>
       <div class="gallery-col-content">
         <div class="gallery-col-title">{{ artwork.title }}</div>
@@ -44,7 +44,7 @@ page_type: gallery
       {% if artwork.published == false %}{% continue %}{% endif %}
       <div class="gallery-item gallery-item--{{ artwork.status | default: 'available' }}" data-label="{{ artwork.title }}{% if artwork.medium %} · {{ artwork.medium | upcase }}{% endif %}">
         <a href="{{ artwork.url | relative_url }}" class="gallery-link">
-          <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}">
+          <img src="{{ artwork.image | relative_url }}" alt="{{ artwork.title }}" width="800" height="800" loading="lazy">
         </a>
         <div class="gallery-overlay">
           <h2>{{ artwork.title }}</h2>

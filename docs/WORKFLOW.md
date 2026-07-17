@@ -45,8 +45,8 @@ git push origin main
 ```bash
 bundle exec jekyll serve    # Start local dev server
 git add .                   # Stage changes
-git commit -m "message"     # Commit (triggers YAML validation on staged files)
-git push origin main        # Push (triggers ./test-before-push.sh automatically)
+git commit -m "message"     # Commit (triggers the full test suite, blocks on failure)
+git push origin main        # Push (informational Lighthouse reminder only, does not block)
 
 # Optional - only if you want to test BEFORE committing:
 ./test-before-push.sh       # Manual test run (catches errors early)
@@ -58,7 +58,7 @@ git push origin main        # Push (triggers ./test-before-push.sh automatically
 
 **⭐ RECOMMENDED FOR MOST USERS - Lefthook handles testing automatically**
 
-**Important:** You do NOT need to run `./test-before-push.sh` manually. The pre-push hook runs it automatically when you `git push`. Only run the script manually if you want to catch errors early during development.
+**Important:** You do NOT need to run `./test-before-push.sh` manually. The pre-commit hook runs it automatically when you `git commit`. Only run the script manually if you want to catch errors early during development.
 
 ### Step 1: Make Your Changes
 
@@ -146,76 +146,26 @@ git commit -m "Add new portfolio work: Interactive Installation"
 
 **What happens automatically:**
 1. Lefthook **pre-commit hook** runs
-2. Validates YAML syntax in staged files
-3. If YAML is valid → commit succeeds
-4. If YAML is invalid → commit is BLOCKED
-
-**Success output:**
-```
-LEFTHOOK (pre-commit):
-
-  EXECUTE > yaml-lint
-
-✓ YAML linting passed!
-
-[main abc1234] Add new portfolio work: Interactive Installation
- 2 files changed, 150 insertions(+)
- create mode 100644 _portfolio/31-new-work.md
-```
-
-**Failure output:**
-```
-LEFTHOOK (pre-commit):
-
-  EXECUTE > yaml-lint
-
-_portfolio/31-new-work.md
-  42:81     warning  line too long (151 > 150 characters)  (line-length)
-
-❌ YAML validation failed. Fix the errors above before committing.
-
-  SUMMARY: (SKIP BY LEFTHOOK ENV=0)
-
-    🥊  yaml-lint
-
-ERROR: (pre-commit) - "yaml-lint" failed with exit code 1
-```
-
-**If commit is blocked:**
-1. Fix the YAML errors shown
-2. Save the file
-3. Stage changes again: `git add .`
-4. Try committing again: `git commit -m "message"`
-
-### Step 5: Push to GitHub
-
-Push your committed changes:
-
-```bash
-git push origin main
-```
-
-**What happens automatically:**
-1. Lefthook **pre-push hook** runs
-2. Executes `./test-before-push.sh` script **automatically**
-3. Runs the **COMPLETE** test suite on **ALL files**:
+2. Executes `./test-before-push.sh` script **automatically** (the `full-tests` command)
+3. Runs the **COMPLETE** test suite (steps 0–4) on **ALL files**, not just staged ones:
+   - Image dimensions/naming conventions, file size limits
    - YAML linting (all .yml/.yaml files and front matter)
-   - Jekyll build (entire site)
-   - HTML validation (all links, images, scripts)
+   - Jekyll build + sitemap generation (entire site)
+   - HTML validation (all links, images, scripts) + SEO invariants
    - Print tests (QR codes, layouts, A4 formatting)
-4. If all tests pass → push succeeds → GitHub deploys
-5. If any test fails → push is BLOCKED → fix errors and try again
+4. If all tests pass → commit succeeds
+5. If any test fails → commit is BLOCKED → fix errors and try again
 
 **This is the same as running `./test-before-push.sh` manually** - you don't need to run it yourself unless you want to test during development before committing.
 
 **Success output:**
 ```
-LEFTHOOK (pre-push):
+LEFTHOOK (pre-commit):
 
   EXECUTE > full-tests
 
 ═══════════════════════════════════════════════════════════
-  Pre-Push Testing - Local Validation
+  Pre-Commit Testing - Local Validation
 ═══════════════════════════════════════════════════════════
 
 ⚠️  IMPORTANT: This is your ONLY test gate!
@@ -241,23 +191,18 @@ GitHub Actions does NOT run tests - it only builds and deploys.
 
 ✓ All tests passed! ✨
 
-Your changes are ready to push.
+Your changes are ready to commit.
 
   SUMMARY: (SKIP BY LEFTHOOK ENV=0)
 
-Enumerating objects: 5, done.
-Counting objects: 100% (5/5), done.
-Delta compression using up to 8 threads
-Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 1.23 KiB | 1.23 MiB/s, done.
-Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
-To github.com:yourusername/website.git
-   abc1234..def5678  main -> main
+[main abc1234] Add new portfolio work: Interactive Installation
+ 2 files changed, 150 insertions(+)
+ create mode 100644 _portfolio/31-new-work.md
 ```
 
 **Failure output:**
 ```
-LEFTHOOK (pre-push):
+LEFTHOOK (pre-commit):
 
   EXECUTE > full-tests
 
@@ -279,26 +224,61 @@ LEFTHOOK (pre-push):
 
 Please fix the errors listed above, then run this script again.
 
-❌ Tests failed! Push blocked.
+❌ Tests failed! Commit blocked.
 
 Fix the errors above, then run again:
   ./test-before-push.sh
 
-Once all tests pass, try pushing again.
+Once all tests pass, try committing again.
 
   SUMMARY: (SKIP BY LEFTHOOK ENV=0)
 
     🥊  full-tests
 
-ERROR: (pre-push) - "full-tests" failed with exit code 1
+ERROR: (pre-commit) - "full-tests" failed with exit code 1
 ```
 
-**If push is blocked:**
+**If commit is blocked:**
 1. Read the error messages carefully
 2. Fix the issues (add missing files, fix broken links, etc.)
-3. Stage changes: `git add .`
-4. Commit changes: `git commit -m "Fix missing image"`
-5. Try pushing again: `git push origin main`
+3. Stage changes again: `git add .`
+4. Try committing again: `git commit -m "message"`
+
+### Step 5: Push to GitHub
+
+Push your committed changes:
+
+```bash
+git push origin main
+```
+
+**What happens automatically:**
+1. Lefthook **pre-push hook** runs
+2. Prints an **informational reminder** that Lighthouse (step 5, performance/accessibility/SEO audits) is available via `./test-before-push.sh --full`
+3. Does **not** re-run the test suite and does **not** block the push — the push always proceeds
+
+**Note:** All blocking tests already ran at commit time (Step 4). Push is not a second test gate — if your commits succeeded, your push will always go through.
+
+**Output:**
+```
+LEFTHOOK (pre-push):
+
+  EXECUTE > lighthouse-optional
+
+✨ Pre-commit tests already passed. Running optional Lighthouse CI...
+
+Skipping Lighthouse (too slow for regular pushes).
+To run Lighthouse: ./test-before-push.sh --full
+
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 1.23 KiB | 1.23 MiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+To github.com:yourusername/website.git
+   abc1234..def5678  main -> main
+```
 
 ### Step 6: GitHub Actions Deployment (Automatic)
 
@@ -353,7 +333,7 @@ open https://www.j3zz.com/works/new-work/
 
 **When to use this:** You want to catch errors early while developing, instead of waiting until push time.
 
-**When NOT needed:** The pre-push hook already runs `./test-before-push.sh` automatically, so you don't need to run it manually unless you want faster feedback during development.
+**When NOT needed:** The pre-commit hook already runs `./test-before-push.sh` automatically, so you don't need to run it manually unless you want faster feedback during development.
 
 ### Step 1: Make Your Changes
 
@@ -413,7 +393,7 @@ git commit -m "Add new work"
 git push origin main
 ```
 
-**Note:** Lefthook pre-push hook will run `./test-before-push.sh` AGAIN automatically. Since you already fixed all issues, the tests will pass quickly (they're just validating what you already tested). This redundancy is intentional - it ensures nothing slips through.
+**Note:** Lefthook pre-commit hook will run `./test-before-push.sh` again automatically when you commit. Since you already fixed all issues, the tests will pass quickly (they're just validating what you already tested). The pre-push hook that runs afterward is informational only and won't re-run the suite.
 
 ---
 
@@ -457,15 +437,15 @@ LEFTHOOK=0 git push origin main
 ./test-before-push.sh
 # ✓ All tests passed!
 
-# 2. Commit normally (will re-run YAML check)
+# 2. Skip pre-commit hook (you already tested) - this is the actual test gate
 git add .
-git commit -m "Update documentation"
+LEFTHOOK=0 git commit -m "Update documentation"
 
-# 3. Skip pre-push hook (you already tested)
-LEFTHOOK=0 git push origin main
+# 3. Push normally (pre-push never blocks anyway - informational only)
+git push origin main
 ```
 
-**⚠️ WARNING:** Skipping hooks means GitHub will deploy **without any quality checks**. If there are errors, your site may break!
+**⚠️ WARNING:** Skipping the pre-commit hook means GitHub will deploy **without any quality checks**. If there are errors, your site may break! Skipping pre-push accomplishes nothing on its own since it never blocks — the commit is the only real gate.
 
 ---
 
@@ -690,19 +670,18 @@ github_username: yourusername
 │                                                             │
 │  Step 3: Commit Changes                                     │
 │  ├─ Command: git commit -m "message"                        │
-│  ├─ Hook runs: pre-commit (YAML validation)                 │
-│  ├─ If pass: Commit succeeds ✓                              │
-│  └─ If fail: Commit blocked ✗ → Fix errors → Try again      │
-│                                                             │
-│  Step 4: Push to GitHub                                     │
-│  ├─ Command: git push origin main                           │
-│  ├─ Hook runs: pre-push (ALL tests)                         │
+│  ├─ Hook runs: pre-commit (ALL tests)                        │
 │  │   ├─ YAML linting                                        │
 │  │   ├─ Jekyll build                                        │
 │  │   ├─ HTML validation                                     │
 │  │   └─ Print tests                                         │
-│  ├─ If all pass: Push succeeds ✓                            │
-│  └─ If any fail: Push blocked ✗ → Fix errors → Try again    │
+│  ├─ If all pass: Commit succeeds ✓                           │
+│  └─ If any fail: Commit blocked ✗ → Fix errors → Try again  │
+│                                                             │
+│  Step 4: Push to GitHub                                     │
+│  ├─ Command: git push origin main                           │
+│  ├─ Hook runs: pre-push (informational Lighthouse reminder) │
+│  └─ Always proceeds - not a test gate                       │
 │                                                             │
 └─────────────────┬───────────────────────────────────────────┘
                   │ Push successful
@@ -746,24 +725,7 @@ github_username: yourusername
          │
          ▼
 ┌──────────────────────────────────────────────────────────┐
-│  PRE-COMMIT HOOK (Lefthook)                              │
-├──────────────────────────────────────────────────────────┤
-│  ✓ Runs: yamllint {staged_files}                         │
-│  ✓ Checks: YAML syntax in STAGED files only              │
-│  ✓ Fast: <1 second                                       │
-│  ✓ Purpose: Quick check to catch obvious errors          │
-│  ✓ If pass → Commit succeeds                             │
-│  ✗ If fail → Commit blocked                              │
-└────────┬─────────────────────────────────────────────────┘
-         │ Commit successful
-         ▼
-┌──────────────────────────────────────────────────────────┐
-│  git push origin main                                    │
-└────────┬─────────────────────────────────────────────────┘
-         │
-         ▼
-┌──────────────────────────────────────────────────────────┐
-│  PRE-PUSH HOOK (Lefthook) - COMPLETE TEST SUITE          │
+│  PRE-COMMIT HOOK (Lefthook) - COMPLETE TEST SUITE        │
 ├──────────────────────────────────────────────────────────┤
 │  ✓ Runs: ./test-before-push.sh (automatically!)          │
 │  ✓ Duration: ~30-60 seconds                              │
@@ -776,8 +738,22 @@ github_username: yourusername
 │  ├─ [4/5] Print tests (all pages)       ~10 sec          │
 │  └─ [5/5] Lighthouse (skipped)          0 sec            │
 │                                                          │
-│  ✓ All pass → Push succeeds                             │
-│  ✗ Any fail → Push blocked                              │
+│  ✓ All pass → Commit succeeds                            │
+│  ✗ Any fail → Commit blocked                             │
+└────────┬─────────────────────────────────────────────────┘
+         │ Commit successful
+         ▼
+┌──────────────────────────────────────────────────────────┐
+│  git push origin main                                    │
+└────────┬─────────────────────────────────────────────────┘
+         │
+         ▼
+┌──────────────────────────────────────────────────────────┐
+│  PRE-PUSH HOOK (Lefthook) - INFORMATIONAL ONLY           │
+├──────────────────────────────────────────────────────────┤
+│  ✓ Prints reminder: Lighthouse available via --full      │
+│  ✓ Does NOT re-run the test suite                        │
+│  ✓ Never blocks - push always proceeds                   │
 └────────┬─────────────────────────────────────────────────┘
          │ Push successful
          ▼
@@ -786,7 +762,7 @@ github_username: yourusername
 └──────────────────────────────────────────────────────────┘
 
 NOTE: Running ./test-before-push.sh manually is OPTIONAL.
-      The pre-push hook runs it automatically for you.
+      The pre-commit hook runs it automatically for you.
       Only run manually if you want to catch errors early.
 ```
 
@@ -794,27 +770,30 @@ NOTE: Running ./test-before-push.sh manually is OPTIONAL.
 
 ```
 ┌──────────────────────────────────────────────────────────┐
-│  Push attempt: git push origin main                      │
+│  Commit attempt: git commit -m "message"                 │
 └────────┬─────────────────────────────────────────────────┘
          │
          ▼
 ┌──────────────────────────────────────────────────────────┐
-│  Pre-push hook runs tests                                │
+│  Pre-commit hook runs the full test suite                │
 └────────┬──────────────┬──────────────────────────────────┘
          │              │
     ✓ PASS         ✗ FAIL
          │              │
          ▼              ▼
 ┌─────────────┐  ┌──────────────────────────────────────┐
-│  Push       │  │  Push blocked                        │
+│  Commit     │  │  Commit blocked                      │
 │  succeeds   │  │  Error messages shown                │
 │  ↓          │  │  ↓                                   │
-│  GitHub     │  │  1. Read error messages              │
-│  deploys    │  │  2. Fix the issues                   │
-│             │  │  3. git add .                        │
-│             │  │  4. git commit -m "Fix errors"       │
-│             │  │  5. git push origin main             │
-│             │  │     └─→ Tests run again              │
+│  git push   │  │  1. Read error messages              │
+│  (never     │  │  2. Fix the issues                   │
+│  blocked -  │  │  3. git add .                        │
+│  informa-   │  │  4. git commit -m "Fix errors"       │
+│  tional     │  │     └─→ Tests run again              │
+│  only)      │  │                                       │
+│  ↓          │  │                                       │
+│  GitHub     │  │                                       │
+│  deploys    │  │                                       │
 └─────────────┘  └──────────────────────────────────────┘
 ```
 
@@ -839,10 +818,11 @@ bundle exec jekyll serve
 # Commit and push (tests run automatically via hooks)
 git add .
 git commit -m "Add new installation work"
+# → Pre-commit hook runs ./test-before-push.sh automatically
+# → If tests pass: commit succeeds
+# → If tests fail: fix errors and commit again
 git push origin main
-# → Pre-push hook runs ./test-before-push.sh automatically
-# → If tests pass: push succeeds, GitHub deploys
-# → If tests fail: fix errors and push again
+# → Pre-push hook only prints an informational Lighthouse reminder; always proceeds
 
 # ✅ Site updates in ~2-3 minutes
 ```
@@ -864,11 +844,11 @@ bundle exec jekyll serve
 # Commit and push
 git add bio.markdown
 git commit -m "Update bio with recent exhibitions"
+# → Pre-commit hook runs ./test-before-push.sh again (passes quickly)
 git push origin main
-# → Hook runs ./test-before-push.sh again (passes quickly)
 ```
 
-**Why test manually here?** To catch errors immediately while editing, instead of waiting until push time. The hook will still run the full test suite, but it will pass quickly since you already fixed everything.
+**Why test manually here?** To catch errors immediately while editing, instead of waiting until commit time. The pre-commit hook will still run the full test suite, but it will pass quickly since you already fixed everything.
 
 ### Scenario 3: Fixing Broken Link
 
@@ -951,18 +931,20 @@ npx lefthook install
 cat lefthook.yml
 ```
 
-### "Tests pass locally but push is blocked"
+### "Commit is blocked by failing tests"
 
-The pre-push hook runs tests again. If it fails:
+The pre-commit hook runs the full suite on every commit. If it fails:
 
 ```bash
 # Run manually to see detailed error
 ./test-before-push.sh
 
 # Fix the errors shown
-# Try pushing again
-git push origin main
+# Try committing again
+git commit -m "message"
 ```
+
+**Note:** Pushing is never blocked — the pre-push hook is informational only (a Lighthouse reminder). If your commit succeeded, `git push` will always go through.
 
 ### "Want to test without committing"
 
@@ -999,8 +981,8 @@ bundle exec jekyll build          # Build site
 bundle exec jekyll clean          # Clean build cache
 
 # Testing (automatic via hooks)
-git commit -m "message"           # Triggers YAML validation
-git push origin main              # Triggers full test suite
+git commit -m "message"           # Triggers the full test suite (blocks on failure)
+git push origin main              # Informational Lighthouse reminder only (never blocks)
 
 # Testing (manual)
 ./test-before-push.sh             # All tests (no Lighthouse)
@@ -1040,17 +1022,17 @@ open https://www.j3zz.com         # View live site
 2. **Preview locally** with `bundle exec jekyll serve` (optional)
 3. **Test during development** with `./test-before-push.sh` (optional - for early error detection)
 4. **Stage changes** with `git add .`
-5. **Commit changes** with `git commit -m "message"` (YAML validation on staged files runs automatically)
-6. **Push to GitHub** with `git push origin main` (complete test suite runs automatically via hook)
-7. **GitHub deploys automatically** if tests pass (~2-3 minutes)
+5. **Commit changes** with `git commit -m "message"` (complete test suite runs automatically via hook)
+6. **Push to GitHub** with `git push origin main` (informational Lighthouse reminder only, never blocks)
+7. **GitHub deploys automatically** once pushed (~2-3 minutes)
 8. **Verify live site** at www.j3zz.com
 
 **Remember:**
-- ✅ All testing happens locally via Lefthook hooks
-- ✅ The pre-push hook automatically runs `./test-before-push.sh` - you don't need to run it manually
+- ✅ All testing happens locally via the Lefthook pre-commit hook
+- ✅ The pre-commit hook automatically runs `./test-before-push.sh` - you don't need to run it manually
 - ✅ Only run `./test-before-push.sh` manually if you want to catch errors early during development
 - ✅ GitHub Actions only builds and deploys (no testing)
-- ✅ Hooks will block commits/pushes if tests fail
+- ✅ The pre-commit hook will block commits if tests fail; pushing itself is never blocked
 - ✅ Fix errors and try again until tests pass
 - ⚠️ Only skip hooks if you know what you're doing
 

@@ -32,7 +32,7 @@ metadata:
     value: Documentary with original score
 sections:
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/afUVIsuTBBU/"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/afUVIsuTBBU/"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

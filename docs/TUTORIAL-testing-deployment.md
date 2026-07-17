@@ -51,20 +51,21 @@ A practical, step-by-step guide to testing and deploying this Jekyll website.
 - ✅ **No redundancy** - Tests run once, not twice
 
 **Your safety net:**
-- **Lefthook git hooks** automatically enforce all tests before you can push
-- **Can't push broken code** - Hooks block the push if tests fail
+- **Lefthook git hooks** automatically enforce all tests before you can commit
+- **Can't commit broken code** - The pre-commit hook blocks the commit if tests fail
+- **Pushing is not a second gate** - The pre-push hook is informational only (a Lighthouse reminder) and never blocks
 - **Manual override available** - Skip hooks only when absolutely necessary
 
 ### What Gets Tested?
 
-**Automatically enforced by Lefthook:**
-1. ✅ **YAML linting** - Validates syntax (pre-commit hook, blocks commits)
-2. ✅ **Jekyll build** - Ensures site builds (pre-push hook, blocks pushes)
-3. ✅ **html-proofer** - Validates HTML, links, images (pre-push hook, blocks pushes)
-4. ✅ **Print tests** - Validates print layouts, QR codes (pre-push hook, blocks pushes)
+**Automatically enforced by Lefthook (all at pre-commit, blocking):**
+1. ✅ **YAML linting** - Validates syntax
+2. ✅ **Jekyll build** - Ensures site builds
+3. ✅ **html-proofer** - Validates HTML, links, images
+4. ✅ **Print tests** - Validates print layouts, QR codes
 
 **Optional (run manually with --full flag):**
-5. ⚠️ **Lighthouse CI** - Performance, accessibility, SEO (recommended before major releases)
+5. ⚠️ **Lighthouse CI** - Performance, accessibility, SEO (recommended before major releases). Not run automatically at any stage.
 
 ---
 
@@ -112,9 +113,9 @@ ls -la .git/hooks/
 
 **⭐ RECOMMENDED FOR MOST USERS**
 
-Just work normally - Lefthook will automatically run tests when you commit and push.
+Just work normally - Lefthook will automatically run the full test suite when you commit.
 
-**You do NOT need to run `./test-before-push.sh` manually** - the pre-push hook runs it automatically for you!
+**You do NOT need to run `./test-before-push.sh` manually** - the pre-commit hook runs it automatically for you!
 
 ```bash
 # 1. Make your changes
@@ -127,14 +128,14 @@ bundle exec jekyll serve
 # 3. Commit your changes
 git add .
 git commit -m "Add new portfolio work"
-# → Lefthook pre-commit hook runs YAML validation
-# → If YAML fails, commit is blocked
+# → Lefthook pre-commit hook runs the COMPLETE test suite automatically
+# → If tests pass: commit succeeds
+# → If tests fail: commit is blocked → fix errors and try again
 
 # 4. Push to GitHub
 git push origin main
-# → Lefthook pre-push hook runs ALL tests automatically
-# → If tests pass: push succeeds → GitHub deploys
-# → If tests fail: push is blocked → fix errors and try again
+# → Lefthook pre-push hook only prints an informational Lighthouse reminder
+# → Always proceeds - pushing is never blocked
 ```
 
 **That's it!** No need to remember to run tests manually.
@@ -142,21 +143,13 @@ git push origin main
 ### What Happens Automatically
 
 **When you run `git commit`:**
+The pre-commit hook automatically runs `./test-before-push.sh` - the COMPLETE test suite:
 ```
 → Running pre-commit hook...
-→ Validating YAML in staged files (quick check)...
-✓ YAML validation passed!
-[main abc123] Add new portfolio work
-```
-
-**When you run `git push`:**
-The pre-push hook automatically runs `./test-before-push.sh` - the COMPLETE test suite:
-```
-→ Running pre-push hook...
 → Running: ./test-before-push.sh
 
 ═══════════════════════════════════════════════════════════
-  Pre-Push Testing - Local Validation
+  Pre-Commit Testing - Local Validation
 ═══════════════════════════════════════════════════════════
 
 ⚠️  IMPORTANT: This is your ONLY test gate!
@@ -182,6 +175,16 @@ GitHub Actions does NOT run tests - it only builds and deploys.
 
 ✓ All tests passed! ✨
 
+[main abc123] Add new portfolio work
+```
+
+**When you run `git push`:**
+```
+→ Running pre-push hook...
+✨ Pre-commit tests already passed. Running optional Lighthouse CI...
+Skipping Lighthouse (too slow for regular pushes).
+To run Lighthouse: ./test-before-push.sh --full
+
 Counting objects: 5, done.
 [... git push output ...]
 ```
@@ -193,7 +196,7 @@ Counting objects: 5, done.
 git commit -m "Add work"
 
 → Running pre-commit hook...
-→ Validating YAML in staged files...
+→ Step 1/5: YAML Linting
 
 _portfolio/31-work.md
   42:81     warning  line too long (151 > 150 characters)
@@ -203,11 +206,11 @@ _portfolio/31-work.md
 # Commit blocked! Fix the error and try again.
 ```
 
-**Example: HTML error on push**
+**Example: HTML error on commit**
 ```bash
-git push origin main
+git commit -m "Add work"
 
-→ Running pre-push hook...
+→ Running pre-commit hook...
 → Running: ./test-before-push.sh
 
 [... tests running ...]
@@ -218,12 +221,12 @@ git push origin main
 - _site/works/new-work/index.html
   *  internally linking to /assets/missing.jpg, which does not exist
 
-❌ Tests failed! Push blocked.
+❌ Tests failed! Commit blocked.
 
 Fix the errors above, then run again:
   ./test-before-push.sh
 
-# Push blocked! Fix the error and try again.
+# Commit blocked! Fix the error and try again. (Push is never blocked - see above.)
 ```
 
 ### Skipping Hooks (Use with EXTREME Caution)
@@ -268,7 +271,7 @@ If you want to test before committing, or run specific tests, use these commands
 ./test-before-push.sh --quick
 ```
 
-**This is the same script that the pre-push hook runs automatically.**
+**This is the same script that the pre-commit hook runs automatically.**
 
 ### Option 2: Run Individual Tests
 
@@ -323,8 +326,9 @@ yamllint .                    # Fast YAML check
 # 5. If tests pass, commit and push
 git add .
 git commit -m "message"
+# Pre-commit hook will run tests again automatically (passes quickly)
 git push origin main
-# Hooks will run tests again automatically
+# Pre-push hook only prints an informational Lighthouse reminder
 ```
 
 ---
@@ -338,9 +342,11 @@ git push origin main
 │  Step 1: Local Testing (You)                            │
 ├─────────────────────────────────────────────────────────┤
 │  • Make changes                                         │
-│  • Lefthook runs tests on git push                      │
-│  • Tests pass → push succeeds                           │
-│  • Tests fail → push blocked                            │
+│  • Lefthook runs the full test suite on git commit      │
+│  • Tests pass → commit succeeds                         │
+│  • Tests fail → commit blocked                          │
+│  • git push: informational Lighthouse reminder only,    │
+│    never blocked                                        │
 └────────────────┬────────────────────────────────────────┘
                  │
                  │ git push origin main
@@ -439,17 +445,19 @@ cat lefthook.yml
 
 ### "Tests pass locally but I want to skip hooks"
 
-**You shouldn't need to**, but if you must:
+**You shouldn't need to**, but if you must skip the actual test gate (pre-commit):
 ```bash
-LEFTHOOK=0 git push
+LEFTHOOK=0 git commit -m "message"
 ```
+Skipping pre-push (`LEFTHOOK=0 git push`) accomplishes nothing on its own - it's informational only and never blocks.
 
 **Better approach:**
 ```bash
 # Run tests manually first
 ./test-before-push.sh
 
-# If all pass, push normally (hooks will run again but pass quickly)
+# If all pass, commit normally (pre-commit hook will run again but pass quickly)
+git commit -m "message"
 git push origin main
 ```
 
@@ -542,8 +550,8 @@ bundle exec jekyll serve          # Start local server
 bundle exec jekyll build          # Build site
 
 # Testing (automatic via hooks)
-git commit -m "message"           # Triggers YAML validation
-git push origin main              # Triggers full test suite
+git commit -m "message"           # Triggers the full test suite (blocks on failure)
+git push origin main              # Informational Lighthouse reminder only (never blocks)
 
 # Testing (manual)
 ./test-before-push.sh             # All tests (fast)
@@ -567,7 +575,7 @@ LEFTHOOK=0 git push               # Skip hooks (caution!)
 
 Before pushing changes:
 
-- [ ] Tests ran automatically via pre-push hook (or manually via `./test-before-push.sh`)
+- [ ] Tests ran automatically via pre-commit hook (or manually via `./test-before-push.sh`)
 - [ ] All tests passed (YAML, build, HTML, print)
 - [ ] Previewed changes locally at http://localhost:4000
 - [ ] Checked for console errors in browser
@@ -579,7 +587,7 @@ Before pushing changes:
 ### When to Run Full Tests
 
 **Quick tests (default, via hooks):**
-- Every commit and push (automatic)
+- Every commit (automatic; push has no additional automated tests)
 - During development
 - Small changes
 

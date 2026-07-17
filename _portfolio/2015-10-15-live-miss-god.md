@@ -37,7 +37,7 @@ metadata:
 sections:
 - type: description
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/_6riQItJ7Co"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/_6riQItJ7Co"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

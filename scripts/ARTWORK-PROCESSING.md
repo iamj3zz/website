@@ -33,6 +33,7 @@ The `process-artworks.sh` script generates optimized images for the artwork gall
 - **Format:** PNG (no cropping, no padding)
 - **Process:** Original aspect ratio maintained, only downscaled if larger
 - **ImageMagick:** `-resize 1800x1800>`
+- **No WebP sibling:** `print.png` is a full-resolution, download-only asset — `scripts/generate-webp.sh` deliberately excludes it. `thumbnail.png` and the `gallery/mockup-*.jpg`/`tube.jpg` files DO get `.webp` siblings. If you touch the template that renders `print.png` (`_includes/work-modules/split-hero-metadata.html`, via `sections: type: split-hero-metadata`), keep it as a plain `<img>`, not wrapped in `<picture>`/WebP `<source>` — see `docs/IMAGE-NAMING-CONVENTION.md` → "WebP Generation".
 
 ## Artwork Mapping
 

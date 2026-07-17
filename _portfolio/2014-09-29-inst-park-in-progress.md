@@ -76,7 +76,7 @@ metadata:
     link: "/assets/works/2014-09-29-inst-park-in-progress/nicosia-org-announcement-park-in-progress-11-2014.pdf"
 sections:
 - type: iframe
-  embed_code: <iframe src="https://www.youtube.com/embed/vOR03ChysIs" frameborder="0"
+  embed_code: <iframe src="https://www.youtube-nocookie.com/embed/vOR03ChysIs" frameborder="0"
     allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

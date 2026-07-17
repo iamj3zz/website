@@ -37,7 +37,7 @@ metadata:
     value: Judit Pétervári
 sections:
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/VlRJD9cPqZc"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VlRJD9cPqZc"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

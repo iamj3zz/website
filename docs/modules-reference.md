@@ -434,12 +434,15 @@ work_id: my-project-title  # Must match the work's work_id exactly
 
 ### 9. Universal Iframe Module
 
-Universal iframe embed module that accepts any embed code from any platform (YouTube, Vimeo, Bandcamp, SoundCloud, etc.). Supports both responsive (aspect ratio-based) and fixed-height modes.
+Universal iframe embed module that accepts embed code from a fixed set of trusted platforms. Supports both responsive (aspect ratio-based) and fixed-height modes.
+
+**Trusted domains (hard requirement, two places must stay in sync):**
+`_includes/work-modules/iframe.html` only renders the iframe if `src_url` contains one of: `youtube.com`/`youtube-nocookie.com`/`youtu.be`, `vimeo.com`/`player.vimeo.com`, `bandcamp.com`, `soundcloud.com`, `spotify.com`, `mixcloud.com` — anything else shows a "blocked" error message in place of the iframe. Separately, the site's Content-Security-Policy (`_includes/seo.html`, `frame-src` directive) must also allowlist the exact host actually used, or the browser will block the iframe even though this module considered it trusted. Use `https://www.youtube-nocookie.com/embed/...` (not `www.youtube.com`) for YouTube — the CSP does not allowlist the bare `youtube.com` domain. If you ever add a platform not in this list, update **both** the Liquid check above and the CSP `frame-src` line.
 
 **Fixed-Height Mode (Default):**
 ```yaml
 - type: iframe
-  embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>'
+  embed_code: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>'
   caption: "Optional caption text"  # Optional
 ```
 
@@ -529,7 +532,7 @@ Two-column responsive layout with hero content (image or iframe) on the left (2/
 ```yaml
 - type: split-hero-metadata
   content_type: "iframe"
-  embed_code: '<iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>'
+  embed_code: '<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>'
   caption: "Optional video caption"  # Optional
   # Metadata fields
   year: "2025"
@@ -572,6 +575,8 @@ Two-column responsive layout with hero content (image or iframe) on the left (2/
 ### 11. Split Bandcamp-Metadata Module
 
 Two-column responsive layout with iframe on the left (1/3 width) and metadata plus optional text on the right (2/3 width). Designed specifically for music releases with Bandcamp players (or similar narrow embeds) alongside comprehensive release information.
+
+**No domain-trust check:** unlike the Universal Iframe Module above, this module renders whatever `src` is found in `embed_code` without validating the domain. It's intended only for Bandcamp (or embeds with a similarly narrow, fixed-width player). Whatever host you use here must still be allowlisted in the CSP `frame-src` directive (`_includes/seo.html`) or the browser will block it regardless.
 
 **IMPORTANT**: This module automatically uses metadata from the front matter `metadata` field (see Centralized Metadata System above). You can optionally include metadata fields directly in the module for overrides or if not using centralized metadata.
 

@@ -38,7 +38,7 @@ page_type: works
       {% endif %}
       <div class="portfolio-item" data-category="{{ item_categories }}" data-label="{{ item.title }} · {{ item.category | replace: '-', ' ' | upcase }}">
         <a href="{{ item.url | relative_url }}" class="portfolio-link">
-          <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+          <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" width="700" height="700" loading="lazy">
           <div class="portfolio-overlay">
             <h2>{{ item.title }}</h2>
             <div class="overlay-categories">
@@ -86,7 +86,7 @@ page_type: works
           {% for item in cat_works %}
             <div class="works-list-row" data-work-url="{{ site.url }}{{ item.url }}">
               <div class="works-col-image">
-                <img src="{{ item.image | relative_url }}" alt="{{ item.title }}">
+                <img src="{{ item.image | relative_url }}" alt="{{ item.title }}" width="700" height="700" loading="lazy">
                 <div class="works-qr-code" id="qr-{{ item.work_id }}"></div>
               </div>
               <div class="works-col-content">

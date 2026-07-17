@@ -39,21 +39,22 @@ This codebase follows modern web development best practices and maintains high c
 - Cookie consent buttons have descriptive aria-label attributes
 - Mobile menu toggle updates aria-expanded dynamically
 - Theme toggle updates aria-pressed/aria-label dynamically, in the visitor's page language
+- Skip-navigation link (`.skip-link` in `_sass/_base.scss`) at the top of every layout (`portfolio.html`, `work.html`, `artwork.html`), jumping to `<main id="main-content">` — visually hidden until keyboard-focused
 - All layouts follow accessibility best practices
 
 ## Security
 
-**HTTP Security Headers:**
-- ✅ `X-Content-Type-Options: nosniff` - Prevents MIME type sniffing
-- ✅ `X-Frame-Options: SAMEORIGIN` - Prevents clickjacking
+**HTTP Security Headers (via `<meta>` tags — GitHub Pages has no mechanism to send custom response headers):**
 - ✅ `Referrer-Policy: strict-origin-when-cross-origin` - Controls referrer information
+- ✅ `Content-Security-Policy` - Restricts script/style/image/connect/form/frame sources. `frame-src` allowlists exactly the platforms `_includes/work-modules/iframe.html`'s own domain-trust check considers safe to embed: `youtube-nocookie.com`, `player.vimeo.com`, `bandcamp.com`, `w.soundcloud.com`, `open.spotify.com`, `www.mixcloud.com`. Keep these two lists in sync — an iframe module considering a domain "trusted" doesn't matter if the CSP blocks it anyway
+- ⚠️ `X-Content-Type-Options` / `X-Frame-Options` are intentionally **not** set: both are HTTP-header-only directives that browsers silently ignore when set via `<meta>`, and this site has no server to send real response headers (see the comment above the CSP block in `_includes/seo.html`)
 
 **Error Handling:**
 - ✅ Safe localStorage operations (handles Safari private browsing, quota exceeded)
 - ✅ XSS protection via textContent (no innerHTML for user input)
 - ✅ No eval() or document.write()
 
-**File:** `_includes/seo.html` contains security meta tags
+**File:** `_includes/seo.html` contains the CSP and Referrer-Policy meta tags
 
 ## Performance
 
@@ -66,6 +67,11 @@ This codebase follows modern web development best practices and maintains high c
 **CSS:**
 - ✅ Compressed in production via Jekyll SASS compilation
 - ✅ Modular architecture for better maintainability
+
+**Images:**
+- ✅ `loading="lazy"` on all `<img>` tags site-wide, including grid/print-list and bio images
+- ✅ `width`/`height` attributes on portfolio (700×700) and artwork (800×800) grid thumbnails to prevent layout shift
+- ✅ WebP served via `<picture>`/`<source>` for hero and gallery images (`_includes/work-modules/hero-image.html`, `image-grid.html`, `split-hero-metadata.html`), with the original JPEG/PNG as fallback. `scripts/generate-webp.sh` generates the `.webp` siblings — see [File Organization & Data](FILE-ORGANIZATION-AND-DATA.md) and the AI-Scraping & Rights Protection Workflow in `CLAUDE.md`. `print.png` (full-res download-only) and anything under `hires/` are deliberately excluded — never wrap those in `<picture>`/WebP `<source>`, since no `.webp` sibling will exist for them
 
 ## Maintainability
 
@@ -105,7 +111,6 @@ Based on modern web development best practices:
 ## Future Enhancements (Optional)
 
 Consider these advanced improvements if needed:
-- Content Security Policy (CSP) header for deeper XSS protection
 - Service Worker for Progressive Web App capabilities
-- Image lazy loading and WebP format
 - Additional structured data types
+- AVIF as a further-compressed alternative alongside WebP

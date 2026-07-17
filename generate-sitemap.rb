@@ -70,7 +70,7 @@ Dir.glob('_portfolio/*.md').each do |file|
   next if front_matter['published'] == false
 
   basename = File.basename(file, '.md')
-  url = "/works/#{basename}/"
+  url = front_matter['permalink'] || "/works/#{basename}/"
   sitemap_xml += build_url_entry(site_url, file, url, front_matter)
 end
 
@@ -81,7 +81,7 @@ Dir.glob('_artworks/*.md').each do |file|
   next if front_matter['published'] == false
 
   basename = File.basename(file, '.md')
-  url = "/gallery/#{basename}/"
+  url = front_matter['permalink'] || "/gallery/#{basename}/"
   sitemap_xml += build_url_entry(site_url, file, url, front_matter)
 end
 

@@ -32,6 +32,10 @@ pre-commit:
       run: ./scripts/embed-image-rights.sh {staged_files}
       stage_fixed: true
 
+    generate-webp:
+      glob: "assets/**/*.{jpg,jpeg,png}"
+      run: ./scripts/generate-webp.sh --stage {staged_files}
+
     full-tests:
       run: ./test-before-push.sh
       fail_text: |

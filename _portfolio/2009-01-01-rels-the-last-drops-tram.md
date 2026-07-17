@@ -27,13 +27,13 @@ metadata:
 sections:
 - type: description
 - type: iframe
-  embed_code: <iframe src="https://www.youtube.com/embed/iHqTBYL-sv8" frameborder="0"
+  embed_code: <iframe src="https://www.youtube-nocookie.com/embed/iHqTBYL-sv8" frameborder="0"
     allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'
   caption: The Last Drops — Gin & Juice (cover), Tram Jam
 - type: iframe
-  embed_code: <iframe src="https://www.youtube.com/embed/ENmcOEdXU2w" frameborder="0"
+  embed_code: <iframe src="https://www.youtube-nocookie.com/embed/ENmcOEdXU2w" frameborder="0"
     allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

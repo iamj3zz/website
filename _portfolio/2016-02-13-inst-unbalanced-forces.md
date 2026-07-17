@@ -64,7 +64,7 @@ metadata:
 sections:
 - type: description
 - type: iframe
-  embed_code: <iframe src="https://www.youtube.com/embed/0LOZHHs_kzo" frameborder="0"
+  embed_code: <iframe src="https://www.youtube-nocookie.com/embed/0LOZHHs_kzo" frameborder="0"
     allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'
@@ -84,7 +84,7 @@ sections:
 
     Our main research topic centers on interdisciplinary improvisation — specifically the moment between human, sound, and space. Our aim is to create a frame for sound installation that one can enter and explore, making it her/his own.
 - type: iframe
-  embed_code: <iframe src="https://www.youtube.com/embed/s_O939u-SHs" frameborder="0"
+  embed_code: <iframe src="https://www.youtube-nocookie.com/embed/s_O939u-SHs" frameborder="0"
     allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

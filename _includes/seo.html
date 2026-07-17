@@ -29,7 +29,7 @@ style-src 'self' 'unsafe-inline';
 img-src 'self' data: https:;
 font-src 'self' data:;
 connect-src 'self' https://formspree.io{% if site.supabase_url %} {{ site.supabase_url }}{% endif %}{% if site.google_analytics %} https://www.google-analytics.com https://*.google-analytics.com https://*.analytics.google.com https://www.googletagmanager.com{% endif %};
-frame-src https://www.youtube-nocookie.com https://player.vimeo.com;
+frame-src https://www.youtube-nocookie.com https://player.vimeo.com https://bandcamp.com https://w.soundcloud.com https://open.spotify.com https://www.mixcloud.com;
 form-action 'self' https://formspree.io https://j3zz.us6.list-manage.com;
 object-src 'none';
 base-uri 'self';

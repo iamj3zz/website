@@ -87,7 +87,7 @@ sections:
   caption: Installation view showing spatial audio setup and visitor interaction
 - type: split-hero-metadata
   content_type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ"
     frameborder="0" allowfullscreen></iframe>
   caption: Performance documentation from opening night
 - type: split-hero-metadata
@@ -194,7 +194,7 @@ sections:
   embed_code: <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/123456789"></iframe>
   caption: 'Audio excerpt: Opening section of the composition'
 - type: iframe
-  embed_code: <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
+  embed_code: <iframe src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ" frameborder="0"
     allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

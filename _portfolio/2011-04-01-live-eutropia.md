@@ -56,7 +56,7 @@ sections:
 - type: hero-image
   image: "/assets/works/2011-04-01-live-eutropia/hero.jpg"
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/hkcm68X42cU"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hkcm68X42cU"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'
@@ -72,7 +72,7 @@ sections:
 
     J3ZZ served as violinist, composer, producer, and performer throughout the project, contributed to the documentary soundtrack, and coached young artists during the Lille residency.
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/QiVnvOX4W0M"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/QiVnvOX4W0M"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

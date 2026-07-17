@@ -3,7 +3,11 @@
     {% if include.image_captions %}
       {% for item in include.image_captions %}
         <div class="grid-item">
-          <img src="{{ item.image | relative_url }}" alt="{{ item.caption | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ item.caption }}" loading="lazy">
+          {% assign webp_src = item.image | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+          <picture>
+            <source srcset="{{ webp_src | relative_url }}" type="image/webp">
+            <img src="{{ item.image | relative_url }}" alt="{{ item.caption | default: page.title }}" class="grid-image" data-lightbox="true" data-caption="{{ item.caption }}" loading="lazy">
+          </picture>
         </div>
       {% endfor %}
     {% else %}
@@ -20,7 +24,11 @@
           {% else %}
             {% assign alt_text = base_alt %}
           {% endif %}
-          <img src="{{ image | relative_url }}" alt="{{ alt_text }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}" loading="lazy">
+          {% assign webp_src = image | replace: '.jpg', '.webp' | replace: '.jpeg', '.webp' | replace: '.png', '.webp' %}
+          <picture>
+            <source srcset="{{ webp_src | relative_url }}" type="image/webp">
+            <img src="{{ image | relative_url }}" alt="{{ alt_text }}" class="grid-image" data-lightbox="true" data-caption="{{ caption }}" loading="lazy">
+          </picture>
         </div>
       {% endfor %}
     {% endif %}

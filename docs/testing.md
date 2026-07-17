@@ -172,21 +172,21 @@ bundle exec rake
 ### Git Hooks (Automatic Enforcement)
 
 **Pre-commit hook** (runs when you `git commit`):
-- Validates YAML syntax in staged files
+- Runs the complete test suite via `./test-before-push.sh` (steps 0–4: image/naming checks, file size, yamllint, Jekyll build, html-proofer, SEO invariants, print tests) — **blocks the commit** if any test fails
+- Checks that no commit message credits Claude as a co-author
 - Embeds AI-training opt-out rights metadata (`exiftool`) into any staged image files under `assets/**/*.{jpg,jpeg,png}`, then re-stages them automatically — no-ops with a warning if `exiftool` isn't installed. See "AI-Scraping & Rights Protection Workflow" in `CLAUDE.md`.
-- **Blocks the commit** if YAML validation fails
 
 **Pre-push hook** (runs when you `git push`):
-- Runs complete test suite via `./test-before-push.sh`
-- **Blocks the push** if any test fails
+- Purely informational — prints a reminder that Lighthouse (step 5) is available via `./test-before-push.sh --full` and always lets the push proceed
+- Does **not** re-run the test suite and does **not** block the push
 
 ### How It Works
 
 1. Make your changes
-2. Run `git commit` - pre-commit hook validates YAML
-3. Run `git push` - pre-push hook runs ALL tests automatically
-4. If tests pass → push succeeds → GitHub deploys
-5. If tests fail → push is blocked → fix errors and try again
+2. Run `git commit` - pre-commit hook runs the full test suite (steps 0–4) automatically
+3. If tests pass → commit succeeds; if tests fail → commit is blocked → fix errors and try again
+4. Run `git push` - pre-push hook only prints an optional-Lighthouse reminder; nothing blocks the push at this stage
+5. GitHub Actions builds and deploys whatever was pushed
 
 **Skip hooks (use with extreme caution)**:
 ```bash
@@ -490,15 +490,15 @@ const CONFIG = {
 
 1. **Let Lefthook handle testing automatically (recommended)**
    - Just commit and push normally
-   - Pre-commit hook: Quick YAML check on staged files
-   - Pre-push hook: Complete test suite via `./test-before-push.sh` (automatic)
+   - Pre-commit hook: Complete test suite via `./test-before-push.sh` (automatic, blocks the commit on failure)
+   - Pre-push hook: Informational Lighthouse reminder only — does not block
    - No need to run `./test-before-push.sh` manually
 
 2. **Run tests manually during development (optional)**
    ```bash
    ./test-before-push.sh
    ```
-   Run this while developing to catch issues early, before committing. The pre-push hook will run the same tests again automatically when you push (but will pass quickly since you already fixed everything).
+   Run this while developing to catch issues early, before committing. The pre-commit hook will run the same tests again automatically when you commit (but will pass quickly since you already fixed everything).
 
 3. **Quick YAML check during editing**
    ```bash
@@ -562,14 +562,14 @@ If you need even more comprehensive testing, consider:
 
 Current testing suite (yamllint + html-proofer + Lighthouse CI + print tests) enforced locally covers:
 - ✅ YAML configuration validation (pre-commit hook)
-- ✅ Jekyll build validation (pre-push hook)
-- ✅ Links and HTML validation (pre-push hook)
-- ✅ Print layout validation (pre-push hook)
-- ✅ QR code rendering (pre-push hook)
-- ⚠️ Performance optimization (optional with --full flag)
-- ⚠️ Accessibility validation (optional with --full flag)
-- ⚠️ SEO best practices (optional with --full flag)
+- ✅ Jekyll build validation (pre-commit hook)
+- ✅ Links and HTML validation (pre-commit hook)
+- ✅ Print layout validation (pre-commit hook)
+- ✅ QR code rendering (pre-commit hook)
+- ⚠️ Performance optimization (optional with --full flag; not run automatically at any stage)
+- ⚠️ Accessibility validation (optional with --full flag; not run automatically at any stage)
+- ⚠️ SEO best practices (optional with --full flag; not run automatically at any stage)
 
-**All critical tests run automatically via Lefthook hooks before you can push!**
+**All critical tests run automatically via the Lefthook pre-commit hook before you can commit — pushing itself is not gated.**
 
 This is comprehensive for most portfolio websites!

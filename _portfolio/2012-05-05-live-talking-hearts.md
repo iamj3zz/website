@@ -58,7 +58,7 @@ sections:
 - type: hero-image
   image: "/assets/works/2012-05-05-live-talking-hearts/hero.jpg"
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/F5QVDkbED7w"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/F5QVDkbED7w"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

@@ -26,7 +26,7 @@ metadata:
     value: Free improvisation, acoustic
 sections:
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/Jc6lOe_jvCQ"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Jc6lOe_jvCQ"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'

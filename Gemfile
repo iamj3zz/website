@@ -8,7 +8,7 @@ gem "jekyll", "~> 4.4"
 # If you have any plugins, put them here!
 # (kept in sync with the `plugins:` list in _config.yml)
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-feed", "~> 0.17"
   gem "jekyll-last-modified-at"
   gem "jekyll-seo-tag"
 end

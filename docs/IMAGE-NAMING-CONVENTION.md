@@ -164,6 +164,16 @@ The `^` flag resizes while maintaining aspect ratio, then `-extent` crops to exa
 | {slug}-gallery##_Nw.jpg | ✅ Yes | Auto-resized to 1440px wide, quality 85 |
 | Other files (PDFs, etc.) | ➖ N/A | Silently skipped, not processed |
 
+## WebP Generation
+
+After images are named and processed per the conventions above, `scripts/generate-webp.sh` generates a `.webp` sibling next to every web-facing `.jpg`/`.jpeg`/`.png` (thumbnail, hero, gallery images) for performance — see [Code Quality](code-quality.md#images). It's automatically triggered on commit via Lefthook (`generate-webp` in `lefthook.yml`), so this is normally a no-op step you don't think about; run it manually only for a one-time backfill or to force-regenerate (`--force`).
+
+**Never manually run WebP generation against, or expect a `.webp` sibling for:**
+- `print.png` (full-resolution gallery print, download-only)
+- anything under a `hires/` directory (bio-gallery press photos, download-only)
+
+Both are deliberately excluded by the script. Templates that render these two must use a plain `<img>`, never a `<picture>`/`<source type="image/webp">` wrapper — a `<source>` pointing at a `.webp` that will never exist gets silently picked by WebP-capable browsers instead of falling back, producing a blank image (see `_includes/work-modules/split-hero-metadata.html`'s `contains 'print.png'` check for the pattern to follow if you add a WebP `<source>` to a new module).
+
 ## Integration with Jekyll
 
 The markdown file for the work (`_portfolio/YYYY-MM-DD-{slug}.md`) references images like this:
@@ -192,6 +202,7 @@ sections:
 
 - **`scripts/process-images.sh`** — Resizes and quality-corrects portfolio work images
 - **`scripts/process-artworks.sh`** — Processes fine art gallery images (separate workflow)
+- **`scripts/generate-webp.sh`** — Generates `.webp` siblings for web-facing images (see "WebP Generation" above)
 - **`test-before-push.sh`** — Validates image files before commits
 
 ## See Also

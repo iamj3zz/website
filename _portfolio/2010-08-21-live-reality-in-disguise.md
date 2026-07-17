@@ -58,7 +58,7 @@ sections:
 - type: hero-image
   image: "/assets/works/2010-08-21-live-reality-in-disguise/hero.jpg"
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/8oTRJNRk0tE"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/8oTRJNRk0tE"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'
@@ -70,7 +70,7 @@ sections:
 
     Between May and August 2011, the seven Art'n'Go productions were presented across major European festivals, positioning the project as a showcase of European cultural diversity and emerging artistic talent. The initiative represented a significant investment in intergenerational cultural exchange and the professionalization of young artists from economically and geographically diverse European contexts.
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube.com/embed/WkSSiRLR9FY"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/WkSSiRLR9FY"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'
