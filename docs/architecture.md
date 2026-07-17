@@ -600,7 +600,15 @@ All color is driven by CSS custom properties defined in `_sass/_variables.scss` 
 
 **Newsletter:**
 - `mailchimp_action_url` - Mailchimp form action URL
-- `mailchimp_bot_field` - Mailchimp bot field name for spam prevention
+- `mailchimp_bot_field` - Mailchimp honeypot field name for spam prevention (hidden input in `_pages/contact.markdown` / `_pages/fr-contact.markdown`; real users never see or fill it)
+- `mailchimp_gdpr_field` - Mailchimp GDPR consent field ID, used to build the `gdpr[{{ site.mailchimp_gdpr_field }}]` checkbox name
+
+**Newsletter Form Spam Considerations:**
+The signup form (`_pages/contact.markdown`, mirrored in `_pages/fr-contact.markdown`) posts directly from the browser to the public `mailchimp_action_url` — this is a static site with no backend, so there is no server-side layer in front of Mailchimp. Client-side validation (`assets/js/newsletter-form.js`) and the honeypot field only stop casual bots; a scripted request can POST straight to the Mailchimp endpoint with arbitrary field values, bypassing both.
+- **Double opt-in is enabled** on the Mailchimp audience. This is the primary mitigation: scripted/bogus submissions land as unconfirmed "pending" contacts (auto-cleaned by Mailchimp) rather than becoming real subscribers, so the audience list itself cannot be polluted this way.
+- **Residual risk:** double opt-in means Mailchimp still sends a confirmation email to whatever address is submitted. Someone scripting repeated submissions using a real third party's email address can use the form to send that person unwanted confirmation emails (a subscription-bombing/harassment pattern) — this is not blocked by anything currently in place.
+- **Next step to evaluate (dashboard-only, no code change):** check Mailchimp Audience → Signup forms → Form builder → Form settings for a reCAPTCHA option, and confirm whether it applies to this custom-embedded form (not just Mailchimp-hosted forms). If it does, enabling it would close the remaining scripted-submission gap.
+- **If confirmation-email abuse becomes an actual problem:** the durable fix is routing submissions through a server-side function (e.g. a Cloudflare Worker or Netlify Function) that verifies a CAPTCHA token before calling the Mailchimp API with a private key, instead of posting directly from the browser. That's an architecture change (this site currently has no backend) and would need separate scoping/sign-off, not a form tweak.
 
 **Intro / Press Video:**
 Drives both the homepage first-visit splash screen (`_includes/splash-screen.html`) and the video embedded under the photo on the bio page (`_pages/bio.markdown` / `_pages/fr-bio.markdown`). Changing the video means editing only these keys — no template changes needed.
