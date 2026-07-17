@@ -11,7 +11,7 @@
   "icons": [
     {
       "src": "{{ '/assets/bio/logo-square.png' | relative_url }}",
-      "sizes": "2048x1446",
+      "sizes": "1000x1000",
       "type": "image/png"
     }
   ]

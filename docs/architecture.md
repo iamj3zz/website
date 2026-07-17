@@ -707,10 +707,9 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
 
 4. **Favicon & App Manifest Configuration:**
    - Applied to all layouts (portfolio, work, artwork)
-   - Uses `logo-square.png` (2048×1446 PNG) for both favicon and apple-touch-icon
+   - Uses `logo-square.png` (1000×1000 PNG, wordmark centered) for both favicon and apple-touch-icon
    - Provides visual branding in browser tabs and bookmarks
-   - `site.webmanifest` (repo root, Liquid-processed via front matter, same mechanism as `404.html`) declares `name`/`short_name`/`description` from `_config.yml`, `theme_color`/`background_color`, and an icon entry pointing at `logo-square.png` — linked via `<link rel="manifest">` + `<meta name="theme-color" content="#1a1a1a">` in all three layouts
-   - **Known limitation:** `logo-square.png`'s non-square dimensions (above) are harmless for a favicon but mean the manifest icon will look cropped/distorted if used for PWA "add to home screen" — needs a true square crop (ideally with 192×192/512×512 sizes) before that use case is production-ready. Not blocking for the manifest's SEO/theme-color value, which works regardless.
+   - `site.webmanifest` (repo root, Liquid-processed via front matter, same mechanism as `404.html`) declares `name`/`short_name`/`description` from `_config.yml`, `theme_color`/`background_color`, and an icon entry pointing at `logo-square.png` (`sizes: "1000x1000"`) — linked via `<link rel="manifest">` + `<meta name="theme-color" content="#1a1a1a">` in all three layouts
 
 5. **Robots & Indexing:**
    - **robots.txt:**

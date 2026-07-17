@@ -75,7 +75,7 @@ The site implements comprehensive SEO with special attention to:
 ### App Manifest
 - `site.webmanifest` (repo root, Liquid-processed like `404.html`) declares `name`/`short_name`/`description` from `_config.yml`, `theme_color`/`background_color`, and an icon pointing at `assets/bio/logo-square.png`
 - Linked from all three layouts via `<link rel="manifest">` + `<meta name="theme-color">`
-- **Known limitation:** `logo-square.png` is actually 2048×1446 (not square, despite the name) — fine as a favicon, but will look cropped/distorted as a PWA home-screen icon. Needs a proper square crop (ideally at 192×192/512×512) before this is publish-ready for app-install use cases; not blocking for the manifest's SEO/theme-color value.
+- `logo-square.png` is a true 1000×1000 square (wordmark centered on its own bounding-box center, ~25% padding each side), safe for favicon, apple-touch-icon, and PWA home-screen install use cases.
 
 **For details:** See [Architecture > SEO Architecture](docs/architecture.md)
 
