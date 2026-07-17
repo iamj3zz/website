@@ -43,8 +43,14 @@ lhci-reports/
 
 # Print test results
 print-test-results/
+docs/*.pdf
+
+# Claude Code runtime state
+.claude/
 
 # Local resource documentation (not tracked)
 docs/HIGHRES-IMAGES/
 docs/Resources/
 docs/samples/
+docs/*.png
+docs/*.jpg
