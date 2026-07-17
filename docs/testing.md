@@ -48,12 +48,14 @@ The main test script (`./test-before-push.sh`) runs **7 steps by default** (0, 0
 | **0.5** | File sizes (blocks >100MB) | <1s | ✅ Yes |
 | **1** | YAML syntax | ~1s | ✅ Yes |
 | **2** | Jekyll build + sitemap generation | ~5s | ✅ Yes |
-| **3** | HTML links, images, structure | ~3s | ✅ Yes |
+| **3** | HTML links, images, structure (internal links only by default) | ~3s | ✅ Yes |
 | **3.5** | **SEO Invariants** (NEW) | ~1s | ✅ Yes |
 | **4** | Print layouts and QR codes | ~10-30s | ✅ Yes |
 | **5** | Lighthouse (performance, accessibility, SEO) | ~60-120s | ❌ Optional (`--full`) |
 
 **By default**, the script runs steps 0–4 and skips Lighthouse. Run with `--full` to include Lighthouse.
+
+**External link checking** (dead outbound links) is opt-in — Step 3 uses `rake test` (internal links only) by default, and switches to `rake test_external` (internal + external, 24h-cached) when you pass `--check-external` or `--full`. It's opt-in because it needs network access and can be slow/flaky, so it's never part of the mandatory pre-commit gate.
 
 ### SEO Validation (Step 3.5)
 
@@ -510,6 +512,8 @@ const CONFIG = {
 
 5. **Check external links periodically**
    ```bash
+   ./test-before-push.sh --check-external
+   # or directly:
    bundle exec rake test_external
    ```
 

@@ -653,10 +653,16 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
      - `index, follow` for all other pages (default)
    - **AI/TDM opt-out meta tag** (unconditional, every page): `<meta name="robots" content="noai, noimageai">` — supplementary signal, not a search-engine indexing directive, separate from the tag above
    - Enhanced Open Graph tags for portfolio works (article type)
+   - Structured data (JSON-LD) for the homepage and bio pages as Person (see 1b below)
    - Structured data (JSON-LD) for portfolio works as CreativeWork (with `sameAs` social links)
    - Structured data (JSON-LD) for portfolio work breadcrumbs as BreadcrumbList
    - Structured data (JSON-LD) for visual artworks as VisualArtwork (with `sameAs` social links)
    - Structured data (JSON-LD) for artwork breadcrumbs as BreadcrumbList
+
+1b. **Person Structured Data** (E-A-T / Knowledge Panel signal)
+   - Emitted on the homepage (`page.url == "/"`) and both bio pages (`page.page_type == "bio"`), independent of the per-work `author`/`creator` sub-objects in CreativeWork/VisualArtwork above
+   - Fields: `name`/`sameAs` from `site.author.name`/`site.social.links`, `description` from `site.description`, `image` from `site.default_image`, static `jobTitle`
+   - Only one `Person` block renders per page (the conditions above are mutually exclusive across the site's pages), so no duplicate/conflicting schema risk
 
 2. **Structured Data (Schema.org):**
    - **Portfolio works** get `CreativeWork` structured data (via `seo.type: CreativeWork` in `_config.yml` defaults)
@@ -696,10 +702,12 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
      - `/contact/` uses bio portrait photo (`/assets/bio/bio-photo.jpg`)
      - Default fallback for other pages: `default_image` from config (`/assets/bio/bio-photo.jpg`)
 
-4. **Favicon Configuration:**
+4. **Favicon & App Manifest Configuration:**
    - Applied to all layouts (portfolio, work, artwork)
    - Uses `logo-square.png` (2048×1446 PNG) for both favicon and apple-touch-icon
    - Provides visual branding in browser tabs and bookmarks
+   - `site.webmanifest` (repo root, Liquid-processed via front matter, same mechanism as `404.html`) declares `name`/`short_name`/`description` from `_config.yml`, `theme_color`/`background_color`, and an icon entry pointing at `logo-square.png` — linked via `<link rel="manifest">` + `<meta name="theme-color" content="#1a1a1a">` in all three layouts
+   - **Known limitation:** `logo-square.png`'s non-square dimensions (above) are harmless for a favicon but mean the manifest icon will look cropped/distorted if used for PWA "add to home screen" — needs a true square crop (ideally with 192×192/512×512 sizes) before that use case is production-ready. Not blocking for the manifest's SEO/theme-color value, which works regardless.
 
 5. **Robots & Indexing:**
    - **robots.txt:**

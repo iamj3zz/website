@@ -4,9 +4,10 @@
 # Run this before git add/commit/push to catch issues locally
 #
 # Usage:
-#   ./test-before-push.sh           # Run all tests (fast - no Lighthouse)
-#   ./test-before-push.sh --full    # Run all tests including Lighthouse
-#   ./test-before-push.sh --quick   # Run only YAML lint (fastest)
+#   ./test-before-push.sh                  # Run all tests (fast - no Lighthouse, no external links)
+#   ./test-before-push.sh --full            # Run all tests including Lighthouse + external link check
+#   ./test-before-push.sh --check-external  # Also check external links (slower, needs network)
+#   ./test-before-push.sh --quick           # Run only YAML lint (fastest)
 
 set -e  # Exit on any error
 
@@ -53,11 +54,17 @@ print_error() {
 RUN_LIGHTHOUSE=false
 QUICK_MODE=false
 SKIP_IMAGES=false
+RUN_EXTERNAL_CHECK=false
 
 for arg in "$@"; do
     case $arg in
         --full)
             RUN_LIGHTHOUSE=true
+            RUN_EXTERNAL_CHECK=true
+            shift
+            ;;
+        --check-external)
+            RUN_EXTERNAL_CHECK=true
             shift
             ;;
         --skip-images)
@@ -72,10 +79,11 @@ for arg in "$@"; do
             echo "Pre-Push Testing Script"
             echo ""
             echo "Usage:"
-            echo "  ./test-before-push.sh                Run all tests (fast - no Lighthouse)"
-            echo "  ./test-before-push.sh --full         Run all tests including Lighthouse"
-            echo "  ./test-before-push.sh --quick        Run only YAML lint (fastest)"
-            echo "  ./test-before-push.sh --skip-images  Skip image asset validation"
+            echo "  ./test-before-push.sh                  Run all tests (fast - no Lighthouse, no external links)"
+            echo "  ./test-before-push.sh --full            Run all tests including Lighthouse + external link check"
+            echo "  ./test-before-push.sh --check-external  Also check external links (slower, needs network)"
+            echo "  ./test-before-push.sh --quick           Run only YAML lint (fastest)"
+            echo "  ./test-before-push.sh --skip-images     Skip image asset validation"
             echo ""
             echo "Recommended workflow:"
             echo "  1. Run this script"
@@ -331,10 +339,19 @@ fi
 # ============================================================================
 
 print_header "Step 3/5: HTML Validation & Link Checking"
-print_step "Running: bundle exec rake test"
-print_step "Checking: Internal links, images, HTML structure..."
 
-if bundle exec rake test ; then
+if [ "$RUN_EXTERNAL_CHECK" = true ]; then
+    print_step "Running: bundle exec rake test_external"
+    print_step "Checking: Internal + external links, images, HTML structure (needs network, cached 24h)..."
+    RAKE_TASK="test_external"
+else
+    print_step "Running: bundle exec rake test"
+    print_step "Checking: Internal links, images, HTML structure..."
+    print_step "(External links skipped — run with --check-external or --full to include them)"
+    RAKE_TASK="test"
+fi
+
+if bundle exec rake "$RAKE_TASK" ; then
     print_success "HTML validation passed!"
 else
     print_error "HTML validation failed!"
@@ -519,6 +536,9 @@ if [ "$ALL_PASSED" = true ]; then
     if [ "$RUN_LIGHTHOUSE" = false ]; then
         echo ""
         echo -e "${YELLOW}Tip: Run with --full flag before major releases to include Lighthouse.${NC}"
+    fi
+    if [ "$RUN_EXTERNAL_CHECK" = false ]; then
+        echo -e "${YELLOW}Tip: Run with --check-external (or --full) periodically to catch dead outbound links.${NC}"
     fi
     exit 0
 else

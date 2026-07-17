@@ -47,6 +47,22 @@ base-uri 'self';
 <!-- AI/TDM opt-out (supplementary signal; not a search-engine indexing directive) -->
 <meta name="robots" content="noai, noimageai">
 
+<!-- Person Structured Data (homepage + bio pages) — E-A-T / Knowledge Panel signal -->
+{% if page.url == "/" or page.page_type == "bio" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name }}",
+  "url": "{{ site.url }}",
+  "image": "{{ site.default_image | absolute_url }}",
+  "description": "{{ site.description | strip_newlines | strip }}",
+  "jobTitle": "New Media Artist, Composer & Producer",
+  "sameAs": [{% for link in site.social.links %}"{{ link }}"{% unless forloop.last %}, {% endunless %}{% endfor %}]
+}
+</script>
+{% endif %}
+
 <!-- Additional Open Graph tags for portfolio works -->
 {% if page.layout == "work" %}
   {% if page.metadata.release_date %}

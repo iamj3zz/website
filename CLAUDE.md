@@ -64,11 +64,18 @@ The site implements comprehensive SEO with special attention to:
 - Both include breadcrumb schemas for enhanced search result display
 - Both include `license`, `usageInfo`, `copyrightNotice`, and `creditText` fields sourced from `site.license_url`/`site.copyright_notice`
 - Configured via `seo.type` defaults in `_config.yml`
+- The homepage (`page.url == "/"`) and both bio pages (`page.page_type == "bio"`) additionally emit a top-level `Person` schema (name, `sameAs` from `site.social.links`, description, image) — an E-A-T/Knowledge Panel signal, independent of the per-work `author`/`creator` sub-objects above
 
 ### Image Performance
 - All `<img>` tags include `loading="lazy"` for deferred image loading
 - Improves page load performance by deferring off-screen images until viewport approach
 - Applied to: hero images, grids, logos, gallery images, bio photos
+- Hero and gallery images are served as WebP via `<picture>`/`<source>` with the original JPEG/PNG as fallback — see `docs/IMAGE-NAMING-CONVENTION.md` → "WebP Generation" and the AI-Scraping & Rights Protection Workflow section below (`scripts/generate-webp.sh`)
+
+### App Manifest
+- `site.webmanifest` (repo root, Liquid-processed like `404.html`) declares `name`/`short_name`/`description` from `_config.yml`, `theme_color`/`background_color`, and an icon pointing at `assets/bio/logo-square.png`
+- Linked from all three layouts via `<link rel="manifest">` + `<meta name="theme-color">`
+- **Known limitation:** `logo-square.png` is actually 2048×1446 (not square, despite the name) — fine as a favicon, but will look cropped/distorted as a PWA home-screen icon. Needs a proper square crop (ideally at 192×192/512×512) before this is publish-ready for app-install use cases; not blocking for the manifest's SEO/theme-color value.
 
 **For details:** See [Architecture > SEO Architecture](docs/architecture.md)
 

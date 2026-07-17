@@ -1,0 +1,18 @@
+---
+---
+{
+  "name": "{{ site.title }}",
+  "short_name": "{{ site.title }}",
+  "description": "{{ site.description | strip_newlines | strip }}",
+  "start_url": "{{ '/' | relative_url }}",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1a1a1a",
+  "icons": [
+    {
+      "src": "{{ '/assets/bio/logo-square.png' | relative_url }}",
+      "sizes": "2048x1446",
+      "type": "image/png"
+    }
+  ]
+}
