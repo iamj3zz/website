@@ -1,0 +1,38 @@
+{% comment %}
+  Social Print List Module — QR-code + name + URL layout for print media
+  (contact page only)
+
+  Parameters:
+  - lang: "en" or "fr" (optional, falls back to page.lang, then "en")
+
+  Data source: _data/social.yml. Never hardcode a platform URL/handle here —
+  edit that file instead. data-url/data-name feed contact-social-qrcodes.js.
+{% endcomment %}
+{% assign _lang = include.lang | default: page.lang | default: 'en' %}
+{% assign _trans = site.data.translations %}
+{% for platform in site.data.social %}
+  {% unless platform.icon == false %}
+    {% if platform.disabled %}
+      <div class="social-print-item social-print-item--no-link">
+        <div class="social-print-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {{ platform.svg }}
+          </svg>
+        </div>
+        <div class="social-print-name">{{ platform.name }}</div>
+        <div class="social-print-url social-print-url--note">{{ _trans.social.disabled_note[_lang] }}</div>
+      </div>
+    {% else %}
+      <div class="social-print-item" data-url="{{ platform.url }}" data-name="{{ platform.name }}">
+        <div class="social-print-qr"></div>
+        <div class="social-print-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            {{ platform.svg }}
+          </svg>
+        </div>
+        <div class="social-print-name">{{ platform.name }}</div>
+        <div class="social-print-url">{{ platform.url | remove: "https://" }}</div>
+      </div>
+    {% endif %}
+  {% endunless %}
+{% endfor %}

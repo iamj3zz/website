@@ -1,0 +1,32 @@
+{% comment %}
+  Social Icons Module — clickable icon links (footer + contact page)
+
+  Parameters:
+  - class: CSS class for each icon element (e.g. "social-icon" or "contact-social-icon")
+  - lang: "en" or "fr" (optional, falls back to page.lang, then "en")
+
+  Data source: _data/social.yml. Never hardcode a platform URL/handle here —
+  edit that file instead.
+{% endcomment %}
+{% assign _lang = include.lang | default: page.lang | default: 'en' %}
+{% assign _trans = site.data.translations %}
+{% for platform in site.data.social %}
+  {% unless platform.icon == false %}
+    {% if platform.disabled %}
+      <span class="{{ include.class }} social-icon--disabled" aria-label="{{ _trans.social.disabled_aria_label[_lang] }}" tabindex="0" role="img">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {{ platform.svg }}
+        </svg>
+        <span class="social-icon__tooltip">
+          {{ _trans.social.disabled_note[_lang] }}
+        </span>
+      </span>
+    {% else %}
+      <a href="{{ platform.url }}" target="_blank" rel="noopener noreferrer" class="{{ include.class }}" aria-label="{{ platform.name }} - {{ site.social.name }}" title="{{ platform.name }} - {{ site.social.name }}">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          {{ platform.svg }}
+        </svg>
+      </a>
+    {% endif %}
+  {% endunless %}
+{% endfor %}

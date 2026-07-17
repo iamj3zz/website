@@ -64,7 +64,7 @@ The site implements comprehensive SEO with special attention to:
 - Both include breadcrumb schemas for enhanced search result display
 - Both include `license`, `usageInfo`, `copyrightNotice`, and `creditText` fields sourced from `site.license_url`/`site.copyright_notice`
 - Configured via `seo.type` defaults in `_config.yml`
-- The homepage (`page.url == "/"`) and both bio pages (`page.page_type == "bio"`) additionally emit a top-level `Person` schema (name, `sameAs` from `site.social.links`, description, image) — an E-A-T/Knowledge Panel signal, independent of the per-work `author`/`creator` sub-objects above
+- The homepage (`page.url == "/"`) and both bio pages (`page.page_type == "bio"`) additionally emit a top-level `Person` schema (name, `sameAs` from `_data/social.yml`, description, image) — an E-A-T/Knowledge Panel signal, independent of the per-work `author`/`creator` sub-objects above
 
 ### Image Performance
 - All `<img>` tags include `loading="lazy"` for deferred image loading

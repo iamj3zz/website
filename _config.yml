@@ -37,17 +37,11 @@ author:
 copyright_notice: "© 2000–2026 J3ZZ. All Rights Reserved."
 license_url: "https://www.j3zz.com/licensing/"
 
+# site.social.name is the brand shown in social-icon aria-labels ("Platform - J3ZZ").
+# Platform URLs themselves live in _data/social.yml, not here — see that file's
+# header comment for why (this is what the LinkedIn-URL bug was about).
 social:
   name: J3ZZ
-  links:
-    - https://bandcamp.com/iamj3zz
-    - https://soundcloud.com/j3zz
-    - https://youtube.com/@iamj3zz
-    - https://vimeo.com/j3zz
-    - https://facebook.com/iamj3zz
-    - https://instagram.com/iamj3zz
-    - https://www.linkedin.com/in/jeromelithiaote/
-    - https://github.com/j3zz
 
 tagline: "Experimental sound art merging music, generative systems, and immersive installations"
 default_image: /assets/bio/bio-photo.jpg
@@ -67,19 +61,6 @@ intro_video_caption_fr: "J3ZZ à la une du journal télévisé de Réunion La 1�
 
 # Google Analytics 4
 google_analytics: G-8NXZYG48TB
-
-# Social Media
-bandcamp_username: iamj3zz
-soundcloud_username: j3zz
-youtube_username: iamj3zz
-vimeo_username: j3zz
-facebook_username: iamj3zz
-instagram_username: iamj3zz
-linkedin_username: j3zz
-github_username: j3zz
-twitter_username: j3zz
-twitch_username: j3zz
-malt_username: j3zz
 
 # Mailchimp Newsletter
 # Form action URL from Mailchimp embedded form

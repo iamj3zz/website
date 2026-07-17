@@ -578,8 +578,7 @@ All color is driven by CSS custom properties defined in `_sass/_variables.scss` 
 - `author.name` - Author name for SEO
 - `author.email` - Author email for SEO
 - `author.twitter` - Twitter username for SEO
-- `social.name` - Social profile name
-- `social.links[]` - Array of social profile URLs for structured data
+- `social.name` - Brand name shown in social-icon aria-labels ("Platform - {{ site.social.name }}"), always "J3ZZ" regardless of platform, per the naming convention in `CLAUDE.md`
 - `tagline` - Site tagline for SEO
 - `default_image` - Default image for social sharing
 - `lang` - Site language (e.g., en_US)
@@ -587,16 +586,7 @@ All color is driven by CSS custom properties defined in `_sass/_variables.scss` 
 **Analytics:**
 - `google_analytics` - Google Analytics 4 measurement ID (format: G-XXXXXXXXXX)
 
-**Social Media:**
-- `bandcamp_username`
-- `soundcloud_username`
-- `youtube_username`
-- `vimeo_username`
-- `facebook_username`
-- `instagram_username`
-- `twitter_username`
-- `linkedin_username`
-- `github_username`
+**Social Media:** see "Social Platforms (`_data/social.yml`)" below — this used to be a `social.links[]` array here plus 10 separate `*_username` keys; both were removed in favor of one data file after a bug where the two fell out of sync (LinkedIn's URL and its `*_username`-constructed link disagreed). Do not reintroduce either pattern.
 
 **Newsletter:**
 - `mailchimp_action_url` - Mailchimp form action URL
@@ -628,6 +618,19 @@ Two parallel blocks — `artwork_shipping` (EN) and `artwork_shipping_fr` (FR). 
 - `authenticity` - Certificate of authenticity notice
 
 Note: `ships_from` is a plain string, not a translation key — update both `artwork_shipping.ships_from` and `artwork_shipping_fr.ships_from` independently.
+
+## Social Platforms (`_data/social.yml`)
+
+Every social platform link on the site — footer icons (all three layouts), the contact page's clickable icons and print/QR fallback, and every JSON-LD `sameAs` array — is driven from a single file, `_data/social.yml`. Each entry has: `name`, `url` (the one full working URL — drives the href, the print-page plaintext with `https://` stripped, and `sameAs` when applicable), `sameas: true` (opt-in to JSON-LD `sameAs`), `icon: false` (opt out of the clickable-icon lists while still keeping `sameas: true` — used for GitHub, which has a real profile for structured data but no rendered icon anywhere), `disabled: true` (renders a non-clickable icon with an explanatory tooltip instead of a link — currently only X/Twitter), and `svg` (raw inner `<svg>` markup, viewBox always `"0 0 24 24"`).
+
+**Consuming templates** (never hardcode a platform block in any of these — add/edit the platform in `_data/social.yml` instead):
+- `_includes/social-icons.html` — clickable icon list, parameterized by `class` (`"social-icon"` for the footer in `portfolio.html`/`work.html`/`artwork.html`, `"contact-social-icon"` for the contact page) and `lang` (falls back to `page.lang`, then `"en"`)
+- `_includes/social-print-list.html` — the contact page's print/QR fallback (`data-url`/`data-name` attributes feed `contact-social-qrcodes.js`)
+- `_includes/seo.html` — `{% assign sameas_platforms = site.data.social | where: "sameas", true %}` near the top, then looped for each JSON-LD block's `sameAs` array (CreativeWork, VisualArtwork, and the Person schema — see "SEO Architecture" below)
+
+**Bilingual tooltip text** for the disabled X/Twitter state lives in `_data/translations.yml` under the `social` key (`disabled_aria_label`, `disabled_note`), following the site's normal `{{ _trans.key[lang] }}` i18n pattern — not in `social.yml` itself, to stay consistent with how every other UI string is translated.
+
+**Why this file exists:** the site used to store each platform's link twice — a full-URL array (`social.links` in `_config.yml`, used only for `sameAs`) and a separate `*_username` key per platform (used to construct every visible link). They drifted out of sync for LinkedIn (the `sameAs` URL used the real registered profile slug; the `*_username` key had been set to the artist handle by mistake, matching the pattern of every other platform, producing a dead link on every visible icon site-wide) before being caught and fixed. Consolidating to one URL per platform in one file removes the possibility of that class of bug recurring, for LinkedIn or any other platform.
 
 ## SEO Architecture
 
@@ -661,7 +664,7 @@ The site includes comprehensive SEO optimization using the `jekyll-seo-tag` plug
 
 1b. **Person Structured Data** (E-A-T / Knowledge Panel signal)
    - Emitted on the homepage (`page.url == "/"`) and both bio pages (`page.page_type == "bio"`), independent of the per-work `author`/`creator` sub-objects in CreativeWork/VisualArtwork above
-   - Fields: `name`/`sameAs` from `site.author.name`/`site.social.links`, `description` from `site.description`, `image` from `site.default_image`, static `jobTitle`
+   - Fields: `name` from `site.author.name`, `sameAs` from `_data/social.yml` (entries with `sameas: true` — see "Social Platforms" below), `description` from `site.description`, `image` from `site.default_image`, static `jobTitle`
    - Only one `Person` block renders per page (the conditions above are mutually exclusive across the site's pages), so no duplicate/conflicting schema risk
 
 2. **Structured Data (Schema.org):**

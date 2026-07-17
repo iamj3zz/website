@@ -632,22 +632,18 @@ To enable the newsletter signup form on the contact page:
 
 ### Social Media Configuration
 
-Update your social media usernames in `_config.yml`:
+Social platform links are **not** in `_config.yml` — edit `_data/social.yml` instead, one entry per platform:
 
 ```yaml
-# Social media usernames (without @ or full URLs)
-bandcamp_username: yourusername
-soundcloud_username: yourusername
-youtube_username: @yourusername
-vimeo_username: yourusername
-facebook_username: yourusername
-instagram_username: yourusername
-twitter_username: yourusername
-linkedin_username: yourusername
-github_username: yourusername
+- name: Bandcamp
+  url: https://yourusername.bandcamp.com
+  sameas: true          # include in JSON-LD sameAs
+  svg: '<path d="..." fill="currentColor"/>'
 ```
 
-**Remember:** After any `_config.yml` changes, restart the Jekyll server!
+Add `icon: false` to keep a platform in `sameAs` without rendering a clickable icon anywhere, or `disabled: true` to render a non-clickable icon with an explanatory tooltip instead of a link (the tooltip text itself lives in `_data/translations.yml` under `social:`, bilingual). See `docs/architecture.md` → "Social Platforms (`_data/social.yml`)" for the full field reference and why this replaced the old `_config.yml`-based setup.
+
+**Remember:** After any `_data/*.yml` changes, restart the Jekyll server!
 
 ---
 

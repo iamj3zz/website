@@ -273,12 +273,13 @@ touch _events/2025-06-15-event-name.md
 
 Edit `_config.yml` for:
 - Site metadata (title, description, URL)
-- SEO configuration (author info, social links, tagline, default image, language)
+- SEO configuration (author info, tagline, default image, language)
 - Google Analytics 4 measurement ID
-- Social media usernames
 - Email addresses
 - Logo path
 - Mailchimp newsletter integration
+
+Edit `_data/social.yml` for social platform links (Bandcamp, Instagram, LinkedIn, etc.) — see `docs/architecture.md` → "Social Platforms" for the field reference.
 
 **Remember:** Restart Jekyll server after changing `_config.yml`
 
@@ -290,7 +291,7 @@ Edit `_config.yml` for:
 - Structured data (JSON-LD) for portfolio works and artworks
 - Open Graph tags for social media sharing
 - hreflang tags for bilingual page pairs
-- Customize author and social settings in `_config.yml`
+- Customize author info in `_config.yml`, social platform links in `_data/social.yml`
 
 **Google Analytics 4:**
 - Privacy-compliant implementation with cookie consent
