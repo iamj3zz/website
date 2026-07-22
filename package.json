@@ -27,6 +27,6 @@
   "devDependencies": {
     "@evilmartians/lefthook": "^2.1.10",
     "@lhci/cli": "^0.15.1",
-    "puppeteer": "^24.30.0"
+    "puppeteer": "^25.3.0"
   }
 }
