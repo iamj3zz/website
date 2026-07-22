@@ -29,6 +29,6 @@ gem "http_parser.rb", "~> 0.6.0", :platforms => [:jruby]
 
 # Testing
 group :test do
-  gem "html-proofer", "~> 5.0"
+  gem "html-proofer", "~> 5.2"
   gem "rake"
 end
