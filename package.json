@@ -25,7 +25,7 @@
   "author": "J3ZZ",
   "license": "UNLICENSED",
   "devDependencies": {
-    "@evilmartians/lefthook": "^2.0.4",
+    "@evilmartians/lefthook": "^2.1.10",
     "@lhci/cli": "^0.15.1",
     "puppeteer": "^24.30.0"
   }
