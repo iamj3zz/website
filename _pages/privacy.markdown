@@ -10,7 +10,7 @@ noindex: true
 <section class="privacy-section">
   <div class="privacy-content">
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: April 2026</p>
+    <p class="last-updated">Last updated: July 2026</p>
 
     <h2>1. Introduction</h2>
     <p>This Privacy Policy explains how {{ site.title }} ("we", "us", or "our") collects, uses, and protects your personal data when you visit our website {{ site.url }}.</p>
@@ -31,10 +31,16 @@ noindex: true
       <li>Email address (required)</li>
       <li>First name (required)</li>
       <li>Last name (required)</li>
-      <li>Country (required)</li>
-      <li>Postal code (required)</li>
-      <li>City (required)</li>
       <li>Mobile phone number (required) — used for WhatsApp group communications and SMS updates</li>
+    </ul>
+    <p>When you submit an artwork inquiry from the gallery, we collect:</p>
+    <ul>
+      <li>First and last name (required)</li>
+      <li>Email address (required)</li>
+      <li>Mobile phone number (required)</li>
+      <li>Shipping address: street, city, postal code, and country (required) — used to quote shipping</li>
+      <li>Your inquiry message</li>
+      <li>Newsletter opt-in (optional checkbox, unticked by default — tick it if you'd like to be added to the newsletter)</li>
     </ul>
 
     <h3>3.2 Information We Collect Automatically</h3>
@@ -71,12 +77,19 @@ noindex: true
       <li>Improving website performance and user experience</li>
     </ul>
 
+    <h3>4.4 Artwork Inquiries</h3>
+    <ul>
+      <li>Responding to your questions about availability, pricing, and shipping for a specific artwork</li>
+      <li>Arranging shipping and sale of an artwork, where applicable</li>
+      <li>Adding you to the newsletter, only if the opt-in checkbox on the inquiry form is left ticked</li>
+    </ul>
+
     <h2>5. Legal Basis for Processing</h2>
     <p>We process your personal data based on:</p>
     <ul>
-      <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For newsletter subscriptions and website analytics (Google Analytics 4). You may withdraw consent at any time.</li>
+      <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For newsletter subscriptions, website analytics (Google Analytics 4), and the newsletter opt-in on the artwork inquiry form. You may withdraw consent at any time.</li>
       <li><strong>Legitimate interests (Art. 6(1)(f) GDPR):</strong> For website security, fraud prevention, and displaying embedded third-party content (see §6.3).</li>
-      <li><strong>Contractual necessity (Art. 6(1)(b) GDPR):</strong> For responding to booking and service inquiries.</li>
+      <li><strong>Contractual necessity (Art. 6(1)(b) GDPR):</strong> For responding to booking, service, and artwork purchase inquiries, including processing the shipping address you provide.</li>
     </ul>
 
     <h2>6. Data Sharing and Third Parties</h2>
@@ -102,10 +115,15 @@ noindex: true
     <h3>6.4 Social Media</h3>
     <p>Links to our social media profiles (Facebook, Instagram, LinkedIn, etc.) will redirect you to external platforms governed by their own privacy policies. We do not share your data with these platforms directly.</p>
 
+    <h3>6.5 Formspree (Artwork Inquiries)</h3>
+    <p>When you submit an artwork inquiry from the gallery, your message and contact details (including shipping address) are sent via Formspree, Inc., a form-processing service that may process data in the United States. Formspree's own privacy policy describes its retention and data-transfer practices.</p>
+    <p>Learn more: <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Formspree Privacy Policy</a></p>
+
     <h2>7. Data Retention</h2>
     <ul>
       <li><strong>Newsletter data:</strong> Retained until you unsubscribe or request deletion</li>
       <li><strong>Email correspondence:</strong> Retained for the duration necessary to fulfill the purpose of communication</li>
+      <li><strong>Artwork inquiry data:</strong> Retained as needed to respond to your inquiry and fulfill any resulting sale; see Formspree's privacy policy for its own retention practices regarding your submission</li>
       <li><strong>Analytics data:</strong> Anonymized; Google Analytics retains event data for 14 months by default</li>
     </ul>
 
@@ -128,7 +146,7 @@ noindex: true
 
     <h3>9.1 Categories of Tracking Technologies We Use</h3>
     <ul>
-      <li><strong>Essential (local storage):</strong> Stores your analytics consent choice and basic interface preferences (e.g. theme) — always active, exempt from consent under Art. 5(3) of the ePrivacy Directive as strictly necessary for the site to function</li>
+      <li><strong>Essential (local storage):</strong> Stores your analytics consent choice, basic interface preferences (e.g. theme), and which gallery artworks you've liked — always active, exempt from consent under Art. 5(3) of the ePrivacy Directive as strictly necessary for the site to function</li>
       <li><strong>Analytics cookies:</strong> Set by Google Analytics 4 to measure site usage — only active with your consent, the only tracking technology on this site that requires a choice</li>
     </ul>
 
@@ -138,7 +156,7 @@ noindex: true
     <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. Our website is served over HTTPS. However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>
 
     <h2>11. International Data Transfers</h2>
-    <p>Some of our service providers (Mailchimp, Google) process data in the United States. Both are certified under the <strong>EU–U.S. Data Privacy Framework</strong> (adopted July 2023), which provides an adequate level of protection recognized by the European Commission. Where applicable, Standard Contractual Clauses (SCCs) provide an additional safeguard.</p>
+    <p>Some of our service providers (Mailchimp, Google, Formspree) process data in the United States. Mailchimp and Google are certified under the <strong>EU–U.S. Data Privacy Framework</strong> (adopted July 2023), which provides an adequate level of protection recognized by the European Commission; see Formspree's own privacy policy for its data-transfer safeguards. Where applicable, Standard Contractual Clauses (SCCs) provide an additional safeguard.</p>
 
     <h2>12. Children's Privacy</h2>
     <p>Our website is not directed at children under 16 years of age. We do not knowingly collect personal data from children. If you believe we have collected data from a child, please contact us immediately.</p>

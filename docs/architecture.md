@@ -600,6 +600,13 @@ The signup form (`_pages/contact.markdown`, mirrored in `_pages/fr-contact.markd
 - **Next step to evaluate (dashboard-only, no code change):** check Mailchimp Audience → Signup forms → Form builder → Form settings for a reCAPTCHA option, and confirm whether it applies to this custom-embedded form (not just Mailchimp-hosted forms). If it does, enabling it would close the remaining scripted-submission gap.
 - **If confirmation-email abuse becomes an actual problem:** the durable fix is routing submissions through a server-side function (e.g. a Cloudflare Worker or Netlify Function) that verifies a CAPTCHA token before calling the Mailchimp API with a private key, instead of posting directly from the browser. That's an architecture change (this site currently has no backend) and would need separate scoping/sign-off, not a form tweak.
 
+**Artwork Inquiry Form (Formspree):**
+- `formspree_artwork_inquiry` - Formspree endpoint URL the gallery's artwork inquiry modal posts to
+- Markup: `_includes/artwork-inquiry-modal.html`; behavior/validation: `assets/js/artwork-inquiry.js`; triggered from `[data-inquiry-trigger]` elements on gallery grid/detail pages
+- Collects first/last name, email, phone, full shipping address (street/city/postal code/country), a free-text message, and an optional newsletter opt-in checkbox — **unticked by default**, per GDPR's requirement that consent be freely given and opt-in, not pre-selected
+- Submits via `fetch()` with a honeypot field (`_gotcha`), client-side validated the same way as the newsletter form (email/phone pattern checks)
+- Disclosed in the privacy policy at `_pages/privacy.markdown` §6.5 / `_pages/fr-privacy.markdown` §6.5 — keep that section in sync with any change to the fields this form collects
+
 **Intro / Press Video:**
 Drives both the homepage first-visit splash screen (`_includes/splash-screen.html`) and the video embedded under the photo on the bio page (`_pages/bio.markdown` / `_pages/fr-bio.markdown`). Changing the video means editing only these keys — no template changes needed.
 - `intro_video_embed_url` - Full embeddable player URL (e.g. `https://www.youtube-nocookie.com/embed/VIDEO_ID` or `https://player.vimeo.com/video/VIDEO_ID`) — not a bare ID or a `youtu.be/...` share link

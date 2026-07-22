@@ -10,7 +10,7 @@ noindex: true
 <section class="privacy-section">
   <div class="privacy-content">
     <h1>Politique de confidentialité</h1>
-    <p class="last-updated">Dernière mise à jour : Avril 2026</p>
+    <p class="last-updated">Dernière mise à jour : Juillet 2026</p>
 
     <h2>1. Introduction</h2>
     <p>Cette Politique de confidentialité explique comment {{ site.title }} ("nous", "notre") collecte, utilise et protège vos données personnelles lorsque vous visitez notre site Web {{ site.url }}.</p>
@@ -31,10 +31,16 @@ noindex: true
       <li>Adresse e-mail (obligatoire)</li>
       <li>Prénom (obligatoire)</li>
       <li>Nom (obligatoire)</li>
-      <li>Pays (obligatoire)</li>
-      <li>Code postal (obligatoire)</li>
-      <li>Ville (obligatoire)</li>
       <li>Numéro de téléphone mobile (obligatoire) — utilisé pour les communications de groupe WhatsApp et les mises à jour par SMS</li>
+    </ul>
+    <p>Lorsque vous soumettez une demande d'information sur une œuvre depuis la galerie, nous collectons :</p>
+    <ul>
+      <li>Prénom et nom (obligatoire)</li>
+      <li>Adresse e-mail (obligatoire)</li>
+      <li>Numéro de téléphone mobile (obligatoire)</li>
+      <li>Adresse de livraison : rue, ville, code postal et pays (obligatoire) — utilisée pour établir un devis d'expédition</li>
+      <li>Votre message</li>
+      <li>Inscription à la newsletter (case à cocher facultative, décochée par défaut — cochez-la si vous souhaitez être ajouté à la newsletter)</li>
     </ul>
 
     <h3>3.2 Informations que nous collectons automatiquement</h3>
@@ -71,12 +77,19 @@ noindex: true
       <li>Améliorer les performances du site Web et l'expérience utilisateur</li>
     </ul>
 
+    <h3>4.4 Demandes d'information sur les œuvres</h3>
+    <ul>
+      <li>Répondre à vos questions sur la disponibilité, le prix et l'expédition d'une œuvre</li>
+      <li>Organiser l'expédition et la vente d'une œuvre, le cas échéant</li>
+      <li>Vous ajouter à la newsletter, uniquement si la case à cocher du formulaire de demande reste cochée</li>
+    </ul>
+
     <h2>5. Base juridique du traitement</h2>
     <p>Nous traitons vos données personnelles sur la base de :</p>
     <ul>
-      <li><strong>Consentement (Art. 6(1)(a) RGPD) :</strong> Pour les abonnements à la newsletter et l'analyse du site Web (Google Analytics 4). Vous pouvez retirer votre consentement à tout moment.</li>
+      <li><strong>Consentement (Art. 6(1)(a) RGPD) :</strong> Pour les abonnements à la newsletter, l'analyse du site Web (Google Analytics 4), et l'inscription facultative à la newsletter via le formulaire de demande d'information sur une œuvre. Vous pouvez retirer votre consentement à tout moment.</li>
       <li><strong>Intérêts légitimes (Art. 6(1)(f) RGPD) :</strong> Pour la sécurité du site Web, la prévention des fraudes, et l'affichage du contenu tiers intégré (voir §6.3).</li>
-      <li><strong>Nécessité contractuelle (Art. 6(1)(b) RGPD) :</strong> Pour répondre aux demandes de réservation et de services.</li>
+      <li><strong>Nécessité contractuelle (Art. 6(1)(b) RGPD) :</strong> Pour répondre aux demandes de réservation, de services et d'achat d'œuvres, y compris le traitement de l'adresse de livraison que vous fournissez.</li>
     </ul>
 
     <h2>6. Partage des données et tiers</h2>
@@ -102,10 +115,15 @@ noindex: true
     <h3>6.4 Réseaux sociaux</h3>
     <p>Les liens vers nos profils de réseaux sociaux (Facebook, Instagram, LinkedIn, etc.) vous redirigeront vers des plateformes externes régies par leurs propres politiques de confidentialité. Nous ne partageons pas vos données directement avec ces plateformes.</p>
 
+    <h3>6.5 Formspree (demandes d'information sur les œuvres)</h3>
+    <p>Lorsque vous soumettez une demande d'information depuis la galerie, votre message et vos coordonnées (y compris l'adresse de livraison) sont transmis via Formspree, Inc., un service de traitement de formulaires susceptible de traiter des données aux États-Unis. La politique de confidentialité de Formspree décrit ses propres pratiques de conservation et de transfert de données.</p>
+    <p>En savoir plus : <a href="https://formspree.io/legal/privacy-policy/" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Formspree</a></p>
+
     <h2>7. Durée de conservation des données</h2>
     <ul>
       <li><strong>Données de newsletter :</strong> Conservées jusqu'à ce que vous vous désinscriviez ou demandiez la suppression</li>
       <li><strong>Correspondance par e-mail :</strong> Conservée pour la durée nécessaire à l'accomplissement de l'objectif de la communication</li>
+      <li><strong>Données de demande d'information sur une œuvre :</strong> Conservées le temps nécessaire pour traiter votre demande et, le cas échéant, conclure la vente ; voir la politique de confidentialité de Formspree pour ses propres pratiques de conservation</li>
       <li><strong>Données d'analyse :</strong> Anonymisées ; Google Analytics conserve les données d'événements par défaut pendant 14 mois</li>
     </ul>
 
@@ -128,7 +146,7 @@ noindex: true
 
     <h3>9.1 Catégories de technologies de suivi utilisées</h3>
     <ul>
-      <li><strong>Essentiel (stockage local) :</strong> Enregistre votre choix de consentement à l'analyse et vos préférences d'interface de base (par ex. le thème) — toujours actif, exempté de consentement en vertu de l'article 5(3) de la directive ePrivacy en tant que strictement nécessaire au fonctionnement du site</li>
+      <li><strong>Essentiel (stockage local) :</strong> Enregistre votre choix de consentement à l'analyse, vos préférences d'interface de base (par ex. le thème), et les œuvres de la galerie que vous avez aimées — toujours actif, exempté de consentement en vertu de l'article 5(3) de la directive ePrivacy en tant que strictement nécessaire au fonctionnement du site</li>
       <li><strong>Cookies d'analyse :</strong> Déposés par Google Analytics 4 pour mesurer l'utilisation du site — actifs uniquement avec votre consentement, seule technologie de suivi de ce site nécessitant un choix</li>
     </ul>
 
@@ -138,7 +156,7 @@ noindex: true
     <p>Nous mettons en place des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre l'accès non autorisé, la modification, la divulgation ou la destruction. Notre site Web est servi via HTTPS. Cependant, aucune transmission sur Internet n'est complètement sécurisée et nous ne pouvons pas garantir la sécurité absolue.</p>
 
     <h2>11. Transferts de données internationaux</h2>
-    <p>Certains de nos prestataires (Mailchimp, Google) traitent des données aux États-Unis. Ces deux sociétés sont certifiées dans le cadre du <strong>Cadre de protection des données UE–États-Unis</strong> (adopté en juillet 2023), qui offre un niveau de protection adéquat reconnu par la Commission européenne. Le cas échéant, des clauses contractuelles types (CCT) constituent une garantie supplémentaire.</p>
+    <p>Certains de nos prestataires (Mailchimp, Google, Formspree) traitent des données aux États-Unis. Mailchimp et Google sont certifiés dans le cadre du <strong>Cadre de protection des données UE–États-Unis</strong> (adopté en juillet 2023), qui offre un niveau de protection adéquat reconnu par la Commission européenne ; voir la politique de confidentialité de Formspree pour ses propres garanties de transfert de données. Le cas échéant, des clauses contractuelles types (CCT) constituent une garantie supplémentaire.</p>
 
     <h2>12. Confidentialité des mineurs</h2>
     <p>Notre site Web n'est pas destiné aux personnes de moins de 16 ans. Nous ne collectons pas sciemment de données personnelles auprès de mineurs. Si vous pensez que nous avons collecté des données d'un mineur, veuillez nous contacter immédiatement.</p>
