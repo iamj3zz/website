@@ -74,8 +74,8 @@ noindex: true
     <h2>5. Base juridique du traitement</h2>
     <p>Nous traitons vos données personnelles sur la base de :</p>
     <ul>
-      <li><strong>Consentement (Art. 6(1)(a) RGPD) :</strong> Pour les abonnements à la newsletter, l'analyse du site Web et le contenu tiers intégré. Vous pouvez retirer votre consentement à tout moment.</li>
-      <li><strong>Intérêts légitimes (Art. 6(1)(f) RGPD) :</strong> Pour la sécurité du site Web et la prévention des fraudes.</li>
+      <li><strong>Consentement (Art. 6(1)(a) RGPD) :</strong> Pour les abonnements à la newsletter et l'analyse du site Web (Google Analytics 4). Vous pouvez retirer votre consentement à tout moment.</li>
+      <li><strong>Intérêts légitimes (Art. 6(1)(f) RGPD) :</strong> Pour la sécurité du site Web, la prévention des fraudes, et l'affichage du contenu tiers intégré (voir §6.3).</li>
       <li><strong>Nécessité contractuelle (Art. 6(1)(b) RGPD) :</strong> Pour répondre aux demandes de réservation et de services.</li>
     </ul>
 
@@ -90,14 +90,14 @@ noindex: true
     <p>En savoir plus : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Google</a></p>
 
     <h3>6.3 Contenu intégré</h3>
-    <p>Avec votre consentement, notre site Web peut charger du contenu intégré provenant de plateformes tierces, notamment :</p>
+    <p>Certaines pages intègrent du contenu provenant de plateformes tierces, notamment :</p>
     <ul>
-      <li>YouTube (Google LLC)</li>
+      <li>YouTube (Google LLC) — via le domaine « confidentialité renforcée » (sans cookie) de YouTube lorsque possible</li>
       <li>Vimeo (Vimeo, LLC)</li>
       <li>Bandcamp (Songtradr, Inc.)</li>
       <li>SoundCloud (SoundCloud Limited)</li>
     </ul>
-    <p>Ces plateformes peuvent déposer leurs propres cookies et collecter des données sur votre interaction avec le contenu intégré. Ce contenu n'est chargé qu'après votre consentement.</p>
+    <p>Ce contenu se charge avec la page et n'est pas soumis à un choix de consentement distinct. Les plateformes ci-dessus peuvent déposer leurs propres cookies et collecter des données sur votre interaction avec le contenu intégré, selon leurs propres politiques de confidentialité, indépendamment de ce site.</p>
 
     <h3>6.4 Réseaux sociaux</h3>
     <p>Les liens vers nos profils de réseaux sociaux (Facebook, Instagram, LinkedIn, etc.) vous redirigeront vers des plateformes externes régies par leurs propres politiques de confidentialité. Nous ne partageons pas vos données directement avec ces plateformes.</p>
@@ -124,16 +124,15 @@ noindex: true
     <p>Pour exercer ces droits, veuillez nous contacter à : <a href="mailto:{{ site.email }}">{{ site.email }}</a>. Nous répondrons dans un délai d'<strong>un mois</strong> conformément à l'article 12 du RGPD.</p>
 
     <h2>9. Cookies et stockage local</h2>
-    <p>Nous utilisons le stockage local du navigateur et des cookies pour améliorer votre expérience sur notre site Web. Vos préférences de consentement sont enregistrées dans le stockage local de votre navigateur. Vous pouvez gérer vos préférences via la bannière de consentement qui apparaît lors de votre première visite, ou en cliquant sur l'icône de paramètres en bas de la page.</p>
+    <p>Nous n'utilisons aucun cookie publicitaire ou marketing. Le stockage local et les cookies de votre navigateur ne servent qu'aux deux finalités ci-dessous. Vous pouvez gérer votre préférence d'analyse via la bannière qui apparaît lors de votre première visite, ou en cliquant sur l'icône de paramètres en bas de la page.</p>
 
     <h3>9.1 Catégories de technologies de suivi utilisées</h3>
     <ul>
-      <li><strong>Essentiel (stockage local) :</strong> Enregistre vos préférences de consentement — toujours actif, nécessaire au fonctionnement du système de consentement</li>
-      <li><strong>Cookies d'analyse :</strong> Déposés par Google Analytics 4 pour mesurer l'utilisation du site — actifs uniquement avec votre consentement</li>
-      <li><strong>Cookies de contenu intégré :</strong> Déposés par des plateformes tierces (YouTube, Vimeo, Bandcamp, SoundCloud) lors de l'interaction avec du contenu intégré — actifs uniquement avec votre consentement</li>
+      <li><strong>Essentiel (stockage local) :</strong> Enregistre votre choix de consentement à l'analyse et vos préférences d'interface de base (par ex. le thème) — toujours actif, exempté de consentement en vertu de l'article 5(3) de la directive ePrivacy en tant que strictement nécessaire au fonctionnement du site</li>
+      <li><strong>Cookies d'analyse :</strong> Déposés par Google Analytics 4 pour mesurer l'utilisation du site — actifs uniquement avec votre consentement, seule technologie de suivi de ce site nécessitant un choix</li>
     </ul>
 
-    <p>Vous pouvez également gérer ou supprimer les cookies via les paramètres de votre navigateur. Notez que le blocage de certains cookies peut affecter le fonctionnement du site Web.</p>
+    <p>Le contenu tiers intégré (voir §6.3) peut déposer ses propres cookies indépendamment du choix de consentement sur ce site. Vous pouvez également gérer ou supprimer les cookies via les paramètres de votre navigateur. Notez que le blocage de certains cookies peut affecter le fonctionnement du site Web.</p>
 
     <h2>10. Sécurité des données</h2>
     <p>Nous mettons en place des mesures techniques et organisationnelles appropriées pour protéger vos données personnelles contre l'accès non autorisé, la modification, la divulgation ou la destruction. Notre site Web est servi via HTTPS. Cependant, aucune transmission sur Internet n'est complètement sécurisée et nous ne pouvons pas garantir la sécurité absolue.</p>

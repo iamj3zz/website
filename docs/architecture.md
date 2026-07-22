@@ -856,46 +856,45 @@ The site implements privacy-compliant analytics with GDPR-compliant cookie conse
 
 **Cookie Consent System:**
 
-1. **`assets/js/cookie-consent.js`** - GDPR-compliant cookie consent manager:
-   - **Cookie Categories:**
-     - Essential cookies (always enabled)
-     - Analytics cookies (Google Analytics, requires consent)
-     - Embedded content cookies (YouTube, Vimeo, Bandcamp, requires consent)
+The site sets no marketing/tracking cookies. Google Analytics 4 is the only feature that needs a consent choice — embedded third-party content (YouTube, Vimeo, Bandcamp, SoundCloud) loads unconditionally with the page and is disclosed, not gated, in the privacy policy (§6.3).
+
+1. **`assets/js/cookie-consent.js`** - GDPR-compliant analytics consent manager:
+   - **What requires consent:**
+     - Analytics (Google Analytics 4) — the only consent-gated feature
+     - Essential local storage (the consent choice itself, theme preference) is exempt under ePrivacy Art. 5(3) and always active
 
    - **User Interface:**
-     - Cookie consent banner shown on first visit
-     - Three options: "Accept All", "Accept Selected" (customize), "Reject All"
-     - Cookie settings button (visible after initial consent) to modify preferences anytime
+     - Minimal one-line notice shown on first visit, localized EN/FR via `page.lang`
+     - Two options: "Accept" / "Decline"
+     - Cookie settings button (visible after an initial choice) to reopen the notice and change preference anytime
 
    - **Preference Storage:**
      - Stored in browser localStorage as JSON
-     - Format: `{analytics: boolean, embedded: boolean, timestamp: ISO8601}`
+     - Format: `{analytics: boolean, timestamp: ISO8601}`
      - Persists across sessions
 
    - **Event System:**
-     - Dispatches `cookieConsentUpdated` custom event when preferences change
-     - Analytics and other scripts listen for this event to load/reload appropriately
+     - Dispatches `cookieConsentUpdated` custom event when preference changes
+     - `_includes/analytics.html` listens for this event to load/reload GA4 appropriately
 
    - **Functions:**
-     - `hasConsent()` - Check if consent has been given
-     - `getConsent()` - Get current consent preferences
-     - `saveConsent(analytics, embedded)` - Save preferences and dispatch event
-     - `showBanner()` / `hideBanner()` - Control banner visibility
-     - `loadPreferences()` - Load saved preferences into UI
-     - `acceptAll()` / `acceptSelected()` / `rejectAll()` - Handle user choices
+     - `hasConsent()` - Check if a choice has been made
+     - `getConsent()` - Get current consent preference
+     - `saveConsent(analytics)` - Save preference and dispatch event
+     - `showBanner()` / `hideBanner()` - Control notice visibility
+     - `acceptAnalytics()` / `declineAnalytics()` - Handle user choice
 
 2. **UI Integration:**
-   - Cookie consent banner integrated in default layout
-   - Banner displays at bottom of viewport on first visit
-   - Settings button (cookie icon) available after initial consent
-   - Styled inline within `_includes/cookie-consent.html`
+   - Notice integrated in all three layouts (`portfolio.html`, `work.html`, `artwork.html`)
+   - Displays at bottom of viewport on first visit
+   - Settings button (gear icon) available after initial choice
+   - Styled in `_sass/_cookie-consent.scss`
 
 **Privacy Features:**
-- No tracking without explicit user consent
-- Granular control over cookie categories
+- No marketing or tracking cookies
+- No tracking without explicit user consent for the one feature that needs it (analytics)
 - Easy consent revocation via settings button
 - IP anonymization for analytics
-- Secure cookie handling
 - localStorage-based preference storage (no server-side tracking)
 
 **Compliance:**

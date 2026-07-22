@@ -1,6 +1,7 @@
 /**
  * Cookie Consent Manager
- * GDPR-compliant cookie consent system
+ * GDPR-compliant analytics consent (Google Analytics is the only
+ * consent-gated feature; embeds and essential storage need no choice)
  */
 
 (function() {
@@ -9,11 +10,8 @@
   // Get DOM elements
   const banner = document.getElementById('cookie-consent-banner');
   const settingsButton = document.getElementById('cookie-settings-button');
-  const acceptAllBtn = document.getElementById('cookie-accept-all');
-  const acceptSelectedBtn = document.getElementById('cookie-accept-selected');
-  const rejectAllBtn = document.getElementById('cookie-reject-all');
-  const analyticsCheckbox = document.getElementById('cookie-analytics');
-  const embeddedCheckbox = document.getElementById('cookie-embedded');
+  const acceptBtn = document.getElementById('cookie-accept');
+  const declineBtn = document.getElementById('cookie-decline');
 
   // Check if consent has been given
   function hasConsent() {
@@ -44,11 +42,10 @@
     }
   }
 
-  // Save consent preferences
-  function saveConsent(analytics, embedded) {
+  // Save consent preference
+  function saveConsent(analytics) {
     const consent = {
       analytics: analytics,
-      embedded: embedded,
       timestamp: new Date().toISOString()
     };
 
@@ -89,43 +86,15 @@
     }
   }
 
-  // Load saved preferences into checkboxes
-  function loadPreferences() {
-    const consent = getConsent();
-    if (consent) {
-      if (analyticsCheckbox) {
-        analyticsCheckbox.checked = consent.analytics || false;
-      }
-      if (embeddedCheckbox) {
-        embeddedCheckbox.checked = consent.embedded || false;
-      }
-    }
-  }
-
-  // Accept all cookies
-  function acceptAll() {
-    if (analyticsCheckbox) analyticsCheckbox.checked = true;
-    if (embeddedCheckbox) embeddedCheckbox.checked = true;
-
-    saveConsent(true, true);
+  // Accept analytics
+  function acceptAnalytics() {
+    saveConsent(true);
     hideBanner();
   }
 
-  // Save selected preferences
-  function acceptSelected() {
-    const analytics = analyticsCheckbox ? analyticsCheckbox.checked : false;
-    const embedded = embeddedCheckbox ? embeddedCheckbox.checked : false;
-
-    saveConsent(analytics, embedded);
-    hideBanner();
-  }
-
-  // Reject optional cookies (only essential)
-  function rejectAll() {
-    if (analyticsCheckbox) analyticsCheckbox.checked = false;
-    if (embeddedCheckbox) embeddedCheckbox.checked = false;
-
-    saveConsent(false, false);
+  // Decline analytics
+  function declineAnalytics() {
+    saveConsent(false);
     hideBanner();
   }
 
@@ -137,29 +106,21 @@
       showBanner();
     } else {
       // Consent exists, show settings button
-      loadPreferences();
       hideBanner();
     }
 
     // Button event listeners
-    if (acceptAllBtn) {
-      acceptAllBtn.addEventListener('click', acceptAll);
+    if (acceptBtn) {
+      acceptBtn.addEventListener('click', acceptAnalytics);
     }
 
-    if (acceptSelectedBtn) {
-      acceptSelectedBtn.addEventListener('click', acceptSelected);
-    }
-
-    if (rejectAllBtn) {
-      rejectAllBtn.addEventListener('click', rejectAll);
+    if (declineBtn) {
+      declineBtn.addEventListener('click', declineAnalytics);
     }
 
     // Settings button to reopen banner
     if (settingsButton) {
-      settingsButton.addEventListener('click', function() {
-        loadPreferences();
-        showBanner();
-      });
+      settingsButton.addEventListener('click', showBanner);
     }
   }
 

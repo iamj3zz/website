@@ -41,7 +41,29 @@
     if (backdrop) backdrop.addEventListener('click', closeSplash);
 
     document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && !overlay.hidden) closeSplash();
+      if (overlay.hidden) return;
+
+      if (e.key === 'Escape') {
+        closeSplash();
+        return;
+      }
+
+      // Trap Tab focus inside the dialog so it can't reach page content
+      // (e.g. the cookie notice) hidden behind the splash backdrop.
+      if (e.key === 'Tab') {
+        const focusable = overlay.querySelectorAll('button, iframe, [href], [tabindex]:not([tabindex="-1"])');
+        if (!focusable.length) return;
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     });
   });
 })();

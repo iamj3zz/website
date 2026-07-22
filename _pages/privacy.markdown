@@ -74,8 +74,8 @@ noindex: true
     <h2>5. Legal Basis for Processing</h2>
     <p>We process your personal data based on:</p>
     <ul>
-      <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For newsletter subscriptions, website analytics, and embedded third-party content. You may withdraw consent at any time.</li>
-      <li><strong>Legitimate interests (Art. 6(1)(f) GDPR):</strong> For website security and fraud prevention.</li>
+      <li><strong>Consent (Art. 6(1)(a) GDPR):</strong> For newsletter subscriptions and website analytics (Google Analytics 4). You may withdraw consent at any time.</li>
+      <li><strong>Legitimate interests (Art. 6(1)(f) GDPR):</strong> For website security, fraud prevention, and displaying embedded third-party content (see §6.3).</li>
       <li><strong>Contractual necessity (Art. 6(1)(b) GDPR):</strong> For responding to booking and service inquiries.</li>
     </ul>
 
@@ -90,14 +90,14 @@ noindex: true
     <p>Learn more: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a></p>
 
     <h3>6.3 Embedded Content</h3>
-    <p>With your consent, our website may load embedded content from third-party platforms including:</p>
+    <p>Some pages embed content from third-party platforms, including:</p>
     <ul>
-      <li>YouTube (Google LLC)</li>
+      <li>YouTube (Google LLC) — via YouTube's privacy-enhanced (no-cookie) domain where possible</li>
       <li>Vimeo (Vimeo, LLC)</li>
       <li>Bandcamp (Songtradr, Inc.)</li>
       <li>SoundCloud (SoundCloud Limited)</li>
     </ul>
-    <p>These platforms may set their own cookies and collect data about your interaction with embedded content. This content is only loaded after you give consent.</p>
+    <p>These embeds load with the page and are not gated behind a separate consent choice. The platforms above may set their own cookies and collect data about your interaction with the embedded content, governed by their own privacy policies, independent of this website.</p>
 
     <h3>6.4 Social Media</h3>
     <p>Links to our social media profiles (Facebook, Instagram, LinkedIn, etc.) will redirect you to external platforms governed by their own privacy policies. We do not share your data with these platforms directly.</p>
@@ -124,16 +124,15 @@ noindex: true
     <p>To exercise these rights, contact us at: <a href="mailto:{{ site.email }}">{{ site.email }}</a>. We will respond within <strong>one month</strong> as required by GDPR Article 12.</p>
 
     <h2>9. Cookies and Local Storage</h2>
-    <p>We use browser local storage and cookies to improve your experience on our website. Your cookie preferences are saved in your browser's local storage. You can manage your preferences through the consent banner that appears when you first visit our site, or by clicking the settings icon at the bottom of the page.</p>
+    <p>We don't use marketing or advertising cookies. Your browser's local storage and cookies are used only for the two purposes below. You can manage your analytics preference through the notice that appears when you first visit our site, or by clicking the settings icon at the bottom of the page.</p>
 
     <h3>9.1 Categories of Tracking Technologies We Use</h3>
     <ul>
-      <li><strong>Essential (local storage):</strong> Stores your cookie consent preferences — always active, required for the consent system to function</li>
-      <li><strong>Analytics cookies:</strong> Set by Google Analytics 4 to measure site usage — only active with your consent</li>
-      <li><strong>Embedded content cookies:</strong> Set by third-party platforms (YouTube, Vimeo, Bandcamp, SoundCloud) when you interact with embedded content — only active with your consent</li>
+      <li><strong>Essential (local storage):</strong> Stores your analytics consent choice and basic interface preferences (e.g. theme) — always active, exempt from consent under Art. 5(3) of the ePrivacy Directive as strictly necessary for the site to function</li>
+      <li><strong>Analytics cookies:</strong> Set by Google Analytics 4 to measure site usage — only active with your consent, the only tracking technology on this site that requires a choice</li>
     </ul>
 
-    <p>You can also manage or delete cookies through your browser settings. Note that blocking certain cookies may affect website functionality.</p>
+    <p>Third-party embeds (see §6.3) may set their own cookies independently of this site's consent choice. You can also manage or delete cookies through your browser settings. Note that blocking certain cookies may affect website functionality.</p>
 
     <h2>10. Data Security</h2>
     <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. Our website is served over HTTPS. However, no internet transmission is completely secure, and we cannot guarantee absolute security.</p>

@@ -1,54 +1,26 @@
-<!-- Cookie Consent Banner -->
+<!-- Cookie Consent Notice -->
+{% assign _cc_lang = page.lang | default: 'en' %}
 <div id="cookie-consent-banner" class="cookie-consent-banner" style="display: none;">
   <div class="cookie-consent-content">
-    <div class="cookie-consent-text">
-      <h3>Cookie Consent</h3>
-      <p>We use cookies to enhance your experience. Essential cookies are required for the site to function, while analytics and embedded content cookies help us improve our services. You can customize your preferences below.</p>
-      <a href="{{ '/privacy/' | relative_url }}" class="cookie-consent-privacy-link">Read our Privacy Policy</a>
-    </div>
-
-    <div class="cookie-consent-options">
-      <div class="cookie-option">
-        <label>
-          <input type="checkbox" id="cookie-essential" checked disabled>
-          <span class="cookie-option-label">
-            <strong>Essential Cookies</strong>
-            <small>Required for basic site functionality</small>
-          </span>
-        </label>
-      </div>
-
-      <div class="cookie-option">
-        <label>
-          <input type="checkbox" id="cookie-analytics">
-          <span class="cookie-option-label">
-            <strong>Analytics Cookies</strong>
-            <small>Help us understand how you use our site</small>
-          </span>
-        </label>
-      </div>
-
-      <div class="cookie-option">
-        <label>
-          <input type="checkbox" id="cookie-embedded">
-          <span class="cookie-option-label">
-            <strong>Embedded Content</strong>
-            <small>Videos and audio players from YouTube, Vimeo, Bandcamp, etc.</small>
-          </span>
-        </label>
-      </div>
-    </div>
+    <p class="cookie-consent-text">
+      {% if _cc_lang == 'fr' %}
+        Nous n'utilisons aucun cookie publicitaire ou de suivi marketing. Avec votre accord, nous utilisons Google Analytics (IP anonymisée) pour comprendre l'utilisation du site de façon agrégée.
+        <a href="{{ '/fr/privacy/' | relative_url }}" class="cookie-consent-privacy-link">Politique de confidentialité</a>
+      {% else %}
+        We don't use marketing or tracking cookies. With your consent, we use Google Analytics (IP-anonymized) to understand site usage in aggregate.
+        <a href="{{ '/privacy/' | relative_url }}" class="cookie-consent-privacy-link">Privacy Policy</a>
+      {% endif %}
+    </p>
 
     <div class="cookie-consent-buttons">
-      <button id="cookie-accept-all" class="cookie-btn cookie-btn-primary" aria-label="Accept all cookies">Accept All</button>
-      <button id="cookie-accept-selected" class="cookie-btn cookie-btn-secondary" aria-label="Save selected cookie preferences">Save Preferences</button>
-      <button id="cookie-reject-all" class="cookie-btn cookie-btn-text" aria-label="Reject optional cookies">Reject Optional</button>
+      <button id="cookie-accept" class="cookie-btn cookie-btn-primary" aria-label="{% if _cc_lang == 'fr' %}Accepter Google Analytics{% else %}Accept Google Analytics{% endif %}">{% if _cc_lang == 'fr' %}Accepter{% else %}Accept{% endif %}</button>
+      <button id="cookie-decline" class="cookie-btn cookie-btn-text" aria-label="{% if _cc_lang == 'fr' %}Refuser Google Analytics{% else %}Decline Google Analytics{% endif %}">{% if _cc_lang == 'fr' %}Refuser{% else %}Decline{% endif %}</button>
     </div>
   </div>
 </div>
 
-<!-- Cookie Settings Button (appears after consent is given) -->
-<button id="cookie-settings-button" class="cookie-settings-button" style="display: none;" aria-label="Cookie Settings">
+<!-- Cookie Settings Button (appears after a choice has been made) -->
+<button id="cookie-settings-button" class="cookie-settings-button" style="display: none;" aria-label="{% if _cc_lang == 'fr' %}Paramètres des cookies{% else %}Cookie Settings{% endif %}">
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <circle cx="12" cy="12" r="3"></circle>
     <path d="M12 1v6m0 6v6m8.66-14.66l-4.24 4.24m-4.24 4.24l-4.24 4.24m14.24-4.24l-4.24-4.24m-4.24-4.24l-4.24-4.24"></path>

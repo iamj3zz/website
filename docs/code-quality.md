@@ -40,6 +40,7 @@ This codebase follows modern web development best practices and maintains high c
 - Mobile menu toggle updates aria-expanded dynamically
 - Theme toggle updates aria-pressed/aria-label dynamically, in the visitor's page language
 - Skip-navigation link (`.skip-link` in `_sass/_base.scss`) at the top of every layout (`portfolio.html`, `work.html`, `artwork.html`), jumping to `<main id="main-content">` — visually hidden until keyboard-focused
+- Splash video dialog (`assets/js/splash-screen.js`) traps Tab focus within its own buttons/iframe while open, so keyboard users can't tab past it into page content (e.g. the cookie notice) hidden behind its backdrop
 - All layouts follow accessibility best practices
 
 ## Security

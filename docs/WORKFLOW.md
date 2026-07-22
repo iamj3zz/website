@@ -579,7 +579,7 @@ The site includes privacy-compliant Google Analytics 4 integration with GDPR coo
    ```
 
 **Privacy features:**
-- Analytics only loads after user consent via cookie banner
+- Analytics only loads after user consent via the cookie notice
 - IP anonymization enabled
 - Secure cookie flags
 - Users can revoke consent anytime
@@ -590,20 +590,18 @@ The site includes privacy-compliant Google Analytics 4 integration with GDPR coo
 
 ### Cookie Consent System
 
-The site includes a GDPR-compliant cookie consent system that's automatically enabled.
+The site sets no marketing/tracking cookies. Google Analytics 4 is the only feature that needs a consent choice — the system is a minimal, GDPR-compliant analytics opt-in, not a general cookie-category banner.
 
 **What it does:**
-- Shows cookie consent banner on first visit
-- Manages user preferences for:
-  - Analytics cookies (Google Analytics)
-  - Embedded content cookies (YouTube, Vimeo, Bandcamp)
-- Stores preferences in browser localStorage
-- Provides cookie settings button for users to change preferences
+- Shows a one-line notice on first visit ("Accept" / "Decline" for Google Analytics), localized EN/FR
+- Stores the analytics preference in browser localStorage
+- Provides a cookie settings button for users to change their preference anytime
+- Embedded content (YouTube, Vimeo, Bandcamp, SoundCloud) loads unconditionally with the page — it's disclosed, not consent-gated, in the privacy policy (§6.3)
 
-**No configuration needed** - it works automatically with Google Analytics integration.
+**No configuration needed** - it works automatically with the Google Analytics integration.
 
 **Customization:**
-To customize cookie banner styling, edit `_includes/cookie-consent.html` (styles are inline within that file).
+To customize the notice copy, edit `_includes/cookie-consent.html`. Styling lives in `_sass/_cookie-consent.scss`.
 
 ### Mailchimp Newsletter Setup
 

@@ -300,9 +300,9 @@ Edit `_data/social.yml` for social platform links (Bandcamp, Instagram, LinkedIn
 - Respects GDPR cookie preferences
 
 **Cookie Consent:**
-- GDPR-compliant cookie consent system
-- Automatic banner on first visit
-- User preference management (analytics & embedded content)
+- GDPR-compliant analytics-only consent notice (no marketing/tracking cookies on the site)
+- Automatic one-line notice on first visit, EN/FR
+- User preference management for Google Analytics only
 - No configuration needed - works automatically
 
 See [CLAUDE.md](CLAUDE.md#optional-configuration) for detailed setup instructions.

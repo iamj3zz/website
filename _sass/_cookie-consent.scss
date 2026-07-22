@@ -1,0 +1,109 @@
+/* Cookie Consent Notice
+   Minimal, non-blocking analytics opt-in bar
+   ============================================ */
+
+.cookie-consent-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--z-index-modal);
+  background: var(--color-inverse-surface);
+  color: var(--color-inverse-text);
+  border-top: 1px solid var(--color-border-strong);
+  padding: var(--spacing-md);
+}
+
+.cookie-consent-content {
+  max-width: var(--max-width-content);
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+}
+
+.cookie-consent-text {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-base);
+  flex: 1 1 320px;
+}
+
+.cookie-consent-privacy-link {
+  color: var(--color-inverse-text);
+  text-decoration: underline;
+  white-space: nowrap;
+  margin-left: var(--spacing-xs);
+}
+
+.cookie-consent-buttons {
+  display: flex;
+  gap: var(--spacing-sm);
+  flex: 0 0 auto;
+}
+
+.cookie-btn {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  border: 1px solid var(--color-inverse-text);
+  background: transparent;
+  color: var(--color-inverse-text);
+  transition: background var(--transition-speed) var(--transition-easing),
+              color var(--transition-speed) var(--transition-easing);
+}
+
+.cookie-btn-primary {
+  background: var(--color-inverse-text);
+  color: var(--color-inverse-surface);
+}
+
+.cookie-btn-primary:hover {
+  opacity: 0.85;
+}
+
+.cookie-btn-text {
+  border-color: transparent;
+}
+
+.cookie-btn-text:hover {
+  border-color: var(--color-inverse-text);
+}
+
+.cookie-settings-button {
+  position: fixed;
+  left: var(--spacing-md);
+  bottom: var(--spacing-md);
+  z-index: var(--z-index-sticky);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-background);
+  color: var(--color-text);
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity var(--transition-speed) var(--transition-easing);
+}
+
+.cookie-settings-button:hover {
+  opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .cookie-consent-content {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cookie-consent-buttons {
+    justify-content: flex-end;
+  }
+}
