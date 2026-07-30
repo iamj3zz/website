@@ -52,7 +52,7 @@ links:
         Trois projets définissent aujourd'hui le cœur de sa pratique des nouveaux médias. <a href="/works/2019-09-19-live-racines-et-resonances/"><em>Racines &amp; Résonances</em></a> est une performance audiovisuelle live immersive dans laquelle des capteurs bioélectriques capturent les bio-signaux des plantes et les transforment en temps réel en sons, musique et visuels génératifs — un concert qui met en scène le vivant comme instrument et narrateur, joué en Hongrie, à La Réunion, à Maurice et en France depuis 2019. Les <a href="/works/2023-06-04-work-biosonification/"><em>Ateliers de Biosonification</em></a> prolongent cette investigation vers l'éducation participative, invitant des publics variés — des enfants des écoles aux visiteurs de festivals — à écouter les plantes et à composer avec leurs signaux. <em>Vibrotanica</em> est une installation interactive immersive de grande envergure en cours de développement, approfondissant cette même enquête sur la vie bioélectrique des plantes dans un environnement architectural et multisensoriel — une œuvre en quête de partenariats de production et de soutien institutionnel.
       </p>
       <p>
-        Chaque son, chaque image et chaque mot ici sont faits main, sans IA générative.
+        Chaque œuvre ici — chaque son, chaque image, chaque performance — est faite main, sans IA générative.
       </p>
     </div>
     <div class="bio-image">
