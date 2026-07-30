@@ -51,6 +51,9 @@ links:
       <p>
         Three projects currently define the core of his new media practice. <a href="/works/2019-09-19-live-racines-et-resonances/"><em>Racines &amp; Résonances</em></a> is an immersive live audiovisual performance in which bioelectrical sensors capture plant bio-signals and transform them in real time into sound, music, and generative visuals — a concert that stages the living world as both instrument and narrator, performed across Hungary, Réunion Island, Mauritius, and France since 2019. <a href="/works/2023-06-04-work-biosonification/"><em>Biosonification Workshops</em></a> extend this investigation into participatory education, inviting diverse audiences — from schoolchildren to festival visitors — to listen to plants and compose with their signals. <em>Vibrotanica</em> is a large-scale immersive interactive installation currently in development, deepening this same inquiry into the bio-electrical life of plants within an architectural and multi-sensory environment — a work seeking production partnerships and institutional support.
       </p>
+      <p>
+        Every sound, image, and word here is human-made, without generative AI.
+      </p>
     </div>
     <div class="bio-image">
       <img src="{{ page.bio_image }}" alt="J3ZZ — French sound artist and new media creator" loading="lazy">
