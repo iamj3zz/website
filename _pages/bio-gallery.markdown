@@ -5,6 +5,7 @@ permalink: /bio-gallery/
 lang: en
 lang_alternate: /fr/bio-gallery/
 description: "High-resolution press photos and artist portraits of J3ZZ available for download. Professional images for media, press kits, and promotional use."
+image: /assets/bio/gallery/photo-01.jpg
 page_type: bio-gallery
 links:
   # - title: CV
