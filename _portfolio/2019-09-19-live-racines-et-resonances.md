@@ -37,7 +37,7 @@ sections:
 #   caption: February 7, 2020 — Lóvasút Kulturális és Rendezvényközpont, Budapest -
 #     Hungary
 - type: iframe
-  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/N0lUEqz0ztI"
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/hP51N3ufOaU"
     frameborder="0" allowfullscreen></iframe>
   responsive: true
   aspect_ratio: '16:9'
