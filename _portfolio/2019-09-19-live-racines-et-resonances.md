@@ -32,10 +32,18 @@ metadata:
   - label: Geographic Range
     value: Hungary, Réunion Island (Indian Ocean), Mauritius
 sections:
-- type: hero-image
-  image: "/assets/works/2019-09-19-live-racines-et-resonances/hero.jpg"
-  caption: February 7, 2020 — Lóvasút Kulturális és Rendezvényközpont, Budapest -
-    Hungary
+# - type: hero-image
+#   image: "/assets/works/2019-09-19-live-racines-et-resonances/hero.jpg"
+#   caption: February 7, 2020 — Lóvasút Kulturális és Rendezvényközpont, Budapest -
+#     Hungary
+- type: iframe
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/N0lUEqz0ztI"
+    frameborder="0" allowfullscreen></iframe>
+  responsive: true
+  aspect_ratio: '16:9'
+  caption: Racines & Résonances - Villa de la Région, St-Denis, Réunion island - 2025 August 22 
+    
+
 - type: description
 - type: text
   title: The Experience
@@ -64,6 +72,8 @@ sections:
     * **February 7, 2020** — Lóvasút Kulturális és Rendezvényközpont, Budapest (Hungary) — 170 people. With guest dancers Grecsó Zoltán and Bujdosó Anna.
     * **September 25, 2019** — La Lasagneria, Budapest (Hungary) — First public performance with biosonification system.
     * **September 19, 2019** — Association of Hungarian Art Photographers, Budapest (Hungary) — Invitation-only premiere.
+
+
 - type: image-grid
   columns: 4
   images:

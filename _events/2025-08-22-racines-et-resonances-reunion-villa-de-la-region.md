@@ -5,7 +5,7 @@ work_id: racines-et-resonances
 title: Racines & Résonances - Résonance d'une île Opening
 date: 2025-08-22
 time: "20:00"
-country: France
+country: Réunion Island
 city: Saint-Denis
 venue_name: Villa de la Région
 venue_address: "49 Rue de Paris, 97400 Saint-Denis, La Réunion"
