@@ -7,10 +7,10 @@ lang_alternate: /bio-gallery/
 description: "Photos haute résolution et portraits de J3ZZ disponibles au téléchargement. Images professionnelles pour les médias, dossiers de presse et usage promotionnel."
 page_type: bio-gallery
 links:
-  - title: CV
-    url: /assets/bio/cv.pdf
-  - title: Press Kit
-    url: /assets/bio/press-kit.pdf
+  # - title: CV
+  #   url: /assets/bio/cv.pdf
+  # - title: Press Kit
+  #   url: /assets/bio/press-kit.pdf
   - title: Photos
     url: /fr/bio-gallery/
   - title: IMDb

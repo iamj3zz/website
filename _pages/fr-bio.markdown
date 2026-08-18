@@ -9,10 +9,10 @@ lang: fr
 lang_alternate: /bio/
 page_type: bio
 links:
-  - title: CV
-    url: /assets/bio/cv.pdf
-  - title: Press Kit
-    url: /assets/bio/press-kit.pdf
+  # - title: CV
+  #   url: /assets/bio/cv.pdf
+  # - title: Press Kit
+  #   url: /assets/bio/press-kit.pdf
   - title: Photos
     url: /bio-gallery/
   - title: IMDb
