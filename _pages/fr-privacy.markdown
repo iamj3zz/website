@@ -73,7 +73,7 @@ noindex: true
 
     <h3>4.3 Analyse du site Web (avec votre consentement)</h3>
     <ul>
-      <li>Comprendre comment les visiteurs utilisent notre site Web</li>
+      <li>Comprendre l'utilisation de notre site Web</li>
       <li>Améliorer les performances du site Web et l'expérience utilisateur</li>
     </ul>
 
@@ -99,7 +99,7 @@ noindex: true
     <p>En savoir plus : <a href="https://mailchimp.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Mailchimp</a></p>
 
     <h3>6.2 Google Analytics 4</h3>
-    <p>Avec votre consentement, nous utilisons Google Analytics 4 (Google LLC) pour comprendre comment les visiteurs utilisent notre site Web. Google Analytics collecte des données d'utilisation anonymisées. L'anonymisation de l'IP est activée — votre adresse IP complète n'est jamais stockée. Google LLC est certifié dans le cadre du Cadre de protection des données UE–États-Unis.</p>
+    <p>Avec votre consentement, nous utilisons Google Analytics 4 (Google LLC) pour comprendre l'utilisation de notre site Web. Google Analytics collecte des données d'utilisation anonymisées. L'anonymisation de l'IP est activée — votre adresse IP complète n'est jamais stockée. Google LLC est certifié dans le cadre du Cadre de protection des données UE–États-Unis.</p>
     <p>En savoir plus : <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Politique de confidentialité de Google</a></p>
 
     <h3>6.3 Contenu intégré</h3>

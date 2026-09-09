@@ -126,9 +126,9 @@ sections:
 
     **An act of moral commitment**
 
-    The solemnity of Sur le fil also comes from the fact that the musician stakes his reputation, his integrity with every instant. There is no safety net. If the performance fails, it fails publicly, irreversibly. These high stakes create genuine moral tension, authentic gravity.
+    The solemnity of Sur le fil also comes from the fact that the musician stakes their reputation, their integrity with every instant. There is no safety net. If the performance fails, it fails publicly, irreversibly. These high stakes create genuine moral tension, authentic gravity.
 
-    In contrast with much contemporary music that relies on technical complexity or formal innovation, Sur le fil rests on something more primordial: sincerity, authenticity of the act of playing. It is an act of offering, where the musician exposes himself without protection, inviting the audience to witness this moment. This accepted vulnerability creates a solemn atmosphere that transcends the music itself — it becomes a fundamental human gesture.
+    In contrast with much contemporary music that relies on technical complexity or formal innovation, Sur le fil rests on something more primordial: sincerity, authenticity of the act of playing. It is an act of offering, where the musician exposes themself without protection, inviting the audience to witness this moment. This accepted vulnerability creates a solemn atmosphere that transcends the music itself — it becomes a fundamental human gesture.
 
     **After: The return to silence**
 

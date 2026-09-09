@@ -82,7 +82,7 @@ sections:
   content: |
     "Unbalanced Forces" is a description of a system. First exhibited in Budapest (2016 February 13-16), it allowed the audience to navigate an interactive multichannel soundscape and reflect on the system they live in. Through interaction, visitors observed their own impact — a metaphor for their implication in the Hungarian system.
 
-    Our main research topic centers on interdisciplinary improvisation — specifically the moment between human, sound, and space. Our aim is to create a frame for sound installation that one can enter and explore, making it her/his own.
+    Our main research topic centers on interdisciplinary improvisation — specifically the moment between human, sound, and space. Our aim is to create a frame for sound installation that one can enter and explore, making it their own.
 - type: iframe
   embed_code: <iframe src="https://www.youtube-nocookie.com/embed/s_O939u-SHs" frameborder="0"
     allowfullscreen></iframe>

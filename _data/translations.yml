@@ -262,7 +262,7 @@ inquiry_form:
     fr: "Bonjour,"
   message_interested:
     en: "I am interested in acquiring"
-    fr: "Je suis intéressé(e) par l'acquisition de"
+    fr: "Je souhaite acquérir"
   message_quote_open:
     en: "\""
     fr: "« "
