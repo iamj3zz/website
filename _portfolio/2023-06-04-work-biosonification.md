@@ -32,6 +32,15 @@ metadata:
   - label: Testimonials
     value: Documentation from Collège Bois de Néfles (school), Réunion Island (2024)
     link: https://etab.ac-reunion.fr/clg-bois-de-nefles/2024/04/02/vibrotanica-quand-les-plantes-jouent-de-la-musique/
+  - label: Bose (1902)
+    value: 'Response in the Living and Non-Living — J.C. Bose, Longmans, Green, and Co. (full text)'
+    link: https://www.gutenberg.org/files/18986/18986-h/18986-h.htm
+  - label: Wohlleben (2016)
+    value: 'The Hidden Life of Trees: What They Feel, How They Communicate — Peter Wohlleben, Greystone Books'
+    link: https://greystonebooks.com/products/the-hidden-life-of-trees
+  - label: Khait et al. (2023)
+    value: 'Sounds emitted by plants under stress are airborne and informative — Cell, 186(7), 1328–1336'
+    link: https://www.cell.com/cell/fulltext/S0092-8674(23)00262-3
 sections:
 - type: hero-image
   image: "/assets/works/2023-06-04-work-biosonification/hero.jpg"
