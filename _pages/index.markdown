@@ -5,6 +5,7 @@ permalink: /
 description: "French sound artist J3ZZ creates experimental electronic music, immersive installations, and audiovisual performances merging art, science, and technology. Explore works, events, and releases."
 image: /assets/bio/bio-photo.jpg
 lang: en
+lang_alternate: /fr/works/
 page_type: works
 ---
 

@@ -130,7 +130,7 @@ The site supports English and French with **URL-based language detection** — s
 | Events | `/events/` | `/fr/events/` |
 | Contact | `/contact/` | `/fr/contact/` |
 
-Portfolio work pages (`/works/…`) and the homepage (`/`) are English-only — no French versions exist yet. The homepage has `lang: en` but no `lang_alternate`, so no hreflang alternate link is emitted for it.
+Every published portfolio work page (`/works/…`) has a French sibling (`fr-` prefixed file in `_portfolio/`, e.g. `/works/2020-08-18-inst-iris/` ↔ `/fr/works/2020-08-18-inst-iris/`), following the same `lang`/`lang_alternate`/explicit-`permalink` contract as artworks (see below). The homepage (`/`) has no dedicated French version — it's content-identical to `/works/`, so its `lang_alternate` points at `/fr/works/` rather than a separate `/fr/` page.
 
 ### Translation Data (`_data/translations.yml`)
 
@@ -192,6 +192,9 @@ French versions of pages use the `fr-` filename prefix (matching the `_pages/` c
 | Pages | `_pages/bio-gallery.markdown` | `_pages/fr-bio-gallery.markdown` |
 | Pages | `_pages/gallery.markdown` | `_pages/fr-gallery.markdown` |
 | Artworks | `_artworks/2026-03-01-fractured-system.md` | `_artworks/fr-2026-03-01-fractured-system.md` |
+| Portfolio | `_portfolio/2020-08-18-inst-iris.md` | `_portfolio/fr-2020-08-18-inst-iris.md` |
+
+Portfolio French files additionally need an explicit `permalink:` override (`/fr/works/{full-basename}/`) — the collection's `/works/:name/` permalink template doesn't strip the `fr-` prefix or add `/fr/` on its own — plus a `lang: fr`, `lang_alternate:` back to the EN sibling's full-basename URL, and a shared `work_id`. If the EN work has `print_hero_image: true`, the FR file also needs explicit `date:`/`slug:` front matter, since Jekyll's filename-based date parsing won't match a `fr-`-prefixed basename (this would otherwise break the print-hero-image path computed in `_layouts/work.html`).
 
 ### Bio Gallery (Press Photos) Bilingual Setup
 
