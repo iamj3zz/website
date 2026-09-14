@@ -215,6 +215,7 @@ links:
     <div class="bio-category" id="bio-management">
       <h2>Cultural Management &amp; Governance</h2>
       <div class="bio-items">
+        <div class="bio-item"> <span class="bio-year">2026–<script>document.write(new Date().getFullYear())</script></span> <a target="_blank" href="https://sat.qc.ca/"> SOCIÉTÉ DES ARTS TECHNOLOGIQUES (SAT) </a> ∙ Active Member ∙ Montreal ∙ CA </div>
         <div class="bio-item"> <span class="bio-year">2022–<script>document.write(new Date().getFullYear())</script></span> <a target="_blank" href="https://www.prma-reunion.fr/"> POLE REGIONAL DES MUSIQUES ACTUELLES </a> ∙ Active Member ∙ Réunion Island ∙ RE </div>
         <div class="bio-item"> <span class="bio-year">2012–<script>document.write(new Date().getFullYear())</script></span> <a target="_blank" href="https://www.centrocreazionecultura.eu"> CENTRO CREAZIONE CULTURA </a> ∙ Active Member  ∙ Florence ∙ IT </div>
         <div class="bio-item"> <span class="bio-year">2023–2026</span><a target="_blank" href="https://www.kolet.re">KOLET</a> ∙ Board Member ∙ Réunion Island ∙ RE</div>

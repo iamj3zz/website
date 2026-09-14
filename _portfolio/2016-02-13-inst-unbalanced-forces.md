@@ -5,12 +5,17 @@ layout: work
 title: UNBALANCED FORCES
 work_id: unbalanced-forces
 print_hero_image: true
-abstract: 'Interactive/Live Sound Installation. A sonic exploration of action and
-  intervention.
+abstract: 'A performative sound installation and interactive experience: violin and
+  shepherd''s flute on a makeshift altar, a real-time soundscape swelling toward silence
+  — a photograph of Hungarian society.
 
   '
-description: Interactive/Live Sound Installation. A sonic exploration of action and
-  intervention.
+description: Visible from the street through Lábor Gallery's window, a near-empty
+  room holds a violin and tilinkó — Hungarian and Transylvanian folk instruments —
+  laid like relics on a white-draped altar. A soundscape of street noise and the
+  audience's presence swells toward the unbearable, then is cut to abrupt silence —
+  the silencing of dissent under authoritarian power. Dancer Jessica Simet embodies
+  this through movement.
 category: installations
 commissioned: false
 image: "/assets/works/2016-02-13-inst-unbalanced-forces/thumbnail.jpg"
@@ -19,8 +24,10 @@ metadata:
   location: Budapest, Hungary - Lábor gallery (Képíró u. 6, 1053)
   role: author, programmer, composer, producer
   technology: Ambisonic spatialization for 4 speakers, Ableton Live, Max for Live
-  credits: 'Author, Programmer, Composer: J3ZZ'
+  credits: 'Author, Programmer, Composer: J3ZZ. Dancer: Jessica Simet.'
   custom:
+  - label: Dancer
+    value: Jessica Simet
   - label: Exhibition
     value: Kapcsolatok 3. (Connections 3.) — FKSE new members' introductory exhibition
   - label: Curator
@@ -69,6 +76,12 @@ sections:
   responsive: true
   aspect_ratio: '16:9'
   caption: Binaural visit of the exhibition
+- type: text
+  title: ''
+  content: |
+    Conceived as an exploration of contemporary Hungarian society — described by the artist as "a performative sound installation, an interactive experience that seeks to make visible the space and the system we live in" — the installation first reveals itself from outside: Lábor Gallery in Budapest faces a pedestrian street, and passersby glimpse, through the window, an almost-empty room — projections, speakers arranged around the space, a microphone suspended above a violin and a shepherd's flute laid on a white-draped altar, as in a church. The violin and shepherd's flute — the tilinkó — are among the most emblematic instruments of traditional Hungarian and Transylvanian culture. Laid like relics on this makeshift altar, they embody the very voice of a people whose freedom of expression the installation interrogates. On entering, the visitor is struck by a double soundscape: street noise, amplified live, and an ephemeral composition generated in real time from the sounds of the room itself and the presence of the audience — a substance that swells and intensifies until it becomes unbearable.
+
+    Then comes a brutal silence: that of the decisions and laws of an authoritarian power — the artist has in mind Viktor Orbán's Hungary — silencing the opposition and, one by one, eroding rights and freedom of expression. The soundscape then returns as an echo, strange, delayed, muffled; the composition, still alive, still generated, builds again toward a new climax, before being reduced to silence once more. Against this architecture and these objects, contemporary dancer Jessica Simet interprets, through the body, this message addressed to the public.
 - type: text
   title: ''
   content: |

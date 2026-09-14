@@ -5,18 +5,22 @@ layout: work
 title: PARK IN PROGRESS
 work_id: park-in-progress
 print_hero_image: true
-abstract: 'A multichannel spatial audio installation merging 16 speakers with live
-  circus performance in Nicosia''s Municipal Gardens.
+abstract: 'A multichannel sound installation in Nicosia''s UN buffer zone, Europe''s
+  last divided capital — sixteen speakers carry a body-made soundscape, a living
+  presence set against a frozen frontier.
 
   '
-description: A multichannel spatial audio installation merging 16 speakers with live
-  circus performance in Nicosia's Municipal Gardens.
+description: In the UN buffer zone bisecting Nicosia since 1974, sixteen speakers
+  surround a circle formed by a dog, circus artist Audrey Louwet, and J3ZZ as musician,
+  playing a soundscape built from sounds of the body. Between animal and performer,
+  ordinary gestures — sharing, playing — recall, in a place suspended by war, the
+  humanity worth preserving.
 category: installations
 commissioned: false
 image: "/assets/works/2014-09-29-inst-park-in-progress/thumbnail.jpg"
 metadata:
   release_date: '2014-09-29'
-  location: Municipal Gardens of Nicosia, Cyprus (near UN buffer zone)
+  location: Municipal Gardens of Nicosia, Cyprus — UN buffer zone (Green Line)
   role: sound artist, performer
   technology: Multichannel spatial audio, 16 speakers, Ableton Live
   credits: 'Sound artist & performer: J3ZZ. Trapeze artist: Audrey Louwet (Compagnie
@@ -88,11 +92,13 @@ sections:
 - type: text
   title: ''
   content: |
+    In the UN buffer zone in Nicosia — the Green Line that, since 1974, has cut Europe's last divided capital in two and materializes the occupation of its northern half — the artist chooses to resonate a living body rather than an armed silence. Surrounded by sixteen speakers diffusing a multichannel composition built from sounds of the body, a dog named Eran, circus artist Audrey Louwet, and the artist himself, at the post of musician, occupy the center of the device, encircled by the public. Between the animal and the circus artist play out, in full view of all, ordinary gestures — sharing, playing together — whose simplicity, in this place suspended by war, recalls the humanity that must be preserved in all circumstances. To inhabit this frontier through sound and presence is to shift attention from the frozen conflict to the life that continues to hold on there.
+
     September 29 - October 5, 2014, Nicosia, Cyprus
 
     **Park in Progress** is a nomadic mobility program initiated by the Pépinières Européennes pour Jeunes Artistes, supported by the European Commission's Culture programme. The program brings together young artists and cultural professionals working collaboratively across transdisciplinary practice — bringing circus, performance, music, visual art, and technology into dialogue. The 11th edition took place in Nicosia during the "Nuit Européenne de la Jeune Création" (European Night of Young Creation).
 
-    Within the historically rich setting of the Municipal Gardens, near Nicosia's UN buffer zone, this unique artistic intervention emerged as a celebration of the fusion between bodily movement and the spatial sound universe. The collaboration between J3ZZ (sound artist, composer) and Audrey Louwet (trapeze artist, Compagnie Azeïn) created an unforgettable evening where circus arts and immersive audio met in unprecedented ways.
+    Within the historically rich setting of the Municipal Gardens, within Nicosia's UN buffer zone, this unique artistic intervention emerged as a celebration of the fusion between bodily movement and the spatial sound universe. The collaboration between J3ZZ (sound artist, composer) and Audrey Louwet (trapeze artist, Compagnie Azeïn) created an unforgettable evening where circus arts and immersive audio met in unprecedented ways.
 
     The 16-speaker spatial audio installation was conceived following an intensive residency period during which J3ZZ recorded and developed a vocabulary of sounds produced exclusively by the human body — breath, movement, heartbeat, and physical effort transformed into a nuanced sonic palette. These recordings, meticulously processed through Ableton Live, formed the foundation of the installation: speakers positioned throughout the gardens created an immersive soundscape that responded to and accompanied the performance.
 

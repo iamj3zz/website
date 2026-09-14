@@ -5,14 +5,16 @@ layout: work
 title: RACINES & RESONANCES
 work_id: racines-et-resonances
 print_hero_image: true
-abstract: 'Immersive live audiovisual performance where sensors capture plant bio-signals
-  and transform them into sounds and visuals in real time. Workshops and performances
-  combining biosonification, music, and ecology across Hungary, Réunion, and Mauritius.
+abstract: 'Immersive audiovisual performance linking technology, environment, and the
+  living world: plant bio-signals become sound and image in real time, staged with
+  synths, lasers, and a live musician.
 
   '
-description: Immersive live audiovisual performance where sensors capture plant bio-signals
-  and transform them into sounds and visuals in real time. Workshops and performances
-  combining biosonification, music, and ecology across Hungary, Réunion, and Mauritius.
+description: Sensors on leaves capture plants' micro-variations live; the biological
+  data grows into sound and image before the audience, carried by synthesizers,
+  lasers, algorithms, and multichannel spatialization, tied together by a live musician.
+  Since 2019 the piece has toured Hungary, Réunion Island, Mauritius, and France,
+  paired with intergenerational workshops where plants and scientists join the public.
 category: live-acts
 commissioned: false
 image: "/assets/works/2019-09-19-live-racines-et-resonances/live-racines-et-resonances-gallery01_1440w.jpg"
@@ -21,7 +23,7 @@ metadata:
   based_in: Budapest, Hungary · Réunion Island · Mauritius
   role: composer, sound artist, performer, workshop facilitator
   technology: modular synthesizers, violin, biological data capture system, generative
-    visuals
+    visuals, lasers, multichannel spatial audio (quadraphonic, octophonic, and beyond)
   custom:
   - label: Format
     value: Live performances, workshops
@@ -50,11 +52,17 @@ sections:
   content: |
     A 60-minute immersive concert where J3ZZ performs solo with violin, synthesizers, and electronic instruments.
 
-    **What you'll encounter:** Plants connected to a biological data capture system are the central focus. Their bio-signals are translated in real time into sound textures and visual projections. The audience sits at the center of an immersive soundscape — configured in stereo, quadraphonic, or octophonic depending on the venue — while large-scale projections reveal the plants' reactions. Solemn lighting, fog evoking tropical forests, and visible technology create an intimate atmosphere that merges the natural and human worlds.
+    **What you'll encounter:** Plants connected to a biological data capture system are the central focus. Sensors placed on their leaves capture live micro-variations, translated in real time into sound and image that grow algorithmically before the audience's eyes — nature becomes a direct source of sound and image, carried by synthesizers, lasers, algorithms, and multichannel sound spatialization — stereo, quadraphonic, octophonic, or more depending on the venue — and tied together by the presence of a live musician. Solemn lighting, fog evoking tropical forests, and visible technology create an intimate atmosphere that merges the natural and human worlds.
 
-    **Why it matters:** This is not a concert in the traditional sense. It's an encounter designed to awaken your perception of the living world around you. Spectators leave transformed — many seek out the artist afterward, compelled to share what they experienced and felt. It's the kind of work that lingers.
+    **Why it matters:** This is not a concert in the traditional sense, nor a lecture. Rather than arguing through discourse, **Racines & Résonances** questions our habits — what we consume, how we consume it, our relationship to mobile and connected devices, and now to artificial intelligence — through the sensory shock of direct experience. It's an encounter designed to awaken your perception of the living world around you. Audiences leave surprised, sometimes shaken, gripped by questions as universal as climate, the preservation of the planet, and a more conscious way of inhabiting the world. Many seek out the artist afterward, compelled to share what they experienced and felt.
 
     **Audience response:** Feedback consistently highlighted the work's uniqueness, originality, and poetic depth. Spectators expressed a desire to engage with the artist afterward, demonstrating that **Racines & Résonances** had sparked genuine reflection on our relationship with the living world.
+- type: text
+  title: Workshops & Community
+  content: |
+    Performances are frequently paired with biosonification workshops for an intergenerational public. Participants — plants and scientists alike — are involved, on the same footing as the audience, in the performance and installation as a whole: a bridge between generations and communities.
+
+    **Racines & Résonances** is a foundational piece in J3ZZ's body of work. It already carries the artist's signature gesture: capturing the imperceptible to give it a shared, sensible form — underscored by its role opening Réunion Island's first sound art exhibition in August 2025.
 - type: text
   title: Past Performances
   content: |
