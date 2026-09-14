@@ -5,6 +5,7 @@ layout: work
 print_hero_image: true
 title: REALITY IN DISGUISE
 work_id: reality-in-disguise
+lang_alternate: /fr/works/2010-08-21-live-reality-in-disguise/
 abstract: 'One of seven flagship productions in the Art''n''Go initiative — a live
   interdisciplinary show co-created with emerging artists from 11 European countries,
   blending violin, composition, contemporary dance, spoken word, and visual arts.

@@ -3,6 +3,7 @@ published: true
 show_in_grid: false
 status: archived
 layout: work
+lang_alternate: /fr/works/2008-11-27-live-the-last-drops/
 title: The Last Drops
 work_id: the-last-drops
 abstract: 'Violinist with The Last Drops, a Budapest-based Americana band playing

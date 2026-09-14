@@ -5,6 +5,7 @@ layout: work
 title: HYBRIS EX NIHILO
 print_hero_image: true
 work_id: hybris-ex-nihilo-live
+lang_alternate: /fr/works/2015-05-10-rels-ex-nihilo/
 abstract: 'A trio of pure improvisation recordings for acoustic cello and violin.
 
   '

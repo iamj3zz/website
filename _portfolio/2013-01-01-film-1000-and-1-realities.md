@@ -5,6 +5,7 @@ layout: work
 print_hero_image: true
 title: 1000 AND 1 REALITIES
 work_id: 1000-and-1-realities
+lang_alternate: /fr/works/2013-01-01-film-1000-and-1-realities/
 abstract: 'An international educational animation project creating films from children''s
   drawings in Iraq, Turkey, and Cyprus. J3ZZ composed original soundtracks for three
   animated shorts, a documentary, and promotional materials.

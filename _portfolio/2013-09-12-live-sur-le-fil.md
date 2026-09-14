@@ -4,6 +4,7 @@ status: major
 layout: work
 title: SUR LE FIL
 work_id: sur-le-fil
+lang_alternate: /fr/works/2013-09-12-live-sur-le-fil/
 abstract: 'Solo violin improvisation show — nude and contemporary acoustic violin,
   performed live without preparation. Two recordings released on Bandcamp.
 
@@ -88,9 +89,9 @@ sections:
 
     This is why Sur le fil depends essentially on live performance. It is a work that exists fully only in the shared presence of the moment.
 
-    **Une recherche en mouvement**
+    **A research in motion**
 
-    Parce que Sur le fil est live et non répétable, la recherche qu'il représente ne peut jamais être « terminée ». Chaque performance ajoute une couche de compréhension sur ce qu'est improviser, ce que peut dire le violon, comment le corps et l'instrument dialoguent sous la pression de l'instant. Sur le fil n'est pas une solution à un problème, mais une question constamment posée au violon, au musicien, au public.
+    Because Sur le fil is live and unrepeatable, the inquiry it represents can never be "finished." Each performance adds a layer of understanding about what it means to improvise, what the violin can say, how body and instrument dialogue under the pressure of the moment. Sur le fil is not a solution to a problem, but a question constantly posed to the violin, the musician, the audience.
 - type: text
   title: 'Scenic presence: Verticality and concentration'
   content: |

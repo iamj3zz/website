@@ -29,6 +29,32 @@ nav:
     en: "BOOK"
     fr: "BOOK"
 
+# ─────────────────────────────────────────────
+# Portfolio Category Display Names
+# ─────────────────────────────────────────────
+categories:
+  installations:
+    en: "Installations"
+    fr: "Installations"
+  live-acts:
+    en: "Live Acts"
+    fr: "Lives"
+  films:
+    en: "Films"
+    fr: "Films"
+  performances:
+    en: "Performances"
+    fr: "Performances"
+  releases:
+    en: "Releases"
+    fr: "Releases"
+  workshops:
+    en: "Workshops"
+    fr: "Ateliers"
+  residencies:
+    en: "Residencies"
+    fr: "Résidences"
+
 lang_switcher:
   label_en:
     en: "EN"
@@ -182,6 +208,132 @@ metadata:
   packaging:
     en: "Packaging"
     fr: "Emballage"
+  released_on:
+    en: "Released on"
+    fr: "Sorti le"
+  date:
+    en: "Date"
+    fr: "Date"
+  isrc:
+    en: "ISRC"
+    fr: "ISRC"
+  upc:
+    en: "UPC"
+    fr: "UPC"
+  iswc:
+    en: "ISWC"
+    fr: "ISWC"
+  location:
+    en: "Location"
+    fr: "Lieu"
+  based_in:
+    en: "Based in"
+    fr: "Basé à"
+  performed_in:
+    en: "Performed in"
+    fr: "Joué à"
+  places:
+    en: "Places"
+    fr: "Lieux"
+  produced_by:
+    en: "Produced by"
+    fr: "Produit par"
+  client:
+    en: "Client"
+    fr: "Client"
+  commissioned_by:
+    en: "Commissioned by"
+    fr: "Commandé par"
+  curated_by:
+    en: "Curated by"
+    fr: "Curaté par"
+  role:
+    en: "Role"
+    fr: "Rôle"
+  technology:
+    en: "Technology"
+    fr: "Technologie"
+  collaborators:
+    en: "Collaborators"
+    fr: "Collaborateurs"
+  credits:
+    en: "Credits"
+    fr: "Crédits"
+  partners:
+    en: "Partners"
+    fr: "Partenaires"
+  supporters:
+    en: "Supporters"
+    fr: "Soutiens"
+  composer_performer_producer:
+    en: "Composer, performer, producer"
+    fr: "Compositeur, interprète, producteur"
+  mastering_by:
+    en: "Mastering by"
+    fr: "Mastering par"
+  artwork_by:
+    en: "Artwork by"
+    fr: "Illustration par"
+  interview:
+    en: "Interview"
+    fr: "Interview"
+  press_kit:
+    en: "Press kit"
+    fr: "Dossier de presse"
+  socials:
+    en: "Socials"
+    fr: "Réseaux sociaux"
+  special_thanks:
+    en: "Special thanks"
+    fr: "Remerciements"
+
+# ─────────────────────────────────────────────
+# Portfolio Work Detail Pages
+# ─────────────────────────────────────────────
+work:
+  labels:
+    back_to_works:
+      en: "Back to Works"
+      fr: "Retour aux œuvres"
+    reading_time_suffix:
+      en: "min read"
+      fr: "min de lecture"
+
+# ─────────────────────────────────────────────
+# Linked Events Table (on portfolio work pages)
+# ─────────────────────────────────────────────
+linked_events:
+  headers:
+    date:
+      en: "DATE"
+      fr: "DATE"
+    time:
+      en: "TIME"
+      fr: "HEURE"
+    country:
+      en: "COUNTRY"
+      fr: "PAYS"
+    city:
+      en: "CITY"
+      fr: "VILLE"
+    venue:
+      en: "VENUE"
+      fr: "LIEU"
+    tickets:
+      en: "TICKETS"
+      fr: "BILLETS"
+    description:
+      en: "DESCRIPTION"
+      fr: "DESCRIPTION"
+  tickets_label:
+    en: "Tickets"
+    fr: "Billets"
+  no_events_message:
+    en: "No events linked to this work."
+    fr: "Aucun événement lié à cette œuvre."
+  show_full_description:
+    en: "Show full description"
+    fr: "Afficher la description complète"
 
 # ─────────────────────────────────────────────
 # Artwork Inquiry Modal

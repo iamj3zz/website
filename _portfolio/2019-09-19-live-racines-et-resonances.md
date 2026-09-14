@@ -4,6 +4,7 @@ status: major
 layout: work
 title: RACINES & RESONANCES
 work_id: racines-et-resonances
+lang_alternate: /fr/works/2019-09-19-live-racines-et-resonances/
 print_hero_image: true
 abstract: 'Immersive audiovisual performance linking technology, environment, and the
   living world: plant bio-signals become sound and image in real time, staged with

@@ -3,6 +3,7 @@ published: true
 show_in_grid: false
 status: archived
 layout: work
+lang_alternate: /fr/works/2011-04-03-live-iparkutya/
 title: IparKutya
 work_id: iparkutya
 abstract: 'Band performance featuring J3ZZ as violinist. Live appearance at Budapest

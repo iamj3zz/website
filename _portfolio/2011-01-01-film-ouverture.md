@@ -4,6 +4,7 @@ status: major
 layout: work
 title: Ouverture
 work_id: ouverture
+lang_alternate: /fr/works/2011-01-01-film-ouverture/
 abstract: A short film exploring themes of art, colors, sex, love, and communication.
 description: A short film exploring themes of art, colors, sex, love, and communication.
 category: films

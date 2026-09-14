@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: FAR POINT
 work_id: far-point
+lang_alternate: /fr/works/2012-01-01-film-far-point/
 print_hero_image: true
 abstract: 'A four-minute science fiction short created in 48 hours for SCI-FI-LONDON
   2012. A speculative fiction exploring population control, mortality, and the state''s

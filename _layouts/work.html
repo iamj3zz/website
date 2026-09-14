@@ -64,11 +64,15 @@
         {% if page.categories %}
           <p class="work-category">
             {% for cat in page.categories %}
-              {{ cat | replace: '-', ' ' | upcase }}{% unless forloop.last %} + {% endunless %}
+              {% assign cat_name = _trans.categories[cat][_lang] %}
+              {% unless cat_name %}{% assign cat_name = cat | replace: '-', ' ' | capitalize %}{% endunless %}
+              {{ cat_name | upcase }}{% unless forloop.last %} + {% endunless %}
             {% endfor %}
           </p>
         {% elsif page.category %}
-          <p class="work-category">{{ page.category | replace: '-', ' ' | upcase }}</p>
+          {% assign cat_name = _trans.categories[page.category][_lang] %}
+          {% unless cat_name %}{% assign cat_name = page.category | replace: '-', ' ' | capitalize %}{% endunless %}
+          <p class="work-category">{{ cat_name | upcase }}</p>
         {% endif %}
         <h1>{{ page.title }}</h1>
 
@@ -96,9 +100,29 @@
             {% assign reading_time = 1 %}
           {% endif %}
 
-          <span class="metadata-item">{{ reading_time }} min read</span>
+          {% comment %} Localize "last updated" month name via translations.yml {% endcomment %}
+          {% assign lm_month_index = page.last_modified_at | date: "%-m" | plus: 0 %}
+          {% case lm_month_index %}
+            {% when 1 %}{% assign lm_month_key = 'january' %}
+            {% when 2 %}{% assign lm_month_key = 'february' %}
+            {% when 3 %}{% assign lm_month_key = 'march' %}
+            {% when 4 %}{% assign lm_month_key = 'april' %}
+            {% when 5 %}{% assign lm_month_key = 'may' %}
+            {% when 6 %}{% assign lm_month_key = 'june' %}
+            {% when 7 %}{% assign lm_month_key = 'july' %}
+            {% when 8 %}{% assign lm_month_key = 'august' %}
+            {% when 9 %}{% assign lm_month_key = 'september' %}
+            {% when 10 %}{% assign lm_month_key = 'october' %}
+            {% when 11 %}{% assign lm_month_key = 'november' %}
+            {% when 12 %}{% assign lm_month_key = 'december' %}
+          {% endcase %}
+          {% assign lm_month_name = _trans.months[lm_month_key][_lang] %}
+          {% assign lm_day = page.last_modified_at | date: "%-d" %}
+          {% assign lm_year = page.last_modified_at | date: "%Y" %}
+
+          <span class="metadata-item">{{ reading_time }} {{ _trans.work.labels.reading_time_suffix[_lang] }}</span>
           <span class="metadata-separator">•</span>
-          <span class="metadata-item">Updated {{ page.last_modified_at | date: "%b %-d, %Y" }}</span>
+          <span class="metadata-item">{{ _trans.artwork.labels.last_updated[_lang] }} {% if _lang == 'fr' %}{{ lm_day }} {{ lm_month_name }} {{ lm_year }}{% else %}{{ lm_month_name }} {{ lm_day }}, {{ lm_year }}{% endif %}</span>
         </div>
       </div>
 
@@ -264,11 +288,20 @@
       {% endif %}
 
       <div class="work-nav">
+        {% comment %} Only walk prev/next within the current page's own language, so EN/FR works never interleave {% endcomment %}
+        {% assign lang_portfolio = "" | split: "" %}
+        {% for w in site.portfolio %}
+          {% assign w_lang = w.lang | default: 'en' %}
+          {% if w_lang == _lang %}
+            {% assign lang_portfolio = lang_portfolio | push: w %}
+          {% endif %}
+        {% endfor %}
+
         <div class="work-nav-left">
           {% comment %} Find previous work in grid (newer, earlier in newest-first order) {% endcomment %}
           {% assign prev_work = nil %}
           {% assign found_current = false %}
-          {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' %}
+          {% assign sorted_portfolio = lang_portfolio | sort: 'metadata.release_date' %}
           {% for work in sorted_portfolio %}
             {% if found_current and work.published != false and work.show_in_grid != false %}
               {% assign prev_work = work %}
@@ -280,11 +313,13 @@
           {% endfor %}
 
           {% if prev_work %}
+            {% assign prev_cat_name = _trans.categories[prev_work.category][_lang] %}
+            {% unless prev_cat_name %}{% assign prev_cat_name = prev_work.category | replace: '-', ' ' | capitalize %}{% endunless %}
             <a href="{{ prev_work.url | relative_url }}" class="work-nav-link">
               <span class="nav-arrow">&larr;</span>
               <span class="nav-text">
                 <span class="nav-label">{{ prev_work.title }}</span>
-                <span class="nav-title">{{ prev_work.category | replace: '-', ' ' | capitalize }}</span>
+                <span class="nav-title">{{ prev_cat_name }}</span>
               </span>
             </a>
           {% else %}
@@ -293,14 +328,14 @@
         </div>
 
         <div class="work-nav-center">
-          <a href="{{ '/works/' | relative_url }}" class="back-to-works">Back to Works</a>
+          <a href="{% if _lang == 'fr' %}/fr/works/{% else %}/works/{% endif %}" class="back-to-works">{{ _trans.work.labels.back_to_works[_lang] }}</a>
         </div>
 
         <div class="work-nav-right">
           {% comment %} Find next work in grid (older, later in newest-first order) {% endcomment %}
           {% assign next_work = nil %}
           {% assign found_current_next = false %}
-          {% assign sorted_portfolio_reverse = site.portfolio | sort: 'metadata.release_date' | reverse %}
+          {% assign sorted_portfolio_reverse = lang_portfolio | sort: 'metadata.release_date' | reverse %}
           {% for work in sorted_portfolio_reverse %}
             {% if found_current_next and work.published != false and work.show_in_grid != false %}
               {% assign next_work = work %}
@@ -312,10 +347,12 @@
           {% endfor %}
 
           {% if next_work %}
+            {% assign next_cat_name = _trans.categories[next_work.category][_lang] %}
+            {% unless next_cat_name %}{% assign next_cat_name = next_work.category | replace: '-', ' ' | capitalize %}{% endunless %}
             <a href="{{ next_work.url | relative_url }}" class="work-nav-link">
               <span class="nav-text">
                 <span class="nav-label">{{ next_work.title }}</span>
-                <span class="nav-title">{{ next_work.category | replace: '-', ' ' | capitalize }}</span>
+                <span class="nav-title">{{ next_cat_name }}</span>
               </span>
               <span class="nav-arrow">&rarr;</span>
             </a>

@@ -2,6 +2,7 @@
 published: true
 status: minor
 layout: work
+lang_alternate: /fr/works/2015-04-18-live-modeo/
 title: Modeo
 work_id: modeo
 abstract: 'Live act collaboration with Modeo, performing as violinist in two Budapest

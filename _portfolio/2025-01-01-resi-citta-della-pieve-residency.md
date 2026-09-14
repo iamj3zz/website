@@ -3,6 +3,7 @@ published: true
 status: major
 show_in_grid: false
 layout: work
+lang_alternate: /fr/works/2025-01-01-resi-citta-della-pieve-residency/
 title: Citta Della Pieve Residency
 work_id: citta-della-pieve-residency
 abstract: 'An artistic residency in Citta Della Pieve, Italy, where the Vibrotanica

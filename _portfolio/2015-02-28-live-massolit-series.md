@@ -4,6 +4,7 @@ status: major
 layout: work
 title: "MASSOLIT SERIES"
 work_id: massolit-series
+lang_alternate: /fr/works/2015-02-28-live-massolit-series/
 abstract: |
   MASSOLIT SERIES was a cycle of seven live improvisation encounters founded by J3ZZ at Massolit Books & Café, Budapest (2015). Two musicians who had never played together met on stage with no preparation, improvised while a Polaroid photograph developed before their eyes, then opened the floor for dialogue with the audience.
 description: |

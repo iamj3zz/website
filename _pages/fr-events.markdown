@@ -66,7 +66,11 @@ page_type: events
           </div>
           <div class="event-col-work">
             {% if event.work_id %}
-              {% assign linked_work = site.portfolio | where: "work_id", event.work_id | first %}
+              {% assign work_candidates = site.portfolio | where: "work_id", event.work_id %}
+              {% assign linked_work = work_candidates | where_exp: "w", "w.lang == 'fr'" | first %}
+              {% unless linked_work %}
+                {% assign linked_work = work_candidates | where_exp: "w", "w.lang == nil or w.lang == 'en'" | first %}
+              {% endunless %}
               {% if linked_work %}
                 <a href="{{ linked_work.url }}" class="event-work-link">{{ linked_work.title | upcase }}</a>
               {% endif %}

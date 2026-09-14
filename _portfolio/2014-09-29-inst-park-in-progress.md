@@ -4,6 +4,7 @@ status: major
 layout: work
 title: PARK IN PROGRESS
 work_id: park-in-progress
+lang_alternate: /fr/works/2014-09-29-inst-park-in-progress/
 print_hero_image: true
 abstract: 'A multichannel sound installation in Nicosia''s UN buffer zone, Europe''s
   last divided capital — sixteen speakers carry a body-made soundscape, a living

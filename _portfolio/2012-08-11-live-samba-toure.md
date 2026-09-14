@@ -2,6 +2,7 @@
 published: true
 status: minor
 layout: work
+lang_alternate: /fr/works/2012-08-11-live-samba-toure/
 title: SAMBA TOURÉ
 work_id: samba-toure
 print_hero_image: true

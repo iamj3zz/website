@@ -115,6 +115,14 @@ base-uri 'self';
 </script>
 
 <!-- Breadcrumb Schema for Portfolio Works -->
+{% assign _trans = site.data.translations %}
+{% assign breadcrumb_works_url = site.url | append: "/works/" %}
+{% assign breadcrumb_cat_name = page.category | replace: '-', ' ' | capitalize %}
+{% if page_lang == 'fr' %}
+  {% assign breadcrumb_works_url = site.url | append: "/fr/works/" %}
+  {% assign _cat_trans = _trans.categories[page.category][page_lang] %}
+  {% if _cat_trans %}{% assign breadcrumb_cat_name = _cat_trans %}{% endif %}
+{% endif %}
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -123,14 +131,14 @@ base-uri 'self';
     {
       "@type": "ListItem",
       "position": 1,
-      "name": "Works",
-      "item": "{{ site.url }}/works/"
+      "name": "{{ _trans.nav.works[page_lang] }}",
+      "item": "{{ breadcrumb_works_url }}"
     },
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "{{ page.category | replace: '-', ' ' | capitalize }}",
-      "item": "{{ site.url }}/works/"
+      "name": "{{ breadcrumb_cat_name }}",
+      "item": "{{ breadcrumb_works_url }}"
     },
     {
       "@type": "ListItem",

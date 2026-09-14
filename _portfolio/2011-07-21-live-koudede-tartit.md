@@ -4,6 +4,7 @@ status: major
 layout: work
 title: KOUDEDE & TARTIT
 work_id: koudede-tartit
+lang_alternate: /fr/works/2011-07-21-live-koudede-tartit/
 print_hero_image: false
 abstract: 'A cross-cultural collaboration spanning two performances at Festival au
   Désert/presenze d''Africa: J3ZZ performed with TARTIT (Tuareg all-female vocal ensemble)

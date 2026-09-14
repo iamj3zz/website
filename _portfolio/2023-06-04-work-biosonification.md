@@ -4,6 +4,7 @@ status: major
 layout: work
 title: BIOSONIFICATION
 work_id: biosonification-workshops
+lang_alternate: /fr/works/2023-06-04-work-biosonification/
 print_hero_image: true
 abstract: 'Educational workshops and ateliers exploring plant biosonification through
   the collective "Nout plant i chant". Participants learn to capture plant vibrations

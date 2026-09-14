@@ -5,6 +5,7 @@ require 'yaml'
 require 'fileutils'
 require 'json'
 require 'time'
+require 'date'
 
 # Read Jekyll config
 config = YAML.load_file('_config.yml')
@@ -18,7 +19,7 @@ sitemap_xml = %{<?xml version="1.0" encoding="UTF-8"?>
 def parse_front_matter(content)
   if content.start_with?('---')
     parts = content.split('---', 3)
-    YAML.safe_load(parts[1]) || {}
+    YAML.safe_load(parts[1], permitted_classes: [Date, Time]) || {}
   else
     {}
   end

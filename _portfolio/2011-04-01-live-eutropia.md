@@ -5,6 +5,7 @@ layout: work
 print_hero_image: true
 title: EUTROPIA
 work_id: eutropia
+lang_alternate: /fr/works/2011-04-01-live-eutropia/
 abstract: 'Multidisciplinary collaborative performance exploring cultural dialogue
   across 9 European countries, 250+ artists, EU-funded residencies.
 

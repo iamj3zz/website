@@ -3,6 +3,7 @@ published: true
 status: major
 show_in_grid: false
 layout: work
+lang_alternate: /fr/works/2023-01-01-resi-cite-des-arts-residency/
 title: Cité des arts Residency
 work_id: cite-des-arts-residency
 abstract: 'An artistic residency at Cité des arts in Saint-Denis, Réunion Island,

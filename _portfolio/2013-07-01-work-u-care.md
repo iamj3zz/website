@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: U-CARE
 work_id: u-care-workshop
+lang_alternate: /fr/works/2013-07-01-work-u-care/
 abstract: 'Facilitator and music coach for a multicultural group of young adult artists,
   as part of U-CARE — Urban Culture Against Racism in Europe, a European project hosted
   by Associazione Fabbrica Europa in Florence.

@@ -5,6 +5,7 @@ layout: work
 title: TRAVEL BUDDY
 print_hero_image: true
 work_id: travel-buddy
+lang_alternate: /fr/works/2014-01-01-film-travel-buddy/
 abstract: 'A 18-minute drama exploring grief, justice, and the lengths a father will
   go to protect his son. Feri embarks on a cross-European road trip with his son Dani
   — but beneath the surface of a father-son adventure lies a quest for reckoning.

@@ -4,6 +4,7 @@ status: major
 layout: work
 title: UNBALANCED FORCES
 work_id: unbalanced-forces
+lang_alternate: /fr/works/2016-02-13-inst-unbalanced-forces/
 print_hero_image: true
 abstract: 'A performative sound installation and interactive experience: violin and
   shepherd''s flute on a makeshift altar, a real-time soundscape swelling toward silence

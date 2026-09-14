@@ -5,6 +5,7 @@ layout: work
 title: STEREO WOODS
 print_hero_image: true
 work_id: stereo-woods
+lang_alternate: /fr/works/2020-04-13-rels-stereo-woods/
 abstract: 'A solo live recording performed outdoors — violin, synths, sequencers,
   loop pedal and effects pedals, under a tree in a valley.
 

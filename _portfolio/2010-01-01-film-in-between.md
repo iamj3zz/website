@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: In Between
 work_id: in-between
+lang_alternate: /fr/works/2010-01-01-film-in-between/
 print_hero_image: true
 abstract: 'A video installation and short film by Iranian-born artist Massih Parsaei,
   with original soundtrack composition and production by J3ZZ. An early collaborative

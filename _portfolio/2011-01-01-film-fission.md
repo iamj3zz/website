@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: Fission
 work_id: fission
+lang_alternate: /fr/works/2011-01-01-film-fission/
 print_hero_image: true
 abstract: 'An experimental dance short film created during a creative residency in
   Cologne. Co-directed by Ana Maria Staicu and Paris Tume, with original music composition

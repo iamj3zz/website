@@ -7,6 +7,7 @@ title: 'Best Friend''s Wife''s Lover
 
   '
 work_id: best-friends-wifes-lover
+lang_alternate: /fr/works/2012-01-01-film-best-friends-wifes-lover/
 abstract: A short fiction film exploring an emotionally charged moment.
 description: A short fiction film exploring an emotionally charged moment.
 category: films

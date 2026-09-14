@@ -23,7 +23,7 @@ page_type: works
   </div>
 
   <div class="portfolio-grid">
-    {% assign sorted_portfolio = site.portfolio | sort: 'metadata.release_date' | reverse %}
+    {% assign sorted_portfolio = site.portfolio | where_exp: "w", "w.lang == nil or w.lang == 'en'" | sort: 'metadata.release_date' | reverse %}
     {% comment %} Filter out unpublished items and items not shown in grid {% endcomment %}
     {% for item in sorted_portfolio %}
       {% if item.published == false or item.show_in_grid == false %}
@@ -58,7 +58,7 @@ page_type: works
 
   <div class="works-list-print">
     {% assign categories_order = "installations,live-acts,films,performances,releases,workshops" | split: "," %}
-    {% assign all_works = site.portfolio | sort: 'metadata.release_date' | reverse %}
+    {% assign all_works = site.portfolio | where_exp: "w", "w.lang == nil or w.lang == 'en'" | sort: 'metadata.release_date' | reverse %}
 
     {% for cat in categories_order %}
       {% comment %} Collect works in this category {% endcomment %}

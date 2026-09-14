@@ -5,6 +5,7 @@ print_hero_image: true
 layout: work
 title: A DROP IN THE OCEAN
 work_id: a-drop-in-the-ocean
+lang_alternate: /fr/works/2020-05-20-rels-a-drop-in-the-ocean/
 abstract: 'A meditative solo album of three long-form tracks — synths, sequencers,
   violin and effects pedals, performed live.
 

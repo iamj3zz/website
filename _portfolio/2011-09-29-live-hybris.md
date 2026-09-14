@@ -4,6 +4,7 @@ status: major
 layout: work
 title: HYBRIS
 work_id: hybris
+lang_alternate: /fr/works/2011-09-29-live-hybris/
 abstract: 'A sophisticated experimental project exploring live improvisation with
   acoustic strings and electronics, blending disruption with harmony, and contemporary
   experimental aesthetics with acoustic classical roots.

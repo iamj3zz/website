@@ -5,6 +5,7 @@ layout: work
 print_hero_image: true
 title: Ricordi di cosa profuma la terra
 work_id: ricordi-di-cosa-profuma-la-terra
+lang_alternate: /fr/works/2010-01-01-film-ricordi-di-cosa-profuma-la-terra/
 abstract: 'An experimental animated short film. The composer created an entirely original
   soundscape using home-recorded audio samples, guitar, and violin — building a complete
   sonic landscape from intimate domestic sources.

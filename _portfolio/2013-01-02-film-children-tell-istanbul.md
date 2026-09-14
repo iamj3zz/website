@@ -5,6 +5,7 @@ layout: work
 print_hero_image: true
 title: CHILDREN TELL ISTANBUL
 work_id: children-tell-istanbul
+lang_alternate: /fr/works/2013-01-02-film-children-tell-istanbul/
 abstract: 'A documentary by animator Olga Pavlenko capturing children''s voices and
   perspectives on Istanbul. J3ZZ composed an original score that honors the intimate,
   observational nature of the work.

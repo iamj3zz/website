@@ -5,6 +5,7 @@ layout: work
 print_hero_image: true
 title: BUILDING UP CREATIVITY
 work_id: building-up-creativity
+lang_alternate: /fr/works/2017-01-01-film-building-up-creativity/
 abstract: 'A dance-based film exploring PhD research on how humans evaluate creativity.
   J3ZZ composed an original score translating research into movement and sound.
 
@@ -19,9 +20,9 @@ metadata:
   location: London, UK / Budapest, Hungary
   role: composer, producer
   commissioned_by: Judit Pétervári
-  collaborators: Judit Pétervári (researcher/creator), JLTT - J3ZZ (composer/producer),
+  collaborators: Judit Pétervári (researcher/creator), J3ZZ (composer/producer),
     Queen Mary University of London
-  credits: 'Researcher/creator: Judit Pétervári. Composer/producer:  (J3ZZ). PhD supervisors:
+  credits: 'Researcher/creator: Judit Pétervári. Composer/producer: J3ZZ. PhD supervisors:
     Magda Osman, Joydeep Bhattacharya. Institution: School of Biological and Chemical
     Sciences, Queen Mary University of London. Additional credits: Artus Stúdió, Magdolna
     Fodor, Péter Goretić, Natália Kovács, Erik Lakatos, Péter Novák, Gábor Szűcs,

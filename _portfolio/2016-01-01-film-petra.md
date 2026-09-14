@@ -5,6 +5,7 @@ layout: work
 title: PETRA
 print_hero_image: true
 work_id: petra
+lang_alternate: /fr/works/2016-01-01-film-petra/
 abstract: 'Georgia State University''s inaugural student feature film. A sassy romantic
   comedy about an American photographer and a Hungarian art professor discovering
   that "off the grid" means something different to each of them.

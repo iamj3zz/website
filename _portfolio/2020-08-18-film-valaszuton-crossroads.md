@@ -5,6 +5,7 @@ layout: work
 print_hero_image: true
 title: VÁLASZÚTON / CROSSROADS
 work_id: valaszuton-crossroads
+lang_alternate: /fr/works/2020-08-18-film-valaszuton-crossroads/
 abstract: 'Soundtrack composition and production for Flóra Chilton''s award-winning
   short film exploring child trafficking and human exploitation. The film emerged
   from a Self-Awareness Film Workshop addressing vulnerabilities of youth in crisis.

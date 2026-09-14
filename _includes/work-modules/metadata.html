@@ -78,21 +78,45 @@
   <div class="metadata-grid">
     {% comment %} Temporal Information {% endcomment %}
     {% if release_date %}
+      {% comment %} Localize the release-date month name via translations.yml {% endcomment %}
+      {% assign rd_month_index = release_date | date: "%-m" | plus: 0 %}
+      {% case rd_month_index %}
+        {% when 1 %}{% assign rd_month_key = 'january' %}
+        {% when 2 %}{% assign rd_month_key = 'february' %}
+        {% when 3 %}{% assign rd_month_key = 'march' %}
+        {% when 4 %}{% assign rd_month_key = 'april' %}
+        {% when 5 %}{% assign rd_month_key = 'may' %}
+        {% when 6 %}{% assign rd_month_key = 'june' %}
+        {% when 7 %}{% assign rd_month_key = 'july' %}
+        {% when 8 %}{% assign rd_month_key = 'august' %}
+        {% when 9 %}{% assign rd_month_key = 'september' %}
+        {% when 10 %}{% assign rd_month_key = 'october' %}
+        {% when 11 %}{% assign rd_month_key = 'november' %}
+        {% when 12 %}{% assign rd_month_key = 'december' %}
+      {% endcase %}
+      {% assign rd_month_name = _trans.months[rd_month_key][_lang] %}
+      {% assign rd_day = release_date | date: "%-d" %}
+      {% assign rd_year = release_date | date: "%Y" %}
+      {% if _lang == 'fr' %}
+        {% assign release_date_display = rd_day | append: " " | append: rd_month_name | append: " " | append: rd_year %}
+      {% else %}
+        {% assign release_date_display = rd_month_name | append: " " | append: rd_day | append: ", " | append: rd_year %}
+      {% endif %}
       <div class="metadata-item">
-        <span class="metadata-label">Released on</span>
+        <span class="metadata-label">{{ _trans.metadata.released_on[_lang] }}</span>
         <span class="metadata-value">
-          {% if release_date_link %}<a href="{{ release_date_link }}" target="_blank" rel="noopener noreferrer">{{ release_date | date: "%B %-d, %Y" }}</a>
+          {% if release_date_link %}<a href="{{ release_date_link }}" target="_blank" rel="noopener noreferrer">{{ release_date_display }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
               <span class="metadata-qr-placeholder" data-url="{{ release_date_link }}"></span>
               <span class="metadata-print-url">{{ release_date_link }}</span>
             </span>
-          {% else %}{{ release_date | date: "%B %-d, %Y" }}{% endif %}
+          {% else %}{{ release_date_display }}{% endif %}
         </span>
       </div>
     {% endif %}
     {% if date %}
       <div class="metadata-item">
-        <span class="metadata-label">Date</span>
+        <span class="metadata-label">{{ _trans.metadata.date[_lang] }}</span>
         <span class="metadata-value">
           {% if date_link %}<a href="{{ date_link }}" target="_blank" rel="noopener noreferrer">{{ date }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -107,7 +131,7 @@
     {% comment %} Industry Identifiers {% endcomment %}
     {% if isrc %}
       <div class="metadata-item">
-        <span class="metadata-label">ISRC</span>
+        <span class="metadata-label">{{ _trans.metadata.isrc[_lang] }}</span>
         <span class="metadata-value">
           {% if isrc_link %}<a href="{{ isrc_link }}" target="_blank" rel="noopener noreferrer">{{ isrc }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -120,7 +144,7 @@
     {% endif %}
     {% if upc %}
       <div class="metadata-item">
-        <span class="metadata-label">UPC</span>
+        <span class="metadata-label">{{ _trans.metadata.upc[_lang] }}</span>
         <span class="metadata-value">
           {% if upc_link %}<a href="{{ upc_link }}" target="_blank" rel="noopener noreferrer">{{ upc }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -133,7 +157,7 @@
     {% endif %}
     {% if iswc %}
       <div class="metadata-item">
-        <span class="metadata-label">ISWC</span>
+        <span class="metadata-label">{{ _trans.metadata.iswc[_lang] }}</span>
         <span class="metadata-value">
           {% if iswc_link %}<a href="{{ iswc_link }}" target="_blank" rel="noopener noreferrer">{{ iswc }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -148,7 +172,7 @@
     {% comment %} Location Information {% endcomment %}
     {% if location %}
       <div class="metadata-item">
-        <span class="metadata-label">Location</span>
+        <span class="metadata-label">{{ _trans.metadata.location[_lang] }}</span>
         <span class="metadata-value">
           {% if location_link %}<a href="{{ location_link }}" target="_blank" rel="noopener noreferrer">{{ location }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -161,7 +185,7 @@
     {% endif %}
     {% if based_in %}
       <div class="metadata-item">
-        <span class="metadata-label">Based in</span>
+        <span class="metadata-label">{{ _trans.metadata.based_in[_lang] }}</span>
         <span class="metadata-value">
           {% if based_in_link %}<a href="{{ based_in_link }}" target="_blank" rel="noopener noreferrer">{{ based_in }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -174,7 +198,7 @@
     {% endif %}
     {% if performed_in %}
       <div class="metadata-item">
-        <span class="metadata-label">Performed in</span>
+        <span class="metadata-label">{{ _trans.metadata.performed_in[_lang] }}</span>
         <span class="metadata-value">
           {% if performed_in_link %}<a href="{{ performed_in_link }}" target="_blank" rel="noopener noreferrer">{{ performed_in }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -187,7 +211,7 @@
     {% endif %}
     {% if places %}
       <div class="metadata-item">
-        <span class="metadata-label">Places</span>
+        <span class="metadata-label">{{ _trans.metadata.places[_lang] }}</span>
         <span class="metadata-value">
           {% if places_link %}<a href="{{ places_link }}" target="_blank" rel="noopener noreferrer">{{ places }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -202,7 +226,7 @@
     {% comment %} Production Information {% endcomment %}
     {% if produced_by %}
       <div class="metadata-item">
-        <span class="metadata-label">Produced by</span>
+        <span class="metadata-label">{{ _trans.metadata.produced_by[_lang] }}</span>
         <span class="metadata-value">
           {% if produced_by_link %}<a href="{{ produced_by_link }}" target="_blank" rel="noopener noreferrer">{{ produced_by }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -215,7 +239,7 @@
     {% endif %}
     {% if commissioned_by %}
       <div class="metadata-item">
-        <span class="metadata-label">Commissioned by</span>
+        <span class="metadata-label">{{ _trans.metadata.commissioned_by[_lang] }}</span>
         <span class="metadata-value">
           {% if commissioned_by_link %}<a href="{{ commissioned_by_link }}" target="_blank" rel="noopener noreferrer">{{ commissioned_by }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -228,7 +252,7 @@
     {% endif %}
     {% if curated_by %}
       <div class="metadata-item">
-        <span class="metadata-label">Curated by</span>
+        <span class="metadata-label">{{ _trans.metadata.curated_by[_lang] }}</span>
         <span class="metadata-value">
           {% if curated_by_link %}<a href="{{ curated_by_link }}" target="_blank" rel="noopener noreferrer">{{ curated_by }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -243,7 +267,7 @@
     {% comment %} Role and Technology {% endcomment %}
     {% if role %}
       <div class="metadata-item">
-        <span class="metadata-label">Role</span>
+        <span class="metadata-label">{{ _trans.metadata.role[_lang] }}</span>
         <span class="metadata-value">
           {% if role_link %}<a href="{{ role_link }}" target="_blank" rel="noopener noreferrer">{{ role }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -256,7 +280,7 @@
     {% endif %}
     {% if technology %}
       <div class="metadata-item">
-        <span class="metadata-label">Technology</span>
+        <span class="metadata-label">{{ _trans.metadata.technology[_lang] }}</span>
         <span class="metadata-value">
           {% if technology_link %}<a href="{{ technology_link }}" target="_blank" rel="noopener noreferrer">{{ technology }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -271,7 +295,7 @@
     {% comment %} Collaborators and Credits {% endcomment %}
     {% if collaborators %}
       <div class="metadata-item">
-        <span class="metadata-label">Collaborators</span>
+        <span class="metadata-label">{{ _trans.metadata.collaborators[_lang] }}</span>
         <span class="metadata-value">
           {% if collaborators_link %}<a href="{{ collaborators_link }}" target="_blank" rel="noopener noreferrer">{{ collaborators }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -284,7 +308,7 @@
     {% endif %}
     {% if credits %}
       <div class="metadata-item">
-        <span class="metadata-label">Credits</span>
+        <span class="metadata-label">{{ _trans.metadata.credits[_lang] }}</span>
         <span class="metadata-value">
           {% if credits_link %}<a href="{{ credits_link }}" target="_blank" rel="noopener noreferrer">{{ credits }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -297,7 +321,7 @@
     {% endif %}
     {% if partners %}
       <div class="metadata-item">
-        <span class="metadata-label">Partners</span>
+        <span class="metadata-label">{{ _trans.metadata.partners[_lang] }}</span>
         <span class="metadata-value">
           {% if partners_link %}<a href="{{ partners_link }}" target="_blank" rel="noopener noreferrer">{{ partners }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -310,7 +334,7 @@
     {% endif %}
     {% if supporters %}
       <div class="metadata-item">
-        <span class="metadata-label">Supporters</span>
+        <span class="metadata-label">{{ _trans.metadata.supporters[_lang] }}</span>
         <span class="metadata-value">
           {% if supporters_link %}<a href="{{ supporters_link }}" target="_blank" rel="noopener noreferrer">{{ supporters }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -325,7 +349,7 @@
     {% comment %} Specific Roles {% endcomment %}
     {% if composer_performer_producer %}
       <div class="metadata-item">
-        <span class="metadata-label">Composer, performer, producer</span>
+        <span class="metadata-label">{{ _trans.metadata.composer_performer_producer[_lang] }}</span>
         <span class="metadata-value">
           {% if composer_performer_producer_link %}<a href="{{ composer_performer_producer_link }}" target="_blank" rel="noopener noreferrer">{{ composer_performer_producer }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -338,7 +362,7 @@
     {% endif %}
     {% if mastering_by %}
       <div class="metadata-item">
-        <span class="metadata-label">Mastering by</span>
+        <span class="metadata-label">{{ _trans.metadata.mastering_by[_lang] }}</span>
         <span class="metadata-value">
           {% if mastering_by_link %}<a href="{{ mastering_by_link }}" target="_blank" rel="noopener noreferrer">{{ mastering_by }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -351,7 +375,7 @@
     {% endif %}
     {% if artwork_by %}
       <div class="metadata-item">
-        <span class="metadata-label">Artwork by</span>
+        <span class="metadata-label">{{ _trans.metadata.artwork_by[_lang] }}</span>
         <span class="metadata-value">
           {% if artwork_by_link %}<a href="{{ artwork_by_link }}" target="_blank" rel="noopener noreferrer">{{ artwork_by }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -366,7 +390,7 @@
     {% comment %} Additional Resources {% endcomment %}
     {% if interview %}
       <div class="metadata-item">
-        <span class="metadata-label">Interview</span>
+        <span class="metadata-label">{{ _trans.metadata.interview[_lang] }}</span>
         <span class="metadata-value">
           {% if interview_link %}<a href="{{ interview_link }}" target="_blank" rel="noopener noreferrer">{{ interview }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -379,7 +403,7 @@
     {% endif %}
     {% if press_kit %}
       <div class="metadata-item">
-        <span class="metadata-label">Press kit</span>
+        <span class="metadata-label">{{ _trans.metadata.press_kit[_lang] }}</span>
         <span class="metadata-value">
           {% if press_kit_link %}<a href="{{ press_kit_link }}" target="_blank" rel="noopener noreferrer">{{ press_kit }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -392,7 +416,7 @@
     {% endif %}
     {% if socials %}
       <div class="metadata-item">
-        <span class="metadata-label">Socials</span>
+        <span class="metadata-label">{{ _trans.metadata.socials[_lang] }}</span>
         <span class="metadata-value">
           {% if socials_link %}<a href="{{ socials_link }}" target="_blank" rel="noopener noreferrer">{{ socials }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -407,7 +431,7 @@
     {% comment %} Acknowledgements {% endcomment %}
     {% if special_thanks %}
       <div class="metadata-item">
-        <span class="metadata-label">Special thanks</span>
+        <span class="metadata-label">{{ _trans.metadata.special_thanks[_lang] }}</span>
         <span class="metadata-value">
           {% if special_thanks_link %}<a href="{{ special_thanks_link }}" target="_blank" rel="noopener noreferrer">{{ special_thanks }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">
@@ -420,7 +444,7 @@
     {% endif %}
     {% if client %}
       <div class="metadata-item">
-        <span class="metadata-label">Client</span>
+        <span class="metadata-label">{{ _trans.metadata.client[_lang] }}</span>
         <span class="metadata-value">
           {% if client_link %}<a href="{{ client_link }}" target="_blank" rel="noopener noreferrer">{{ client }}</a>
             <span class="metadata-print-link-fallback" style="display:none;">

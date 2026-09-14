@@ -4,6 +4,7 @@ status: major
 layout: work
 title: AZALAI
 work_id: azalai
+lang_alternate: /fr/works/2012-01-01-live-azalai/
 print_hero_image: true
 abstract: 'An innovative EU-funded cultural exchange initiative operating as an itinerant
   laboratory for creative experimentation connecting African and European artists

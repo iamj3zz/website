@@ -3,6 +3,7 @@ published: true
 status: major
 show_in_grid: false
 layout: work
+lang_alternate: /fr/works/2023-01-02-resi-kerveguen-residency/
 title: Kerveguen Residency
 work_id: kerveguen-residency
 abstract: 'An artistic residency at Kerveguen in Saint-Pierre, Réunion Island, where

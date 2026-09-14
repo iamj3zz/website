@@ -4,6 +4,7 @@ status: major
 layout: work
 title: TADALAT
 work_id: tadalat
+lang_alternate: /fr/works/2013-07-04-live-tadalat/
 abstract: 'Cross-cultural jam session with Tuareg ensemble TADALAT, exploring desert
   blues and Saharan musical traditions.
 

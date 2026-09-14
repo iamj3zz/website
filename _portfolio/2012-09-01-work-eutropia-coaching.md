@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: EUTROPIA COACHING
 work_id: eutropia-coaching
+lang_alternate: /fr/works/2012-09-01-work-eutropia-coaching/
 abstract: 'Improvisation coaching for a multicultural group of young adult artists,
   as part of EUTROPIA — a European project hosted by Association RiF in Lille, France.
 

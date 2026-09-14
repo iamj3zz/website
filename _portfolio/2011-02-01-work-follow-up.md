@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: FOLLOW-UP
 work_id: follow-up-workshops
+lang_alternate: /fr/works/2011-02-01-work-follow-up/
 abstract: 'Interdisciplinary improvisation coaching for young artists across Europe,
   as part of FOLLOW-UP — a Leonardo da Vinci EU-funded project by Roots & Routes International
   Association exploring non-formal learning in music, dance, and audiovisual arts.

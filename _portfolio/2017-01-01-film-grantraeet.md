@@ -5,6 +5,7 @@ layout: work
 print_hero_image: true
 title: GRANTRAEET
 work_id: Grantraeet
+lang_alternate: /fr/works/2017-01-01-film-grantraeet/
 abstract: 'A contemporary cinematic interpretation of Hans Christian Andersen''s timeless
   parable "The Fir-Tree." Director Amalie Halsey reimagines the tale''s themes of
   ambition, longing, and the bittersweet nature of dreams fulfilled.

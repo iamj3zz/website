@@ -4,6 +4,7 @@ status: major
 layout: work
 title: TOUCH ME NOT
 work_id: touch-me-not-nebancsvirag
+lang_alternate: /fr/works/2013-04-19-perf-touch-me-not-nebancsvirag/
 print_hero_image: true
 abstract: 'A contemporary dance performance by Zoltán Grecsó exploring adolescence
   and fate. Premiered April 2013 at Jurányi Produkciós Közösségi Inkubátorház, Budapest.

@@ -1,4 +1,6 @@
 <div class="module module-linked-events">
+  {% assign _lang = page.lang | default: 'en' %}
+  {% assign _trans = site.data.translations %}
   {% if include.title %}
     <h2>{{ include.title }}</h2>
   {% endif %}
@@ -32,13 +34,13 @@
 
       <div class="events-table">
         <div class="events-table-header">
-          <div class="event-col-date">DATE</div>
-          <div class="event-col-time">TIME</div>
-          <div class="event-col-country">COUNTRY</div>
-          <div class="event-col-city">CITY</div>
-          <div class="event-col-venue">VENUE</div>
-          <div class="event-col-tickets">TICKETS</div>
-          <div class="event-col-description">DESCRIPTION</div>
+          <div class="event-col-date">{{ _trans.linked_events.headers.date[_lang] }}</div>
+          <div class="event-col-time">{{ _trans.linked_events.headers.time[_lang] }}</div>
+          <div class="event-col-country">{{ _trans.linked_events.headers.country[_lang] }}</div>
+          <div class="event-col-city">{{ _trans.linked_events.headers.city[_lang] }}</div>
+          <div class="event-col-venue">{{ _trans.linked_events.headers.venue[_lang] }}</div>
+          <div class="event-col-tickets">{{ _trans.linked_events.headers.tickets[_lang] }}</div>
+          <div class="event-col-description">{{ _trans.linked_events.headers.description[_lang] }}</div>
         </div>
 
         {% for event in sorted_events %}
@@ -52,11 +54,11 @@
             <div class="event-col-venue">{% if event.venue_link and event.venue_link != "" %}<a href="{{ event.venue_link }}" target="_blank" rel="noopener noreferrer">{{ event.venue_name }}</a>{% else %}{{ event.venue_name }}{% endif %}{% if event.venue_address %}<span class="event-venue-address">{{ event.venue_address }}</span>{% endif %}</div>
             <div class="event-col-tickets">
               {% if event.ticket_link and event.ticket_link != "" %}
-                <a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer" class="event-ticket-link">Tickets</a>
+                <a href="{{ event.ticket_link }}" target="_blank" rel="noopener noreferrer" class="event-ticket-link">{{ _trans.linked_events.tickets_label[_lang] }}</a>
                 <span class="metadata-qr-placeholder" data-url="{{ event.ticket_link }}" style="display:none;"></span>
               {% endif %}
             </div>
-            <div class="event-col-description">{% assign _trunc = site.event_description_truncate | default: 120 %}{% if _trunc > 0 and event.description.size > _trunc %}<span class="event-desc-short">{{ event.description | truncate: _trunc }}</span><span class="event-desc-full" hidden>{{ event.description }}</span><button class="event-desc-toggle" aria-expanded="false" aria-label="Show full description">+</button>{% else %}{{ event.description }}{% endif %}</div>
+            <div class="event-col-description">{% assign _trunc = site.event_description_truncate | default: 120 %}{% if _trunc > 0 and event.description.size > _trunc %}<span class="event-desc-short">{{ event.description | truncate: _trunc }}</span><span class="event-desc-full" hidden>{{ event.description }}</span><button class="event-desc-toggle" aria-expanded="false" aria-label="{{ _trans.linked_events.show_full_description[_lang] }}">+</button>{% else %}{{ event.description }}{% endif %}</div>
           </div>
           {% endif %}
         {% endfor %}
@@ -64,6 +66,6 @@
     </div>
     {% endfor %}
   {% else %}
-    <p class="no-events-message">No events linked to this work.</p>
+    <p class="no-events-message">{{ _trans.linked_events.no_events_message[_lang] }}</p>
   {% endif %}
 </div>

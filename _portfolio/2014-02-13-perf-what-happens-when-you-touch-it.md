@@ -5,6 +5,7 @@ print_hero_image: true
 layout: work
 title: WHAT HAPPENS WHEN YOU TOUCH IT
 work_id: what-happens-when-you-touch-it
+lang_alternate: /fr/works/2014-02-13-perf-what-happens-when-you-touch-it/
 abstract: 'A collaborative dance performance by EnKnapGroup, premiered February 2014
   at Španski borci, Ljubljana. J3ZZ composed and produced the original score.
 

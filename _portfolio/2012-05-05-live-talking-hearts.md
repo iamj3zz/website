@@ -5,6 +5,7 @@ layout: work
 title: TALKING HEARTS
 print_hero_image: true
 work_id: talking-hearts
+lang_alternate: /fr/works/2012-05-05-live-talking-hearts/
 abstract: 'EU-funded interdisciplinary performing arts project bringing together young
   music, media and dance artists from four European countries for improvisation-based
   performances combining visuals, music and movement.
@@ -25,7 +26,7 @@ metadata:
     Fabbrica Europa (Florence, Italy) · EuroEst Foundation (Bucharest, Romania) ·
     University of Barcelona–LMI (Spain)
   credits: |
-    Artistic Direction: J3ZZ (J3ZZ)
+    Artistic Direction: J3ZZ
     Light/Stage Management: Lorenzo Ciacciavicca
     Coaching: Ruben Vandendriessche
     Management: Anna Kudron

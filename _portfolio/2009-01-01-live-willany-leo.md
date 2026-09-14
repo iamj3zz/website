@@ -4,6 +4,7 @@ show_in_grid: false
 print_hero_image: true
 status: archived
 layout: work
+lang_alternate: /fr/works/2009-01-01-live-willany-leo/
 title: Willany léo
 work_id: willany-léo
 abstract: 'Electronic and violinist improviser musician collaborating since 2009 with

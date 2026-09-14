@@ -2,6 +2,7 @@
 published: true
 status: minor
 layout: work
+lang_alternate: /fr/works/2011-07-09-live-summer-suite/
 title: SUMMER SUITE
 work_id: summer-suite
 abstract: 'J3ZZ performed as violin soloist in Summer Suite — a live work-show for

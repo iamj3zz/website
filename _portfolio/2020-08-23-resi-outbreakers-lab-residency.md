@@ -3,6 +3,7 @@ published: true
 status: major
 show_in_grid: false
 layout: work
+lang_alternate: /fr/works/2020-08-23-resi-outbreakers-lab-residency/
 title: Outbreakers' Lab Residency
 work_id: outbreakers-lab-residency
 abstract: 'International mentoring program for emerging musicians combining professional

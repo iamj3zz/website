@@ -4,6 +4,7 @@ status: major
 layout: work
 title: SUPREMA
 work_id: suprema
+lang_alternate: /fr/works/2019-05-03-perf-suprema/
 print_hero_image: true
 abstract: 'The composer was commissioned to create music for choreographer Tímea Sebestyén''s
   contemporary dance work.

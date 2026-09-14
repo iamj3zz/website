@@ -4,6 +4,7 @@ status: major
 layout: work
 title: HOME BASE
 work_id: home-base
+lang_alternate: /fr/works/2016-04-14-perf-home-base/
 abstract: 'Space, sound, and dance installation featuring composer/music producer
   J3ZZ''s commissioned soundtrack.
 

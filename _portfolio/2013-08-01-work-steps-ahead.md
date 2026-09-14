@@ -4,6 +4,7 @@ status: minor
 layout: work
 title: STEPS AHEAD
 work_id: steps-ahead-workshops
+lang_alternate: /fr/works/2013-08-01-work-steps-ahead/
 abstract: 'Coach for junior performing arts and media professionals, as part of STEPS
   AHEAD — Professionalisation of Junior Coaches in Performing Arts and Media, a European
   project hosted by Associazione Fabbrica Europa in Florence.
