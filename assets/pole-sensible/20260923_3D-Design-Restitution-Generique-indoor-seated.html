@@ -1,0 +1,586 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pôle Sensible — Intérieur, amphithéâtre (3D)</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+  :root{
+    --ink:#0a0e13;
+    --panel:rgba(13,22,32,0.74);
+    --panel-border:rgba(143,163,173,0.22);
+    --wall:#b7a98a;
+    --proj:#a58cd6;
+    --laser:#ff5847;
+    --haze:#a9c7de;
+    --audience:#e9d9bb;
+    --speaker:#7fd9c9;
+    --text:#f4eee0;
+    --text-muted:#93a7b1;
+    --text-faint:#5f7480;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;height:100%;background:var(--ink);overflow:hidden;}
+  body{font-family:'Public Sans',ui-sans-serif,system-ui,sans-serif;color:var(--text);}
+  canvas{display:block;position:fixed;inset:0;}
+
+  .veil{position:fixed;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 0%, transparent 45%, rgba(7,12,20,0.55) 100%);}
+
+  .hud{position:fixed;inset:0;pointer-events:none;padding:26px 28px;display:flex;flex-direction:column;justify-content:space-between;z-index:2;}
+  /* only the mode-switcher buttons should catch clicks — everything else (title, legend, coord)
+     must stay click-through so a drag started anywhere, even over text, still orbits the scene */
+  .modes{pointer-events:auto;}
+
+  .top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;flex-wrap:wrap;}
+
+  .title-block h1{
+    font-family:'Fraunces',Georgia,serif;font-optical-sizing:auto;font-weight:560;
+    font-size:clamp(20px,2.6vw,28px);letter-spacing:-0.01em;margin:0 0 6px 0;text-wrap:balance;color:var(--text);
+  }
+  .title-block .intro{font-size:13px;color:var(--text);margin:0 0 8px 0;max-width:50ch;line-height:1.5;}
+  .title-block .sub{font-size:13px;color:var(--text-muted);margin:0 0 5px 0;max-width:50ch;line-height:1.5;min-height:2.6em;}
+  .title-block .sub2{font-size:12px;color:var(--text-faint);margin:0;max-width:50ch;line-height:1.5;}
+  .title-block .sub2 b{color:var(--laser);font-weight:600;}
+
+  .modes{
+    display:flex;gap:6px;background:var(--panel);border:1px solid var(--panel-border);
+    border-radius:10px;padding:5px;backdrop-filter:blur(8px);
+  }
+  .modes button{
+    font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:0.03em;
+    color:var(--text-muted);background:transparent;border:1px solid transparent;border-radius:7px;
+    padding:8px 12px;cursor:pointer;transition:all .15s ease;white-space:nowrap;
+  }
+  .modes button:hover{color:var(--text);}
+  .modes button.active{color:var(--ink);background:var(--text);border-color:var(--text);}
+
+  .hint{
+    font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11px;letter-spacing:0.03em;color:var(--text-faint);
+    background:var(--panel);border:1px solid var(--panel-border);border-radius:8px;padding:8px 12px;
+    backdrop-filter:blur(6px);white-space:nowrap;
+  }
+
+  .bottom-row{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;}
+
+  .legend{
+    background:var(--panel);border:1px solid var(--panel-border);border-radius:12px;padding:14px 16px;
+    backdrop-filter:blur(8px);display:grid;grid-template-columns:auto auto;gap:7px 20px;min-width:280px;
+  }
+  .legend .row{display:flex;align-items:center;gap:8px;font-size:12.5px;color:var(--text);}
+  .legend .row small{color:var(--text-faint);}
+  .legend .dot{width:8px;height:8px;border-radius:50%;flex:none;box-shadow:0 0 7px 1px currentColor;}
+  .legend .arrow-swatch{width:16px;height:8px;flex:none;position:relative;}
+  .legend .arrow-swatch svg{width:100%;height:100%;overflow:visible;}
+
+  .coord{font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;line-height:1.6;color:var(--text-faint);text-align:right;max-width:34ch;}
+  .coord b{color:var(--text-muted);font-weight:500;}
+
+  .loading{
+    position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+    font-family:'IBM Plex Mono',monospace;font-size:12px;letter-spacing:0.08em;color:var(--text-faint);
+    text-transform:uppercase;background:var(--ink);z-index:10;transition:opacity .5s ease;
+  }
+
+  /* in-scene floating labels (CSS2DRenderer) */
+  .tag3d{
+    font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:10.5px;letter-spacing:0.01em;
+    color:var(--text);background:var(--panel);border:1px solid var(--panel-border);border-radius:6px;
+    padding:3px 8px;white-space:nowrap;backdrop-filter:blur(4px);
+    transform:translate(-50%,-100%);pointer-events:none;
+  }
+  .tag3d.small{font-size:9px;padding:2px 5px;opacity:0.85;}
+
+  @media (max-width:760px){
+    .legend{grid-template-columns:auto;min-width:0;}
+    .bottom-row{flex-direction:column;align-items:flex-start;gap:12px;}
+    .coord{text-align:left;max-width:none;}
+    .top-row{flex-direction:column;}
+    .tag3d{font-size:9.5px;padding:2px 6px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="loading" id="loading">chargement de la scène…</div>
+<div class="veil"></div>
+
+<div class="hud">
+  <div class="top-row">
+    <div class="title-block">
+      <h1>Pôle Sensible — Intérieur, amphithéâtre</h1>
+      <p class="intro">Pôle Sensible est une installation immersive (son et image) créée par l'artiste Jérôme Li-Thiao-Té (J3ZZ), à partir d'une résidence de création dans les Terres australes et antarctiques françaises (TAAF). Ce schéma 3D montre, à titre indicatif, comment cette première version — sous forme d'installation, qui pourra évoluer vers une performance audiovisuelle live selon les matériaux rapportés de la résidence — pourrait être installée dans un lieu d'accueil ; les dimensions réelles seront adaptées une fois un lieu confirmé.</p>
+      <p class="sub" id="modeSub">L'image est projetée au fond de la scène. Un laser part du bord de la scène et vise le mur, au ras du sol de la scène, à travers la même brume visible. Le public reste assis dans la salle, en dehors de la scène. Le son est diffusé en stéréo (2 enceintes), ou via le système de sonorisation déjà présent dans la salle.</p>
+      <p class="sub2">Les étiquettes flottantes nomment chaque élément de la scène. <b>La flèche rouge</b> indique où le laser part et vers où il pointe.</p>
+    </div>
+
+  </div>
+
+  <div class="bottom-row">
+    <div class="legend">
+      <div class="row"><span class="dot" style="color:var(--proj)"></span>Mur <small>— sert d'écran à l'image projetée</small></div>
+      <div class="row">
+        <span class="arrow-swatch" style="color:var(--laser)">
+          <svg viewBox="0 0 16 8"><line x1="1" y1="4" x2="12" y2="4" stroke="currentColor" stroke-width="2"/><polygon points="12,1 16,4 12,7" fill="currentColor"/></svg>
+        </span>
+        Laser <small>— la flèche va de la source vers où il pointe, au ras du sol</small>
+      </div>
+      <div class="row"><span class="dot" style="color:var(--haze)"></span>Zone de haze <small>— brume qui rend le laser visible ; sans danger, on peut y marcher</small></div>
+      <div class="row"><span class="dot" style="color:var(--audience)"></span>Public <small>— où les visiteurs se tiennent</small></div>
+      <div class="row"><span class="dot" style="color:var(--speaker)"></span>Enceinte <small>— haut-parleur pour le son</small></div>
+      <div class="row"><span class="hint" style="padding:4px 8px;">souris : glisser pour tourner autour · molette pour zoomer/dézoomer</span></div>
+    </div>
+    <div class="coord">
+      <div><b>Schéma de principe</b>, non à l'échelle</div>
+      <div>proposé pour aider à visualiser le projet — sans engagement</div>
+    </div>
+  </div>
+</div>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"
+  }
+}
+</script>
+
+<script type="module">
+import * as THREE from 'three';
+import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// ---------- renderer / scene / camera ----------
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0a0e13);
+scene.fog = new THREE.FogExp2(0x0e1a24, 0.018);
+
+const camera = new THREE.PerspectiveCamera(42, window.innerWidth/window.innerHeight, 0.1, 200);
+
+const renderer = new THREE.WebGLRenderer({ antialias:true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio,2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.outputColorSpace = THREE.SRGBColorSpace;
+document.body.appendChild(renderer.domElement);
+
+const labelRenderer = new CSS2DRenderer();
+labelRenderer.setSize(window.innerWidth, window.innerHeight);
+labelRenderer.domElement.style.position = 'absolute';
+labelRenderer.domElement.style.top = '0px';
+labelRenderer.domElement.style.left = '0px';
+labelRenderer.domElement.style.zIndex = '1';
+labelRenderer.domElement.style.pointerEvents = 'none';
+document.body.appendChild(labelRenderer.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+controls.enableDamping = true;
+controls.dampingFactor = 0.07;
+controls.enableZoom = true;
+controls.enableRotate = true;
+controls.minDistance = 2.5;
+controls.maxDistance = 42;
+controls.minPolarAngle = 0.04;
+controls.maxPolarAngle = Math.PI*0.495; // just short of straight-down so the camera never dips below the floor
+controls.autoRotate = !reduceMotion;
+controls.autoRotateSpeed = 0.45;
+let transitioning = false;
+controls.addEventListener('start', ()=>{ controls.autoRotate = false; transitioning = false; });
+
+let camTargetGoal = new THREE.Vector3(0,0.6,1.2);
+let camPosGoal = new THREE.Vector3(9,5.5,9);
+controls.target.copy(camTargetGoal);
+camera.position.copy(camPosGoal);
+
+// ---------- lights ----------
+scene.add(new THREE.HemisphereLight(0x5c85a0, 0x1c1710, 2.2));
+scene.add(new THREE.AmbientLight(0x35506a, 1.6));
+const moon = new THREE.DirectionalLight(0x8fb4c4, 1.3);
+moon.position.set(-8,16,-6);
+scene.add(moon);
+
+// ---------- stars ----------
+{
+  const n = 500, pos = new Float32Array(n*3);
+  for(let i=0;i<n;i++){
+    const r = 50 + Math.random()*35;
+    const theta = Math.random()*Math.PI*2;
+    const phi = Math.random()*Math.PI*0.5;
+    pos[i*3] = r*Math.sin(phi)*Math.cos(theta);
+    pos[i*3+1] = 8 + r*Math.cos(phi)*0.6;
+    pos[i*3+2] = r*Math.sin(phi)*Math.sin(theta);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  scene.add(new THREE.Points(g, new THREE.PointsMaterial({ color:0xdfe9ee, size:0.1, transparent:true, opacity:0.7 })));
+}
+
+// ---------- generative projection texture ----------
+const projCanvas = document.createElement('canvas');
+projCanvas.width = 256; projCanvas.height = 128;
+const projCtx = projCanvas.getContext('2d');
+const projTexture = new THREE.CanvasTexture(projCanvas);
+projTexture.colorSpace = THREE.SRGBColorSpace;
+
+function paintProjection(t){
+  const w = projCanvas.width, h = projCanvas.height;
+  projCtx.fillStyle = '#0c0f14';
+  projCtx.fillRect(0,0,w,h);
+  const hues = [ [165,217,201], [255,179,122], [122,140,198] ];
+  for(let i=0;i<3;i++){
+    const c = hues[i];
+    const cx = w*0.5 + Math.sin(t*0.6 + i*2.1) * w*0.32;
+    const cy = h*0.5 + Math.cos(t*0.45 + i*1.7) * h*0.32;
+    const r = 40 + 20*Math.sin(t*0.8 + i);
+    const grad = projCtx.createRadialGradient(cx,cy,0,cx,cy,r);
+    grad.addColorStop(0, `rgba(${c[0]},${c[1]},${c[2]},0.55)`);
+    grad.addColorStop(1, 'rgba(0,0,0,0)');
+    projCtx.fillStyle = grad;
+    projCtx.beginPath(); projCtx.arc(cx,cy,r,0,Math.PI*2); projCtx.fill();
+  }
+  projTexture.needsUpdate = true;
+}
+paintProjection(0);
+
+// ---------- floating in-scene labels ----------
+function makeLabel(text, color, small=false){
+  const div = document.createElement('div');
+  div.className = small ? 'tag3d small' : 'tag3d';
+  div.textContent = text;
+  div.style.borderColor = color;
+  div.style.color = color;
+  return new CSS2DObject(div);
+}
+
+// ---------- helpers ----------
+function makeWall(width, height, cutWidth, cutHeight){
+  const g = new THREE.Group();
+  const wallMat = new THREE.MeshStandardMaterial({ color:0x2b271f, roughness:0.95 });
+  const wall = new THREE.Mesh(new THREE.BoxGeometry(width, height, 0.25), wallMat);
+  wall.position.y = height/2;
+  g.add(wall);
+
+  const projMat = new THREE.MeshStandardMaterial({
+    map: projTexture, emissiveMap: projTexture, emissive: new THREE.Color(0xffffff),
+    emissiveIntensity: 1.4, color:0x111111, roughness:0.5
+  });
+  const proj = new THREE.Mesh(new THREE.PlaneGeometry(cutWidth, cutHeight), projMat);
+  proj.position.set(0, height*0.56, 0.135);
+  g.add(proj);
+
+  const label = makeLabel('MUR / PROJECTION', '#a58cd6');
+  label.position.set(0, height + 0.32, 0.14);
+  g.add(label);
+
+  return g;
+}
+
+function makeLaser(start, end, labelText='LASER — source → sens'){
+  const g = new THREE.Group();
+  const dir = new THREE.Vector3().subVectors(end, start);
+  const len = dir.length();
+  const dirN = dir.clone().normalize();
+  const headLen = Math.min(0.42, len*0.22);
+  const headWidth = 0.13;
+  const shaftLen = Math.max(0.05, len - headLen);
+  const q = new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0,1,0), dirN);
+
+  const mat = new THREE.MeshBasicMaterial({ color:0xff5847, transparent:true, opacity:1 });
+
+  const shaftMid = start.clone().addScaledVector(dirN, shaftLen/2);
+  const shaft = new THREE.Mesh(new THREE.CylinderGeometry(0.03,0.03,shaftLen,10), mat);
+  shaft.position.copy(shaftMid);
+  shaft.quaternion.copy(q);
+  g.add(shaft);
+
+  const headCenter = start.clone().addScaledVector(dirN, shaftLen + headLen/2);
+  const head = new THREE.Mesh(new THREE.ConeGeometry(headWidth, headLen, 14), mat);
+  head.position.copy(headCenter);
+  head.quaternion.copy(q);
+  g.add(head);
+
+  const originGlow = new THREE.PointLight(0xff7a5a, 3.2, 3.4, 1.8);
+  originGlow.position.copy(start);
+  g.add(originGlow);
+  const originDot = new THREE.Mesh(new THREE.SphereGeometry(0.055,12,12), new THREE.MeshBasicMaterial({color:0xff7a5a}));
+  originDot.position.copy(start);
+  g.add(originDot);
+
+  const tag = makeLabel(labelText, '#ff8a76');
+  tag.position.copy(start).add(new THREE.Vector3(0, 0.24, 0));
+  g.add(tag);
+
+  g.userData.laserAnim = { mats:[mat] };
+  return g;
+}
+
+function makeHazeField(centerX, centerZ, halfW, halfD, y, count, labelText='ZONE DE HAZE — accessible, on peut y marcher'){
+  const g = new THREE.Group();
+  const pos = new Float32Array(count*3);
+  for(let i=0;i<count;i++){
+    pos[i*3]   = centerX + (Math.random()*2-1)*halfW;
+    pos[i*3+1] = y + Math.random()*0.32;
+    pos[i*3+2] = centerZ + (Math.random()*2-1)*halfD;
+  }
+  const geo = new THREE.BufferGeometry();
+  geo.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  const mat = new THREE.PointsMaterial({
+    color:0xa9c7de, size:0.16, transparent:true, opacity:0.4,
+    blending:THREE.AdditiveBlending, depthWrite:false
+  });
+  const pts = new THREE.Points(geo, mat);
+  pts.userData.hazeAnim = { base: pos.slice(), phase: Math.random()*10 };
+  g.add(pts);
+
+  if (labelText){
+    const label = makeLabel(labelText, '#a9c7de', true);
+    label.position.set(centerX, y + 0.55, centerZ);
+    g.add(label);
+  }
+  return g;
+}
+
+function makePerson(x, y, z){
+  const g = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color:0xe9d9bb, roughness:0.8 });
+  const body = new THREE.Mesh(new THREE.CapsuleGeometry(0.09, 0.32, 4, 8), mat);
+  body.position.y = 0.28;
+  const head = new THREE.Mesh(new THREE.SphereGeometry(0.08,10,10), mat);
+  head.position.y = 0.5;
+  g.add(body, head);
+  g.position.set(x,y,z);
+  return g;
+}
+
+function makeSpeaker(x,y,z){
+  const g = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color:0x14201e, roughness:0.6, emissive:0x2a6b62, emissiveIntensity:0.5 });
+  const box = new THREE.Mesh(new THREE.BoxGeometry(0.22,0.42,0.2), mat);
+  box.position.y = 0.21;
+  g.add(box);
+  const glow = new THREE.PointLight(0x7fd9c9, 0.9, 1.6, 2);
+  glow.position.set(0,0.25,0.12);
+  g.add(glow);
+  const tag = makeLabel('ENCEINTE', '#7fd9c9', true);
+  tag.position.set(0, 0.5, 0);
+  g.add(tag);
+  g.position.set(x,y,z);
+  return g;
+}
+
+function makeGround(size, color){
+  const mat = new THREE.MeshStandardMaterial({ color, roughness:1 });
+  const mesh = new THREE.Mesh(new THREE.CircleGeometry(size, 40), mat);
+  mesh.rotation.x = -Math.PI/2;
+  return mesh;
+}
+
+function makeRoomShell(width, depth, height){
+  const g = new THREE.Group();
+  const mat = new THREE.MeshStandardMaterial({ color:0x3a4652, transparent:true, opacity:0.08, side:THREE.DoubleSide, roughness:1 });
+  const edgeMat = new THREE.LineBasicMaterial({ color:0x5f7480, transparent:true, opacity:0.5 });
+
+  const ceiling = new THREE.Mesh(new THREE.PlaneGeometry(width, depth), mat);
+  ceiling.rotation.x = Math.PI/2;
+  ceiling.position.set(0, height, depth/2 - 1);
+  g.add(ceiling);
+
+  const boxGeo = new THREE.BoxGeometry(width, height, depth);
+  const edges = new THREE.EdgesGeometry(boxGeo);
+  const wire = new THREE.LineSegments(edges, edgeMat);
+  wire.position.set(0, height/2, depth/2 - 1);
+  g.add(wire);
+
+  const sideMat = mat.clone();
+  const sideL = new THREE.Mesh(new THREE.PlaneGeometry(depth, height), sideMat);
+  sideL.position.set(-width/2, height/2, depth/2 - 1);
+  sideL.rotation.y = Math.PI/2;
+  g.add(sideL);
+  const sideR = sideL.clone();
+  sideR.position.x = width/2;
+  g.add(sideR);
+
+  const label = makeLabel('MURS / PLAFOND DE LA SALLE', '#8a7a4e', true);
+  label.position.set(-width/2 + 0.4, 0.02, depth - 1.4);
+  g.add(label);
+
+  return g;
+}
+
+// ---------- scene builders ----------
+const laserAnims = [];
+const hazeAnims = [];
+
+function collectAnims(group){
+  group.traverse(o=>{
+    if (o.userData.laserAnim) laserAnims.push(o.userData.laserAnim);
+    if (o.userData.hazeAnim) hazeAnims.push({ points:o, ...o.userData.hazeAnim });
+  });
+}
+
+function buildOutdoor(){
+  const g = new THREE.Group();
+  g.add(makeGround(11, 0x241f16));
+  g.add(makeWall(6, 3, 3.6, 1.4));
+
+  const laser = makeLaser(new THREE.Vector3(0,0.05,0.2), new THREE.Vector3(0,0.05,4.2));
+  g.add(laser);
+
+  g.add(makeHazeField(0, 2.1, 1.9, 2.0, 0.04, 260));
+
+  // audience: gathered in and around the show, not lined up at the edge —
+  // scattered through the haze zone and the open space behind it, like a real crowd
+  for(let i=0;i<4;i++){
+    const x = (Math.random()*2-1)*1.6;
+    const z = 0.6 + Math.random()*1.8;
+    g.add(makePerson(x,0,z));
+  }
+  for(let i=0;i<13;i++){
+    const x = (Math.random()*2-1)*3.4;
+    const z = 2.6 + Math.random()*4.2;
+    g.add(makePerson(x,0,z));
+  }
+  const publicLabel = makeLabel('PUBLIC — dans et autour de la haze', '#e9d9bb', true);
+  publicLabel.position.set(2.6, 0.55, 5.4);
+  g.add(publicLabel);
+
+  [[-3.3,0.5],[3.3,0.5],[-3.3,5.6],[3.3,5.6]].forEach(([x,z])=> g.add(makeSpeaker(x,0,z)));
+
+  collectAnims(g);
+  return g;
+}
+
+function buildSeated(){
+  const g = new THREE.Group();
+  g.add(makeGround(11, 0x1c1916));
+
+  const stageMat = new THREE.MeshStandardMaterial({ color:0x30291f, roughness:0.9 });
+  const stage = new THREE.Mesh(new THREE.BoxGeometry(6, 0.5, 4), stageMat);
+  stage.position.set(0, 0.25, 3.2);
+  g.add(stage);
+  const stageLabel = makeLabel('SCÈNE', '#8f8264', true);
+  stageLabel.position.set(-2.6, 0.52, 1.6);
+  g.add(stageLabel);
+
+  const wall = makeWall(5.2, 2.2, 3.2, 1.1);
+  wall.position.set(0, 0.5, 5.15);
+  g.add(wall);
+
+  const laser = makeLaser(new THREE.Vector3(0,0.52,1.25), new THREE.Vector3(0,0.52,5.0), 'LASER — bord de scène, source → sens');
+  g.add(laser);
+
+  g.add(makeHazeField(0, 3.1, 2.4, 1.8, 0.55, 220, 'ZONE DE HAZE — sur scène'));
+
+  // raked seating rows, rising away from the stage
+  const rows = 4;
+  for(let r=0;r<rows;r++){
+    const z = 1.0 - r*0.85;
+    const y = r*0.32;
+    const seatsInRow = 5;
+    for(let s=0;s<seatsInRow;s++){
+      const x = -2.6 + s*1.3;
+      g.add(makePerson(x, y, z));
+    }
+  }
+  const publicLabel = makeLabel('PUBLIC ASSIS — gradins, hors scène', '#e9d9bb', true);
+  publicLabel.position.set(2.9, 1.2, -1.5);
+  g.add(publicLabel);
+
+  [[-2.6,0.5,1.35],[2.6,0.5,1.35]].forEach(([x,y,z])=> g.add(makeSpeaker(x,y,z)));
+
+  collectAnims(g);
+  return g;
+}
+
+function buildStanding(){
+  const g = new THREE.Group();
+  g.add(makeGround(11, 0x211d19));
+  g.add(makeRoomShell(9, 8, 3.6));
+  g.add(makeWall(6, 3, 3.6, 1.4));
+
+  const laser = makeLaser(new THREE.Vector3(0,0.05,0.2), new THREE.Vector3(0,0.05,6.4));
+  g.add(laser);
+
+  // haze fills the whole room floor
+  g.add(makeHazeField(0, 3.6, 4.0, 3.4, 0.04, 420, 'ZONE DE HAZE — occupe toute la salle'));
+
+  // audience scattered throughout the haze-filled room
+  for(let i=0;i<18;i++){
+    const x = (Math.random()*2-1)*3.6;
+    const z = 1.0 + Math.random()*5.6;
+    g.add(makePerson(x,0,z));
+  }
+  const publicLabel = makeLabel('PUBLIC — réparti dans toute la salle', '#e9d9bb', true);
+  publicLabel.position.set(3.0, 0.55, 6.6);
+  g.add(publicLabel);
+
+  [[-3.3,0.5],[3.3,0.5],[-3.3,6.6],[3.3,6.6]].forEach(([x,z])=> g.add(makeSpeaker(x,0,z)));
+
+  collectAnims(g);
+  return g;
+}
+
+const currentGroup = buildSeated();
+scene.add(currentGroup);
+
+
+
+// ---------- resize ----------
+window.addEventListener('resize', ()=>{
+  camera.aspect = window.innerWidth/window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  labelRenderer.setSize(window.innerWidth, window.innerHeight);
+});
+
+// ---------- animate ----------
+const clock = new THREE.Clock();
+let frame = 0;
+
+function animate(){
+  requestAnimationFrame(animate);
+  const dt = clock.getDelta();
+  const t = clock.getElapsedTime();
+  frame++;
+
+  if (frame % 6 === 0) paintProjection(t);
+
+  laserAnims.forEach(a=>{
+    const k = 0.78 + 0.22*Math.sin(t*2.2);
+    a.mats.forEach(m=> m.opacity = k);
+  });
+
+  hazeAnims.forEach(({points, base, phase})=>{
+    const arr = points.geometry.attributes.position.array;
+    for(let i=0;i<arr.length;i+=3){
+      arr[i+1] = base[i+1] + Math.sin(t*0.6 + phase + i)*0.05 + 0.05;
+    }
+    points.geometry.attributes.position.needsUpdate = true;
+  });
+
+  if (transitioning){
+    camera.position.lerp(camPosGoal, 1 - Math.pow(0.001, dt));
+    controls.target.lerp(camTargetGoal, 1 - Math.pow(0.001, dt));
+    if (camera.position.distanceTo(camPosGoal) < 0.03 && controls.target.distanceTo(camTargetGoal) < 0.03){
+      transitioning = false;
+    }
+  }
+
+  controls.update();
+  renderer.render(scene, camera);
+  labelRenderer.render(scene, camera);
+
+  if (frame === 2){
+    const el = document.getElementById('loading');
+    el.style.opacity = '0';
+    setTimeout(()=> el.remove(), 500);
+  }
+}
+animate();
+</script>
+</body>
+</html>

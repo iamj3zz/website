@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Schémas génériques — restitution Pôle Sensible</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f4f1ea;
+    --surface:#ffffff;
+    --ink:#1d211f;
+    --muted:#5f6a63;
+    --border:#d9d2c1;
+    --wall:#cfc6b0;
+    --wall-line:#8f8264;
+    --proj:#7a6a9c;
+    --proj-fill:rgba(122,106,156,0.18);
+    --laser:#b23a2c;
+    --haze-fill:rgba(107,140,170,0.16);
+    --haze-line:#6b8caa;
+    --audience:#3d5a45;
+    --speaker:#3d7f92;
+    --room:#8f8264;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14181a;
+      --surface:#1c2124;
+      --ink:#eae6da;
+      --muted:#9aa39a;
+      --border:#333a38;
+      --wall:#4a4232;
+      --wall-line:#8a7a4e;
+      --proj:#a897cf;
+      --proj-fill:rgba(168,151,207,0.16);
+      --laser:#e2685a;
+      --haze-fill:rgba(140,178,212,0.16);
+      --haze-line:#8cb2d4;
+      --audience:#7fb389;
+      --speaker:#5fa8bd;
+      --room:#8a7a4e;
+    }
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;}
+  body{
+    background:var(--bg);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', system-ui, sans-serif;
+    padding-inline:16px;
+    padding-block:28px;
+    max-width:920px;
+    margin-inline:auto;
+  }
+  h1,h2{font-family:'Archivo', system-ui, sans-serif; text-wrap:balance; margin:0;}
+  .mono{font-family:'IBM Plex Mono', ui-monospace, monospace;}
+
+  .titleblock{
+    border:2px solid var(--ink);
+    border-radius:2px;
+    padding:16px 18px;
+    background:var(--surface);
+  }
+  .titleblock h1{font-size:clamp(1.2rem,4vw,1.5rem); font-weight:800; letter-spacing:-0.01em;}
+  .titleblock .sub{color:var(--muted); font-size:0.88rem; margin-top:4px;}
+
+  .caveat{
+    margin-top:14px;
+    border:1px solid var(--border);
+    background:var(--surface);
+    border-radius:6px;
+    padding:10px 14px;
+    font-size:0.85rem;
+    line-height:1.5;
+    color:var(--muted);
+  }
+  .caveat strong{color:var(--ink);}
+
+  .section-title{
+    margin:38px 0 4px 0;
+    font-size:1.15rem;
+    font-weight:800;
+  }
+  .section-sub{color:var(--muted); font-size:0.85rem; margin-bottom:6px;}
+
+  figure{margin:18px 0 6px 0;}
+  figure svg{width:100%; height:auto; display:block; background:var(--surface); border:1px solid var(--border); border-radius:8px;}
+  figcaption{font-size:0.82rem; color:var(--muted); margin-top:6px; line-height:1.5; max-width:72ch;}
+  figcaption b{color:var(--ink);}
+
+  .row{display:grid; grid-template-columns:1fr; gap:18px;}
+  @media(min-width:760px){ .row{grid-template-columns:1fr 1fr;} }
+
+  .legend{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:8px 18px;
+    margin-top:10px;
+  }
+  .legend-item{display:flex; gap:9px; align-items:flex-start; font-size:0.82rem; line-height:1.4;}
+  .swatch{width:15px; height:15px; border-radius:3px; flex:none; margin-top:2px; border:1px solid var(--border);}
+
+  footer{
+    margin-top:30px;
+    padding-top:12px;
+    border-top:1px solid var(--border);
+    font-size:0.76rem;
+    color:var(--muted);
+    line-height:1.6;
+  }
+</style>
+</head>
+<body>
+
+<div class="titleblock">
+  <h1>Pôle Sensible — trois configurations de restitution possibles</h1>
+  <div class="sub">Pôle Sensible est une installation immersive (son et image) de l'artiste Jérôme Li-Thiao-Té (J3ZZ), à partir d'une résidence de création dans les Terres australes et antarctiques françaises (TAAF). Cette première version, sous forme d'installation, pourra évoluer vers une performance audiovisuelle live selon les matériaux rapportés de la résidence. Les schémas ci-dessous montrent, à titre indicatif, trois façons possibles de la présenter dans un lieu d'accueil.</div>
+</div>
+
+<div class="caveat">
+  <strong>Schémas de principe, non à l'échelle.</strong> Ils illustrent le mécanisme (positions relatives du mur, du laser, de la zone de haze, du public, des enceintes) pour aider un interlocuteur à se projeter — pas un plan technique réel. Chaque lieu confirmé recevra un schéma adapté à ses dimensions réelles. Ils présentent la forme installation, la plus aboutie à ce stade — le projet pourrait évoluer vers une performance audiovisuelle live selon les matériaux rapportés de la résidence (son, image, données).
+</div>
+
+<!-- ===================== EXTÉRIEUR ===================== -->
+<p class="section-title">1 — Extérieur</p>
+<p class="section-sub">Mur de projection, laser perpendiculaire au mur au ras du sol dans la zone de haze — le public peut y entrer et circuler librement (l'effet recherché), quadriphonie encadrant l'ensemble depuis le mur.</p>
+
+<div class="row">
+<figure>
+  <svg viewBox="0 0 480 460" role="img" aria-label="Vue de dessus : mur de projection en haut, laser centré pointant perpendiculairement vers le bas à travers une zone de haze, public disposé en arc autour de la zone de haze, quatre enceintes en quadriphonie encadrant l'ensemble, la paire avant démarrant presque au niveau du mur et la paire arrière derrière le public.">
+    <defs>
+      <marker id="arrowLaserO" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--laser)"/>
+      </marker>
+    </defs>
+
+    <!-- wall -->
+    <rect x="90" y="16" width="300" height="46" fill="var(--wall)" stroke="var(--wall-line)" stroke-width="1.3"/>
+    <rect x="150" y="24" width="180" height="30" fill="var(--proj-fill)" stroke="var(--proj)" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="240" y="12" text-anchor="middle" class="mono" font-size="11" fill="var(--wall-line)">MUR DE PROJECTION</text>
+
+    <!-- haze zone -->
+    <rect x="170" y="62" width="140" height="150" fill="var(--haze-fill)" stroke="var(--haze-line)" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="240" y="230" text-anchor="middle" class="mono" font-size="10.5" fill="var(--haze-line)">ZONE DE HAZE — laser au ras du sol,</text>
+    <text x="240" y="243" text-anchor="middle" class="mono" font-size="10.5" fill="var(--haze-line)">accessible, le public peut y entrer</text>
+
+    <!-- laser beam, centered, perpendicular from wall -->
+    <circle cx="240" cy="62" r="5" fill="var(--laser)"/>
+    <line x1="240" y1="62" x2="240" y2="206" stroke="var(--laser)" stroke-width="3" marker-end="url(#arrowLaserO)"/>
+    <text x="252" y="80" class="mono" font-size="10.5" fill="var(--laser)">LASER</text>
+
+    <!-- audience: some inside the haze zone (walking through), most in an arc around it -->
+    <g fill="var(--audience)">
+      <circle cx="210" cy="145" r="4"/><circle cx="270" cy="165" r="4"/><circle cx="230" cy="188" r="4"/>
+      <circle cx="130" cy="250" r="4"/><circle cx="152" cy="272" r="4"/><circle cx="176" cy="288" r="4"/>
+      <circle cx="202" cy="298" r="4"/><circle cx="240" cy="302" r="4"/><circle cx="278" cy="298" r="4"/>
+      <circle cx="304" cy="288" r="4"/><circle cx="328" cy="272" r="4"/><circle cx="350" cy="250" r="4"/>
+      <circle cx="160" cy="214" r="4"/><circle cx="320" cy="214" r="4"/>
+    </g>
+    <text x="240" y="318" text-anchor="middle" class="mono" font-size="10.5" fill="var(--audience)">PUBLIC — entre et circule dans la haze,</text>
+    <text x="240" y="331" text-anchor="middle" class="mono" font-size="10.5" fill="var(--audience)">le reste autour, face au mur</text>
+
+    <!-- quadraphony: 4 speakers, front pair almost at the wall, back pair behind the audience -->
+    <g fill="var(--speaker)">
+      <polygon points="60,66 78,66 78,90 60,90"/>
+      <polygon points="402,66 420,66 420,90 402,90"/>
+      <polygon points="60,340 78,340 78,364 60,364"/>
+      <polygon points="402,340 420,340 420,364 402,364"/>
+    </g>
+    <text x="69" y="106" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">ENCEINTE</text>
+    <text x="411" y="106" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">ENCEINTE</text>
+    <text x="69" y="380" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">ENCEINTE</text>
+    <text x="411" y="380" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">ENCEINTE</text>
+    <text x="240" y="400" text-anchor="middle" class="mono" font-size="10.5" fill="var(--speaker)">QUADRIPHONIE — du mur jusqu'à l'arrière du public</text>
+  </svg>
+  <figcaption><b>Plan (vue de dessus) :</b> le laser part du centre du mur, perpendiculaire à celui-ci, au ras du sol dans la zone de haze. Le public n'est pas cantonné autour : comme la haze reste au ras du sol, il peut y entrer et y circuler librement — c'est l'effet recherché. Les 4 enceintes encadrent l'ensemble, la paire avant démarrant presque au niveau du mur.</figcaption>
+</figure>
+
+<figure>
+  <svg viewBox="0 0 480 300" role="img" aria-label="Vue de côté : mur vertical avec projection, haze basse au niveau du sol, faisceau laser horizontal au ras du sol partant du mur, public debout qui traverse librement la zone de haze aussi bien qu'au-delà.">
+    <line x1="20" y1="250" x2="460" y2="250" stroke="var(--border)" stroke-width="1.3"/>
+
+    <rect x="40" y="50" width="34" height="200" fill="var(--wall)" stroke="var(--wall-line)" stroke-width="1.3"/>
+    <rect x="46" y="70" width="22" height="60" fill="var(--proj-fill)" stroke="var(--proj)" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="57" y="42" text-anchor="middle" class="mono" font-size="10" fill="var(--wall-line)">MUR</text>
+
+    <rect x="74" y="228" width="220" height="22" fill="var(--haze-fill)"/>
+
+    <line x1="74" y1="239" x2="288" y2="239" stroke="var(--laser)" stroke-width="3" marker-end="url(#arrowLaserO)"/>
+    <text x="180" y="270" text-anchor="middle" class="mono" font-size="10" fill="var(--laser)">LASER + HAZE — au ras du sol, cheville</text>
+
+    <g stroke="var(--audience)" stroke-width="2.4" fill="none">
+      <path d="M200,250 v-46 M200,204 l-9,14 M200,204 l9,14 M200,204 v-10 M191,182 l9,12 l9,-12" stroke-linecap="round"/>
+      <path d="M330,250 v-46 M330,204 l-9,14 M330,204 l9,14 M330,204 v-10 M321,182 l9,12 l9,-12" stroke-linecap="round"/>
+      <path d="M380,250 v-46 M380,204 l-9,14 M380,204 l9,14 M380,204 v-10 M371,182 l9,12 l9,-12" stroke-linecap="round"/>
+      <path d="M430,250 v-46 M430,204 l-9,14 M430,204 l9,14 M430,204 v-10 M421,182 l9,12 l9,-12" stroke-linecap="round"/>
+    </g>
+    <text x="240" y="288" text-anchor="middle" class="mono" font-size="10" fill="var(--audience)">PUBLIC — dans la haze et au-delà</text>
+  </svg>
+  <figcaption><b>Élévation (vue de côté) :</b> la haze et le laser restent au ras du sol, au niveau de la cheville — le public peut y marcher et la traverser (la figure à gauche), pas seulement se tenir au-delà. Pas de zone d'exclusion.</figcaption>
+</figure>
+</div>
+
+<!-- ===================== INTÉRIEUR AMPHITHÉÂTRE ===================== -->
+<p class="section-title">2 — Intérieur, amphithéâtre (sièges)</p>
+<p class="section-sub">Projection au fond de scène, laser au bord de scène pointant vers le mur à travers la zone de haze sur scène, public assis dans la salle en dehors de la zone de haze, son stéréo par défaut (ou système spatial existant).</p>
+
+<div class="row">
+<figure>
+  <svg viewBox="0 0 480 460" role="img" aria-label="Vue de dessus : scène en haut avec mur de projection au fond, laser au bord avant de la scène pointant vers le mur à travers la zone de haze, rangées de sièges en éventail dans la salle en dehors de la scène.">
+    <defs>
+      <marker id="arrowLaserI" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--laser)"/>
+      </marker>
+    </defs>
+
+    <rect x="120" y="16" width="240" height="18" fill="var(--wall)" stroke="var(--wall-line)" stroke-width="1.3"/>
+    <rect x="160" y="18" width="160" height="14" fill="var(--proj-fill)" stroke="var(--proj)" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="240" y="12" text-anchor="middle" class="mono" font-size="10.5" fill="var(--wall-line)">MUR / FOND DE SCÈNE</text>
+
+    <rect x="120" y="34" width="240" height="130" fill="var(--surface)" stroke="var(--border)" stroke-width="1.3"/>
+    <text x="128" y="48" class="mono" font-size="10" fill="var(--muted)">SCÈNE</text>
+
+    <rect x="170" y="34" width="140" height="130" fill="var(--haze-fill)" stroke="var(--haze-line)" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="240" y="180" text-anchor="middle" class="mono" font-size="10.5" fill="var(--haze-line)">ZONE DE HAZE</text>
+
+    <circle cx="240" cy="164" r="5" fill="var(--laser)"/>
+    <line x1="240" y1="164" x2="240" y2="38" stroke="var(--laser)" stroke-width="3" marker-end="url(#arrowLaserI)"/>
+    <text x="252" y="150" class="mono" font-size="10.5" fill="var(--laser)">LASER — bord de scène</text>
+
+    <!-- raked amphitheater seating, concentric arcs -->
+    <g fill="none" stroke="var(--audience)" stroke-width="1.3" opacity="0.9">
+      <path d="M60,200 Q240,270 420,200"/>
+      <path d="M50,240 Q240,320 430,240"/>
+      <path d="M42,282 Q240,372 438,282"/>
+      <path d="M36,326 Q240,428 444,326"/>
+    </g>
+    <g fill="var(--audience)">
+      <circle cx="110" cy="218" r="3"/><circle cx="170" cy="238" r="3"/><circle cx="240" cy="246" r="3"/><circle cx="310" cy="238" r="3"/><circle cx="370" cy="218" r="3"/>
+      <circle cx="95" cy="262" r="3"/><circle cx="165" cy="286" r="3"/><circle cx="240" cy="294" r="3"/><circle cx="315" cy="286" r="3"/><circle cx="385" cy="262" r="3"/>
+    </g>
+    <text x="240" y="444" text-anchor="middle" class="mono" font-size="10.5" fill="var(--audience)">PUBLIC ASSIS — gradins, en dehors de la scène</text>
+
+    <polygon points="128,170 146,170 146,194 128,194" fill="var(--speaker)"/>
+    <polygon points="334,170 352,170 352,194 334,194" fill="var(--speaker)"/>
+    <text x="240" y="204" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">STÉRÉO (ou système spatial existant)</text>
+  </svg>
+  <figcaption><b>Plan (vue de dessus) :</b> le laser, au bord avant de la scène, vise le mur du fond à travers la zone de haze qui occupe la scène. Le public, assis en gradins, reste hors scène.</figcaption>
+</figure>
+
+<figure>
+  <svg viewBox="0 0 480 300" role="img" aria-label="Vue de côté : scène surélevée avec mur au fond, haze basse au sol de la scène, faisceau laser horizontal partant du bord avant vers le mur, gradins du public s'élevant en s'éloignant de la scène.">
+    <line x1="20" y1="252" x2="460" y2="252" stroke="var(--border)" stroke-width="1.3"/>
+
+    <rect x="50" y="60" width="28" height="180" fill="var(--wall)" stroke="var(--wall-line)" stroke-width="1.3"/>
+    <rect x="55" y="75" width="18" height="50" fill="var(--proj-fill)" stroke="var(--proj)" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="64" y="52" text-anchor="middle" class="mono" font-size="10" fill="var(--wall-line)">MUR</text>
+
+    <rect x="78" y="196" width="180" height="44" fill="var(--surface)" stroke="var(--border)" stroke-width="1.3"/>
+    <text x="88" y="216" class="mono" font-size="9.5" fill="var(--muted)">SCÈNE</text>
+
+    <rect x="78" y="222" width="180" height="18" fill="var(--haze-fill)"/>
+    <circle cx="250" cy="231" r="4.5" fill="var(--laser)"/>
+    <line x1="250" y1="231" x2="78" y2="231" stroke="var(--laser)" stroke-width="3" marker-end="url(#arrowLaserI)"/>
+    <text x="168" y="270" text-anchor="middle" class="mono" font-size="10" fill="var(--laser)">LASER + HAZE — ras du sol de scène</text>
+
+    <!-- raked seating rising away from stage -->
+    <g stroke="var(--audience)" stroke-width="1.3" fill="none">
+      <path d="M258,240 L300,220 L340,196 L380,168 L420,136"/>
+    </g>
+    <g fill="var(--audience)">
+      <circle cx="300" cy="212" r="3.5"/>
+      <circle cx="340" cy="188" r="3.5"/>
+      <circle cx="380" cy="160" r="3.5"/>
+      <circle cx="420" cy="128" r="3.5"/>
+    </g>
+    <text x="339" y="286" text-anchor="middle" class="mono" font-size="10" fill="var(--audience)">GRADINS — s'élèvent vers l'arrière</text>
+  </svg>
+  <figcaption><b>Élévation (vue de côté) :</b> la scène reste au niveau du sol pour la haze et le laser ; les gradins s'élèvent au-delà du bord de scène, hors zone de haze.</figcaption>
+</figure>
+</div>
+
+<!-- ===================== INTÉRIEUR DEBOUT ===================== -->
+<p class="section-title">3 — Intérieur, sans sièges (debout)</p>
+<p class="section-sub">Même principe que la configuration extérieure (n°1), mais la zone de haze occupe ici toute la salle — le public s'y répartit librement, pas seulement autour d'une zone centrale.</p>
+
+<div class="row">
+<figure>
+  <svg viewBox="0 0 480 460" role="img" aria-label="Vue de dessus : mur de projection, laser perpendiculaire au ras du sol, zone de haze occupant toute la salle avec le public réparti librement dedans, quadriphonie encadrant l'ensemble avec la paire avant presque au niveau du mur — le tout entouré d'un pourtour représentant les murs de la salle.">
+    <defs>
+      <marker id="arrowLaserS" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+        <path d="M0,0 L10,5 L0,10 z" fill="var(--laser)"/>
+      </marker>
+    </defs>
+
+    <rect x="14" y="10" width="452" height="436" fill="none" stroke="var(--room)" stroke-width="2" stroke-dasharray="2 5"/>
+
+    <!-- haze fills the whole room floor, wall to wall -->
+    <rect x="18" y="88" width="444" height="352" fill="var(--haze-fill)" stroke="var(--haze-line)" stroke-width="1" stroke-dasharray="4 4"/>
+    <text x="240" y="128" text-anchor="middle" class="mono" font-size="10" fill="var(--haze-line)">ZONE DE HAZE — occupe toute la salle, accessible</text>
+
+    <rect x="90" y="40" width="300" height="46" fill="var(--wall)" stroke="var(--wall-line)" stroke-width="1.3"/>
+    <rect x="150" y="48" width="180" height="30" fill="var(--proj-fill)" stroke="var(--proj)" stroke-width="1" stroke-dasharray="3 3"/>
+    <text x="240" y="34" text-anchor="middle" class="mono" font-size="11" fill="var(--wall-line)">MUR DE PROJECTION</text>
+
+    <circle cx="240" cy="86" r="5" fill="var(--laser)"/>
+    <line x1="240" y1="86" x2="240" y2="340" stroke="var(--laser)" stroke-width="3" marker-end="url(#arrowLaserS)"/>
+    <text x="252" y="104" class="mono" font-size="10.5" fill="var(--laser)">LASER</text>
+
+    <!-- audience spread throughout the haze-filled room -->
+    <g fill="var(--audience)">
+      <circle cx="150" cy="150" r="4"/><circle cx="330" cy="150" r="4"/>
+      <circle cx="200" cy="200" r="4"/><circle cx="280" cy="210" r="4"/><circle cx="120" cy="220" r="4"/><circle cx="360" cy="220" r="4"/>
+      <circle cx="180" cy="270" r="4"/><circle cx="300" cy="275" r="4"/><circle cx="240" cy="255" r="4"/>
+      <circle cx="140" cy="320" r="4"/><circle cx="340" cy="320" r="4"/><circle cx="220" cy="330" r="4"/><circle cx="260" cy="330" r="4"/>
+      <circle cx="170" cy="380" r="4"/><circle cx="240" cy="390" r="4"/><circle cx="310" cy="380" r="4"/>
+    </g>
+    <text x="240" y="418" text-anchor="middle" class="mono" font-size="10.5" fill="var(--audience)">PUBLIC — réparti dans toute la salle, dans la haze</text>
+
+    <g fill="var(--speaker)">
+      <polygon points="60,92 78,92 78,116 60,116"/>
+      <polygon points="402,92 420,92 420,116 402,116"/>
+      <polygon points="60,368 78,368 78,392 60,392"/>
+      <polygon points="402,368 420,368 420,392 402,392"/>
+    </g>
+    <text x="69" y="144" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">ENCEINTE</text>
+    <text x="411" y="144" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">ENCEINTE</text>
+    <text x="69" y="403" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">ENCEINTE</text>
+    <text x="411" y="403" text-anchor="middle" class="mono" font-size="9.5" fill="var(--speaker)">ENCEINTE</text>
+    <text x="24" y="436" class="mono" font-size="10" fill="var(--room)">MURS / PLAFOND DE LA SALLE</text>
+  </svg>
+  <figcaption><b>Plan (vue de dessus) :</b> disposition proche de la configuration extérieure (§1), mais la zone de haze occupe ici toute la salle plutôt qu'une zone centrale — le public s'y répartit librement, du mur jusqu'au fond de la salle. Les 4 enceintes (quadriphonie) encadrent l'ensemble depuis le mur.</figcaption>
+</figure>
+</div>
+
+<p class="section-title" style="margin-top:34px;">Légende</p>
+<div class="legend">
+  <div class="legend-item"><span class="swatch" style="background:var(--wall); border-color:var(--wall-line);"></span>Mur — sert d'écran à l'image projetée</div>
+  <div class="legend-item"><span class="swatch" style="background:var(--proj-fill); border-color:var(--proj);"></span>Zone projetée sur le mur</div>
+  <div class="legend-item"><span class="swatch" style="background:transparent; border:2px solid var(--laser);"></span>Trajet du laser, au ras du sol</div>
+  <div class="legend-item"><span class="swatch" style="background:var(--haze-fill); border-color:var(--haze-line);"></span>Zone de haze — brume qui rend le laser visible ; sans danger, on peut y marcher</div>
+  <div class="legend-item"><span class="swatch" style="background:var(--audience); border-radius:50%; border-color:var(--audience);"></span>Public — où les visiteurs se tiennent</div>
+  <div class="legend-item"><span class="swatch" style="background:var(--speaker); border-color:var(--speaker);"></span>Enceinte — haut-parleur pour le son (quadriphonie ou stéréo)</div>
+</div>
+
+<footer>
+  Schémas de principe, proposés pour aider à visualiser le projet — sans engagement. Non à l'échelle ; un schéma adapté aux dimensions réelles pourra être fait dès qu'un lieu confirme son intérêt.
+</footer>
+
+</body>
+</html>
