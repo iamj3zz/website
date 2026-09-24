@@ -18,19 +18,21 @@
       .map(section => section.id.replace('year-', ''))
       .reverse(); // Newest first (2025 → 2008)
 
+    const i18n = (window.J3ZZ_CONFIG && window.J3ZZ_CONFIG.i18n && window.J3ZZ_CONFIG.i18n.eventsYearNav) || {};
+
     // Create toggle button
     const toggle = document.createElement('button');
     toggle.className = 'year-nav-toggle';
-    toggle.setAttribute('aria-label', 'Navigate to year');
+    toggle.setAttribute('aria-label', i18n.toggleAria || 'Navigate to year');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'year-nav-panel');
-    toggle.textContent = 'YEAR';
+    toggle.textContent = i18n.toggleLabel || 'YEAR';
 
     // Create navigation panel
     const panel = document.createElement('nav');
     panel.className = 'year-nav-panel';
     panel.id = 'year-nav-panel';
-    panel.setAttribute('aria-label', 'Jump to year');
+    panel.setAttribute('aria-label', i18n.panelAria || 'Jump to year');
 
     const list = document.createElement('ul');
     list.className = 'year-nav-list';

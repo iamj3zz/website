@@ -9,17 +9,20 @@
         const fullEl = col.querySelector('.event-desc-full');
         const isExpanded = btn.getAttribute('aria-expanded') === 'true';
 
+        const showLabel = btn.dataset.showLabel || 'Show full description';
+        const hideLabel = btn.dataset.hideLabel || 'Hide description';
+
         if (isExpanded) {
           shortEl.hidden = false;
           fullEl.hidden = true;
           btn.setAttribute('aria-expanded', 'false');
-          btn.setAttribute('aria-label', 'Show full description');
+          btn.setAttribute('aria-label', showLabel);
           btn.textContent = '+';
         } else {
           shortEl.hidden = true;
           fullEl.hidden = false;
           btn.setAttribute('aria-expanded', 'true');
-          btn.setAttribute('aria-label', 'Hide description');
+          btn.setAttribute('aria-label', hideLabel);
           btn.textContent = '−';
         }
       });

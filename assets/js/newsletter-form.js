@@ -10,6 +10,10 @@
     return; // Exit if form not found on page
   }
 
+  const i18n = (window.J3ZZ_CONFIG && window.J3ZZ_CONFIG.i18n && window.J3ZZ_CONFIG.i18n.newsletterForm) || {};
+  const errors = i18n.errors || {};
+  const isFrench = (document.documentElement.lang || 'en') === 'fr';
+
   // Validation Functions
 
   function validateEmail(field) {
@@ -17,7 +21,7 @@
 
     const value = field.value.trim();
     if (value === '') {
-      showError(field, 'Email address is required.');
+      showError(field, errors.emailRequired || 'Email address is required.');
       return false;
     }
 
@@ -25,19 +29,19 @@
     const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
     if (!emailPattern.test(value)) {
-      showError(field, 'Please enter a valid email address (e.g., user@example.com).');
+      showError(field, errors.emailInvalid || 'Please enter a valid email address (e.g., user@example.com).');
       return false;
     }
 
     // Check for consecutive dots
     if (value.includes('..')) {
-      showError(field, 'Email address cannot contain consecutive dots.');
+      showError(field, errors.emailConsecutiveDots || 'Email address cannot contain consecutive dots.');
       return false;
     }
 
     // Check for double @ symbols
     if ((value.match(/@/g) || []).length !== 1) {
-      showError(field, 'Email address must contain exactly one @ symbol.');
+      showError(field, errors.emailDoubleAt || 'Email address must contain exactly one @ symbol.');
       return false;
     }
 
@@ -53,7 +57,9 @@
 
     const domain = value.split('@')[1];
     if (commonTypos[domain]) {
-      showError(field, `Did you mean ${value.split('@')[0]}@${commonTypos[domain]}?`);
+      const suggestion = `${value.split('@')[0]}@${commonTypos[domain]}`;
+      const typoPrefix = errors.emailTypo || 'Did you mean';
+      showError(field, `${typoPrefix} ${suggestion}${isFrench ? ' ?' : '?'}`);
       return false;
     }
 
@@ -65,13 +71,13 @@
 
     const value = field.value.trim();
     if (value === '') {
-      showError(field, 'Mobile number is required.');
+      showError(field, errors.phoneRequired || 'Mobile number is required.');
       return false;
     }
 
     // Must start with + (international format required)
     if (!value.startsWith('+')) {
-      showError(field, 'Phone number must start with + followed by country code (e.g., +33612345678).');
+      showError(field, errors.phoneFormat || 'Phone number must start with + followed by country code (e.g., +33612345678).');
       return false;
     }
 
@@ -80,19 +86,19 @@
 
     // Check if all remaining characters are digits
     if (!/^\d+$/.test(phoneDigits)) {
-      showError(field, 'Phone number can only contain + and digits (no spaces, dashes, or parentheses).');
+      showError(field, errors.phoneDigitsOnly || 'Phone number can only contain + and digits (no spaces, dashes, or parentheses).');
       return false;
     }
 
     // Validate length: country code (1-3 digits) + number (6-12 digits) = 7-15 total
     if (phoneDigits.length < 7 || phoneDigits.length > 15) {
-      showError(field, 'Phone number must be between 7 and 15 digits (e.g., +33612345678).');
+      showError(field, errors.phoneLength || 'Phone number must be between 7 and 15 digits (e.g., +33612345678).');
       return false;
     }
 
     // Country code must not start with 0
     if (phoneDigits[0] === '0') {
-      showError(field, 'Country code cannot start with 0.');
+      showError(field, errors.phoneCountryCodeZero || 'Country code cannot start with 0.');
       return false;
     }
 
@@ -104,18 +110,18 @@
 
     const value = field.value.trim();
     if (value === '') {
-      showError(field, `${fieldLabel} is required.`);
+      showError(field, `${fieldLabel} ${errors.nameRequired || 'is required.'}`);
       return false;
     }
 
     // Length validation: 2-50 characters
     if (value.length < 2) {
-      showError(field, `${fieldLabel} must be at least 2 characters.`);
+      showError(field, `${fieldLabel} ${errors.nameMinLength || 'must be at least 2 characters.'}`);
       return false;
     }
 
     if (value.length > 50) {
-      showError(field, `${fieldLabel} must be 50 characters or less.`);
+      showError(field, `${fieldLabel} ${errors.nameMaxLength || 'must be 50 characters or less.'}`);
       return false;
     }
 
@@ -123,13 +129,13 @@
     const namePattern = /^[a-zA-ZÀ-ÿ\u00C0-\u017F\s'\-]+$/;
 
     if (!namePattern.test(value)) {
-      showError(field, `${fieldLabel} can only contain letters, hyphens, apostrophes, and spaces.`);
+      showError(field, `${fieldLabel} ${errors.nameInvalidChars || 'can only contain letters, hyphens, apostrophes, and spaces.'}`);
       return false;
     }
 
     // Check for numbers
     if (/\d/.test(value)) {
-      showError(field, `${fieldLabel} cannot contain numbers.`);
+      showError(field, `${fieldLabel} ${errors.nameNoNumbers || 'cannot contain numbers.'}`);
       return false;
     }
 
@@ -140,7 +146,7 @@
     if (!field) return true;
 
     if (!field.checked) {
-      showError(field, 'You must consent to receive newsletters to subscribe.');
+      showError(field, errors.consentRequired || 'You must consent to receive newsletters to subscribe.');
       return false;
     }
 
@@ -231,13 +237,13 @@
 
     // Validate First Name
     const fnameField = form.querySelector('input[name="FNAME"]');
-    if (!validateName(fnameField, 'First name')) {
+    if (!validateName(fnameField, (i18n.fieldLabels && i18n.fieldLabels.firstName) || 'First name')) {
       isValid = false;
     }
 
     // Validate Last Name
     const lnameField = form.querySelector('input[name="LNAME"]');
-    if (!validateName(lnameField, 'Last name')) {
+    if (!validateName(lnameField, (i18n.fieldLabels && i18n.fieldLabels.lastName) || 'Last name')) {
       isValid = false;
     }
 

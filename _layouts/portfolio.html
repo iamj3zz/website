@@ -29,8 +29,8 @@
         <img src="{{ site.logo | relative_url }}" alt="{{ site.title }}" loading="lazy">
       </a>
     </div>
-    <a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="Book J3ZZ">{{ _trans.nav.book[_lang] }}</a>
-    <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+    <a href="{% if _lang == 'fr' %}/fr/contact/{% else %}/contact/{% endif %}" class="header-cta nav-cta{% if page.url contains '/contact' %} active{% endif %}" aria-label="{{ _trans.nav.book_aria[_lang] }}">{{ _trans.nav.book[_lang] }}</a>
+    <button class="mobile-menu-toggle" aria-label="{{ _trans.nav.mobile_menu_toggle[_lang] }}" aria-expanded="false">
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
       <span class="hamburger-line"></span>
@@ -65,7 +65,7 @@
     {{ content }}
   </main>
 
-  <nav class="bottom-nav" aria-label="Bottom navigation">
+  <nav class="bottom-nav" aria-label="{{ _trans.nav.bottom_nav_aria[_lang] }}">
     <ul>
       <li><a href="{% if _lang == 'fr' %}/fr/bio/{% else %}/bio/{% endif %}" {% if page.url contains '/bio' %}class="active"{% endif %}>{{ _trans.nav.bio[_lang] }}</a></li>
       <li><a href="{% if _lang == 'fr' %}/fr/works/{% else %}/works/{% endif %}" {% if page.url contains '/works' or page.url == '/' %}class="active"{% endif %}>{{ _trans.nav.works[_lang] }}</a></li>
@@ -95,16 +95,66 @@
     </div>
   </div>
 
-  <button class="back-to-top" hidden aria-label="Back to top">↑</button>
+  <button class="back-to-top" hidden aria-label="{{ _trans.nav.back_to_top[_lang] }}">↑</button>
 
-  {% if site.supabase_url and site.supabase_anon_key %}
   <script>
     window.J3ZZ_CONFIG = {
+      {% if site.supabase_url and site.supabase_anon_key %}
       supabaseUrl: {{ site.supabase_url | jsonify }},
-      supabaseAnonKey: {{ site.supabase_anon_key | jsonify }}
+      supabaseAnonKey: {{ site.supabase_anon_key | jsonify }},
+      {% endif %}
+      i18n: {
+        eventsYearNav: {
+          toggleLabel: {{ _trans.events_year_nav.toggle_label[_lang] | jsonify }},
+          toggleAria: {{ _trans.events_year_nav.toggle_aria[_lang] | jsonify }},
+          panelAria: {{ _trans.events_year_nav.panel_aria[_lang] | jsonify }}
+        },
+        bioSectionNav: {
+          toggleLabel: {{ _trans.bio_section_nav.toggle_label[_lang] | jsonify }},
+          toggleAria: {{ _trans.bio_section_nav.toggle_aria[_lang] | jsonify }},
+          panelAria: {{ _trans.bio_section_nav.panel_aria[_lang] | jsonify }}
+        },
+        portfolioFilterNav: {
+          toggleLabel: {{ _trans.portfolio_filter_nav.toggle_label[_lang] | jsonify }},
+          toggleAria: {{ _trans.portfolio_filter_nav.toggle_aria[_lang] | jsonify }},
+          panelAria: {{ _trans.portfolio_filter_nav.panel_aria[_lang] | jsonify }},
+          categories: {
+            all: {{ _trans.portfolio_filter_nav.all_label[_lang] | jsonify }},
+            installations: {{ _trans.categories.installations[_lang] | jsonify }},
+            "live-acts": {{ _trans.categories["live-acts"][_lang] | jsonify }},
+            films: {{ _trans.categories.films[_lang] | jsonify }},
+            performances: {{ _trans.categories.performances[_lang] | jsonify }},
+            releases: {{ _trans.categories.releases[_lang] | jsonify }},
+            workshops: {{ _trans.categories.workshops[_lang] | jsonify }}
+          }
+        },
+        newsletterForm: {
+          fieldLabels: {
+            firstName: {{ _trans.newsletter_form.field_labels.first_name[_lang] | jsonify }},
+            lastName: {{ _trans.newsletter_form.field_labels.last_name[_lang] | jsonify }}
+          },
+          errors: {
+            emailRequired: {{ _trans.newsletter_form.errors.email_required[_lang] | jsonify }},
+            emailInvalid: {{ _trans.newsletter_form.errors.email_invalid[_lang] | jsonify }},
+            emailConsecutiveDots: {{ _trans.newsletter_form.errors.email_consecutive_dots[_lang] | jsonify }},
+            emailDoubleAt: {{ _trans.newsletter_form.errors.email_double_at[_lang] | jsonify }},
+            emailTypo: {{ _trans.newsletter_form.errors.email_typo[_lang] | jsonify }},
+            phoneRequired: {{ _trans.newsletter_form.errors.phone_required[_lang] | jsonify }},
+            phoneFormat: {{ _trans.newsletter_form.errors.phone_format[_lang] | jsonify }},
+            phoneDigitsOnly: {{ _trans.newsletter_form.errors.phone_digits_only[_lang] | jsonify }},
+            phoneLength: {{ _trans.newsletter_form.errors.phone_length[_lang] | jsonify }},
+            phoneCountryCodeZero: {{ _trans.newsletter_form.errors.phone_country_code_zero[_lang] | jsonify }},
+            nameRequired: {{ _trans.newsletter_form.errors.name_required[_lang] | jsonify }},
+            nameMinLength: {{ _trans.newsletter_form.errors.name_min_length[_lang] | jsonify }},
+            nameMaxLength: {{ _trans.newsletter_form.errors.name_max_length[_lang] | jsonify }},
+            nameInvalidChars: {{ _trans.newsletter_form.errors.name_invalid_chars[_lang] | jsonify }},
+            nameNoNumbers: {{ _trans.newsletter_form.errors.name_no_numbers[_lang] | jsonify }},
+            consentRequired: {{ _trans.newsletter_form.errors.consent_required[_lang] | jsonify }}
+          }
+        }
+      }
     };
   </script>
-  {% endif %}
 
   <!-- Universal scripts (all pages) -->
   <script src="{{ '/assets/js/cookie-consent.js' | relative_url }}" defer></script>

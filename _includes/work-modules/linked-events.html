@@ -58,7 +58,7 @@
                 <span class="metadata-qr-placeholder" data-url="{{ event.ticket_link }}" style="display:none;"></span>
               {% endif %}
             </div>
-            <div class="event-col-description">{% assign _trunc = site.event_description_truncate | default: 120 %}{% if _trunc > 0 and event.description.size > _trunc %}<span class="event-desc-short">{{ event.description | truncate: _trunc }}</span><span class="event-desc-full" hidden>{{ event.description }}</span><button class="event-desc-toggle" aria-expanded="false" aria-label="{{ _trans.linked_events.show_full_description[_lang] }}">+</button>{% else %}{{ event.description }}{% endif %}</div>
+            <div class="event-col-description">{% assign _trunc = site.event_description_truncate | default: 120 %}{% if _trunc > 0 and event.description.size > _trunc %}<span class="event-desc-short">{{ event.description | truncate: _trunc }}</span><span class="event-desc-full" hidden>{{ event.description }}</span><button class="event-desc-toggle" aria-expanded="false" aria-label="{{ _trans.linked_events.show_full_description[_lang] }}" data-show-label="{{ _trans.linked_events.show_full_description[_lang] }}" data-hide-label="{{ _trans.linked_events.hide_description[_lang] }}">+</button>{% else %}{{ event.description }}{% endif %}</div>
           </div>
           {% endif %}
         {% endfor %}

@@ -11,6 +11,7 @@ venue_address: "6 bis rue Pasteur, 97400 Saint-Denis, Réunion"
 venue_link: https://maps.app.goo.gl/conservatoire-reunion
 ticket_link:
 description: Short AV performance work in progress — monochrome generated visuals synced with live electronic audio performance on synths. Free entrance for students and general public.
+work_id: eclipse
 ---
 
 A work-in-progress exploration of real-time audio-visual synthesis, combining procedurally generated monochrome visuals with live electronic performance on synthesizers.

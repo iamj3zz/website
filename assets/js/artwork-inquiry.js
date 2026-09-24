@@ -116,6 +116,12 @@
       const submitButtonFr = form.dataset.submitButtonFr;
       const sendingStateEn = form.dataset.sendingStateEn;
       const sendingStateFr = form.dataset.sendingStateFr;
+      const errorsEl = document.getElementById('inquiry-form-errors');
+      const errorsData = errorsEl ? errorsEl.dataset : {};
+      function errMsg(key) {
+        const suffix = isFrench ? 'Fr' : 'En';
+        return errorsData[key + suffix] || errorsData[key + 'En'] || '';
+      }
 
       form.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -157,38 +163,38 @@
           valid = false;
         }
 
-        if (!firstName) showFieldError(firstNameField, 'First name is required.');
-        if (!lastName) showFieldError(lastNameField, 'Last name is required.');
+        if (!firstName) showFieldError(firstNameField, errMsg('firstNameRequired') || 'First name is required.');
+        if (!lastName) showFieldError(lastNameField, errMsg('lastNameRequired') || 'Last name is required.');
 
         const emailPattern = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
         if (!email) {
-          showFieldError(emailField, 'Your email is required.');
+          showFieldError(emailField, errMsg('emailRequired') || 'Your email is required.');
         } else if (!emailPattern.test(email)) {
-          showFieldError(emailField, 'Please enter a valid email address.');
+          showFieldError(emailField, errMsg('emailInvalid') || 'Please enter a valid email address.');
         }
 
         // Phone: international format
         if (!phone) {
-          showFieldError(phoneField, 'Your mobile number is required.');
+          showFieldError(phoneField, errMsg('phoneRequired') || 'Your mobile number is required.');
         } else if (!phone.startsWith('+')) {
-          showFieldError(phoneField, 'Phone must start with + followed by country code (e.g., +33612345678).');
+          showFieldError(phoneField, errMsg('phoneFormat') || 'Phone must start with + followed by country code (e.g., +33612345678).');
         } else {
           const digits = phone.substring(1);
           if (!/^\d+$/.test(digits)) {
-            showFieldError(phoneField, 'Phone can only contain + and digits.');
+            showFieldError(phoneField, errMsg('phoneDigitsOnly') || 'Phone can only contain + and digits.');
           } else if (digits.length < 7 || digits.length > 15) {
-            showFieldError(phoneField, 'Phone must be between 7 and 15 digits.');
+            showFieldError(phoneField, errMsg('phoneLength') || 'Phone must be between 7 and 15 digits.');
           } else if (digits[0] === '0') {
-            showFieldError(phoneField, 'Country code cannot start with 0.');
+            showFieldError(phoneField, errMsg('phoneCountryCodeZero') || 'Country code cannot start with 0.');
           }
         }
 
-        if (!street) showFieldError(streetField, 'Street address is required.');
-        if (!city) showFieldError(cityField, 'City is required.');
-        if (!zip) showFieldError(zipField, 'Postal code is required.');
-        if (!country) showFieldError(countryField, 'Country is required.');
+        if (!street) showFieldError(streetField, errMsg('streetRequired') || 'Street address is required.');
+        if (!city) showFieldError(cityField, errMsg('cityRequired') || 'City is required.');
+        if (!zip) showFieldError(zipField, errMsg('postalCodeRequired') || 'Postal code is required.');
+        if (!country) showFieldError(countryField, errMsg('countryRequired') || 'Country is required.');
 
-        if (!message) showFieldError(messageField, 'A message is required.');
+        if (!message) showFieldError(messageField, errMsg('messageRequired') || 'A message is required.');
 
         if (!valid) {
           const firstError = form.querySelector('.form-error');
@@ -219,7 +225,7 @@
           } else {
             if (errorMsg) errorMsg.hidden = false;
             submitBtn.disabled = false;
-            submitBtn.textContent = 'Send Inquiry';
+            submitBtn.textContent = submitButtonEn && isFrench ? submitButtonFr : submitButtonEn;
           }
         })
         .catch(function () {

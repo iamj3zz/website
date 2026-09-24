@@ -28,6 +28,18 @@ nav:
   book:
     en: "BOOK"
     fr: "BOOK"
+  book_aria:
+    en: "Book J3ZZ"
+    fr: "Réserver J3ZZ"
+  mobile_menu_toggle:
+    en: "Toggle navigation menu"
+    fr: "Basculer le menu de navigation"
+  bottom_nav_aria:
+    en: "Bottom navigation"
+    fr: "Navigation basse"
+  back_to_top:
+    en: "Back to top"
+    fr: "Retour en haut"
 
 # ─────────────────────────────────────────────
 # Portfolio Category Display Names
@@ -137,6 +149,18 @@ artwork:
     like:
       en: "Like"
       fr: "J'aime"
+    unlike:
+      en: "Unlike"
+      fr: "Ne plus aimer"
+    copied:
+      en: "Copied!"
+      fr: "Copié !"
+    inquire_about:
+      en: "Inquire about"
+      fr: "S'informer sur"
+    inquire_short:
+      en: "INQUIRE"
+      fr: "S'INFORMER"
     share:
       en: "Share"
       fr: "Partager"
@@ -334,6 +358,9 @@ linked_events:
   show_full_description:
     en: "Show full description"
     fr: "Afficher la description complète"
+  hide_description:
+    en: "Hide description"
+    fr: "Masquer la description"
 
 # ─────────────────────────────────────────────
 # Artwork Inquiry Modal
@@ -445,6 +472,49 @@ inquiry_form:
   sending_state:
     en: "Sending…"
     fr: "Envoi en cours…"
+  errors:
+    first_name_required:
+      en: "First name is required."
+      fr: "Le prénom est requis."
+    last_name_required:
+      en: "Last name is required."
+      fr: "Le nom est requis."
+    email_required:
+      en: "Your email is required."
+      fr: "Votre email est requis."
+    email_invalid:
+      en: "Please enter a valid email address."
+      fr: "Veuillez saisir une adresse email valide."
+    phone_required:
+      en: "Your mobile number is required."
+      fr: "Votre numéro de mobile est requis."
+    phone_format:
+      en: "Phone must start with + followed by country code (e.g., +33612345678)."
+      fr: "Le téléphone doit commencer par + suivi de l'indicatif pays (ex. : +33612345678)."
+    phone_digits_only:
+      en: "Phone can only contain + and digits."
+      fr: "Le téléphone ne peut contenir que + et des chiffres."
+    phone_length:
+      en: "Phone must be between 7 and 15 digits."
+      fr: "Le téléphone doit comporter entre 7 et 15 chiffres."
+    phone_country_code_zero:
+      en: "Country code cannot start with 0."
+      fr: "L'indicatif pays ne peut pas commencer par 0."
+    street_required:
+      en: "Street address is required."
+      fr: "L'adresse est requise."
+    city_required:
+      en: "City is required."
+      fr: "La ville est requise."
+    postal_code_required:
+      en: "Postal code is required."
+      fr: "Le code postal est requis."
+    country_required:
+      en: "Country is required."
+      fr: "Le pays est requis."
+    message_required:
+      en: "A message is required."
+      fr: "Un message est requis."
 
 # ─────────────────────────────────────────────
 # Bio Gallery
@@ -474,6 +544,123 @@ bio_gallery:
   contact_note:
     en: "For press kits or additional materials, contact"
     fr: "Pour des dossiers de presse ou des visuels supplémentaires, contactez"
+
+# ─────────────────────────────────────────────
+# Floating Navigation Widgets (bio section jump, portfolio filter, events year jump)
+# ─────────────────────────────────────────────
+bio_section_nav:
+  toggle_label:
+    en: "SECTION"
+    fr: "SECTION"
+  toggle_aria:
+    en: "Navigate to section"
+    fr: "Aller à une section"
+  panel_aria:
+    en: "Jump to section"
+    fr: "Atteindre une section"
+
+portfolio_filter_nav:
+  toggle_label:
+    en: "FILTER"
+    fr: "FILTRE"
+  toggle_aria:
+    en: "Filter works"
+    fr: "Filtrer les œuvres"
+  panel_aria:
+    en: "Filter by category"
+    fr: "Filtrer par catégorie"
+  all_label:
+    en: "All"
+    fr: "Tout"
+
+events_year_nav:
+  toggle_label:
+    en: "YEAR"
+    fr: "ANNÉE"
+  toggle_aria:
+    en: "Navigate to year"
+    fr: "Aller à une année"
+  panel_aria:
+    en: "Jump to year"
+    fr: "Atteindre une année"
+
+# ─────────────────────────────────────────────
+# Newsletter Form Validation (contact page)
+# ─────────────────────────────────────────────
+newsletter_form:
+  field_labels:
+    first_name:
+      en: "First name"
+      fr: "Le prénom"
+    last_name:
+      en: "Last name"
+      fr: "Le nom"
+  errors:
+    email_required:
+      en: "Email address is required."
+      fr: "L'adresse email est requise."
+    email_invalid:
+      en: "Please enter a valid email address (e.g., user@example.com)."
+      fr: "Veuillez saisir une adresse email valide (ex. : user@example.com)."
+    email_consecutive_dots:
+      en: "Email address cannot contain consecutive dots."
+      fr: "L'adresse email ne peut pas contenir de points consécutifs."
+    email_double_at:
+      en: "Email address must contain exactly one @ symbol."
+      fr: "L'adresse email doit contenir exactement un symbole @."
+    email_typo:
+      en: "Did you mean"
+      fr: "Vouliez-vous dire"
+    phone_required:
+      en: "Mobile number is required."
+      fr: "Le numéro de mobile est requis."
+    phone_format:
+      en: "Phone number must start with + followed by country code (e.g., +33612345678)."
+      fr: "Le numéro de téléphone doit commencer par + suivi de l'indicatif pays (ex. : +33612345678)."
+    phone_digits_only:
+      en: "Phone number can only contain + and digits (no spaces, dashes, or parentheses)."
+      fr: "Le numéro de téléphone ne peut contenir que + et des chiffres (sans espaces, tirets ou parenthèses)."
+    phone_length:
+      en: "Phone number must be between 7 and 15 digits (e.g., +33612345678)."
+      fr: "Le numéro de téléphone doit comporter entre 7 et 15 chiffres (ex. : +33612345678)."
+    phone_country_code_zero:
+      en: "Country code cannot start with 0."
+      fr: "L'indicatif pays ne peut pas commencer par 0."
+    name_required:
+      en: "is required."
+      fr: "est requis."
+    name_min_length:
+      en: "must be at least 2 characters."
+      fr: "doit comporter au moins 2 caractères."
+    name_max_length:
+      en: "must be 50 characters or less."
+      fr: "doit comporter 50 caractères ou moins."
+    name_invalid_chars:
+      en: "can only contain letters, hyphens, apostrophes, and spaces."
+      fr: "ne peut contenir que des lettres, des tirets, des apostrophes et des espaces."
+    name_no_numbers:
+      en: "cannot contain numbers."
+      fr: "ne peut pas contenir de chiffres."
+    consent_required:
+      en: "You must consent to receive newsletters to subscribe."
+      fr: "Vous devez consentir à recevoir la newsletter pour vous inscrire."
+
+# ─────────────────────────────────────────────
+# 404 Page
+# GitHub Pages serves this one static file for every unmatched route, so
+# page.lang can't tell EN from FR at build time — language is picked
+# client-side from the URL path that 404'd (see 404.html's inline script).
+# ─────────────────────────────────────────────
+error_404:
+  message:
+    en: "Page not found"
+    fr: "Page introuvable"
+  description:
+    en: "The page you're looking for doesn't exist or has been moved."
+    fr: "La page que vous recherchez n'existe pas ou a été déplacée."
+  back_link:
+    en: "Back to Home"
+    fr: "Retour à l'accueil"
 
 # ─────────────────────────────────────────────
 # Social icons (see _data/social.yml for the platform list itself)

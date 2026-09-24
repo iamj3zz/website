@@ -10,29 +10,32 @@
     // Guard: only run on portfolio page
     if (!document.querySelector('.portfolio-grid')) return;
 
+    const i18n = (window.J3ZZ_CONFIG && window.J3ZZ_CONFIG.i18n && window.J3ZZ_CONFIG.i18n.portfolioFilterNav) || {};
+    const catLabels = i18n.categories || {};
+
     const categories = [
-      { label: 'All',           value: 'all' },
-      { label: 'Installations', value: 'installations' },
-      { label: 'Live Acts',     value: 'live-acts' },
-      { label: 'Films',         value: 'films' },
-      { label: 'Performances',  value: 'performances' },
-      { label: 'Releases',      value: 'releases' },
-      { label: 'Workshops',     value: 'workshops' }
+      { label: catLabels.all           || 'All',           value: 'all' },
+      { label: catLabels.installations || 'Installations', value: 'installations' },
+      { label: catLabels['live-acts']  || 'Live Acts',     value: 'live-acts' },
+      { label: catLabels.films         || 'Films',         value: 'films' },
+      { label: catLabels.performances  || 'Performances',  value: 'performances' },
+      { label: catLabels.releases      || 'Releases',      value: 'releases' },
+      { label: catLabels.workshops     || 'Workshops',     value: 'workshops' }
     ];
 
     // Create toggle button
     const toggle = document.createElement('button');
     toggle.className = 'filter-nav-toggle';
-    toggle.setAttribute('aria-label', 'Filter works');
+    toggle.setAttribute('aria-label', i18n.toggleAria || 'Filter works');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'filter-nav-panel');
-    toggle.textContent = 'FILTER';
+    toggle.textContent = i18n.toggleLabel || 'FILTER';
 
     // Create navigation panel
     const panel = document.createElement('nav');
     panel.className = 'filter-nav-panel';
     panel.id = 'filter-nav-panel';
-    panel.setAttribute('aria-label', 'Filter by category');
+    panel.setAttribute('aria-label', i18n.panelAria || 'Filter by category');
 
     const list = document.createElement('ul');
     list.className = 'filter-nav-list';

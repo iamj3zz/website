@@ -42,11 +42,13 @@
     });
 
     if (copyEl) {
+      var copyLabel = copyEl.dataset.copyLabel || 'Copy link';
+      var copiedLabel = copyEl.dataset.copiedLabel || 'Copied!';
       copyEl.addEventListener('click', function (e) {
         e.preventDefault();
         navigator.clipboard.writeText(url).then(function () {
-          copyEl.textContent = 'Copied!';
-          setTimeout(function () { copyEl.textContent = 'Copy link'; }, 2000);
+          copyEl.textContent = copiedLabel;
+          setTimeout(function () { copyEl.textContent = copyLabel; }, 2000);
         }).catch(function () {
           // Fallback for older browsers
           var ta = document.createElement('textarea');
@@ -57,8 +59,8 @@
           ta.select();
           document.execCommand('copy');
           document.body.removeChild(ta);
-          copyEl.textContent = 'Copied!';
-          setTimeout(function () { copyEl.textContent = 'Copy link'; }, 2000);
+          copyEl.textContent = copiedLabel;
+          setTimeout(function () { copyEl.textContent = copyLabel; }, 2000);
         });
         popover.hidden = true;
       });

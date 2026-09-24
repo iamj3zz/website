@@ -79,8 +79,10 @@
   // ── DOM updates ─────────────────────────────────────────────────────────
   function updateButton(btn, liked, count) {
     var title = btn.dataset.artworkTitle || 'this artwork';
+    var likeLabel = btn.dataset.likeLabel || 'Like';
+    var unlikeLabel = btn.dataset.unlikeLabel || 'Unlike';
     btn.setAttribute('aria-pressed', liked ? 'true' : 'false');
-    btn.setAttribute('aria-label', (liked ? 'Unlike ' : 'Like ') + title);
+    btn.setAttribute('aria-label', (liked ? unlikeLabel : likeLabel) + ' ' + title);
     var countEl = btn.querySelector('.gallery-heart-count');
     if (countEl) {
       countEl.textContent = (count !== null && count !== undefined && count > 0) ? count : '';

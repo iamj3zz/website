@@ -57,8 +57,43 @@
 
 {{ _trans.inquiry_form.message_closing[_lang] }},</textarea>
       </div>
-      <button type="submit" class="form-submit" data-submit-button-en="Send Inquiry" data-submit-button-fr="Envoyer la demande" data-sending-state-en="Sending…" data-sending-state-fr="Envoi en cours…">{{ _trans.inquiry_form.submit_button[_lang] }}</button>
+      <button type="submit" class="form-submit"
+        data-submit-button-en="{{ _trans.inquiry_form.submit_button['en'] }}"
+        data-submit-button-fr="{{ _trans.inquiry_form.submit_button['fr'] }}"
+        data-sending-state-en="{{ _trans.inquiry_form.sending_state['en'] }}"
+        data-sending-state-fr="{{ _trans.inquiry_form.sending_state['fr'] }}"
+      >{{ _trans.inquiry_form.submit_button[_lang] }}</button>
     </form>
+    <span id="inquiry-form-errors" hidden
+      data-first-name-required-en="{{ _trans.inquiry_form.errors.first_name_required['en'] }}"
+      data-first-name-required-fr="{{ _trans.inquiry_form.errors.first_name_required['fr'] }}"
+      data-last-name-required-en="{{ _trans.inquiry_form.errors.last_name_required['en'] }}"
+      data-last-name-required-fr="{{ _trans.inquiry_form.errors.last_name_required['fr'] }}"
+      data-email-required-en="{{ _trans.inquiry_form.errors.email_required['en'] }}"
+      data-email-required-fr="{{ _trans.inquiry_form.errors.email_required['fr'] }}"
+      data-email-invalid-en="{{ _trans.inquiry_form.errors.email_invalid['en'] }}"
+      data-email-invalid-fr="{{ _trans.inquiry_form.errors.email_invalid['fr'] }}"
+      data-phone-required-en="{{ _trans.inquiry_form.errors.phone_required['en'] }}"
+      data-phone-required-fr="{{ _trans.inquiry_form.errors.phone_required['fr'] }}"
+      data-phone-format-en="{{ _trans.inquiry_form.errors.phone_format['en'] }}"
+      data-phone-format-fr="{{ _trans.inquiry_form.errors.phone_format['fr'] }}"
+      data-phone-digits-only-en="{{ _trans.inquiry_form.errors.phone_digits_only['en'] }}"
+      data-phone-digits-only-fr="{{ _trans.inquiry_form.errors.phone_digits_only['fr'] }}"
+      data-phone-length-en="{{ _trans.inquiry_form.errors.phone_length['en'] }}"
+      data-phone-length-fr="{{ _trans.inquiry_form.errors.phone_length['fr'] }}"
+      data-phone-country-code-zero-en="{{ _trans.inquiry_form.errors.phone_country_code_zero['en'] }}"
+      data-phone-country-code-zero-fr="{{ _trans.inquiry_form.errors.phone_country_code_zero['fr'] }}"
+      data-street-required-en="{{ _trans.inquiry_form.errors.street_required['en'] }}"
+      data-street-required-fr="{{ _trans.inquiry_form.errors.street_required['fr'] }}"
+      data-city-required-en="{{ _trans.inquiry_form.errors.city_required['en'] }}"
+      data-city-required-fr="{{ _trans.inquiry_form.errors.city_required['fr'] }}"
+      data-postal-code-required-en="{{ _trans.inquiry_form.errors.postal_code_required['en'] }}"
+      data-postal-code-required-fr="{{ _trans.inquiry_form.errors.postal_code_required['fr'] }}"
+      data-country-required-en="{{ _trans.inquiry_form.errors.country_required['en'] }}"
+      data-country-required-fr="{{ _trans.inquiry_form.errors.country_required['fr'] }}"
+      data-message-required-en="{{ _trans.inquiry_form.errors.message_required['en'] }}"
+      data-message-required-fr="{{ _trans.inquiry_form.errors.message_required['fr'] }}"
+    ></span>
 
     <div id="inquiry-success" class="inquiry-success" hidden>
       <p>{{ _trans.inquiry_modal.success_message[_lang] }}</p>

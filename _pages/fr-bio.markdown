@@ -234,10 +234,10 @@ links:
         <div class="bio-item"><span class="bio-year">2021–2022</span> Certificat ∙ Conception et mise en œuvre de stratégies en contexte de conduite du changement ∙ <a href="https://www.hec.edu/en" target="_blank">HEC PARIS</a> ∙ Jouy-en-Josas ∙ FR</div>
         <div class="bio-item"><span class="bio-year">2021</span> Permis d'exploitation (licence III) - 2021-232021-14534 ∙ <a href="https://www.permis-de-exploitation.fr/" target="_blank"> SEF </a> ∙ Marseille ∙ FR</div>
         <div class="bio-item"><span class="bio-year">2021</span> Licence d'entrepreneur de spectacles - PLATESV-R-2021-009234 ∙ Saint-Denis ∙ RE</div>
-        <div class="bio-item"><span class="bio-year">2015</span> Certificat ∙ Managing the Arts: Marketing for Cultural Organizations ∙ <a target="_blank" href="https://www.leuphana.de/encultura/university.html">LEUPHANA UNIVERSITY</a> ∙ Lüneburg ∙ DE</div>
+        <div class="bio-item"><span class="bio-year">2015</span> Certificat ∙ Managing the Arts: Marketing for Cultural Organizations ∙ <a target="_blank" href="https://www.leuphana.de/professional-school/zertifikatsstudium-berufsbegleitend/kultur.html">LEUPHANA UNIVERSITY</a> ∙ Lüneburg ∙ DE</div>
         <div class="bio-item"><span class="bio-year">2008–2010</span> Certificat ∙ <a target="_blank" href="https://rootsnroutes.eu/projects-id62"> ROOTS &amp; ROUTES ACADEMY </a> ∙ Cologne ∙ DE</div>
         <div class="bio-item"><span class="bio-year">2000–2006</span> Diplôme d'ingénieur (Systèmes d'information &amp; Génie logiciel) ∙ <a target="_blank" href="https://www.epita.fr/"> EPITA</a> ∙ Le Kremlin-Bicêtre ∙ FR</div>
-        <div class="bio-item"><span class="bio-year">1994–1999</span> Diplôme avec mention (violon) ∙ <a target="_blank" href="https://conservatoire.regionreunion.com/"> CONSERVATOIRE DE LA RÉUNION </a> ∙ Saint-Denis ∙ RE</div>
+        <div class="bio-item"><span class="bio-year">1994–1999</span> Diplôme avec mention (violon) ∙ <a target="_blank" href="https://conservatoire.regionreunion.com/">CONSERVATOIRE À RAYONNEMENT RÉGIONAL DE LA RÉUNION</a> ∙ Saint-Denis ∙ RE</div>
         <div class="bio-item"><span class="bio-year">1996</span> « Musique au Grand Jardin » ∙ Joinville-en-Champagne ∙ FR</div>
         <div class="bio-item"><span class="bio-year">1985–1994</span> ÉCOLE DES ARTS DE SAINT-DENIS ∙ Saint-Denis ∙ RE</div>
       </div>

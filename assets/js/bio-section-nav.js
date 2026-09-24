@@ -25,19 +25,21 @@
       return;
     }
 
+    const i18n = (window.J3ZZ_CONFIG && window.J3ZZ_CONFIG.i18n && window.J3ZZ_CONFIG.i18n.bioSectionNav) || {};
+
     // Create toggle button
     const toggle = document.createElement('button');
     toggle.className = 'bio-nav-toggle';
-    toggle.setAttribute('aria-label', 'Navigate to section');
+    toggle.setAttribute('aria-label', i18n.toggleAria || 'Navigate to section');
     toggle.setAttribute('aria-expanded', 'false');
     toggle.setAttribute('aria-controls', 'bio-nav-panel');
-    toggle.textContent = 'SECTION';
+    toggle.textContent = i18n.toggleLabel || 'SECTION';
 
     // Create navigation panel
     const panel = document.createElement('nav');
     panel.className = 'bio-nav-panel';
     panel.id = 'bio-nav-panel';
-    panel.setAttribute('aria-label', 'Jump to section');
+    panel.setAttribute('aria-label', i18n.panelAria || 'Jump to section');
 
     const list = document.createElement('ul');
     list.className = 'bio-nav-list';

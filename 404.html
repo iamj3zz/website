@@ -5,11 +5,29 @@ title: 404
 noindex: true
 ---
 
+{% assign _trans = site.data.translations %}
+
 <section class="error-section">
   <div class="error-content">
     <h1 class="error-code">404</h1>
-    <p class="error-message">Page not found</p>
-    <p class="error-description">The page you're looking for doesn't exist or has been moved.</p>
-    <a href="{{ '/' | relative_url }}" class="error-link">Back to Home</a>
+    <p class="error-message" data-en="{{ _trans.error_404.message['en'] }}" data-fr="{{ _trans.error_404.message['fr'] }}">{{ _trans.error_404.message['en'] }}</p>
+    <p class="error-description" data-en="{{ _trans.error_404.description['en'] }}" data-fr="{{ _trans.error_404.description['fr'] }}">{{ _trans.error_404.description['en'] }}</p>
+    <a href="{{ '/' | relative_url }}" class="error-link" data-href-fr="{{ '/fr/' | relative_url }}" data-en="{{ _trans.error_404.back_link['en'] }}" data-fr="{{ _trans.error_404.back_link['fr'] }}">{{ _trans.error_404.back_link['en'] }}</a>
   </div>
 </section>
+
+<script>
+  (function () {
+    // GitHub Pages serves this single file for every unmatched route, so the
+    // only way to know a French visitor hit a broken /fr/ link is the path
+    // that actually 404'd — page.lang can't help at build time.
+    if (window.location.pathname.indexOf('/fr/') === 0) {
+      document.documentElement.lang = 'fr';
+      document.querySelectorAll('.error-section [data-fr]').forEach(function (el) {
+        el.textContent = el.dataset.fr;
+      });
+      var link = document.querySelector('.error-link');
+      if (link && link.dataset.hrefFr) link.href = link.dataset.hrefFr;
+    }
+  })();
+</script>
