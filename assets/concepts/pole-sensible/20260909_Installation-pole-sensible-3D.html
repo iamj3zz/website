@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Pôle Sensible — Dispositif 3D</title>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
@@ -27,11 +32,11 @@
   canvas{display:block;position:fixed;inset:0;}
 
   .veil{
-    position:fixed;inset:0;pointer-events:none;
+    position:fixed;inset:0;pointer-events:none;z-index:1;
     background:radial-gradient(ellipse at 50% 0%, transparent 45%, rgba(7,12,20,0.55) 100%);
   }
 
-  .hud{position:fixed;inset:0;pointer-events:none;padding:28px 32px;display:flex;flex-direction:column;justify-content:space-between;}
+  .hud{position:fixed;inset:0;pointer-events:none;padding:28px 32px;display:flex;flex-direction:column;justify-content:space-between;z-index:2;}
   .hud > *{pointer-events:auto;}
 
   .top-row{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;}
@@ -70,7 +75,7 @@
     border:1px solid var(--panel-border);
     border-radius:8px;
     padding:9px 13px;
-    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
     white-space:nowrap;
   }
 
@@ -81,7 +86,7 @@
     border:1px solid var(--panel-border);
     border-radius:12px;
     padding:16px 18px;
-    backdrop-filter:blur(8px);
+    -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);
     display:grid;
     grid-template-columns:auto auto;
     gap:8px 22px;
@@ -111,7 +116,47 @@
     .bottom-row{flex-direction:column;align-items:flex-start;gap:14px;}
     .coord{text-align:left;}
   }
+
+  .mobile-gate{
+    display:none;position:fixed;inset:0;z-index:9999;
+    background:rgba(7,12,20,0.96);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);
+    align-items:center;justify-content:center;padding:28px;text-align:center;
+  }
+  .mobile-gate-box{
+    max-width:360px;border:1px solid var(--panel-border);background:var(--panel);
+    border-radius:14px;padding:26px 22px;
+  }
+  .mobile-gate-box h2{
+    font-family:'Fraunces',Georgia,serif;font-weight:560;font-size:19px;
+    margin:0 0 10px 0;color:var(--text);
+  }
+  .mobile-gate-box p{
+    font-size:13px;line-height:1.55;color:var(--text-muted);margin:0 0 18px 0;
+  }
+  .mobile-gate-box button{
+    font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:0.03em;
+    color:var(--ink);background:var(--text);border:none;border-radius:8px;
+    padding:10px 16px;cursor:pointer;
+  }
+  @media (max-width:760px){
+    .mobile-gate{display:flex;}
+  }
 </style>
+</head>
+<body>
+
+<div class="mobile-gate" id="mobileGate">
+  <div class="mobile-gate-box">
+    <h2>Optimisé pour un grand écran</h2>
+    <p>Ce schéma 3D se manipule à la souris (glisser pour tourner, molette pour zoomer) et se lit mieux sur un ordinateur ou une tablette. Sur téléphone, l'affichage peut être partiel.</p>
+    <button id="mobileGateContinue">Continuer quand même</button>
+  </div>
+</div>
+<script>
+document.getElementById('mobileGateContinue').addEventListener('click', function(){
+  document.getElementById('mobileGate').style.display = 'none';
+});
+</script>
 
 <div class="loading" id="loading">chargement de la scène…</div>
 <div class="veil"></div>
@@ -678,3 +723,5 @@ window.addEventListener('resize', ()=>{
   renderer.setSize(window.innerWidth, window.innerHeight);
 });
 </script>
+</body>
+</html>

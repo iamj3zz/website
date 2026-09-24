@@ -111,9 +111,47 @@
     color:var(--muted);
     line-height:1.6;
   }
+
+  .mobile-gate{
+    display:none;position:fixed;inset:0;z-index:9999;
+    background:var(--bg);align-items:center;justify-content:center;
+    padding:28px;text-align:center;
+  }
+  .mobile-gate-box{
+    max-width:360px;border:2px solid var(--ink);background:var(--surface);
+    border-radius:10px;padding:26px 22px;
+  }
+  .mobile-gate-box h2{
+    font-family:'Archivo',system-ui,sans-serif;font-weight:800;font-size:19px;
+    margin:0 0 10px 0;color:var(--ink);
+  }
+  .mobile-gate-box p{
+    font-size:13px;line-height:1.55;color:var(--muted);margin:0 0 18px 0;
+  }
+  .mobile-gate-box button{
+    font-family:'IBM Plex Mono',ui-monospace,monospace;font-size:11.5px;letter-spacing:0.03em;
+    color:var(--surface);background:var(--ink);border:none;border-radius:6px;
+    padding:10px 16px;cursor:pointer;
+  }
+  @media (max-width:760px){
+    .mobile-gate{display:flex;}
+  }
 </style>
 </head>
 <body>
+
+<div class="mobile-gate" id="mobileGate">
+  <div class="mobile-gate-box">
+    <h2>Optimisé pour un grand écran</h2>
+    <p>Ces schémas sont plus lisibles sur un ordinateur ou une tablette. Sur téléphone, le texte peut être petit et les figures moins nettes.</p>
+    <button id="mobileGateContinue">Continuer quand même</button>
+  </div>
+</div>
+<script>
+document.getElementById('mobileGateContinue').addEventListener('click', function(){
+  document.getElementById('mobileGate').style.display = 'none';
+});
+</script>
 
 <div class="titleblock">
   <h1>Pôle Sensible — trois configurations de restitution possibles</h1>
