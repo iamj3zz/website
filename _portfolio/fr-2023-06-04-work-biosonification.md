@@ -50,7 +50,7 @@ sections:
 
     Plus récemment, des chercheurs ont montré que des plantes soumises à un stress — déshydratation, coupe, ou autre contrainte — émettent des clics ultrasoniques aériens : des sons bien au-delà du registre de l'audition humaine, que nous ne pouvons percevoir qu'à l'aide de microphones sensibles et d'équipements d'enregistrement spécialisés, et que certains animaux, comme les phalènes, sont capables d'entendre dans la nature. C'est une découverte frappante, une preuve de plus que les plantes sont loin d'être silencieuses, même si leur production sonore reste invisible sans les bons instruments.
 
-    J'ai choisi une autre voie avec Vibrotanica. Plutôt que d'enregistrer les rares clics aériens qu'une plante émet sous stress, chaque boîtier capte directement son potentiel bioélectrique continu — le même type de signal électrique que Bose fut le premier à mesurer — et le diffuse, en direct, en son et en images génératives que chacun dans la pièce peut entendre et voir, sans microphone ultrasonique ni conditions de laboratoire. C'est un signal continu plutôt qu'une alarme, traduit plutôt que composé, audible dès qu'on entre dans la pièce.
+    J'ai choisi une autre voie avec Vibrotanica. Plutôt que d'enregistrer les rares clics aériens qu'une plante émet sous stress, chaque boîtier capte directement son potentiel bioélectrique continu — le même type de signal électrique que Bose fut le premier à mesurer — et le diffuse, en direct, en son et en images génératives que chacun dans la pièce peut entendre et voir, sans microphone ultrasonique ni conditions de laboratoire. C'est un signal continu plutôt qu'une alarme, traduit plutôt que composé, audible dès qu'on entre dans la pièce.   
 - type: text
   title: "Des expériences d'écoute"
   content: |
@@ -63,6 +63,14 @@ sections:
     - Revenir à la même plante à différents moments de la journée, pour entendre si sa « voix » change avec la lumière, la température, ou la présence de personnes dans la pièce.
 
     Nous traitons une absence de changement avec la même curiosité qu'un changement spectaculaire. Chaque geste ne provoque pas nécessairement de réponse, et une partie de ce que l'atelier enseigne — doucement, sans jamais faire la leçon — est la discipline d'observer sans imposer de récit à ce que l'on entend.
+
+- type: iframe
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/L4tk8dGq3V8"
+    frameborder="0" allowfullscreen></iframe>
+  responsive: true
+  aspect_ratio: '16:9'  
+  caption: Turn youtube captions to English or French / Activez les sous-titres Youtube en Anglais ou Français 
+  
 - type: text
   title: "Une salle partagée entre les générations"
   content: |

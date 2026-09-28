@@ -45,6 +45,7 @@ sections:
 - type: hero-image
   image: "/assets/works/2023-06-04-work-biosonification/hero.jpg"
   caption: French Institute in Budapest, Hungary (2023)
+
 - type: description
 - type: text
   title: 'What we listen for: plants as electrical bodies'
@@ -74,6 +75,13 @@ sections:
     Biosonification workshops are deliberately built as intergenerational, cross-community spaces. In a single session, a retired grower who has kept the same fig tree for thirty years might sit beside a ten-year-old hearing a plant's "voice" for the first time, next to a biology researcher, a hobbyist gardener, an artist, or someone who has simply never thought about plants at all. Nobody arrives more qualified to listen than anyone else — the plant's signal doesn't care about anyone's expertise.
 
     What emerges from these sessions is less a demonstration than a shared inquiry: growers bring decades of hands-on plant knowledge, scientists bring rigor and healthy skepticism, children bring unguarded attention, and everyone leaves having listened, together, to something usually silent. This is the community that "Nout plant i chant" was built around — plant lovers, growers, families, and researchers meeting on equal footing around the same quiet, electrical hum of a living plant.
+
+- type: iframe
+  embed_code: <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/L4tk8dGq3V8"
+    frameborder="0" allowfullscreen></iframe>
+  responsive: true
+  aspect_ratio: '16:9'
+  caption: Turn youtube captions to English or French / Activez les sous-titres Youtube en Anglais ou Français 
 - type: text
   title: A collective memory we all seem to carry
   content: |
