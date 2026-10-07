@@ -1,0 +1,671 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Palimpseste spatial — maquette</title>
+<style>
+  :root { --bg:#0e1013; --panel:#171a1f; --ink:#d9dde3; --muted:#8a919b; --accent:#e8a64a; --live:#5b8def; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:14px/1.4 system-ui, sans-serif; display:flex; height:100vh; }
+  #side { width:330px; padding:14px; background:var(--panel); overflow-y:auto; }
+  #stage { flex:1; position:relative; }
+  canvas { width:100%; height:100%; display:block; cursor:crosshair; }
+  h1 { font-size:16px; margin:0 0 4px; }
+  p.note { color:var(--muted); font-size:12px; margin:0 0 12px; }
+  fieldset { border:1px solid #2a2f37; border-radius:6px; margin:0 0 10px; padding:8px 10px; }
+  legend { color:var(--muted); font-size:12px; }
+  button { background:#262b33; color:var(--ink); border:1px solid #3a414c; border-radius:5px; padding:6px 10px; margin:2px 2px 2px 0; cursor:pointer; }
+  button:hover { border-color:var(--accent); }
+  button.on { background:#5a3f16; border-color:var(--accent); }
+  label { display:block; margin:6px 0 2px; font-size:12px; color:var(--muted); }
+  input[type=range] { width:100%; }
+  .row { display:flex; justify-content:space-between; font-size:12px; color:var(--muted); }
+  #meter { height:8px; background:#222; border-radius:4px; overflow:hidden; margin-top:6px; }
+  #meterFill { height:100%; width:0; background:var(--live); }
+  #status { font-size:12px; color:var(--muted); margin-top:6px; min-height:2.8em; }
+  #data { width:340px; padding:12px 12px 20px; background:#13161a; overflow-y:auto; font-size:12px; border-left:1px solid #22262d; }
+  #data.hidden { display:none; }
+  #data h2 { font-size:14px; margin:0 0 4px; }
+  #data h3 { font-size:12px; margin:12px 0 4px; color:#c9cdd3; text-transform:uppercase; letter-spacing:.04em; }
+  .drow { display:grid; grid-template-columns: 1fr auto; gap:2px 6px; padding:4px 0; border-bottom:1px solid #1f2329; }
+  .drow .n { color:var(--ink); }
+  .drow .src, .drow .use { grid-column:1 / span 2; color:var(--muted); font-size:11px; }
+  .drow .st { justify-self:end; font-size:10px; padding:1px 5px; border-radius:3px; height:fit-content; }
+  .st.ACTIF { background:#1f4d2e; color:#bfe8cb; } .st.DÉSACTIVÉ { background:#4a2323; color:#f0b9b9; } .st.SIMULÉ { background:#4a3a14; color:#f0d9a0; } .st.PRÉVU { background:#2a2e35; color:#9aa1ab; }
+  .drow.PRÉVU .n { color:#8a919b; }
+  .bar { grid-column:1 / span 2; height:5px; background:#22262d; border-radius:3px; overflow:hidden; }
+  .bar > i { display:block; height:100%; width:0; background:var(--live); }
+  .chips, .legend { grid-column:1 / span 2; display:flex; flex-wrap:wrap; gap:3px; }
+  .legend { margin:4px 0 6px; }
+  .chip { font-size:10px; color:#fff; padding:1px 6px; border-radius:9px; opacity:.92; }
+  .right { display:flex; align-items:center; gap:6px; justify-self:end; }
+  .tog { font-size:11px; color:#c9cdd3; cursor:pointer; white-space:nowrap; }
+  .tog input { vertical-align:middle; margin:0 4px 0 0; }
+  .drow.off .n, .drow.off .val { opacity:.45; }
+  .val { grid-column:1 / span 2; font-variant-numeric: tabular-nums; color:#bfc5cd; font-size:11px; }
+  #caption { position:absolute; left:16px; bottom:12px; color:#aeb4bd; font-size:13px; pointer-events:none; }
+</style>
+</head>
+<body>
+<div id="side">
+  <p class="note" style="margin:0 0 8px"><a href="../index.html" style="color:#8fb0f5">← Dossier Bowing the Network</a> · <a href="LISEZMOI.html" style="color:#8fb0f5">Mode d'emploi</a></p>
+  <h1>Palimpseste spatial</h1>
+  <p class="note">Maquette — micro seul, sans capteur d'archet. Chaque phrase jouée est déposée dans l'espace selon le jeu (hauteur → gauche/droite, brillance → avant/arrière, dynamique → distance), s'estompe, puis se réveille quand on rejoue un geste semblable. <b>Casque obligatoire.</b></p>
+
+  <fieldset><legend>Source</legend>
+    <label style="margin-top:0">Son à jouer (la lecture démarre dès le choix)</label>
+    <select id="demoSel" style="width:100%;margin:2px 0 6px;background:#262b33;color:var(--ink);border:1px solid #3a414c;border-radius:5px;padding:6px"></select>
+    <button id="btnDemo">▶ Lire</button>
+    <button id="btnStop">■ Stop</button>
+    <button id="btnMic">Micro (violon)</button>
+    <input id="file" type="file" accept="audio/*,.mp3,.wav,.ogg,.m4a,.flac" hidden>
+    <div id="meter"><div id="meterFill"></div></div>
+    <div id="status">Choisissez un son dans le menu (ou « ▶ Lire »), ou jouez au « Micro ». Casque recommandé.</div>
+  </fieldset>
+
+  <fieldset><legend>Détection des phrases</legend>
+    <label>Seuil de jeu au-dessus du bruit (dB) <span id="vThr"></span></label>
+    <input id="thr" type="range" min="4" max="30" value="12">
+    <label>Silence de fin de phrase (ms) <span id="vGap"></span></label>
+    <input id="gap" type="range" min="150" max="1200" value="400" step="50">
+    <label>Durée max d'une phrase (s) <span id="vMax"></span></label>
+    <input id="maxlen" type="range" min="1.5" max="8" value="4" step="0.5">
+  </fieldset>
+
+  <fieldset><legend>Mémoire</legend>
+    <label>Demi-vie d'une trace (s) <span id="vLife"></span></label>
+    <input id="life" type="range" min="10" max="300" value="90" step="5">
+    <label>Ressemblance nécessaire au réveil <span id="vSim"></span></label>
+    <input id="sim" type="range" min="2" max="40" value="13">
+    <label>Murmure des traces endormies <span id="vMur"></span></label>
+    <input id="mur" type="range" min="0" max="40" value="12">
+    <button id="btnClear">Effacer les traces</button>
+  </fieldset>
+
+  <fieldset><legend>Curseur jeu ↔ corps</legend>
+    <div class="row"><span>jeu seul</span><span>position du corps (souris)</span></div>
+    <input id="alpha" type="range" min="0" max="100" value="0">
+    <p class="note" style="margin-top:6px">À droite, la souris sur la carte remplace la position du corps : les traces se déposent là où « vous » êtes et se réveillent quand vous repassez à proximité.</p>
+  </fieldset>
+
+  <fieldset><legend>Carte des données</legend>
+    <button id="btnData" class="on">Données captées : affichées</button>
+    <p class="note" style="margin-top:6px">ACTIF = mesuré en direct dans la maquette · SIMULÉ = remplacé par la souris · DÉSACTIVÉ = mesure disponible mais coupée (case « utiliser ») · PRÉVU = capteur ou analyse à développer pendant la résidence.</p>
+  </fieldset>
+
+  <fieldset id="recBox"><legend>Vidéo</legend>
+    <button id="btnRec">● Enregistrer</button>
+    <div id="recStatus" class="note"></div>
+  </fieldset>
+</div>
+
+<div id="stage">
+  <canvas id="cv"></canvas>
+  <div id="caption">Bowing the Network — maquette du palimpseste spatial · micro seul, sans capteur d'archet ni caméra · montre la mémoire des traces, pas encore le geste de l'archet</div>
+</div>
+<aside id="data"><h2>Données captées</h2><p class="note">Ce que le dispositif mesure, avec quoi, et à quoi cela sert dans la recherche.</p><div id="dataBody"></div></aside>
+
+<script>
+'use strict';
+// ---------- state ----------
+const $ = id => document.getElementById(id);
+let ctx = null, analyser = null, captureNode = null, srcNode = null, inputGain = null;
+let master = null, recDest = null, mediaRecorder = null, recChunks = [];
+const SR_PREROLL = 0.15;            // seconds kept before phrase onset
+const MAX_PHRASE = 8;               // seconds
+const MAX_TRACES = 24;
+const ROOM = 4;                     // map half-size in metres
+const traces = [];
+let ring = [], ringLen = 0, phraseDbs = [], traceCount = 0;
+// which measurements are used (toggled from the data panel)
+const USE = { pitch: true, bright: true, loud: true, onset: false, noise: false, vib: false };
+const W = { pitch: 1.5, bright: 1, loud: 0.5, onset: 0.8, noise: 0.8, vib: 0.6 };         // recent raw chunks (preroll)
+let phrase = null;                  // current phrase being recorded
+let noiseDb = -70, lastLoudAt = 0;
+let live = { db:-100, midi:null, cent:0, flat:null, vib:null, onsetRate:null, loud:false, feat:null, pos:null };
+let liveHist = [];
+let mouse = { x:0, y:0, inside:false };
+let started = false;
+
+const params = {
+  get thr() { return +$('thr').value; }, get gap() { return +$('gap').value; }, get maxlen() { return +$('maxlen').value; },
+  get life() { return +$('life').value; }, get sim() { return +$('sim').value / 100; },
+  get mur() { return +$('mur').value / 100; }, get alpha() { return +$('alpha').value / 100; },
+};
+for (const [id, v, f] of [['thr','vThr',x=>x],['gap','vGap',x=>x],['maxlen','vMax',x=>x],['life','vLife',x=>x],['sim','vSim',x=>(x/100).toFixed(2)],['mur','vMur',x=>x+' %']]) {
+  const upd = () => $(v).textContent = f($(id).value); $(id).oninput = upd; upd();
+}
+
+// ---------- audio setup ----------
+const workletCode = `
+class Capture extends AudioWorkletProcessor {
+  process(inputs) { const ch = inputs[0][0]; if (ch) this.port.postMessage(ch.slice(0)); return true; }
+}
+registerProcessor('capture', Capture);`;
+
+async function initAudio() {
+  if (ctx) return;
+  ctx = new AudioContext({ latencyHint: 'interactive' });
+  let worklet = true;
+  try { await ctx.audioWorklet.addModule(URL.createObjectURL(new Blob([workletCode], { type: 'application/javascript' }))); }
+  catch (e) { worklet = false; }   // e.g. page opened as a local file: fall back to ScriptProcessor
+  analyser = ctx.createAnalyser(); analyser.fftSize = 2048; analyser.smoothingTimeConstant = 0;
+  if (worklet) {
+    captureNode = new AudioWorkletNode(ctx, 'capture');
+    captureNode.port.onmessage = e => onChunk(e.data);
+  } else {
+    captureNode = ctx.createScriptProcessor(2048, 1, 1);
+    captureNode.onaudioprocess = e => onChunk(e.inputBuffer.getChannelData(0).slice(0));
+    const sink = ctx.createGain(); sink.gain.value = 0; captureNode.connect(sink); sink.connect(ctx.destination);
+  }
+  inputGain = ctx.createGain();
+  inputGain.connect(analyser); inputGain.connect(captureNode);
+  master = ctx.createGain(); master.gain.value = 0.9; master.connect(ctx.destination);
+  recDest = ctx.createMediaStreamDestination(); master.connect(recDest);
+  const L = ctx.listener;
+  if (L.forwardX) { L.positionX.value = 0; L.positionY.value = 0; L.positionZ.value = 0; L.forwardX.value = 0; L.forwardY.value = 0; L.forwardZ.value = -1; L.upX.value = 0; L.upY.value = 1; L.upZ.value = 0; }
+  else { L.setPosition(0,0,0); L.setOrientation(0,0,-1,0,1,0); }
+  started = true;
+}
+
+function setSource(node, audible) {
+  if (srcNode) { try { srcNode.disconnect(); } catch(e){} if (srcNode.mediaElement) srcNode.mediaElement.pause(); if (srcNode !== node && srcNode.stop) { try { srcNode.stop(); } catch(e){} } }
+  srcNode = node; node.connect(inputGain);
+  const toRec = ctx.createGain(); toRec.gain.value = 0.8; node.connect(toRec); toRec.connect(recDest); // dry signal in the video
+  if (audible) node.connect(ctx.destination); // file mode: hear the "violin"
+}
+
+const UPLOAD = '__upload__';
+let demoEl = null, lastSel = 0;   // demoEl = current AudioBufferSourceNode (with .playing flag)
+const FILES = new Map();           // uploaded files, by option value
+function stopPlayback() { if (demoEl) { try { demoEl.stop(); } catch (e) {} demoEl.playing = false; } }
+function mark(id) { ['btnMic', 'btnDemo'].forEach(b => $(b).classList.toggle('on', b === id)); }
+
+$('btnMic').onclick = async () => {
+  try {
+    await initAudio(); await ctx.resume();
+    stopPlayback();
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: { echoCancellation:false, noiseSuppression:false, autoGainControl:false } });
+    setSource(ctx.createMediaStreamSource(stream), false);
+    mark('btnMic');
+    $('status').textContent = 'Micro actif. Jouez des phrases séparées par de courts silences.';
+  } catch (e) { $('status').textContent = 'Micro indisponible : ' + e.message + ' — le micro demande la version en ligne de la page ; sans violon, choisissez un son dans le menu.'; }
+};
+
+// sounds: synthetic test phrases + reference recordings by other performers (credited) + user files
+const DEMOS = [
+  ['sons-de-test/test-phrases-synthetiques.wav', 'Phrases de test (synthétiques, 25 s)'],
+  ['sons-de-test/paganini-caprice-5_sumina-studer.mp3', 'Référence — Paganini, Caprice n° 5 (interprète : Sumina Studer)'],
+  ['sons-de-test/bach-partita-1-double_hilary-hahn.mp3', 'Référence — Bach, Partita n° 1, Double (interprète : Hilary Hahn)'],
+];
+function addOption(url, label, beforeUpload) {
+  const o = document.createElement('option'); o.value = url; o.textContent = label;
+  const up = [...$('demoSel').options].find(x => x.value === UPLOAD);
+  if (beforeUpload && up) $('demoSel').insertBefore(o, up); else $('demoSel').appendChild(o);
+  return o;
+}
+for (const [url, label] of DEMOS) addOption(url, label);
+addOption(UPLOAD, '📂 Charger un fichier audio (MP3, WAV…)');
+
+// page opened as a local file: the browser forbids reading neighbouring audio files,
+// so the sounds are also provided inside a script (sons-embarques.js), loaded on demand
+function loadEmbedded() {
+  if (window.SONS_EMBARQUES) return Promise.resolve();
+  return new Promise((ok, ko) => { const sc = document.createElement('script'); sc.src = 'sons-embarques.js'; sc.onload = ok; sc.onerror = () => ko(new Error('sons-embarques.js introuvable')); document.head.appendChild(sc); });
+}
+async function decodeSource(url) {
+  // decode into memory: avoids media-element restrictions (local files, cross-origin)
+  let data;
+  if (FILES.has(url)) data = await FILES.get(url).arrayBuffer();
+  else if (location.protocol === 'file:') {
+    await loadEmbedded();
+    const b64 = window.SONS_EMBARQUES && window.SONS_EMBARQUES[url];
+    if (!b64) throw new Error('son non embarqué');
+    const bin = atob(b64), u = new Uint8Array(bin.length);
+    for (let i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i);
+    data = u.buffer;
+  } else data = await (await fetch(url)).arrayBuffer();
+  return await ctx.decodeAudioData(data);
+}
+async function playUrl(url, label) {
+  await initAudio(); await ctx.resume();
+  stopPlayback();
+  $('status').textContent = 'Chargement…';
+  let buffer;
+  try { buffer = await decodeSource(url); }
+  catch (e) {
+    $('status').textContent = location.protocol === 'file:'
+      ? 'Page ouverte comme fichier local : le navigateur bloque la lecture des sons fournis. Ouvrez la version en ligne, ou chargez un fichier avec « 📂 Charger un fichier audio ».'
+      : 'Impossible de lire ce son : ' + e.message;
+    return;
+  }
+  const node = new AudioBufferSourceNode(ctx, { buffer });
+  node.playing = true; node.onended = () => { node.playing = false; if (demoEl === node) mark(null); };
+  demoEl = node;
+  setSource(node, true);
+  node.start();
+  mark('btnDemo');
+  $('status').textContent = url === DEMOS[0][0]
+    ? 'Démo : 7 phrases synthétiques, dont deux qui reviennent (la 1re et la 2e) — regardez les traces se réveiller.'
+    : 'Lecture : ' + label + ' — jeu continu : réglez « Durée max d\'une phrase » pour découper.';
+}
+function playSelected() {
+  const sel = $('demoSel');
+  if (sel.value === UPLOAD) { sel.selectedIndex = lastSel; $('file').click(); return; }
+  lastSel = sel.selectedIndex;
+  playUrl(sel.value, sel.selectedOptions[0].textContent);
+}
+$('demoSel').onchange = playSelected;
+$('btnDemo').onclick = playSelected;
+$('btnStop').onclick = () => { stopPlayback(); mark(null); $('status').textContent = 'Lecture arrêtée.'; };
+$('file').onchange = () => {
+  const f = $('file').files[0]; if (!f) return;
+  const key = 'fichier:' + (FILES.size + 1);
+  FILES.set(key, f);
+  const o = addOption(key, 'Fichier : ' + f.name, true);
+  $('demoSel').value = o.value; lastSel = $('demoSel').selectedIndex;
+  playUrl(o.value, o.textContent);
+  $('file').value = '';
+};
+$('btnClear').onclick = () => { while (traces.length) killTrace(traces[0]); };
+
+// ---------- raw capture / phrase recording ----------
+function onChunk(buf) {
+  ring.push(buf); ringLen += buf.length;
+  const keep = Math.round(SR_PREROLL * ctx.sampleRate) + 256;
+  while (ringLen - ring[0].length > keep) ringLen -= ring.shift().length;
+  if (phrase) {
+    phrase.chunks.push(buf); phrase.len += buf.length;
+    if (phrase.len > params.maxlen * ctx.sampleRate) endPhrase();
+  }
+}
+
+function startPhrase() {
+  phrase = { chunks: ring.slice(), len: ringLen, frames: [], t0: ctx.currentTime, onsets: 0 };
+}
+
+function endPhrase() {
+  const p = phrase; phrase = null;
+  if (!p || p.len < 0.35 * ctx.sampleRate || p.frames.length < 4) return;
+  const data = new Float32Array(p.len); let o = 0;
+  for (const c of p.chunks) { data.set(c, o); o += c.length; }
+  const fade = Math.min(Math.round(0.03 * ctx.sampleRate), data.length >> 2);
+  for (let i = 0; i < fade; i++) { const g = i / fade; data[i] *= g; data[data.length - 1 - i] *= g; }
+  let peak = 0; for (const v of data) peak = Math.max(peak, Math.abs(v));
+  if (peak > 0) for (let i = 0; i < data.length; i++) data[i] *= 0.7 / peak;
+  const buffer = ctx.createBuffer(1, data.length, ctx.sampleRate); buffer.copyToChannel(data, 0);
+  const rev = ctx.createBuffer(1, data.length, ctx.sampleRate);
+  const r = new Float32Array(data.length); for (let i = 0; i < data.length; i++) r[i] = data[data.length - 1 - i];
+  rev.copyToChannel(r, 0);
+  const feat = summarize(p.frames, p.onsets / Math.max(p.len / ctx.sampleRate, 0.3));
+  feat.seq = traceCount++;
+  addTrace(buffer, rev, feat, depositPosition(feat));
+}
+
+function summarize(frames, onsetRate) {
+  const mids = frames.map(f => f.midi).filter(m => Number.isFinite(m)).sort((a,b) => a-b);
+  const midi = mids.length ? mids[mids.length >> 1] : null;
+  const cent = frames.reduce((a,f) => a + f.cent, 0) / frames.length;
+  const db = frames.reduce((a,f) => a + f.db, 0) / frames.length;
+  if (Number.isFinite(db)) { phraseDbs.push(db); if (phraseDbs.length > 30) phraseDbs.shift(); }
+  const flat = frames.reduce((a,f) => a + (f.flat || 0), 0) / frames.length;
+  const mu = mids.length ? mids.reduce((a,b) => a + b, 0) / mids.length : 0;
+  const vib = mids.length > 3 ? Math.min(Math.sqrt(mids.reduce((a,m) => a + (m - mu) ** 2, 0) / mids.length) * 100, 300) : 0;
+  return featVec(midi, cent, db, flat, onsetRate, vib);
+}
+
+// normalised feature vector: [pitch, brightness, loudness] each in 0..1
+function featVec(midi, cent, db, flat = 0, onsetRate = 0, vib = 0) {
+  const p = midi == null ? 0.5 : clamp((midi - 55) / 45, 0, 1);   // G3 .. E7
+  const b = clamp((Math.log2(Math.max(cent, 200)) - Math.log2(400)) / (Math.log2(6000) - Math.log2(400)), 0, 1);
+  // loudness relative to the range of phrases actually played (adaptive)
+  const lo = phraseDbs.length > 1 ? Math.min(...phraseDbs) - 3 : noiseDb + params.thr;
+  const hi = phraseDbs.length > 1 ? Math.max(...phraseDbs) + 3 : noiseDb + params.thr + 40;
+  const l = clamp((db - lo) / Math.max(hi - lo, 6), 0, 1);
+  return { p, b, l, o: clamp(onsetRate / 8, 0, 1), n: clamp(flat * 3, 0, 1), v: clamp(vib / 150, 0, 1), midi, cent, db };
+}
+
+// still scale: non-literal mapping from playing to space
+function playPosition(f) {
+  let x = USE.pitch ? (f.p * 2 - 1) : 0;    // low = left, high = right
+  let z = USE.bright ? (1 - f.b * 2) : 0;   // bright = front (negative z), dark = back
+  if (!USE.pitch && !USE.bright) { const a = (f.seq || 0) * 2.39996; x = Math.cos(a); z = Math.sin(a); } // spread evenly
+  const dist = USE.loud ? 0.8 + 2.8 * (1 - f.l) : 1.8;  // loud = near, soft = far
+  const n = Math.hypot(x, z) || 1;
+  const px = x / n * dist, pz = z / n * dist;
+  return { x: Number.isFinite(px) ? px : 0, z: Number.isFinite(pz) ? pz : 1 };
+}
+function depositPosition(f) {
+  const a = params.alpha, pp = playPosition(f);
+  if (a <= 0 || !mouse.inside) return pp;
+  return { x: pp.x * (1 - a) + mouse.x * a, z: pp.z * (1 - a) + mouse.y * a };
+}
+
+// ---------- traces ----------
+function addTrace(buffer, rev, feat, pos) {
+  if (traces.length >= MAX_TRACES) killTrace(traces[0]);
+  const panner = new PannerNode(ctx, { panningModel:'HRTF', distanceModel:'inverse', refDistance:0.8, maxDistance:20, rolloffFactor:1, positionX:pos.x, positionY:0, positionZ:pos.z });
+  const out = ctx.createGain(); out.gain.value = 0;
+  const lp = new BiquadFilterNode(ctx, { type:'lowpass', frequency:1400, Q:0.5 });
+  const loop = new AudioBufferSourceNode(ctx, { buffer, loop:true, playbackRate:0.5 });
+  loop.connect(lp); lp.connect(out); out.connect(panner); panner.connect(master);
+  loop.start();
+  const t = { buffer, rev, feat, pos, born: ctx.currentTime, energy: 1, wakes: 0, cool: 0, flash: 1, panner, out, loop, lp, id: Math.random() };
+  traces.push(t);
+  wake(t, 'dépôt');
+}
+
+function killTrace(t) {
+  const i = traces.indexOf(t); if (i >= 0) traces.splice(i, 1);
+  try { t.loop.stop(); } catch(e){}
+  t.panner.disconnect();
+}
+
+const MODES = [
+  { name:'tel quel', rate:1, rev:false },
+  { name:'ralenti', rate:0.5, rev:false },
+  { name:'renversé', rate:1, rev:true },
+  { name:'aigu', rate:1.5, rev:false },
+];
+function wake(t, why) {
+  const now = ctx.currentTime;
+  if (why !== 'dépôt' && now < t.cool) return;
+  const m = why === 'dépôt' ? MODES[0] : MODES[(t.wakes % (MODES.length - 1)) + 1];
+  t.wakes += why === 'dépôt' ? 0 : 1;
+  const src = new AudioBufferSourceNode(ctx, { buffer: m.rev ? t.rev : t.buffer, playbackRate: m.rate });
+  const g = ctx.createGain(); g.gain.value = why === 'dépôt' ? 0.35 : 0.85;
+  src.connect(g); g.connect(t.panner); src.start();
+  t.energy = 1; t.flash = 1; t.cool = now + Math.max(2, t.buffer.duration / m.rate) + 1.5; t.lastMode = m.name;
+  if (why !== 'dépôt') $('status').textContent = 'Trace réveillée (' + why + ') : ' + m.name + '.';
+}
+
+// ---------- analysis ----------
+const td = new Float32Array(2048), fd = new Float32Array(1024);
+function analyse() {
+  analyser.getFloatTimeDomainData(td);
+  let s = 0; for (const v of td) s += v * v;
+  const rms = Math.sqrt(s / td.length), db = 20 * Math.log10(rms + 1e-9);
+  analyser.getFloatFrequencyData(fd);
+  let num = 0, den = 0; const bin = ctx.sampleRate / analyser.fftSize;
+  for (let i = 2; i < fd.length; i++) { const m = Math.pow(10, fd[i] / 20); num += m * i * bin; den += m; }
+  const cent = den > 0 ? num / den : 0;
+  let lsum = 0, asum = 0, nb = 0;
+  for (let i = 2; i < 512; i++) { const m = Math.pow(10, fd[i] / 20) + 1e-12; lsum += Math.log(m); asum += m; nb++; }
+  const flat = asum > 0 ? Math.exp(lsum / nb) / (asum / nb) : 0; // spectral flatness: 0 = tonal, 1 = noisy
+  const f0 = db > noiseDb + params.thr ? pitch(td, ctx.sampleRate) : null;
+  const midi = f0 ? 69 + 12 * Math.log2(f0 / 440) : null;
+  const fin = v => Number.isFinite(v) ? v : 0;
+  return { db: Number.isFinite(db) ? db : -180, cent: fin(cent), midi, flat: fin(flat) };
+}
+
+function pitch(x, sr) {
+  // normalised autocorrelation, violin range ~ 180 Hz .. 3.5 kHz
+  const minLag = Math.floor(sr / 3500), maxLag = Math.ceil(sr / 180), N = x.length - maxLag;
+  let best = 0, bestLag = 0; const r = new Float32Array(maxLag + 2);
+  for (let lag = minLag; lag <= maxLag + 1; lag++) {
+    let c = 0, e1 = 0, e2 = 0;
+    for (let i = 0; i < N; i++) { const a = x[i], b = x[i + lag]; c += a * b; e1 += a * a; e2 += b * b; }
+    r[lag] = c / (Math.sqrt(e1 * e2) + 1e-12);
+  }
+  for (let lag = minLag + 1; lag <= maxLag; lag++) {
+    if (r[lag] > 0.85 && r[lag] >= r[lag - 1] && r[lag] >= r[lag + 1]) { best = r[lag]; bestLag = lag; break; }
+    if (r[lag] > best) { best = r[lag]; bestLag = lag; }
+  }
+  if (best < 0.6 || !bestLag) return null;
+  const a = r[bestLag - 1], b = r[bestLag], c = r[bestLag + 1], d = a - 2 * b + c;
+  const shift = d !== 0 ? 0.5 * (a - c) / d : 0;
+  const f = sr / (bestLag + shift);
+  return Number.isFinite(f) && f > 150 && f < 4000 ? f : null;
+}
+
+let listenerPos = { x: 0, z: 0 };
+let lastCheck = 0, dbSlow = -100, lastOnset = 0, onsets = [];
+function tick() {
+  if (!started || !srcNode) return;
+  const now = ctx.currentTime, a = analyse();
+  // slow noise-floor tracking while quiet
+  if (a.db < noiseDb + params.thr * 0.5) noiseDb = noiseDb * 0.995 + a.db * 0.005;
+  noiseDb = clamp(noiseDb, -75, -25);
+  const loud = a.db > noiseDb + params.thr;
+  $('meterFill').style.width = clamp((a.db - noiseDb) / 50, 0, 1) * 100 + '%';
+  // continuous playing: a strong dip below the phrase's own peak also counts as a breath
+  const dip = phrase && phrase.peak !== undefined && a.db < phrase.peak - 15;
+  if (loud && !dip) {
+    lastLoudAt = now;
+    if (!phrase) startPhrase();
+    phrase.peak = Math.max(phrase.peak ?? -100, a.db);
+    phrase.frames.push(a);
+    liveHist.push({ t: now, ...a });
+  } else if (phrase && now - lastLoudAt > (dip ? 0.12 : params.gap / 1000)) {
+    endPhrase();
+  }
+  // attacks: fast rise of level against a slow follower
+  dbSlow = dbSlow + (a.db - dbSlow) * 0.15;
+  if (loud && a.db - dbSlow > 5 && now - lastOnset > 0.08) { lastOnset = now; onsets.push(now); if (phrase) phrase.onsets++; }
+  onsets = onsets.filter(t => now - t < 2);
+  live.db = a.db; live.cent = a.cent; live.midi = a.midi; live.flat = a.flat; live.loud = loud;
+  live.onsetRate = onsets.length / 2;
+  liveHist = liveHist.filter(h => now - h.t < 0.35);
+  const pm = liveHist.map(h => h.midi).filter(m => m != null);
+  if (pm.length > 5) { const mu = pm.reduce((x,y) => x + y, 0) / pm.length; live.vib = Math.sqrt(pm.reduce((x,y) => x + (y - mu) ** 2, 0) / pm.length) * 100; } else live.vib = null;
+  if (liveHist.length > 3) {
+    const mids = liveHist.map(h => h.midi).filter(m => Number.isFinite(m)).sort((x,y) => x-y);
+    live.feat = featVec(mids.length ? mids[mids.length >> 1] : null,
+      liveHist.reduce((s,h) => s + h.cent, 0) / liveHist.length,
+      liveHist.reduce((s,h) => s + h.db, 0) / liveHist.length,
+      liveHist.reduce((s,h) => s + (h.flat || 0), 0) / liveHist.length, live.onsetRate || 0, live.vib || 0);
+    live.pos = depositPosition(live.feat);
+  } else { live.feat = null; live.pos = null; }
+
+  // decay + murmur
+  const k = Math.pow(0.5, (1 / 60) / params.life);
+  for (const t of traces.slice()) {
+    t.energy *= k; t.flash *= 0.94;
+    t.out.gain.setTargetAtTime(params.mur * t.energy, now, 0.3);
+    if (t.energy < 0.03) killTrace(t);
+  }
+
+  // waking, checked every 100 ms
+  if (now - lastCheck > 0.1) {
+    lastCheck = now;
+    if (live.feat && loud) {
+      let best = null, bd = 1e9;
+      for (const t of traces) {
+        if (now - t.born < 2) continue;
+        const d = similarityDistance(t.feat, live.feat);
+        if (d < bd) { bd = d; best = t; }
+      }
+      if (best && bd < params.sim && Number.isFinite(bd)) wake(best, 'geste semblable');
+    }
+    // listening point follows the body (mouse) when the body slider is used
+    const lx = params.alpha > 0 && mouse.inside ? mouse.x * params.alpha : 0, lz = params.alpha > 0 && mouse.inside ? mouse.y * params.alpha : 0;
+    const L = ctx.listener;
+    if (L.positionX) { L.positionX.setTargetAtTime(lx, now, 0.05); L.positionZ.setTargetAtTime(lz, now, 0.05); } else L.setPosition(lx, 0, lz);
+    listenerPos.x = lx; listenerPos.z = lz;
+    if (params.alpha > 0 && mouse.inside) {
+      for (const t of traces) {
+        if (now - t.born < 2) continue;
+        if (Math.hypot(t.pos.x - mouse.x, t.pos.z - mouse.y) < 0.45 * params.alpha + 0.1) wake(t, 'proximité du corps');
+      }
+    }
+  }
+}
+
+function similarityDistance(a, b) {
+  const keys = [['pitch','p'], ['bright','b'], ['loud','l'], ['onset','o'], ['noise','n'], ['vib','v']].filter(([k]) => USE[k]);
+  if (!keys.length) return Infinity;
+  let s2 = 0; for (const [k, f] of keys) s2 += (W[k] * ((a[f] || 0) - (b[f] || 0))) ** 2;
+  return Math.sqrt(s2);
+}
+
+// ---------- drawing ----------
+const cv = $('cv'), g2 = cv.getContext('2d');
+function resize() { const r = cv.getBoundingClientRect(); cv.width = r.width * devicePixelRatio; cv.height = r.height * devicePixelRatio; }
+addEventListener('resize', resize); resize();
+function toPx(x, z) { const s = Math.min(cv.width, cv.height) / (2 * ROOM) * 0.92; return [cv.width / 2 + x * s, cv.height / 2 + z * s, s]; }
+cv.onmousemove = e => { const r = cv.getBoundingClientRect(); const [cx, cy, s] = toPx(0, 0); mouse.x = ((e.clientX - r.left) * devicePixelRatio - cx) / s; mouse.y = ((e.clientY - r.top) * devicePixelRatio - cy) / s; mouse.inside = true; };
+cv.onmouseleave = () => mouse.inside = false;
+
+function draw() {
+  tick();
+  const W = cv.width, H = cv.height;
+  g2.fillStyle = '#0e1013'; g2.fillRect(0, 0, W, H);
+  const [cx, cy, s] = toPx(0, 0);
+  g2.strokeStyle = '#232830'; g2.lineWidth = 1;
+  for (let r = 1; r <= ROOM; r++) { g2.beginPath(); g2.arc(cx, cy, r * s, 0, 7); g2.stroke(); }
+  g2.fillStyle = '#4a515c'; g2.font = (11 * devicePixelRatio) + 'px system-ui';
+  g2.fillText('avant (brillant)', cx - 40 * devicePixelRatio, cy - ROOM * s + 14 * devicePixelRatio);
+  g2.fillText('arrière (sombre)', cx - 42 * devicePixelRatio, cy + ROOM * s - 6 * devicePixelRatio);
+  g2.fillText('grave', cx - ROOM * s + 6 * devicePixelRatio, cy - 4);
+  g2.fillText('aigu', cx + ROOM * s - 32 * devicePixelRatio, cy - 4);
+  // listener
+  { const [lxp, lyp] = toPx(listenerPos.x, listenerPos.z); g2.fillStyle = '#6b7280'; g2.beginPath(); g2.arc(lxp, lyp, 5 * devicePixelRatio, 0, 7); g2.fill(); g2.fillText('écoute', lxp + 8 * devicePixelRatio, lyp + 4 * devicePixelRatio); }
+  // traces
+  for (const t of traces) {
+    const [x, y] = toPx(t.pos.x, t.pos.z);
+    const hue = 30 + t.feat.p * 200, rad = (8 + t.buffer.duration * 5) * devicePixelRatio;
+    g2.fillStyle = `hsla(${hue},65%,55%,${0.12 + 0.55 * t.energy})`;
+    g2.beginPath(); g2.arc(x, y, rad, 0, 7); g2.fill();
+    if (t.flash > 0.05) { g2.strokeStyle = `hsla(${hue},80%,70%,${t.flash})`; g2.lineWidth = 2 * devicePixelRatio; g2.beginPath(); g2.arc(x, y, rad + (1 - t.flash) * 40 * devicePixelRatio, 0, 7); g2.stroke(); }
+  }
+  // live position (where a phrase would be deposited)
+  if (live.pos) {
+    const [x, y] = toPx(live.pos.x, live.pos.z);
+    g2.strokeStyle = phrase ? '#5b8def' : '#3b4a66'; g2.lineWidth = 2 * devicePixelRatio;
+    g2.beginPath(); g2.arc(x, y, 10 * devicePixelRatio, 0, 7); g2.stroke();
+  }
+  // body (mouse)
+  if (params.alpha > 0 && mouse.inside) {
+    const [x, y] = toPx(mouse.x, mouse.y);
+    g2.fillStyle = `rgba(91,141,239,${0.25 + 0.5 * params.alpha})`; g2.beginPath(); g2.arc(x, y, 7 * devicePixelRatio, 0, 7); g2.fill();
+  }
+  g2.fillStyle = '#8a919b';
+  g2.fillText(traces.length + ' trace(s)' + (phrase ? ' · phrase en cours…' : ''), 14 * devicePixelRatio, 20 * devicePixelRatio);
+  updateData();
+  requestAnimationFrame(draw);
+}
+requestAnimationFrame(draw);
+
+// ---------- data map ----------
+const NOTE = m => { if (m == null) return '—'; const n = ['do','do♯','ré','ré♯','mi','fa','fa♯','sol','sol♯','la','la♯','si'][Math.round(m) % 12]; return n + (Math.floor(Math.round(m) / 12) - 1); };
+// sensors: id -> [label, colour]
+const SENSORS = {
+  mic:   ['Micros — piézo Fishman, AKG C411 (contact), DPA 4099 (col de cygne)', '#3f7fbf'],
+  imuB:  ['ESP32 + centrale inertielle — archet (Puara)', '#b0662e'],
+  imuV:  ['ESP32 + centrale inertielle — volute (Puara, extension)', '#a3532a'],
+  orb:   ['Caméra de profondeur — Orbbec Femto Mega (option : de côté / au-dessus)', '#7a4fb3'],
+  lidar: ['LiDAR — Slamtec RPLIDAR S2E (1 suffit : un seul interprète)', '#3a9a8a'],
+  soft:  ['Logiciel — ossia score (aucun capteur)', '#6b7280'],
+};
+// [name, sensors[], analysis, use, status, value(), bar()]
+const DATA = [
+ ['Son', [
+  ['Début / fin de phrase', ['mic'], 'niveau, silences', 'découper le jeu en traces', 'ACTIF', () => phrase ? 'phrase en cours' : '—', null],
+  ['Hauteur (note jouée)', ['mic'], 'autocorrélation', 'placer (gauche/droite) ; ressemblance', 'ACTIF', () => NOTE(live.midi), () => live.midi == null ? 0 : (live.midi - 55) / 45],
+  ['Dynamique', ['mic'], 'niveau', 'placer (distance) ; ressemblance', 'ACTIF', () => !live.loud ? '— (silence)' : Math.round(live.db) + ' dB', () => live.loud ? (live.db - noiseDb) / 50 : 0],
+  ['Brillance', ['mic'], 'centroïde spectral', 'placer (avant/arrière) ; indice du point de contact', 'ACTIF', () => live.loud && live.cent ? Math.round(live.cent) + ' Hz' : '—', () => live.cent ? (Math.log2(Math.max(live.cent, 200)) - Math.log2(400)) / (Math.log2(6000) - Math.log2(400)) : 0],
+  ['Attaques', ['mic'], 'détection d\'attaques', 'articulation (détaché, staccato…) ; réveil', 'ACTIF', () => live.onsetRate != null ? live.onsetRate.toFixed(1) + ' /s' : '—', () => (live.onsetRate || 0) / 8],
+  ['Bruit / souffle', ['mic'], 'platitude spectrale', 'col legno, sul ponticello, souffle : transformer', 'ACTIF', () => live.loud && live.flat != null ? live.flat.toFixed(2) : '—', () => live.loud ? (live.flat || 0) * 3 : 0],
+  ['Vibrato / stabilité', ['mic'], 'variation de la hauteur', 'expressivité ; ressemblance', 'ACTIF', () => live.vib != null ? Math.round(live.vib) + ' cents' : '—', () => (live.vib || 0) / 60],
+  ['Mode de jeu (pizzicato, harmoniques, trémolo, doubles cordes…)', ['mic'], 'classification (ex. FluCoMa, libre)', 'ressemblance ; règles de transformation', 'PRÉVU', null, null],
+ ]],
+ ['Archet', [
+  ['Vitesse et sens (tiré / poussé)', ['imuB'], 'gyroscope, accéléromètre', 'énergie du dépôt ; réveil', 'PRÉVU', null, null],
+  ['Inclinaison et roulis', ['imuB'], 'orientation (fusion de capteurs)', 'corde jouée (avec la volute) ; hauteur dans l\'espace', 'PRÉVU', null, null],
+  ['Changements d\'archet, secousses', ['imuB'], 'puara-gestures', 'articulation ; déclencheurs gestuels', 'PRÉVU', null, null],
+  ['Point d\'archet (talon → pointe)', ['imuB', 'orb'], 'fusion centrale inertielle + caméra', 'placer (gauche/droite) à l\'échelle immobile', 'PRÉVU', null, null],
+ ]],
+ ['Violon', [
+  ['Orientation du violon', ['imuV'], 'orientation', 'direction du jeu', 'PRÉVU', null, null],
+  ['Angle archet / violon', ['imuB', 'imuV'], 'comparaison des deux orientations', 'corde jouée, mesurée directement', 'PRÉVU', null, null],
+ ]],
+ ['Corps dans la salle', [
+  ['Position au sol', ['lidar'], 'suivi au sol (un seul LiDAR : pas de triangulation)', 'placer la trace là où l\'on joue ; réveil en y revenant', 'SIMULÉ', () => mouse.inside && params.alpha > 0 ? mouse.x.toFixed(1) + ' m, ' + mouse.y.toFixed(1) + ' m' : 'souris sur la carte (curseur vers « corps »)', null],
+  ['Orientation du corps', ['orb'], 'silhouette vue du dessus', 'orienter le dépôt', 'PRÉVU', null, null],
+  ['Vitesse et trajectoire de marche', ['lidar'], 'suivi au sol', 'durée de vie et transformation des traces', 'PRÉVU', null, null],
+  ['Posture, bras de l\'archet', ['orb'], 'squelette, caméra de côté', 'gestes fins ; ressemblance gestuelle', 'PRÉVU', null, null],
+ ]],
+ ['Mémoire', [
+  ['Traces (position, âge, énergie, réveils)', ['soft'], 'mémoire des traces', 'le palimpseste', 'ACTIF', () => traces.length + ' trace(s)', () => traces.length / MAX_TRACES],
+  ['Ressemblance entre le jeu présent et une trace', ['soft'], 'comparaison de descripteurs', '« proximité de jeu » : réveil', 'ACTIF', () => 'son seul aujourd\'hui (geste et corps : prévus)', null],
+  ['Curseur corps ↔ jeu', ['soft'], 'mélange des positions', 'corps et jeu écrivent-ils ensemble l\'espace ?', 'SIMULÉ', () => Math.round(params.alpha * 100) + ' % corps', () => params.alpha],
+ ]],
+];
+const dataEls = [];
+const TOGGLES = { 'Hauteur (note jouée)': 'pitch', 'Brillance': 'bright', 'Dynamique': 'loud', 'Attaques': 'onset', 'Bruit / souffle': 'noise', 'Vibrato / stabilité': 'vib', 'Position au sol': 'body' };
+let bodyBox = null, bodyShow = null;
+(function buildData() {
+  const root = $('dataBody');
+  const leg = document.createElement('div'); leg.className = 'legend';
+  for (const k in SENSORS) { const c = document.createElement('span'); c.className = 'chip'; c.style.background = SENSORS[k][1]; c.textContent = SENSORS[k][0]; leg.appendChild(c); }
+  root.appendChild(leg);
+  for (const [title, rows] of DATA) {
+    const h = document.createElement('h3'); h.textContent = title; root.appendChild(h);
+    for (const [n, sens, src, use, st, val, bar] of rows) {
+      const d = document.createElement('div'); d.className = 'drow ' + st;
+      d.innerHTML = `<span class="n"></span><span class="right"><span class="st ${st}">${st}</span></span><span class="chips"></span><span class="src"></span><span class="use"></span>`;
+      d.querySelector('.n').textContent = n;
+      const chips = d.querySelector('.chips');
+      for (const k of sens) { const c = document.createElement('span'); c.className = 'chip'; c.style.background = SENSORS[k][1]; c.textContent = SENSORS[k][0]; chips.appendChild(c); }
+      d.querySelector('.src').textContent = 'Analyse : ' + src + (st === 'ACTIF' && sens.includes('mic') ? ' — dans la maquette : micro de l\'ordinateur ou fichier audio' : '');
+      d.querySelector('.use').textContent = 'Usage : ' + use;
+      const key = TOGGLES[n];
+      if (key || st === 'PRÉVU' || n.startsWith('Début')) {
+        const tg = document.createElement('label'); tg.className = 'tog';
+        const cb = document.createElement('input'); cb.type = 'checkbox';
+        const badge = d.querySelector('.st');
+        const show = on => { const lab = on ? st : 'DÉSACTIVÉ'; badge.textContent = lab; badge.className = 'st ' + lab; d.classList.toggle('off', !on); };
+        if (key === 'body') { cb.checked = params.alpha > 0; cb.onchange = () => { $('alpha').value = cb.checked ? 100 : 0; $('alpha').dispatchEvent(new Event('input')); }; bodyBox = cb; bodyShow = show; show(cb.checked); tg.append(cb, ' utiliser'); }
+        else if (key) { cb.checked = USE[key]; cb.onchange = () => { USE[key] = cb.checked; show(cb.checked); }; show(cb.checked); tg.append(cb, ' utiliser'); }
+        else if (st === 'PRÉVU') { cb.disabled = true; tg.append(cb, ' à venir'); }
+        else { cb.checked = true; cb.disabled = true; tg.append(cb, ' toujours actif'); }
+        d.querySelector('.right').prepend(tg);
+      }
+      let v = null, b = null;
+      if (val) { v = document.createElement('span'); v.className = 'val'; d.appendChild(v); }
+      if (bar) { const w = document.createElement('div'); w.className = 'bar'; b = document.createElement('i'); w.appendChild(b); d.appendChild(w); }
+      root.appendChild(d); dataEls.push({ val, bar, v, b });
+    }
+  }
+})();
+$('alpha').addEventListener('input', () => { if (bodyBox) { bodyBox.checked = params.alpha > 0; bodyShow(bodyBox.checked); } });
+let lastData = 0;
+function updateData() {
+  const t = performance.now(); if (t - lastData < 120) return; lastData = t;
+  for (const e of dataEls) {
+    if (e.v) e.v.textContent = started ? e.val() : '—';
+    if (e.b) e.b.style.width = started ? clamp(e.bar(), 0, 1) * 100 + '%' : '0';
+  }
+}
+$('btnData').onclick = () => { const h = $('data').classList.toggle('hidden'); $('btnData').textContent = 'Données captées : ' + (h ? 'masquées' : 'affichées'); $('btnData').classList.toggle('on', !h); resize(); };
+
+// ---------- video recording ----------
+$('btnRec').onclick = async () => {
+  if (!ctx) { $('recStatus').textContent = 'Démarrer une source d\'abord.'; return; }
+  if (mediaRecorder && mediaRecorder.state === 'recording') { mediaRecorder.stop(); return; }
+  const stream = new MediaStream([...cv.captureStream(30).getVideoTracks(), ...recDest.stream.getAudioTracks()]);
+  const mime = ['video/webm;codecs=vp9,opus', 'video/webm;codecs=vp8,opus', 'video/webm'].find(m => MediaRecorder.isTypeSupported(m));
+  mediaRecorder = new MediaRecorder(stream, { mimeType: mime, videoBitsPerSecond: 6e6 });
+  recChunks = [];
+  mediaRecorder.ondataavailable = e => e.data.size && recChunks.push(e.data);
+  mediaRecorder.onstop = () => {
+    const url = URL.createObjectURL(new Blob(recChunks, { type: 'video/webm' }));
+    const a = document.createElement('a'); a.href = url; a.download = 'palimpseste-maquette.webm'; a.textContent = 'Télécharger la vidéo';
+    $('recStatus').innerHTML = ''; $('recStatus').appendChild(a);
+    $('btnRec').textContent = '● Enregistrer'; $('btnRec').classList.remove('on');
+  };
+  mediaRecorder.start(250);
+  $('btnRec').textContent = '■ Arrêter'; $('btnRec').classList.add('on');
+  $('recStatus').textContent = 'Enregistrement (image + son binaural + son direct)…';
+};
+
+
+// any error is shown on screen instead of failing silently
+addEventListener('error', e => { $('status').textContent = 'Erreur : ' + (e.message || e.error); });
+addEventListener('unhandledrejection', e => { $('status').textContent = 'Erreur : ' + (e.reason && e.reason.message || e.reason); });
+
+function clamp(v, a, b) { return Math.max(a, Math.min(b, v)); }
+</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="770" viewBox="0 0 1000 770" font-family="Helvetica, Arial, sans-serif">
+<rect width="1000" height="770" fill="#ffffff"/>
+<text x="20.0" y="32.0" font-size="18" fill="#1d2025" text-anchor="start" font-weight="bold">Studio de son (SAT) — échelle immobile : archet + son suffisent</text>
+<text x="20.0" y="54.0" font-size="12" fill="#5b626c" text-anchor="start" font-weight="normal">Plan 2D, vue de dessus — origine au centre ; cotes en mètres ; haut-parleurs du cube : schématique (97 au total, sur plusieurs hauteurs)</text>
+<defs><clipPath id="room"><rect x="140.0" y="110.0" width="460.0" height="480.0"/></clipPath></defs>
+<rect x="140.0" y="110.0" width="460.0" height="480.0" fill="#f6f6f2" stroke="#222" stroke-width="2"/>
+<text x="600.0" y="102.0" font-size="11" fill="#5b626c" text-anchor="end" font-weight="normal">fond — largeur 5.75 m</text>
+<text x="608.0" y="350.0" font-size="11" fill="#5b626c" text-anchor="start" font-weight="normal">6.00 m</text>
+<rect x="322.0" y="302.0" width="96.0" height="96.0" fill="none" stroke="#2a4d9b" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="328.0" y="317.0" font-size="11" fill="#2a4d9b" text-anchor="start" font-weight="normal">Poste de jeu immobile</text>
+<g clip-path="url(#room)">
+<g opacity="0.3"><polygon points="498.0,398.0 202.4,520.5 193.3,495.9 186.4,470.7 181.5,445.0 178.7,418.9 178.0,392.8 179.5,366.6 183.2,340.7 188.9,315.2 196.7,290.2 206.5,265.9 218.3,242.6 231.9,220.2 247.3,199.1 264.4,179.3 283.1,160.9 303.2,144.1" fill="#7a4fb3" fill-opacity="0.10" stroke="#7a4fb3" stroke-opacity="0.45"/></g>
+</g>
+<rect x="155.0" y="559.0" width="14" height="14" fill="#333333"/>
+<rect x="155.0" y="451.0" width="14" height="14" fill="#333333"/>
+<rect x="155.0" y="343.0" width="14" height="14" fill="#333333"/>
+<rect x="155.0" y="235.0" width="14" height="14" fill="#333333"/>
+<rect x="155.0" y="127.0" width="14" height="14" fill="#333333"/>
+<rect x="259.0" y="559.0" width="14" height="14" fill="#333333"/>
+<rect x="259.0" y="127.0" width="14" height="14" fill="#333333"/>
+<rect x="363.0" y="559.0" width="14" height="14" fill="#333333"/>
+<rect x="363.0" y="127.0" width="14" height="14" fill="#333333"/>
+<rect x="467.0" y="559.0" width="14" height="14" fill="#333333"/>
+<rect x="467.0" y="127.0" width="14" height="14" fill="#333333"/>
+<rect x="571.0" y="559.0" width="14" height="14" fill="#333333"/>
+<rect x="571.0" y="451.0" width="14" height="14" fill="#333333"/>
+<rect x="571.0" y="343.0" width="14" height="14" fill="#333333"/>
+<rect x="571.0" y="235.0" width="14" height="14" fill="#333333"/>
+<rect x="571.0" y="127.0" width="14" height="14" fill="#333333"/>
+<g opacity="0.55"><circle cx="498.0" cy="398.0" r="9" fill="#7a4fb3"/><line x1="498.0" y1="398.0" x2="482.5" y2="393.9" stroke="#7a4fb3" stroke-width="3"/>
+<text x="484.0" y="384.0" font-size="10" fill="#7a4fb3" text-anchor="end" font-weight="bold">C1 h 1.5 m — Femto Mega de côté — gestes fins (option)</text></g>
+<circle cx="370.0" cy="350.0" r="13" fill="#2a4d9b"/><text x="370.0" y="354.0" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">V</text>
+<rect x="182.0" y="556.0" width="120" height="28" fill="#ddd" stroke="#999"/><text x="242.0" y="574.0" font-size="10" fill="#1d2025" text-anchor="middle" font-weight="normal">régie : 1 ordinateur</text>
+<text x="370.0" y="620.0" font-size="12" fill="#5b626c" text-anchor="middle" font-weight="normal">avant</text>
+<text x="755.0" y="98.0" font-size="13" fill="#1d2025" text-anchor="start" font-weight="bold">Légende</text>
+<rect x="755" y="110" width="14" height="14" rx="3" fill="#7a4fb3" fill-opacity="0.8"/><text x="777.0" y="121.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">caméra de profondeur + champ (option)</text>
+<rect x="755" y="134" width="14" height="14" rx="3" fill="#3a9a8a" fill-opacity="0.8"/><text x="777.0" y="145.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">LiDAR Slamtec S2E + plan de balayage</text>
+<rect x="755" y="158" width="14" height="14" rx="3" fill="#333333" fill-opacity="0.8"/><text x="777.0" y="169.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">haut-parleur</text>
+<rect x="755" y="182" width="14" height="14" rx="3" fill="#c07a1a" fill-opacity="0.8"/><text x="777.0" y="193.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">vidéoprojecteur</text>
+<rect x="755" y="206" width="14" height="14" rx="3" fill="#f0b25a" fill-opacity="0.8"/><text x="777.0" y="217.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">trace sonore déposée</text>
+<rect x="755" y="230" width="14" height="14" rx="3" fill="#2a4d9b" fill-opacity="0.8"/><text x="777.0" y="241.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">violoniste (archet + volute captés)</text>
+<rect x="755" y="254" width="14" height="14" rx="3" fill="#2a4d9b" fill-opacity="0.3"/><text x="777.0" y="265.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">zone de jeu</text>
+<rect x="755" y="292" width="14" height="14" rx="3" fill="#999" fill-opacity="0.3"/><text x="777.0" y="303.0" font-size="11" fill="#5b626c" text-anchor="start" font-weight="normal">en clair = extension optionnelle</text>
+<text x="755.0" y="332.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="bold">Configuration minimale :</text>
+<text x="755.0" y="350.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• 1 LiDAR S2E (déplacements)</text>
+<text x="755.0" y="366.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• 1 nœud Puara sur l'archet</text>
+<text x="755.0" y="382.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• 3 micros (DPA, Fishman, C411), sans fil</text>
+<text x="755.0" y="398.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• (câble long en secours)</text>
+<text x="755.0" y="414.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• 1 ordinateur</text>
+<text x="755.0" y="430.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• haut-parleurs de la SAT</text>
+<text x="755.0" y="446.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• Extensions : Femto Mega de côté</text>
+<text x="755.0" y="462.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• (gestes fins), Femto Mega au-dessus</text>
+<text x="755.0" y="478.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• (vérification de la position)</text>
+<text x="755.0" y="512.0" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="bold">Un seul interprète, une seule surface :</text>
+<text x="755.0" y="527.0" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="normal">pas de triangulation ; chaque capteur</text>
+<text x="755.0" y="542.0" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="normal">a un rôle distinct (déplacements,</text>
+<text x="755.0" y="557.0" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="normal">gestes fins, vérification par le dessus).</text>
+</svg>

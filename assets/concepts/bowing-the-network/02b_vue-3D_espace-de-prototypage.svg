@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1300" height="980" viewBox="0 0 1300 980" font-family="Helvetica, Arial, sans-serif">
+<rect width="1300" height="980" fill="#ffffff"/>
+<text x="24.0" y="36.0" font-size="20" fill="#1d2025" text-anchor="start" font-weight="bold">Espace de prototypage (SAT) — configuration minimale + extensions (en clair)</text>
+<text x="24.0" y="60.0" font-size="13" fill="#5b626c" text-anchor="start" font-weight="normal">Vue 3D (axonométrie) — mêmes coordonnées que le plan 2D ; hauteurs réelles des capteurs ; en clair = extensions</text>
+<text x="24.0" y="80.0" font-size="13" fill="#3a9a8a" text-anchor="start" font-weight="normal">Un seul interprète : pas de triangulation. LiDAR = déplacements (base) ; Femto Mega de côté = gestes fins (option 1) ; Femto Mega au-dessus = vérification de la position (option 2).</text>
+<polygon points="650.0,339.5 1031.9,560.0 1031.9,343.0 650.0,122.5" fill="#dfe3e8" fill-opacity="0.55" stroke="#9aa1ab" stroke-width="1"/>
+<polygon points="268.1,560.0 650.0,339.5 650.0,122.5 268.1,343.0" fill="#e8ebef" fill-opacity="0.55" stroke="#9aa1ab" stroke-width="1"/>
+<polygon points="268.1,560.0 650.0,780.5 1031.9,560.0 650.0,339.5" fill="#f3f2ec" fill-opacity="1" stroke="#555" stroke-width="1.5"/>
+<polygon points="346.9,560.0 650.0,735.0 953.1,560.0 650.0,385.0" fill="#2a4d9b" fill-opacity="0.05" stroke="#2a4d9b" stroke-width="1"/>
+<polygon points="468.1,560.0 650.0,665.0 831.9,560.0 650.0,455.0" fill="#2a4d9b" fill-opacity="0.08" stroke="#2a4d9b" stroke-width="1"/>
+<polygon points="268.1,535.5 650.0,756.0 1031.9,535.5 650.0,315.0" fill="#3a9a8a" fill-opacity="0.1" stroke="#3a9a8a" stroke-width="0.8"/>
+<polygon points="630.6,506.1 636.8,499.9 636.8,492.7 630.6,486.5 619.8,482.9 607.4,482.9 596.7,486.5 590.4,492.7 590.4,499.9 596.7,506.1 607.4,509.7 619.8,509.7" fill="#f0b25a" fill-opacity="0.8" stroke="none" stroke-width="1"/>
+<polygon points="739.7,485.1 745.9,478.9 745.9,471.7 739.7,465.5 729.0,461.9 716.5,461.9 705.8,465.5 699.6,471.7 699.6,478.9 705.8,485.1 716.5,488.7 729.0,488.7" fill="#f0b25a" fill-opacity="0.8" stroke="none" stroke-width="1"/>
+<polygon points="842.8,565.6 849.0,559.4 849.0,552.2 842.8,546.0 832.0,542.4 819.6,542.4 808.8,546.0 802.6,552.2 802.6,559.4 808.8,565.6 819.6,569.2 832.0,569.2" fill="#f0b25a" fill-opacity="0.8" stroke="none" stroke-width="1"/>
+<polygon points="727.6,660.1 733.8,653.9 733.8,646.7 727.6,640.5 716.8,636.9 704.4,636.9 693.6,640.5 687.4,646.7 687.4,653.9 693.6,660.1 704.4,663.7 716.8,663.7" fill="#f0b25a" fill-opacity="0.8" stroke="none" stroke-width="1"/>
+<polygon points="727.6,541.1 733.8,534.9 733.8,527.7 727.6,521.5 716.8,517.9 704.4,517.9 693.6,521.5 687.4,527.7 687.4,534.9 693.6,541.1 704.4,544.7 716.8,544.7" fill="#f0b25a" fill-opacity="0.8" stroke="none" stroke-width="1"/>
+<g opacity="0.3"><polygon points="834.9,250.2 443.9,553.0 662.1,679.0 892.5,546.0 674.2,420.0" fill="#c07a1a" fill-opacity="0.06" stroke="#c07a1a" stroke-width="0.6"/></g>
+<polygon points="747.0,670.6 767.4,652.9 774.6,632.1 767.4,611.3 747.0,593.6 716.4,581.8 680.3,577.7 644.2,581.8 613.6,593.6 593.2,611.3 586.0,632.1 593.2,652.9 613.6,670.6 644.2,682.4 680.3,686.5 716.4,682.4" fill="#7a4fb3" fill-opacity="0.12" stroke="#7a4fb3" stroke-width="1"/>
+<g opacity="0.3"><polygon points="807.6,649.6 843.0,622.9 865.3,591.9 872.9,558.6 865.3,525.3 843.0,494.3 807.6,467.6 761.5,447.1 707.7,434.3 650.0,429.9 592.3,434.3 538.5,447.1 492.4,467.6 457.0,494.3 434.7,525.3 427.1,558.6 434.7,591.9 457.0,622.9 492.4,649.6 538.5,670.1 592.3,682.9 650.0,687.3 707.7,682.9 761.5,670.1" fill="#7a4fb3" fill-opacity="0.08" stroke="#7a4fb3" stroke-width="0.8"/>
+<line x1="650.0" y1="350.0" x2="807.6" y2="649.6" stroke="#7a4fb3" stroke-opacity="0.5"/>
+<line x1="650.0" y1="350.0" x2="807.6" y2="467.6" stroke="#7a4fb3" stroke-opacity="0.5"/>
+<line x1="650.0" y1="350.0" x2="492.4" y2="467.6" stroke="#7a4fb3" stroke-opacity="0.5"/>
+<line x1="650.0" y1="350.0" x2="492.4" y2="649.6" stroke="#7a4fb3" stroke-opacity="0.5"/>
+</g>
+<line x1="650.0" y1="350.0" x2="650.0" y2="560.0" stroke="#7a4fb3" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.7"/>
+<g opacity="0.6"><rect x="641.0" y="341.0" width="18" height="18" rx="4" fill="#7a4fb3"/><text x="664.0" y="340.0" font-size="11" fill="#7a4fb3" text-anchor="start" font-weight="bold">C2 · suspendue au-dessus du centre · Femto Mega au-dessus — vérification de la position (option 2) · h 3.0 m</text></g>
+<g opacity="0.3">
+<polygon points="448.5,663.5 448.2,650.5 455.2,634.8 464.4,619.5 475.8,604.7 489.2,590.5 504.6,577.0 521.9,564.2 540.9,552.3 561.5,541.3 583.6,531.4 607.1,522.5 631.7,514.7 657.3,508.2 683.8,502.8 711.0,498.8 738.6,496.0 783.4,692.3" fill="#7a4fb3" fill-opacity="0.08" stroke="#7a4fb3" stroke-width="0.5"/>
+<line x1="783.4" y1="588.0" x2="448.5" y2="664.2" stroke="#7a4fb3" stroke-opacity="0.35"/>
+<line x1="783.4" y1="588.0" x2="540.9" y2="553.0" stroke="#7a4fb3" stroke-opacity="0.35"/>
+<line x1="783.4" y1="588.0" x2="738.6" y2="496.7" stroke="#7a4fb3" stroke-opacity="0.35"/>
+</g>
+<line x1="874.9" y1="615.1" x2="874.9" y2="503.1" stroke="#777" stroke-width="2"/>
+<polygon points="860.4,503.1 874.9,511.5 889.5,503.1 874.9,494.7" fill="#333333" fill-opacity="1" stroke="none" stroke-width="1"/>
+<line x1="876.5" y1="507.2" x2="876.5" y2="395.2" stroke="#777" stroke-width="2"/>
+<polygon points="862.0,395.2 876.5,403.6 891.1,395.2 876.5,386.8" fill="#333333" fill-opacity="1" stroke="none" stroke-width="1"/>
+<line x1="745.5" y1="430.1" x2="745.5" y2="318.1" stroke="#777" stroke-width="2"/>
+<polygon points="730.9,318.1 745.5,326.5 760.0,318.1 745.5,309.7" fill="#333333" fill-opacity="1" stroke="none" stroke-width="1"/>
+<line x1="558.5" y1="429.2" x2="558.5" y2="317.2" stroke="#777" stroke-width="2"/>
+<polygon points="543.9,317.2 558.5,325.6 573.0,317.2 558.5,308.8" fill="#333333" fill-opacity="1" stroke="none" stroke-width="1"/>
+<line x1="425.1" y1="504.9" x2="425.1" y2="392.9" stroke="#777" stroke-width="2"/>
+<polygon points="410.5,392.9 425.1,401.3 439.6,392.9 425.1,384.5" fill="#333333" fill-opacity="1" stroke="none" stroke-width="1"/>
+<line x1="423.5" y1="612.8" x2="423.5" y2="500.8" stroke="#777" stroke-width="2"/>
+<polygon points="408.9,500.8 423.5,509.2 438.0,500.8 423.5,492.4" fill="#333333" fill-opacity="1" stroke="none" stroke-width="1"/>
+<line x1="554.5" y1="689.9" x2="554.5" y2="577.9" stroke="#777" stroke-width="2"/>
+<polygon points="540.0,577.9 554.5,586.3 569.1,577.9 554.5,569.5" fill="#333333" fill-opacity="1" stroke="none" stroke-width="1"/>
+<line x1="741.5" y1="690.8" x2="741.5" y2="578.8" stroke="#777" stroke-width="2"/>
+<polygon points="727.0,578.8 741.5,587.2 756.1,578.8 741.5,570.4" fill="#333333" fill-opacity="1" stroke="none" stroke-width="1"/>
+<g opacity="0.5"><line x1="783.4" y1="693.0" x2="783.4" y2="588.0" stroke="#777" stroke-width="2"/>
+<circle cx="783.4" cy="588.0" r="8" fill="#7a4fb3"/><text x="794.4" y="580.0" font-size="11" fill="#7a4fb3" text-anchor="start" font-weight="bold">C1 · Femto Mega de côté — gestes fins (option 1) · h 1.5 m</text></g>
+<g opacity="1.0"><line x1="468.1" y1="455.0" x2="468.1" y2="430.5" stroke="#777" stroke-width="2"/>
+<circle cx="468.1" cy="430.5" r="7" fill="#fff" stroke="#3a9a8a" stroke-width="3"/><text x="478.1" y="446.5" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="bold">L1 · LiDAR S2E — déplacements · h 0.35 m</text></g>
+<g opacity="0.5"><line x1="834.9" y1="453.2" x2="834.9" y2="250.2" stroke="#777" stroke-width="2"/>
+<rect x="820.9" y="242.2" width="28" height="16" rx="3" fill="#c07a1a"/><text x="852.9" y="254.2" font-size="11" fill="#c07a1a" text-anchor="start" font-weight="normal">P1 vidéoprojecteur h 2.9 m, vers le sol (option)</text></g>
+<line x1="656.1" y1="584.5" x2="656.1" y2="483.0" stroke="#2a4d9b" stroke-width="10" stroke-linecap="round"/>
+<circle cx="656.1" cy="465.5" r="11" fill="#2a4d9b"/>
+<line x1="656.1" y1="483.0" x2="671.2" y2="502.2" stroke="#b0662e" stroke-width="3"/>
+<text x="681.2" y="480.2" font-size="11" fill="#b0662e" text-anchor="start" font-weight="normal">violon : DPA, Fishman, C411 (sans fil) ; nœud volute (option)</text>
+<line x1="656.1" y1="483.0" x2="616.7" y2="495.2" stroke="#b0662e" stroke-width="2"/><text x="608.7" y="511.2" font-size="11" fill="#b0662e" text-anchor="end" font-weight="normal">archet : nœud Puara (hausse)</text>
+<text x="422.7" y="711.2" font-size="13" fill="#5b626c" text-anchor="middle" font-weight="normal">avant — public (partage final)</text>
+</svg>

@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" font-family="Helvetica, Arial, sans-serif">
+<rect width="1200" height="720" fill="#ffffff"/>
+<text x="24.0" y="36.0" font-size="20" fill="#1d2025" text-anchor="start" font-weight="bold">Capteurs portés par le violon, l'archet et le violoniste</text>
+<text x="24.0" y="60.0" font-size="13" fill="#5b626c" text-anchor="start" font-weight="normal">Schéma de principe vu de face (non à l'échelle) ; côté grave (gauche du violoniste) en haut — placements à valider en résidence</text>
+<path d="M 260 340 C 260 260, 380 250, 410 290 C 430 310, 470 310, 490 290 C 520 250, 640 260, 640 340 C 640 420, 520 430, 490 390 C 470 370, 430 370, 410 390 C 380 430, 260 420, 260 340 Z" fill="#c98a4b" stroke="#6b4423" stroke-width="2"/>
+<rect x="640" y="328" width="230" height="24" rx="6" fill="#3b2a1d"/>
+<path d="M 870 324 C 900 310, 930 320, 925 340 C 930 360, 900 370, 870 356 Z" fill="#6b4423"/>
+<rect x="275" y="332" width="40" height="16" rx="4" fill="#3b2a1d"/>
+<rect x="470" y="320" width="8" height="40" fill="#e8d5b5"/>
+<path d="M 440 302 C 452 296, 462 308, 474 302" fill="none" stroke="#3b2a1d" stroke-width="3"/>
+<path d="M 440 370 C 452 364, 462 376, 474 370" fill="none" stroke="#3b2a1d" stroke-width="3"/>
+<line x1="300" y1="333" x2="900" y2="333" stroke="#ddd" stroke-width="1"/>
+<line x1="300" y1="338" x2="900" y2="338" stroke="#ddd" stroke-width="1"/>
+<line x1="300" y1="342" x2="900" y2="342" stroke="#ddd" stroke-width="1"/>
+<line x1="300" y1="347" x2="900" y2="347" stroke="#ddd" stroke-width="1"/>
+<text x="560.0" y="266.0" font-size="11" fill="#5b626c" text-anchor="start" font-weight="normal">↑ côté grave (gauche du violoniste)</text>
+<rect x="334" y="258" width="14" height="10" rx="2" fill="#222"/>
+<path d="M 341 258 C 360 225, 420 235, 452 274" fill="none" stroke="#222" stroke-width="3"/>
+<circle cx="455" cy="280" r="6" fill="#222"/>
+<line x1="230" y1="510" x2="1000" y2="470" stroke="#5a3a22" stroke-width="5"/>
+<line x1="245" y1="522" x2="985" y2="482" stroke="#efe6d2" stroke-width="2"/>
+<rect x="200" y="502" width="60" height="26" rx="5" fill="#2b2b2b"/>
+<circle cx="230" cy="515" r="9" fill="#b0662e" stroke="#fff" stroke-width="2"/>
+<line x1="230" y1="515" x2="30" y2="600" stroke="#b0662e" stroke-width="1.5"/>
+<text x="36.0" y="600.0" font-size="13" fill="#b0662e" text-anchor="start" font-weight="bold">① Nœud Puara — archet</text>
+<text x="36.0" y="616.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">ESP32 + centrale inertielle 9 axes + batterie,</text>
+<text x="36.0" y="632.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">dans ou contre la hausse (talon) ; Wi-Fi, OSC</text>
+<text x="36.0" y="648.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">vitesse, sens, inclinaison, changements d'archet</text>
+<g opacity="0.45">
+<circle cx="915" cy="340" r="9" fill="#b0662e" stroke="#fff" stroke-width="2"/>
+<line x1="915" y1="340" x2="1170" y2="230" stroke="#b0662e" stroke-width="1.5"/>
+<text x="1164.0" y="230.0" font-size="13" fill="#b0662e" text-anchor="end" font-weight="bold">② Nœud Puara — volute (extension)</text>
+<text x="1164.0" y="246.0" font-size="11" fill="#1d2025" text-anchor="end" font-weight="normal">ESP32 + centrale inertielle, fixation amovible</text>
+<text x="1164.0" y="262.0" font-size="11" fill="#1d2025" text-anchor="end" font-weight="normal">orientation du violon ; angle archet/violon</text>
+<text x="1164.0" y="278.0" font-size="11" fill="#1d2025" text-anchor="end" font-weight="normal">→ corde jouée</text>
+</g>
+<circle cx="474" cy="358" r="9" fill="#3f7fbf" stroke="#fff" stroke-width="2"/>
+<line x1="474" y1="358" x2="620" y2="600" stroke="#3f7fbf" stroke-width="1.5"/>
+<text x="626.0" y="600.0" font-size="13" fill="#3f7fbf" text-anchor="start" font-weight="bold">③ Fishman — piézo dans le chevalet</text>
+<text x="626.0" y="616.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">signal d'analyse principal : hauteur, attaques ;</text>
+<text x="626.0" y="632.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">presque insensible aux haut-parleurs</text>
+<circle cx="500" cy="385" r="9" fill="#3f7fbf" stroke="#fff" stroke-width="2"/>
+<line x1="500" y1="385" x2="870" y2="540" stroke="#3f7fbf" stroke-width="1.5"/>
+<text x="876.0" y="540.0" font-size="13" fill="#3f7fbf" text-anchor="start" font-weight="bold">④ AKG C411 — micro de contact</text>
+<text x="876.0" y="556.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">sur la table, près du chevalet (pâte amovible)</text>
+<text x="876.0" y="572.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">résonance de la caisse : modes de jeu</text>
+<text x="876.0" y="588.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">(col legno, frappes, sul ponticello)</text>
+<circle cx="455" cy="280" r="9" fill="#3f7fbf" stroke="#fff" stroke-width="2"/>
+<line x1="455" y1="280" x2="30" y2="120" stroke="#3f7fbf" stroke-width="1.5"/>
+<text x="36.0" y="120.0" font-size="13" fill="#3f7fbf" text-anchor="start" font-weight="bold">⑤ DPA 4099 — col de cygne aérien</text>
+<text x="36.0" y="136.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">pincé sur le côté du violon (éclisse, côté grave),</text>
+<text x="36.0" y="152.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">vise l'ouïe côté grave ;</text>
+<text x="36.0" y="168.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">son naturel diffusé et matière des traces</text>
+<circle cx="690" cy="290" r="9" fill="#6b7280" stroke="#fff" stroke-width="2"/>
+<line x1="690" y1="290" x2="640" y2="120" stroke="#6b7280" stroke-width="1.5"/>
+<text x="634.0" y="120.0" font-size="13" fill="#6b7280" text-anchor="end" font-weight="bold">⑥ Liaison sans fil, 3 canaux (ceinture) — à explorer</text>
+<text x="634.0" y="136.0" font-size="11" fill="#1d2025" text-anchor="end" font-weight="normal">les trois micros vers la régie pour jouer en marchant ;</text>
+<text x="634.0" y="152.0" font-size="11" fill="#1d2025" text-anchor="end" font-weight="normal">latence et fiabilité étudiées ; câble long en secours</text>
+</svg>

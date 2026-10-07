@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1044" height="794" viewBox="0 0 1044 794" font-family="Helvetica, Arial, sans-serif">
+<rect width="1044" height="794" fill="#ffffff"/>
+<text x="20.0" y="32.0" font-size="18" fill="#1d2025" text-anchor="start" font-weight="bold">Espace de prototypage (SAT) — configuration minimale + extensions (en clair)</text>
+<text x="20.0" y="54.0" font-size="12" fill="#5b626c" text-anchor="start" font-weight="normal">Plan 2D, vue de dessus — origine au centre ; cotes en mètres ; LiDAR = déplacements ; caméra de côté = gestes fins ; caméra au-dessus = vérification</text>
+<defs><clipPath id="room"><rect x="140.0" y="110.0" width="504.0" height="504.0"/></clipPath></defs>
+<rect x="140.0" y="110.0" width="504.0" height="504.0" fill="#f6f6f2" stroke="#222" stroke-width="2"/>
+<text x="644.0" y="102.0" font-size="11" fill="#5b626c" text-anchor="end" font-weight="normal">fond — largeur 6.30 m</text>
+<text x="652.0" y="362.0" font-size="11" fill="#5b626c" text-anchor="start" font-weight="normal">6.30 m</text>
+<rect x="192.0" y="162.0" width="400.0" height="400.0" fill="none" stroke="#2a4d9b" stroke-width="1.5" stroke-dasharray="8 5"/>
+<text x="198.0" y="177.0" font-size="11" fill="#2a4d9b" text-anchor="start" font-weight="normal">Grande surface ≈ 5 × 5 m</text>
+<rect x="272.0" y="242.0" width="240.0" height="240.0" fill="none" stroke="#2a4d9b" stroke-width="1.5" stroke-dasharray="3 4"/>
+<text x="278.0" y="257.0" font-size="11" fill="#2a4d9b" text-anchor="start" font-weight="normal">Petite zone ≈ 3 × 3 m</text>
+<g clip-path="url(#room)">
+<g opacity="1.0">
+<line x1="152.0" y1="362.0" x2="872.0" y2="362.0" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="847.5" y2="175.7" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="775.5" y2="2.0" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="661.1" y2="-147.1" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="512.0" y2="-261.5" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="338.3" y2="-333.5" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="152.0" y2="-358.0" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-34.3" y2="-333.5" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-208.0" y2="-261.5" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-357.1" y2="-147.1" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-471.5" y2="2.0" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-543.5" y2="175.7" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-568.0" y2="362.0" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-543.5" y2="548.3" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-471.5" y2="722.0" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-357.1" y2="871.1" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-208.0" y2="985.5" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="-34.3" y2="1057.5" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="152.0" y2="1082.0" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="338.3" y2="1057.5" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="512.0" y2="985.5" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="661.1" y2="871.1" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="775.5" y2="722.0" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+<line x1="152.0" y1="362.0" x2="847.5" y2="548.3" stroke="#3a9a8a" stroke-opacity="0.18" stroke-width="1"/>
+</g>
+<g opacity="0.3"><polygon points="632.0,426.0 378.1,620.8 363.1,599.4 349.8,576.8 338.4,553.3 329.0,528.9 321.6,503.8 316.3,478.1 313.1,452.2 312.0,426.0 313.1,399.8 316.3,373.9 321.6,348.2 329.0,323.1 338.4,298.7 349.8,275.2 363.1,252.6 378.1,231.2" fill="#7a4fb3" fill-opacity="0.10" stroke="#7a4fb3" stroke-opacity="0.45"/></g>
+</g>
+<g opacity="0.55"><circle cx="392.0" cy="362.0" r="208.0" fill="#7a4fb3" fill-opacity="0.06" stroke="#7a4fb3" stroke-width="1.5" stroke-dasharray="2 5"/></g>
+<circle cx="496.0" cy="426.0" r="88.0" fill="#7a4fb3" fill-opacity="0.10" stroke="#7a4fb3" stroke-width="1.5" stroke-dasharray="6 3"/><text x="496.0" y="528.0" font-size="10" fill="#7a4fb3" text-anchor="middle" font-weight="normal">zone des gestes fins</text>
+<circle cx="296.0" cy="314.0" r="16" fill="#f0b25a" fill-opacity="0.75"/>
+<circle cx="344.0" cy="218.0" r="16" fill="#f0b25a" fill-opacity="0.75"/>
+<circle cx="504.0" cy="242.0" r="16" fill="#f0b25a" fill-opacity="0.75"/>
+<circle cx="536.0" cy="426.0" r="16" fill="#f0b25a" fill-opacity="0.75"/>
+<circle cx="400.0" cy="290.0" r="16" fill="#f0b25a" fill-opacity="0.75"/>
+<polyline points="424.0,386.0 296.0,314.0 344.0,218.0 504.0,242.0 536.0,426.0 424.0,386.0" fill="none" stroke="#2a4d9b" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="6 4"/>
+<rect x="596.3979188412275" y="269.58969670117204" width="14" height="14" fill="#333333"/>
+<rect x="474.0866972955545" y="145.12489341284356" width="14" height="14" fill="#333333"/>
+<rect x="299.589696701172" y="143.60208115877245" width="14" height="14" fill="#333333"/>
+<rect x="175.12489341284356" y="265.9133027044456" width="14" height="14" fill="#333333"/>
+<rect x="173.60208115877245" y="440.4103032988279" width="14" height="14" fill="#333333"/>
+<rect x="295.9133027044455" y="564.8751065871563" width="14" height="14" fill="#333333"/>
+<rect x="470.4103032988279" y="566.3979188412275" width="14" height="14" fill="#333333"/>
+<rect x="594.8751065871563" y="444.0866972955545" width="14" height="14" fill="#333333"/>
+<g opacity="0.55"><rect x="378.0" y="109.0" width="28" height="18" rx="3" fill="#c07a1a"/>
+<text x="392.0" y="142.0" font-size="10" fill="#c07a1a" text-anchor="middle" font-weight="normal">P1 h 2.9 m — vers le sol (option)</text></g>
+<g opacity="0.55"><circle cx="632.0" cy="426.0" r="9" fill="#7a4fb3"/><line x1="632.0" y1="426.0" x2="616.0" y2="426.0" stroke="#7a4fb3" stroke-width="3"/>
+<text x="618.0" y="412.0" font-size="10" fill="#7a4fb3" text-anchor="end" font-weight="bold">C1 h 1.5 m — Femto Mega de côté — gestes fins (option 1)</text></g>
+<g opacity="1.0"><circle cx="152.0" cy="362.0" r="8" fill="#fff" stroke="#3a9a8a" stroke-width="3"/><circle cx="152.0" cy="362.0" r="3" fill="#3a9a8a"/>
+<text x="166.0" y="350.0" font-size="10" fill="#3a9a8a" text-anchor="start" font-weight="bold">L1 h 0.35 m — LiDAR S2E — déplacements</text></g>
+<g opacity="0.6"><rect x="383.0" y="353.0" width="18" height="18" rx="4" fill="none" stroke="#7a4fb3" stroke-width="2.5"/><text x="378.0" y="350.0" font-size="10" fill="#7a4fb3" text-anchor="end" font-weight="bold">C2 au-dessus, h 3.0 m (option 2)</text></g>
+<circle cx="424.0" cy="386.0" r="13" fill="#2a4d9b"/><text x="424.0" y="390.0" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">V</text>
+<rect x="236.0" y="576.0" width="120" height="28" fill="#ddd" stroke="#999"/><text x="296.0" y="594.0" font-size="10" fill="#1d2025" text-anchor="middle" font-weight="normal">régie : 1 ordinateur</text>
+<text x="440.0" y="644.0" font-size="12" fill="#5b626c" text-anchor="middle" font-weight="normal">▼ avant — public (partage final) ▼</text>
+<text x="799.0" y="98.0" font-size="13" fill="#1d2025" text-anchor="start" font-weight="bold">Légende</text>
+<rect x="799" y="110" width="14" height="14" rx="3" fill="#7a4fb3" fill-opacity="0.8"/><text x="821.0" y="121.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">caméra de profondeur + champ (option)</text>
+<rect x="799" y="134" width="14" height="14" rx="3" fill="#3a9a8a" fill-opacity="0.8"/><text x="821.0" y="145.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">LiDAR Slamtec S2E + plan de balayage</text>
+<rect x="799" y="158" width="14" height="14" rx="3" fill="#333333" fill-opacity="0.8"/><text x="821.0" y="169.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">haut-parleur</text>
+<rect x="799" y="182" width="14" height="14" rx="3" fill="#c07a1a" fill-opacity="0.8"/><text x="821.0" y="193.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">vidéoprojecteur</text>
+<rect x="799" y="206" width="14" height="14" rx="3" fill="#f0b25a" fill-opacity="0.8"/><text x="821.0" y="217.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">trace sonore déposée</text>
+<rect x="799" y="230" width="14" height="14" rx="3" fill="#2a4d9b" fill-opacity="0.8"/><text x="821.0" y="241.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">violoniste (archet + volute captés)</text>
+<rect x="799" y="254" width="14" height="14" rx="3" fill="#2a4d9b" fill-opacity="0.3"/><text x="821.0" y="265.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">zone de jeu</text>
+<rect x="799" y="292" width="14" height="14" rx="3" fill="#999" fill-opacity="0.3"/><text x="821.0" y="303.0" font-size="11" fill="#5b626c" text-anchor="start" font-weight="normal">en clair = extension optionnelle</text>
+<text x="799.0" y="332.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="bold">Configuration minimale :</text>
+<text x="799.0" y="350.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• 1 LiDAR S2E (déplacements)</text>
+<text x="799.0" y="366.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• 1 nœud Puara sur l'archet</text>
+<text x="799.0" y="382.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• 3 micros (DPA, Fishman, C411), sans fil</text>
+<text x="799.0" y="398.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• (câble long en secours)</text>
+<text x="799.0" y="414.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• 1 ordinateur</text>
+<text x="799.0" y="430.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• haut-parleurs de la SAT</text>
+<text x="799.0" y="446.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• Extensions : Femto Mega de côté</text>
+<text x="799.0" y="462.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• (gestes fins), Femto Mega au-dessus</text>
+<text x="799.0" y="478.0" font-size="11" fill="#1d2025" text-anchor="start" font-weight="normal">• (vérification de la position)</text>
+<text x="799.0" y="512.0" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="bold">Un seul interprète, une seule surface :</text>
+<text x="799.0" y="527.0" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="normal">pas de triangulation ; chaque capteur</text>
+<text x="799.0" y="542.0" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="normal">a un rôle distinct (déplacements,</text>
+<text x="799.0" y="557.0" font-size="11" fill="#3a9a8a" text-anchor="start" font-weight="normal">gestes fins, vérification par le dessus).</text>
+</svg>

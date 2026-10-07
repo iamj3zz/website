@@ -34,6 +34,8 @@ pre-commit:
 
     generate-webp:
       glob: "assets/**/*.{jpg,jpeg,png}"
+      # Standalone HTML bundles (concept dossiers) never reference .webp
+      exclude: "assets/concepts/**"
       run: ./scripts/generate-webp.sh --stage {staged_files}
 
     full-tests:
