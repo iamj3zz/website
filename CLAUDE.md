@@ -103,6 +103,17 @@ The site asserts a machine-readable opt-out of AI/LLM training use, at multiple 
 
 ---
 
+## Confidential Concept Dossiers (`assets/concepts/`)
+
+Everything under `assets/concepts/` is **unlisted**: reachable only by people who were given the URL, never linked or indexed.
+
+- **Never link** to `assets/concepts/` from any page, nav, sitemap, `_data/` file or work front matter. `generate-sitemap.rb` only scans `_pages/`, `_portfolio/`, `_artworks/` etc., so concepts never appear in `sitemap.xml`.
+- **Do not add `assets/concepts/` to `robots.txt`** — `robots.txt` is public and would advertise the folder, and a `Disallow` stops crawlers from ever seeing the `noindex` tag.
+- Every concept HTML page carries `<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex, noai, noimageai">` + `<meta name="referrer" content="no-referrer">` (so the private URL isn't leaked via the Referer header when visitors click outbound links). Injected by `scripts/protect-concepts.sh` (idempotent, marker comment `concepts-unlisted`), run automatically by the `protect-concepts` Lefthook pre-commit command on staged `assets/concepts/**/*.{html,htm}` files (`stage_fixed: true`). Manual run: `./scripts/protect-concepts.sh`.
+- Limits: GitHub Pages cannot send `X-Robots-Tag` headers or password-protect files, so non-HTML files (PDF, XLSX, ODT, images) rely solely on never being linked publicly. This is "unlisted", not access control — anyone holding the URL can view and share it.
+
+---
+
 ## Page Performance: Conditional Script Loading
 
 All pages in `_pages/` that use `layout: portfolio` must declare a `page_type:` field in front matter to control which JavaScript files load. This optimizes performance by only loading scripts relevant to the page.

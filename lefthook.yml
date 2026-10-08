@@ -38,6 +38,12 @@ pre-commit:
       exclude: "assets/concepts/**"
       run: ./scripts/generate-webp.sh --stage {staged_files}
 
+    protect-concepts:
+      # Confidential concept dossiers: unlisted (noindex, no-referrer)
+      glob: "assets/concepts/**/*.{html,htm}"
+      run: ./scripts/protect-concepts.sh {staged_files}
+      stage_fixed: true
+
     full-tests:
       run: ./test-before-push.sh
       fail_text: |
