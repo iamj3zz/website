@@ -55,6 +55,9 @@ docs/samples/
 docs/*.png
 docs/*.jpg
 
+# Concept dossier videos (dome masters exceed GitHub's 100MB limit — share via external link)
+assets/concepts/**/*.mp4
+
 .bash_profile
 .bashrc
 .gitconfig

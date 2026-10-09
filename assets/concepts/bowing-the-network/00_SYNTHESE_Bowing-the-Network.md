@@ -27,21 +27,21 @@ Des travaux pilotent la spatialisation par le geste d'un instrumentiste (IDMIL, 
 | Étape | Où | Priorité |
 |---|---|---|
 | Préparation et échelle immobile au casque | À distance | — |
-| **Exploratoire** (~5 sem., accès intermittent) : point de départ immobile (Studio de son), puis petite zone ; calibration du suivi du corps ; point d'étape avec l'équipe Innovation | SAT | 1 — 2 |
+| **Exploratoire** (~5 sem., accès intermittent) : point de départ immobile (Studio de son), puis petite zone (Studio interactif) ; calibration du suivi du corps ; point d'étape avec l'équipe Innovation ; séance ouverte à mi-parcours | SAT | 1 — 2 |
 | **Intensive** (3 sem. à temps plein) : **le jeu en déplacement dans toute la salle** (Espace de prototypage) ; sons composés enfouis si le temps le permet | SAT | **cœur** — option |
 | Partage final avec atelier ; publication libre | SAT, puis à distance | — |
 
 ## Où en est le projet, et ce que je mets en place
-- **Déjà réalisé :** une maquette en ligne (navigateur, micro seul ; voir `maquette/`) : dépôt, effacement et réveil des traces par un geste musical semblable. Elle ne montre pas encore le geste de l'archet ni le corps en mouvement.
+- **Pour illustrer le principe :** une esquisse rapide en ligne, ce n'est pas un prototype (navigateur, micro seul ; voir `maquette/`) : dépôt, effacement et réveil des traces par un geste musical semblable. Elle ne montre pas encore le geste de l'archet ni le corps en mouvement.
 
 | Limite actuelle | Ce que je mets en place |
 |---|---|
-| Projet porté seul | Recherche de partenaires au Québec **avant** la résidence (artiste du mouvement, musicien·nes, réseaux de la SAT) et **pendant** (équipes de la SAT ; avec son aide, IDMIL à McGill, mentionné comme collaboration potentielle avec l'accord de son directeur, le professeur Marcelo M. Wanderley, et GRIS à l'Université de Montréal) ; collaborations rémunérées sur la bourse |
+| Projet porté seul | Recherche de partenaires au Québec **avant** la résidence (artiste du mouvement, musicien·nes, réseaux de la SAT) et **pendant** (équipes de la SAT ; avec son aide, IDMIL à McGill, mentionné comme collaboration potentielle avec l'accord de son directeur, le professeur Marcelo M. Wanderley, et GRIS à l'Université de Montréal) |
 | Jamais programmé de microcontrôleur ESP32 ni de centrale inertielle ; jamais utilisé les outils de la SAT | Auto-formation en amont sur leurs documentations libres, puis apprentissage avec les équipes de la SAT ; repli prévu (capteur au poignet, analyse du son seule) ; le cœur du projet (suivi du corps) repose sur une technique que je pratique déjà |
 | Basé loin de Montréal | Deux mois sur place ; séance ouverte à mi-parcours ; atelier final ; au retour, partage des résultats partout où je le peux, à La Réunion et ailleurs (conférences, ateliers, démonstrations) |
 | Issue incertaine (la marche peut diluer le jeu ; la « proximité de jeu » peut échouer) | Priorités ordonnées, repli à chaque étape ; tout résultat, y compris négatif, est documenté |
 | Pas de parcours universitaire ni de publication de recherche | Le partage est au cœur de la démarche : outils, patchs et méthode documentés et publiés en licence libre, dans l'esprit du logiciel libre ; présentation des résultats lors de rencontres du domaine quand l'occasion se présente |
 | Transport, hébergement, vol long-courrier | Aides à la mobilité avec les lettres d'appui de la SAT ; un seul voyage ; matériel existant ; outils libres |
 
-## Ce que le projet rend à la SAT et à la communauté
-Un **module violon pour Puara** et une **logique de « traces » pour ossia score**, publiés en licence libre ; une documentation de la chaîne complète (caméras + LiDAR → Carto → ossia score → SpatGRIS) ; une séance ouverte à mi-parcours et un atelier final ; avec l'aide de la SAT, une collaboration potentielle avec l'IDMIL (McGill), avec l'accord de son directeur, co-développeur de Puara et auteur des travaux de 2007 sur la spatialisation par le geste d'un instrumentiste.
+## Ce que le projet pourrait rendre à la SAT et à la communauté
+Si le travail aboutit, un **module violon pour Puara** et une **logique de « traces » pour ossia score**, publiés en licence libre ; une documentation de la chaîne complète (caméras + LiDAR → Carto → ossia score → SpatGRIS) ; une séance ouverte à mi-parcours et un atelier final ; avec l'aide de la SAT, une collaboration potentielle avec l'IDMIL (McGill), avec l'accord de son directeur, co-développeur de Puara et auteur des travaux de 2007 sur la spatialisation par le geste d'un instrumentiste.

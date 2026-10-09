@@ -26,7 +26,7 @@ Le **jeu en déplacement dans toute la salle** est le cœur ; on y arrive par l'
 ## 3. Critères de réussite par étape
 
 - **Fin du travail à distance :** une phrase jouée est déposée, puis réveillée, au casque.
-- **Fin de la période sur place 1 :** l'échelle immobile fonctionne dans le Studio de son ; la petite zone est amorcée ; point d'étape avec l'équipe Innovation.
+- **Fin de la période sur place 1 :** l'échelle immobile fonctionne dans le Studio de son ; la petite zone est amorcée au Studio interactif ; point d'étape avec l'équipe Innovation ; séance ouverte à mi-parcours.
 - **Fin de la période sur place 2 :** une séquence jouée part de l'immobilité et parcourt toute la salle, les traces se réveillent quand on y revient ; partage final avec atelier.
 - **Après :** module d'archet et logique de traces publiés en licence libre, documentés.
 
