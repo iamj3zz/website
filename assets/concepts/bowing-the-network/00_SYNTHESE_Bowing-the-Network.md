@@ -1,6 +1,6 @@
 # Bowing the Network — le projet en une page
 
-**Jérôme Li-Thiao-Té (J3ZZ)** · violoniste improvisateur, ingénieur · La Réunion · projet porté seul — je mène la recherche sur mon propre violon, que j'apporte.
+**Jérôme Li-Thiao-Té (J3ZZ)** · violoniste improvisateur, ingénieur · La Réunion · équipe : Jérôme Li-Thiao-Té (porteur) et **Johann Baron Lanteigne** (artiste nouveaux médias, Québec, regard extérieur) — je mène la recherche sur mon propre violon, que j'apporte.
 **Axe :** Interactivité, immersion collective et systèmes distribués
 
 ## L'idée
@@ -36,7 +36,7 @@ Des travaux pilotent la spatialisation par le geste d'un instrumentiste (IDMIL, 
 
 | Limite actuelle | Ce que je mets en place |
 |---|---|
-| Projet porté seul | Recherche de partenaires au Québec **avant** la résidence (artiste du mouvement, musicien·nes, réseaux de la SAT) et **pendant** (équipes de la SAT ; avec son aide, IDMIL à McGill, mentionné comme collaboration potentielle avec l'accord de son directeur, le professeur Marcelo M. Wanderley, et GRIS à l'Université de Montréal) |
+| Équipe à distance (La Réunion / Québec) | Préparation en visioconférence ; Johann Baron Lanteigne basé à Québec, proche de Montréal ; recherche de musicien·nes au Québec **avant** la résidence (réseaux de la SAT) et **pendant** (équipes de la SAT ; avec son aide, IDMIL à McGill, mentionné comme collaboration potentielle avec l'accord de son directeur, le professeur Marcelo M. Wanderley, et GRIS à l'Université de Montréal) |
 | Jamais programmé de microcontrôleur ESP32 ni de centrale inertielle ; jamais utilisé les outils de la SAT | Auto-formation en amont sur leurs documentations libres, puis apprentissage avec les équipes de la SAT ; repli prévu (capteur au poignet, analyse du son seule) ; le cœur du projet (suivi du corps) repose sur une technique que je pratique déjà |
 | Basé loin de Montréal | Deux mois sur place ; séance ouverte à mi-parcours ; atelier final ; au retour, partage des résultats partout où je le peux, à La Réunion et ailleurs (conférences, ateliers, démonstrations) |
 | Issue incertaine (la marche peut diluer le jeu ; la « proximité de jeu » peut échouer) | Priorités ordonnées, repli à chaque étape ; tout résultat, y compris négatif, est documenté |

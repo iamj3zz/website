@@ -1,6 +1,6 @@
 # Bowing the Network — Calendrier indicatif et disponibilités
 
-**Porteur :** Jérôme Li-Thiao-Té (J3ZZ), basé à La Réunion · projet porté seul
+**Équipe :** Jérôme Li-Thiao-Té (J3ZZ, porteur), basé à La Réunion · Johann Baron Lanteigne (Québec, regard extérieur)
 **Version :** 7 octobre 2026 · à ajuster avec la SAT après l'annonce des résultats
 
 ## Disponibilités
