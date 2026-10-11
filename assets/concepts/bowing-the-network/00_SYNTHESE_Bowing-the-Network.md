@@ -31,6 +31,13 @@ Des travaux pilotent la spatialisation par le geste d'un instrumentiste (IDMIL, 
 | **Intensive** (3 sem. à temps plein) : **le jeu en déplacement dans toute la salle** (Espace de prototypage) ; sons composés enfouis si le temps le permet | SAT | **cœur** — option |
 | Partage final avec atelier ; publication libre | SAT, puis à distance | — |
 
+## L'équipe
+Nous sommes deux, avec des rôles distincts ([détails](03b_EQUIPE_Johann-Baron-Lanteigne.md)) :
+- **Jérôme Li-Thiao-Té (J3ZZ)**, La Réunion — porteur du projet : conception, violon, programmation, prototypage des capteurs ; présent sur place les deux mois de la résidence.
+- **Johann Baron Lanteigne**, Québec — artiste nouveaux médias, regard extérieur sur le jeu en déplacement et sur l'image des traces ; il a mené une résidence de création à la SAT en 2024 (instrument d'improvisation en temps réel, moteur de jeu et capture de mouvement).
+
+Ce qui nous relie : le geste comme interface et l'improvisation en temps réel. Autour de nous : des musicien·nes du Québec, les équipes de la SAT, l'IDMIL (McGill, collaboration potentielle) et le GRIS (UdeM).
+
 ## Où en est le projet, et ce que je mets en place
 - **Pour illustrer le principe :** une esquisse rapide en ligne, ce n'est pas un prototype (navigateur, micro seul ; voir `maquette/`) : dépôt, effacement et réveil des traces par un geste musical semblable. Elle ne montre pas encore le geste de l'archet ni le corps en mouvement.
 
