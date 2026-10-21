@@ -68,7 +68,7 @@ sections:
     Première résidence au centre de jeunesse et de musique Sonoria et à la BiblioteCaNova, Florence. Représentation d'ouverture dans la cour du Murate (une ancienne prison reconvertie en galeries) lors de la 19ᵉ édition du festival Fabbrica Europa. Le spectacle proposait une heure d'improvisation explorant la diversité culturelle, l'environnement urbain et des visions d'une Europe future.
 
     **Budapest — juillet–août 2012**
-    Avant-spectacle au Toldi Club (17 juillet 2012) avec des artistes locaux invités, suivi de la résidence principale et d'une performance de 40 minutes sur la scène A38 du festival Sziget (7 août 2012, 23h15). Parmi les artistes invités : Bari Kim (danse contemporaine, Allemagne), Gregory Zeigler (percussions, États-Unis), Zoltán Grecsó (danse, Budapest) et Krisztina Bogó (art visuel, Budapest).
+    Avant-spectacle au Toldi Club (17 juillet 2012) avec des artistes locaux invités, suivi de la résidence principale et d'une performance de 40 minutes sur la scène A38 du festival Sziget (7 août 2012, 23h15). Parmi les artistes invités : Bari Kim (danse contemporaine, Corée du Sud), Gregory Zeigler (percussions, États-Unis), Zoltán Grecsó (danse, Budapest) et Krisztina Bogó (art visuel, Budapest).
 
     **Bucarest — octobre 2012**
     Résidence finale au Godot Café-Théâtre (24–26 octobre 2012), un lieu historique du centre de Bucarest connu pour le théâtre et les concerts live. Le spectacle s'est adapté au cadre intime du théâtre. L'ensemble s'est produit en direct sur Radio Roumanie pendant la résidence, documenté dans une vidéo en stop-motion.
